@@ -1,0 +1,265 @@
+      1     ysyx : TTY=pts/0 ; PWD=/home/ysyx/missing-semester/lecture2/prac4 ; USER=root ; COMMAND=/usr/bin/apt install zip unzip
+      1     ysyx : TTY=pts/0 ; PWD=/home/ysyx/missing-semester/lecture2/prac4 ; USER=root ; COMMAND=/usr/bin/apt update
+      1     ysyx : TTY=pts/0 ; PWD=/sys/class/backlight ; USER=root ; COMMAND=/usr/bin/apt update
+      1 Condition check resulted in First Boot Complete being skipped.
+      1 Condition check resulted in Load/Save Random Seed being skipped.
+      1 Condition check resulted in Platform Persistent Storage Archival being skipped.
+      1 Created slice User Slice of UID 0.
+      1 Finished Daily apt download activities.
+      1 Finished Daily dpkg database backup service.
+      1 Finished Online ext4 Metadata Check for All Filesystems.
+      1 Finished User Runtime Directory /run/user/0.
+      1 Memory: 7911460K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Memory: 7912012K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Memory: 7912164K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Mounting FUSE Control File System...
+      1 New session 4 of user root.
+      1 ROOT LOGIN  on '/dev/pts/3'
+      1 Removed session 4.
+      1 Removed slice User Slice of UID 0.
+      1 Session 4 logged out. Waiting for processes to exit.
+      1 Started Session 4 of User root.
+      1 Started User Manager for UID 0.
+      1 Starting Create System Users...
+      1 Starting Daily apt download activities...
+      1 Starting Daily dpkg database backup service...
+      1 Starting Online ext4 Metadata Check for All Filesystems...
+      1 Starting User Manager for UID 0...
+      1 Starting User Runtime Directory /run/user/0...
+      1 Startup finished in 1.092s.
+      1 Startup finished in 1.124s.
+      1 Startup finished in 1.130s.
+      1 Startup finished in 1.476s.
+      1 Startup finished in 65ms.
+      1 Startup finished in 71ms.
+      1 Startup finished in 77ms.
+      1 Stopped Session 4 of User root.
+      1 Stopped User Manager for UID 0.
+      1 Stopped User Runtime Directory /run/user/0.
+      1 Stopping Session 4 of User root...
+      1 Stopping User Manager for UID 0...
+      1 Stopping User Runtime Directory /run/user/0...
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 336.0M, max 4.0G, 3.6G free.
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 352.0M, max 4.0G, 3.6G free.
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 368.0M, max 4.0G, 3.6G free.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 1.881ms for 448 entries.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 2.119ms for 444 entries.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 2.255ms for 444 entries.
+      1 Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+      1 Unmounted /mnt/wslg/run/user/0.
+      1 Unmounted /run/user/0.
+      1 WSL (189) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 WSL (190) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 WSL (193) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] exiting on signal 15.
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] rsyslogd was HUPed
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] start
+      1 [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.12' (uid=0 pid=2098 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.12' (uid=0 pid=5229 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.14' (uid=0 pid=2101 comm="/usr/libexec/packagekitd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.14' (uid=0 pid=5232 comm="/usr/libexec/packagekitd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=272 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=277 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.5' (uid=0 pid=279 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.4' (uid=0 pid=200 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.5' (uid=0 pid=200 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.5' (uid=0 pid=203 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 apt-daily.service: Consumed 1.905s CPU time.
+      1 apt-daily.service: Deactivated successfully.
+      1 audit: type=2000 audit(1789788718.652:1): state=initialized audit_enabled=0 res=1
+      1 audit: type=2000 audit(1789831495.512:1): state=initialized audit_enabled=0 res=1
+      1 audit: type=2000 audit(1789887714.508:1): state=initialized audit_enabled=0 res=1
+      1 dpkg-db-backup.service: Deactivated successfully.
+      1 e2scrub_all.service: Deactivated successfully.
+      1 hv_pci 1e6f6eee-c7bf-48df-8e69-7bc831d35bd0: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 1e6f6eee-c7bf-48df-8e69-7bc831d35bd0: PCI host bridge to bus c7bf:00
+      1 hv_pci 565a84be-118d-4b7a-b356-62b3ede2c6e4: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 565a84be-118d-4b7a-b356-62b3ede2c6e4: PCI host bridge to bus 118d:00
+      1 hv_pci 5757c4c8-9718-468f-b0a6-1acfb70170bd: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 5757c4c8-9718-468f-b0a6-1acfb70170bd: PCI host bridge to bus 9718:00
+      1 hv_pci 5b332d10-3f20-4b53-9014-0c84f0a467e0: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 5b332d10-3f20-4b53-9014-0c84f0a467e0: PCI host bridge to bus 3f20:00
+      1 hv_pci 618129aa-e0bb-4a0f-a4b7-934952869c9c: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 618129aa-e0bb-4a0f-a4b7-934952869c9c: PCI host bridge to bus e0bb:00
+      1 hv_pci a33de305-e118-4c44-b3b5-2534f7df62a7: PCI VMBus probing: Using version 0x10004
+      1 hv_pci a33de305-e118-4c44-b3b5-2534f7df62a7: PCI host bridge to bus e118:00
+      1 hv_pci b125d045-9e42-4f9e-820b-c11d3acfab35: PCI VMBus probing: Using version 0x10004
+      1 hv_pci b125d045-9e42-4f9e-820b-c11d3acfab35: PCI host bridge to bus 9e42:00
+      1 hv_pci b9820762-8482-4942-8c9f-3d9cfcf8a4d6: PCI VMBus probing: Using version 0x10004
+      1 hv_pci b9820762-8482-4942-8c9f-3d9cfcf8a4d6: PCI host bridge to bus 8482:00
+      1 hv_pci bac82898-2c03-40ed-b082-565d1f499650: PCI VMBus probing: Using version 0x10004
+      1 hv_pci bac82898-2c03-40ed-b082-565d1f499650: PCI host bridge to bus 2c03:00
+      1 hv_pci c161e6ba-a3b8-41ce-ac6e-4902f0da5cad: PCI VMBus probing: Using version 0x10004
+      1 hv_pci c161e6ba-a3b8-41ce-ac6e-4902f0da5cad: PCI host bridge to bus a3b8:00
+      1 hv_pci d10ef314-66a7-4d81-abda-28582e62196e: PCI VMBus probing: Using version 0x10004
+      1 hv_pci d10ef314-66a7-4d81-abda-28582e62196e: PCI host bridge to bus 66a7:00
+      1 hv_pci ea90a670-8a4c-4476-82fb-4808cd570d91: PCI VMBus probing: Using version 0x10004
+      1 hv_pci ea90a670-8a4c-4476-82fb-4808cd570d91: PCI host bridge to bus 8a4c:00
+      1 mini_init (171): drop_caches: 1
+      1 mini_init (172): drop_caches: 1
+      1 mini_init (175): drop_caches: 1
+      1 mnt-wslg-run-user-0.mount: Deactivated successfully.
+      1 node 0 deferred pages initialised in 12ms
+      1 node 0 deferred pages initialised in 4ms
+      1 node 0 deferred pages initialised in 8ms
+      1 pam_unix(login:session): session opened for user root(uid=0) by (uid=0)
+      1 pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=ysyx rhost=  user=ysyx
+      1 pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
+      1 pci 118d:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci 118d:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci 118d:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci 118d:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci 118d:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci 118d:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci 118d:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci 2c03:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 3f20:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 66a7:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci 66a7:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci 66a7:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci 66a7:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci 66a7:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci 66a7:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci 66a7:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci 8482:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci 8482:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci 8482:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci 8482:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci 8482:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci 8482:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci 8482:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci 8a4c:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 9718:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci 9718:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci 9718:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci 9718:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci 9718:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci 9718:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci 9718:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci 9e42:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci a3b8:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci c7bf:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci c7bf:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci c7bf:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci c7bf:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci c7bf:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci c7bf:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci c7bf:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci e0bb:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci e118:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci e118:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci e118:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci e118:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci e118:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci e118:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci e118:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci_bus 118d:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 118d:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 118d:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 pci_bus 2c03:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 2c03:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 3f20:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 3f20:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 66a7:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 66a7:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 66a7:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 pci_bus 8482:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 8482:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 8482:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus 8a4c:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 8a4c:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 9718:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 9718:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 9718:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus 9e42:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 9e42:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus a3b8:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus a3b8:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus c7bf:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus c7bf:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus c7bf:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus e0bb:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus e0bb:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus e118:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus e118:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus e118:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 rsyslog.service: Sent signal SIGHUP to main process 201 (rsyslogd) on client request.
+      1 rtc_cmos 00:00: setting system clock to 2026-09-19T03:31:59 UTC (1789788719)
+      1 rtc_cmos 00:00: setting system clock to 2026-09-19T15:24:55 UTC (1789831495)
+      1 rtc_cmos 00:00: setting system clock to 2026-09-20T07:01:54 UTC (1789887714)
+      1 run-user-0.mount: Deactivated successfully.
+      1 sched_clock: Marking stable (752015900, 2335700)->(777789200, -23437600)
+      1 sched_clock: Marking stable (764047700, 2359000)->(791956800, -25550100)
+      1 sched_clock: Marking stable (908591900, 2960000)->(939925100, -28373200)
+      1 session-4.scope: Deactivated successfully.
+      1 smpboot: Total of 16 processors activated (86472.72 BogoMIPS)
+      1 smpboot: Total of 16 processors activated (86489.11 BogoMIPS)
+      1 smpboot: Total of 16 processors activated (86554.64 BogoMIPS)
+      1 tmp-syscheck\x2dmountpoint\x2d3110809872.mount: Deactivated successfully.
+      1 tmp-syscheck\x2dmountpoint\x2d3227289232.mount: Deactivated successfully.
+      1 tmp-syscheck\x2dmountpoint\x2d847485142.mount: Deactivated successfully.
+      1 user-runtime-dir@0.service: Deactivated successfully.
+      1 user.slice: Consumed 1.127s CPU time.
+      1 user@0.service: Deactivated successfully.
+      1 virtio-pci 118d:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 66a7:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 8482:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 9718:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci c7bf:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci e118:00:00.0: enabling device (0000 -> 0002)
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 17.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 18.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 19.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 20.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 21.
+      2 Finished Daily apt upgrade and clean activities.
+      2 Finished Daily man-db regeneration.
+      2 Finished Rotate log files.
+      2 Finished Update APT News.
+      2 Finished Update the local ESM caches.
+      2 Initial synchronization to time server 185.125.190.56:123 (ntp.ubuntu.com).
+      2 Initial synchronization to time server 185.125.190.57:123 (ntp.ubuntu.com).
+      2 Reached target Network is Online.
+      2 Started Authorization Manager.
+      2 Started PackageKit Daemon.
+      2 Starting Authorization Manager...
+      2 Starting Daily apt upgrade and clean activities...
+      2 Starting Daily man-db regeneration...
+      2 Starting PackageKit Daemon...
+      2 Starting Rotate log files...
+      2 Starting Update APT News...
+      2 Starting Update the local ESM caches...
+      2 Stopped Authorization Manager.
+      2 Stopped PackageKit Daemon.
+      2 Stopped target Network is Online.
+      2 Stopping Authorization Manager...
+      2 Stopping Bridge to Ubuntu Pro agent on Windows...
+      2 Stopping PackageKit Daemon...
+      2 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="198" x-info="https://www.rsyslog.com"] exiting on signal 15.
+      2 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="198" x-info="https://www.rsyslog.com"] start
+      2 [system] Successfully activated service 'org.freedesktop.PackageKit'
+      2 [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+      2 apt-daily-upgrade.service: Deactivated successfully.
+      2 apt-news.service: Deactivated successfully.
+      2 daemon start
+      2 esm-cache.service: Deactivated successfully.
+      2 logrotate.service: Deactivated successfully.
+      2 man-db.service: Deactivated successfully.
+      2 packagekit.service: Deactivated successfully.
+      2 pam_unix(sudo:session): session closed for user root
+      2 pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+      2 polkit.service: Deactivated successfully.
+      2 started daemon version 0.105 using authority implementation `local' version `0.105'
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 10.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 11.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 12.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 13.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 14.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 15.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 16.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 4.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 5.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 6.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 7.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 8.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 9.

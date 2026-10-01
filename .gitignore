@@ -1,0 +1,51 @@
+# C 构建产物
+*.o
+*.a
+*.so
+*.dll
+*.exe
+**/build/
+a.out
+core
+core.*
+tests.log
+
+# 编辑器临时文件与本地配置
+*.swp
+*.swo
+*~
+.env
+.env.*
+!.env.example
+
+# 当前练习中无扩展名的可执行文件
+e/e2/**/prac[0-9]
+e/e2/**/prac[0-9][0-9]
+e/e3/c_advanced/ex1
+e/e3/c_advanced/ex3
+e/e3/c_advanced/ex4
+e/e3/c_advanced/ex5
+e/e3/c_advanced/ex6
+e/e3/c_advanced/ex7
+e/e3/c_advanced/ex8
+e/e3/c_advanced/ex10
+e/e3/c_advanced/ex17
+e/e3/c_advanced/ex18
+e/e3/c_advanced/ex19
+e/e3/c_advanced/ex20
+e/e3/c_advanced/ex21
+e/e3/c_advanced/ex24
+e/e3/c_advanced/ex25
+e/e3/c_advanced/ex31
+e/e3/c_advanced/ex22_extra
+e/e3/c_advanced/ex22_main
+e/e3/c_advanced/ex29/ex29
+e/e3/c_advanced/ex29proj/ex29
+e/e3/c_advanced/lcthw/tests/list_tests
+e/e3/c_advanced/lcthw/tests/list_algos_tests
+
+# 旧练习模板中原本为空的许可证占位文件
+e/e3/c_advanced/c-skeleton/LICENSE
+e/e3/c_advanced/ex29proj/LICENSE
+e/acl-recovery/
+e/e3/c_advanced/ex29proj/tests/libex29_tests

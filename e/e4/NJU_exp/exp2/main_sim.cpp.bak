@@ -1,0 +1,50 @@
+#include "Vtop.h"
+#include "verilated.h"
+#include <cstdio>
+
+static const int seg_h[10]
+{
+    0xFC , 0x60 , 0xDA , 0xF2 , 0x66,
+    0xB6 , 0xBE , 0xE0 , 0xFE , 0xF6
+};
+
+int main(int argc, char** argv)
+{
+    VerilatedContext ctx;
+    ctx.commandArgs(argc , argv);
+    Vtop dut{&ctx};
+
+    int fail = 0;
+    for (int x = 0 ; x < 256 ; x ++) 
+    {
+        dut.x = x;
+        dut.eval();
+        
+        int exp_y = 0 , exp_v = 0;
+        for (int i = 7 ; i>= 0 ; i --)
+        {
+            if ((x >> i) & 1) 
+            {
+                exp_y = i;
+                exp_v = 1;
+                break;
+            }
+        }
+        int gy = (int)dut.y , gv = (int)dut.valid;
+        if (gy != exp_y || gv != exp_v) 
+        {
+            fail ++;
+            printf("x=%08b: y=%d valid=%d  expect y=%d valid=%d  <----mismatch\n",
+                    x,gy,gv,exp_y,exp_v);
+        }
+    }
+    
+
+    if (fail)
+    {
+        printf("FAILED: %d/\n" , fail);
+        return 1;
+    }
+    printf("ALL PASS\n");
+    return 0;
+}

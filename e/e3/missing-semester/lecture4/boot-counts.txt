@@ -1,0 +1,1061 @@
+      1     ysyx : TTY=pts/0 ; PWD=/home/ysyx/missing-semester/lecture2/prac4 ; USER=root ; COMMAND=/usr/bin/apt install zip unzip
+      1     ysyx : TTY=pts/0 ; PWD=/home/ysyx/missing-semester/lecture2/prac4 ; USER=root ; COMMAND=/usr/bin/apt update
+      1     ysyx : TTY=pts/0 ; PWD=/sys/class/backlight ; USER=root ; COMMAND=/usr/bin/apt update
+      1 Condition check resulted in First Boot Complete being skipped.
+      1 Condition check resulted in Load/Save Random Seed being skipped.
+      1 Condition check resulted in Platform Persistent Storage Archival being skipped.
+      1 Created slice User Slice of UID 0.
+      1 Finished Daily apt download activities.
+      1 Finished Daily dpkg database backup service.
+      1 Finished Online ext4 Metadata Check for All Filesystems.
+      1 Finished User Runtime Directory /run/user/0.
+      1 Memory: 7911460K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Memory: 7912012K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Memory: 7912164K/8192636K available (20172K kernel code, 3632K rwdata, 14816K rodata, 4852K init, 5648K bss, 266468K reserved, 0K cma-reserved)
+      1 Mounting FUSE Control File System...
+      1 New session 4 of user root.
+      1 ROOT LOGIN  on '/dev/pts/3'
+      1 Removed session 4.
+      1 Removed slice User Slice of UID 0.
+      1 Session 4 logged out. Waiting for processes to exit.
+      1 Started Session 4 of User root.
+      1 Started User Manager for UID 0.
+      1 Starting Create System Users...
+      1 Starting Daily apt download activities...
+      1 Starting Daily dpkg database backup service...
+      1 Starting Online ext4 Metadata Check for All Filesystems...
+      1 Starting User Manager for UID 0...
+      1 Starting User Runtime Directory /run/user/0...
+      1 Startup finished in 1.092s.
+      1 Startup finished in 1.124s.
+      1 Startup finished in 1.130s.
+      1 Startup finished in 1.476s.
+      1 Startup finished in 65ms.
+      1 Startup finished in 71ms.
+      1 Startup finished in 77ms.
+      1 Stopped Session 4 of User root.
+      1 Stopped User Manager for UID 0.
+      1 Stopped User Runtime Directory /run/user/0.
+      1 Stopping Session 4 of User root...
+      1 Stopping User Manager for UID 0...
+      1 Stopping User Runtime Directory /run/user/0...
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 336.0M, max 4.0G, 3.6G free.
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 352.0M, max 4.0G, 3.6G free.
+      1 System Journal (/var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 368.0M, max 4.0G, 3.6G free.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 1.881ms for 448 entries.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 2.119ms for 444 entries.
+      1 Time spent on flushing to /var/log/journal/c97755805d114b6a8b6fd2d51b55c4c2 is 2.255ms for 444 entries.
+      1 Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+      1 Unmounted /mnt/wslg/run/user/0.
+      1 Unmounted /run/user/0.
+      1 WSL (189) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 WSL (190) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 WSL (193) ERROR: CheckConnection: getaddrinfo() failed: -5
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] exiting on signal 15.
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] rsyslogd was HUPed
+      1 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="201" x-info="https://www.rsyslog.com"] start
+      1 [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.12' (uid=0 pid=2098 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.12' (uid=0 pid=5229 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.14' (uid=0 pid=2101 comm="/usr/libexec/packagekitd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.14' (uid=0 pid=5232 comm="/usr/libexec/packagekitd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=272 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=277 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.5' (uid=0 pid=279 comm="/usr/bin/networkctl list --no-pager --no-legend " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.4' (uid=0 pid=200 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.5' (uid=0 pid=200 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.5' (uid=0 pid=203 comm="/usr/lib/snapd/snapd " label="kernel")
+      1 apt-daily.service: Consumed 1.905s CPU time.
+      1 apt-daily.service: Deactivated successfully.
+      1 audit: type=2000 audit(1789788718.652:1): state=initialized audit_enabled=0 res=1
+      1 audit: type=2000 audit(1789831495.512:1): state=initialized audit_enabled=0 res=1
+      1 audit: type=2000 audit(1789887714.508:1): state=initialized audit_enabled=0 res=1
+      1 dpkg-db-backup.service: Deactivated successfully.
+      1 e2scrub_all.service: Deactivated successfully.
+      1 hv_pci 1e6f6eee-c7bf-48df-8e69-7bc831d35bd0: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 1e6f6eee-c7bf-48df-8e69-7bc831d35bd0: PCI host bridge to bus c7bf:00
+      1 hv_pci 565a84be-118d-4b7a-b356-62b3ede2c6e4: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 565a84be-118d-4b7a-b356-62b3ede2c6e4: PCI host bridge to bus 118d:00
+      1 hv_pci 5757c4c8-9718-468f-b0a6-1acfb70170bd: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 5757c4c8-9718-468f-b0a6-1acfb70170bd: PCI host bridge to bus 9718:00
+      1 hv_pci 5b332d10-3f20-4b53-9014-0c84f0a467e0: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 5b332d10-3f20-4b53-9014-0c84f0a467e0: PCI host bridge to bus 3f20:00
+      1 hv_pci 618129aa-e0bb-4a0f-a4b7-934952869c9c: PCI VMBus probing: Using version 0x10004
+      1 hv_pci 618129aa-e0bb-4a0f-a4b7-934952869c9c: PCI host bridge to bus e0bb:00
+      1 hv_pci a33de305-e118-4c44-b3b5-2534f7df62a7: PCI VMBus probing: Using version 0x10004
+      1 hv_pci a33de305-e118-4c44-b3b5-2534f7df62a7: PCI host bridge to bus e118:00
+      1 hv_pci b125d045-9e42-4f9e-820b-c11d3acfab35: PCI VMBus probing: Using version 0x10004
+      1 hv_pci b125d045-9e42-4f9e-820b-c11d3acfab35: PCI host bridge to bus 9e42:00
+      1 hv_pci b9820762-8482-4942-8c9f-3d9cfcf8a4d6: PCI VMBus probing: Using version 0x10004
+      1 hv_pci b9820762-8482-4942-8c9f-3d9cfcf8a4d6: PCI host bridge to bus 8482:00
+      1 hv_pci bac82898-2c03-40ed-b082-565d1f499650: PCI VMBus probing: Using version 0x10004
+      1 hv_pci bac82898-2c03-40ed-b082-565d1f499650: PCI host bridge to bus 2c03:00
+      1 hv_pci c161e6ba-a3b8-41ce-ac6e-4902f0da5cad: PCI VMBus probing: Using version 0x10004
+      1 hv_pci c161e6ba-a3b8-41ce-ac6e-4902f0da5cad: PCI host bridge to bus a3b8:00
+      1 hv_pci d10ef314-66a7-4d81-abda-28582e62196e: PCI VMBus probing: Using version 0x10004
+      1 hv_pci d10ef314-66a7-4d81-abda-28582e62196e: PCI host bridge to bus 66a7:00
+      1 hv_pci ea90a670-8a4c-4476-82fb-4808cd570d91: PCI VMBus probing: Using version 0x10004
+      1 hv_pci ea90a670-8a4c-4476-82fb-4808cd570d91: PCI host bridge to bus 8a4c:00
+      1 mini_init (171): drop_caches: 1
+      1 mini_init (172): drop_caches: 1
+      1 mini_init (175): drop_caches: 1
+      1 mnt-wslg-run-user-0.mount: Deactivated successfully.
+      1 node 0 deferred pages initialised in 12ms
+      1 node 0 deferred pages initialised in 4ms
+      1 node 0 deferred pages initialised in 8ms
+      1 pam_unix(login:session): session opened for user root(uid=0) by (uid=0)
+      1 pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=ysyx rhost=  user=ysyx
+      1 pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
+      1 pci 118d:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci 118d:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci 118d:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci 118d:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci 118d:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci 118d:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci 118d:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci 2c03:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 3f20:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 66a7:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci 66a7:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci 66a7:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci 66a7:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci 66a7:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci 66a7:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci 66a7:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci 8482:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci 8482:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci 8482:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci 8482:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci 8482:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci 8482:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci 8482:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci 8a4c:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci 9718:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci 9718:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci 9718:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci 9718:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci 9718:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci 9718:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci 9718:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci 9e42:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci a3b8:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci c7bf:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]
+      1 pci c7bf:00:00.0: BAR 0 [mem 0xe00000000-0xe00000fff 64bit]: assigned
+      1 pci c7bf:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]
+      1 pci c7bf:00:00.0: BAR 2 [mem 0xe00001000-0xe00001fff 64bit]: assigned
+      1 pci c7bf:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]
+      1 pci c7bf:00:00.0: BAR 4 [mem 0xc00000000-0xdffffffff 64bit]: assigned
+      1 pci c7bf:00:00.0: [1af4:105a] type 00 class 0x088000 conventional PCI endpoint
+      1 pci e0bb:00:00.0: [1414:008e] type 00 class 0x030200 conventional PCI endpoint
+      1 pci e118:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]
+      1 pci e118:00:00.0: BAR 0 [mem 0x9ffe00000-0x9ffe00fff 64bit]: assigned
+      1 pci e118:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]
+      1 pci e118:00:00.0: BAR 2 [mem 0x9ffe01000-0x9ffe01fff 64bit]: assigned
+      1 pci e118:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]
+      1 pci e118:00:00.0: BAR 4 [mem 0x9ffe02000-0x9ffe02fff 64bit]: assigned
+      1 pci e118:00:00.0: [1af4:1043] type 00 class 0x010000 conventional PCI endpoint
+      1 pci_bus 118d:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 118d:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 118d:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 pci_bus 2c03:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 2c03:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 3f20:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 3f20:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 66a7:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 66a7:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 66a7:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 pci_bus 8482:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 8482:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 8482:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus 8a4c:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 8a4c:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 9718:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 9718:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus 9718:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus 9e42:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus 9e42:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus a3b8:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus a3b8:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus c7bf:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus c7bf:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus c7bf:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+      1 pci_bus e0bb:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus e0bb:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus e118:00: No busn resource found for root bus, will use [bus 00-ff]
+      1 pci_bus e118:00: busn_res: [bus 00-ff] end is updated to 00
+      1 pci_bus e118:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+      1 rsyslog.service: Sent signal SIGHUP to main process 201 (rsyslogd) on client request.
+      1 rtc_cmos 00:00: setting system clock to 2026-09-19T03:31:59 UTC (1789788719)
+      1 rtc_cmos 00:00: setting system clock to 2026-09-19T15:24:55 UTC (1789831495)
+      1 rtc_cmos 00:00: setting system clock to 2026-09-20T07:01:54 UTC (1789887714)
+      1 run-user-0.mount: Deactivated successfully.
+      1 sched_clock: Marking stable (752015900, 2335700)->(777789200, -23437600)
+      1 sched_clock: Marking stable (764047700, 2359000)->(791956800, -25550100)
+      1 sched_clock: Marking stable (908591900, 2960000)->(939925100, -28373200)
+      1 session-4.scope: Deactivated successfully.
+      1 smpboot: Total of 16 processors activated (86472.72 BogoMIPS)
+      1 smpboot: Total of 16 processors activated (86489.11 BogoMIPS)
+      1 smpboot: Total of 16 processors activated (86554.64 BogoMIPS)
+      1 tmp-syscheck\x2dmountpoint\x2d3110809872.mount: Deactivated successfully.
+      1 tmp-syscheck\x2dmountpoint\x2d3227289232.mount: Deactivated successfully.
+      1 tmp-syscheck\x2dmountpoint\x2d847485142.mount: Deactivated successfully.
+      1 user-runtime-dir@0.service: Deactivated successfully.
+      1 user.slice: Consumed 1.127s CPU time.
+      1 user@0.service: Deactivated successfully.
+      1 virtio-pci 118d:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 66a7:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 8482:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci 9718:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci c7bf:00:00.0: enabling device (0000 -> 0002)
+      1 virtio-pci e118:00:00.0: enabling device (0000 -> 0002)
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 17.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 18.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 19.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 20.
+      1 wsl-pro.service: Scheduled restart job, restart counter is at 21.
+      2 Finished Daily apt upgrade and clean activities.
+      2 Finished Daily man-db regeneration.
+      2 Finished Rotate log files.
+      2 Finished Update APT News.
+      2 Finished Update the local ESM caches.
+      2 Initial synchronization to time server 185.125.190.56:123 (ntp.ubuntu.com).
+      2 Initial synchronization to time server 185.125.190.57:123 (ntp.ubuntu.com).
+      2 Reached target Network is Online.
+      2 Started Authorization Manager.
+      2 Started PackageKit Daemon.
+      2 Starting Authorization Manager...
+      2 Starting Daily apt upgrade and clean activities...
+      2 Starting Daily man-db regeneration...
+      2 Starting PackageKit Daemon...
+      2 Starting Rotate log files...
+      2 Starting Update APT News...
+      2 Starting Update the local ESM caches...
+      2 Stopped Authorization Manager.
+      2 Stopped PackageKit Daemon.
+      2 Stopped target Network is Online.
+      2 Stopping Authorization Manager...
+      2 Stopping Bridge to Ubuntu Pro agent on Windows...
+      2 Stopping PackageKit Daemon...
+      2 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="198" x-info="https://www.rsyslog.com"] exiting on signal 15.
+      2 [origin software="rsyslogd" swVersion="8.2112.0" x-pid="198" x-info="https://www.rsyslog.com"] start
+      2 [system] Successfully activated service 'org.freedesktop.PackageKit'
+      2 [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+      2 apt-daily-upgrade.service: Deactivated successfully.
+      2 apt-news.service: Deactivated successfully.
+      2 daemon start
+      2 esm-cache.service: Deactivated successfully.
+      2 logrotate.service: Deactivated successfully.
+      2 man-db.service: Deactivated successfully.
+      2 packagekit.service: Deactivated successfully.
+      2 pam_unix(sudo:session): session closed for user root
+      2 pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+      2 polkit.service: Deactivated successfully.
+      2 started daemon version 0.105 using authority implementation `local' version `0.105'
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 10.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 11.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 12.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 13.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 14.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 15.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 16.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 4.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 5.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 6.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 7.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 8.
+      2 wsl-pro.service: Scheduled restart job, restart counter is at 9.
+      3 
+      3 	Rude variant of Tasks RCU enabled.
+      3 	Tracing variant of Tasks RCU enabled.
+      3 	Trampoline variant of Tasks RCU enabled.
+      3 [33mWARNING[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/Weiking/.ubuntupro/.address": open /mnt/c/Users/Weiking/.ubuntupro/.address: no such file or directory
+      3 [33mWARNING[0m Exiting after <nil>: check if the Windows agent is installed and running.
+      3 [36mINFO[0m Starting WSL Pro Service version 0.1.18-1-g3c35f427-dirty
+      3     /init
+      3     HOME=/
+      3     TERM=linux
+      3     WSL_ENABLE_CRASH_DUMP=1
+      3     WSL_ROOT_INIT=1
+      3     raise UnknownState(operational_state)
+      3     self.handle_state(iface_name,
+      3    https://ubuntu.com/workshop
+      3    secure developer environments that are perfect for agentic workflows.
+      3   AMD AuthenticAMD
+      3   DMA32    [mem 0x0000000000001000-0x00000000ffffffff]
+      3   Device   empty
+      3   File "/usr/bin/networkd-dispatcher", line 298, in trigger_all
+      3   File "/usr/bin/networkd-dispatcher", line 348, in handle_state
+      3   Intel GenuineIntel
+      3   Normal   [mem 0x0000000100000000-0x00000001fc1fffff]
+      3   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+      3   node   0: [mem 0x0000000000200000-0x00000000f7ffffff]
+      3   node   0: [mem 0x0000000100000000-0x00000001fc1fffff]
+      3   with arguments:
+      3   with environment:
+      3  * Canonical Workshop gives developers fast, composable, reproducible, and
+      3 (CRON) INFO (Running @reboot jobs)
+      3 (CRON) INFO (pidfile fd = 3)
+      3 (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+      3 . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+      3 .... node  #0, CPUs:        #2  #4  #6  #8 #10 #12 #14  #1  #3  #5  #7  #9 #11 #13 #15
+      3 /home/ysyx/.config/autostart/update-notifier.desktop:1: Assignment outside of section. Ignoring.
+      3 9p: Installing v9fs 9p2000 file system support
+      3 9pnet: Installing 9P2000 support
+      3 ACPI: 1 ACPI AML tables successfully acquired and loaded
+      3 ACPI: AC: AC Adapter [AC1] (on-line)
+      3 ACPI: APIC 0x000000000011F6EC 0000C8 (v04 VRTUAL MICROSFT 00000001 MSFT 00000001)
+      3 ACPI: Added _OSI(Module Device)
+      3 ACPI: Added _OSI(Processor Aggregator Device)
+      3 ACPI: Added _OSI(Processor Device)
+      3 ACPI: Core revision 20250807
+      3 ACPI: DSDT 0x00000000001011B8 01E184 (v02 MSFTVM DSDT01   00000001 MSFT 05000000)
+      3 ACPI: Early table checksum verification disabled
+      3 ACPI: Enabled 2 GPEs in block 00 to 0F
+      3 ACPI: FACP 0x0000000000101000 000114 (v06 VRTUAL MICROSFT 00000001 MSFT 00000001)
+      3 ACPI: FACS 0x0000000000101114 000040
+      3 ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+      3 ACPI: Interpreter enabled
+      3 ACPI: LAPIC_NMI (acpi_id[0x01] dfl dfl lint[0x1])
+      3 ACPI: OEM0 0x0000000000101154 000064 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+      3 ACPI: PM-Timer IO Port: 0x408
+      3 ACPI: PM: (supports S0 S5)
+      3 ACPI: RSDP 0x00000000000E0000 000024 (v02 VRTUAL)
+      3 ACPI: Reserving APIC table memory at [mem 0x11f6ec-0x11f7b3]
+      3 ACPI: Reserving DSDT table memory at [mem 0x1011b8-0x11f33b]
+      3 ACPI: Reserving FACP table memory at [mem 0x101000-0x101113]
+      3 ACPI: Reserving FACS table memory at [mem 0x101114-0x101153]
+      3 ACPI: Reserving OEM0 table memory at [mem 0x101154-0x1011b7]
+      3 ACPI: Reserving SRAT table memory at [mem 0x11f33c-0x11f6eb]
+      3 ACPI: SRAT 0x000000000011F33C 0003B0 (v02 VRTUAL MICROSFT 00000001 MSFT 00000001)
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xf7ffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x1fc1fffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000-0xffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x10000000000-0x1ffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000000-0x1fffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000000-0x1ffffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x1fc200000-0x9ffdfffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x20000000000-0x3ffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x200000000000-0x3fffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x2000000000000-0x3ffffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x40000000000-0x7ffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x400000000000-0x7fffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x4000000000000-0x7ffffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x80000000000-0xfffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x800000000000-0xffffffffffff] hotplug
+      3 ACPI: SRAT: Node 0 PXM 0 [mem 0x8000000000000-0xfffffffffffff] hotplug
+      3 ACPI: Using ACPI (MADT) for SMP configuration information
+      3 ACPI: Using IOAPIC for interrupt routing
+      3 ACPI: XSDT 0x0000000000100000 000044 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+      3 ACPI: battery: Slot [BAT1] (battery present)
+      3 ACPI: bus type drm_connector registered
+      3 APIC: Static calls initialized
+      3 APIC: Switch to symmetric I/O mode setup
+      3 APIC: Switched APIC routing to: physical x2apic
+      3 APIC: send_IPI() replaced with hv_send_ipi()
+      3 APIC: send_IPI_all() replaced with hv_send_ipi_all()
+      3 APIC: send_IPI_allbutself() replaced with hv_send_ipi_allbutself()
+      3 APIC: send_IPI_mask() replaced with hv_send_ipi_mask()
+      3 APIC: send_IPI_mask_allbutself() replaced with hv_send_ipi_mask_allbutself()
+      3 APIC: send_IPI_self() replaced with hv_send_ipi_self()
+      3 Adding 2097152k swap on /dev/sdc.  Priority:-2 extents:1 across:2097152k 
+      3 Asymmetric key parser 'x509' registered
+      3 BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+      3 BIOS-e820: [mem 0x00000000000e0000-0x00000000000e0fff] reserved
+      3 BIOS-e820: [mem 0x0000000000100000-0x00000000001fffff] ACPI data
+      3 BIOS-e820: [mem 0x0000000000200000-0x00000000f7ffffff] usable
+      3 BIOS-e820: [mem 0x0000000100000000-0x00000001fc1fffff] usable
+      3 BIOS-provided physical RAM map:
+      3 Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+      3 Booting paravirtualized kernel on Hyper-V
+      3 Bridge firewalling registered
+      3 Built 1 zonelists, mobility grouping on.  Total pages: 2048159
+      3 CET detected: Indirect Branch Tracking enabled
+      3 CPU topo: Allowing 16 present CPUs plus 0 hotplug CPUs
+      3 CPU topo: Max. dies per package:   1
+      3 CPU topo: Max. logical dies:       1
+      3 CPU topo: Max. logical packages:   1
+      3 CPU topo: Max. threads per core:   2
+      3 CPU topo: Num. cores per package:     8
+      3 CPU topo: Num. threads per package:  16
+      3 Calibrating delay loop (skipped), value calculated using timer frequency.. 5376.02 BogoMIPS (lpj=10752044)
+      3 Closed GnuPG cryptographic agent (ssh-agent emulation).
+      3 Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+      3 Closed GnuPG cryptographic agent and passphrase cache (restricted).
+      3 Closed GnuPG cryptographic agent and passphrase cache.
+      3 Closed GnuPG network certificate management daemon.
+      3 Closed REST API socket for snapd user session agent.
+      3 Closed Socket activation for snappy daemon.
+      3 Closed Syslog Socket.
+      3 Closed UUID daemon activation socket.
+      3 Closed Unix socket for apport crash forwarding.
+      3 Closed debconf communication socket.
+      3 Command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=16 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+      3 Condition check resulted in Auto import assertions from block devices being skipped.
+      3 Condition check resulted in Automatically repair incorrect owner/permissions on core devices being skipped.
+      3 Condition check resulted in Commit a transient machine-id on disk being skipped.
+      3 Condition check resulted in Discard unused blocks once a week being skipped.
+      3 Condition check resulted in Forward Password Requests to Plymouth Directory Watch being skipped.
+      3 Condition check resulted in Kernel Configuration File System being skipped.
+      3 Condition check resulted in Landscape client daemons being skipped.
+      3 Condition check resulted in Load AppArmor profiles being skipped.
+      3 Condition check resulted in Load AppArmor profiles managed internally by snapd being skipped.
+      3 Condition check resulted in Process error reports when automatic reporting is enabled (file watch) being skipped.
+      3 Condition check resulted in Process error reports when automatic reporting is enabled (timer based) being skipped.
+      3 Condition check resulted in Set Up Additional Binary Formats being skipped.
+      3 Condition check resulted in Show Plymouth Boot Screen being skipped.
+      3 Condition check resulted in Show Plymouth Power Off Screen being skipped.
+      3 Condition check resulted in Store a System Token in an EFI Variable being skipped.
+      3 Condition check resulted in Tell Plymouth To Jump To initramfs being skipped.
+      3 Condition check resulted in Timer to automatically fetch and run repair assertions being skipped.
+      3 Condition check resulted in Ubuntu Pro Background Auto Attach being skipped.
+      3 Condition check resulted in Ubuntu Pro Timer for running repeated jobs being skipped.
+      3 Condition check resulted in Ubuntu Pro reboot cmds being skipped.
+      3 Condition check resulted in Ubuntu core (all-snaps) system shutdown helper setup service being skipped.
+      3 Condition check resulted in WSLg Remount Service being skipped.
+      3 Condition check resulted in Wait for the Ubuntu Core chooser trigger being skipped.
+      3 Condition check resulted in getty on tty2-tty6 if dbus and logind are not available being skipped.
+      3 Condition check resulted in irqbalance daemon being skipped.
+      3 Config Path:   /etc/landscape/client.conf
+      3 Console: colour dummy device 80x25
+      3 Copyright (c) 1999-2008 LSI Corporation
+      3 Created slice Slice /system/getty.
+      3 Created slice User Application Slice.
+      3 Created slice User Slice of UID 1000.
+      3 DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+      3 DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+      3 DMI not present or invalid.
+      3 Data Path      /var/lib/landscape/client
+      3 Demotion targets for Node 0: null
+      3 Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+      3 Dynamic Preempt: none
+      3 EDAC MC: Ver: 3.0.0
+      3 ERROR:Unknown state for interface NetworkctlListState(idx=1, name='lo', type='loopback', operational='n/a', administrative='unmanaged'): n/a
+      3 ERROR:Unknown state for interface NetworkctlListState(idx=2, name='eth0', type='ether', operational='n/a', administrative='unmanaged'): n/a
+      3 EXT4-fs (sda): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+      3 EXT4-fs (sdb): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+      3 EXT4-fs (sdd): mounted filesystem 0fa21980-6c6f-4d79-a560-110ea1ceea4f r/w with ordered data mode. Quota mode: none.
+      3 Early memory node ranges
+      3 Failed to register legacy timer interrupt
+      3 Failed unmounting /init.
+      3 Fallback order for Node 0: 0 
+      3 Finished Apply Kernel Variables.
+      3 Finished Cleanup of Temporary Directories.
+      3 Finished Coldplug All udev Devices.
+      3 Finished Create Static Device Nodes in /dev.
+      3 Finished Create System Users.
+      3 Finished Create Volatile Files and Directories.
+      3 Finished Exit the Session.
+      3 Finished Flush Journal to Persistent Storage.
+      3 Finished Hold until boot process finishes up.
+      3 Finished Load Kernel Module configfs.
+      3 Finished Message of the Day.
+      3 Finished Permit User Sessions.
+      3 Finished Record Runlevel Change in UTMP.
+      3 Finished Record System Boot/Shutdown in UTMP.
+      3 Finished Remove Stale Online ext4 Metadata Check Snapshots.
+      3 Finished Set console font and keymap.
+      3 Finished Set console scheme.
+      3 Finished Set the console keyboard layout.
+      3 Finished System Power Off.
+      3 Finished Tell Plymouth To Write Out Runtime Data.
+      3 Finished Terminate Plymouth Boot Screen.
+      3 Finished Uncomplicated firewall.
+      3 Finished User Runtime Directory /run/user/1000.
+      3 Finished WSLg user service.
+      3 Finished Wait until snapd is fully seeded.
+      3 Free page reporting enabled
+      3 Freeing SMP alternatives memory: 52K
+      3 Freeing initrd memory: 2772K
+      3 Freeing unused decrypted memory: 2028K
+      3 Freeing unused kernel image (initmem) memory: 4852K
+      3 Freeing unused kernel image (rodata/data gap) memory: 1568K
+      3 Freeing unused kernel image (text/rodata gap) memory: 304K
+      3 Fusion MPT SAS Host driver 3.04.20
+      3 Fusion MPT SPI Host driver 3.04.20
+      3 Fusion MPT base driver 3.04.20
+      3 Fusion MPT misc device (ioctl) driver 3.04.20
+      3 HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+      3 HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+      3 HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+      3 HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+      3 Hyper-V: Host Build 10.0.22000.2538-2-0
+      3 Hyper-V: LAPIC Timer Frequency: 0xc3500
+      3 Hyper-V: Nested features: 0x3e0101
+      3 Hyper-V: PV spinlocks enabled
+      3 Hyper-V: Using IPI hypercalls
+      3 Hyper-V: Using hypercall for remote TLB flush
+      3 Hyper-V: enabling crash_kexec_post_notifiers
+      3 Hyper-V: privilege flags low 0xae7f, high 0x3b8030, ext 0x42, hints 0xa4e24, misc 0xe0bed7b2
+      3 Hypervisor detected: Microsoft Hyper-V
+      3 IOAPIC[0]: apic_id 16, version 17, address 0xfec00000, GSI 0-23
+      3 IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+      3 IPI shorthand broadcast: enabled
+      3 ITS: Mitigation: Aligned branch/return thunks
+      3 In-situ OAM (IOAM) with IPv6
+      3 Initialise system trusted keyrings
+      3 Initmem setup node 0 [mem 0x0000000000001000-0x00000001fc1fffff]
+      3 Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+      3 Journal started
+      3 Journal stopped
+      3 KERNEL supported cpus:
+      3 Kernel command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=16 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+      3 Key type asymmetric registered
+      3 Key type blacklist registered
+      3 LSM: initializing lsm=capability,landlock,yama,safesetid,selinux,ima
+      3 Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+      3 Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+      3 Linux agpgart interface v0.103
+      3 Linux version 6.18.26.1-microsoft-standard-WSL2 (root@8d760d52e3b2) (gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41) #1 SMP PREEMPT_DYNAMIC Wed May  6 23:41:00 UTC 2026
+      3 Listening on D-Bus System Message Bus Socket.
+      3 Listening on GnuPG cryptographic agent (ssh-agent emulation).
+      3 Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+      3 Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+      3 Listening on GnuPG cryptographic agent and passphrase cache.
+      3 Listening on GnuPG network certificate management daemon.
+      3 Listening on REST API socket for snapd user session agent.
+      3 Listening on Socket activation for snappy daemon.
+      3 Listening on UUID daemon activation socket.
+      3 Listening on Unix socket for apport crash forwarding.
+      3 Listening on debconf communication socket.
+      3 Loading compiled-in X.509 certificates
+      3 Loading iSCSI transport class v2.0-870.
+      3 MTRR map: 5 entries (4 fixed + 1 variable; max 20), built from 8 variable MTRRs
+      3 Microchip SmartPQI Driver (v2.1.34-035)
+      3 Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+      3 Mounted FUSE Control File System.
+      3 Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+      3 Movable zone start for each node
+      3 NET: Registered PF_INET protocol family
+      3 NET: Registered PF_INET6 protocol family
+      3 NET: Registered PF_NETLINK/PF_ROUTE protocol family
+      3 NET: Registered PF_PACKET protocol family
+      3 NET: Registered PF_UNIX/PF_LOCAL protocol family
+      3 NET: Registered PF_VSOCK protocol family
+      3 NET: Registered PF_XDP protocol family
+      3 NMI watchdog: Perf NMI watchdog permanently disabled
+      3 NODE_DATA(0) allocated [mem 0x1fc1dd300-0x1fc1fefff]
+      3 NR_IRQS: 524544, nr_irqs: 552, preallocated irqs: 0
+      3 NUMA: Node 0 [mem 0x00001000-0xf7ffffff] + [mem 0x100000000-0x1fc1fffff] -> [mem 0x00001000-0x1fc1fffff]
+      3 NX (Execute Disable) protection: active
+      3 Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+      3 NetLabel:  domain hash size = 128
+      3 NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+      3 NetLabel:  unlabeled traffic allowed by default
+      3 NetLabel: Initializing
+      3 New seat seat0.
+      3 New session 1 of user ysyx.
+      3 No valid path found for iw
+      3 No valid path found for iwconfig
+      3 On node 0, zone DMA32: 1 pages in unavailable ranges
+      3 On node 0, zone DMA32: 352 pages in unavailable ranges
+      3 On node 0, zone Normal: 15872 pages in unavailable ranges
+      3 Operation canceled @p9io.cpp:258 (AcceptAsync)
+      3 PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+      3 PCI: CLS 0 bytes, default 64
+      3 PCI: Fatal: No config space access function found
+      3 PCI: System does not support PCI
+      3 PCI: Using ACPI for IRQ routing
+      3 PCI: Using E820 reservations for host bridge windows
+      3 PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+      3 PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+      3 PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x001fffff]
+      3 PM: hibernation: Registered nosave memory: [mem 0xf8000000-0xffffffff]
+      3 PPP generic driver version 2.4.2
+      3 PTP clock support registered
+      3 PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+      3 Performance Events: unsupported CPU family 6 model 154 no PMU driver, software events only.
+      3 Policy zone: Normal
+      3 Positive Trust Anchors:
+      3 Queued start job for default target Main User Target.
+      3 RAMDISK: [mem 0x04beb000-0x04e9ffff]
+      3 RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+      3 RAS: Correctable Errors collector initialized.
+      3 RCU Tasks Rude: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+      3 RCU Tasks Trace: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+      3 RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+      3 RETBleed: Mitigation: Enhanced IBRS
+      3 Reached target Basic System.
+      3 Reached target Exit the Session.
+      3 Reached target Graphical Interface.
+      3 Reached target Host and Network Name Lookups.
+      3 Reached target Late Shutdown Services.
+      3 Reached target Local Encrypted Volumes.
+      3 Reached target Local File Systems.
+      3 Reached target Login Prompts.
+      3 Reached target Main User Target.
+      3 Reached target Multi-User System.
+      3 Reached target Path Units.
+      3 Reached target Paths.
+      3 Reached target Preparation for Local File Systems.
+      3 Reached target Preparation for Logins.
+      3 Reached target Preparation for Network.
+      3 Reached target Shutdown.
+      3 Reached target Socket Units.
+      3 Reached target Sockets.
+      3 Reached target System Initialization.
+      3 Reached target System Power Off.
+      3 Reached target System Shutdown.
+      3 Reached target System Time Set.
+      3 Reached target Timer Units.
+      3 Reached target Timers.
+      3 Reached target Unmount All Filesystems.
+      3 Register File Data Sampling: Vulnerable: No microcode
+      3 Registered:    False
+      3 Removed session 1.
+      3 Removed slice Slice /system/getty.
+      3 Removed slice Slice /system/modprobe.
+      3 Removed slice User Application Slice.
+      3 Removed slice User Slice of UID 1000.
+      3 Removed slice User and Session Slice.
+      3 Run /init as init process
+      3 Runtime Journal (/run/log/journal/c97755805d114b6a8b6fd2d51b55c4c2) is 8.0M, max 387.5M, 379.5M free.
+      3 SCSI subsystem initialized
+      3 SELinux:  Initializing.
+      3 SGI XFS with ACLs, security attributes, realtime, verbose warnings, quota, no debug enabled
+      3 SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
+      3 Segment Routing with IPv6
+      3 Serial: 8250/16550 driver, 8 ports, IRQ sharing enabled
+      3 Session 1 logged out. Waiting for processes to exit.
+      3 Shutting down.
+      3 Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+      3 Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+      3 Spectre V2 : Spectre BHI mitigation: SW BHB clearing on syscall and VM exit
+      3 Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+      3 Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+      3 Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+      3 Started Bridge to Ubuntu Pro agent on Windows.
+      3 Started D-Bus System Message Bus.
+      3 Started Daily Cleanup of Temporary Directories.
+      3 Started Daily apt download activities.
+      3 Started Daily apt upgrade and clean activities.
+      3 Started Daily dpkg database backup timer.
+      3 Started Daily man-db regeneration.
+      3 Started Daily rotation of log files.
+      3 Started Dispatch Password Requests to Console Directory Watch.
+      3 Started Dispatcher daemon for systemd-networkd.
+      3 Started Getty on tty1.
+      3 Started LSB: automatic crash report generation.
+      3 Started Message of the Day.
+      3 Started Network Name Resolution.
+      3 Started Network Time Synchronization.
+      3 Started Periodic ext4 Online Metadata Check for All Filesystems.
+      3 Started Regular background program processing daemon.
+      3 Started Rule-based Manager for Device Events and Files.
+      3 Started Save initial kernel messages after boot.
+      3 Started Session 1 of User ysyx.
+      3 Started Snap Daemon.
+      3 Started System Logging Service.
+      3 Started Time & Date Service.
+      3 Started Unattended Upgrades Shutdown.
+      3 Started User Login Management.
+      3 Started User Manager for UID 1000.
+      3 Starting Bridge to Ubuntu Pro agent on Windows...
+      3 Starting Cleanup of Temporary Directories...
+      3 Starting Create Static Device Nodes in /dev...
+      3 Starting Create Volatile Files and Directories...
+      3 Starting Dispatcher daemon for systemd-networkd...
+      3 Starting Flush Journal to Persistent Storage...
+      3 Starting Hold until boot process finishes up...
+      3 Starting LSB: automatic crash report generation...
+      3 Starting Landscape client daemons...
+      3 Starting Load Kernel Module configfs...
+      3 Starting Message of the Day...
+      3 Starting Network Name Resolution...
+      3 Starting Network Time Synchronization...
+      3 Starting Permit User Sessions...
+      3 Starting Record Runlevel Change in UTMP...
+      3 Starting Record System Boot/Shutdown in UTMP...
+      3 Starting Remove Stale Online ext4 Metadata Check Snapshots...
+      3 Starting Rule-based Manager for Device Events and Files...
+      3 Starting Set console font and keymap...
+      3 Starting Set console scheme...
+      3 Starting Snap Daemon...
+      3 Starting Socket activation for snappy daemon...
+      3 Starting System Logging Service...
+      3 Starting Tell Plymouth To Write Out Runtime Data...
+      3 Starting Terminate Plymouth Boot Screen...
+      3 Starting Time & Date Service...
+      3 Starting Uncomplicated firewall...
+      3 Starting User Login Management...
+      3 Starting User Manager for UID 1000...
+      3 Starting User Runtime Directory /run/user/1000...
+      3 Starting WSLg user service...
+      3 Starting Wait until snapd is fully seeded...
+      3 Stopped Apply Kernel Variables.
+      3 Stopped Bridge to Ubuntu Pro agent on Windows.
+      3 Stopped Create Static Device Nodes in /dev.
+      3 Stopped Create System Users.
+      3 Stopped Create Volatile Files and Directories.
+      3 Stopped Daily Cleanup of Temporary Directories.
+      3 Stopped Daily apt download activities.
+      3 Stopped Daily apt upgrade and clean activities.
+      3 Stopped Daily dpkg database backup timer.
+      3 Stopped Daily man-db regeneration.
+      3 Stopped Daily rotation of log files.
+      3 Stopped Dispatch Password Requests to Console Directory Watch.
+      3 Stopped Dispatcher daemon for systemd-networkd.
+      3 Stopped Forward Password Requests to Wall Directory Watch.
+      3 Stopped Getty on tty1.
+      3 Stopped Hold until boot process finishes up.
+      3 Stopped LSB: automatic crash report generation.
+      3 Stopped Message of the Day.
+      3 Stopped Network Name Resolution.
+      3 Stopped Network Time Synchronization.
+      3 Stopped Periodic ext4 Online Metadata Check for All Filesystems.
+      3 Stopped Permit User Sessions.
+      3 Stopped Record System Boot/Shutdown in UTMP.
+      3 Stopped Regular background program processing daemon.
+      3 Stopped Remount Root and Kernel File Systems.
+      3 Stopped Session 1 of User ysyx.
+      3 Stopped System Logging Service.
+      3 Stopped Terminate Plymouth Boot Screen.
+      3 Stopped User Login Management.
+      3 Stopped User Manager for UID 1000.
+      3 Stopped User Runtime Directory /run/user/1000.
+      3 Stopped Wait until snapd is fully seeded.
+      3 Stopped target Basic System.
+      3 Stopped target Graphical Interface.
+      3 Stopped target Host and Network Name Lookups.
+      3 Stopped target Local Encrypted Volumes.
+      3 Stopped target Local File Systems.
+      3 Stopped target Local Verity Protected Volumes.
+      3 Stopped target Login Prompts.
+      3 Stopped target Main User Target.
+      3 Stopped target Mounted snaps.
+      3 Stopped target Mounting snaps.
+      3 Stopped target Multi-User System.
+      3 Stopped target Path Units.
+      3 Stopped target Paths.
+      3 Stopped target Preparation for Local File Systems.
+      3 Stopped target Preparation for Logins.
+      3 Stopped target Preparation for Network.
+      3 Stopped target Remote File Systems.
+      3 Stopped target Slice Units.
+      3 Stopped target Socket Units.
+      3 Stopped target Sockets.
+      3 Stopped target Swaps.
+      3 Stopped target System Initialization.
+      3 Stopped target System Time Set.
+      3 Stopped target Timer Units.
+      3 Stopped target Timers.
+      3 Stopping Dispatcher daemon for systemd-networkd...
+      3 Stopping Getty on tty1...
+      3 Stopping LSB: automatic crash report generation...
+      3 Stopping Network Name Resolution...
+      3 Stopping Network Time Synchronization...
+      3 Stopping Permit User Sessions...
+      3 Stopping Record System Boot/Shutdown in UTMP...
+      3 Stopping Regular background program processing daemon...
+      3 Stopping Session 1 of User ysyx...
+      3 Stopping System Logging Service...
+      3 Stopping User Login Management...
+      3 Stopping User Manager for UID 1000...
+      3 Stopping User Runtime Directory /run/user/1000...
+      3 System is powering down.
+      3 TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+      3 TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+      3 TCP: Hash tables configured (established 65536 bind 65536)
+      3 TSC deadline timer available
+      3 Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+      3 Timer migration: 2 hierarchy levels; 8 children per group; 2 crossnode level
+      3 Traceback (most recent call last):
+      3 Trying to unpack rootfs image as initramfs...
+      3 UDP hash table entries: 4096 (order: 6, 262144 bytes, linear)
+      3 UDP-Lite hash table entries: 4096 (order: 6, 262144 bytes, linear)
+      3 Unknown kernel command line parameters "WSL_ROOT_INIT=1 WSL_ENABLE_CRASH_DUMP=1", will be passed to user space.
+      3 UnknownState: n/a
+      3 Unmounted /mnt/c.
+      3 Unmounted /mnt/d.
+      3 Unmounted /mnt/e.
+      3 Unmounted /mnt/f.
+      3 Unmounted /mnt/wsl.
+      3 Unmounted /mnt/wslg.
+      3 Unmounted /mnt/wslg/distro.
+      3 Unmounted /mnt/wslg/doc.
+      3 Unmounted /mnt/wslg/run/user/1000.
+      3 Unmounted /mnt/wslg/versions.txt.
+      3 Unmounted /run/credentials/systemd-sysusers.service.
+      3 Unmounted /run/shm.
+      3 Unmounted /run/user.
+      3 Unmounted /run/user/1000.
+      3 Unmounted /tmp/.X11-unix.
+      3 Unmounted /usr/lib/modules/6.18.26.1-microsoft-standard-WSL2.
+      3 Unmounted /usr/lib/wsl/drivers.
+      3 Unmounted /usr/lib/wsl/lib.
+      3 Unmounting /init...
+      3 Unmounting /mnt/c...
+      3 Unmounting /mnt/d...
+      3 Unmounting /mnt/e...
+      3 Unmounting /mnt/f...
+      3 Unmounting /mnt/wsl...
+      3 Unmounting /mnt/wslg...
+      3 Unmounting /mnt/wslg/distro...
+      3 Unmounting /mnt/wslg/doc...
+      3 Unmounting /mnt/wslg/versions.txt...
+      3 Unmounting /run/credentials/systemd-sysusers.service...
+      3 Unmounting /run/shm...
+      3 Unmounting /run/user...
+      3 Unmounting /tmp/.X11-unix...
+      3 Unmounting /usr/lib/modules/6.18.26.1-microsoft-standard-WSL2...
+      3 Unmounting /usr/lib/wsl/drivers...
+      3 Unmounting /usr/lib/wsl/lib...
+      3 Using GB pages for direct mapping
+      3 Using NULL legacy PIC
+      3 Using default interface naming scheme 'v249'.
+      3 Using system hostname 'DCKERS611'.
+      3 VFS: Disk quotas dquot_6.6.0
+      3 VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+      3 VMware PVSCSI driver - version 1.0.7.0-k
+      3 VMware vmxnet3 virtual NIC driver - version 1.9.0.0-k-NAPI
+      3 WARNING: systemd-networkd is not running, output will be incomplete.
+      3 WSL (1 - ): WSL version 2.7.5.0
+      3 Write protecting the kernel read-only data: 36864k
+      3 Yama: becoming mindful.
+      3 Zone ranges:
+      3 [mem 0xf8000000-0xffffffff] available for PCI devices
+      3 [system] Activation via systemd failed for unit 'dbus-org.freedesktop.network1.service': Unit dbus-org.freedesktop.network1.service not found.
+      3 [system] Successfully activated service 'org.freedesktop.timedate1'
+      3 acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+      3 active return thunk: its_return_thunk
+      3 apport-forward.socket: Deactivated successfully.
+      3 apport.service: Deactivated successfully.
+      3 apt-daily-upgrade.timer: Deactivated successfully.
+      3 apt-daily.timer: Deactivated successfully.
+      3 audit: initializing netlink subsys (disabled)
+      3 backends.go:70: AppArmor status: apparmor not enabled
+      3 brd: module loaded
+      3 bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+      3 clk: Disabling unused clocks
+      3 clocksource: Switched to clocksource hyperv_clocksource_tsc_page
+      3 clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+      3 clocksource: hyperv_clocksource_msr: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+      3 clocksource: hyperv_clocksource_tsc_page: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+      3 clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+      3 clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+      3 cpuidle: using governor ladder
+      3 cpuidle: using governor menu
+      3 cron.service: Deactivated successfully.
+      3 cryptd: max_cpu_qlen set to 1000
+      3 daemon stop requested to wait for socket activation
+      3 daemon.go:276: started snapd/2.73+ubuntu22.04 (series 16; classic; devmode; wsl) ubuntu/22.04 (amd64) linux/6.18.26.1-microsoft-stand.
+      3 daemon.go:370: adjusting startup timeout by 30s (pessimistic estimate of 30s plus 5s per snap)
+      3 daemon.go:556: gracefully waiting for running hooks
+      3 daemon.go:558: done waiting for running hooks
+      3 dca service started, version 1.12.1
+      3 device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+      3 device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+      3 device-mapper: uevent: version 1.0.3
+      3 devtmpfs: initialized
+      3 dmesg.service: Deactivated successfully.
+      3 dpkg-db-backup.timer: Deactivated successfully.
+      3 drop_monitor: Initializing network drop monitor service
+      3 e2scrub_all.timer: Deactivated successfully.
+      3 e2scrub_reap.service: Deactivated successfully.
+      3 e820: remove [mem 0x000a0000-0x000fffff] usable
+      3 e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+      3 ftrace: allocated 232 pages with 4 groups
+      3 ftrace: allocating 59108 entries in 232 pages
+      3 fuse: init (API version 7.45)
+      3 futex hash table entries: 4096 (262144 bytes on 1 NUMA nodes, total 256 KiB, linear).
+      3 getty@tty1.service: Deactivated successfully.
+      3 hv_balloon: Cold memory discard hint enabled with order 9
+      3 hv_balloon: Max. dynamic memory size: 8002 MB
+      3 hv_balloon: Using Dynamic Memory protocol version 2.0
+      3 hv_utils: Registering HyperV Utility Driver
+      3 hv_utils: TimeSync IC version 4.0
+      3 hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+      3 hv_vmbus: Unknown GUID: dde9cbc0-5060-4436-9448-ea1254a5d177
+      3 hv_vmbus: Vmbus version:5.2
+      3 hv_vmbus: registering driver dxgkrnl
+      3 hv_vmbus: registering driver hv_balloon
+      3 hv_vmbus: registering driver hv_netvsc
+      3 hv_vmbus: registering driver hv_pci
+      3 hv_vmbus: registering driver hv_sock
+      3 hv_vmbus: registering driver hv_storvsc
+      3 hv_vmbus: registering driver hv_utils
+      3 hv_vmbus: registering driver hyperv_keyboard
+      3 i8042: PNP: No PS/2 controller found.
+      3 ima: Allocated hash algorithm: sha256
+      3 ima: No TPM chip found, activating TPM-bypass!
+      3 ima: No architecture policies found
+      3 imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2112.0]
+      3 init.mount: Mount process exited, code=exited, status=32/n/a
+      3 intel_pstate: CPU model not supported
+      3 intel_rapl_msr: PL4 support detected.
+      3 io scheduler kyber registered
+      3 io scheduler mq-deadline registered
+      3 ioatdma: Intel(R) QuickData Technology Driver 5.00
+      3 iommu: DMA domain TLB invalidation policy: lazy mode
+      3 iommu: Default domain type: Translated
+      3 kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+      3 kvm_intel: Using Hyper-V Enlightened VMCS
+      3 landlock: Up and running.
+      3 landscape-client.service: Skipped due to 'exec-condition'.
+      3 last_pfn = 0x1fc200 max_arch_pfn = 0x400000000
+      3 last_pfn = 0xf8000 max_arch_pfn = 0x400000000
+      3 libata version 3.00 loaded.
+      3 logrotate.timer: Deactivated successfully.
+      3 loop: module loaded
+      3 man-db.timer: Deactivated successfully.
+      3 mem auto-init: stack:off, heap alloc:on, heap free:off
+      3 misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+      3 misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+      3 misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+      3 mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+      3 mnt-c.mount: Deactivated successfully.
+      3 mnt-d.mount: Deactivated successfully.
+      3 mnt-e.mount: Deactivated successfully.
+      3 mnt-f.mount: Deactivated successfully.
+      3 mnt-wsl.mount: Deactivated successfully.
+      3 mnt-wslg-distro.mount: Deactivated successfully.
+      3 mnt-wslg-doc.mount: Deactivated successfully.
+      3 mnt-wslg-run-user-1000.mount: Deactivated successfully.
+      3 mnt-wslg-versions.txt.mount: Deactivated successfully.
+      3 mnt-wslg.mount: Deactivated successfully.
+      3 modprobe@configfs.service: Deactivated successfully.
+      3 motd-news.service: Deactivated successfully.
+      3 motd-news.timer: Deactivated successfully.
+      3 mptctl: /dev/mptctl @ (major,minor=10,220)
+      3 mptctl: Registered with Fusion MPT base driver
+      3 netfs: FS-Cache loaded
+      3 networkd-dispatcher.service: Deactivated successfully.
+      3 overlord.go:294: Acquiring state lock file
+      3 overlord.go:299: Acquired state lock file
+      3 overlord.go:538: Released state lock file
+      3 pam_unix(cron:session): session closed for user root
+      3 pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+      3 pam_unix(login:session): session opened for user ysyx(uid=1000) by (uid=0)
+      3 pam_unix(systemd-user:session): session opened for user ysyx(uid=1000) by (uid=0)
+      3 pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 12 13 14 15 
+      3 pcpu-alloc: s212992 r8192 d28672 u262144 alloc=1*2097152
+      3 percpu: Embedded 61 pages/cpu s212992 r8192 d28672 u262144
+      3 pid_max: default: 32768 minimum: 301
+      3 pinctrl core: initialized pinctrl subsystem
+      3 plymouth-quit-wait.service: Deactivated successfully.
+      3 plymouth-quit.service: Deactivated successfully.
+      3 pnp: PnP ACPI init
+      3 pnp: PnP ACPI: found 1 devices
+      3 posixtimers hash table entries: 8192 (order: 5, 131072 bytes, linear)
+      3 pps_core: LinuxPPS API ver. 1 registered
+      3 pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+      3 printk: legacy console [hvc0] enabled
+      3 printk: log buffer data + meta data: 262144 + 917504 = 1179648 bytes
+      3 random: crng init done
+      3 rcu: 	Max phase no-delay instances is 1000.
+      3 rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=16.
+      3 rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=16
+      3 rcu: Hierarchical SRCU implementation.
+      3 rcu: Preemptible hierarchical RCU implementation.
+      3 rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+      3 rcu: srcu_init: Setting srcu_struct sizes based on contention.
+      3 rdac: device handler registered
+      3 registered taskstats version 1
+      3 rsyslog.service: Deactivated successfully.
+      3 rsyslogd's groupid changed to 111
+      3 rsyslogd's userid changed to 104
+      3 rtc_cmos 00:00: RTC can wake from S4
+      3 rtc_cmos 00:00: alarms up to one month, 114 bytes nvram
+      3 rtc_cmos 00:00: registered as rtc0
+      3 run-credentials-systemd\x2dsysusers.service.mount: Deactivated successfully.
+      3 run-shm.mount: Deactivated successfully.
+      3 run-user-1000.mount: Deactivated successfully.
+      3 run-user.mount: Deactivated successfully.
+      3 scsi 0:0:0:0: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+      3 scsi 0:0:0:1: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+      3 scsi 0:0:0:2: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+      3 scsi 0:0:0:3: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+      3 scsi host0: storvsc_host_t
+      3 sd 0:0:0:0: Attached scsi generic sg0 type 0
+      3 sd 0:0:0:0: [sda] 747064 512-byte logical blocks: (382 MB/365 MiB)
+      3 sd 0:0:0:0: [sda] Attached SCSI disk
+      3 sd 0:0:0:0: [sda] Mode Sense: 0f 00 80 00
+      3 sd 0:0:0:0: [sda] Write Protect is on
+      3 sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+      3 sd 0:0:0:1: Attached scsi generic sg1 type 0
+      3 sd 0:0:0:1: [sdb] 326408 512-byte logical blocks: (167 MB/159 MiB)
+      3 sd 0:0:0:1: [sdb] Attached SCSI disk
+      3 sd 0:0:0:1: [sdb] Mode Sense: 0f 00 80 00
+      3 sd 0:0:0:1: [sdb] Write Protect is on
+      3 sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+      3 sd 0:0:0:2: Attached scsi generic sg2 type 0
+      3 sd 0:0:0:2: [sdc] 4096-byte physical blocks
+      3 sd 0:0:0:2: [sdc] 4194312 512-byte logical blocks: (2.15 GB/2.00 GiB)
+      3 sd 0:0:0:2: [sdc] Attached SCSI disk
+      3 sd 0:0:0:2: [sdc] Mode Sense: 0f 00 00 00
+      3 sd 0:0:0:2: [sdc] Write Protect is off
+      3 sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+      3 sd 0:0:0:3: Attached scsi generic sg3 type 0
+      3 sd 0:0:0:3: [sdd] 2147483648 512-byte logical blocks: (1.10 TB/1.00 TiB)
+      3 sd 0:0:0:3: [sdd] 4096-byte physical blocks
+      3 sd 0:0:0:3: [sdd] Attached SCSI disk
+      3 sd 0:0:0:3: [sdd] Mode Sense: 0f 00 00 00
+      3 sd 0:0:0:3: [sdd] Write Protect is off
+      3 sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+      3 session-1.scope: Deactivated successfully.
+      3 setup_percpu: NR_CPUS:8192 nr_cpumask_bits:16 nr_cpu_ids:16 nr_node_ids:1
+      3 signal: max sigframe size: 1776
+      3 smp: Bringing up secondary CPUs ...
+      3 smp: Brought up 1 node, 16 CPUs
+      3 smpboot: CPU0: 12th Gen Intel(R) Core(TM) i7-12650H (family: 0x6, model: 0x9a, stepping: 0x3)
+      3 smpboot: x86: Booting SMP configuration:
+      3 snapd.seeded.service: Deactivated successfully.
+      3 snapd.service: Deactivated successfully.
+      3 snapd.socket: Deactivated successfully.
+      3 software IO TLB: area num 16.
+      3 software IO TLB: mapped [mem 0x00000000f4000000-0x00000000f8000000] (64MB)
+      3 squashfs: version 4.0 (2009/01/31) Phillip Lougher
+      3 syslog.socket: Deactivated successfully.
+      3 systemd-ask-password-console.path: Deactivated successfully.
+      3 systemd-ask-password-wall.path: Deactivated successfully.
+      3 systemd-logind.service: Deactivated successfully.
+      3 systemd-poweroff.service: Deactivated successfully.
+      3 systemd-remount-fs.service: Deactivated successfully.
+      3 systemd-resolved.service: Deactivated successfully.
+      3 systemd-sysctl.service: Deactivated successfully.
+      3 systemd-sysusers.service: Deactivated successfully.
+      3 systemd-timedated.service: Deactivated successfully.
+      3 systemd-timesyncd.service: Deactivated successfully.
+      3 systemd-tmpfiles-clean.service: Deactivated successfully.
+      3 systemd-tmpfiles-clean.timer: Deactivated successfully.
+      3 systemd-tmpfiles-setup-dev.service: Deactivated successfully.
+      3 systemd-tmpfiles-setup.service: Deactivated successfully.
+      3 systemd-update-utmp-runlevel.service: Deactivated successfully.
+      3 systemd-update-utmp.service: Deactivated successfully.
+      3 systemd-user-sessions.service: Deactivated successfully.
+      3 tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+      3 thermal_sys: Registered thermal governor 'step_wise'
+      3 thermal_sys: Registered thermal governor 'user_space'
+      3 tmp-.X11\x2dunix.mount: Deactivated successfully.
+      3 tsc: Detected 2688.011 MHz processor
+      3 tsc: Marking TSC unstable due to running on Hyper-V
+      3 tun: Universal TUN/TAP device driver, 1.6
+      3 umount: /init: target is busy.
+      3 unattended-upgrades.service: Deactivated successfully.
+      3 user-runtime-dir@1000.service: Deactivated successfully.
+      3 user@1000.service: Deactivated successfully.
+      3 usr-lib-modules-6.18.26.1\x2dmicrosoft\x2dstandard\x2dWSL2.mount: Deactivated successfully.
+      3 usr-lib-wsl-drivers.mount: Deactivated successfully.
+      3 usr-lib-wsl-lib.mount: Deactivated successfully.
+      3 uuidd.socket: Deactivated successfully.
+      3 vgaarb: loaded
+      3 virtiofs virtio1: Cache len: 0x200000000 @ 0xc00000000
+      3 virtiofs virtio1: discovered new tag: wslg
+      3 vmentry_ctrl unsupported with eVMCS: 0x100000
+      3 vmexit_ctrl unsupported with eVMCS: 0x10000000
+      3 workingset: timestamp_bits=36 max_order=21 bucket_order=0
+      3 wsl-pro.service: Deactivated successfully.
+      3 wsl-pro.service: Scheduled restart job, restart counter is at 1.
+      3 wsl-pro.service: Scheduled restart job, restart counter is at 2.
+      3 wsl-pro.service: Scheduled restart job, restart counter is at 3.
+      3 x2apic enabled
+      3 x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+      3 x86/cpu: User Mode Instruction Prevention (UMIP) activated
+      3 x86/fpu: Enabled xstate features 0x1807, context size is 872 bytes, using 'compacted' format.
+      3 x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+      3 x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+      3 x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+      3 x86/fpu: Supporting XSAVE feature 0x1000: 'Control-flow Kernel registers (KVM only)'
+      3 x86/fpu: Supporting XSAVE feature 0x800: 'Control-flow User registers'
+      3 x86/fpu: xstate_offset[11]:  832, xstate_sizes[11]:   16
+      3 x86/fpu: xstate_offset[12]:  848, xstate_sizes[12]:   24
+      3 x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+      3 x86/mm: Memory block size: 128MB
