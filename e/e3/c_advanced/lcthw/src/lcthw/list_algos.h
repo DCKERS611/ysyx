@@ -1,5 +1,5 @@
 #ifndef _LCTHW_LIST_ALGOS_H_
-#define _LCT_LIST_ALGOS_H_
+#define _LCTHW_LIST_ALGOS_H_
 
 #include <lcthw/list.h>
 

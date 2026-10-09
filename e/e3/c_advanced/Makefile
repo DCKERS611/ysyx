@@ -3,7 +3,7 @@ CFLAGS = -Wall -g -DNDEBUG
 EX20_CFLAGS = -Wall -g -o0 -D -DNDEBUG
 
 .PHONY: all clean test
-all: ex1 ex3 ex19 ex22_main ex23 ex24 ex25
+all: ex1 ex3 ex19 ex22_main ex24 ex25
 
 ex1: ex1.c
 	$(CC) $(CFLAGS) ex1.c -o ex1

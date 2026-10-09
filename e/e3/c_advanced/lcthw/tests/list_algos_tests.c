@@ -118,7 +118,7 @@ char *test_insert_sorted()
     int rc = List_insert_sorted(l, "banana", (List_compare)strcmp);
     mu_assert(rc == 0, "insert into empty failed.");
     mu_assert(List_count(l) == 1, "Wrong count after empty insert.");
-    mu_assert(List_first(l) == "banana", "Wrong value.");
+    mu_assert(strcmp(List_first(l), "banana") == 0, "Wrong value.");
     List_destroy(l);
 
     // 场景2：插到中间
@@ -129,8 +129,8 @@ char *test_insert_sorted()
     mu_assert(rc == 0, "insert middle failed.");
     mu_assert(is_sorted(l), "List not sorted after middle insert.");
     mu_assert(List_count(l) == 3, "Wrong count.");
-    mu_assert(List_first(l) == "apple", "Wrong first.");
-    mu_assert(List_last(l) == "cat", "Wrong last.");
+    mu_assert(strcmp(List_first(l), "apple") == 0, "Wrong first.");
+    mu_assert(strcmp(List_last(l), "cat") == 0, "Wrong last.");
     List_destroy(l);
 
     // 场景3：插到最前
@@ -140,7 +140,7 @@ char *test_insert_sorted()
     rc = List_insert_sorted(l, "apple", (List_compare)strcmp);
     mu_assert(rc == 0, "insert head failed.");
     mu_assert(is_sorted(l), "Not sorted after head insert.");
-    mu_assert(List_first(l) == "apple", "apple should be first.");
+    mu_assert(strcmp(List_first(l), "apple") == 0, "apple should be first.");
     List_destroy(l);
 
     // 场景4：插到最后
@@ -150,7 +150,7 @@ char *test_insert_sorted()
     rc = List_insert_sorted(l, "cat", (List_compare)strcmp);
     mu_assert(rc == 0, "insert tail failed.");
     mu_assert(is_sorted(l), "Not sorted after tail insert.");
-    mu_assert(List_last(l) == "cat", "cat should be last.");
+    mu_assert(strcmp(List_last(l), "cat") == 0, "cat should be last.");
     List_destroy(l);
 
     return NULL;

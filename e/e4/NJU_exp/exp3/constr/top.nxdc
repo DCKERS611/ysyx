@@ -1,0 +1,9 @@
+top=top
+
+a (SW7, SW6, SW5, SW4)
+b (SW3, SW2, SW1, SW0)
+sel (BTNL, BTNC, BTNR)
+res (LD3, LD2, LD1, LD0)
+carry LD4
+of LD5
+zero LD6
