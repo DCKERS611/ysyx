@@ -23,5 +23,5 @@ module bcd(
 	4'd14, 8'b0000_0000,
 	4'd15, 8'b0000_0000
     });
-	assign seg = en ? ~bcd_out : 8'b0000_0000;
+	assign seg = en ? ~bcd_out : 8'b1111_1111;
 endmodule

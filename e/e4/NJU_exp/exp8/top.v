@@ -53,9 +53,9 @@ module top(
     assign vga_hsync = hsync_d;
     assign vga_vsync = vsync_d;
 
-    assign vga_r = valid ? {color[11:8], color[11:8]} : 8'h00;
-    assign vga_g = valid ? {color[7:4], color[7:4]} : 8'h00;
-    assign vga_b = valid ? {color[3:0], color[3:0]} : 8'h00;
+    assign vga_r = valid_d ? {color[11:8], color[11:8]} : 8'h00;
+    assign vga_g = valid_d ? {color[7:4], color[7:4]} : 8'h00;
+    assign vga_b = valid_d ? {color[3:0], color[3:0]} : 8'h00;
 
 //    assign vga_r = color[23:16];
 //    assign vga_g = color[15:8];

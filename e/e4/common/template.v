@@ -89,5 +89,21 @@ module MuxKeyWithDefault #(NR_KEY = 2 , KEY_LEN = 1 , DATA_LEN = 1) (
 );
 
     MuxKeyInternal #(NR_KEY, KEY_LEN, DATA_LEN, 1) i0 (out, key, default_out, lut);
+endmodule
+
+// NJU_EXP ROM模版
+module Rom #(
+    parameter ADDR_W = 19,
+    parameter DATA_W = 12,
+    parameter DEPTH  = 327680,
+    parameter INIT   = "imgs/mem.hex"
+)(
+    input                       clk,
+    input [ADDR_W-1 : 0]        addr,
+    output reg [DATA_W-1 : 0]   dout
+);
+    reg [DATA_W-1 : 0] mem [0 : DEPTH-1];
+    initial $readmemh(INIT, mem);
+    always @(posedge clk) dout <= mem[addr];
 
 endmodule
