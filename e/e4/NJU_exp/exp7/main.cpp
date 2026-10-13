@@ -15,7 +15,7 @@ static void reset(Vtop& dut)              // clrn 低有效，拉低 4 拍再放
     dut.clrn = 0;
 
     for (int i = 0; i < 4; i++) tick(dut);
-    
+
     dut.clrn = 1;
     for (int i = 0 ; i < 4 ; i ++) tick(dut);
 }
@@ -166,7 +166,7 @@ int main(int argc , char** argv)
     Vtop dut{&ctx};
 
     int fails = 0 , total = 0;
-    
+
 	// 1. 复位
     reset(dut);
     check(dut, "reset", 0, 0x00, 0, total, fails);
@@ -255,7 +255,7 @@ int main(int argc , char** argv)
     check_display(dut, "display digit 1", 0x31, 1,
             {0x41, 0x9F, 0x9F, 0x0D, 0x9F, 0x03},
             total, fails);
-	
+
     // Optional: modifiers do not occupy the character slot or increment its count.
     reset(dut);
     send_byte(dut, 0x12); // left Shift
@@ -326,7 +326,7 @@ int main(int argc , char** argv)
     check_combo(dut, "reset clears modifiers", 0, 0, 0, total, fails);
 
 	if (fails) {printf("FAILED: %d/%d checks\n", fails,total); return 1;}
-	
+
   	printf("PASS: %d check\n",total);
 	return 0;
 }

@@ -7,7 +7,7 @@ module top(
     output vga_hsync,
     output vga_vsync,
     output vga_blank_n,
-    
+
     output [9:0] x_cnt,
     output [9:0] y_cnt,
     output [9:0] h_addr,

@@ -35,7 +35,7 @@ module ball(
         .dout(dir_x),
         .wen(en)
     );
-    
+
     // direction: y
 	wire hit_ceil = (dir_y == 1'b1) && (ball_y < vy);
     wire hit_down = (dir_y == 1'b0) && (ball_y + vy  > down_wall);

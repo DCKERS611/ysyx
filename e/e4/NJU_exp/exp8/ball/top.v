@@ -12,7 +12,7 @@ module top(
 	output [9:0] ball_y,
 	output dir_x,
 	output dir_y
-    
+
 );
 
     wire [9:0] h_addr, v_addr, x_cnt, y_cnt;

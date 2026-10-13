@@ -33,7 +33,7 @@ module top(
 
     wire display_en;
     assign display_en = pressed & ascii_valid;
-    
+
     wire [7:0] base_ascii;
     wire [7:0] shifted_digit;
     scancode_to_ascii u_ascii(.scancode(keycode), .shift_down(shift_down), .ascii(base_ascii), .valid(ascii_valid));
@@ -58,11 +58,11 @@ module top(
     // mid 2 bit: ASCII
     hex_to_seg u_seg2 (.hex(ascii[3:0]), .en(display_en), .seg(seg2));
     hex_to_seg u_seg3 (.hex(ascii[7:4]), .en(display_en), .seg(seg3));
-    
+
     // high 2 bit: acc(HEX)
     hex_to_seg u_seg4 (.hex(press_cnt[3:0]), .en(1'b1), .seg(seg4));
     hex_to_seg u_seg5 (.hex(press_cnt[7:4]), .en(1'b1), .seg(seg5));
-    
+
     ps2_keyboard u_receiver(
         .clk(clk),
         .clrn(clrn),

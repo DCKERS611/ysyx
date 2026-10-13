@@ -78,8 +78,8 @@ module scancode_to_ascii(
     );
 
     assign is_letter = (base_ascii >= 8'h61) & (base_ascii <= 8'h7a);
-    assign ascii = 
-        shift_down ? 
+    assign ascii =
+        shift_down ?
             (is_letter ? base_ascii - 8'h20 : shifted_digit) :
             base_ascii;
 endmodule

@@ -2,14 +2,15 @@
 # 实际使用位置：~/e4/NJU_exp/expN/Makefile
 # 本文件在 Windows E 盘仅作参考/备份，不要在这里构建。
 
-TOPNAME = top
+# main.cpp 穷举数码管译码器；上板顶层由 Makefile.board 构建
+TOPNAME = decoder
 BUILD_DIR = build
 OBJ_DIR = $(BUILD_DIR)/obj_dir
 BIN = $(OBJ_DIR)/V$(TOPNAME)
 TEMPLATE = ../../common/template.v
 
 VSRCS = $(wildcard *.v)
-CSRCS = $(wildcard *.cpp)
+CSRCS = $(abspath main.cpp)
 
 $(BIN): $(VSRCS) $(CSRCS) $(TEMPLATE)
 	@mkdir -p $(BUILD_DIR)

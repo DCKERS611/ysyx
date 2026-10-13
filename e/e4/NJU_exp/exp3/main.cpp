@@ -48,7 +48,7 @@ int main(int argc , char** argv)
                 }
 
                 int exp_zero = (exp_res == 0) ? 1 : 0;
-                
+
                 int gr = (int)dut.res , gc = (int)dut.carry;
                 int go = (int)dut.of , gz = (int)dut.zero;
                 total ++;
@@ -67,6 +67,6 @@ int main(int argc , char** argv)
             }
     if (fails) {printf("FAILED: %d/%d\n" , fails , total); return 1; }
     printf("PASS: %d cases\n" , total);
-    
+
     return 0;
 }

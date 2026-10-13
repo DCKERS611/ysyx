@@ -17,7 +17,7 @@ module addsub(
         .s(res),
         .cout(carry)
     );
-    
+
     assign of = (a[3] == t_b[3]) && (res[3] != a[3]);
     assign zero = ~(| res);
     endmodule

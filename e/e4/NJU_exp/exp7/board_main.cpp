@@ -20,7 +20,7 @@ int main()
     for (int i = 0 ; i < 10 ; i ++) tick(dut);
     dut.clrn = 1;
 
-    while(1) 
+    while(1)
     {
         nvboard_update();   // read NVBoard keyboard
         tick(dut);

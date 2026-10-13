@@ -1,5 +1,5 @@
 #include <cstdio>
-#include "Vtop.h"          
+#include "Vdecoder.h"
 #include "verilated.h"
 
 static const bool seg_on[16][7] = {
@@ -22,11 +22,11 @@ static const bool seg_on[16][7] = {
     { 1, 0, 0, 0, 1, 1, 1 }, // F
 };
 
-static void unsigned segbit[7] = {0x80, 0x40, 0x20, 0x10, 0x08, 0x04,0x02};
+static unsigned segbit[7] = {0x80, 0x40, 0x20, 0x10, 0x08, 0x04,0x02};
 
 int main(int argc, char** argv) {
     VerilatedContext ctx; ctx.commandArgs(argc, argv);
-    Vtop dut{&ctx};
+    Vdecoder dut{&ctx};
 
     int fails = 0;
     for (int h = 0; h < 16; h++) {
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 
         unsigned hi = 0;
         for (int s = 0; s < 7; s++)
-            if (seg_on[h][s]) hi |= bit[s];
+            if (seg_on[h][s]) hi |= segbit[s];
         unsigned exp = (~hi) & 0xFF;
 
         unsigned got = dut.seg & 0xFF;

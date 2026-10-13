@@ -8,7 +8,7 @@ module add4(
 
     wire [4:0] carry;
     assign carry[0] = cin;
-    
+
     genvar i;
     generate
         for (i = 0; i < 4 ; i = i + 1) begin : gen_adder
@@ -21,6 +21,6 @@ module add4(
             );
         end
     endgenerate
-    
+
     assign cout = carry[4];
     endmodule

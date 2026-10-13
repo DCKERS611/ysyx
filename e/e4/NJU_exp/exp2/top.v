@@ -18,7 +18,7 @@ module top(
 
     bcd u_seg (
         .bcd({1'b0, enc}),
-        .en(vld),
+        .en(1'b1),
         .seg(seg)
     );
 endmodule

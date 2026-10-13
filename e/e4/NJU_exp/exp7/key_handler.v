@@ -12,14 +12,14 @@ module key_handler(
     output ctrl_down    // 两个ctrl or
 );
     wire break_pending;
-    
+
     //  区分拓展
     wire extended_pending;
-    
+
     // H r_ctrl l_ctrl r_shift l_shift L
     wire [3:0] modifiers;
     wire [7:0] unused_incoming_ascii;
-    
+
     // 当前ascii是否为支持的数字/字母
     wire incoming_valid;
 
@@ -29,7 +29,7 @@ module key_handler(
     );
     assign shift_down = |modifiers[1:0];
     assign ctrl_down = |modifiers[3:2];
-    
+
     // 数据 -> 每一个posedge处理一字节,同时确认取走
     wire consume = ready & clrn;
     assign next_data_n = ~consume;
@@ -70,13 +70,13 @@ module key_handler(
         end
     endgenerate
 
-    wire next_break_pending = release_event ? 1'b0 : 
+    wire next_break_pending = release_event ? 1'b0 :
                                 prefix_event ? 1'b1 :
                                     break_pending;
     wire next_pressed = release_curr ? 1'b0 :
                             new_press ? 1'b1 :
                                 pressed;
-    
+
     Reg #(1,1'b0) u_break (clk , ~clrn ,
                             next_break_pending , break_pending , consume);
     Reg #(1,1'b0) u_pressed (clk , ~clrn,

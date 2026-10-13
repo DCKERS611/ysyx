@@ -46,7 +46,7 @@ run: $(BIN)
 	@$^
 clean:
 	rm -rf $(BUILD_DIR)
-lint: 
+lint:
 	verilator --lint-only -Wall -Wno-DECLFILENAME --top-module $(TOPNAME) $(VSRCS)
 include $(NPC_HOME)/../Makefile
 

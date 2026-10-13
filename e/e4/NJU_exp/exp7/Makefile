@@ -5,7 +5,7 @@ BIN = $(OBJ_DIR)/V$(TOPNAME)
 TEMPLATE = ../../common/template.v
 
 VSRCS = $(wildcard *.v)
-CSRCS = main.cpp
+CSRCS = $(abspath main.cpp)
 
 $(BIN): $(VSRCS) $(CSRCS) $(TEMPLATE)
 	@mkdir -p $(BUILD_DIR)

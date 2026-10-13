@@ -48,7 +48,7 @@ int main(int argc , char** argv)
     Vtop dut{&ctx};
 
     int fails = 0 , total = 0;
-    
+
     reset(dut);
 
     int exp_x = 1, exp_y = 1;
@@ -69,7 +69,7 @@ int main(int argc , char** argv)
 
         // 延迟类
         int exp_hsync = (prev_x > 96), exp_vsync = (prev_y > 2);
-        int exp_blank_n = (prev_x >= 145 && prev_x <= 784 && 
+        int exp_blank_n = (prev_x >= 145 && prev_x <= 784 &&
                             prev_y >= 36 && prev_y <= 515);
         int exp_p_hv = (prev_x >= 145 && prev_x <= 784);
         int exp_p_vv = (prev_y >= 36 && prev_y <= 515);
@@ -86,16 +86,16 @@ int main(int argc , char** argv)
         int exp_v_addr = exp_v_valid ? exp_y - 36  : 0;
 
         total ++;
-        int bad = (x_cnt != exp_x) || (y_cnt != exp_y) || 
-                    (hsync != exp_hsync) || (vsync != exp_vsync) || 
-                    (blank_n != exp_blank_n) || 
+        int bad = (x_cnt != exp_x) || (y_cnt != exp_y) ||
+                    (hsync != exp_hsync) || (vsync != exp_vsync) ||
+                    (blank_n != exp_blank_n) ||
                     (h_addr != exp_h_addr) || (v_addr != exp_v_addr) ||
                     (color != exp_color);
         if (bad)
         {
-            if (fails < 10) 
+            if (fails < 10)
             printf("cycle'%d': x_cnt=%d y_cnt=%d hsync=%d vsync=%d blank_n=%d h_addr=%d v_addr=%d color=%d (expect: x_cnt=%d y_cnt=%d hsync=%d vsync=%d blank_n=%d h_addr=%d v_addr=%d color=%d)  <---MISMATCH\n",
-            cycle, x_cnt, y_cnt, hsync, vsync, blank_n, h_addr, v_addr, color, 
+            cycle, x_cnt, y_cnt, hsync, vsync, blank_n, h_addr, v_addr, color,
             exp_x, exp_y, exp_hsync, exp_vsync, exp_blank_n, exp_h_addr, exp_v_addr, exp_color);
 
             fails ++;
@@ -116,7 +116,7 @@ int main(int argc , char** argv)
 
 
 	if (fails) {printf("FAILED: %d/%d checks\n", fails,total); return 1;}
-	
+
   	printf("PASS: %d check\n",total);
 	return 0;
 }

@@ -60,10 +60,10 @@ int main (int argc, char** argv)
             }
         }
         dut.en = 1; tick(dut);
-        
+
         // axis x
         int nx, ndx;
-        if (exp_dx == 0) 
+        if (exp_dx == 0)
         {
             if (exp_x + 4 > 540) {nx = 540; ndx = 1;}
             else {nx = exp_x + 4; ndx = 0;}
@@ -94,14 +94,14 @@ int main (int argc, char** argv)
             dut.dir_x != exp_dx || dut.dir_y != exp_dy)
         {
             printf("ball_x=%d ball_y=%d dir_x=%d dir_y=%d (expect:ball_x=%d ball_y=%d dir_x=%d dir_y=%d) <-- MISMATCH!!!\n",
-            dut.ball_x, dut.ball_y, dut.dir_x, dut.dir_y, 
+            dut.ball_x, dut.ball_y, dut.dir_x, dut.dir_y,
             exp_x, exp_y, exp_dx, exp_dy);
             fails ++;
-		} 
+		}
 
     }
     if (fails) {printf("FAILED: %d/%d checks\n", fails,total); return 1;}
-        
+
     printf("PASS: %d check\n",total);
     return 0;
 }

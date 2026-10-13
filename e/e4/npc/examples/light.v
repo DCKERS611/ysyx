@@ -25,6 +25,6 @@ module top(
     );
 
     assign next_cnt = (cnt >= 32'd5000000) ? 32'b0 : (cnt + 1);
-    assign next_led = (cnt == 0) ? {led[14:0] , led[15]} : led;  
+    assign next_led = (cnt == 0) ? {led[14:0] , led[15]} : led;
 
 endmodule
