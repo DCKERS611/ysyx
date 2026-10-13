@@ -1,6 +1,6 @@
 # E4：处理器的仿真和验证
 
-学习过程与验收结果见 [E4学习记录.md](E4学习记录.md)。本目录保存从 WSL 同步的源码、约束、测试和实验数据，不包含编译产物。
+学习过程与验收结果见 [E4学习记录.md](E4学习记录.md)。E4 文件现已集中在 `E:\ysyx\e\e4`，WSL 中对应 `/mnt/e/ysyx/e/e4`。原来的 `~/e4` 和 `~/ysyx-workbench/npc` 是指向这里的链接。编译产物保留在本地，不提交仓库。
 
 ## 目录
 
@@ -29,7 +29,7 @@ make -f Makefile.test test
 
 当前测试使用固定求和程序，逐条检查 PC、四个 GPR 和 LED，尚未穷举全部指令和设备输入。`test/scpu_fetch.cpp` 是早期取指练习，不用于带跳转的完整处理器验收。
 
-NVBoard 运行使用 `npc/Makefile` 的 `make run`，需要安装 NVBoard、SDL 依赖，并配置 `NVBOARD_HOME`、`NPC_HOME` 和框架的上级 Makefile。这个快照不包含完整的 ysyx-workbench 框架；可将 npc 源码放回自己的 workbench 使用。
+NVBoard 运行使用 `npc/Makefile` 的 `make run`，需要安装 NVBoard、SDL 依赖，并配置 `NVBOARD_HOME`、`NPC_HOME`。`WORKBENCH_HOME` 默认是 `$(HOME)/ysyx-workbench`，用于加载框架 Makefile；框架放在其他位置时，可运行 `make WORKBENCH_HOME=/实际路径/ysyx-workbench run`。`NPC_HOME` 当前为 `/mnt/e/ysyx/e/e4/npc`。仓库不包含完整的 workbench 框架。
 
 ## 数字电路实验
 
@@ -38,3 +38,5 @@ NVBoard 运行使用 `npc/Makefile` 的 `make run`，需要安装 NVBoard、SDL 
 实验二的 Makefile 直接构建 NVBoard；其他实验上板使用 `make -f Makefile.board board`，并配置 `NVBOARD_HOME`。VGA 需要从实验八目录运行，ROM 初始化数据为 `imgs/mem.hex`。
 
 2026-10-13 同步后重新验证：ALU 2048 项、数码管译码 16 项、PS/2 338 项、VGA 420000 项、弹性碰撞 80000 项全部通过。更早的流水灯等价验证结果与错误注入过程见学习记录。
+
+迁移前的原目录备份保存在本地 `E:\ysyx\backups\e4-before-migration-20261013.tar.gz`。迁移时发现的两个旧草稿改名放在 `migration_notes/`，不参与构建。

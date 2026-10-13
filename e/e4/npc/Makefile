@@ -48,6 +48,8 @@ clean:
 	rm -rf $(BUILD_DIR)
 lint:
 	verilator --lint-only -Wall -Wno-DECLFILENAME --top-module $(TOPNAME) $(VSRCS)
-include $(NPC_HOME)/../Makefile
+# npc 已迁移到 E 盘，框架 Makefile 仍在原 workbench 中
+WORKBENCH_HOME ?= $(HOME)/ysyx-workbench
+include $(WORKBENCH_HOME)/Makefile
 
 .PHONY: default all clean run
