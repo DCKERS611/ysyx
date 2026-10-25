@@ -1,0 +1,30 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/105.bf'
+# Building bf-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/bf-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/105.bf/build/bf-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+input  = xF6rOkyWwLrF
+output = 6FFLOWkrrwxy
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.076482 (76482 us)
+            2105 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.076482 (76482 us)
+Total  time:   0:00:00.077737 (77737 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/105.bf/build/bf-minirv-npc.bin: 378816 bytes
+Result: halt_pc=0x80002774 a0=0x00000000 ra=0x80002770 cycles=32027744
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/105.bf'
+[WALL] 31.89 s

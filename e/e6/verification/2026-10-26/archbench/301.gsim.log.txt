@@ -1,0 +1,37 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/301.gsim'
+# Building gsim-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/301.gsim/build/gsim.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/301.gsim/build/gsim.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/gsim-minirv-npc.elf
++ OBJCOPY -> build/gsim-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/301.gsim/build/gsim-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+image size = 256
+Hello, RISC-V!
+npc: [1;32mHIT GOOD TRAP[0m
+finish after 702 cycles, 83702 us, simulation freq = 8386 Hz
+#inst = 156, IPC = 222 * 10^{-3}
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.083703 (83703 us)
+            1146 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.083703 (83703 us)
+Total  time:   0:00:00.102325 (102325 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/301.gsim/build/gsim-minirv-npc.bin: 780532 bytes
+Result: halt_pc=0x800616ec a0=0x00000000 ra=0x800616e8 cycles=41965614
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/301.gsim'
+[WALL] 44.74 s

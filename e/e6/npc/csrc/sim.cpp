@@ -1,5 +1,6 @@
 #include "sim.h"
 #include "dpi.h"
+#include "pmem.h"
 
 #include <cstdio>
 #include "Vtop.h"
@@ -27,10 +28,25 @@ static std::unique_ptr<VerilatedFstC> wave_trace;
 static bool wave_open = false;
 #endif
 
+static void prepare_inputs(Vtop& dut)
+{
+    if (dut.rst || dut.contextp()->gotFinish()) return;
+
+    dut.inst_in = static_cast<uint32_t>(
+        pmem_read(static_cast<int>(dut.pc)));
+    dut.eval();
+
+    dut.mem_rdata = dut.mem_ren ? 
+                    static_cast<uint32_t>(pmem_read(static_cast<int>(dut.mem_addr)))
+                    : 0;
+    dut.eval();
+}
+
 // 执行电路求值，按需记录波形，同时推进仿真时间。
 static void eval_step(Vtop& dut)
 {
     dut.eval();
+
 
 #if VM_TRACE_FST
     if (wave_open) {
@@ -49,6 +65,8 @@ bool sim_init(Vtop& dut, const char* wave_path)
 
     dut.clk = 0;
     dut.rst = 1;
+    dut.inst_in = 0;
+    dut.mem_rdata = 0;
 
 #if VM_TRACE_FST
     if (wave_path != nullptr && wave_path[0] != '\0') {
@@ -74,6 +92,7 @@ bool sim_init(Vtop& dut, const char* wave_path)
 // 通过一个上升沿复位 PC。
 void sim_reset(Vtop& dut)
 {
+    g_cycles = 0;
     dut.rst = 1;
 
     dut.clk = 0;
@@ -83,6 +102,7 @@ void sim_reset(Vtop& dut)
     eval_step(dut);
 
     dut.rst = 0;
+    prepare_inputs(dut);
     eval_step(dut);
 }
 
@@ -94,14 +114,12 @@ bool sim_step(Vtop& dut)
     eval_step(dut);
 
     const uint32_t old_pc = dut.pc;
+    const uint32_t inst = dut.inst;
 
     if ((old_pc & 3u) != 0) {
         std::fprintf(stderr, "unaligned fetch: pc=0x%08x\n", old_pc);
         return false;
     }
-
-    // 低电平求值后，IFU 已通过 DPI-C 取出指令，组合译码也已稳定。
-    const uint32_t inst = dut.inst;
 
     if (dut.illegal) {
         std::fprintf(stderr, "illegal inst: pc=0x%08x inst=0x%08x\n",
@@ -109,14 +127,32 @@ bool sim_step(Vtop& dut)
         return false;
     }
 
+    // 保存当前指令的写请求，避免上升沿后信号变成下一条指令的值。
+    const bool write_enable = dut.mem_wen;
+    const uint32_t write_addr = dut.mem_addr;
+    const uint32_t write_data = dut.mem_wdata;
+    const uint8_t write_mask = dut.mem_wmask;
+
     dut.clk = 1;
+    dut.eval();
+    ++g_cycles;
+
+    // 当前指令的 store 在这个上升沿完成，只写一次。
+    if (write_enable) {
+        pmem_write(static_cast<int>(write_addr),
+                   static_cast<int>(write_data),
+                   static_cast<char>(write_mask));
+    }
+
+    // 当前指令已执行完，为下一条准备输入。
+    prepare_inputs(dut);
     eval_step(dut);
 
-    if (verbose)
+    if (verbose) {
         std::printf("pc=0x%08x inst=0x%08x --> next_pc=0x%08x\n",
                     old_pc, inst, static_cast<uint32_t>(dut.pc));
+    }
 
-    ++g_cycles;
     return true;
 }
 

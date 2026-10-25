@@ -1,0 +1,37 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/305.h264'
+# Building h264-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/305.h264/build/h264.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/305.h264/build/h264.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/h264-minirv-npc.elf
++ OBJCOPY -> build/h264-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/305.h264/build/h264-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+Decoded headers. Image size (cropped) 160x120.
+3 pictures decoded.
+Encode h264 size = 4010 bytes
+Decode data size = 86400 bytes
+h264 compression rate = 464*10^{-4}
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.183947 (183947 us)
+            1027 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.183947 (183947 us)
+Total  time:   0:00:00.228366 (228366 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/305.h264/build/h264-minirv-npc.bin: 1171668 bytes
+Result: halt_pc=0x800bc468 a0=0x00000000 ra=0x800bc464 cycles=92933792
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/305.h264'
+[WALL] 83.90 s

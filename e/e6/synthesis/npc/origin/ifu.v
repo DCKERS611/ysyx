@@ -1,0 +1,24 @@
+module ifu(
+    input clk,
+    input rst,
+    input [31:0] next_pc,
+    input [31:0] inst_in,
+    output [31:0] pc,
+    output reg [31:0] inst
+);
+
+    Reg #(32, 32'h80000000) u_pc (
+        .clk(clk),
+        .rst(rst),
+        .din(next_pc),
+        .dout(pc),
+        .wen(1'b1)
+    );
+
+    always @(*) begin
+        if (rst)
+            inst = 32'b0;
+        else
+            inst = inst_in;
+    end
+endmodule

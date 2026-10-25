@@ -1,5 +1,7 @@
 # archbench 现有日志摘录（2026-10-25）
 
+> 历史快照：LLaMA 已在后续 404 MHz 运行中通过。最新原始日志和汇总见 `2026-10-26/验收汇总.md`。
+
 来源：WSL `/home/ysyx/ysyx-workbench/archbench/result/*.log`，各项为 `mainargs=train` 的运行日志。本次同步没有重新运行测试。
 
 20 项日志中 19 项包含程序自检 PASS 和 GOOD TRAP；LLaMA 在旧的 1000000000 周期预算下超时，没有成功结束。当前源码提高了预算，但没有据此补写通过结论。

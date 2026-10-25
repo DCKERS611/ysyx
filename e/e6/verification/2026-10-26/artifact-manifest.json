@@ -1,0 +1,294 @@
+{
+  "date": "2026-10-26",
+  "description": "Preserved source logs/reports; no rerun",
+  "files": [
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/100.blockchain.log",
+      "saved": "verification/2026-10-26/archbench/100.blockchain.log.txt",
+      "sha256": "6e6279ae769aedbb0ce78c320e5360e8fc1b2d1fd3318ade4d155df2f89681c2",
+      "bytes": 1900
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/101.igemm.log",
+      "saved": "verification/2026-10-26/archbench/101.igemm.log.txt",
+      "sha256": "209807d57bbc9f20b5fa8995c57901cecbd8cfa4d00f9309720e4930a18d4f18",
+      "bytes": 1636
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/102.queen.log",
+      "saved": "verification/2026-10-26/archbench/102.queen.log.txt",
+      "sha256": "c01950b363d44403da47b39bbffea5eef9e57dae29c3709020d0b572618c165f",
+      "bytes": 1621
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/103.dinic.log",
+      "saved": "verification/2026-10-26/archbench/103.dinic.log.txt",
+      "sha256": "86aa079bcb0db497629f60cadbbc66d7cbbaca30a476c36de80d1dcd942a5b69",
+      "bytes": 1587
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/104.malloc.log",
+      "saved": "verification/2026-10-26/archbench/104.malloc.log.txt",
+      "sha256": "04025051b9cca28d99091129126c68546200f75d5cc5a135c855a1862fc17689",
+      "bytes": 1948
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/105.bf.log",
+      "saved": "verification/2026-10-26/archbench/105.bf.log.txt",
+      "sha256": "feb6516c4a279ee4e052b52b481ed2c3a1a2cdbdc3979b7519326cc1d9b59582",
+      "bytes": 1592
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/106.qsort.log",
+      "saved": "verification/2026-10-26/archbench/106.qsort.log.txt",
+      "sha256": "d0b81802b9eb151465e7e219f21a4ccced9447cb9896334f295ce4c0694730c8",
+      "bytes": 1591
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/107.stream.log",
+      "saved": "verification/2026-10-26/archbench/107.stream.log.txt",
+      "sha256": "02c5a40cc991822af926ebc8cf7a547b185063372d0f5c9e5125a952c45ef0db",
+      "bytes": 3182
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/108.ntt.log",
+      "saved": "verification/2026-10-26/archbench/108.ntt.log.txt",
+      "sha256": "7bcee244b906dc937961eb2475d6583a5802e8b48d688105c7001e7aa7466109",
+      "bytes": 1787
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/200.genann.log",
+      "saved": "verification/2026-10-26/archbench/200.genann.log.txt",
+      "sha256": "8ec781d2f1d342864af1d8216713d679af6d0310ca1bd67b88d3554222ba0226",
+      "bytes": 1943
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/201.jpeg.log",
+      "saved": "verification/2026-10-26/archbench/201.jpeg.log.txt",
+      "sha256": "615098b1fbf4522cc05f84876ab27cbe1769764a4f886a22c2dfad2f53bbec45",
+      "bytes": 1906
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/202.llama2.log",
+      "saved": "verification/2026-10-26/archbench/202.llama2.log.txt",
+      "sha256": "ae4116aee8d80a53c50908a6795499b84f392b62b06c7d12b8db806b7e0fc9ff",
+      "bytes": 1982
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/203.rsa.log",
+      "saved": "verification/2026-10-26/archbench/203.rsa.log.txt",
+      "sha256": "579e14bdc5bdc301b43334dfd51c6b9c3da5dc98d822539a9b7e4df6d3af39c0",
+      "bytes": 2405
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/204.hypergraph.log",
+      "saved": "verification/2026-10-26/archbench/204.hypergraph.log.txt",
+      "sha256": "2eadbec1177b85c6c33eb2f05b945caa24958bf279599aae12e48bae43278544",
+      "bytes": 2042
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/300.bzip3.log",
+      "saved": "verification/2026-10-26/archbench/300.bzip3.log.txt",
+      "sha256": "6d1ab41f660c9c87c38eb0474b827745fa64ab2c6d2552dd5567302b1e51efde",
+      "bytes": 1931
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/301.gsim.log",
+      "saved": "verification/2026-10-26/archbench/301.gsim.log.txt",
+      "sha256": "65c72b9b6b96a6b0c39ffb5cc8d9da4d44334ab093f4ab6c54a3cb55e2e2a1b9",
+      "bytes": 2017
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/302.lua.log",
+      "saved": "verification/2026-10-26/archbench/302.lua.log.txt",
+      "sha256": "38420792a82a55fe7555e127dbb68d2e7762e6f5623514eda34f68fb7e366a2f",
+      "bytes": 1871
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/303.cproc.log",
+      "saved": "verification/2026-10-26/archbench/303.cproc.log.txt",
+      "sha256": "ccd88559141170be6ae0a1c2a91a2e02e0ba0424739d58aa273ffb17c1d8e26d",
+      "bytes": 4734
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/304.mp3.log",
+      "saved": "verification/2026-10-26/archbench/304.mp3.log.txt",
+      "sha256": "1ce50e9bdee77bad62fe787a466f9fb35db891ce37e0179556dd83a0b90c0ad2",
+      "bytes": 2005
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/305.h264.log",
+      "saved": "verification/2026-10-26/archbench/305.h264.log.txt",
+      "sha256": "388815e1d4e26c807f6e80d335c3fec49ffe514437d106813cb620dce1316ed7",
+      "bytes": 2028
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/excel.txt",
+      "saved": "verification/2026-10-26/archbench/excel.txt",
+      "sha256": "e2720e4971de5e071c2b211e3258658fd4dd6a2b1cf063f006a98e789f78ce68",
+      "bytes": 97
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/archbench/result/compile.log",
+      "saved": "verification/2026-10-26/archbench/compile.log.txt",
+      "sha256": "b73c1cfa647e27e1d7d8e64f274eeb05a71ac1cbb8a9ec8dcecd5b13f4e464aa",
+      "bytes": 19321
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/ecc.toml",
+      "saved": "synthesis/npc/ecc.toml",
+      "sha256": "87de00bf33ba72cf8ecb16d033fdca2667de44bb3b0ed6141c72b7ff0f8e193f",
+      "bytes": 964
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/rtl/filelist.f",
+      "saved": "synthesis/npc/rtl/filelist.f",
+      "sha256": "e80b04af412b5a8153cc4823b6f44648e9464282df6da700883b468cf5ae39d6",
+      "bytes": 333
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/wbu.v",
+      "saved": "synthesis/npc/origin/wbu.v",
+      "sha256": "787c473faf039259020855a984d4afff5df28370ab581bfd19f49370c1c861c1",
+      "bytes": 659
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/idu.v",
+      "saved": "synthesis/npc/origin/idu.v",
+      "sha256": "661bd70f0387473148773a50b4eb119d5dc92eb91737c8b45b5a85244e7b46b2",
+      "bytes": 2734
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/gpr.v",
+      "saved": "synthesis/npc/origin/gpr.v",
+      "sha256": "e1151c178e142c51132cfb9dfc431ab0da6e97b2ec0c1466a766c292467c68dc",
+      "bytes": 700
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/exu.v",
+      "saved": "synthesis/npc/origin/exu.v",
+      "sha256": "f6204d01883c08baa7dd69db25400c6e0e0df34d7655ae68007dbab0295ffd01",
+      "bytes": 241
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/lsu.v",
+      "saved": "synthesis/npc/origin/lsu.v",
+      "sha256": "f3c01dc27cee13a35b02cce27ab73c37ed0c4c1445650945e9d88180c0bf8d62",
+      "bytes": 1124
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/template.v",
+      "saved": "synthesis/npc/origin/template.v",
+      "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27",
+      "bytes": 3061
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/ifu.v",
+      "saved": "synthesis/npc/origin/ifu.v",
+      "sha256": "2911331864a29e302fdd977548289d81bb801072731c69c6f978d5f0c8de88ea",
+      "bytes": 413
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/top.v",
+      "saved": "synthesis/npc/origin/top.v",
+      "sha256": "ba523b591e6beec4468a22e3f19602a6a37a8159e1c67593ab93ef7f9eeb834a",
+      "bytes": 2304
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/origin/npc.sdc",
+      "saved": "synthesis/npc/origin/npc.sdc",
+      "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+      "bytes": 253
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+      "saved": "synthesis/npc/reports/qor_summary.rpt",
+      "sha256": "80ffa509f9c56d1aee8dc1bbbe28867f40f1c81b293d9593cd365568c502de66",
+      "bytes": 1087
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+      "saved": "synthesis/npc/reports/power.rpt",
+      "sha256": "b498c4f91521dc87ecf9e285d27cbf03f17890b05be46b7197b1759734a42114",
+      "bytes": 1504
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+      "saved": "synthesis/npc/reports/timing_max.rpt",
+      "sha256": "371c8f19f30bad78bbca34f2e869935934d88c86725c87316e3351d1b7176e2f",
+      "bytes": 258
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/Synthesis_yosys/log/Synthesis.log",
+      "saved": "synthesis/npc/reports/Synthesis.log.txt",
+      "sha256": "084110dddaca2ad5ae9781c0e84fe0a6a4c75ec726b5698d1b20478c831e514b",
+      "bytes": 210401
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/ecc.toml",
+      "saved": "synthesis/light/ecc.toml",
+      "sha256": "ba16a7e8d2007669c5d70de7d2f24dbc841a928b154558226febb90e0d637f4e",
+      "bytes": 972
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/rtl/filelist.f",
+      "saved": "synthesis/light/rtl/filelist.f",
+      "sha256": "dc32bc54e7d90de49b095aa23f15b24919545398eda32859a820a67e6e83eae0",
+      "bytes": 19
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v",
+      "saved": "synthesis/light/origin/template.v",
+      "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27",
+      "bytes": 3061
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v",
+      "saved": "synthesis/light/origin/light.v",
+      "sha256": "95add7568ae6ea1d13d90550174a94aac15d06c19d3c9868877c294a5891b98b",
+      "bytes": 643
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.sdc",
+      "saved": "synthesis/light/origin/light.sdc",
+      "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+      "bytes": 253
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+      "saved": "synthesis/light/reports/qor_summary.rpt",
+      "sha256": "d2055f44c27e4291c85af94b090ed8811ad2c14f995d1b4754bc00e6235dd5e8",
+      "bytes": 1087
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+      "saved": "synthesis/light/reports/power.rpt",
+      "sha256": "1a888991ee2da64a88e724c08519b511ed77fe938453b935e0481f19dacda81d",
+      "bytes": 1510
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+      "saved": "synthesis/light/reports/timing_max.rpt",
+      "sha256": "55ddbcb02fae82471d577e6826645af2fb47cadf3a16631e6c9cfeab9c6064c1",
+      "bytes": 264
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/log/Synthesis.log",
+      "saved": "synthesis/light/reports/Synthesis.log.txt",
+      "sha256": "2a5065fc2bc4dab39dd9bc3c18c9591438b805c877940f3560ba3cc618e65607",
+      "bytes": 70224
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/rtl/template.v",
+      "saved": "synthesis/light/rtl/template.v",
+      "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27",
+      "bytes": 3061
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/light/rtl/light.v",
+      "saved": "synthesis/light/rtl/light.v",
+      "sha256": "95add7568ae6ea1d13d90550174a94aac15d06c19d3c9868877c294a5891b98b",
+      "bytes": 643
+    }
+  ]
+}

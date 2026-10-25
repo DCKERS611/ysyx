@@ -1,0 +1,38 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/200.genann'
+# Building genann-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/genann-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+GENANN TEST SUITE
+	basic         pass: 7   fail: 0   255us
+	xor           pass: 5   fail: 0   787us
+	backprop      pass: 1   fail: 0   285us
+	train and     pass: 4   fail: 0   16716us
+	train or      pass: 4   fail: 0   16342us
+Train an ANN on the IRIS dataset using backpropagation.
+Training for 4 loops over data.
+80/150 correct
+ALL TESTS PASSED (21/21)
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:01.933149 (1933149 us)
+              34 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:01.933149 (1933149 us)
+Total  time:   0:00:01.933253 (1933253 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-npc.bin: 754340 bytes
+Result: halt_pc=0x8000ec2c a0=0x00000000 ra=0x8000ec28 cycles=781848502
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/200.genann'
+[WALL] 429.82 s

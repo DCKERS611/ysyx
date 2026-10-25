@@ -2,10 +2,10 @@ module ifu(
     input clk,
     input rst,
     input [31:0] next_pc,
+    input [31:0] inst_in,
     output [31:0] pc,
     output reg [31:0] inst
 );
-    import "DPI-C" function int pmem_read(input int raddr);
 
     Reg #(32, 32'h80000000) u_pc (
         .clk(clk),
@@ -19,7 +19,6 @@ module ifu(
         if (rst)
             inst = 32'b0;
         else
-            inst = pmem_read(pc);
+            inst = inst_in;
     end
-
 endmodule

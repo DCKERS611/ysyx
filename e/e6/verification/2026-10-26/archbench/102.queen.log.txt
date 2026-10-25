@@ -1,0 +1,29 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/102.queen'
+# Building queen-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/queen-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/102.queen/build/queen-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+There are 2680 solutions for 11 queen problem
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.219074 (219074 us)
+            2515 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.219074 (219074 us)
+Total  time:   0:00:00.219210 (219210 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/102.queen/build/queen-minirv-npc.bin: 364940 bytes
+Result: halt_pc=0x80001024 a0=0x00000000 ra=0x80001020 cycles=89254843
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/102.queen'
+[WALL] 97.89 s

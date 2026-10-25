@@ -1,0 +1,58 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/107.stream'
+# Building stream-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/stream-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/107.stream/build/stream-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 4 bytes per array element.
+-------------------------------------------------------------
+Array size = 3000 (elements), Offset = 0 (elements)
+Memory per array = 0 MiB (11 KiB).
+Total memory required = 0 MiB (35 KiB).
+Each kernel will be executed 100 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 460 microseconds.
+   (= 460 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate KB/s  Avg time(us) Min time(us) Max time(us)
+Copy:             53426          460          460          461
+Scale:            51738          475          475          476
+Add:              76481          482          482          483
+Triad:            74173          497          497          498
+-------------------------------------------------------------
+Solution Validates: no error on all three arrays
+-------------------------------------------------------------
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.191912 (191912 us)
+            1406 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.191912 (191912 us)
+Total  time:   0:00:00.217945 (217945 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/107.stream/build/stream-minirv-npc.bin: 398240 bytes
+Result: halt_pc=0x80006db8 a0=0x00000000 ra=0x80006db4 cycles=88728692
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/107.stream'
+[WALL] 94.29 s

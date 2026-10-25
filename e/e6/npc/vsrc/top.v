@@ -1,10 +1,19 @@
 module top(
     input clk,
     input rst,
+    input [31:0] inst_in,
+    input [31:0] mem_rdata,
+
     output [31:0] pc,
     output [31:0] inst,
+    output illegal,
+    output halt,
 
-    output illegal
+    output [31:0] mem_addr,
+    output mem_ren,
+    output mem_wen,
+    output [31:0] mem_wdata,
+    output [3:0] mem_wmask
 );
     wire [31:0] next_pc;
 
@@ -17,11 +26,12 @@ module top(
     wire [1:0] wb_sel;
     wire pc_sel;
 
-    wire halt;
+    `ifndef SYNTHESIS
     import "DPI-C" function void ebreak(input int pc);
     always @(posedge clk) begin
         if (!rst && halt) ebreak(pc);
     end
+    `endif
 
     wire [31:0] alu_out;
     wire [31:0] wdata;
@@ -39,7 +49,8 @@ module top(
         .rst(rst),
         .next_pc(next_pc),
         .pc(pc),
-        .inst(inst)
+        .inst(inst),
+        .inst_in(inst_in)
     );
 
     idu u_idu (
@@ -90,14 +101,20 @@ module top(
     );
 
     lsu u_lsu (
-        .clk(clk),
         .rst(rst),
-        .addr(alu_out),
-        .rs2_data(rs2_data),
-        .mem_write(mem_write),
-        .mem_read(mem_read),
-        .mem_byte(mem_byte),
-        .load_data(load_data)
+    .addr(alu_out),
+    .rs2_data(rs2_data),
+    .mem_read(mem_read),
+    .mem_write(mem_write),
+    .mem_byte(mem_byte),
+    .mem_rdata(mem_rdata),
+
+    .load_data(load_data),
+    .mem_addr(mem_addr),
+    .mem_ren(mem_ren),
+    .mem_wen(mem_wen),
+    .mem_wdata(mem_wdata),
+    .mem_wmask(mem_wmask)
     );
 
 endmodule

@@ -1,0 +1,34 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/201.jpeg'
+# Building jpeg-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/201.jpeg/build/jpeg.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/201.jpeg/build/jpeg.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/jpeg-minirv-npc.elf
++ OBJCOPY -> build/jpeg-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/201.jpeg/build/jpeg-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+Image size = 97 x 89
+checksum = 0xdabb6a5f
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.127115 (127115 us)
+             652 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.127115 (127115 us)
+Total  time:   0:00:00.145644 (145644 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/201.jpeg/build/jpeg-minirv-npc.bin: 556680 bytes
+Result: halt_pc=0x800275ec a0=0x00000000 ra=0x800275e8 cycles=59502008
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/201.jpeg'
+[WALL] 63.10 s

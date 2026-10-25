@@ -1,0 +1,34 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/302.lua'
+# Building lua-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/302.lua/build/lua.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/302.lua/build/lua.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/lua-minirv-npc.elf
++ OBJCOPY -> build/lua-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/302.lua/build/lua-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+sort test for table
+OK
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.029773 (29773 us)
+            2317 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.029773 (29773 us)
+Total  time:   0:00:00.029776 (29776 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/302.lua/build/lua-minirv-npc.bin: 1765516 bytes
+Result: halt_pc=0x80102d7c a0=0x00000000 ra=0x80102d78 cycles=12620424
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/302.lua'
+[WALL] 14.67 s

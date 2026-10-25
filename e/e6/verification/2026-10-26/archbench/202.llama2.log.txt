@@ -1,0 +1,35 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/202.llama2'
+# Building llama2-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/202.llama2/build/llama2.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/202.llama2/build/llama2.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/llama2-minirv-npc.elf
++ OBJCOPY -> build/llama2-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/202.llama2/build/llama2-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+Start...
+Once upon a time, there was a little girl named Lily.
+achieved tok/s: 1.5037
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:09.892419 (9892419 us)
+              20 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:09.892419 (9892419 us)
+Total  time:   0:00:09.911124 (9911124 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/202.llama2/build/llama2-minirv-npc.bin: 619108 bytes
+Result: halt_pc=0x8001eb84 a0=0x00000000 ra=0x8001eb80 cycles=4004974287
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/202.llama2'
+[WALL] 1632.54 s

@@ -1,0 +1,29 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/103.dinic'
+# Building dinic-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/dinic-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/103.dinic/build/dinic-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+ans = 12911
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.033579 (33579 us)
+            3275 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.033579 (33579 us)
+Total  time:   0:00:00.287064 (287064 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/103.dinic/build/dinic-minirv-npc.bin: 370852 bytes
+Result: halt_pc=0x800021ec a0=0x00000000 ra=0x800021e8 cycles=116610907
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/103.dinic'
+[WALL] 119.19 s

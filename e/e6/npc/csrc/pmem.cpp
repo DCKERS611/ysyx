@@ -6,7 +6,7 @@
 #include "sys/time.h"
 #include "sim.h"
 
-#define NPC_FREQ_HZ 100000000ull
+#define NPC_FREQ_HZ 404000000ull
 
 static uint32_t M[32*1024*1024] = {};
 

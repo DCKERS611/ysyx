@@ -1,0 +1,38 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/304.mp3'
+# Building mp3-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/304.mp3/build/mp3.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/304.mp3/build/mp3.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/mp3-minirv-npc.elf
++ OBJCOPY -> build/mp3-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/304.mp3/build/mp3-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+Encode MP3 size = 309 bytes
+Decode data size = 4608 bytes
+MP3 compression rate = 6%
+Audio time = 96000 us
+Decode time = 909247 us
+Decode frequency = 10%
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.909921 (909921 us)
+              17 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.909921 (909921 us)
+Total  time:   0:00:00.916537 (916537 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/304.mp3/build/mp3-minirv-npc.bin: 791340 bytes
+Result: halt_pc=0x8005a9fc a0=0x00000000 ra=0x8005a9f8 cycles=371023196
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/304.mp3'
+[WALL] 241.78 s
