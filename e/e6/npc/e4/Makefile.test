@@ -1,0 +1,46 @@
+.DEFAULT_GOAL := test
+
+CXX ?= g++
+VERILATOR ?= verilator
+TEST_CXXFLAGS ?= -std=c++17 -Wall -Wextra
+
+BUILD_DIR := build
+SEMU_DIR := csrc/semu
+SEMU_SRC := $(abspath $(SEMU_DIR)/semu.cpp)
+SEMU_HEADER := $(SEMU_DIR)/semu.h
+SEMU_BIN := $(BUILD_DIR)/semu/semu
+DIFF_DIR := $(BUILD_DIR)/difftest
+DIFF_BIN := $(DIFF_DIR)/difftest
+
+# 只列出处理器需要的 RTL，避免混入其他实验顶层
+VSRCS := vsrc/scpu.v vsrc/gpr.v vsrc/inst_rom.v vsrc/template.v
+
+# sEMU：测试入口 + 模拟器实现，生成独立可执行程序
+$(SEMU_BIN): test/semu_main.cpp $(SEMU_SRC) $(SEMU_HEADER) Makefile.test
+	@mkdir -p $(dir $@)
+	$(CXX) $(TEST_CXXFLAGS) -I$(SEMU_DIR) test/semu_main.cpp $(SEMU_SRC) -o $@
+
+# DiffTest：RTL + 测试入口 + sEMU，保留内部 GPR 供 C++ 读取
+# 依赖中包含头文件和本 Makefile，修改后会重新构建
+$(DIFF_BIN): $(VSRCS) test/difftest.cpp $(SEMU_SRC) $(SEMU_HEADER) Makefile.test
+	@mkdir -p $(DIFF_DIR)
+	$(VERILATOR) --cc --exe --build \
+		-Wall -Wno-DECLFILENAME --public-flat-rw \
+		--top-module scpu --Mdir $(DIFF_DIR) \
+		$(VSRCS) $(abspath test/difftest.cpp) $(SEMU_SRC) \
+		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath $(SEMU_DIR))" \
+		-o difftest
+
+# 构建目标只编译；semu、difftest 和 test 会编译并运行
+build-semu: $(SEMU_BIN)
+build-difftest: $(DIFF_BIN)
+
+semu: $(SEMU_BIN)
+	@./$(SEMU_BIN)
+
+difftest: $(DIFF_BIN)
+	@./$(DIFF_BIN)
+
+test: semu difftest
+
+.PHONY: build-semu build-difftest semu difftest test

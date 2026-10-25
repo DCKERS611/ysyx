@@ -1,0 +1,50 @@
+# minirv C++ 测试，不依赖 NVBoard 或环境变量 NPC_HOME。
+.DEFAULT_GOAL := sim
+
+TOPNAME := top
+VERILATOR ?= verilator
+BUILD_DIR ?= build/cpp
+OBJ_DIR := $(BUILD_DIR)/obj_dir
+BIN := $(BUILD_DIR)/sim
+TRACE ?= 0
+PYTHON ?= python3
+DEFAULT_PROGRAM := build/programs/addi-jalr.bin
+PROGRAM ?= $(DEFAULT_PROGRAM)
+RUN_ARGS ?= "$(abspath $(PROGRAM))"
+TEST_CXXFLAGS ?= -std=c++17 -Wall -Wextra
+
+# 仅构建当前 minirv，避免混入 e4 下的同名模块。
+VSRCS := $(abspath $(wildcard vsrc/*.v))
+CSRCS := $(abspath csrc/main.cpp csrc/pmem.cpp csrc/sim.cpp csrc/dpi.cpp)
+HEADERS := $(wildcard csrc/*.h)
+TRACE_FLAGS :=
+ifeq ($(TRACE),1)
+TRACE_FLAGS += --trace-fst --trace-structs
+endif
+
+.PHONY: all build build-sim sim run test lint clean
+all build build-sim: $(BIN)
+
+$(BIN): $(VSRCS) $(CSRCS) $(HEADERS) $(MAKEFILE_LIST)
+	@mkdir -p $(BUILD_DIR)
+	$(VERILATOR) --cc --exe --build -Wall -Wno-DECLFILENAME \
+		--public-flat-rw --top-module $(TOPNAME) $(TRACE_FLAGS) \
+		--Mdir $(abspath $(OBJ_DIR)) $(VSRCS) $(CSRCS) \
+		-CFLAGS "$(TEST_CXXFLAGS)" -o $(abspath $(BIN))
+
+# 默认程序可以重建；自定义 PROGRAM 应指向已有二进制。
+$(DEFAULT_PROGRAM): tests/gen_program.py
+	$(PYTHON) $< "$@"
+
+sim run test: $(BIN) $(PROGRAM)
+	@$(abspath $(BIN)) $(RUN_ARGS)
+
+lint:
+	$(VERILATOR) --lint-only -Wall -Wno-DECLFILENAME \
+		--top-module $(TOPNAME) $(VSRCS)
+
+# 只清理此构建模式的目录。
+clean:
+	$(RM) -r $(BUILD_DIR)
+
+include tests/Makefile.mk

@@ -1,0 +1,3 @@
+# 独立 DiffTest 入口，也可从 Makefile.cpptest 调用同名目标。
+include Makefile.cpptest
+.DEFAULT_GOAL := difftest
