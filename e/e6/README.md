@@ -10,6 +10,8 @@
 - 当前 `NPC_FREQ_HZ=404000000`；404 MHz archbench train 的 20 项原始日志全部 PASS / GOOD TRAP，几何平均 613、算术平均 1680。
 - LLaMA train 已成功生成完整句子，20 Marks、4004974287 周期、a0=0；此前超时记录保留为历史，不再作为最新状态。
 
+- E5/E6 尚未亲自打开并分析波形，列为待补；关键路径 JSON 已归档到 `synthesis/npc/reports/timing_paths.json`。
+
 ## 目录
 
 - `npc/`、`minirvEMU/`：CPU、仿真、DiffTest 与参考模型。

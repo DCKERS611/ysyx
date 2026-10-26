@@ -289,6 +289,12 @@
       "saved": "synthesis/light/rtl/light.v",
       "sha256": "95add7568ae6ea1d13d90550174a94aac15d06c19d3c9868877c294a5891b98b",
       "bytes": 643
+    },
+    {
+      "source": "/home/ysyx/ysyx-workbench/ecc/npc/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+      "saved": "synthesis/npc/reports/timing_paths.json",
+      "sha256": "ff3e55539585591e92a15879c901993bf7cb3ec9bdcd730774be4d4054ecd5d5",
+      "bytes": 398133
     }
   ]
 }
