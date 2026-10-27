@@ -1,0 +1,28 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+# Building hello-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/hello-minirv-npc.bin
+mainargs=
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.diff diff PROGRAM="/home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module top \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/exu.v /home/ysyx/ysyx-workbench/npc/vsrc/gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/top.v /home/ysyx/ysyx-workbench/npc/vsrc/wbu.v /home/ysyx/ysyx-workbench/npc/csrc/difftest.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp /home/ysyx/ysyx-workbench/minirvEMU/emu.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests -I/home/ysyx/ysyx-workbench/minirvEMU" \
+	-o /home/ysyx/ysyx-workbench/npc/build/difftest/difftest
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.007 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+Hello, AbstractMachine!
+mainargs = ''.
+Loaded /home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin: 297472 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] /home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin
+PASS: 517939 (30467 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 224861
+halt_pc=0x80000504 NPC.pc=0x80000508 EMU.pc=0x80000504
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'

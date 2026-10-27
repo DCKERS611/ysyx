@@ -1,0 +1,3 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+[ PASS ] functional/byte_memory: PASS: 391 (23 steps x 17); expectations PASS: 14 checks
+functional: 1/1 programs passed

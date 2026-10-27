@@ -1,0 +1,2 @@
+# 兼容原来的 make -f Makefile.test 用法。
+include Makefile.cpptest

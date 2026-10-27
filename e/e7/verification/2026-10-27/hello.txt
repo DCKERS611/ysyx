@@ -1,0 +1,26 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+# Building hello-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/hello-minirv-npc.bin
+mainargs=
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module top  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/exu.v /home/ysyx/ysyx-workbench/npc/vsrc/gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/top.v /home/ysyx/ysyx-workbench/npc/vsrc/wbu.v /home/ysyx/ysyx-workbench/npc/csrc/main.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra" -o /home/ysyx/ysyx-workbench/npc/build/cpp/sim
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.008 s (elab=0.000, cvt=0.000, bld=0.007); cpu 0.001 s on 1 threads; allocated 20.273 MB
+Hello, AbstractMachine!
+mainargs = ''.
+Loaded /home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin: 297472 bytes
+Result: halt_pc=0x80000504 a0=0x00000000 ra=0x80000500 cycles=72249
+instructions=30467 cycles=72249 IPC=0.421694
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'

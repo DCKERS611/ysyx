@@ -1,0 +1,5 @@
+verilator --lint-only -Wall -Wno-DECLFILENAME \
+	--top-module top /home/ysyx/ysyx-workbench/npc/vsrc/exu.v /home/ysyx/ysyx-workbench/npc/vsrc/gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/top.v /home/ysyx/ysyx-workbench/npc/vsrc/wbu.v
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.184 MB sources in 12 modules, into 0.047 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.013 s (elab=0.002, cvt=0.006, bld=0.000); cpu 0.013 s on 1 threads; allocated 22.812 MB

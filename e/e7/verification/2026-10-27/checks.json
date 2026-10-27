@@ -1,0 +1,30 @@
+[
+  {
+    "name": "lint",
+    "exit_code": 0
+  },
+  {
+    "name": "word-memory",
+    "exit_code": 0
+  },
+  {
+    "name": "word-memory-diff",
+    "exit_code": 0
+  },
+  {
+    "name": "byte-memory",
+    "exit_code": 0
+  },
+  {
+    "name": "byte-memory-diff",
+    "exit_code": 0
+  },
+  {
+    "name": "hello",
+    "exit_code": 0
+  },
+  {
+    "name": "hello-diff",
+    "exit_code": 0
+  }
+]
