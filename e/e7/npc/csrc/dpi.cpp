@@ -1,7 +1,7 @@
 #include "dpi.h"
 #include <cstdio>
 #include "verilated.h"
-#include "Vtop__Dpi.h"
+#include "Vysyx_00000000__Dpi.h"
 
 static bool halted = false;
 static bool verbose = true;

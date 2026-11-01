@@ -1,3 +1,4 @@
+#include "cpu_view.h"
 #ifndef NPC_TEST_EXPECTATIONS_H
 #define NPC_TEST_EXPECTATIONS_H
 
@@ -9,8 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "Vtop.h"
-#include "Vtop___024root.h"
+#include "Vysyx_00000000.h"
 #include "sim.h"
 #include "pmem.h"
 #include "test_suite.h"
@@ -48,11 +48,13 @@ inline bool read_expectations(const char* path, ExpectedProgram& expected)
             }
             const size_t count = item.values.size();
             const bool valid =
-                ((item.kind == "halt" || item.kind == "cycles") && count == 1)
+                ((item.kind == "halt" || item.kind == "cycles" || item.kind == "instructions" || item.kind == "cycles_random") && count == 1)
                 || ((item.kind == "reg" || item.kind == "mem"
-                     || item.kind == "illegal") && count == 2)
+                     || item.kind == "illegal" || item.kind == "cycles_fixed") && count == 2)
                 || (item.kind == "trace" && count > 0);
             if (!valid) throw std::invalid_argument("unknown or malformed expectation");
+            if (item.kind == "cycles_fixed" && (item.values[0] < 1 || item.values[0] > 20))
+                throw std::invalid_argument("fixed delay must be 1..20");
             if (item.kind == "reg" && (item.values[0] == 0 || item.values[0] > 15))
                 throw std::invalid_argument("check x0 through instructions, not its backing array");
             if (item.kind == "mem") {
@@ -72,7 +74,7 @@ inline bool read_expectations(const char* path, ExpectedProgram& expected)
 }
 
 // 末态手写期望独立于 EMU，用来交叉验证参考模型与 RTL。
-inline int check_expectations(Vtop& dut, const ExpectedProgram& expected,
+inline int check_expectations(Vysyx_00000000& dut, const ExpectedProgram& expected,
                               bool step_failed, unsigned cycles,
                               const std::vector<uint32_t>& trace,
                               const std::string& name)
@@ -83,21 +85,27 @@ inline int check_expectations(Vtop& dut, const ExpectedProgram& expected,
         tests.check(label.c_str(), actual, value);
     };
     check("step_failed", step_failed, expected.illegal);
-    check("illegal_stop", step_failed && dut.illegal, expected.illegal);
+    check("illegal_stop", step_failed && npc::illegal(dut), expected.illegal);
     check("hit_ebreak", sim_halted(), !expected.illegal);
     check("finish_flag", dut.contextp()->gotFinish(), !expected.illegal);
     for (const auto& item : expected.items) {
         const auto& v = item.values;
         if (item.kind == "reg")
-            check("x" + std::to_string(v[0]), dut.rootp->top__DOT__u_rf__DOT__rf[v[0]], v[1]);
+            check("x" + std::to_string(v[0]), npc::gpr(dut, v[0]), v[1]);
         else if (item.kind == "mem")
             check("memory[" + std::to_string(v[0]) + "]",
                   static_cast<uint32_t>(pmem_read(static_cast<int>(v[0]))), v[1]);
         else if (item.kind == "halt") check("halt_pc", sim_halt_pc(), v[0]);
         else if (item.kind == "cycles") check("cycles", cycles, v[0]);
+        else if (item.kind == "instructions")
+            check("instructions", static_cast<uint32_t>(sim_instructions()), v[0]);
+        else if (item.kind == "cycles_random" && sim_memory_delay() == 0)
+            check("cycles.random", cycles, v[0]);
+        else if (item.kind == "cycles_fixed" && sim_memory_delay() == v[0])
+            check("cycles.fixed", cycles, v[1]);
         else if (item.kind == "illegal") {
-            check("illegal_pc", dut.pc, v[0]);
-            check("illegal_instruction", dut.inst, v[1]);
+            check("illegal_pc", npc::pc(dut), v[0]);
+            check("illegal_instruction", npc::inst(dut), v[1]);
         } else if (item.kind == "trace") {
             check("trace.length", static_cast<uint32_t>(trace.size()), static_cast<uint32_t>(v.size()));
             for (size_t i = 0; i < trace.size() && i < v.size(); ++i)

@@ -1,7 +1,7 @@
 # minirv C++ 测试，不依赖 NVBoard 或环境变量 NPC_HOME。
 .DEFAULT_GOAL := sim
 
-TOPNAME := top
+TOPNAME := ysyx_00000000
 VERILATOR ?= verilator
 BUILD_DIR ?= build/cpp
 OBJ_DIR := $(BUILD_DIR)/obj_dir
@@ -40,7 +40,7 @@ sim run test: $(BIN) $(PROGRAM)
 	@$(abspath $(BIN)) $(RUN_ARGS)
 
 lint:
-	$(VERILATOR) --lint-only -Wall -Wno-DECLFILENAME \
+	$(VERILATOR) --lint-only -Wall -Wno-DECLFILENAME --public-flat-rw \
 		--top-module $(TOPNAME) $(VSRCS)
 
 # 只清理此构建模式的目录。

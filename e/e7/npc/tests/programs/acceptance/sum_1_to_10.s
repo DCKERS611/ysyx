@@ -1,8 +1,11 @@
 # 大程序验收：1+2+...+10，手算 10*11/2=55。只用 addi/add/jalr 和 ebreak。
-# EXPECT halt 0x5c
-# EXPECT cycles 23
+# EXPECT halt 0x80000060
+# EXPECT instructions 24
+# EXPECT cycles_fixed 1 48
 # EXPECT reg 10 55
 # EXPECT reg 5 10
+# E7：a5 保存内存基址，标签仍表示文件内偏移。
+lui a5, 0x80000
 addi a0, zero, 0
 addi t0, zero, 1
 add a0, a0, t0
@@ -24,6 +27,6 @@ addi t0, zero, 9
 add a0, a0, t0
 addi t0, zero, 10
 add a0, a0, t0
-j done
+jalr zero, a5, done
 addi a0, zero, 99 # 毒丸，不应执行。
 done: ebreak

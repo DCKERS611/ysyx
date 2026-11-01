@@ -1,6 +1,8 @@
 # 功能：讲义调用/返回，最后由 ebreak 结束。
 # EXPECT halt 0x80000010
-# EXPECT cycles 14
+# EXPECT instructions 7
+# EXPECT cycles_fixed 1 14
+# EXPECT cycles_random 59
 # EXPECT reg 1 0x80000010
 # EXPECT reg 10 30
 # EXPECT trace 0x80000000 0x80000004 0x80000008 0x80000014 0x80000018 0x8000000c 0x80000010

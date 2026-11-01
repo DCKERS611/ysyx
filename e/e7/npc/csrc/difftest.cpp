@@ -1,20 +1,14 @@
+#include "cpu_view.h"
 #include <cstdio>
 #include <string>
 #include <vector>
 
-#include "Vtop.h"
-#include "Vtop___024root.h"
+#include "Vysyx_00000000.h"
 #include "verilated.h"
 #include "emu.h"
 #include "expectations.h"
 #include "pmem.h"
 #include "sim.h"
-
-struct Difference {
-    std::string field;
-    uint32_t actual;
-    uint32_t expected;
-};
 
 struct Counts {
     unsigned fails = 0;
@@ -62,7 +56,7 @@ int main(int argc, char** argv)
 
     VerilatedContext ctx;
     ctx.commandArgs(argc, argv);
-    Vtop dut{&ctx};
+    Vysyx_00000000 dut{&ctx};
     sim_set_verbose(false);
     if (!sim_init(dut, nullptr)) {
         sim_close(dut);
@@ -72,7 +66,7 @@ int main(int argc, char** argv)
     // 统一测试初态。rf[0] 是未使用的底层槽，也初始化为0以便快照；
     // x0 的实际读行为还通过下方读端口比较和 x0_readonly 程序检查。
     for (unsigned i = 0; i < 16; ++i)
-        dut.rootp->top__DOT__u_rf__DOT__rf[i] = 0;
+        npc::gpr(dut, i) = 0;
     sim_reset(dut);
     emu.reset();
 
@@ -86,13 +80,13 @@ int main(int argc, char** argv)
     constexpr unsigned max_steps = 10000000;
     while (!ctx.gotFinish() && attempts < max_steps) {
 
-        if (sim_cycles() >= 3ull * max_steps + 3) {
+        if (sim_cycles() >= 64ull * max_steps + 3) {
             std::fprintf(stderr, "Difftest cycle limit exceeded\n");
             sim_close(dut);
             return 1;
         }
 
-        if (!dut.commit) {
+        if (!npc::commit(dut)) {
             if (!sim_step(dut)) {
                 std::fprintf(stderr, "NPC failed during fetch wait\n");
                 sim_close(dut);
@@ -100,11 +94,11 @@ int main(int argc, char** argv)
             }
             continue;
         }
-        const uint32_t pre_pc = dut.pc;
-        const uint32_t inst = dut.inst;
-        const uint32_t read1 = dut.rootp->top__DOT__rs1_data;
-        const uint32_t read2 = dut.rootp->top__DOT__rs2_data;
-        const bool illegal = dut.illegal;
+        const uint32_t pre_pc = npc::pc(dut);
+        const uint32_t inst = npc::inst(dut);
+        const uint32_t read1 = npc::rs1_data(dut);
+        const uint32_t read2 = npc::rs2_data(dut);
+        const bool illegal = npc::illegal(dut);
 
         if (argc == 4) trace.push_back(pre_pc);
         last_pc = pre_pc;
@@ -124,7 +118,7 @@ int main(int argc, char** argv)
         
         if (info.device_load && info.device_load_rd != 0)
             emu.set_reg(info.device_load_rd,
-                        dut.rootp->top__DOT__u_rf__DOT__rf[info.device_load_rd]);
+                        npc::gpr(dut, info.device_load_rd));
         std::vector<Difference> differences;
         const bool rejected = info.status == minirv::StepStatus::illegal;
         extra.check(differences, "pre_pc", pre_pc, info.pc);
@@ -136,10 +130,10 @@ int main(int argc, char** argv)
         if (info.status == minirv::StepStatus::halted)
             core.check(differences, "pc.before_ebreak", pre_pc, info.pc);
         else
-            core.check(differences, "pc", dut.pc, reference.pc);
+            core.check(differences, "pc", npc::pc(dut), reference.pc);
         for (unsigned i = 0; i < 16; ++i)
             core.check(differences, "x" + std::to_string(i),
-                       dut.rootp->top__DOT__u_rf__DOT__rf[i], reference.R[i]);
+                       npc::gpr(dut, i), reference.R[i]);
 
         if (!rejected) {
             if (info.reads_rs1) extra.check(differences, "rs1.read", read1, info.rs1_value);
@@ -165,7 +159,7 @@ int main(int argc, char** argv)
 
     if (!ctx.gotFinish() && !step_failed && attempts == max_steps) {
         std::fprintf(stderr, "DiffTest timed out after %u steps at pc=0x%08x\n",
-                     attempts, static_cast<uint32_t>(dut.pc));
+                     attempts, static_cast<uint32_t>(npc::pc(dut)));
         sim_close(dut);
         return 1;
     }
@@ -217,7 +211,7 @@ int main(int argc, char** argv)
     std::printf("Memory: PASS %u words; protocol/read checks: %u\n",
                 memory.total, extra.total);
     std::printf("halt_pc=0x%08x NPC.pc=0x%08x EMU.pc=0x%08x\n",
-                sim_halt_pc(), static_cast<uint32_t>(dut.pc), emu.get_state().pc);
+                sim_halt_pc(), static_cast<uint32_t>(npc::pc(dut)), emu.get_state().pc);
 
     int result = 0;
     if (argc == 4)

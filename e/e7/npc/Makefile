@@ -1,4 +1,4 @@
-TOPNAME = top
+TOPNAME = ysyx_00000000
 NXDC_FILES = constr/top.nxdc
 INC_PATH ?=
 

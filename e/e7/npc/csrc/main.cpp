@@ -1,8 +1,8 @@
+#include "cpu_view.h"
 #include <cstdint>
 #include <cstdio>
 
-#include "Vtop.h"
-#include "Vtop___024root.h"
+#include "Vysyx_00000000.h"
 #include "verilated.h"
 
 #include "pmem.h"
@@ -23,7 +23,7 @@ int main(int argc, char** argv)
     VerilatedContext ctx;
     ctx.commandArgs(argc, argv);
     ctx.traceEverOn(true);
-    Vtop dut{&ctx};
+    Vysyx_00000000 dut{&ctx};
     TestSuite tests;
 
     if (!sim_init(dut, wave_path)) {
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
     sim_reset(dut);
 
     // 程序通过 ebreak 结束；超时上限防止错误程序无限运行。
-    constexpr uint64_t  max_cycles = 50000000000ull;
+    constexpr uint64_t  max_cycles = 500000000000ull;
     uint64_t cycles = 0;
     while (!ctx.gotFinish() && cycles < max_cycles) {
         if (!sim_step(dut)) {
@@ -53,8 +53,8 @@ int main(int argc, char** argv)
     tests.check("hit ebreak", sim_halted(), 1);
     std::printf("Result: halt_pc=0x%08x a0=0x%08x ra=0x%08x cycles=%lu\n",
                 sim_halt_pc(),
-                static_cast<uint32_t>(dut.rootp->top__DOT__u_rf__DOT__rf[10]),
-                static_cast<uint32_t>(dut.rootp->top__DOT__u_rf__DOT__rf[1]),
+                static_cast<uint32_t>(npc::gpr(dut, 10)),
+                static_cast<uint32_t>(npc::gpr(dut, 1)),
                 cycles);
 
     const uint64_t instructions = sim_instructions();
@@ -66,7 +66,7 @@ int main(int argc, char** argv)
                 static_cast<unsigned long long>(cycles),
                 ipc);
 
-    uint32_t a0 = dut.rootp->top__DOT__u_rf__DOT__rf[10];
+    uint32_t a0 = npc::gpr(dut, 10);
     tests.check("exit code", a0, 0);    
     if (sim_halted()) {
         if (a0) std::printf("HIT BAD TRAP\n");

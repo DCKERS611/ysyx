@@ -1,12 +1,12 @@
 # 分类回归使用独立测试入口，不改变 main.cpp 的程序运行接口。
-REGRESS_DIR := build/regress
+REGRESS_DIR ?= build/regress
 REGRESS_BIN := $(REGRESS_DIR)/cpu_test
 REGRESS_SRCS := $(abspath tests/cpu_test.cpp csrc/pmem.cpp csrc/sim.cpp csrc/dpi.cpp)
 
 $(REGRESS_BIN): $(VSRCS) $(REGRESS_SRCS) $(HEADERS) tests/expectations.h $(MAKEFILE_LIST)
 	@mkdir -p $(REGRESS_DIR)
 	$(VERILATOR) --cc --exe --build -Wall -Wno-DECLFILENAME \
-		--public-flat-rw --top-module $(TOPNAME) \
+		--public-flat-rw --top-module $(TOPNAME) $(TRACE_FLAGS) \
 		--Mdir $(abspath $(REGRESS_DIR)/obj_dir) $(VSRCS) $(REGRESS_SRCS) \
 		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath csrc)" -o $(abspath $(REGRESS_BIN))
 
@@ -73,8 +73,27 @@ difftest: difftest-acceptance
 .PHONY: check-waves
 check-waves: test-acceptance
 	@mkdir -p build/acceptance/waves
-	$(MAKE) -f Makefile.wave sim PROGRAM=build/acceptance/programs/array_sum.bin WAVE_FILE=build/acceptance/waves/array_sum.fst
-	$(MAKE) -f Makefile.wave sim PROGRAM=build/acceptance/programs/byte_sum.bin WAVE_FILE=build/acceptance/waves/byte_sum.fst
+	$(MAKE) -f Makefile.cpptest REGRESS_DIR=build/wave-tests TRACE=1 build/wave-tests/cpu_test
+	build/wave-tests/cpu_test build/acceptance/programs/array_sum.bin build/acceptance/programs/array_sum.expect acceptance/array_sum build/acceptance/waves/array_sum.fst
+	build/wave-tests/cpu_test build/acceptance/programs/byte_sum.bin build/acceptance/programs/byte_sum.expect acceptance/byte_sum build/acceptance/waves/byte_sum.fst
 	fst2vcd build/acceptance/waves/array_sum.fst > build/acceptance/waves/array_sum.vcd
 	fst2vcd build/acceptance/waves/byte_sum.fst > build/acceptance/waves/byte_sum.vcd
 	$(PYTHON) tests/check_acceptance_wave.py --array build/acceptance/waves/array_sum.vcd --bytes build/acceptance/waves/byte_sum.vcd
+
+# 同一套用例在固定一拍与默认随机回复下运行，区分功能和时序口径。
+.PHONY: test-fixed difftest-fixed
+test-fixed:
+	NPC_MEM_DELAY=1 $(MAKE) -f Makefile.cpptest test-all
+
+difftest-fixed:
+	NPC_MEM_DELAY=1 $(MAKE) -f Makefile.diff difftest
+
+CXX ?= g++
+CHECKER_BIN := build/test-library/checker_test
+$(CHECKER_BIN): tests/checker_test.cpp csrc/check.h csrc/test_suite.h
+	@mkdir -p $(dir $@)
+	$(CXX) -std=c++17 -Wall -Wextra -Werror -Icsrc $< -o $@
+
+.PHONY: test-library
+test-library: $(CHECKER_BIN)
+	$(CHECKER_BIN)

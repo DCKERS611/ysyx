@@ -1,6 +1,8 @@
 # 功能：addi、add、lui 的基本运算及写回。
 # EXPECT halt 0x80000010
-# EXPECT cycles 10
+# EXPECT instructions 5
+# EXPECT cycles_fixed 1 10
+# EXPECT cycles_random 43
 # EXPECT reg 1 5
 # EXPECT reg 2 7
 # EXPECT reg 3 12

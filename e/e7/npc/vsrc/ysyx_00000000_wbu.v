@@ -1,4 +1,4 @@
-module wbu(
+module ysyx_00000000_wbu(
     input [31:0] alu_out,
     input [31:0] load_data,
     input [31:0] imm,
@@ -12,7 +12,7 @@ module wbu(
     wire [31:0] pc_plus4 = pc + 32'd4;
     wire [31:0] jump_target = alu_out & ~32'd1;
 
-    MuxKey #(4, 2, 32) u_wb_mux (wdata, wb_sel, {
+    ysyx_00000000_MuxKey #(4, 2, 32) u_wb_mux (wdata, wb_sel, {
         2'b00, alu_out,     // add/addi
         2'b01, load_data,   // lw/lbu
         2'b10, imm,         // lui

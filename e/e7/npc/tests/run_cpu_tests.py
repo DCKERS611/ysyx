@@ -43,7 +43,7 @@ def build_case(source, output):
     if not expectations:
         raise ValueError("no EXPECT comments")
     if len(binary) > 1024:
-        raise ValueError("program exceeds NPC memory")
+        raise ValueError("handwritten program exceeds the 1024-byte fixture limit")
     # 清单同时保留占位指令和实际注入的机器码，便于核对非法输入。
     rows = listing.splitlines()
     for address in sorted(injected):

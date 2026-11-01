@@ -41,11 +41,12 @@ def read_vcd(path):
 def sample_instruction(path, pc):
     symbols, samples = read_vcd(path)
     def value(sample, name):
-        symbol = symbols["TOP.top." + name]
+        symbol = symbols["TOP.ysyx_00000000." + name]
         return sample[1].get(symbol)
     for before, after in zip(samples, samples[1:]):
-        if (value(before, "clk") == 0 and value(after, "clk") == 1
-                and value(before, "rst") == 0 and value(before, "pc") == pc):
+        if (value(before, "clock") == 0 and value(after, "clock") == 1
+                and value(before, "reset") == 0 and value(before, "pc") == pc
+                and value(before, "commit") == 1):
             return lambda name: value(before, name), lambda name: value(after, name), after[0]
     raise ValueError(f"{path}: no execution edge for PC=0x{pc:x}")
 
@@ -57,19 +58,19 @@ def main():
     args = parser.parse_args()
 
     tests = [
-        ("add", args.array, 0x34,
+        ("add", args.array, 0x80000038,
          {"inst": 0x00650533, "rs1_data": 0, "rs2_data": 1,
           "alu_src": 0, "alu_out": 1, "wen": 1, "rd": 10, "wdata": 1},
-         {"pc": 0x38, "u_rf.rf.rf[10]": 1}),
-        ("lw", args.array, 0x30,
-         {"inst": 0x00012303, "alu_out": 0x80, "mem_read": 1,
+         {"pc": 0x8000003c, "u_rf.rf.rf[10]": 1}),
+        ("lw", args.array, 0x80000034,
+         {"inst": 0x00012303, "alu_out": 0x80000080, "mem_read": 1,
           "mem_write": 0, "load_data": 1, "wb_sel": 1, "wdata": 1, "rd": 6},
-         {"pc": 0x34, "u_rf.rf.rf[6]": 1}),
-        ("sb", args.bytes, 0x38,
-         {"inst": 0x00710123, "alu_out": 0x102, "mem_write": 1,
+         {"pc": 0x80000038, "u_rf.rf.rf[6]": 1}),
+        ("sb", args.bytes, 0x8000003c,
+         {"inst": 0x00710123, "alu_out": 0x80000102, "mem_write": 1,
           "mem_read": 0, "mem_byte": 1, "wen": 0,
-          "u_lsu.store_data": 0x00ab0000, "u_lsu.store_mask": 4},
-         {"pc": 0x3c}),
+          "io_lsu_wdata": 0x00ab0000, "io_lsu_wmask": 4},
+         {"pc": 0x80000040}),
     ]
     fails = 0
     for name, path, pc, before_expected, after_expected in tests:

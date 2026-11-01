@@ -1,4 +1,4 @@
-module idu(
+module ysyx_00000000_idu(
     input [31:0] inst,
     
     output [3:0] rd,
@@ -64,7 +64,7 @@ module idu(
 
     assign wen = !illegal && uses_rd;               // write GPR: store 和 ebreak 不写
     assign alu_src = !is_add;                       // 使用rs2, 其余需要加法的指令使用imm
-    assign wb_sel  = is_jalr ? 2'b11                // wbu
+    assign wb_sel  = is_jalr ? 2'b11                // ysyx_00000000_wbu
                              : is_lui ? 2'b10
                                       : is_load ? 2'b01
                                                 : 2'b00;

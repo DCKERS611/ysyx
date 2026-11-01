@@ -1,32 +1,38 @@
-# WSL source snapshot; generated files and installed tools stay local.
-**/.git
-**/.git/
+# 构建产物与仿真输出
 **/build/
-**/obj_dir/
+**/.git/
 **/__pycache__/
-**/.venv/
-**/*.pyc
-**/*.fst
-**/*.vcd
-**/*.o
-**/*.d
-**/*.a
-**/*.so
-**/*.so.*
-**/*.log
-**/*.swp
-**/*.swo
-**/*~
-**/core
-**/core.*
-**/*.tgz
-**/*.tar
-**/*.tar.gz
-**/*.tar.bz2
-**/*.part
+**/.pytest_cache/
+**/.cache/
+**/node_modules/
+*.pyc
+*.pyo
+*.o
+*.a
+*.so
+*.fst
+*.vcd
+*.log
+core
+core.*
+
+# 编辑器与本地配置
+**/.idea/
+**/.vscode/
+*.swp
+*.swo
+*~
+.env
+.env.*
+
+# 本机工具、安装目录与学习计划不提交
 /ecc/
 /ecc-smoke/
 /icsprout55-pdk/
-/oss-cad-suite/
-/archbench/result/
-/npc/e4/
+*学习计划*
+*学习背景*
+*工作交接书*
+
+# 旧式 Verilator 输出目录与工具锁
+**/obj_dir/
+**/.lock

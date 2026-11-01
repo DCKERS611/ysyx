@@ -25,7 +25,7 @@ def main():
         manifest = expected.read_text().splitlines()
         a0 = next(int(row.split()[2], 0) for row in manifest if row.startswith("reg 10 "))
         halt = next(int(row.split()[1], 0) for row in manifest if row.startswith("halt "))
-        cycles = next(int(row.split()[1], 0) for row in manifest if row.startswith("cycles "))
+        instructions = next(int(row.split()[1], 0) for row in manifest if row.startswith("instructions "))
         statuses = []
         commands = [
             ("NPC", [str(args.npc.resolve()), str(output), str(expected), name]),
@@ -40,7 +40,7 @@ def main():
             if mode == "EMU":
                 steps = [line for line in result.stdout.splitlines() if line.startswith("step=")]
                 last = steps[-1] if steps else ""
-                ok &= f"step={cycles} " in last
+                ok &= f"step={instructions} " in last
                 ok &= f"a0=0x{a0:08x}" in last
                 ok &= f"-> pc=0x{halt:08x}" in last
                 ok &= f"ebreak @ pc=0x{halt:08x}" in result.stdout

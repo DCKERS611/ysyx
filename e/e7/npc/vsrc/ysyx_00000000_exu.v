@@ -1,4 +1,4 @@
-module exu(
+module ysyx_00000000_exu(
     input [31:0] rs1_data,
     input [31:0] rs2_data,
     input [31:0] imm,

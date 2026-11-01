@@ -1,13 +1,47 @@
+#include "cpu_view.h"
 #include "sim.h"
 #include "dpi.h"
 #include "pmem.h"
 
 #include <cstdio>
-#include "Vtop.h"
+#include <cstdlib>
+#include "Vysyx_00000000.h"
 #include "verilated.h"
 
 static bool verbose = true;
 static uint64_t g_cycles = 0;
+static bool ifu_pending = false;       // 是否有尚未回复的请求
+static uint32_t ifu_saved_addr = 0;    // 已接收请求的地址
+static unsigned ifu_wait_left = 0;     // 距离回复还需等待的周期数
+// 保存尚未完成的数据访存请求
+static bool lsu_pending = false;
+static bool lsu_saved_wen = false;
+static uint32_t lsu_saved_addr = 0;
+static uint32_t lsu_saved_wdata = 0;
+static uint8_t lsu_saved_wmask = 0;
+static unsigned lsu_wait_left = 0;
+
+// 置 true 开启随机回复；关闭时固定 1 拍回复
+static unsigned fixed_mem_delay = 0;
+
+unsigned sim_memory_delay() { return fixed_mem_delay; }
+
+// 非零初值；固定初值使测试可以复现
+static uint16_t mem_lfsr = 0xACE1u;
+
+// 每接收一次请求，推进一次 LFSR，生成 1～20 拍延迟
+static unsigned next_mem_delay()
+{
+    if (fixed_mem_delay != 0) return fixed_mem_delay;
+
+    const bool low_bit = (mem_lfsr & 1u) != 0;
+    mem_lfsr >>= 1;
+
+    if (low_bit)
+        mem_lfsr ^= 0xB400u;
+
+    return 1u + (mem_lfsr % 20u);
+}
 
 uint64_t sim_cycles()
 {
@@ -36,7 +70,7 @@ static bool wave_open = false;
 #endif
 
 // 执行电路求值，按需记录波形，同时推进仿真时间。
-static void eval_step(Vtop& dut)
+static void eval_step(Vysyx_00000000& dut)
 {
     dut.eval();
 
@@ -51,15 +85,27 @@ static void eval_step(Vtop& dut)
 }
 
 // 初始化结束状态，并按需打开 FST；ebreak 回调只在 dpi.cpp 定义。
-bool sim_init(Vtop& dut, const char* wave_path)
+bool sim_init(Vysyx_00000000& dut, const char* wave_path)
 {
+    fixed_mem_delay = 0;
+    if (const char* setting = std::getenv("NPC_MEM_DELAY")) {
+        char* end = nullptr;
+        const unsigned long value = std::strtoul(setting, &end, 10);
+        if (end == setting || *end != '\0' || value > 20) {
+            std::fprintf(stderr, "NPC_MEM_DELAY 必须为 0（随机）或 1～20（固定拍数）\n");
+            return false;
+        }
+        fixed_mem_delay = static_cast<unsigned>(value);
+    }
     dpi_reset();
     dut.contextp()->gotFinish(false);
 
-    dut.clk = 0;
-    dut.rst = 1;
-    dut.ifu_rdata = 0;
-    dut.mem_rdata = 0;
+    dut.clock = 0;
+    dut.reset = 1;
+    dut.io_ifu_rdata = 0;
+    dut.io_lsu_rdata = 0;
+    dut.io_ifu_respValid = 0;
+    dut.io_lsu_respValid = 0;
 
 #if VM_TRACE_FST
     if (wave_path != nullptr && wave_path[0] != '\0') {
@@ -83,79 +129,136 @@ bool sim_init(Vtop& dut, const char* wave_path)
 }
 
 // 通过一个上升沿复位 PC。
-void sim_reset(Vtop& dut)
+void sim_reset(Vysyx_00000000& dut)
 {
     g_cycles = 0;
     g_instructions = 0;
-    dut.rst = 1;
+    dut.reset = 1;
+    ifu_pending = false;
+    ifu_saved_addr = 0;
+    ifu_wait_left = 0;
+    lsu_pending = false;
+    lsu_saved_wen = false;
+    lsu_saved_addr = 0;
+    lsu_saved_wdata = 0;
+    lsu_saved_wmask = 0;
+    lsu_wait_left = 0;
+    mem_lfsr = 0xACE1u;
 
-    dut.clk = 0;
+    dut.clock = 0;
     eval_step(dut);
 
-    dut.clk = 1;
+    dut.clock = 1;
     eval_step(dut);
 
-    dut.rst = 0;
-    dut.ifu_rdata = 0;
-    dut.mem_rdata = 0;
+    dut.reset = 0;
+    dut.io_ifu_rdata = 0;
+    dut.io_lsu_rdata = 0;
+    dut.io_ifu_respValid = 0;
+    dut.io_lsu_respValid = 0;
     eval_step(dut);
 }
 
-bool sim_step(Vtop& dut)
+bool sim_step(Vysyx_00000000& dut)
 {
     if (dut.contextp()->gotFinish()) return true;
 
-    dut.clk = 0;
+    dut.clock = 0;
     eval_step(dut);
 
-    const bool executing = dut.commit;
-    const uint32_t old_pc = dut.pc;
-    const uint32_t inst = dut.inst;
+    const bool executing = npc::commit(dut);
+    const uint32_t old_pc = npc::pc(dut);
+    const uint32_t inst = npc::inst(dut);
 
     if ((old_pc & 3u) != 0) {
         std::fprintf(stderr, "unaligned fetch: pc=0x%08x\n", old_pc);
         return false;
     }
 
-    if (dut.illegal) {
+    if (npc::illegal(dut)) {
         std::fprintf(stderr, "illegal inst: pc=0x%08x inst=0x%08x\n",
                      old_pc, inst);
         return false;
     }
 
     // 存储器采样本拍取指地址
-    const uint32_t fetched_inst = static_cast<uint32_t>(
-        pmem_read(static_cast<int>(dut.ifu_raddr)));
-    const uint32_t fetched_data = dut.mem_ren ? static_cast<uint32_t>(pmem_read(static_cast<int>(dut.mem_addr)))
-                                              : 0;
+    bool fetch_resp = false;
+    uint32_t fetched_inst = dut.io_ifu_rdata;
 
-    // 保存当前指令的写请求，避免上升沿后信号变成下一条指令的值。
-    const bool write_enable = dut.mem_wen;
-    const uint32_t write_addr = dut.mem_addr;
-    const uint32_t write_data = dut.mem_wdata;
-    const uint8_t write_mask = dut.mem_wmask;
+    // 接受一次请求, 保存地址并启动计数
+    if (!ifu_pending && dut.io_ifu_reqValid) {
+        ifu_pending = true;
+        ifu_saved_addr = dut.io_ifu_addr;
+        ifu_wait_left = next_mem_delay();
+    }
 
-    dut.clk = 1;
+    // 接受请求的一拍也记入delay
+    if (ifu_pending) {
+        -- ifu_wait_left;
+
+        if (ifu_wait_left == 0) {
+            fetched_inst = 
+                static_cast<uint32_t>(pmem_read(static_cast<int>(ifu_saved_addr)));
+            fetch_resp = true;
+            ifu_pending = false;
+        }
+    }
+    
+    // 接收请求时保存全部信息，等待期间不重复接收
+    if (!lsu_pending && dut.io_lsu_reqValid) {
+        lsu_pending = true;
+        lsu_saved_wen = dut.io_lsu_wen;
+        lsu_saved_addr = dut.io_lsu_addr;
+        lsu_saved_wdata = dut.io_lsu_wdata;
+        lsu_saved_wmask = dut.io_lsu_wmask;
+        lsu_wait_left = next_mem_delay();
+    }
+
+    // 默认不回复、不写内存，读数据保持原值
+    bool data_resp = false;
+    bool write_enable = false;
+    uint32_t fetched_data = dut.io_lsu_rdata;
+
+    // 接收请求的这一拍也计入延迟
+    if (lsu_pending) {
+        --lsu_wait_left;
+
+        if (lsu_wait_left == 0) {
+            if (lsu_saved_wen) {
+                write_enable = true;
+            } else {
+                fetched_data = static_cast<uint32_t>(
+                    pmem_read(static_cast<int>(lsu_saved_addr)));
+            }
+
+            data_resp = true;
+            lsu_pending = false;
+        }
+    }
+
+    dut.clock = 1;
     dut.eval();
     ++g_cycles;
 
     if (executing) ++g_instructions;
 
-    // 当前指令的 store 在这个上升沿完成，只写一次。
+    // 延迟结束后完成一次写操作，再向 CPU 回复
     if (write_enable) {
-        pmem_write(static_cast<int>(write_addr),
-                   static_cast<int>(write_data),
-                   static_cast<char>(write_mask));
+        pmem_write(static_cast<int>(lsu_saved_addr),
+                   static_cast<int>(lsu_saved_wdata),
+                   static_cast<char>(lsu_saved_wmask));
     }
 
     // 存储器更新返回数据
-    dut.ifu_rdata = fetched_inst;
-    dut.mem_rdata = fetched_data;
+    dut.io_ifu_rdata = fetched_inst;
+    dut.io_ifu_respValid = fetch_resp;
+    dut.io_lsu_rdata = fetched_data;
+    dut.io_lsu_respValid = data_resp;
     eval_step(dut);
 
     if (verbose && executing) {
         std::printf("pc=0x%08x inst=0x%08x --> next_pc=0x%08x\n",
-                    old_pc, inst, static_cast<uint32_t>(dut.pc));
+                    old_pc, inst, static_cast<uint32_t>(npc::pc(dut)));
     }
 
     return true;
@@ -171,7 +274,7 @@ uint32_t sim_halt_pc()
     return dpi_halt_pc();
 }
 
-void sim_close(Vtop& dut)
+void sim_close(Vysyx_00000000& dut)
 {
     dut.final();
 

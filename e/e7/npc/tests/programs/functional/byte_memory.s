@@ -1,6 +1,8 @@
 # 功能：小端的四个字节通道、lbu 零扩展、sb 掩码和相邻字节保留。
 # EXPECT halt 0x80000058
-# EXPECT cycles 52
+# EXPECT instructions 23
+# EXPECT cycles_fixed 1 59
+# EXPECT cycles_random 330
 # EXPECT reg 6 0x78
 # EXPECT reg 7 0x56
 # EXPECT reg 8 0x34
