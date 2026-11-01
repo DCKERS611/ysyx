@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""汇编分类程序，提取 EXPECT 注释，逐程序调用 C++ TestSuite 测试入口。"""
+"""汇编分类程序，提取 EXPECT 注释，逐程序调用 C++ test_suite 测试入口。"""
 
 import argparse
 import importlib.util
@@ -57,6 +57,40 @@ def build_case(source, output):
     return expected_path
 
 
+# C++ 和独立 EMU 共用一行结果；只解析调用方需要的固定字段。
+def parse_result(completed, backend, case_name):
+    rows = [line for line in completed.stdout.splitlines() if line.startswith("RESULT ")]
+    if len(rows) != 1:
+        raise ValueError(f"expected one RESULT line, got {len(rows)}")
+    fields = {}
+    for token in rows[0].split()[1:]:
+        key, separator, value = token.partition("=")
+        if not separator or not key or not value or key in fields:
+            raise ValueError(f"invalid or duplicate RESULT field: {token}")
+        fields[key] = value
+    common = {"case", "backend", "verdict", "stop"}
+    numeric = {"retired", "a0", "halt_pc"} if backend == "emu" else {
+        "pc", "inst", "cycles", "retired", "attempts", "checks", "failures"
+    }
+    required = common | numeric
+    if backend != "emu":
+        required.add("delay")
+    if backend == "diff":
+        numeric |= {"core", "core_fail", "extra", "extra_fail", "memory", "memory_fail"}
+        required |= numeric
+    if not required <= fields.keys():
+        raise ValueError("missing RESULT fields: " + ", ".join(sorted(required - fields.keys())))
+    if fields["case"] != case_name or fields["backend"] != backend:
+        raise ValueError("RESULT case/backend does not match this invocation")
+    if fields["verdict"] not in {"pass", "fail"}:
+        raise ValueError("invalid RESULT verdict")
+    if (completed.returncode == 0) != (fields["verdict"] == "pass"):
+        raise ValueError("RESULT verdict disagrees with exit code")
+    for key in numeric:
+        fields[key] = int(fields[key], 0)
+    return fields
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--group", choices=("functional", "boundary", "difftest", "acceptance"), required=True)
@@ -79,20 +113,26 @@ def main():
             result = subprocess.run(
                 [str(args.runner.resolve()), str(output.resolve()),
                  str(expected.resolve()), name],
-                capture_output=True, text=True, timeout=15,
+                capture_output=True, text=True, timeout=60,
             )
-            if result.returncode != 0:
+            backend = "diff" if args.runner.name == "difftest" else "npc"
+            try:
+                fields = parse_result(result, backend, name)
+            except ValueError as error:
+                raise ValueError(f"{error}\n{result.stdout}{result.stderr}") from None
+            if result.returncode != 0 or fields["verdict"] != "pass":
                 failures += 1
                 print(f"[ FAIL ] {name}", flush=True)
                 print(result.stdout + result.stderr, end="", flush=True)
             else:
-                summaries = [line for line in result.stdout.splitlines()
-                             if line.startswith("PASS:")]
-                summary = summaries[0] if summaries else "completed"
-                if len(summaries) > 1:
-                    summary += "; expectations " + summaries[1]
+                if backend == "diff":
+                    summary = (f"core={fields['core']} steps={fields['attempts']} "
+                               f"checks={fields['checks']} memory={fields['memory']}")
+                else:
+                    summary = (f"stop={fields['stop']} cycles={fields['cycles']} "
+                               f"retired={fields['retired']} checks={fields['checks']}")
                 print(f"[ PASS ] {name}: {summary}", flush=True)
-        except (OSError, ValueError, mkprog.AssemblyError, subprocess.TimeoutExpired) as error:
+        except (OSError, ValueError, mkprog.assembly_error, subprocess.TimeoutExpired) as error:
             failures += 1
             print(f"[ FAIL ] {name}: {error}", flush=True)
 

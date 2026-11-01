@@ -1,4 +1,4 @@
-# 分类回归使用独立测试入口，不改变 main.cpp 的程序运行接口。
+# 分类回归使用独立测试入口，不改变 tests/am_main.cpp 的程序运行接口。
 REGRESS_DIR ?= build/regress
 REGRESS_BIN := $(REGRESS_DIR)/cpu_test
 REGRESS_SRCS := $(abspath tests/cpu_test.cpp csrc/pmem.cpp csrc/sim.cpp csrc/dpi.cpp)
@@ -8,7 +8,7 @@ $(REGRESS_BIN): $(VSRCS) $(REGRESS_SRCS) $(HEADERS) tests/expectations.h $(MAKEF
 	$(VERILATOR) --cc --exe --build -Wall -Wno-DECLFILENAME \
 		--public-flat-rw --top-module $(TOPNAME) $(TRACE_FLAGS) \
 		--Mdir $(abspath $(REGRESS_DIR)/obj_dir) $(VSRCS) $(REGRESS_SRCS) \
-		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath csrc)" -o $(abspath $(REGRESS_BIN))
+		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath csrc) -I$(abspath tests)" -o $(abspath $(REGRESS_BIN))
 
 .PHONY: test-functional test-boundary test-all
 test-functional: $(REGRESS_BIN)
@@ -24,7 +24,7 @@ test-all: test-functional test-boundary
 DIFF_DIR ?= build/difftest
 DIFF_BIN := $(DIFF_DIR)/difftest
 REF_DIR := ../minirvEMU
-DIFF_SRCS := $(abspath csrc/difftest.cpp csrc/pmem.cpp csrc/sim.cpp csrc/dpi.cpp $(REF_DIR)/emu.cpp)
+DIFF_SRCS := $(abspath tests/difftest.cpp csrc/pmem.cpp csrc/sim.cpp csrc/dpi.cpp $(REF_DIR)/emu.cpp)
 
 $(DIFF_BIN): $(VSRCS) $(DIFF_SRCS) $(HEADERS) tests/expectations.h $(REF_DIR)/emu.h $(MAKEFILE_LIST)
 	@mkdir -p $(DIFF_DIR)
@@ -97,3 +97,15 @@ $(CHECKER_BIN): tests/checker_test.cpp csrc/check.h csrc/test_suite.h
 .PHONY: test-library
 test-library: $(CHECKER_BIN)
 	$(CHECKER_BIN)
+
+# 依次执行，避免并行调度让固定/随机配置同时写同一组验收文件。
+.PHONY: regress
+regress:
+	$(MAKE) -f Makefile.cpptest lint
+	$(MAKE) -f Makefile.cpptest test-library
+	$(MAKE) -f Makefile.cpptest test-all
+	$(MAKE) -f Makefile.cpptest test-fixed
+	$(MAKE) -f Makefile.diff difftest
+	$(MAKE) -f Makefile.diff difftest-fixed
+	$(MAKE) -f Makefile.cpptest test-acceptance
+	$(MAKE) -f Makefile.cpptest check-waves

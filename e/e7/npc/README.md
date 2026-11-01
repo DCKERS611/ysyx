@@ -1,5 +1,7 @@
 # minirv NPC 测试与波形
 
+当前 E7 的结构与语义见 [tests/README.md](tests/README.md)，独立入口结束时输出唯一 RESULT 行；下文保留早期 E5/E6 的背景说明。
+
 当前 RTL 支持 minirv 的8条指令和 ebreak，IFU 通过 DPI-C 取指，LSU 通过 DPI-C 访存。
 在 WSL 的 `~/ysyx-workbench/npc` 中运行以下命令。
 
@@ -12,7 +14,7 @@
 | Makefile.test | 包含 Makefile.cpptest 的兼容入口 | build/cpp |
 | 原 Makefile | 原 NVBoard 配置，当前 E5 暂不使用 | 原目录 |
 
-两种新模式不调用自动 Git 提交钩子。原 NVBoard 配置和 E4 文件保留。
+两种新模式不调用自动 Git 提交钩子。原 NVBoard 配置保留；npc/e4 旧副本已删除，独立 E4 备份保存在 E:\ysyx\e\e4。
 
 ## 程序文件与命令行
 
@@ -58,7 +60,7 @@ make -f Makefile.cpptest sim PROGRAM=program.bin
 
 目前 main 保留最多 1000 周期的保护，未执行到 ebreak 则测试失败。
 由于程序可替换，不再对所有程序固定要求 a0=30、ra=12 或 halt_pc=0x0c。
-通用的 TestSuite 只检查 hit ebreak，因此通过输出是 `PASS: 1 checks`。
+通用的 test_suite 只检查 hit ebreak，因此通过输出是 `PASS: 1 checks`。
 这只证明程序正常触发结束，不能代表任意程序的计算结果正确。
 
 默认程序的结果应另外核对为：
@@ -102,7 +104,7 @@ wen、rd、wdata、halt、illegal。u_rf 下的 rf[1] 和 rf[10] 分别是 ra、
 
 ## 源码职责
 
-- main.cpp：参数解析、装载、运行循环和结果检查。
+- tests/am_main.cpp：参数解析、装载、运行循环和结果检查。
 - pmem.cpp/.h：存储器、文件装载和读写函数。
 - dpi.cpp/.h：ebreak 回调和结束记录。
 - sim.cpp/.h：时钟、复位、单拍运行与波形。
@@ -190,7 +192,7 @@ make -f Makefile.cpptest test-functional
 make -f Makefile.cpptest test-boundary
 ```
 
-程序期望直接写在 .s 的 EXPECT 注释中，由 C++ TestSuite 核对。
+程序期望直接写在 .s 的 EXPECT 注释中，由 C++ test_suite 核对。
 类别、程序清单、非法编码注入和波形操作见 [tests/README.md](tests/README.md)。
 
 ## 逐条 DiffTest
@@ -202,7 +204,7 @@ make -f Makefile.diff difftest-medium
 make -f Makefile.cpptest difftest
 ```
 
-独立驱动在 csrc/difftest.cpp，参考核心与 minirvEMU 独立入口共用 emu.cpp。
+独立驱动在 tests/difftest.cpp，参考核心与 minirvEMU 独立入口共用 emu.cpp。
 每步比较1个PC和16个寄存器，程序结束后比较整块内存。
 EMU 在 ebreak 后 PC 不动，NPC 前进；halt 当步只比较前PC。
 逐拍打印在 DiffTest 中关闭。详细计数、初态、程序和真实改错记录见
@@ -219,10 +221,10 @@ LSU 组合读、上升沿写，sb 数据与 mask 都按地址低两位移动。
 WBU 选择编码：00=ALU，01=load，10=U型立即数，11=pc+4。
 
 复盘按四条线读，不再增加功能：
-1. 代码：main.cpp 如何装载、循环、检查。
+1. 代码：tests/am_main.cpp 如何装载、循环、检查。
 2. 架构：IFU→IDU/GPR→EXU→LSU→WBU，以及上升沿更新。
-3. 驱动：sim_init/reset/step、eval、DPI 和波形的调用顺序。
-4. 测试：手写 EXPECT、TestSuite、EMU 独立执行与 DiffTest 各验证什么。
+3. 驱动：sim_session 的 init/reset/step、eval、DPI 和波形的调用顺序。
+4. 测试：手写 EXPECT、test_suite、EMU 独立执行与 DiffTest 各验证什么。
 
 ## 大程序验收与收尾
 

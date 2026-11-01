@@ -14,14 +14,14 @@
 // 设计来源：
 //   - E5 csrc/test_suite.h 的 check()/report() 接口保持不变；
 //   - E3 minunit 的"每个检查有名字"；
-//   - E5 difftest.cpp 的 Difference/Counts 收集式比较。
+//   - E5 difftest.cpp 的 difference/counts 收集式比较。
 //
 // 约定：
 //   - 失败后继续执行，最后统一 report()；
 //   - 没有执行任何检查时 report() 返回 1；
 //   - ysyx 的 RISC-V 只有 32 位，不提供 64 位比较。
 
-class Checker {
+class checker {
 public:
     // 一个字段的检查：相等。
     bool eq_u32(const char* name, std::uint32_t actual,
@@ -148,13 +148,13 @@ public:
 
     // 多字段检查（E4 exp7 的 check 封装）。
     // 一个“用例”只记一次 total；任一字段不符就记一次 failure，并打印所有不符字段。
-    struct Value {
+    struct value {
         std::string name;
         std::uint32_t actual;
         std::uint32_t expected;
     };
 
-    bool all(const char* name, const Value* values, std::size_t count,
+    bool all(const char* name, const value* values, std::size_t count,
              const char* file = nullptr, int line = 0)
     {
         ++total_;
@@ -175,7 +175,7 @@ public:
         return ok;
     }
 
-    bool all(const char* name, std::initializer_list<Value> values,
+    bool all(const char* name, std::initializer_list<value> values,
              const char* file = nullptr, int line = 0)
     {
         return all(name, values.begin(), values.size(), file, line);
@@ -221,16 +221,16 @@ private:
 
 // ---------------------------------------------------------------------------
 // 第 1.5 层：收集式比较（DiffTest 用）。
-// 与 E5 difftest.cpp 的 Counts/Difference 同构，但封装成一个类。
+// 与 E5 difftest.cpp 的 counts/difference 同构，但封装成一个类。
 // ---------------------------------------------------------------------------
 
-struct Difference {
+struct difference {
     std::string field;
     std::uint32_t actual;
     std::uint32_t expected;
 };
 
-class DiffCollector {
+class diff_collector {
 public:
     void compare(const std::string& field, std::uint32_t actual,
                  std::uint32_t expected)
@@ -253,14 +253,14 @@ public:
         differences_.clear();
     }
 
-    const std::vector<Difference>& differences() const
+    const std::vector<difference>& differences() const
     {
         return differences_;
     }
 
 private:
     unsigned total_ = 0;
-    std::vector<Difference> differences_;
+    std::vector<difference> differences_;
 };
 
 // 宏只负责捕获文件名/行号和把表达式文本变成名字；
@@ -293,8 +293,8 @@ private:
 //                              {"keycode", dut.keycode, 0}});
 #define CHECK_ALL(c, ...) (c).all(__VA_ARGS__, __FILE__, __LINE__)
 
-// 兼容 E5 test_suite.h 的类名；把 #include "test_suite.h" 换成
-// #include "check.h" 后，旧的 TestSuite tests; 写法不用改。
-using TestSuite = Checker;
+// E7 的 test_suite 是 checker 的兼容别名。
+// E5 旧代码使用 TestSuite；迁移到本头文件时须改为 test_suite 或 checker。
+using test_suite = checker;
 
 #endif

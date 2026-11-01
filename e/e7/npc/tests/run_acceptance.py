@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""三个验收程序分别运行 NPC、独立 EMU 和逐条 DiffTest。"""
+"""三个验收程序分别运行 NPC、独立 EMU 和逐条 DiffTest，并保留每后端日志。"""
 
 import argparse
 from pathlib import Path
-import re
 import subprocess
 
-from run_cpu_tests import ROOT, build_case
+from run_cpu_tests import ROOT, build_case, parse_result
 
 
 def main():
@@ -28,22 +27,27 @@ def main():
         instructions = next(int(row.split()[1], 0) for row in manifest if row.startswith("instructions "))
         statuses = []
         commands = [
-            ("NPC", [str(args.npc.resolve()), str(output), str(expected), name]),
-            ("EMU", [str(args.emu.resolve()), str(output)]),
-            ("DiffTest", [str(args.diff.resolve()), str(output), str(expected), name]),
+            ("NPC", "npc", [str(args.npc.resolve()), str(output), str(expected), name]),
+            ("EMU", "emu", [str(args.emu.resolve()), str(output)]),
+            ("DiffTest", "diff", [str(args.diff.resolve()), str(output), str(expected), name]),
         ]
-        for mode, command in commands:
-            result = subprocess.run(command, capture_output=True, text=True, timeout=20)
-            text = result.stdout + result.stderr
+        for mode, backend, command in commands:
+            text = ""
+            try:
+                completed = subprocess.run(command, capture_output=True, text=True, timeout=60)
+                text = completed.stdout + completed.stderr
+                # 独立 EMU 的 CLI 只有镜像路径，因此 case 使用镜像文件名。
+                fields = parse_result(completed, backend, output.name if backend == "emu" else name)
+                ok = completed.returncode == 0 and fields["verdict"] == "pass"
+                if backend == "emu":
+                    ok &= (fields["retired"], fields["a0"], fields["halt_pc"]) == (instructions, a0, halt)
+            except (OSError, ValueError, subprocess.TimeoutExpired) as error:
+                ok = False
+                if isinstance(error, subprocess.TimeoutExpired):
+                    for part in (error.stdout, error.stderr):
+                        text += part.decode(errors="replace") if isinstance(part, bytes) else (part or "")
+                text += f"\n{type(error).__name__}: {error}\n"
             output.with_suffix("." + mode.lower() + ".log").write_text(text)
-            ok = result.returncode == 0
-            if mode == "EMU":
-                steps = [line for line in result.stdout.splitlines() if line.startswith("step=")]
-                last = steps[-1] if steps else ""
-                ok &= f"step={instructions} " in last
-                ok &= f"a0=0x{a0:08x}" in last
-                ok &= f"-> pc=0x{halt:08x}" in last
-                ok &= f"ebreak @ pc=0x{halt:08x}" in result.stdout
             status = "PASS" if ok else "FAIL"
             statuses.append(status)
             print(f"[ {status} ] {name} {mode}: a0={a0} (0x{a0:x})", flush=True)

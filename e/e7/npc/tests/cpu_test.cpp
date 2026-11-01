@@ -1,3 +1,4 @@
+// 手写案例入口：保留提交前轨迹，末态交给 EXPECT 检查。
 #include "cpu_view.h"
 #include "expectations.h"
 
@@ -7,7 +8,7 @@ int main(int argc, char** argv)
         std::fprintf(stderr, "Usage: %s <program.bin> <expectations> <case-name> [wave.fst]\n", argv[0]);
         return 1;
     }
-    ExpectedProgram expected;
+    expected_program expected;
     if (!read_expectations(argv[2], expected)) return 1;
     std::printf("[ RUN ] %s\n", argv[3]);
     if (!pmem_load_file(argv[1])) return 1;
@@ -16,25 +17,29 @@ int main(int argc, char** argv)
     ctx.commandArgs(argc, argv);
     ctx.traceEverOn(argc == 5);
     Vysyx_00000000 dut{&ctx};
-    if (!sim_init(dut, argc == 5 ? argv[4] : nullptr)) {
-        sim_close(dut);
-        return 1;
-    }
-    sim_reset(dut);
+    sim_session sim;
+    if (!sim.init(dut, argc == 5 ? argv[4] : nullptr)) return 1;
+    sim.reset();
 
-    bool step_failed = false;
-    unsigned cycles = 0;
+    constexpr run_limits limits{64000, 0};
+    stop_reason reason = stop_reason::running;
     std::vector<uint32_t> trace;
-    while (!ctx.gotFinish() && cycles < 64000) {
+    while (!ctx.gotFinish() && sim.cycles() < limits.max_cycles) {
         if (npc::commit(dut) || npc::illegal(dut)) trace.push_back(npc::pc(dut));
-        if (!sim_step(dut)) {
-            step_failed = true;
+        const auto event = sim.step();
+        if (event == step_event::rejected || event == step_event::fault) {
+            reason = event == step_event::rejected ? stop_reason::rejected : stop_reason::fetch_unaligned;
             break;
         }
-        ++cycles;
     }
-
-    const int result = check_expectations(dut, expected, step_failed, cycles, trace, argv[3]);
-    sim_close(dut);
-    return result;
+    if (reason == stop_reason::running)
+        reason = sim.halted() ? stop_reason::ebreak
+                 : ctx.gotFinish() ? stop_reason::external_finish : stop_reason::cycle_limit;
+    const auto run = sim.result(reason);
+    checker checks;
+    const bool passed = check_expectations(dut, expected, run, trace, argv[3], checks) == 0
+                        && (reason == stop_reason::ebreak
+                            || (reason == stop_reason::rejected && expected.illegal));
+    sim_print_result(argv[3], "npc", run, passed, checks.total(), checks.failures(), nullptr);
+    return passed ? 0 : 1;
 }

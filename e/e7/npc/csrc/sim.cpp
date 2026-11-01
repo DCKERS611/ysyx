@@ -10,6 +10,9 @@
 
 static bool verbose = true;
 static uint64_t g_cycles = 0;
+static uint64_t g_attempts = 0;
+static uint32_t last_pc = 0, last_inst = 0;
+static bool finish_reported = false;
 static bool ifu_pending = false;       // 是否有尚未回复的请求
 static uint32_t ifu_saved_addr = 0;    // 已接收请求的地址
 static unsigned ifu_wait_left = 0;     // 距离回复还需等待的周期数
@@ -85,8 +88,9 @@ static void eval_step(Vysyx_00000000& dut)
 }
 
 // 初始化结束状态，并按需打开 FST；ebreak 回调只在 dpi.cpp 定义。
-bool sim_init(Vysyx_00000000& dut, const char* wave_path)
+static bool init_sim(Vysyx_00000000& dut, const char* wave_path)
 {
+    finish_reported = false;
     fixed_mem_delay = 0;
     if (const char* setting = std::getenv("NPC_MEM_DELAY")) {
         char* end = nullptr;
@@ -129,9 +133,11 @@ bool sim_init(Vysyx_00000000& dut, const char* wave_path)
 }
 
 // 通过一个上升沿复位 PC。
-void sim_reset(Vysyx_00000000& dut)
+static void reset_sim(Vysyx_00000000& dut)
 {
     g_cycles = 0;
+    g_attempts = 0;
+    last_pc = last_inst = 0;
     g_instructions = 0;
     dut.reset = 1;
     ifu_pending = false;
@@ -159,9 +165,16 @@ void sim_reset(Vysyx_00000000& dut)
     eval_step(dut);
 }
 
-bool sim_step(Vysyx_00000000& dut)
+step_event sim_session::step()
 {
-    if (dut.contextp()->gotFinish()) return true;
+    auto& dut = *dut_;
+    if (dut.contextp()->gotFinish()) {
+        if (!finish_reported) {
+            std::fprintf(stderr, "step called after finish\n");
+            finish_reported = true;
+        }
+        return step_event::waiting;
+    }
 
     dut.clock = 0;
     eval_step(dut);
@@ -169,16 +182,16 @@ bool sim_step(Vysyx_00000000& dut)
     const bool executing = npc::commit(dut);
     const uint32_t old_pc = npc::pc(dut);
     const uint32_t inst = npc::inst(dut);
+    last_pc = old_pc;
+    last_inst = inst;
+    if (executing) ++g_attempts;
 
     if ((old_pc & 3u) != 0) {
-        std::fprintf(stderr, "unaligned fetch: pc=0x%08x\n", old_pc);
-        return false;
+        return step_event::fault;
     }
 
     if (npc::illegal(dut)) {
-        std::fprintf(stderr, "illegal inst: pc=0x%08x inst=0x%08x\n",
-                     old_pc, inst);
-        return false;
+        return step_event::rejected;
     }
 
     // 存储器采样本拍取指地址
@@ -261,7 +274,8 @@ bool sim_step(Vysyx_00000000& dut)
                     old_pc, inst, static_cast<uint32_t>(npc::pc(dut)));
     }
 
-    return true;
+    if (sim_halted()) return step_event::halted;
+    return executing ? step_event::committed : step_event::waiting;
 }
 
 bool sim_halted()
@@ -274,7 +288,7 @@ uint32_t sim_halt_pc()
     return dpi_halt_pc();
 }
 
-void sim_close(Vysyx_00000000& dut)
+static void close_sim(Vysyx_00000000& dut)
 {
     dut.final();
 
@@ -286,4 +300,72 @@ void sim_close(Vysyx_00000000& dut)
     // 必须在 dut 和它的上下文析构前销毁波形对象。
     wave_trace.reset();
 #endif
+}
+
+
+// session 只绑定一台 DUT，销毁时沿用原 sim_close 的清理顺序。
+sim_session::~sim_session()
+{
+    if (dut_ != nullptr) close_sim(*dut_);
+}
+
+bool sim_session::init(Vysyx_00000000& dut, const char* wave_path)
+{
+    dut_ = &dut;
+    return init_sim(dut, wave_path);
+}
+
+void sim_session::reset() { reset_sim(*dut_); }
+bool sim_session::halted() const { return sim_halted(); }
+uint32_t sim_session::halt_pc() const { return sim_halt_pc(); }
+uint64_t sim_session::cycles() const { return g_cycles; }
+uint64_t sim_session::retired() const { return g_instructions; }
+uint64_t sim_session::attempts() const { return g_attempts; }
+unsigned sim_session::mem_delay() const { return fixed_mem_delay; }
+
+run_result sim_session::result(stop_reason reason) const
+{
+    uint32_t pc = last_pc, inst = last_inst;
+    if (reason == stop_reason::ebreak) pc = sim_halt_pc();
+    if (reason == stop_reason::cycle_limit || reason == stop_reason::attempt_limit) {
+        pc = npc::pc(*dut_);
+        inst = npc::inst(*dut_);
+    }
+    return {reason, pc, inst, g_cycles, g_instructions, g_attempts, fixed_mem_delay};
+}
+
+
+// RESULT 只描述这次运行；各入口传入自己的最终判定。
+static const char* stop_name(stop_reason reason)
+{
+    switch (reason) {
+    case stop_reason::running: return "running";
+    case stop_reason::ebreak: return "ebreak";
+    case stop_reason::rejected: return "rejected";
+    case stop_reason::fetch_unaligned: return "fetch_unaligned";
+    case stop_reason::cycle_limit: return "cycle_limit";
+    case stop_reason::attempt_limit: return "attempt_limit";
+    case stop_reason::external_finish: return "external_finish";
+    case stop_reason::comparison_mismatch: return "comparison_mismatch";
+    case stop_reason::reference_fault: return "reference_fault";
+    }
+    return "running";
+}
+
+void sim_print_result(const char* case_name, const char* backend,
+                      const run_result& run, bool passed,
+                      unsigned checks, unsigned failures, const char* extra)
+{
+    char delay[16] = "random";
+    if (run.mem_delay != 0)
+        std::snprintf(delay, sizeof(delay), "fixed:%u", run.mem_delay);
+    std::printf("RESULT case=%s backend=%s verdict=%s stop=%s pc=0x%08x inst=0x%08x "
+                "cycles=%llu retired=%llu attempts=%llu checks=%u failures=%u delay=%s%s%s\n",
+                case_name, backend, passed ? "pass" : "fail", stop_name(run.reason),
+                run.stop_pc, run.stop_inst,
+                static_cast<unsigned long long>(run.cycles),
+                static_cast<unsigned long long>(run.retired),
+                static_cast<unsigned long long>(run.attempts), checks, failures, delay,
+                extra != nullptr && extra[0] != '\0' ? " " : "",
+                extra != nullptr ? extra : "");
 }

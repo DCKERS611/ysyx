@@ -14,7 +14,7 @@ PERIP_VSRCS := $(shell find $(SOC_DIR)/perip -type f \
 SOC_TOP := $(SOC_DIR)/ready-to-run/minirv/ElaborateTop.v
 
 VSRCS := $(CPU_VSRCS) $(SOC_TOP) $(PERIP_VSRCS)
-CSRCS := $(abspath csrc/soc_main.cpp)
+CSRCS := $(abspath tests/soc_main.cpp)
 
 SOC_FLAGS := \
 	--timescale "1ns/1ns" \

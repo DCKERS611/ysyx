@@ -14,7 +14,7 @@ mkprog = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mkprog)
 
 
-class MkprogTests(unittest.TestCase):
+class mkprog_tests(unittest.TestCase):
     def words(self, source):
         data, _ = mkprog.assemble(source)
         return list(struct.unpack("<" + "I" * (len(data) // 4), data))
@@ -74,11 +74,11 @@ class MkprogTests(unittest.TestCase):
         ]
         for source in sources:
             with self.subTest(source=source):
-                with self.assertRaises(mkprog.AssemblyError):
+                with self.assertRaises(mkprog.assembly_error):
                     mkprog.assemble(source)
 
     def test_jump_range(self):
-        with self.assertRaises(mkprog.AssemblyError):
+        with self.assertRaises(mkprog.assembly_error):
             mkprog.assemble("j end\n" + "ebreak\n" * 511 + "end: ebreak")
 
     def test_cli_outputs_and_error(self):

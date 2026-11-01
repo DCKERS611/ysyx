@@ -8,7 +8,7 @@ import struct
 import sys
 
 
-class AssemblyError(ValueError):
+class assembly_error(ValueError):
     pass
 
 
@@ -24,7 +24,7 @@ LABEL = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*):")
 def register(text):
     name = text.lower()
     if name not in REGISTERS:
-        raise AssemblyError(f"invalid register '{text}': minirv only has x0..x15")
+        raise assembly_error(f"invalid register '{text}': minirv only has x0..x15")
     return REGISTERS[name]
 
 
@@ -36,23 +36,23 @@ def immediate(text, labels, low, high):
         try:
             value = int(text, 10) if re.fullmatch(r"[+-]?[0-9]+", text) else int(text, 0)
         except ValueError:
-            raise AssemblyError(f"invalid immediate or undefined label '{text}'") from None
+            raise assembly_error(f"invalid immediate or undefined label '{text}'") from None
     if not low <= value <= high:
-        raise AssemblyError(f"immediate '{text}' out of range [{low}, {high}]")
+        raise assembly_error(f"immediate '{text}' out of range [{low}, {high}]")
     return value
 
 
 def operands(text, count):
     result = [part.strip() for part in text.split(",")] if text else []
     if len(result) != count or any(not part for part in result):
-        raise AssemblyError(f"expected {count} comma-separated operands")
+        raise assembly_error(f"expected {count} comma-separated operands")
     return result
 
 
 def memory_operand(text):
     match = re.fullmatch(r"([^()]+)\(\s*([^()]+)\s*\)", text)
     if not match:
-        raise AssemblyError("expected offset(rs1), for example 8(x1)")
+        raise assembly_error("expected offset(rs1), for example 8(x1)")
     return match[1].strip(), register(match[2].strip())
 
 
@@ -72,7 +72,7 @@ def encode(text, labels):
     if op == "j":
         target, = operands(args, 1)
         if target not in labels:
-            raise AssemblyError(f"undefined jump label '{target}'")
+            raise assembly_error(f"undefined jump label '{target}'")
         addr = immediate(target, labels, -2048, 2047)
         # minirv 没有 jal，此伪指令使用 x0 为基址进行绝对地址跳转。
         return i_type(0x67, 0, 0, 0, addr)
@@ -104,7 +104,7 @@ def encode(text, labels):
         return ((value >> 5) << 25) | (regno << 20) | (rs1 << 15) \
             | ((2 if op == "sw" else 0) << 12) | ((value & 0x1f) << 7) | 0x23
 
-    raise AssemblyError(f"unsupported instruction '{op}'")
+    raise assembly_error(f"unsupported instruction '{op}'")
 
 
 def assemble(source):
@@ -120,7 +120,7 @@ def assemble(source):
                 break
             name = match[1]
             if name in labels:
-                raise AssemblyError(f"line {line_number}: duplicate label '{name}'")
+                raise assembly_error(f"line {line_number}: duplicate label '{name}'")
             labels[name] = pc
             text = text[match.end():].strip()
         if text:
@@ -128,7 +128,7 @@ def assemble(source):
             pc += 4
 
     if not instructions:
-        raise AssemblyError("no instructions")
+        raise assembly_error("no instructions")
 
     # 第二遍：标签地址已知，生成机器码和带地址的清单。
     binary = bytearray()
@@ -136,8 +136,8 @@ def assemble(source):
     for pc, line_number, text in instructions:
         try:
             word = encode(text, labels)
-        except AssemblyError as error:
-            raise AssemblyError(f"line {line_number}: {error}") from None
+        except assembly_error as error:
+            raise assembly_error(f"line {line_number}: {error}") from None
         binary.extend(struct.pack("<I", word))
         listing.append(f"{pc:08x}  {word:08x}  {text}")
     return bytes(binary), "\n".join(listing) + "\n"
@@ -159,7 +159,7 @@ def main():
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_bytes(binary)
         listing_path.write_text(listing, encoding="utf-8")
-    except (OSError, UnicodeError, AssemblyError) as error:
+    except (OSError, UnicodeError, assembly_error) as error:
         print(f"{args.source}: {error}", file=sys.stderr)
         return 1
     print(f"Generated {output}: {len(binary)} bytes; listing: {listing_path}")

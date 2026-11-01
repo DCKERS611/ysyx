@@ -3,15 +3,15 @@
 // 验证通用库的失败传播与多差异收集；这里的故意失败不代表回归失败。
 int main()
 {
-    Checker result;
-    TestSuite compatibility;
+    checker result;
+    test_suite compatibility;
     compatibility.check("旧接口兼容", 42, 42);
     result.check("旧接口汇总", compatibility.report(), 0);
 
-    Checker empty;
+    checker empty;
     result.check("零检查不能通过", empty.report(), 1);
 
-    Checker checks;
+    checker checks;
     checks.eq_u32("正常相等", 7, 7);
     checks.ne_u32("不同值", 1, 2);
     checks.masked_eq("只比较选中的位", 0xab12, 0xcd12, 0xff);
@@ -22,7 +22,7 @@ int main()
     checks.bytes_eq("相同字节", actual, same, 2);
     result.check("成功检查结果", checks.report(), 0);
 
-    Checker failures;
+    checker failures;
     failures.eq_u32("故意错误数值", 1, 2);
     failures.aligned("零对齐参数必须失败", 0, 0);
     failures.bytes_eq("错误字节", actual, other, 2);
@@ -30,7 +30,7 @@ int main()
     result.check("失败项数量", failures.failures(), 4);
     result.check("失败汇总退出码", failures.report(), 1);
 
-    DiffCollector differences;
+    diff_collector differences;
     differences.compare("pc", 4, 8);
     differences.compare("x1", 1, 2);
     differences.compare("x2", 3, 3);

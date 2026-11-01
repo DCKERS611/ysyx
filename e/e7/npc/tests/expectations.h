@@ -15,17 +15,17 @@
 #include "pmem.h"
 #include "test_suite.h"
 
-struct Expectation {
+struct expectation {
     std::string kind;
     std::vector<uint32_t> values;
 };
 
-struct ExpectedProgram {
-    std::vector<Expectation> items;
+struct expected_program {
+    std::vector<expectation> items;
     bool illegal = false;
 };
 
-inline bool read_expectations(const char* path, ExpectedProgram& expected)
+inline bool read_expectations(const char* path, expected_program& expected)
 {
     std::ifstream input(path);
     if (!input) {
@@ -36,7 +36,7 @@ inline bool read_expectations(const char* path, ExpectedProgram& expected)
         std::string line;
         while (std::getline(input, line)) {
             std::istringstream row(line);
-            Expectation item;
+            expectation item;
             if (!(row >> item.kind)) continue;
             std::string token;
             while (row >> token) {
@@ -74,12 +74,13 @@ inline bool read_expectations(const char* path, ExpectedProgram& expected)
 }
 
 // 末态手写期望独立于 EMU，用来交叉验证参考模型与 RTL。
-inline int check_expectations(Vysyx_00000000& dut, const ExpectedProgram& expected,
-                              bool step_failed, unsigned cycles,
+inline int check_expectations(Vysyx_00000000& dut, const expected_program& expected,
+                              const run_result& run,
                               const std::vector<uint32_t>& trace,
-                              const std::string& name)
+                              const std::string& name,
+                              checker& tests)
 {
-    TestSuite tests;
+    const bool step_failed = run.reason == stop_reason::rejected;
     auto check = [&](const std::string& field, uint32_t actual, uint32_t value) {
         const std::string label = name + "." + field;
         tests.check(label.c_str(), actual, value);
@@ -96,13 +97,13 @@ inline int check_expectations(Vysyx_00000000& dut, const ExpectedProgram& expect
             check("memory[" + std::to_string(v[0]) + "]",
                   static_cast<uint32_t>(pmem_read(static_cast<int>(v[0]))), v[1]);
         else if (item.kind == "halt") check("halt_pc", sim_halt_pc(), v[0]);
-        else if (item.kind == "cycles") check("cycles", cycles, v[0]);
+        else if (item.kind == "cycles") check("cycles", run.cycles, v[0]);
         else if (item.kind == "instructions")
-            check("instructions", static_cast<uint32_t>(sim_instructions()), v[0]);
-        else if (item.kind == "cycles_random" && sim_memory_delay() == 0)
-            check("cycles.random", cycles, v[0]);
-        else if (item.kind == "cycles_fixed" && sim_memory_delay() == v[0])
-            check("cycles.fixed", cycles, v[1]);
+            check("instructions", static_cast<uint32_t>(run.retired), v[0]);
+        else if (item.kind == "cycles_random" && run.mem_delay == 0)
+            check("cycles.random", run.cycles, v[0]);
+        else if (item.kind == "cycles_fixed" && run.mem_delay == v[0])
+            check("cycles.fixed", run.cycles, v[1]);
         else if (item.kind == "illegal") {
             check("illegal_pc", npc::pc(dut), v[0]);
             check("illegal_instruction", npc::inst(dut), v[1]);
