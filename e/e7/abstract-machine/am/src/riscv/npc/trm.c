@@ -15,10 +15,9 @@ void putch(char ch) {
     volatile char* tx = (volatile char*)0x10000000ul;
     volatile int* status = (volatile int*)0x10000004ul;
     while ((*status & 1) == 0) {
-        
-    };
+    }
     *tx = ch;
-}   
+}
 
 void halt(int code) {
     asm volatile("mv a0, %0; ebreak" : : "r"(code));
@@ -26,6 +25,6 @@ void halt(int code) {
 }
 
 void _trm_init() {
-  int ret = main(mainargs);
-  halt(ret);
+    int ret = main(mainargs);
+    halt(ret);
 }

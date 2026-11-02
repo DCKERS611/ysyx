@@ -2,11 +2,16 @@
 
 VERILATOR ?= verilator
 CPU_TOP := ysyx_00000000
+NVBOARD ?= 0
 
 SOC_DIR := $(abspath ../ysyxSoC)
 BUILD_DIR := $(abspath build/soc)
+ifeq ($(NVBOARD),1)
+	BUILD_DIR := $(abspath build/soc-nvboard)
+endif
 OBJ_DIR := $(BUILD_DIR)/obj_dir
 BIN := $(BUILD_DIR)/sim
+PROGRAM ?= $(SOC_DIR)/ready-to-run/minirv/hello-minirv-ysyxsoc.bin
 
 CPU_VSRCS := $(abspath $(wildcard vsrc/*.v))
 PERIP_VSRCS := $(shell find $(SOC_DIR)/perip -type f \
@@ -28,12 +33,32 @@ SOC_FLAGS := \
 # 外设警告仍显示，但不作为构建终止条件。
 SOC_WARN_FLAGS := -Wall -Wno-DECLFILENAME -Wno-fatal
 
+NV_FLAGS :=
+NV_DEPS :=
+
+ifeq ($(NVBOARD),1)
+NVBOARD_HOME ?= $(abspath ../nvboard)
+include $(NVBOARD_HOME)/scripts/nvboard.mk
+
+SRC_AUTO_BIND := $(BUILD_DIR)/auto_bind.cpp
+CSRCS += $(SRC_AUTO_BIND)
+NV_DEPS := $(NVBOARD_ARCHIVE)
+
+NV_FLAGS := -CFLAGS "-DCONFIG_NVBOARD -I$(NVBOARD_USR_INC)" \
+            -LDFLAGS "$(NVBOARD_ARCHIVE) $(LDFLAGS)"
+
+$(SRC_AUTO_BIND): $(abspath constr/soc.nxdc)
+	mkdir -p $(BUILD_DIR)
+	NVBOARD_HOME="$(NVBOARD_HOME)" python3 $(NVBOARD_HOME)/scripts/auto_pin_bind.py $< $@
+endif
+
 .PHONY: build lint-cpu lint run wave
 
 build: $(BIN)
 
-$(BIN): $(VSRCS) $(CSRCS) $(MAKEFILE_LIST)
+$(BIN): $(VSRCS) $(CSRCS) $(MAKEFILE_LIST) $(NV_DEPS)
 	mkdir -p $(BUILD_DIR)
+	rm -f "$(BIN)"
 	$(VERILATOR) --cc --exe --build \
 		--top-module SimTop \
 		--trace-fst --trace-structs \
@@ -41,6 +66,7 @@ $(BIN): $(VSRCS) $(CSRCS) $(MAKEFILE_LIST)
 		--Mdir $(OBJ_DIR) \
 		$(VSRCS) $(CSRCS) \
 		-CFLAGS "-std=c++17 -O2" \
+		$(NV_FLAGS) \
 		-o $(BIN)
 
 # 自己的 CPU 仍然使用严格检查。
@@ -54,7 +80,7 @@ lint:
 		$(SOC_WARN_FLAGS) $(SOC_FLAGS) $(VSRCS)
 
 run: $(BIN)
-	$(BIN)
+	$(BIN) "$(PROGRAM)"
 
 wave: $(BIN)
-	$(BIN) $(BUILD_DIR)/soc.fst
+	$(BIN) "$(PROGRAM)" $(BUILD_DIR)/soc.fst

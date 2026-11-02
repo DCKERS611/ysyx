@@ -7,6 +7,12 @@
 #include "verilated_fst_c.h"
 #include "VSimTop.h"
 #include "VSimTop__Dpi.h"
+#include "VSimTop___024root.h"
+
+#ifdef CONFIG_NVBOARD
+#include <nvboard.h>
+void nvboard_bind_all_pins(VSimTop* top);
+#endif
 
 // 16MB Flash
 static constexpr uint32_t FLASH_SIZE = 16u * 1024 * 1024;
@@ -54,20 +60,26 @@ extern "C" void flash_read(int32_t addr, int32_t *data)
     std::memcpy(data, flash + offset, sizeof(*data));
 }
 
-// CPU 内部已有此 DPI-C 调用，因此链接时需要提供定义。
+// 记录程序结束事件及其指令地址
+static bool halted = false;
+static uint32_t halt_pc = 0;
+
 extern "C" void ebreak(int pc)
 {
-    std::fprintf(stderr, "unexpected ebreak: pc=0x%08x\n",
-                 static_cast<uint32_t>(pc));
-    Verilated::gotFinish(true);
+    halted = true;
+    halt_pc = static_cast<uint32_t>(pc);
 }
 
 int main(int argc, char** argv)
 {
-    if (!load_flash(
-        "../ysyxSoC/ready-to-run/minirv/hello-minirv-ysyxsoc.bin")) {
-    return 1;
+
+    if (argc < 2) {
+        std::fprintf(stderr, "用法：%s 镜像.bin [波形.fst]\n", argv[0]);
+        return 1;
     }
+
+    if (!load_flash(argv[1]))
+        return 1;
 
     VerilatedContext ctx;
     ctx.commandArgs(argc, argv);
@@ -75,11 +87,11 @@ int main(int argc, char** argv)
 
     VSimTop dut{&ctx};
     VerilatedFstC wave;
-    const bool tracing = argc > 1;
+    const bool tracing = argc > 2;
 
     if (tracing) {
         dut.trace(&wave, 99);
-        wave.open(argv[1]);
+        wave.open(argv[2]);
     }
 
     // 初始化所有外部输入。
@@ -90,6 +102,11 @@ int main(int argc, char** argv)
     dut.externalPins_mygpio_in = 0;
     dut.externalPins_uart0_rx = 1;
 
+    #ifdef CONFIG_NVBOARD
+    nvboard_bind_all_pins(&dut);
+    nvboard_init();
+    #endif
+
     auto eval_step = [&]() {
         dut.eval();
         if (tracing)
@@ -97,15 +114,26 @@ int main(int argc, char** argv)
         ctx.timeInc(1);
     };
 
+    uint64_t commits = 0;
+
     // 当前阶段两个时钟同频、同相。
     auto single_cycle = [&]() {
         dut.clock = 0;
         dut.cpuClock = 0;
         eval_step();
 
+        // 在上升沿前采样提交使能，记录实际执行进度。
+        if (!dut.reset && dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__u_pc__DOT__wen)
+            ++commits;
+
         dut.clock = 1;
         dut.cpuClock = 1;
         eval_step();
+
+        // NVBOARD 采样
+        #ifdef CONFIG_NVBOARD
+        nvboard_update();
+        #endif
     };
 
     // 复位期间仍然持续驱动时钟。
@@ -115,26 +143,75 @@ int main(int argc, char** argv)
     dut.reset = 0;
 
     // 连通性测试设置周期上限，避免无限等待。
-    constexpr uint64_t max_cycles = 100000000;
+    constexpr uint64_t max_cycles = 100000000000;
     uint64_t cycles = 0;
 
-    while (!ctx.gotFinish() && cycles < max_cycles) {
+    while (!halted && !ctx.gotFinish() && cycles < max_cycles) {
         single_cycle();
         ++cycles;
+
+        // 周期性输出位置和握手快照，避免仅凭串口静默判断卡死。
+        if (cycles % 10000000 == 0) {
+            const auto* r = dut.rootp;
+            std::fprintf(stderr,
+                "progress cycles=%llu commits=%llu pc=0x%08x inst=0x%08x "
+                "ifu_state=%u ifu_req=%u ifu_resp=%u "
+                "lsu_addr=0x%08x lsu_req=%u lsu_resp=%u\n",
+                static_cast<unsigned long long>(cycles),
+                static_cast<unsigned long long>(commits),
+                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__pc,
+                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__inst,
+                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__state),
+                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_ifu_reqValid),
+                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_ifu_respValid),
+                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_addr,
+                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_reqValid),
+                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_respValid));
+        }
     }
+
+    const auto& gpr = dut.rootp->
+        SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_rf__DOT__rf;
+    const uint32_t a0 = gpr[10];
 
     dut.final();
     if (tracing)
         wave.close();
 
+	if (halted) {
+        std::printf(
+            "%s: pc=0x%08x a0=0x%08x cycles=%llu\n",
+            a0 == 0 ? "HIT GOOD TRAP" : "HIT BAD TRAP",
+            halt_pc, a0,
+            static_cast<unsigned long long>(cycles));
+
+        #ifdef CONFIG_NVBOARD
+        if (a0 == 0) {
+            std::fflush(stdout);
+            std::fprintf(stderr,
+                "程序执行成功，窗口保留；关闭NVBoard窗口结束。\n");
+
+            // CPU已停止，只继续处理界面和串口显示。
+            while (true) {
+            nvboard_update();
+            }
+        }
+        nvboard_quit();
+        #endif
+        return a0 == 0 ? 0 : 1;
+    }
+
+    #ifdef CONFIG_NVBOARD
+    nvboard_quit();
+    #endif
+
     if (ctx.gotFinish()) {
-        std::fprintf(stderr, "仿真提前结束，请检查上面的信息\n");
+        std::fprintf(stderr, "仿真提前结束，未观察到 ebreak\n");
         return 1;
     }
 
-    std::printf(
-        "\n达到观察周期上限：%llu；"
-        "hello 是否成功需检查前面的串口输出。\n",
+    std::fprintf(
+        stderr, "达到周期上限：%llu，未观察到 ebreak\n",
         static_cast<unsigned long long>(cycles));
-    return 0;
+    return 1;
 }
