@@ -8,7 +8,7 @@ module ysyx_00000000_idu(
 
     output wen,
     output alu_src,
-    output [1:0] wb_sel,
+    output [2:0] wb_sel,
     output pc_sel,
     output illegal,
     output halt,
@@ -48,26 +48,29 @@ module ysyx_00000000_idu(
     wire is_load = is_lw || is_lbu;
     wire is_store = is_sw ||is_sb;
 
+    wire is_csr = (opcode == 7'b1110011) && (funct3 == 3'b010);
+
     wire supported = is_addi || is_jalr  || is_ebreak ||
                      is_add  || is_store || is_load   ||
-                     is_lui;
+                     is_lui  || is_csr;
 
     wire reg_illegal = (uses_rd  && inst[11]) || 
                        (uses_rs1 && inst[19]) || 
                        (uses_rs2 && inst[24]);
     wire uses_rd   = is_add || is_jalr || is_addi ||
-                     is_lui || is_load;             // 检查rd
-    wire uses_rs1  = is_add || is_addi || is_jalr || is_load || is_store;
+                     is_lui || is_load || is_csr;             // 检查rd
+    wire uses_rs1  = is_add || is_addi || is_jalr || is_load || is_store || is_csr;
     wire uses_rs2  = is_add || is_store;
 
     assign illegal = !supported || reg_illegal;     // rd[4] || rs1[4]
 
     assign wen = !illegal && uses_rd;               // write GPR: store 和 ebreak 不写
     assign alu_src = !is_add;                       // 使用rs2, 其余需要加法的指令使用imm
-    assign wb_sel  = is_jalr ? 2'b11                // ysyx_00000000_wbu
-                             : is_lui ? 2'b10
-                                      : is_load ? 2'b01
-                                                : 2'b00;
+    assign wb_sel  = is_csr   ? 3'b100
+                    : is_jalr ? 3'b011                // ysyx_00000000_wbu
+                    : is_lui  ? 3'b010
+                    : is_load ? 3'b001
+                    : 3'b000;
     assign pc_sel  = is_jalr && !illegal;           // order execute
     
     assign mem_read  = is_load  && !illegal;

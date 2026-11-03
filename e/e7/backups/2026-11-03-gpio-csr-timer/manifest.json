@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-03",
+  "source_root": "/home/ysyx/ysyx-workbench",
+  "windows_snapshot_root": "E:/ysyx/e/e7",
+  "baseline_commit": "03184a1b9cc863f36d2b792817e84be51ef313e1",
+  "files": [
+    {
+      "path": "before-sync-windows/abstract-machine/am/src/riscv/npc/timer.c",
+      "source": "/mnt/e/ysyx/e/e7/abstract-machine/am/src/riscv/npc/timer.c",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "f0019f97f7fbff88f2744053f52d06251b8bffcb7828577cbe6e0748e00d93f7",
+      "bytes": 414
+    },
+    {
+      "path": "current-wsl/abstract-machine/am/src/riscv/npc/timer.c",
+      "source": "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "2b49ca2d8ec5578d1e9cac4e352ce94a53f9a5c53a871d8472f9529546908f12",
+      "bytes": 705
+    },
+    {
+      "path": "before-sync-windows/am-kernels/kernels/hello/hello.c",
+      "source": "/mnt/e/ysyx/e/e7/am-kernels/kernels/hello/hello.c",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "d5db7b1eb779c4639a533b2dfcd91322e3429d72c9e067541807bb61d8830c95",
+      "bytes": 606
+    },
+    {
+      "path": "current-wsl/am-kernels/kernels/hello/hello.c",
+      "source": "/home/ysyx/ysyx-workbench/am-kernels/kernels/hello/hello.c",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "cbaebe14b848606629ff26afba99b0c02061a2b0a36c1a9e65c88ce0134cbffc",
+      "bytes": 1183
+    },
+    {
+      "path": "before-sync-windows/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "source": "/mnt/e/ysyx/e/e7/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "0a68af20f4f48f5db0e23d771aa59d9079b1d1d27c903f3f2563956e9da80503",
+      "bytes": 419
+    },
+    {
+      "path": "current-wsl/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "source": "/home/ysyx/ysyx-workbench/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "a2badbd5a853c62938d32a073b34d4ccbf6226a987b07759e895d5006134d674",
+      "bytes": 677
+    },
+    {
+      "path": "before-sync-windows/npc/vsrc/ysyx_00000000.v",
+      "source": "/mnt/e/ysyx/e/e7/npc/vsrc/ysyx_00000000.v",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "7f7ab7ff4a1666a384c874322e3ddd9806800757544759e75ce8d6a9bd127ea4",
+      "bytes": 3482
+    },
+    {
+      "path": "current-wsl/npc/vsrc/ysyx_00000000.v",
+      "source": "/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3",
+      "bytes": 3720
+    },
+    {
+      "path": "current-wsl/npc/vsrc/ysyx_00000000_csr.v",
+      "source": "/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "69773e177e1847a5717d1c26d146e0e7db2ba16f7b340484d8e3f68523a665ce",
+      "bytes": 847
+    },
+    {
+      "path": "before-sync-windows/npc/vsrc/ysyx_00000000_idu.v",
+      "source": "/mnt/e/ysyx/e/e7/npc/vsrc/ysyx_00000000_idu.v",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "6e4f2177e1a1fd59bbc04701cfdb0b74b33cc704e9291284147c1e53b41009e9",
+      "bytes": 2762
+    },
+    {
+      "path": "current-wsl/npc/vsrc/ysyx_00000000_idu.v",
+      "source": "/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649",
+      "bytes": 2848
+    },
+    {
+      "path": "before-sync-windows/npc/vsrc/ysyx_00000000_wbu.v",
+      "source": "/mnt/e/ysyx/e/e7/npc/vsrc/ysyx_00000000_wbu.v",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "62a8751fcfa335ce1f6f0d099f311011414e3089e3685c684f889a544f31759a",
+      "bytes": 687
+    },
+    {
+      "path": "current-wsl/npc/vsrc/ysyx_00000000_wbu.v",
+      "source": "/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709",
+      "bytes": 755
+    },
+    {
+      "path": "before-sync-windows/npc/constr/soc.nxdc",
+      "source": "/mnt/e/ysyx/e/e7/npc/constr/soc.nxdc",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "128786ee1637de40e7efd2d67f0d58f667c3dbacd80dd1e3c46abe2d7ca25ead",
+      "bytes": 1027
+    },
+    {
+      "path": "current-wsl/npc/constr/soc.nxdc",
+      "source": "/home/ysyx/ysyx-workbench/npc/constr/soc.nxdc",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "128786ee1637de40e7efd2d67f0d58f667c3dbacd80dd1e3c46abe2d7ca25ead",
+      "bytes": 1027
+    },
+    {
+      "path": "before-sync-windows/ysyxSoC/perip/gpio/mygpio_top_apb.v",
+      "source": "/mnt/e/ysyx/e/e7/ysyxSoC/perip/gpio/mygpio_top_apb.v",
+      "role": "Windows snapshot before this sync; not necessarily original version",
+      "sha256": "b7b99f1e654c011a7c52b838d5d9fab71358b0cfacc9b237cfaa48d808180b03",
+      "bytes": 3010
+    },
+    {
+      "path": "current-wsl/ysyxSoC/perip/gpio/mygpio_top_apb.v",
+      "source": "/home/ysyx/ysyx-workbench/ysyxSoC/perip/gpio/mygpio_top_apb.v",
+      "role": "Canonical WSL source at backup time",
+      "sha256": "b7b99f1e654c011a7c52b838d5d9fab71358b0cfacc9b237cfaa48d808180b03",
+      "bytes": 3010
+    },
+    {
+      "path": "saved-wsl/hello-led-readback.c",
+      "source": "/home/ysyx/ysyx-workbench/am-kernels/kernels/hello/hello.c.bak",
+      "role": "Existing saved WSL hello.c.bak; LED running light and readback assert",
+      "sha256": "d5db7b1eb779c4639a533b2dfcd91322e3429d72c9e067541807bb61d8830c95",
+      "bytes": 606
+    },
+    {
+      "path": "original-from-git/am-kernels/kernels/hello/hello.c",
+      "source": "git:03184a1b9cc863f36d2b792817e84be51ef313e1:e/e7/am-kernels/kernels/hello/hello.c",
+      "role": "Exact committed baseline",
+      "sha256": "5d1b0609d624a4ad9c614fe52505273ed7cd421346fe21104a8029bd477a6919",
+      "bytes": 250
+    },
+    {
+      "path": "original-from-git/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "source": "git:03184a1b9cc863f36d2b792817e84be51ef313e1:e/e7/am-kernels/tests/am-tests/src/tests/rtc.c",
+      "role": "Exact committed baseline",
+      "sha256": "0a68af20f4f48f5db0e23d771aa59d9079b1d1d27c903f3f2563956e9da80503",
+      "bytes": 419
+    },
+    {
+      "path": "original-from-git/abstract-machine/am/src/riscv/npc/timer.c",
+      "source": "git:03184a1b9cc863f36d2b792817e84be51ef313e1:e/e7/abstract-machine/am/src/riscv/npc/timer.c",
+      "role": "Exact committed baseline",
+      "sha256": "f0019f97f7fbff88f2744053f52d06251b8bffcb7828577cbe6e0748e00d93f7",
+      "bytes": 414
+    },
+    {
+      "path": "reference-variants/timer-mcycle-div4.c",
+      "source": "Derived from current WSL timer.c by replacing conversion expression",
+      "role": "Reference variant reconstructed now; not an exact historical file",
+      "sha256": "0c78ade0df6c4ef271f23549c17480cb1fb77768056adeb0551f4c431bf2ac90",
+      "bytes": 770
+    },
+    {
+      "path": "reference-variants/timer-mcycle-div25.c",
+      "source": "Derived from current WSL timer.c by replacing conversion expression",
+      "role": "Reference variant reconstructed now; not an exact historical file",
+      "sha256": "d77f1f80b5c673a84ed69210a635cb909051b478a9e76765ad6abcbaba51c7b0",
+      "bytes": 778
+    }
+  ]
+}

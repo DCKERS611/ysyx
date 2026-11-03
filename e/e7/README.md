@@ -1,6 +1,6 @@
-# E7：SimpleBus、SoC 程序运行与 UART/NVBoard
+# E7：SimpleBus、SoC、GPIO与CSR计时
 
-正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是供 Git 审阅的 Windows 副本；2026-11-02 已同步本轮f–h源码，1119个选定源码/必要输入文件与WSL的SHA-256一致。运行及验证仍在WSL进行，同步不是Windows复测。
+正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是供 Git 审阅的 Windows 副本；2026-11-03 已同步GPIO、CSR及计时源码，1165个选定源码/配置及必要输入文件与WSL的SHA-256一致。运行及验证仍在WSL进行，同步不是Windows复测。
 
 ## 当前实现与停点
 
@@ -13,7 +13,9 @@
 - 阶段f已通过课程hello、自编dummy、SoC cpu-tests（35项正常PASS、wrong预期FAIL）和RV32I（38/38）。Flash为16 MiB，CPU执行loader装载到PSRAM，以ebreak和a0判断程序退出。
 - NPC与ysyxsoc使用独立TRM：NPC保留行为模型设备接口及128 MiB内存范围，SoC使用UART16550和8 MiB PSRAM范围。
 - 阶段g/h已验证自编hello、UART初始化/发送、NVBoard TX接收，以及错误除数对照和恢复。UART除数13、NVBoard接收间隔208；执行阶段每完整SoC时钟周期更新一次NVBoard。
-- 当前只开始阶段i的GPIO背景，mygpio_top_apb.v仍为空壳，GPIO/CSR尚未实现。功能验收与本人理解情况分开记录。
+- GPIO已有LED读写、拨码读取、八位数码管译码；用户验证了流水灯、读回、密码锁和10023589显示。整字使用，PSTRB未处理，数码管未加读回。
+- 独立CSR模块已接入mcycle/minstret及高低位读取，hello.c当前是CSR测试；原Hello与GPIO程序已备份。
+- AM计时已改用CSR，rtc测试持续输出；最新乘17782右移16，实测平均1.149秒/模拟秒，按用户要求暂停校准。功能验收与本人理解分开记录。
 
 ## 先看这些代码
 
@@ -32,7 +34,7 @@
 | 两平台TRM与SoC镜像规则 | `abstract-machine/am/src/riscv/npc/trm.c`、`abstract-machine/am/src/riscv/ysyxsoc/trm.c`、`abstract-machine/scripts/minirv-ysyxsoc.mk` |
 | NVBoard串口绑定 | `npc/constr/soc.nxdc`；绑定C++由脚本生成到构建目录 |
 
-测试库的分层、输入输出和期望语义见 [npc/tests/README.md](npc/tests/README.md)。实际验证记录见 [E7学习记录.md](E7学习记录.md) 第十九节及第二十二至二十八节；阶段级命令见 [测试与构建入口索引](../测试与构建入口索引.md) 的E7部分。
+测试库的分层、输入输出和期望语义见 [npc/tests/README.md](npc/tests/README.md)。实际验证记录见 [E7学习记录.md](E7学习记录.md) 第十九节及第二十二至三十节；阶段级命令见 [测试与构建入口索引](../测试与构建入口索引.md) 的E7部分。
 
 ## 在 WSL 运行
 
@@ -84,3 +86,16 @@ E5/E6/E7和WSL中的旧npc/e4已清理，独立E:/ysyx/e/e4备份保留。
 2026-11-01—02用户在WSL完成SoC程序及NVBoard正常/故障对照：完整SoC cpu-tests与RV32I属于TRM拆分前的验收；拆分后助手另运行SoC hello、独立NPC hello普通/DiffTest，用户继续完成UART和NVBoard故障恢复。正常与故障截图在verification/2026-11-02，恢复208按用户报告及源码/构建状态记录。本轮同步发布未重跑lint、仿真、DiffTest或波形，不把历史成绩当作发布时的新验收。SoC逐条DiffTest尚未接入。
 
 本仓库保存CPU、参考模型、AM、测试程序及课程SoC源码，保留各依赖的许可证。大型benchmark数据、媒体与工具生成的资源遵循依赖自身的获取/生成流程，不将本机所有数据集强行加入提交。`.git`、build、缓存、原始波形、ECC/PDK安装目录和本机学习计划不提交。同步不等于在Windows重新验证。
+
+
+## 当日替换代码与计时入口
+
+备份与恢复说明见 [backups/2026-11-03-gpio-csr-timer/README.md](backups/2026-11-03-gpio-csr-timer/README.md)，来源和哈希见同目录manifest.json。当前hello为CSR两组读数测试，以GOOD TRAP验收；原Hello和GPIO程序需显式从备份恢复后构建，不能继续把当前入口当成旧Hello回归。
+
+AM计时测试在WSL的am-kernels/tests/am-tests中运行：
+
+    make ARCH=minirv-ysyxsoc run mainargs=t NVBOARD=1
+
+测试无限输出秒数，用Ctrl+C结束，不等待GOOD TRAP。rtc.c已扣除测试开始前时间，日期仍是占位值。真实25MHz应使用/25，仿真校准不能当成真实硬件频率或性能指标。当前源码为最后校准尝试，误差未收敛。
+
+本次备份同步发布没有重跑测试；CSR高位进位、精确计数、CSR DiffTest及进一步校准未验收。

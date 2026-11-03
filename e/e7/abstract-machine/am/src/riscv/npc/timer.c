@@ -1,12 +1,25 @@
 #include <am.h>
 
+static uint64_t read_mcycle(void)
+{
+    uint32_t high_before, low, high_after;
+
+    do {
+        asm volatile("csrr %0, mcycleh" : "=r"(high_before));
+        asm volatile("csrr %0, mcycle" : "=r"(low));
+        asm volatile("csrr %0, mcycleh" : "=r"(high_after));
+    } while (high_before != high_after);
+
+    return ((uint64_t)high_after << 32) | low;
+}
+
 void __am_timer_init() {
 }
 
 void __am_timer_uptime(AM_TIMER_UPTIME_T *uptime) {
-    uint32_t lo = *(volatile uint32_t *)0x20000000ul;
-    uint32_t hi = *(volatile uint32_t *)0x20000004ul;
-    uptime->us = ((uint64_t)hi << 32) | lo;
+    
+    uint64_t cycles = read_mcycle();
+    uptime->us = (cycles * 17782ull) >> 16;
 }
 
 void __am_timer_rtc(AM_TIMER_RTC_T *rtc) {

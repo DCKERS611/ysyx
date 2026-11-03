@@ -3,8 +3,9 @@ module ysyx_00000000_wbu(
     input [31:0] load_data,
     input [31:0] imm,
     input [31:0] pc,
-    input [1:0] wb_sel,
+    input [2:0] wb_sel,
     input pc_sel,           // 1->跳转, 0->排查+
+    input [31:0] csr_rdata,
 
     output [31:0] wdata,    // 送gpr  写口
     output [31:0] next_pc   // 送ifu 的pc 寄存器 din
@@ -12,11 +13,12 @@ module ysyx_00000000_wbu(
     wire [31:0] pc_plus4 = pc + 32'd4;
     wire [31:0] jump_target = alu_out & ~32'd1;
 
-    ysyx_00000000_MuxKey #(4, 2, 32) u_wb_mux (wdata, wb_sel, {
-        2'b00, alu_out,     // add/addi
-        2'b01, load_data,   // lw/lbu
-        2'b10, imm,         // lui
-        2'b11, pc_plus4     // jalr
+    ysyx_00000000_MuxKey #(5, 3, 32) u_wb_mux (wdata, wb_sel, {
+        3'b000, alu_out,     // add/addi
+        3'b001, load_data,   // lw/lbu
+        3'b010, imm,         // lui
+        3'b011, pc_plus4,    // jalr
+        3'b100, csr_rdata    // csr
     });
 
     assign next_pc = pc_sel ? jump_target : pc_plus4;

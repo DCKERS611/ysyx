@@ -33,8 +33,10 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
     wire [31:0] imm;
     wire wen;
     wire alu_src;
-    wire [1:0] wb_sel;
+    wire [2:0] wb_sel;
     wire pc_sel;
+    wire [31:0] csr_rdata;
+    wire retire;
 
     `ifndef SYNTHESIS
     import "DPI-C" function void ebreak(input int pc);
@@ -114,7 +116,8 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
         .wb_sel(wb_sel),
         .pc_sel(pc_sel),
         .wdata(wdata),
-        .next_pc(next_pc)
+        .next_pc(next_pc),
+        .csr_rdata(csr_rdata)
     );
     ysyx_00000000_lsu u_lsu (
         .clk(clock),
@@ -137,4 +140,12 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
         .mem_wdata(io_lsu_wdata),
         .mem_wmask(io_lsu_wmask)
     );
+    
+    ysyx_00000000_csr u_csr (
+    .clock(clock),
+    .reset(reset),
+    .retire(commit && !illegal),
+    .csr_addr(inst[31:20]),
+    .csr_rdata(csr_rdata)
+);
 endmodule
