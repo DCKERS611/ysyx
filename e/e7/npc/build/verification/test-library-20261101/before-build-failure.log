@@ -1,0 +1,141 @@
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/csrc/main.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra" -o /home/ysyx/ysyx-workbench/npc/build/cpp/sim
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra   -Os  -c -o dpi.o /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra   -Os  -c -o main.o /home/ysyx/ysyx-workbench/npc/csrc/main.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra   -Os  -c -o pmem.o /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra   -Os  -c -o sim.o /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp: In function ‘bool sim_init(Vysyx_00000000&, const char*)’:
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:89:9: error: ‘class Vysyx_00000000’ has no member named ‘clk’; did you mean ‘clock’?
+   89 |     dut.clk = 0;
+      |         ^~~
+      |         clock
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:90:9: error: ‘class Vysyx_00000000’ has no member named ‘rst’; did you mean ‘reset’?
+   90 |     dut.rst = 1;
+      |         ^~~
+      |         reset
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:91:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_rdata’; did you mean ‘io_ifu_rdata’?
+   91 |     dut.ifu_rdata = 0;
+      |         ^~~~~~~~~
+      |         io_ifu_rdata
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:92:9: error: ‘class Vysyx_00000000’ has no member named ‘mem_rdata’
+   92 |     dut.mem_rdata = 0;
+      |         ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:93:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_respValid’; did you mean ‘io_ifu_respValid’?
+   93 |     dut.ifu_respValid = 0;
+      |         ^~~~~~~~~~~~~
+      |         io_ifu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:94:9: error: ‘class Vysyx_00000000’ has no member named ‘lsu_respValid’; did you mean ‘io_lsu_respValid’?
+   94 |     dut.lsu_respValid = 0;
+      |         ^~~~~~~~~~~~~
+      |         io_lsu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp: In function ‘void sim_reset(Vysyx_00000000&)’:
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:122:9: error: ‘class Vysyx_00000000’ has no member named ‘rst’; did you mean ‘reset’?
+  122 |     dut.rst = 1;
+      |         ^~~
+      |         reset
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:134:9: error: ‘class Vysyx_00000000’ has no member named ‘clk’; did you mean ‘clock’?
+  134 |     dut.clk = 0;
+      |         ^~~
+      |         clock
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:137:9: error: ‘class Vysyx_00000000’ has no member named ‘clk’; did you mean ‘clock’?
+  137 |     dut.clk = 1;
+      |         ^~~
+      |         clock
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:140:9: error: ‘class Vysyx_00000000’ has no member named ‘rst’; did you mean ‘reset’?
+  140 |     dut.rst = 0;
+      |         ^~~
+      |         reset
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:141:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_rdata’; did you mean ‘io_ifu_rdata’?
+  141 |     dut.ifu_rdata = 0;
+      |         ^~~~~~~~~
+      |         io_ifu_rdata
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:142:9: error: ‘class Vysyx_00000000’ has no member named ‘mem_rdata’
+  142 |     dut.mem_rdata = 0;
+      |         ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:143:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_respValid’; did you mean ‘io_ifu_respValid’?
+  143 |     dut.ifu_respValid = 0;
+      |         ^~~~~~~~~~~~~
+      |         io_ifu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:144:9: error: ‘class Vysyx_00000000’ has no member named ‘lsu_respValid’; did you mean ‘io_lsu_respValid’?
+  144 |     dut.lsu_respValid = 0;
+      |         ^~~~~~~~~~~~~
+      |         io_lsu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp: In function ‘bool sim_step(Vysyx_00000000&)’:
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:152:9: error: ‘class Vysyx_00000000’ has no member named ‘clk’; did you mean ‘clock’?
+  152 |     dut.clk = 0;
+      |         ^~~
+      |         clock
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:155:32: error: ‘class Vysyx_00000000’ has no member named ‘commit’
+  155 |     const bool executing = dut.commit;
+      |                                ^~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:156:33: error: ‘class Vysyx_00000000’ has no member named ‘pc’
+  156 |     const uint32_t old_pc = dut.pc;
+      |                                 ^~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:157:31: error: ‘class Vysyx_00000000’ has no member named ‘inst’
+  157 |     const uint32_t inst = dut.inst;
+      |                               ^~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:164:13: error: ‘class Vysyx_00000000’ has no member named ‘illegal’
+  164 |     if (dut.illegal) {
+      |             ^~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:172:33: error: ‘class Vysyx_00000000’ has no member named ‘ifu_rdata’; did you mean ‘io_ifu_rdata’?
+  172 |     uint32_t fetched_inst = dut.ifu_rdata;
+      |                                 ^~~~~~~~~
+      |                                 io_ifu_rdata
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:175:29: error: ‘class Vysyx_00000000’ has no member named ‘ifu_reqValid’; did you mean ‘io_ifu_reqValid’?
+  175 |     if (!ifu_pending && dut.ifu_reqValid) {
+      |                             ^~~~~~~~~~~~
+      |                             io_ifu_reqValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:177:30: error: ‘class Vysyx_00000000’ has no member named ‘ifu_raddr’; did you mean ‘io_ifu_addr’?
+  177 |         ifu_saved_addr = dut.ifu_raddr;
+      |                              ^~~~~~~~~
+      |                              io_ifu_addr
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:194:29: error: ‘class Vysyx_00000000’ has no member named ‘lsu_reqValid’; did you mean ‘io_lsu_reqValid’?
+  194 |     if (!lsu_pending && dut.lsu_reqValid) {
+      |                             ^~~~~~~~~~~~
+      |                             io_lsu_reqValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:196:29: error: ‘class Vysyx_00000000’ has no member named ‘mem_wen’
+  196 |         lsu_saved_wen = dut.mem_wen;
+      |                             ^~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:197:30: error: ‘class Vysyx_00000000’ has no member named ‘mem_addr’
+  197 |         lsu_saved_addr = dut.mem_addr;
+      |                              ^~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:198:31: error: ‘class Vysyx_00000000’ has no member named ‘mem_wdata’
+  198 |         lsu_saved_wdata = dut.mem_wdata;
+      |                               ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:199:31: error: ‘class Vysyx_00000000’ has no member named ‘mem_wmask’
+  199 |         lsu_saved_wmask = dut.mem_wmask;
+      |                               ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:206:33: error: ‘class Vysyx_00000000’ has no member named ‘mem_rdata’
+  206 |     uint32_t fetched_data = dut.mem_rdata;
+      |                                 ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:225:9: error: ‘class Vysyx_00000000’ has no member named ‘clk’; did you mean ‘clock’?
+  225 |     dut.clk = 1;
+      |         ^~~
+      |         clock
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:239:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_rdata’; did you mean ‘io_ifu_rdata’?
+  239 |     dut.ifu_rdata = fetched_inst;
+      |         ^~~~~~~~~
+      |         io_ifu_rdata
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:240:9: error: ‘class Vysyx_00000000’ has no member named ‘ifu_respValid’; did you mean ‘io_ifu_respValid’?
+  240 |     dut.ifu_respValid = fetch_resp;
+      |         ^~~~~~~~~~~~~
+      |         io_ifu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:241:9: error: ‘class Vysyx_00000000’ has no member named ‘mem_rdata’
+  241 |     dut.mem_rdata = fetched_data;
+      |         ^~~~~~~~~
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:242:9: error: ‘class Vysyx_00000000’ has no member named ‘lsu_respValid’; did you mean ‘io_lsu_respValid’?
+  242 |     dut.lsu_respValid = data_resp;
+      |         ^~~~~~~~~~~~~
+      |         io_lsu_respValid
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:247:61: error: ‘class Vysyx_00000000’ has no member named ‘pc’
+  247 |                     old_pc, inst, static_cast<uint32_t>(dut.pc));
+      |                                                             ^~
+make[1]: *** [Vysyx_00000000.mk:73: sim.o] Error 1
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir'
+%Error: 'make -C /home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir -f Vysyx_00000000.mk -j 1' exited with 2
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.050 for more assistance.
+%Error: Command Failed ulimit -s unlimited 2>/dev/null; exec /usr/local/bin/verilator_bin --cc --exe --build -Wall -Wno-DECLFILENAME --public-flat-rw --top-module ysyx_00000000 --Mdir /home/ysyx/ysyx-workbench/npc/build/cpp/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/csrc/main.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp -CFLAGS -std=c++17\ -Wall\ -Wextra -o /home/ysyx/ysyx-workbench/npc/build/cpp/sim
+make: *** [Makefile.cpptest:30: build/cpp/sim] Error 2

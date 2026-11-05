@@ -1,0 +1,26 @@
+[ RUN ] acceptance/array_sum
+Loaded /home/ysyx/ysyx-workbench/npc/build/acceptance/programs/array_sum.bin: 88 bytes
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x08078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x00100293 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x00512023 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00200293 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00512223 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00300293 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00512423 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00400293 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00512623 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00000513 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x03478067 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00012303 --> next_pc=0x80000038
+pc=0x80000038 inst=0x00650533 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00412303 --> next_pc=0x80000040
+pc=0x80000040 inst=0x00650533 --> next_pc=0x80000044
+pc=0x80000044 inst=0x00812303 --> next_pc=0x80000048
+pc=0x80000048 inst=0x00650533 --> next_pc=0x8000004c
+pc=0x8000004c inst=0x00c12303 --> next_pc=0x80000050
+pc=0x80000050 inst=0x00650533 --> next_pc=0x80000054
+ebreak @ pc=0x80000054
+pc=0x80000054 inst=0x00100073 --> next_pc=0x80000058
+PASS: 13 checks
+RESULT case=acceptance/array_sum backend=npc verdict=pass stop=ebreak pc=0x80000054 inst=0x00100073 cycles=252 retired=21 attempts=21 checks=13 failures=0 delay=random

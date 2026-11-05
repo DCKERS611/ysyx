@@ -1,0 +1,16 @@
+[
+  {
+    "test": "npc-hello",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.67,
+    "log": "/home/ysyx/ysyx-workbench/npc/build/verification/trm-platform-split-20261102/npc-hello.log"
+  },
+  {
+    "test": "npc-hello-diff",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.92,
+    "log": "/home/ysyx/ysyx-workbench/npc/build/verification/trm-platform-split-20261102/npc-hello-diff.log"
+  }
+]

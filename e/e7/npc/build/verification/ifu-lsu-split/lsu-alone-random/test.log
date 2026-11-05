@@ -1,0 +1,7 @@
+PASS store addr=80000102 requests=1 unsent_waits=1
+PASS store addr=80000103 requests=1 unsent_waits=1
+PASS load addr=80000102 requests=1 unsent_waits=1
+PASS load addr=80000103 requests=1 unsent_waits=1
+PASS store addr=80000108 requests=1 unsent_waits=1
+PASS load addr=80000108 requests=1 unsent_waits=1
+LSU task isolation: PASS 6 cases

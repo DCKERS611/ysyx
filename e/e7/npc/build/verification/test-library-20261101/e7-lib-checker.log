@@ -1,0 +1,13 @@
+g++ -std=c++17 -Wall -Wextra -Werror -Icsrc tests/checker_test.cpp -o build/test-library/checker_test
+build/test-library/checker_test
+PASS: 1 checks
+FAILED: no checks executed
+PASS: 5 checks
+FAIL 故意错误数值: actual=0x00000001 expect=0x00000002
+FAIL 零对齐参数必须失败: value=0x00000000 is not aligned to 0
+FAIL 错误字节: byte[1] actual=0x56 expect=0x57
+FAIL 同时显示多个错误:
+  pc: actual=0x00000004 expect=0x00000008
+  x1: actual=0x00000001 expect=0x00000002
+FAILED: 4/4
+PASS: 10 checks

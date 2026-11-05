@@ -1,0 +1,46 @@
+--- soc_main.before.cpp
++++ tests/soc_main.cpp
+@@ -104,11 +104,17 @@
+         ctx.timeInc(1);
+     };
+ 
++    uint64_t commits = 0;
++
+     // 当前阶段两个时钟同频、同相。
+     auto single_cycle = [&]() {
+         dut.clock = 0;
+         dut.cpuClock = 0;
+         eval_step();
++
++        // 在上升沿前采样提交使能，记录实际执行进度。
++        if (!dut.reset && dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__u_pc__DOT__wen)
++            ++commits;
+ 
+         dut.clock = 1;
+         dut.cpuClock = 1;
+@@ -128,6 +134,25 @@
+     while (!halted && !ctx.gotFinish() && cycles < max_cycles) {
+         single_cycle();
+         ++cycles;
++
++        // 周期性输出位置和握手快照，避免仅凭串口静默判断卡死。
++        if (cycles % 10000000 == 0) {
++            const auto* r = dut.rootp;
++            std::fprintf(stderr,
++                "progress cycles=%llu commits=%llu pc=0x%08x inst=0x%08x "
++                "ifu_state=%u ifu_req=%u ifu_resp=%u "
++                "lsu_addr=0x%08x lsu_req=%u lsu_resp=%u\n",
++                static_cast<unsigned long long>(cycles),
++                static_cast<unsigned long long>(commits),
++                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__pc,
++                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__inst,
++                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__state),
++                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_ifu_reqValid),
++                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_ifu_respValid),
++                r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_addr,
++                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_reqValid),
++                static_cast<unsigned>(r->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__io_lsu_respValid));
++        }
+     }
+ 
+     const auto& gpr = dut.rootp->

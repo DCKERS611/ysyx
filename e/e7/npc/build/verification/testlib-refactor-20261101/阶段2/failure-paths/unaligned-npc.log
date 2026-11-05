@@ -1,0 +1,10 @@
+[ RUN ] probe
+Loaded /home/ysyx/ysyx-workbench/npc/build/verification/testlib-refactor-20261101/阶段2/failure-paths/unaligned.bin: 12 bytes
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x00278093 --> next_pc=0x80000008
+pc=0x80000008 inst=0x00008067 --> next_pc=0x80000002
+FAIL probe.hit_ebreak: actual=0x00000000 expect=0x00000001
+FAIL probe.finish_flag: actual=0x00000000 expect=0x00000001
+FAIL probe.halt_pc: actual=0x00000000 expect=0x80000008
+FAILED: 3/5
+RESULT case=probe backend=npc verdict=fail stop=fetch_unaligned pc=0x80000002 inst=0x00008067 cycles=30 retired=3 attempts=3 checks=5 failures=3 delay=random

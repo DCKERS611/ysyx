@@ -1,6 +1,6 @@
 # E7：SimpleBus、SoC、GPIO与CSR计时
 
-正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是供 Git 审阅的 Windows 副本；2026-11-04同步核对1184个选定源码/配置及必要输入文件SHA-256一致。本轮未提交或推送，未在Windows复测。
+正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是 Windows 副本。2026-11-05按原相对路径核对并同步源码、ECC工程/runs和测试证据；完整文件、链接及排除清单见 `verification/2026-11-05/sync-audit/`。以本次Git提交记录确认发布版本；同步期间未重新编译、仿真或运行DiffTest，也没有Windows功能复测。此前1184等数字只表示当时选取的子集。
 
 ## 当前实现与停点
 
@@ -15,7 +15,7 @@
 - 阶段g/h已验证自编hello、UART初始化/发送、NVBoard TX接收，以及错误除数对照和恢复。UART除数13、NVBoard接收间隔208；执行阶段每完整SoC时钟周期更新一次NVBoard。
 - GPIO已有LED读写、拨码读取、八位数码管译码；用户验证了流水灯、读回、密码锁和10023589显示。整字使用，PSTRB未处理，数码管未加读回。
 - 独立CSR模块已接入mcycle/minstret及高低位、mvendorid/marchid常量读取；hello.c当前已恢复普通Hello，新增CSR/ID测试另存hello-csr-id.c.bak。
-- AM计时当前为高-低-高读取mcycle后除以25（25MHz口径）；11月3日乘17782右移16属于旧校准尝试。当前CPU已综合得141MHz；k=1/k=5的blockchain及比例校准已完成，当前源码保留k=1、/25。
+- AM计时当前为高-低-高读取mcycle后除以25（25MHz口径）；11月3日乘17782右移16属于旧校准尝试。当前CPU正式结果为BALANCE 3、100MHz约束、综合估计141MHz；k=1/k=5的blockchain及比例校准已完成，当前源码保留k=1、/25。
 - Hello整体统计包含loader：746454条、155534601周期、IPC=0.004799；新增CSR尚未接入现有DiffTest；当前只实现读路径，非零rs1写语义和无效地址拒绝未实现。
 
 ## 先看这些代码
@@ -86,7 +86,7 @@ E5/E6/E7和WSL中的旧npc/e4已清理，独立E:/ysyx/e/e4备份保留。
 
 2026-11-01—02用户在WSL完成SoC程序及NVBoard正常/故障对照：完整SoC cpu-tests与RV32I属于TRM拆分前的验收；拆分后助手另运行SoC hello、独立NPC hello普通/DiffTest，用户继续完成UART和NVBoard故障恢复。正常与故障截图在verification/2026-11-02，恢复208按用户报告及源码/构建状态记录。上述2026-11-02发布整理未重跑lint、仿真、DiffTest或波形，不把历史成绩当作后续版本的新验收。SoC逐条DiffTest尚未接入。
 
-本仓库保存CPU、参考模型、AM、测试程序及课程SoC源码，保留各依赖的许可证。大型benchmark数据、媒体与工具生成的资源遵循依赖自身的获取/生成流程，不将本机所有数据集强行加入提交。`.git`、build、缓存、原始波形、ECC/PDK安装目录和本机学习计划不提交。同步不等于在Windows重新验证。
+本仓库保存CPU、参考模型、AM、测试程序及课程SoC源码，保留各依赖的许可证和原始资源路径。源码同步不按扩展名筛选；测试报告、日志、波形、输入镜像等保留WSL原位置，verification可另存副本。嵌套`.git`、编译中间件/可执行文件、缓存、工具安装包、PDK和本机学习计划不提交。具体排除项见同步清单；不再笼统排除整个build或ecc。同步不等于在Windows重新验证。
 
 
 ## 当日替换代码与计时入口
@@ -113,8 +113,28 @@ soc_main.cpp在停止时输出instructions/cycles/IPC，范围从复位结束到
 
 必须使用带loader的minirv-ysyxsoc镜像，不能用minirv-npc.bin。等待仿真正常结束、FST关闭后打开；0字节不是有效波形。波形时钟刻度用于数拍，不能作为真实芯片频率。
 
-synthesis/ecc-npc是未适配的旧工程快照；实际本轮工程配置在synthesis/ecc-npc-e7，对应WSL ecc/npc-e7。e7-syn-sta-01综合成功，报告141MHz、10122.28μm²。单项blockchain及双时钟对照已完成，见学习记录第三十二节。仅综合CPU，未综合整个SoC。
+旧工程原路径为ecc/npc；当前工程原路径为ecc/npc-e7，与WSL保持一致。原synthesis/ecc-*错位副本已移至verification/2026-11-05/sync-audit/previous-wrong-layout供追溯。e7-syn-sta-01综合成功，报告141MHz、10122.28μm²。单项blockchain及双时钟对照已完成，见学习记录第三十二节。仅综合CPU，未综合整个SoC。
 
-三路审计后的清单与阶段状态已统一：基本功能、严格讲义差异、未实现语义和未验证项目分别记录。最新接续以学习计划顶部/第12节及学习记录第三十二节为准，不用旧日期的当前快照覆盖今日状态。
+三路审计后的清单与阶段状态已统一：基本功能、严格讲义差异、未实现语义和未验证项目分别记录。最新接续以学习计划顶部/第12节及学习记录第三十二至三十四节为准，不用旧日期的当前快照覆盖今日状态。
 
-当前双时钟：cpu_clock_ratio为1、timer /25；k=5验证时使用125MHz和/125，外设均按25MHz。NVBoard每个外设上升沿更新一次，复位覆盖100个外设周期。两档train计分时间分别76.161768/75.514772秒，均1 Mark；源日志留在WSL /tmp/e7-blockchian-k1-train.log及-k5-train.log。改变倍率时必须同步更改时间换算，不能用旧镜像冒充已重编译程序。剩余面积策略对照和当前独立NPC验证尚未完成。
+当前双时钟：cpu_clock_ratio为1、timer /25；k=5验证时使用125MHz和/125，外设均按25MHz。NVBoard每个外设上升沿更新一次，复位覆盖100个外设周期。两档train计分时间分别76.161768/75.514772秒，均1 Mark；源日志留在WSL /tmp/e7-blockchian-k1-train.log及-k5-train.log。改变倍率时必须同步更改时间换算，不能用旧镜像冒充已重编译程序。面积策略对照已完成，保留BALANCE 3；当前独立NPC普通Hello通过，CSR DiffTest尚未适配。
+
+
+2026-11-05约束诊断：保持BALANCE 3和RTL不变，使用ecc run --project /home/ysyx/ysyx-workbench/ecc/npc-e7 --run-id diagnostic-balance-200mhz-20261105 --set design.frequency_mhz=200.0（环境YOSYS_SYNTH_STRATEGY="BALANCE 3"）单独运行成功，综合估计254MHz、10176.32μm²。正式成绩保留BALANCE 3、100MHz约束、综合估计141MHz、10122.28μm²。均非P&R或硅上结果，诊断不更改正式配置和仿真倍率。原始运行证据在ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105；verification/2026-11-05/synthesis-constraint-diagnostic仅为附加副本，分析见学习记录第三十四节。
+
+
+## 源码同步与目录约定
+
+WSL `/home/ysyx/ysyx-workbench/<相对路径>` 对应 Windows `E:/ysyx/e/e7/<相对路径>`。ECC工程及各次运行保留 `ecc/<工程>/runs/<run-id>/` 原结构，包括origin、config、home、日志、网表和报告；不再改名到synthesis。`ecc-smoke`、NEMU和FCEUX同样保留原相对路径，保存不表示它们是本轮E7新增验收。
+
+测试成果在原位置同步，`verification/`用于附加证据和审计，不替代原目录。两个根文件有明确例外：本README用于Windows学习导航，`.gitignore`用于Windows仓库发布；WSL同名原件保存到 `verification/2026-11-05/sync-audit/wsl-workbench-root/`。其余镜像文件按SHA-256核对，原符号链接保持链接类型，空目录列表也记在清单中（Git本身不存空目录）。
+
+在Windows PowerShell中执行现有同步工具：
+
+```powershell
+# 默认仅审计；加-Apply才同步并核验原生符号链接。
+& E:/ysyx/e/e7/tools/sync_wsl_snapshot.ps1
+& E:/ysyx/e/e7/tools/sync_wsl_snapshot.ps1 -Apply
+```
+
+工具只复制到E7副本，保留WSL源和Windows独有学习资料，不做普遍删除，不编译或运行程序。ECC二进制、`ecc/_internal`、安装压缩包和`icsprout55-pdk`不属于源码/成果范围。build中保留报告和测试输入，排除obj_dir、对象文件、静态库、ELF可执行程序、PID等生成项。Git收录按清单选取；依赖自带忽略规则不能代替同步审计。新增源文件时无需补扩展名白名单。

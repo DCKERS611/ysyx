@@ -1,0 +1,11 @@
+{
+  "checked": 1119,
+  "copied": [
+    "npc/Makefile.soc",
+    "npc/constr/soc.nxdc",
+    "npc/tests/soc_main.cpp",
+    "nvboard/src/uart.cpp"
+  ],
+  "all_sha256_equal": true,
+  "deleted": 0
+}

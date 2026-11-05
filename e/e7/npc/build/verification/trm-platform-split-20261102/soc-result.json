@@ -1,0 +1,7 @@
+{
+  "test": "soc-hello",
+  "exit": 0,
+  "passed": true,
+  "seconds": 41.62,
+  "log": "/home/ysyx/ysyx-workbench/npc/build/verification/trm-platform-split-20261102/soc-hello.log"
+}

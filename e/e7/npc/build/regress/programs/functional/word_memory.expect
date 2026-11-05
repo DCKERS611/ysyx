@@ -1,0 +1,7 @@
+halt 0x80000018
+instructions 7
+cycles_fixed 1 16
+cycles_random 71
+reg 3 42
+reg 10 42
+mem 0x80000108 42

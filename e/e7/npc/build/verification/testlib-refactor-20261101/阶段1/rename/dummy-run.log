@@ -1,0 +1,16 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+# Building dummy-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/dummy-minirv-npc.bin
+mainargs=
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 1.180 s (elab=0.000, cvt=0.000, bld=1.179); cpu 0.002 s on 1 threads; allocated 20.273 MB
+Loaded /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/dummy-minirv-npc.bin: 144 bytes
+Result: halt_pc=0x80000040 a0=0x00000000 ra=0x8000003c cycles=172
+instructions=17 cycles=172 IPC=0.098837
+HIT GOOD TRAP
+PASS: 2 checks
+test list [1 item(s)]: dummy
+[         dummy] [1;32mPASS[0m

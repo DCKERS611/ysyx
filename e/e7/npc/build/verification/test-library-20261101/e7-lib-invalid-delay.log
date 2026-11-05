@@ -1,0 +1,2 @@
+NPC_MEM_DELAY 必须为 0（随机）或 1～20（固定拍数）
+Loaded ../am-kernels/tests/cpu-tests/build/dummy-minirv-npc.bin: 144 bytes

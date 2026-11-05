@@ -1,0 +1,2024 @@
+
+/home/ysyx/ysyx-workbench/riscv-tests/build/lb-minirv-npc.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+80000000 <_start>:
+80000000:	00000413          	li	s0,0
+80000004:	80053137          	lui	sp,0x80053
+80000008:	00010113          	mv	sp,sp
+8000000c:	800020b7          	lui	ra,0x80002
+80000010:	c1808093          	addi	ra,ra,-1000 # 80001c18 <_end+0xfffaec18>
+80000014:	000080e7          	jalr	ra
+	...
+
+80000040 <main>:
+80000040:	00200513          	li	a0,2
+80000044:	fff00793          	li	a5,-1
+80000048:	8004a0b7          	lui	ra,0x8004a
+8000004c:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+80000050:	fe012823          	sw	zero,-16(sp) # 80052ff0 <_end+0xfffffff0>
+80000054:	0000c703          	lbu	a4,0(ra)
+80000058:	fee109a3          	sb	a4,-13(sp)
+8000005c:	ff012703          	lw	a4,-16(sp)
+
+80000060 <srai_2>:
+80000060:	fee12823          	sw	a4,-16(sp)
+80000064:	80048237          	lui	tp,0x80048
+80000068:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+8000006c:	ff314703          	lbu	a4,-13(sp)
+
+80000070 <slli_5>:
+80000070:	00e70733          	add	a4,a4,a4
+80000074:	00e70733          	add	a4,a4,a4
+80000078:	00e20233          	add	tp,tp,a4
+8000007c:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000080:	fff00393          	li	t2,-1
+
+80000084 <bne_6fail>:
+80000084:	fee12823          	sw	a4,-16(sp)
+80000088:	fe712623          	sw	t2,-20(sp)
+8000008c:	fe812e23          	sw	s0,-4(sp)
+80000090:	fe912c23          	sw	s1,-8(sp)
+80000094:	8004a437          	lui	s0,0x8004a
+80000098:	00040413          	mv	s0,s0
+8000009c:	ff014183          	lbu	gp,-16(sp)
+800000a0:	00340233          	add	tp,s0,gp
+800000a4:	00100193          	li	gp,1
+800000a8:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800000ac:	fec14183          	lbu	gp,-20(sp)
+800000b0:	003401b3          	add	gp,s0,gp
+800000b4:	00018023          	sb	zero,0(gp)
+800000b8:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800000bc:	ff114483          	lbu	s1,-15(sp)
+800000c0:	00940233          	add	tp,s0,s1
+800000c4:	00100493          	li	s1,1
+800000c8:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800000cc:	fed14483          	lbu	s1,-19(sp)
+800000d0:	009404b3          	add	s1,s0,s1
+800000d4:	00048023          	sb	zero,0(s1)
+800000d8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800000dc:	009181b3          	add	gp,gp,s1
+800000e0:	ff214483          	lbu	s1,-14(sp)
+800000e4:	00940233          	add	tp,s0,s1
+800000e8:	00100493          	li	s1,1
+800000ec:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800000f0:	fee14483          	lbu	s1,-18(sp)
+800000f4:	009404b3          	add	s1,s0,s1
+800000f8:	00048023          	sb	zero,0(s1)
+800000fc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000100:	009181b3          	add	gp,gp,s1
+80000104:	ff314483          	lbu	s1,-13(sp)
+80000108:	00940233          	add	tp,s0,s1
+8000010c:	00100493          	li	s1,1
+80000110:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000114:	fef14483          	lbu	s1,-17(sp)
+80000118:	009404b3          	add	s1,s0,s1
+8000011c:	00048023          	sb	zero,0(s1)
+80000120:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000124:	009181b3          	add	gp,gp,s1
+80000128:	80002237          	lui	tp,0x80002
+8000012c:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000130:	00320233          	add	tp,tp,gp
+80000134:	ff812483          	lw	s1,-8(sp)
+80000138:	ffc12403          	lw	s0,-4(sp)
+8000013c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000140 <slli_15>:
+80000140:	00420233          	add	tp,tp,tp
+80000144:	00420233          	add	tp,tp,tp
+80000148:	00410233          	add	tp,sp,tp
+8000014c:	800001b7          	lui	gp,0x80000
+80000150:	16c18193          	addi	gp,gp,364 # 8000016c <_end+0xfffad16c>
+80000154:	fe312823          	sw	gp,-16(sp)
+80000158:	800021b7          	lui	gp,0x80002
+8000015c:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000160:	fe312623          	sw	gp,-20(sp)
+80000164:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000168:	00020067          	jr	tp # 0 <_entry_offset>
+
+8000016c <non_taken_6fail>:
+8000016c:	00300513          	li	a0,3
+80000170:	00000793          	li	a5,0
+80000174:	8004a0b7          	lui	ra,0x8004a
+80000178:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+8000017c:	fe012823          	sw	zero,-16(sp)
+80000180:	0010c703          	lbu	a4,1(ra)
+80000184:	fee109a3          	sb	a4,-13(sp)
+80000188:	ff012703          	lw	a4,-16(sp)
+
+8000018c <srai_20>:
+8000018c:	fee12823          	sw	a4,-16(sp)
+80000190:	80048237          	lui	tp,0x80048
+80000194:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000198:	ff314703          	lbu	a4,-13(sp)
+
+8000019c <slli_23>:
+8000019c:	00e70733          	add	a4,a4,a4
+800001a0:	00e70733          	add	a4,a4,a4
+800001a4:	00e20233          	add	tp,tp,a4
+800001a8:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800001ac:	00000393          	li	t2,0
+
+800001b0 <bne_24fail>:
+800001b0:	fee12823          	sw	a4,-16(sp)
+800001b4:	fe712623          	sw	t2,-20(sp)
+800001b8:	fe812e23          	sw	s0,-4(sp)
+800001bc:	fe912c23          	sw	s1,-8(sp)
+800001c0:	8004a437          	lui	s0,0x8004a
+800001c4:	00040413          	mv	s0,s0
+800001c8:	ff014183          	lbu	gp,-16(sp)
+800001cc:	00340233          	add	tp,s0,gp
+800001d0:	00100193          	li	gp,1
+800001d4:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800001d8:	fec14183          	lbu	gp,-20(sp)
+800001dc:	003401b3          	add	gp,s0,gp
+800001e0:	00018023          	sb	zero,0(gp)
+800001e4:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800001e8:	ff114483          	lbu	s1,-15(sp)
+800001ec:	00940233          	add	tp,s0,s1
+800001f0:	00100493          	li	s1,1
+800001f4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800001f8:	fed14483          	lbu	s1,-19(sp)
+800001fc:	009404b3          	add	s1,s0,s1
+80000200:	00048023          	sb	zero,0(s1)
+80000204:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000208:	009181b3          	add	gp,gp,s1
+8000020c:	ff214483          	lbu	s1,-14(sp)
+80000210:	00940233          	add	tp,s0,s1
+80000214:	00100493          	li	s1,1
+80000218:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000021c:	fee14483          	lbu	s1,-18(sp)
+80000220:	009404b3          	add	s1,s0,s1
+80000224:	00048023          	sb	zero,0(s1)
+80000228:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000022c:	009181b3          	add	gp,gp,s1
+80000230:	ff314483          	lbu	s1,-13(sp)
+80000234:	00940233          	add	tp,s0,s1
+80000238:	00100493          	li	s1,1
+8000023c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000240:	fef14483          	lbu	s1,-17(sp)
+80000244:	009404b3          	add	s1,s0,s1
+80000248:	00048023          	sb	zero,0(s1)
+8000024c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000250:	009181b3          	add	gp,gp,s1
+80000254:	80002237          	lui	tp,0x80002
+80000258:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+8000025c:	00320233          	add	tp,tp,gp
+80000260:	ff812483          	lw	s1,-8(sp)
+80000264:	ffc12403          	lw	s0,-4(sp)
+80000268:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+8000026c <slli_33>:
+8000026c:	00420233          	add	tp,tp,tp
+80000270:	00420233          	add	tp,tp,tp
+80000274:	00410233          	add	tp,sp,tp
+80000278:	800001b7          	lui	gp,0x80000
+8000027c:	29818193          	addi	gp,gp,664 # 80000298 <_end+0xfffad298>
+80000280:	fe312823          	sw	gp,-16(sp)
+80000284:	800021b7          	lui	gp,0x80002
+80000288:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+8000028c:	fe312623          	sw	gp,-20(sp)
+80000290:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000294:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000298 <non_taken_24fail>:
+80000298:	00400513          	li	a0,4
+8000029c:	ff000793          	li	a5,-16
+800002a0:	8004a0b7          	lui	ra,0x8004a
+800002a4:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+800002a8:	fe012823          	sw	zero,-16(sp)
+800002ac:	0020c703          	lbu	a4,2(ra)
+800002b0:	fee109a3          	sb	a4,-13(sp)
+800002b4:	ff012703          	lw	a4,-16(sp)
+
+800002b8 <srai_38>:
+800002b8:	fee12823          	sw	a4,-16(sp)
+800002bc:	80048237          	lui	tp,0x80048
+800002c0:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800002c4:	ff314703          	lbu	a4,-13(sp)
+
+800002c8 <slli_41>:
+800002c8:	00e70733          	add	a4,a4,a4
+800002cc:	00e70733          	add	a4,a4,a4
+800002d0:	00e20233          	add	tp,tp,a4
+800002d4:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800002d8:	ff000393          	li	t2,-16
+
+800002dc <bne_42fail>:
+800002dc:	fee12823          	sw	a4,-16(sp)
+800002e0:	fe712623          	sw	t2,-20(sp)
+800002e4:	fe812e23          	sw	s0,-4(sp)
+800002e8:	fe912c23          	sw	s1,-8(sp)
+800002ec:	8004a437          	lui	s0,0x8004a
+800002f0:	00040413          	mv	s0,s0
+800002f4:	ff014183          	lbu	gp,-16(sp)
+800002f8:	00340233          	add	tp,s0,gp
+800002fc:	00100193          	li	gp,1
+80000300:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000304:	fec14183          	lbu	gp,-20(sp)
+80000308:	003401b3          	add	gp,s0,gp
+8000030c:	00018023          	sb	zero,0(gp)
+80000310:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000314:	ff114483          	lbu	s1,-15(sp)
+80000318:	00940233          	add	tp,s0,s1
+8000031c:	00100493          	li	s1,1
+80000320:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000324:	fed14483          	lbu	s1,-19(sp)
+80000328:	009404b3          	add	s1,s0,s1
+8000032c:	00048023          	sb	zero,0(s1)
+80000330:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000334:	009181b3          	add	gp,gp,s1
+80000338:	ff214483          	lbu	s1,-14(sp)
+8000033c:	00940233          	add	tp,s0,s1
+80000340:	00100493          	li	s1,1
+80000344:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000348:	fee14483          	lbu	s1,-18(sp)
+8000034c:	009404b3          	add	s1,s0,s1
+80000350:	00048023          	sb	zero,0(s1)
+80000354:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000358:	009181b3          	add	gp,gp,s1
+8000035c:	ff314483          	lbu	s1,-13(sp)
+80000360:	00940233          	add	tp,s0,s1
+80000364:	00100493          	li	s1,1
+80000368:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000036c:	fef14483          	lbu	s1,-17(sp)
+80000370:	009404b3          	add	s1,s0,s1
+80000374:	00048023          	sb	zero,0(s1)
+80000378:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000037c:	009181b3          	add	gp,gp,s1
+80000380:	80002237          	lui	tp,0x80002
+80000384:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000388:	00320233          	add	tp,tp,gp
+8000038c:	ff812483          	lw	s1,-8(sp)
+80000390:	ffc12403          	lw	s0,-4(sp)
+80000394:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000398 <slli_51>:
+80000398:	00420233          	add	tp,tp,tp
+8000039c:	00420233          	add	tp,tp,tp
+800003a0:	00410233          	add	tp,sp,tp
+800003a4:	800001b7          	lui	gp,0x80000
+800003a8:	3c418193          	addi	gp,gp,964 # 800003c4 <_end+0xfffad3c4>
+800003ac:	fe312823          	sw	gp,-16(sp)
+800003b0:	800021b7          	lui	gp,0x80002
+800003b4:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+800003b8:	fe312623          	sw	gp,-20(sp)
+800003bc:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800003c0:	00020067          	jr	tp # 0 <_entry_offset>
+
+800003c4 <non_taken_42fail>:
+800003c4:	00500513          	li	a0,5
+800003c8:	00f00793          	li	a5,15
+800003cc:	8004a0b7          	lui	ra,0x8004a
+800003d0:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+800003d4:	fe012823          	sw	zero,-16(sp)
+800003d8:	0030c703          	lbu	a4,3(ra)
+800003dc:	fee109a3          	sb	a4,-13(sp)
+800003e0:	ff012703          	lw	a4,-16(sp)
+
+800003e4 <srai_56>:
+800003e4:	fee12823          	sw	a4,-16(sp)
+800003e8:	80048237          	lui	tp,0x80048
+800003ec:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800003f0:	ff314703          	lbu	a4,-13(sp)
+
+800003f4 <slli_59>:
+800003f4:	00e70733          	add	a4,a4,a4
+800003f8:	00e70733          	add	a4,a4,a4
+800003fc:	00e20233          	add	tp,tp,a4
+80000400:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000404:	00f00393          	li	t2,15
+
+80000408 <bne_60fail>:
+80000408:	fee12823          	sw	a4,-16(sp)
+8000040c:	fe712623          	sw	t2,-20(sp)
+80000410:	fe812e23          	sw	s0,-4(sp)
+80000414:	fe912c23          	sw	s1,-8(sp)
+80000418:	8004a437          	lui	s0,0x8004a
+8000041c:	00040413          	mv	s0,s0
+80000420:	ff014183          	lbu	gp,-16(sp)
+80000424:	00340233          	add	tp,s0,gp
+80000428:	00100193          	li	gp,1
+8000042c:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000430:	fec14183          	lbu	gp,-20(sp)
+80000434:	003401b3          	add	gp,s0,gp
+80000438:	00018023          	sb	zero,0(gp)
+8000043c:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000440:	ff114483          	lbu	s1,-15(sp)
+80000444:	00940233          	add	tp,s0,s1
+80000448:	00100493          	li	s1,1
+8000044c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000450:	fed14483          	lbu	s1,-19(sp)
+80000454:	009404b3          	add	s1,s0,s1
+80000458:	00048023          	sb	zero,0(s1)
+8000045c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000460:	009181b3          	add	gp,gp,s1
+80000464:	ff214483          	lbu	s1,-14(sp)
+80000468:	00940233          	add	tp,s0,s1
+8000046c:	00100493          	li	s1,1
+80000470:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000474:	fee14483          	lbu	s1,-18(sp)
+80000478:	009404b3          	add	s1,s0,s1
+8000047c:	00048023          	sb	zero,0(s1)
+80000480:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000484:	009181b3          	add	gp,gp,s1
+80000488:	ff314483          	lbu	s1,-13(sp)
+8000048c:	00940233          	add	tp,s0,s1
+80000490:	00100493          	li	s1,1
+80000494:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000498:	fef14483          	lbu	s1,-17(sp)
+8000049c:	009404b3          	add	s1,s0,s1
+800004a0:	00048023          	sb	zero,0(s1)
+800004a4:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800004a8:	009181b3          	add	gp,gp,s1
+800004ac:	80002237          	lui	tp,0x80002
+800004b0:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+800004b4:	00320233          	add	tp,tp,gp
+800004b8:	ff812483          	lw	s1,-8(sp)
+800004bc:	ffc12403          	lw	s0,-4(sp)
+800004c0:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+800004c4 <slli_69>:
+800004c4:	00420233          	add	tp,tp,tp
+800004c8:	00420233          	add	tp,tp,tp
+800004cc:	00410233          	add	tp,sp,tp
+800004d0:	800001b7          	lui	gp,0x80000
+800004d4:	4f018193          	addi	gp,gp,1264 # 800004f0 <_end+0xfffad4f0>
+800004d8:	fe312823          	sw	gp,-16(sp)
+800004dc:	800021b7          	lui	gp,0x80002
+800004e0:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+800004e4:	fe312623          	sw	gp,-20(sp)
+800004e8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800004ec:	00020067          	jr	tp # 0 <_entry_offset>
+
+800004f0 <non_taken_60fail>:
+800004f0:	00600513          	li	a0,6
+800004f4:	fff00793          	li	a5,-1
+800004f8:	8004a0b7          	lui	ra,0x8004a
+800004fc:	10308093          	addi	ra,ra,259 # 8004a103 <_end+0xffff7103>
+80000500:	fe012823          	sw	zero,-16(sp)
+80000504:	ffd0c703          	lbu	a4,-3(ra)
+80000508:	fee109a3          	sb	a4,-13(sp)
+8000050c:	ff012703          	lw	a4,-16(sp)
+
+80000510 <srai_74>:
+80000510:	fee12823          	sw	a4,-16(sp)
+80000514:	80048237          	lui	tp,0x80048
+80000518:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+8000051c:	ff314703          	lbu	a4,-13(sp)
+
+80000520 <slli_77>:
+80000520:	00e70733          	add	a4,a4,a4
+80000524:	00e70733          	add	a4,a4,a4
+80000528:	00e20233          	add	tp,tp,a4
+8000052c:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000530:	fff00393          	li	t2,-1
+
+80000534 <bne_78fail>:
+80000534:	fee12823          	sw	a4,-16(sp)
+80000538:	fe712623          	sw	t2,-20(sp)
+8000053c:	fe812e23          	sw	s0,-4(sp)
+80000540:	fe912c23          	sw	s1,-8(sp)
+80000544:	8004a437          	lui	s0,0x8004a
+80000548:	00040413          	mv	s0,s0
+8000054c:	ff014183          	lbu	gp,-16(sp)
+80000550:	00340233          	add	tp,s0,gp
+80000554:	00100193          	li	gp,1
+80000558:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+8000055c:	fec14183          	lbu	gp,-20(sp)
+80000560:	003401b3          	add	gp,s0,gp
+80000564:	00018023          	sb	zero,0(gp)
+80000568:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+8000056c:	ff114483          	lbu	s1,-15(sp)
+80000570:	00940233          	add	tp,s0,s1
+80000574:	00100493          	li	s1,1
+80000578:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000057c:	fed14483          	lbu	s1,-19(sp)
+80000580:	009404b3          	add	s1,s0,s1
+80000584:	00048023          	sb	zero,0(s1)
+80000588:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000058c:	009181b3          	add	gp,gp,s1
+80000590:	ff214483          	lbu	s1,-14(sp)
+80000594:	00940233          	add	tp,s0,s1
+80000598:	00100493          	li	s1,1
+8000059c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800005a0:	fee14483          	lbu	s1,-18(sp)
+800005a4:	009404b3          	add	s1,s0,s1
+800005a8:	00048023          	sb	zero,0(s1)
+800005ac:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800005b0:	009181b3          	add	gp,gp,s1
+800005b4:	ff314483          	lbu	s1,-13(sp)
+800005b8:	00940233          	add	tp,s0,s1
+800005bc:	00100493          	li	s1,1
+800005c0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800005c4:	fef14483          	lbu	s1,-17(sp)
+800005c8:	009404b3          	add	s1,s0,s1
+800005cc:	00048023          	sb	zero,0(s1)
+800005d0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800005d4:	009181b3          	add	gp,gp,s1
+800005d8:	80002237          	lui	tp,0x80002
+800005dc:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+800005e0:	00320233          	add	tp,tp,gp
+800005e4:	ff812483          	lw	s1,-8(sp)
+800005e8:	ffc12403          	lw	s0,-4(sp)
+800005ec:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+800005f0 <slli_87>:
+800005f0:	00420233          	add	tp,tp,tp
+800005f4:	00420233          	add	tp,tp,tp
+800005f8:	00410233          	add	tp,sp,tp
+800005fc:	800001b7          	lui	gp,0x80000
+80000600:	61c18193          	addi	gp,gp,1564 # 8000061c <_end+0xfffad61c>
+80000604:	fe312823          	sw	gp,-16(sp)
+80000608:	800021b7          	lui	gp,0x80002
+8000060c:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000610:	fe312623          	sw	gp,-20(sp)
+80000614:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000618:	00020067          	jr	tp # 0 <_entry_offset>
+
+8000061c <non_taken_78fail>:
+8000061c:	00700513          	li	a0,7
+80000620:	00000793          	li	a5,0
+80000624:	8004a0b7          	lui	ra,0x8004a
+80000628:	10308093          	addi	ra,ra,259 # 8004a103 <_end+0xffff7103>
+8000062c:	fe012823          	sw	zero,-16(sp)
+80000630:	ffe0c703          	lbu	a4,-2(ra)
+80000634:	fee109a3          	sb	a4,-13(sp)
+80000638:	ff012703          	lw	a4,-16(sp)
+
+8000063c <srai_92>:
+8000063c:	fee12823          	sw	a4,-16(sp)
+80000640:	80048237          	lui	tp,0x80048
+80000644:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000648:	ff314703          	lbu	a4,-13(sp)
+
+8000064c <slli_95>:
+8000064c:	00e70733          	add	a4,a4,a4
+80000650:	00e70733          	add	a4,a4,a4
+80000654:	00e20233          	add	tp,tp,a4
+80000658:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+8000065c:	00000393          	li	t2,0
+
+80000660 <bne_96fail>:
+80000660:	fee12823          	sw	a4,-16(sp)
+80000664:	fe712623          	sw	t2,-20(sp)
+80000668:	fe812e23          	sw	s0,-4(sp)
+8000066c:	fe912c23          	sw	s1,-8(sp)
+80000670:	8004a437          	lui	s0,0x8004a
+80000674:	00040413          	mv	s0,s0
+80000678:	ff014183          	lbu	gp,-16(sp)
+8000067c:	00340233          	add	tp,s0,gp
+80000680:	00100193          	li	gp,1
+80000684:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000688:	fec14183          	lbu	gp,-20(sp)
+8000068c:	003401b3          	add	gp,s0,gp
+80000690:	00018023          	sb	zero,0(gp)
+80000694:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000698:	ff114483          	lbu	s1,-15(sp)
+8000069c:	00940233          	add	tp,s0,s1
+800006a0:	00100493          	li	s1,1
+800006a4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800006a8:	fed14483          	lbu	s1,-19(sp)
+800006ac:	009404b3          	add	s1,s0,s1
+800006b0:	00048023          	sb	zero,0(s1)
+800006b4:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800006b8:	009181b3          	add	gp,gp,s1
+800006bc:	ff214483          	lbu	s1,-14(sp)
+800006c0:	00940233          	add	tp,s0,s1
+800006c4:	00100493          	li	s1,1
+800006c8:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800006cc:	fee14483          	lbu	s1,-18(sp)
+800006d0:	009404b3          	add	s1,s0,s1
+800006d4:	00048023          	sb	zero,0(s1)
+800006d8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800006dc:	009181b3          	add	gp,gp,s1
+800006e0:	ff314483          	lbu	s1,-13(sp)
+800006e4:	00940233          	add	tp,s0,s1
+800006e8:	00100493          	li	s1,1
+800006ec:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800006f0:	fef14483          	lbu	s1,-17(sp)
+800006f4:	009404b3          	add	s1,s0,s1
+800006f8:	00048023          	sb	zero,0(s1)
+800006fc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000700:	009181b3          	add	gp,gp,s1
+80000704:	80002237          	lui	tp,0x80002
+80000708:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+8000070c:	00320233          	add	tp,tp,gp
+80000710:	ff812483          	lw	s1,-8(sp)
+80000714:	ffc12403          	lw	s0,-4(sp)
+80000718:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+8000071c <slli_105>:
+8000071c:	00420233          	add	tp,tp,tp
+80000720:	00420233          	add	tp,tp,tp
+80000724:	00410233          	add	tp,sp,tp
+80000728:	800001b7          	lui	gp,0x80000
+8000072c:	74818193          	addi	gp,gp,1864 # 80000748 <_end+0xfffad748>
+80000730:	fe312823          	sw	gp,-16(sp)
+80000734:	800021b7          	lui	gp,0x80002
+80000738:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+8000073c:	fe312623          	sw	gp,-20(sp)
+80000740:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000744:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000748 <non_taken_96fail>:
+80000748:	00800513          	li	a0,8
+8000074c:	ff000793          	li	a5,-16
+80000750:	8004a0b7          	lui	ra,0x8004a
+80000754:	10308093          	addi	ra,ra,259 # 8004a103 <_end+0xffff7103>
+80000758:	fe012823          	sw	zero,-16(sp)
+8000075c:	fff0c703          	lbu	a4,-1(ra)
+80000760:	fee109a3          	sb	a4,-13(sp)
+80000764:	ff012703          	lw	a4,-16(sp)
+
+80000768 <srai_110>:
+80000768:	fee12823          	sw	a4,-16(sp)
+8000076c:	80048237          	lui	tp,0x80048
+80000770:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000774:	ff314703          	lbu	a4,-13(sp)
+
+80000778 <slli_113>:
+80000778:	00e70733          	add	a4,a4,a4
+8000077c:	00e70733          	add	a4,a4,a4
+80000780:	00e20233          	add	tp,tp,a4
+80000784:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000788:	ff000393          	li	t2,-16
+
+8000078c <bne_114fail>:
+8000078c:	fee12823          	sw	a4,-16(sp)
+80000790:	fe712623          	sw	t2,-20(sp)
+80000794:	fe812e23          	sw	s0,-4(sp)
+80000798:	fe912c23          	sw	s1,-8(sp)
+8000079c:	8004a437          	lui	s0,0x8004a
+800007a0:	00040413          	mv	s0,s0
+800007a4:	ff014183          	lbu	gp,-16(sp)
+800007a8:	00340233          	add	tp,s0,gp
+800007ac:	00100193          	li	gp,1
+800007b0:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800007b4:	fec14183          	lbu	gp,-20(sp)
+800007b8:	003401b3          	add	gp,s0,gp
+800007bc:	00018023          	sb	zero,0(gp)
+800007c0:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800007c4:	ff114483          	lbu	s1,-15(sp)
+800007c8:	00940233          	add	tp,s0,s1
+800007cc:	00100493          	li	s1,1
+800007d0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800007d4:	fed14483          	lbu	s1,-19(sp)
+800007d8:	009404b3          	add	s1,s0,s1
+800007dc:	00048023          	sb	zero,0(s1)
+800007e0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800007e4:	009181b3          	add	gp,gp,s1
+800007e8:	ff214483          	lbu	s1,-14(sp)
+800007ec:	00940233          	add	tp,s0,s1
+800007f0:	00100493          	li	s1,1
+800007f4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800007f8:	fee14483          	lbu	s1,-18(sp)
+800007fc:	009404b3          	add	s1,s0,s1
+80000800:	00048023          	sb	zero,0(s1)
+80000804:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000808:	009181b3          	add	gp,gp,s1
+8000080c:	ff314483          	lbu	s1,-13(sp)
+80000810:	00940233          	add	tp,s0,s1
+80000814:	00100493          	li	s1,1
+80000818:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000081c:	fef14483          	lbu	s1,-17(sp)
+80000820:	009404b3          	add	s1,s0,s1
+80000824:	00048023          	sb	zero,0(s1)
+80000828:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000082c:	009181b3          	add	gp,gp,s1
+80000830:	80002237          	lui	tp,0x80002
+80000834:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000838:	00320233          	add	tp,tp,gp
+8000083c:	ff812483          	lw	s1,-8(sp)
+80000840:	ffc12403          	lw	s0,-4(sp)
+80000844:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000848 <slli_123>:
+80000848:	00420233          	add	tp,tp,tp
+8000084c:	00420233          	add	tp,tp,tp
+80000850:	00410233          	add	tp,sp,tp
+80000854:	800011b7          	lui	gp,0x80001
+80000858:	87418193          	addi	gp,gp,-1932 # 80000874 <_end+0xfffad874>
+8000085c:	fe312823          	sw	gp,-16(sp)
+80000860:	800021b7          	lui	gp,0x80002
+80000864:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000868:	fe312623          	sw	gp,-20(sp)
+8000086c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000870:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000874 <non_taken_114fail>:
+80000874:	00900513          	li	a0,9
+80000878:	00f00793          	li	a5,15
+8000087c:	8004a0b7          	lui	ra,0x8004a
+80000880:	10308093          	addi	ra,ra,259 # 8004a103 <_end+0xffff7103>
+80000884:	fe012823          	sw	zero,-16(sp)
+80000888:	0000c703          	lbu	a4,0(ra)
+8000088c:	fee109a3          	sb	a4,-13(sp)
+80000890:	ff012703          	lw	a4,-16(sp)
+
+80000894 <srai_128>:
+80000894:	fee12823          	sw	a4,-16(sp)
+80000898:	80048237          	lui	tp,0x80048
+8000089c:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800008a0:	ff314703          	lbu	a4,-13(sp)
+
+800008a4 <slli_131>:
+800008a4:	00e70733          	add	a4,a4,a4
+800008a8:	00e70733          	add	a4,a4,a4
+800008ac:	00e20233          	add	tp,tp,a4
+800008b0:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800008b4:	00f00393          	li	t2,15
+
+800008b8 <bne_132fail>:
+800008b8:	fee12823          	sw	a4,-16(sp)
+800008bc:	fe712623          	sw	t2,-20(sp)
+800008c0:	fe812e23          	sw	s0,-4(sp)
+800008c4:	fe912c23          	sw	s1,-8(sp)
+800008c8:	8004a437          	lui	s0,0x8004a
+800008cc:	00040413          	mv	s0,s0
+800008d0:	ff014183          	lbu	gp,-16(sp)
+800008d4:	00340233          	add	tp,s0,gp
+800008d8:	00100193          	li	gp,1
+800008dc:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800008e0:	fec14183          	lbu	gp,-20(sp)
+800008e4:	003401b3          	add	gp,s0,gp
+800008e8:	00018023          	sb	zero,0(gp)
+800008ec:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800008f0:	ff114483          	lbu	s1,-15(sp)
+800008f4:	00940233          	add	tp,s0,s1
+800008f8:	00100493          	li	s1,1
+800008fc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000900:	fed14483          	lbu	s1,-19(sp)
+80000904:	009404b3          	add	s1,s0,s1
+80000908:	00048023          	sb	zero,0(s1)
+8000090c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000910:	009181b3          	add	gp,gp,s1
+80000914:	ff214483          	lbu	s1,-14(sp)
+80000918:	00940233          	add	tp,s0,s1
+8000091c:	00100493          	li	s1,1
+80000920:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000924:	fee14483          	lbu	s1,-18(sp)
+80000928:	009404b3          	add	s1,s0,s1
+8000092c:	00048023          	sb	zero,0(s1)
+80000930:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000934:	009181b3          	add	gp,gp,s1
+80000938:	ff314483          	lbu	s1,-13(sp)
+8000093c:	00940233          	add	tp,s0,s1
+80000940:	00100493          	li	s1,1
+80000944:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000948:	fef14483          	lbu	s1,-17(sp)
+8000094c:	009404b3          	add	s1,s0,s1
+80000950:	00048023          	sb	zero,0(s1)
+80000954:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000958:	009181b3          	add	gp,gp,s1
+8000095c:	80002237          	lui	tp,0x80002
+80000960:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000964:	00320233          	add	tp,tp,gp
+80000968:	ff812483          	lw	s1,-8(sp)
+8000096c:	ffc12403          	lw	s0,-4(sp)
+80000970:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000974 <slli_141>:
+80000974:	00420233          	add	tp,tp,tp
+80000978:	00420233          	add	tp,tp,tp
+8000097c:	00410233          	add	tp,sp,tp
+80000980:	800011b7          	lui	gp,0x80001
+80000984:	9a018193          	addi	gp,gp,-1632 # 800009a0 <_end+0xfffad9a0>
+80000988:	fe312823          	sw	gp,-16(sp)
+8000098c:	800021b7          	lui	gp,0x80002
+80000990:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000994:	fe312623          	sw	gp,-20(sp)
+80000998:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+8000099c:	00020067          	jr	tp # 0 <_entry_offset>
+
+800009a0 <non_taken_132fail>:
+800009a0:	00a00513          	li	a0,10
+800009a4:	8004a0b7          	lui	ra,0x8004a
+800009a8:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+800009ac:	fe008093          	addi	ra,ra,-32
+800009b0:	fe012823          	sw	zero,-16(sp)
+800009b4:	0200c283          	lbu	t0,32(ra)
+800009b8:	fe5109a3          	sb	t0,-13(sp)
+800009bc:	ff012283          	lw	t0,-16(sp)
+
+800009c0 <srai_146>:
+800009c0:	fe512823          	sw	t0,-16(sp)
+800009c4:	80048237          	lui	tp,0x80048
+800009c8:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800009cc:	ff314283          	lbu	t0,-13(sp)
+
+800009d0 <slli_149>:
+800009d0:	005282b3          	add	t0,t0,t0
+800009d4:	005282b3          	add	t0,t0,t0
+800009d8:	00520233          	add	tp,tp,t0
+800009dc:	00022283          	lw	t0,0(tp) # 0 <_entry_offset>
+800009e0:	fff00393          	li	t2,-1
+
+800009e4 <bne_150fail>:
+800009e4:	fe512823          	sw	t0,-16(sp)
+800009e8:	fe712623          	sw	t2,-20(sp)
+800009ec:	fe812e23          	sw	s0,-4(sp)
+800009f0:	fe912c23          	sw	s1,-8(sp)
+800009f4:	8004a437          	lui	s0,0x8004a
+800009f8:	00040413          	mv	s0,s0
+800009fc:	ff014183          	lbu	gp,-16(sp)
+80000a00:	00340233          	add	tp,s0,gp
+80000a04:	00100193          	li	gp,1
+80000a08:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000a0c:	fec14183          	lbu	gp,-20(sp)
+80000a10:	003401b3          	add	gp,s0,gp
+80000a14:	00018023          	sb	zero,0(gp)
+80000a18:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000a1c:	ff114483          	lbu	s1,-15(sp)
+80000a20:	00940233          	add	tp,s0,s1
+80000a24:	00100493          	li	s1,1
+80000a28:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000a2c:	fed14483          	lbu	s1,-19(sp)
+80000a30:	009404b3          	add	s1,s0,s1
+80000a34:	00048023          	sb	zero,0(s1)
+80000a38:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000a3c:	009181b3          	add	gp,gp,s1
+80000a40:	ff214483          	lbu	s1,-14(sp)
+80000a44:	00940233          	add	tp,s0,s1
+80000a48:	00100493          	li	s1,1
+80000a4c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000a50:	fee14483          	lbu	s1,-18(sp)
+80000a54:	009404b3          	add	s1,s0,s1
+80000a58:	00048023          	sb	zero,0(s1)
+80000a5c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000a60:	009181b3          	add	gp,gp,s1
+80000a64:	ff314483          	lbu	s1,-13(sp)
+80000a68:	00940233          	add	tp,s0,s1
+80000a6c:	00100493          	li	s1,1
+80000a70:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000a74:	fef14483          	lbu	s1,-17(sp)
+80000a78:	009404b3          	add	s1,s0,s1
+80000a7c:	00048023          	sb	zero,0(s1)
+80000a80:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000a84:	009181b3          	add	gp,gp,s1
+80000a88:	80002237          	lui	tp,0x80002
+80000a8c:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000a90:	00320233          	add	tp,tp,gp
+80000a94:	ff812483          	lw	s1,-8(sp)
+80000a98:	ffc12403          	lw	s0,-4(sp)
+80000a9c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000aa0 <slli_159>:
+80000aa0:	00420233          	add	tp,tp,tp
+80000aa4:	00420233          	add	tp,tp,tp
+80000aa8:	00410233          	add	tp,sp,tp
+80000aac:	800011b7          	lui	gp,0x80001
+80000ab0:	acc18193          	addi	gp,gp,-1332 # 80000acc <_end+0xfffadacc>
+80000ab4:	fe312823          	sw	gp,-16(sp)
+80000ab8:	800021b7          	lui	gp,0x80002
+80000abc:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000ac0:	fe312623          	sw	gp,-20(sp)
+80000ac4:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000ac8:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000acc <non_taken_150fail>:
+80000acc:	00b00513          	li	a0,11
+80000ad0:	8004a0b7          	lui	ra,0x8004a
+80000ad4:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+80000ad8:	ffa08093          	addi	ra,ra,-6
+80000adc:	fe012823          	sw	zero,-16(sp)
+80000ae0:	0070c283          	lbu	t0,7(ra)
+80000ae4:	fe5109a3          	sb	t0,-13(sp)
+80000ae8:	ff012283          	lw	t0,-16(sp)
+
+80000aec <srai_164>:
+80000aec:	fe512823          	sw	t0,-16(sp)
+80000af0:	80048237          	lui	tp,0x80048
+80000af4:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000af8:	ff314283          	lbu	t0,-13(sp)
+
+80000afc <slli_167>:
+80000afc:	005282b3          	add	t0,t0,t0
+80000b00:	005282b3          	add	t0,t0,t0
+80000b04:	00520233          	add	tp,tp,t0
+80000b08:	00022283          	lw	t0,0(tp) # 0 <_entry_offset>
+80000b0c:	00000393          	li	t2,0
+
+80000b10 <bne_168fail>:
+80000b10:	fe512823          	sw	t0,-16(sp)
+80000b14:	fe712623          	sw	t2,-20(sp)
+80000b18:	fe812e23          	sw	s0,-4(sp)
+80000b1c:	fe912c23          	sw	s1,-8(sp)
+80000b20:	8004a437          	lui	s0,0x8004a
+80000b24:	00040413          	mv	s0,s0
+80000b28:	ff014183          	lbu	gp,-16(sp)
+80000b2c:	00340233          	add	tp,s0,gp
+80000b30:	00100193          	li	gp,1
+80000b34:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000b38:	fec14183          	lbu	gp,-20(sp)
+80000b3c:	003401b3          	add	gp,s0,gp
+80000b40:	00018023          	sb	zero,0(gp)
+80000b44:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000b48:	ff114483          	lbu	s1,-15(sp)
+80000b4c:	00940233          	add	tp,s0,s1
+80000b50:	00100493          	li	s1,1
+80000b54:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000b58:	fed14483          	lbu	s1,-19(sp)
+80000b5c:	009404b3          	add	s1,s0,s1
+80000b60:	00048023          	sb	zero,0(s1)
+80000b64:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000b68:	009181b3          	add	gp,gp,s1
+80000b6c:	ff214483          	lbu	s1,-14(sp)
+80000b70:	00940233          	add	tp,s0,s1
+80000b74:	00100493          	li	s1,1
+80000b78:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000b7c:	fee14483          	lbu	s1,-18(sp)
+80000b80:	009404b3          	add	s1,s0,s1
+80000b84:	00048023          	sb	zero,0(s1)
+80000b88:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000b8c:	009181b3          	add	gp,gp,s1
+80000b90:	ff314483          	lbu	s1,-13(sp)
+80000b94:	00940233          	add	tp,s0,s1
+80000b98:	00100493          	li	s1,1
+80000b9c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000ba0:	fef14483          	lbu	s1,-17(sp)
+80000ba4:	009404b3          	add	s1,s0,s1
+80000ba8:	00048023          	sb	zero,0(s1)
+80000bac:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000bb0:	009181b3          	add	gp,gp,s1
+80000bb4:	80002237          	lui	tp,0x80002
+80000bb8:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000bbc:	00320233          	add	tp,tp,gp
+80000bc0:	ff812483          	lw	s1,-8(sp)
+80000bc4:	ffc12403          	lw	s0,-4(sp)
+80000bc8:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000bcc <slli_177>:
+80000bcc:	00420233          	add	tp,tp,tp
+80000bd0:	00420233          	add	tp,tp,tp
+80000bd4:	00410233          	add	tp,sp,tp
+80000bd8:	800011b7          	lui	gp,0x80001
+80000bdc:	bf818193          	addi	gp,gp,-1032 # 80000bf8 <_end+0xfffadbf8>
+80000be0:	fe312823          	sw	gp,-16(sp)
+80000be4:	800021b7          	lui	gp,0x80002
+80000be8:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000bec:	fe312623          	sw	gp,-20(sp)
+80000bf0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000bf4:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000bf8 <non_taken_168fail>:
+80000bf8:	00c00513          	li	a0,12
+80000bfc:	00000613          	li	a2,0
+80000c00:	8004a0b7          	lui	ra,0x8004a
+80000c04:	10108093          	addi	ra,ra,257 # 8004a101 <_end+0xffff7101>
+80000c08:	fe012823          	sw	zero,-16(sp)
+80000c0c:	0010c703          	lbu	a4,1(ra)
+80000c10:	fee109a3          	sb	a4,-13(sp)
+80000c14:	ff012703          	lw	a4,-16(sp)
+
+80000c18 <srai_182>:
+80000c18:	fee12823          	sw	a4,-16(sp)
+80000c1c:	80048237          	lui	tp,0x80048
+80000c20:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000c24:	ff314703          	lbu	a4,-13(sp)
+
+80000c28 <slli_185>:
+80000c28:	00e70733          	add	a4,a4,a4
+80000c2c:	00e70733          	add	a4,a4,a4
+80000c30:	00e20233          	add	tp,tp,a4
+80000c34:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000c38:	00070313          	mv	t1,a4
+80000c3c:	ff000393          	li	t2,-16
+
+80000c40 <bne_186fail>:
+80000c40:	fe612823          	sw	t1,-16(sp)
+80000c44:	fe712623          	sw	t2,-20(sp)
+80000c48:	fe812e23          	sw	s0,-4(sp)
+80000c4c:	fe912c23          	sw	s1,-8(sp)
+80000c50:	8004a437          	lui	s0,0x8004a
+80000c54:	00040413          	mv	s0,s0
+80000c58:	ff014183          	lbu	gp,-16(sp)
+80000c5c:	00340233          	add	tp,s0,gp
+80000c60:	00100193          	li	gp,1
+80000c64:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000c68:	fec14183          	lbu	gp,-20(sp)
+80000c6c:	003401b3          	add	gp,s0,gp
+80000c70:	00018023          	sb	zero,0(gp)
+80000c74:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000c78:	ff114483          	lbu	s1,-15(sp)
+80000c7c:	00940233          	add	tp,s0,s1
+80000c80:	00100493          	li	s1,1
+80000c84:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000c88:	fed14483          	lbu	s1,-19(sp)
+80000c8c:	009404b3          	add	s1,s0,s1
+80000c90:	00048023          	sb	zero,0(s1)
+80000c94:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000c98:	009181b3          	add	gp,gp,s1
+80000c9c:	ff214483          	lbu	s1,-14(sp)
+80000ca0:	00940233          	add	tp,s0,s1
+80000ca4:	00100493          	li	s1,1
+80000ca8:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000cac:	fee14483          	lbu	s1,-18(sp)
+80000cb0:	009404b3          	add	s1,s0,s1
+80000cb4:	00048023          	sb	zero,0(s1)
+80000cb8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000cbc:	009181b3          	add	gp,gp,s1
+80000cc0:	ff314483          	lbu	s1,-13(sp)
+80000cc4:	00940233          	add	tp,s0,s1
+80000cc8:	00100493          	li	s1,1
+80000ccc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000cd0:	fef14483          	lbu	s1,-17(sp)
+80000cd4:	009404b3          	add	s1,s0,s1
+80000cd8:	00048023          	sb	zero,0(s1)
+80000cdc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000ce0:	009181b3          	add	gp,gp,s1
+80000ce4:	80002237          	lui	tp,0x80002
+80000ce8:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000cec:	00320233          	add	tp,tp,gp
+80000cf0:	ff812483          	lw	s1,-8(sp)
+80000cf4:	ffc12403          	lw	s0,-4(sp)
+80000cf8:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000cfc <slli_195>:
+80000cfc:	00420233          	add	tp,tp,tp
+80000d00:	00420233          	add	tp,tp,tp
+80000d04:	00410233          	add	tp,sp,tp
+80000d08:	800011b7          	lui	gp,0x80001
+80000d0c:	d2818193          	addi	gp,gp,-728 # 80000d28 <_end+0xfffadd28>
+80000d10:	fe312823          	sw	gp,-16(sp)
+80000d14:	800021b7          	lui	gp,0x80002
+80000d18:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000d1c:	fe312623          	sw	gp,-20(sp)
+80000d20:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000d24:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000d28 <non_taken_186fail>:
+80000d28:	00160613          	addi	a2,a2,1
+80000d2c:	00200293          	li	t0,2
+
+80000d30 <bne_1981b>:
+80000d30:	fec12823          	sw	a2,-16(sp)
+80000d34:	fe512623          	sw	t0,-20(sp)
+80000d38:	fe812e23          	sw	s0,-4(sp)
+80000d3c:	fe912c23          	sw	s1,-8(sp)
+80000d40:	8004a437          	lui	s0,0x8004a
+80000d44:	00040413          	mv	s0,s0
+80000d48:	ff014183          	lbu	gp,-16(sp)
+80000d4c:	00340233          	add	tp,s0,gp
+80000d50:	00100193          	li	gp,1
+80000d54:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000d58:	fec14183          	lbu	gp,-20(sp)
+80000d5c:	003401b3          	add	gp,s0,gp
+80000d60:	00018023          	sb	zero,0(gp)
+80000d64:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000d68:	ff114483          	lbu	s1,-15(sp)
+80000d6c:	00940233          	add	tp,s0,s1
+80000d70:	00100493          	li	s1,1
+80000d74:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000d78:	fed14483          	lbu	s1,-19(sp)
+80000d7c:	009404b3          	add	s1,s0,s1
+80000d80:	00048023          	sb	zero,0(s1)
+80000d84:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000d88:	009181b3          	add	gp,gp,s1
+80000d8c:	ff214483          	lbu	s1,-14(sp)
+80000d90:	00940233          	add	tp,s0,s1
+80000d94:	00100493          	li	s1,1
+80000d98:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000d9c:	fee14483          	lbu	s1,-18(sp)
+80000da0:	009404b3          	add	s1,s0,s1
+80000da4:	00048023          	sb	zero,0(s1)
+80000da8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000dac:	009181b3          	add	gp,gp,s1
+80000db0:	ff314483          	lbu	s1,-13(sp)
+80000db4:	00940233          	add	tp,s0,s1
+80000db8:	00100493          	li	s1,1
+80000dbc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000dc0:	fef14483          	lbu	s1,-17(sp)
+80000dc4:	009404b3          	add	s1,s0,s1
+80000dc8:	00048023          	sb	zero,0(s1)
+80000dcc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000dd0:	009181b3          	add	gp,gp,s1
+80000dd4:	80002237          	lui	tp,0x80002
+80000dd8:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000ddc:	00320233          	add	tp,tp,gp
+80000de0:	ff812483          	lw	s1,-8(sp)
+80000de4:	ffc12403          	lw	s0,-4(sp)
+80000de8:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000dec <slli_207>:
+80000dec:	00420233          	add	tp,tp,tp
+80000df0:	00420233          	add	tp,tp,tp
+80000df4:	00410233          	add	tp,sp,tp
+80000df8:	800011b7          	lui	gp,0x80001
+80000dfc:	e1818193          	addi	gp,gp,-488 # 80000e18 <_end+0xfffade18>
+80000e00:	fe312823          	sw	gp,-16(sp)
+80000e04:	800011b7          	lui	gp,0x80001
+80000e08:	c0018193          	addi	gp,gp,-1024 # 80000c00 <_end+0xfffadc00>
+80000e0c:	fe312623          	sw	gp,-20(sp)
+80000e10:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000e14:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000e18 <non_taken_1981b>:
+80000e18:	00d00513          	li	a0,13
+80000e1c:	00000613          	li	a2,0
+80000e20:	8004a0b7          	lui	ra,0x8004a
+80000e24:	10208093          	addi	ra,ra,258 # 8004a102 <_end+0xffff7102>
+80000e28:	fe012823          	sw	zero,-16(sp)
+80000e2c:	0010c703          	lbu	a4,1(ra)
+80000e30:	fee109a3          	sb	a4,-13(sp)
+80000e34:	ff012703          	lw	a4,-16(sp)
+
+80000e38 <srai_212>:
+80000e38:	fee12823          	sw	a4,-16(sp)
+80000e3c:	80048237          	lui	tp,0x80048
+80000e40:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80000e44:	ff314703          	lbu	a4,-13(sp)
+
+80000e48 <slli_215>:
+80000e48:	00e70733          	add	a4,a4,a4
+80000e4c:	00e70733          	add	a4,a4,a4
+80000e50:	00e20233          	add	tp,tp,a4
+80000e54:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+80000e58:	00000013          	nop
+80000e5c:	00070313          	mv	t1,a4
+80000e60:	00f00393          	li	t2,15
+
+80000e64 <bne_216fail>:
+80000e64:	fe612823          	sw	t1,-16(sp)
+80000e68:	fe712623          	sw	t2,-20(sp)
+80000e6c:	fe812e23          	sw	s0,-4(sp)
+80000e70:	fe912c23          	sw	s1,-8(sp)
+80000e74:	8004a437          	lui	s0,0x8004a
+80000e78:	00040413          	mv	s0,s0
+80000e7c:	ff014183          	lbu	gp,-16(sp)
+80000e80:	00340233          	add	tp,s0,gp
+80000e84:	00100193          	li	gp,1
+80000e88:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000e8c:	fec14183          	lbu	gp,-20(sp)
+80000e90:	003401b3          	add	gp,s0,gp
+80000e94:	00018023          	sb	zero,0(gp)
+80000e98:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000e9c:	ff114483          	lbu	s1,-15(sp)
+80000ea0:	00940233          	add	tp,s0,s1
+80000ea4:	00100493          	li	s1,1
+80000ea8:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000eac:	fed14483          	lbu	s1,-19(sp)
+80000eb0:	009404b3          	add	s1,s0,s1
+80000eb4:	00048023          	sb	zero,0(s1)
+80000eb8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000ebc:	009181b3          	add	gp,gp,s1
+80000ec0:	ff214483          	lbu	s1,-14(sp)
+80000ec4:	00940233          	add	tp,s0,s1
+80000ec8:	00100493          	li	s1,1
+80000ecc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000ed0:	fee14483          	lbu	s1,-18(sp)
+80000ed4:	009404b3          	add	s1,s0,s1
+80000ed8:	00048023          	sb	zero,0(s1)
+80000edc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000ee0:	009181b3          	add	gp,gp,s1
+80000ee4:	ff314483          	lbu	s1,-13(sp)
+80000ee8:	00940233          	add	tp,s0,s1
+80000eec:	00100493          	li	s1,1
+80000ef0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000ef4:	fef14483          	lbu	s1,-17(sp)
+80000ef8:	009404b3          	add	s1,s0,s1
+80000efc:	00048023          	sb	zero,0(s1)
+80000f00:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000f04:	009181b3          	add	gp,gp,s1
+80000f08:	80002237          	lui	tp,0x80002
+80000f0c:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80000f10:	00320233          	add	tp,tp,gp
+80000f14:	ff812483          	lw	s1,-8(sp)
+80000f18:	ffc12403          	lw	s0,-4(sp)
+80000f1c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80000f20 <slli_225>:
+80000f20:	00420233          	add	tp,tp,tp
+80000f24:	00420233          	add	tp,tp,tp
+80000f28:	00410233          	add	tp,sp,tp
+80000f2c:	800011b7          	lui	gp,0x80001
+80000f30:	f4c18193          	addi	gp,gp,-180 # 80000f4c <_end+0xfffadf4c>
+80000f34:	fe312823          	sw	gp,-16(sp)
+80000f38:	800021b7          	lui	gp,0x80002
+80000f3c:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80000f40:	fe312623          	sw	gp,-20(sp)
+80000f44:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80000f48:	00020067          	jr	tp # 0 <_entry_offset>
+
+80000f4c <non_taken_216fail>:
+80000f4c:	00160613          	addi	a2,a2,1
+80000f50:	00200293          	li	t0,2
+
+80000f54 <bne_2281b>:
+80000f54:	fec12823          	sw	a2,-16(sp)
+80000f58:	fe512623          	sw	t0,-20(sp)
+80000f5c:	fe812e23          	sw	s0,-4(sp)
+80000f60:	fe912c23          	sw	s1,-8(sp)
+80000f64:	8004a437          	lui	s0,0x8004a
+80000f68:	00040413          	mv	s0,s0
+80000f6c:	ff014183          	lbu	gp,-16(sp)
+80000f70:	00340233          	add	tp,s0,gp
+80000f74:	00100193          	li	gp,1
+80000f78:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80000f7c:	fec14183          	lbu	gp,-20(sp)
+80000f80:	003401b3          	add	gp,s0,gp
+80000f84:	00018023          	sb	zero,0(gp)
+80000f88:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80000f8c:	ff114483          	lbu	s1,-15(sp)
+80000f90:	00940233          	add	tp,s0,s1
+80000f94:	00100493          	li	s1,1
+80000f98:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000f9c:	fed14483          	lbu	s1,-19(sp)
+80000fa0:	009404b3          	add	s1,s0,s1
+80000fa4:	00048023          	sb	zero,0(s1)
+80000fa8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000fac:	009181b3          	add	gp,gp,s1
+80000fb0:	ff214483          	lbu	s1,-14(sp)
+80000fb4:	00940233          	add	tp,s0,s1
+80000fb8:	00100493          	li	s1,1
+80000fbc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000fc0:	fee14483          	lbu	s1,-18(sp)
+80000fc4:	009404b3          	add	s1,s0,s1
+80000fc8:	00048023          	sb	zero,0(s1)
+80000fcc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000fd0:	009181b3          	add	gp,gp,s1
+80000fd4:	ff314483          	lbu	s1,-13(sp)
+80000fd8:	00940233          	add	tp,s0,s1
+80000fdc:	00100493          	li	s1,1
+80000fe0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80000fe4:	fef14483          	lbu	s1,-17(sp)
+80000fe8:	009404b3          	add	s1,s0,s1
+80000fec:	00048023          	sb	zero,0(s1)
+80000ff0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80000ff4:	009181b3          	add	gp,gp,s1
+80000ff8:	80002237          	lui	tp,0x80002
+80000ffc:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001000:	00320233          	add	tp,tp,gp
+80001004:	ff812483          	lw	s1,-8(sp)
+80001008:	ffc12403          	lw	s0,-4(sp)
+8000100c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001010 <slli_237>:
+80001010:	00420233          	add	tp,tp,tp
+80001014:	00420233          	add	tp,tp,tp
+80001018:	00410233          	add	tp,sp,tp
+8000101c:	800011b7          	lui	gp,0x80001
+80001020:	03c18193          	addi	gp,gp,60 # 8000103c <_end+0xfffae03c>
+80001024:	fe312823          	sw	gp,-16(sp)
+80001028:	800011b7          	lui	gp,0x80001
+8000102c:	e2018193          	addi	gp,gp,-480 # 80000e20 <_end+0xfffade20>
+80001030:	fe312623          	sw	gp,-20(sp)
+80001034:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80001038:	00020067          	jr	tp # 0 <_entry_offset>
+
+8000103c <non_taken_2281b>:
+8000103c:	00e00513          	li	a0,14
+80001040:	00000613          	li	a2,0
+80001044:	8004a0b7          	lui	ra,0x8004a
+80001048:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+8000104c:	fe012823          	sw	zero,-16(sp)
+80001050:	0010c703          	lbu	a4,1(ra)
+80001054:	fee109a3          	sb	a4,-13(sp)
+80001058:	ff012703          	lw	a4,-16(sp)
+
+8000105c <srai_242>:
+8000105c:	fee12823          	sw	a4,-16(sp)
+80001060:	80048237          	lui	tp,0x80048
+80001064:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80001068:	ff314703          	lbu	a4,-13(sp)
+
+8000106c <slli_245>:
+8000106c:	00e70733          	add	a4,a4,a4
+80001070:	00e70733          	add	a4,a4,a4
+80001074:	00e20233          	add	tp,tp,a4
+80001078:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+8000107c:	00000013          	nop
+80001080:	00000013          	nop
+80001084:	00070313          	mv	t1,a4
+80001088:	00000393          	li	t2,0
+
+8000108c <bne_246fail>:
+8000108c:	fe612823          	sw	t1,-16(sp)
+80001090:	fe712623          	sw	t2,-20(sp)
+80001094:	fe812e23          	sw	s0,-4(sp)
+80001098:	fe912c23          	sw	s1,-8(sp)
+8000109c:	8004a437          	lui	s0,0x8004a
+800010a0:	00040413          	mv	s0,s0
+800010a4:	ff014183          	lbu	gp,-16(sp)
+800010a8:	00340233          	add	tp,s0,gp
+800010ac:	00100193          	li	gp,1
+800010b0:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800010b4:	fec14183          	lbu	gp,-20(sp)
+800010b8:	003401b3          	add	gp,s0,gp
+800010bc:	00018023          	sb	zero,0(gp)
+800010c0:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800010c4:	ff114483          	lbu	s1,-15(sp)
+800010c8:	00940233          	add	tp,s0,s1
+800010cc:	00100493          	li	s1,1
+800010d0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800010d4:	fed14483          	lbu	s1,-19(sp)
+800010d8:	009404b3          	add	s1,s0,s1
+800010dc:	00048023          	sb	zero,0(s1)
+800010e0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800010e4:	009181b3          	add	gp,gp,s1
+800010e8:	ff214483          	lbu	s1,-14(sp)
+800010ec:	00940233          	add	tp,s0,s1
+800010f0:	00100493          	li	s1,1
+800010f4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800010f8:	fee14483          	lbu	s1,-18(sp)
+800010fc:	009404b3          	add	s1,s0,s1
+80001100:	00048023          	sb	zero,0(s1)
+80001104:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001108:	009181b3          	add	gp,gp,s1
+8000110c:	ff314483          	lbu	s1,-13(sp)
+80001110:	00940233          	add	tp,s0,s1
+80001114:	00100493          	li	s1,1
+80001118:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000111c:	fef14483          	lbu	s1,-17(sp)
+80001120:	009404b3          	add	s1,s0,s1
+80001124:	00048023          	sb	zero,0(s1)
+80001128:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000112c:	009181b3          	add	gp,gp,s1
+80001130:	80002237          	lui	tp,0x80002
+80001134:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001138:	00320233          	add	tp,tp,gp
+8000113c:	ff812483          	lw	s1,-8(sp)
+80001140:	ffc12403          	lw	s0,-4(sp)
+80001144:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001148 <slli_255>:
+80001148:	00420233          	add	tp,tp,tp
+8000114c:	00420233          	add	tp,tp,tp
+80001150:	00410233          	add	tp,sp,tp
+80001154:	800011b7          	lui	gp,0x80001
+80001158:	17418193          	addi	gp,gp,372 # 80001174 <_end+0xfffae174>
+8000115c:	fe312823          	sw	gp,-16(sp)
+80001160:	800021b7          	lui	gp,0x80002
+80001164:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80001168:	fe312623          	sw	gp,-20(sp)
+8000116c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80001170:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001174 <non_taken_246fail>:
+80001174:	00160613          	addi	a2,a2,1
+80001178:	00200293          	li	t0,2
+
+8000117c <bne_2581b>:
+8000117c:	fec12823          	sw	a2,-16(sp)
+80001180:	fe512623          	sw	t0,-20(sp)
+80001184:	fe812e23          	sw	s0,-4(sp)
+80001188:	fe912c23          	sw	s1,-8(sp)
+8000118c:	8004a437          	lui	s0,0x8004a
+80001190:	00040413          	mv	s0,s0
+80001194:	ff014183          	lbu	gp,-16(sp)
+80001198:	00340233          	add	tp,s0,gp
+8000119c:	00100193          	li	gp,1
+800011a0:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800011a4:	fec14183          	lbu	gp,-20(sp)
+800011a8:	003401b3          	add	gp,s0,gp
+800011ac:	00018023          	sb	zero,0(gp)
+800011b0:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800011b4:	ff114483          	lbu	s1,-15(sp)
+800011b8:	00940233          	add	tp,s0,s1
+800011bc:	00100493          	li	s1,1
+800011c0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800011c4:	fed14483          	lbu	s1,-19(sp)
+800011c8:	009404b3          	add	s1,s0,s1
+800011cc:	00048023          	sb	zero,0(s1)
+800011d0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800011d4:	009181b3          	add	gp,gp,s1
+800011d8:	ff214483          	lbu	s1,-14(sp)
+800011dc:	00940233          	add	tp,s0,s1
+800011e0:	00100493          	li	s1,1
+800011e4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800011e8:	fee14483          	lbu	s1,-18(sp)
+800011ec:	009404b3          	add	s1,s0,s1
+800011f0:	00048023          	sb	zero,0(s1)
+800011f4:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800011f8:	009181b3          	add	gp,gp,s1
+800011fc:	ff314483          	lbu	s1,-13(sp)
+80001200:	00940233          	add	tp,s0,s1
+80001204:	00100493          	li	s1,1
+80001208:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000120c:	fef14483          	lbu	s1,-17(sp)
+80001210:	009404b3          	add	s1,s0,s1
+80001214:	00048023          	sb	zero,0(s1)
+80001218:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000121c:	009181b3          	add	gp,gp,s1
+80001220:	80002237          	lui	tp,0x80002
+80001224:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001228:	00320233          	add	tp,tp,gp
+8000122c:	ff812483          	lw	s1,-8(sp)
+80001230:	ffc12403          	lw	s0,-4(sp)
+80001234:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001238 <slli_267>:
+80001238:	00420233          	add	tp,tp,tp
+8000123c:	00420233          	add	tp,tp,tp
+80001240:	00410233          	add	tp,sp,tp
+80001244:	800011b7          	lui	gp,0x80001
+80001248:	26418193          	addi	gp,gp,612 # 80001264 <_end+0xfffae264>
+8000124c:	fe312823          	sw	gp,-16(sp)
+80001250:	800011b7          	lui	gp,0x80001
+80001254:	04418193          	addi	gp,gp,68 # 80001044 <_end+0xfffae044>
+80001258:	fe312623          	sw	gp,-20(sp)
+8000125c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80001260:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001264 <non_taken_2581b>:
+80001264:	00f00513          	li	a0,15
+80001268:	00000613          	li	a2,0
+8000126c:	8004a0b7          	lui	ra,0x8004a
+80001270:	10108093          	addi	ra,ra,257 # 8004a101 <_end+0xffff7101>
+80001274:	fe012823          	sw	zero,-16(sp)
+80001278:	0010c703          	lbu	a4,1(ra)
+8000127c:	fee109a3          	sb	a4,-13(sp)
+80001280:	ff012703          	lw	a4,-16(sp)
+
+80001284 <srai_272>:
+80001284:	fee12823          	sw	a4,-16(sp)
+80001288:	80048237          	lui	tp,0x80048
+8000128c:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80001290:	ff314703          	lbu	a4,-13(sp)
+
+80001294 <slli_275>:
+80001294:	00e70733          	add	a4,a4,a4
+80001298:	00e70733          	add	a4,a4,a4
+8000129c:	00e20233          	add	tp,tp,a4
+800012a0:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800012a4:	ff000393          	li	t2,-16
+
+800012a8 <bne_276fail>:
+800012a8:	fee12823          	sw	a4,-16(sp)
+800012ac:	fe712623          	sw	t2,-20(sp)
+800012b0:	fe812e23          	sw	s0,-4(sp)
+800012b4:	fe912c23          	sw	s1,-8(sp)
+800012b8:	8004a437          	lui	s0,0x8004a
+800012bc:	00040413          	mv	s0,s0
+800012c0:	ff014183          	lbu	gp,-16(sp)
+800012c4:	00340233          	add	tp,s0,gp
+800012c8:	00100193          	li	gp,1
+800012cc:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800012d0:	fec14183          	lbu	gp,-20(sp)
+800012d4:	003401b3          	add	gp,s0,gp
+800012d8:	00018023          	sb	zero,0(gp)
+800012dc:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800012e0:	ff114483          	lbu	s1,-15(sp)
+800012e4:	00940233          	add	tp,s0,s1
+800012e8:	00100493          	li	s1,1
+800012ec:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800012f0:	fed14483          	lbu	s1,-19(sp)
+800012f4:	009404b3          	add	s1,s0,s1
+800012f8:	00048023          	sb	zero,0(s1)
+800012fc:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001300:	009181b3          	add	gp,gp,s1
+80001304:	ff214483          	lbu	s1,-14(sp)
+80001308:	00940233          	add	tp,s0,s1
+8000130c:	00100493          	li	s1,1
+80001310:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001314:	fee14483          	lbu	s1,-18(sp)
+80001318:	009404b3          	add	s1,s0,s1
+8000131c:	00048023          	sb	zero,0(s1)
+80001320:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001324:	009181b3          	add	gp,gp,s1
+80001328:	ff314483          	lbu	s1,-13(sp)
+8000132c:	00940233          	add	tp,s0,s1
+80001330:	00100493          	li	s1,1
+80001334:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001338:	fef14483          	lbu	s1,-17(sp)
+8000133c:	009404b3          	add	s1,s0,s1
+80001340:	00048023          	sb	zero,0(s1)
+80001344:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001348:	009181b3          	add	gp,gp,s1
+8000134c:	80002237          	lui	tp,0x80002
+80001350:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001354:	00320233          	add	tp,tp,gp
+80001358:	ff812483          	lw	s1,-8(sp)
+8000135c:	ffc12403          	lw	s0,-4(sp)
+80001360:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001364 <slli_285>:
+80001364:	00420233          	add	tp,tp,tp
+80001368:	00420233          	add	tp,tp,tp
+8000136c:	00410233          	add	tp,sp,tp
+80001370:	800011b7          	lui	gp,0x80001
+80001374:	39018193          	addi	gp,gp,912 # 80001390 <_end+0xfffae390>
+80001378:	fe312823          	sw	gp,-16(sp)
+8000137c:	800021b7          	lui	gp,0x80002
+80001380:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80001384:	fe312623          	sw	gp,-20(sp)
+80001388:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+8000138c:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001390 <non_taken_276fail>:
+80001390:	00160613          	addi	a2,a2,1
+80001394:	00200293          	li	t0,2
+
+80001398 <bne_2881b>:
+80001398:	fec12823          	sw	a2,-16(sp)
+8000139c:	fe512623          	sw	t0,-20(sp)
+800013a0:	fe812e23          	sw	s0,-4(sp)
+800013a4:	fe912c23          	sw	s1,-8(sp)
+800013a8:	8004a437          	lui	s0,0x8004a
+800013ac:	00040413          	mv	s0,s0
+800013b0:	ff014183          	lbu	gp,-16(sp)
+800013b4:	00340233          	add	tp,s0,gp
+800013b8:	00100193          	li	gp,1
+800013bc:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800013c0:	fec14183          	lbu	gp,-20(sp)
+800013c4:	003401b3          	add	gp,s0,gp
+800013c8:	00018023          	sb	zero,0(gp)
+800013cc:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800013d0:	ff114483          	lbu	s1,-15(sp)
+800013d4:	00940233          	add	tp,s0,s1
+800013d8:	00100493          	li	s1,1
+800013dc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+800013e0:	fed14483          	lbu	s1,-19(sp)
+800013e4:	009404b3          	add	s1,s0,s1
+800013e8:	00048023          	sb	zero,0(s1)
+800013ec:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800013f0:	009181b3          	add	gp,gp,s1
+800013f4:	ff214483          	lbu	s1,-14(sp)
+800013f8:	00940233          	add	tp,s0,s1
+800013fc:	00100493          	li	s1,1
+80001400:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001404:	fee14483          	lbu	s1,-18(sp)
+80001408:	009404b3          	add	s1,s0,s1
+8000140c:	00048023          	sb	zero,0(s1)
+80001410:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001414:	009181b3          	add	gp,gp,s1
+80001418:	ff314483          	lbu	s1,-13(sp)
+8000141c:	00940233          	add	tp,s0,s1
+80001420:	00100493          	li	s1,1
+80001424:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001428:	fef14483          	lbu	s1,-17(sp)
+8000142c:	009404b3          	add	s1,s0,s1
+80001430:	00048023          	sb	zero,0(s1)
+80001434:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001438:	009181b3          	add	gp,gp,s1
+8000143c:	80002237          	lui	tp,0x80002
+80001440:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001444:	00320233          	add	tp,tp,gp
+80001448:	ff812483          	lw	s1,-8(sp)
+8000144c:	ffc12403          	lw	s0,-4(sp)
+80001450:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001454 <slli_297>:
+80001454:	00420233          	add	tp,tp,tp
+80001458:	00420233          	add	tp,tp,tp
+8000145c:	00410233          	add	tp,sp,tp
+80001460:	800011b7          	lui	gp,0x80001
+80001464:	48018193          	addi	gp,gp,1152 # 80001480 <_end+0xfffae480>
+80001468:	fe312823          	sw	gp,-16(sp)
+8000146c:	800011b7          	lui	gp,0x80001
+80001470:	26c18193          	addi	gp,gp,620 # 8000126c <_end+0xfffae26c>
+80001474:	fe312623          	sw	gp,-20(sp)
+80001478:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+8000147c:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001480 <non_taken_2881b>:
+80001480:	01000513          	li	a0,16
+80001484:	00000613          	li	a2,0
+80001488:	8004a0b7          	lui	ra,0x8004a
+8000148c:	10208093          	addi	ra,ra,258 # 8004a102 <_end+0xffff7102>
+80001490:	00000013          	nop
+80001494:	fe012823          	sw	zero,-16(sp)
+80001498:	0010c703          	lbu	a4,1(ra)
+8000149c:	fee109a3          	sb	a4,-13(sp)
+800014a0:	ff012703          	lw	a4,-16(sp)
+
+800014a4 <srai_302>:
+800014a4:	fee12823          	sw	a4,-16(sp)
+800014a8:	80048237          	lui	tp,0x80048
+800014ac:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800014b0:	ff314703          	lbu	a4,-13(sp)
+
+800014b4 <slli_305>:
+800014b4:	00e70733          	add	a4,a4,a4
+800014b8:	00e70733          	add	a4,a4,a4
+800014bc:	00e20233          	add	tp,tp,a4
+800014c0:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800014c4:	00f00393          	li	t2,15
+
+800014c8 <bne_306fail>:
+800014c8:	fee12823          	sw	a4,-16(sp)
+800014cc:	fe712623          	sw	t2,-20(sp)
+800014d0:	fe812e23          	sw	s0,-4(sp)
+800014d4:	fe912c23          	sw	s1,-8(sp)
+800014d8:	8004a437          	lui	s0,0x8004a
+800014dc:	00040413          	mv	s0,s0
+800014e0:	ff014183          	lbu	gp,-16(sp)
+800014e4:	00340233          	add	tp,s0,gp
+800014e8:	00100193          	li	gp,1
+800014ec:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800014f0:	fec14183          	lbu	gp,-20(sp)
+800014f4:	003401b3          	add	gp,s0,gp
+800014f8:	00018023          	sb	zero,0(gp)
+800014fc:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001500:	ff114483          	lbu	s1,-15(sp)
+80001504:	00940233          	add	tp,s0,s1
+80001508:	00100493          	li	s1,1
+8000150c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001510:	fed14483          	lbu	s1,-19(sp)
+80001514:	009404b3          	add	s1,s0,s1
+80001518:	00048023          	sb	zero,0(s1)
+8000151c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001520:	009181b3          	add	gp,gp,s1
+80001524:	ff214483          	lbu	s1,-14(sp)
+80001528:	00940233          	add	tp,s0,s1
+8000152c:	00100493          	li	s1,1
+80001530:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001534:	fee14483          	lbu	s1,-18(sp)
+80001538:	009404b3          	add	s1,s0,s1
+8000153c:	00048023          	sb	zero,0(s1)
+80001540:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001544:	009181b3          	add	gp,gp,s1
+80001548:	ff314483          	lbu	s1,-13(sp)
+8000154c:	00940233          	add	tp,s0,s1
+80001550:	00100493          	li	s1,1
+80001554:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001558:	fef14483          	lbu	s1,-17(sp)
+8000155c:	009404b3          	add	s1,s0,s1
+80001560:	00048023          	sb	zero,0(s1)
+80001564:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001568:	009181b3          	add	gp,gp,s1
+8000156c:	80002237          	lui	tp,0x80002
+80001570:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001574:	00320233          	add	tp,tp,gp
+80001578:	ff812483          	lw	s1,-8(sp)
+8000157c:	ffc12403          	lw	s0,-4(sp)
+80001580:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001584 <slli_315>:
+80001584:	00420233          	add	tp,tp,tp
+80001588:	00420233          	add	tp,tp,tp
+8000158c:	00410233          	add	tp,sp,tp
+80001590:	800011b7          	lui	gp,0x80001
+80001594:	5b018193          	addi	gp,gp,1456 # 800015b0 <_end+0xfffae5b0>
+80001598:	fe312823          	sw	gp,-16(sp)
+8000159c:	800021b7          	lui	gp,0x80002
+800015a0:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+800015a4:	fe312623          	sw	gp,-20(sp)
+800015a8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800015ac:	00020067          	jr	tp # 0 <_entry_offset>
+
+800015b0 <non_taken_306fail>:
+800015b0:	00160613          	addi	a2,a2,1
+800015b4:	00200293          	li	t0,2
+
+800015b8 <bne_3181b>:
+800015b8:	fec12823          	sw	a2,-16(sp)
+800015bc:	fe512623          	sw	t0,-20(sp)
+800015c0:	fe812e23          	sw	s0,-4(sp)
+800015c4:	fe912c23          	sw	s1,-8(sp)
+800015c8:	8004a437          	lui	s0,0x8004a
+800015cc:	00040413          	mv	s0,s0
+800015d0:	ff014183          	lbu	gp,-16(sp)
+800015d4:	00340233          	add	tp,s0,gp
+800015d8:	00100193          	li	gp,1
+800015dc:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+800015e0:	fec14183          	lbu	gp,-20(sp)
+800015e4:	003401b3          	add	gp,s0,gp
+800015e8:	00018023          	sb	zero,0(gp)
+800015ec:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+800015f0:	ff114483          	lbu	s1,-15(sp)
+800015f4:	00940233          	add	tp,s0,s1
+800015f8:	00100493          	li	s1,1
+800015fc:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001600:	fed14483          	lbu	s1,-19(sp)
+80001604:	009404b3          	add	s1,s0,s1
+80001608:	00048023          	sb	zero,0(s1)
+8000160c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001610:	009181b3          	add	gp,gp,s1
+80001614:	ff214483          	lbu	s1,-14(sp)
+80001618:	00940233          	add	tp,s0,s1
+8000161c:	00100493          	li	s1,1
+80001620:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001624:	fee14483          	lbu	s1,-18(sp)
+80001628:	009404b3          	add	s1,s0,s1
+8000162c:	00048023          	sb	zero,0(s1)
+80001630:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001634:	009181b3          	add	gp,gp,s1
+80001638:	ff314483          	lbu	s1,-13(sp)
+8000163c:	00940233          	add	tp,s0,s1
+80001640:	00100493          	li	s1,1
+80001644:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001648:	fef14483          	lbu	s1,-17(sp)
+8000164c:	009404b3          	add	s1,s0,s1
+80001650:	00048023          	sb	zero,0(s1)
+80001654:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001658:	009181b3          	add	gp,gp,s1
+8000165c:	80002237          	lui	tp,0x80002
+80001660:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001664:	00320233          	add	tp,tp,gp
+80001668:	ff812483          	lw	s1,-8(sp)
+8000166c:	ffc12403          	lw	s0,-4(sp)
+80001670:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001674 <slli_327>:
+80001674:	00420233          	add	tp,tp,tp
+80001678:	00420233          	add	tp,tp,tp
+8000167c:	00410233          	add	tp,sp,tp
+80001680:	800011b7          	lui	gp,0x80001
+80001684:	6a018193          	addi	gp,gp,1696 # 800016a0 <_end+0xfffae6a0>
+80001688:	fe312823          	sw	gp,-16(sp)
+8000168c:	800011b7          	lui	gp,0x80001
+80001690:	48818193          	addi	gp,gp,1160 # 80001488 <_end+0xfffae488>
+80001694:	fe312623          	sw	gp,-20(sp)
+80001698:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+8000169c:	00020067          	jr	tp # 0 <_entry_offset>
+
+800016a0 <non_taken_3181b>:
+800016a0:	01100513          	li	a0,17
+800016a4:	00000613          	li	a2,0
+800016a8:	8004a0b7          	lui	ra,0x8004a
+800016ac:	10008093          	addi	ra,ra,256 # 8004a100 <_end+0xffff7100>
+800016b0:	00000013          	nop
+800016b4:	00000013          	nop
+800016b8:	fe012823          	sw	zero,-16(sp)
+800016bc:	0010c703          	lbu	a4,1(ra)
+800016c0:	fee109a3          	sb	a4,-13(sp)
+800016c4:	ff012703          	lw	a4,-16(sp)
+
+800016c8 <srai_332>:
+800016c8:	fee12823          	sw	a4,-16(sp)
+800016cc:	80048237          	lui	tp,0x80048
+800016d0:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800016d4:	ff314703          	lbu	a4,-13(sp)
+
+800016d8 <slli_335>:
+800016d8:	00e70733          	add	a4,a4,a4
+800016dc:	00e70733          	add	a4,a4,a4
+800016e0:	00e20233          	add	tp,tp,a4
+800016e4:	00022703          	lw	a4,0(tp) # 0 <_entry_offset>
+800016e8:	00000393          	li	t2,0
+
+800016ec <bne_336fail>:
+800016ec:	fee12823          	sw	a4,-16(sp)
+800016f0:	fe712623          	sw	t2,-20(sp)
+800016f4:	fe812e23          	sw	s0,-4(sp)
+800016f8:	fe912c23          	sw	s1,-8(sp)
+800016fc:	8004a437          	lui	s0,0x8004a
+80001700:	00040413          	mv	s0,s0
+80001704:	ff014183          	lbu	gp,-16(sp)
+80001708:	00340233          	add	tp,s0,gp
+8000170c:	00100193          	li	gp,1
+80001710:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80001714:	fec14183          	lbu	gp,-20(sp)
+80001718:	003401b3          	add	gp,s0,gp
+8000171c:	00018023          	sb	zero,0(gp)
+80001720:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001724:	ff114483          	lbu	s1,-15(sp)
+80001728:	00940233          	add	tp,s0,s1
+8000172c:	00100493          	li	s1,1
+80001730:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001734:	fed14483          	lbu	s1,-19(sp)
+80001738:	009404b3          	add	s1,s0,s1
+8000173c:	00048023          	sb	zero,0(s1)
+80001740:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001744:	009181b3          	add	gp,gp,s1
+80001748:	ff214483          	lbu	s1,-14(sp)
+8000174c:	00940233          	add	tp,s0,s1
+80001750:	00100493          	li	s1,1
+80001754:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001758:	fee14483          	lbu	s1,-18(sp)
+8000175c:	009404b3          	add	s1,s0,s1
+80001760:	00048023          	sb	zero,0(s1)
+80001764:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001768:	009181b3          	add	gp,gp,s1
+8000176c:	ff314483          	lbu	s1,-13(sp)
+80001770:	00940233          	add	tp,s0,s1
+80001774:	00100493          	li	s1,1
+80001778:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000177c:	fef14483          	lbu	s1,-17(sp)
+80001780:	009404b3          	add	s1,s0,s1
+80001784:	00048023          	sb	zero,0(s1)
+80001788:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000178c:	009181b3          	add	gp,gp,s1
+80001790:	80002237          	lui	tp,0x80002
+80001794:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001798:	00320233          	add	tp,tp,gp
+8000179c:	ff812483          	lw	s1,-8(sp)
+800017a0:	ffc12403          	lw	s0,-4(sp)
+800017a4:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+800017a8 <slli_345>:
+800017a8:	00420233          	add	tp,tp,tp
+800017ac:	00420233          	add	tp,tp,tp
+800017b0:	00410233          	add	tp,sp,tp
+800017b4:	800011b7          	lui	gp,0x80001
+800017b8:	7d418193          	addi	gp,gp,2004 # 800017d4 <_end+0xfffae7d4>
+800017bc:	fe312823          	sw	gp,-16(sp)
+800017c0:	800021b7          	lui	gp,0x80002
+800017c4:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+800017c8:	fe312623          	sw	gp,-20(sp)
+800017cc:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800017d0:	00020067          	jr	tp # 0 <_entry_offset>
+
+800017d4 <non_taken_336fail>:
+800017d4:	00160613          	addi	a2,a2,1
+800017d8:	00200293          	li	t0,2
+
+800017dc <bne_3481b>:
+800017dc:	fec12823          	sw	a2,-16(sp)
+800017e0:	fe512623          	sw	t0,-20(sp)
+800017e4:	fe812e23          	sw	s0,-4(sp)
+800017e8:	fe912c23          	sw	s1,-8(sp)
+800017ec:	8004a437          	lui	s0,0x8004a
+800017f0:	00040413          	mv	s0,s0
+800017f4:	ff014183          	lbu	gp,-16(sp)
+800017f8:	00340233          	add	tp,s0,gp
+800017fc:	00100193          	li	gp,1
+80001800:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80001804:	fec14183          	lbu	gp,-20(sp)
+80001808:	003401b3          	add	gp,s0,gp
+8000180c:	00018023          	sb	zero,0(gp)
+80001810:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001814:	ff114483          	lbu	s1,-15(sp)
+80001818:	00940233          	add	tp,s0,s1
+8000181c:	00100493          	li	s1,1
+80001820:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001824:	fed14483          	lbu	s1,-19(sp)
+80001828:	009404b3          	add	s1,s0,s1
+8000182c:	00048023          	sb	zero,0(s1)
+80001830:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001834:	009181b3          	add	gp,gp,s1
+80001838:	ff214483          	lbu	s1,-14(sp)
+8000183c:	00940233          	add	tp,s0,s1
+80001840:	00100493          	li	s1,1
+80001844:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001848:	fee14483          	lbu	s1,-18(sp)
+8000184c:	009404b3          	add	s1,s0,s1
+80001850:	00048023          	sb	zero,0(s1)
+80001854:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001858:	009181b3          	add	gp,gp,s1
+8000185c:	ff314483          	lbu	s1,-13(sp)
+80001860:	00940233          	add	tp,s0,s1
+80001864:	00100493          	li	s1,1
+80001868:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+8000186c:	fef14483          	lbu	s1,-17(sp)
+80001870:	009404b3          	add	s1,s0,s1
+80001874:	00048023          	sb	zero,0(s1)
+80001878:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+8000187c:	009181b3          	add	gp,gp,s1
+80001880:	80002237          	lui	tp,0x80002
+80001884:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001888:	00320233          	add	tp,tp,gp
+8000188c:	ff812483          	lw	s1,-8(sp)
+80001890:	ffc12403          	lw	s0,-4(sp)
+80001894:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001898 <slli_357>:
+80001898:	00420233          	add	tp,tp,tp
+8000189c:	00420233          	add	tp,tp,tp
+800018a0:	00410233          	add	tp,sp,tp
+800018a4:	800021b7          	lui	gp,0x80002
+800018a8:	8c418193          	addi	gp,gp,-1852 # 800018c4 <_end+0xfffae8c4>
+800018ac:	fe312823          	sw	gp,-16(sp)
+800018b0:	800011b7          	lui	gp,0x80001
+800018b4:	6a818193          	addi	gp,gp,1704 # 800016a8 <_end+0xfffae6a8>
+800018b8:	fe312623          	sw	gp,-20(sp)
+800018bc:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800018c0:	00020067          	jr	tp # 0 <_entry_offset>
+
+800018c4 <non_taken_3481b>:
+800018c4:	01200513          	li	a0,18
+800018c8:	8004a2b7          	lui	t0,0x8004a
+800018cc:	10028293          	addi	t0,t0,256 # 8004a100 <_end+0xffff7100>
+800018d0:	fe012823          	sw	zero,-16(sp)
+800018d4:	0002c403          	lbu	s0,0(t0)
+800018d8:	fe8109a3          	sb	s0,-13(sp)
+800018dc:	ff012403          	lw	s0,-16(sp)
+
+800018e0 <srai_362>:
+800018e0:	fe812823          	sw	s0,-16(sp)
+800018e4:	80048237          	lui	tp,0x80048
+800018e8:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+800018ec:	ff314403          	lbu	s0,-13(sp)
+
+800018f0 <slli_365>:
+800018f0:	00840433          	add	s0,s0,s0
+800018f4:	00840433          	add	s0,s0,s0
+800018f8:	00820233          	add	tp,tp,s0
+800018fc:	00022403          	lw	s0,0(tp) # 0 <_entry_offset>
+80001900:	00200413          	li	s0,2
+80001904:	00200393          	li	t2,2
+
+80001908 <bne_366fail>:
+80001908:	fe812823          	sw	s0,-16(sp)
+8000190c:	fe712623          	sw	t2,-20(sp)
+80001910:	fe812e23          	sw	s0,-4(sp)
+80001914:	fe912c23          	sw	s1,-8(sp)
+80001918:	8004a437          	lui	s0,0x8004a
+8000191c:	00040413          	mv	s0,s0
+80001920:	ff014183          	lbu	gp,-16(sp)
+80001924:	00340233          	add	tp,s0,gp
+80001928:	00100193          	li	gp,1
+8000192c:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80001930:	fec14183          	lbu	gp,-20(sp)
+80001934:	003401b3          	add	gp,s0,gp
+80001938:	00018023          	sb	zero,0(gp)
+8000193c:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001940:	ff114483          	lbu	s1,-15(sp)
+80001944:	00940233          	add	tp,s0,s1
+80001948:	00100493          	li	s1,1
+8000194c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001950:	fed14483          	lbu	s1,-19(sp)
+80001954:	009404b3          	add	s1,s0,s1
+80001958:	00048023          	sb	zero,0(s1)
+8000195c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001960:	009181b3          	add	gp,gp,s1
+80001964:	ff214483          	lbu	s1,-14(sp)
+80001968:	00940233          	add	tp,s0,s1
+8000196c:	00100493          	li	s1,1
+80001970:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001974:	fee14483          	lbu	s1,-18(sp)
+80001978:	009404b3          	add	s1,s0,s1
+8000197c:	00048023          	sb	zero,0(s1)
+80001980:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001984:	009181b3          	add	gp,gp,s1
+80001988:	ff314483          	lbu	s1,-13(sp)
+8000198c:	00940233          	add	tp,s0,s1
+80001990:	00100493          	li	s1,1
+80001994:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001998:	fef14483          	lbu	s1,-17(sp)
+8000199c:	009404b3          	add	s1,s0,s1
+800019a0:	00048023          	sb	zero,0(s1)
+800019a4:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+800019a8:	009181b3          	add	gp,gp,s1
+800019ac:	80002237          	lui	tp,0x80002
+800019b0:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+800019b4:	00320233          	add	tp,tp,gp
+800019b8:	ff812483          	lw	s1,-8(sp)
+800019bc:	ffc12403          	lw	s0,-4(sp)
+800019c0:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+800019c4 <slli_375>:
+800019c4:	00420233          	add	tp,tp,tp
+800019c8:	00420233          	add	tp,tp,tp
+800019cc:	00410233          	add	tp,sp,tp
+800019d0:	800021b7          	lui	gp,0x80002
+800019d4:	9f018193          	addi	gp,gp,-1552 # 800019f0 <_end+0xfffae9f0>
+800019d8:	fe312823          	sw	gp,-16(sp)
+800019dc:	800021b7          	lui	gp,0x80002
+800019e0:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+800019e4:	fe312623          	sw	gp,-20(sp)
+800019e8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+800019ec:	00020067          	jr	tp # 0 <_entry_offset>
+
+800019f0 <non_taken_366fail>:
+800019f0:	01300513          	li	a0,19
+800019f4:	8004a2b7          	lui	t0,0x8004a
+800019f8:	10028293          	addi	t0,t0,256 # 8004a100 <_end+0xffff7100>
+800019fc:	fe012823          	sw	zero,-16(sp)
+80001a00:	0002c403          	lbu	s0,0(t0)
+80001a04:	fe8109a3          	sb	s0,-13(sp)
+80001a08:	ff012403          	lw	s0,-16(sp)
+
+80001a0c <srai_380>:
+80001a0c:	fe812823          	sw	s0,-16(sp)
+80001a10:	80048237          	lui	tp,0x80048
+80001a14:	f0020213          	addi	tp,tp,-256 # 80047f00 <_end+0xffff4f00>
+80001a18:	ff314403          	lbu	s0,-13(sp)
+
+80001a1c <slli_383>:
+80001a1c:	00840433          	add	s0,s0,s0
+80001a20:	00840433          	add	s0,s0,s0
+80001a24:	00820233          	add	tp,tp,s0
+80001a28:	00022403          	lw	s0,0(tp) # 0 <_entry_offset>
+80001a2c:	00000013          	nop
+80001a30:	00200413          	li	s0,2
+80001a34:	00200393          	li	t2,2
+
+80001a38 <bne_384fail>:
+80001a38:	fe812823          	sw	s0,-16(sp)
+80001a3c:	fe712623          	sw	t2,-20(sp)
+80001a40:	fe812e23          	sw	s0,-4(sp)
+80001a44:	fe912c23          	sw	s1,-8(sp)
+80001a48:	8004a437          	lui	s0,0x8004a
+80001a4c:	00040413          	mv	s0,s0
+80001a50:	ff014183          	lbu	gp,-16(sp)
+80001a54:	00340233          	add	tp,s0,gp
+80001a58:	00100193          	li	gp,1
+80001a5c:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80001a60:	fec14183          	lbu	gp,-20(sp)
+80001a64:	003401b3          	add	gp,s0,gp
+80001a68:	00018023          	sb	zero,0(gp)
+80001a6c:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001a70:	ff114483          	lbu	s1,-15(sp)
+80001a74:	00940233          	add	tp,s0,s1
+80001a78:	00100493          	li	s1,1
+80001a7c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001a80:	fed14483          	lbu	s1,-19(sp)
+80001a84:	009404b3          	add	s1,s0,s1
+80001a88:	00048023          	sb	zero,0(s1)
+80001a8c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001a90:	009181b3          	add	gp,gp,s1
+80001a94:	ff214483          	lbu	s1,-14(sp)
+80001a98:	00940233          	add	tp,s0,s1
+80001a9c:	00100493          	li	s1,1
+80001aa0:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001aa4:	fee14483          	lbu	s1,-18(sp)
+80001aa8:	009404b3          	add	s1,s0,s1
+80001aac:	00048023          	sb	zero,0(s1)
+80001ab0:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001ab4:	009181b3          	add	gp,gp,s1
+80001ab8:	ff314483          	lbu	s1,-13(sp)
+80001abc:	00940233          	add	tp,s0,s1
+80001ac0:	00100493          	li	s1,1
+80001ac4:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001ac8:	fef14483          	lbu	s1,-17(sp)
+80001acc:	009404b3          	add	s1,s0,s1
+80001ad0:	00048023          	sb	zero,0(s1)
+80001ad4:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001ad8:	009181b3          	add	gp,gp,s1
+80001adc:	80002237          	lui	tp,0x80002
+80001ae0:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001ae4:	00320233          	add	tp,tp,gp
+80001ae8:	ff812483          	lw	s1,-8(sp)
+80001aec:	ffc12403          	lw	s0,-4(sp)
+80001af0:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001af4 <slli_393>:
+80001af4:	00420233          	add	tp,tp,tp
+80001af8:	00420233          	add	tp,tp,tp
+80001afc:	00410233          	add	tp,sp,tp
+80001b00:	800021b7          	lui	gp,0x80002
+80001b04:	b2018193          	addi	gp,gp,-1248 # 80001b20 <_end+0xfffaeb20>
+80001b08:	fe312823          	sw	gp,-16(sp)
+80001b0c:	800021b7          	lui	gp,0x80002
+80001b10:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80001b14:	fe312623          	sw	gp,-20(sp)
+80001b18:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80001b1c:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001b20 <bne_396pass>:
+80001b20:	fea12823          	sw	a0,-16(sp)
+80001b24:	fe812e23          	sw	s0,-4(sp)
+80001b28:	80002437          	lui	s0,0x80002
+80001b2c:	d0840413          	addi	s0,s0,-760 # 80001d08 <_end+0xfffaed08>
+80001b30:	ff014183          	lbu	gp,-16(sp)
+80001b34:	003401b3          	add	gp,s0,gp
+80001b38:	0001c183          	lbu	gp,0(gp)
+80001b3c:	ff114203          	lbu	tp,-15(sp)
+80001b40:	00440233          	add	tp,s0,tp
+80001b44:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+80001b48:	004181b3          	add	gp,gp,tp
+80001b4c:	ff214203          	lbu	tp,-14(sp)
+80001b50:	00440233          	add	tp,s0,tp
+80001b54:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+80001b58:	004181b3          	add	gp,gp,tp
+80001b5c:	ff314203          	lbu	tp,-13(sp)
+80001b60:	00440233          	add	tp,s0,tp
+80001b64:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+80001b68:	004181b3          	add	gp,gp,tp
+80001b6c:	80002237          	lui	tp,0x80002
+80001b70:	d0020213          	addi	tp,tp,-768 # 80001d00 <_end+0xfffaed00>
+80001b74:	00320233          	add	tp,tp,gp
+80001b78:	ffc12403          	lw	s0,-4(sp)
+80001b7c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80001b80 <slli_406>:
+80001b80:	00420233          	add	tp,tp,tp
+80001b84:	00420233          	add	tp,tp,tp
+80001b88:	00410233          	add	tp,sp,tp
+80001b8c:	800021b7          	lui	gp,0x80002
+80001b90:	bac18193          	addi	gp,gp,-1108 # 80001bac <_end+0xfffaebac>
+80001b94:	fe312823          	sw	gp,-16(sp)
+80001b98:	800021b7          	lui	gp,0x80002
+80001b9c:	bbc18193          	addi	gp,gp,-1092 # 80001bbc <_end+0xfffaebbc>
+80001ba0:	fe312623          	sw	gp,-20(sp)
+80001ba4:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffacfec>
+80001ba8:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001bac <fail>:
+80001bac:	00100513          	li	a0,1
+80001bb0:	80002237          	lui	tp,0x80002
+80001bb4:	c0420213          	addi	tp,tp,-1020 # 80001c04 <_end+0xfffaec04>
+80001bb8:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001bbc <pass>:
+80001bbc:	00000513          	li	a0,0
+80001bc0:	80002237          	lui	tp,0x80002
+80001bc4:	c0420213          	addi	tp,tp,-1020 # 80001c04 <_end+0xfffaec04>
+80001bc8:	00020067          	jr	tp # 0 <_entry_offset>
+80001bcc:	c0001073          	unimp
+	...
+
+80001c04 <halt>:
+80001c04:	00050513          	mv	a0,a0
+80001c08:	00100073          	ebreak
+80001c0c:	80002237          	lui	tp,0x80002
+80001c10:	c0c20213          	addi	tp,tp,-1012 # 80001c0c <_end+0xfffaec0c>
+80001c14:	00020067          	jr	tp # 0 <_entry_offset>
+
+80001c18 <_trm_init>:
+80001c18:	ff410113          	addi	sp,sp,-12
+80001c1c:	8004a537          	lui	a0,0x8004a
+80001c20:	f0050513          	addi	a0,a0,-256 # 80049f00 <_end+0xffff6f00>
+80001c24:	00112423          	sw	ra,8(sp)
+80001c28:	800000b7          	lui	ra,0x80000
+80001c2c:	04008093          	addi	ra,ra,64 # 80000040 <_end+0xfffad040>
+80001c30:	000080e7          	jalr	ra
+80001c34:	00050513          	mv	a0,a0
+80001c38:	00100073          	ebreak
+80001c3c:	80002237          	lui	tp,0x80002
+80001c40:	c3c20213          	addi	tp,tp,-964 # 80001c3c <_end+0xfffaec3c>
+80001c44:	00020067          	jr	tp # 0 <_entry_offset>

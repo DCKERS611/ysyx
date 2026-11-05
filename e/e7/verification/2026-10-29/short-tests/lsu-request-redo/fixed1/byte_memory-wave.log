@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/regress/programs/functional/byte_memory.bin: 92 bytes
+Waveform: /home/ysyx/ysyx-workbench/npc/build/wave/byte_memory_lsu_redo_fixed1.fst
+Result: halt_pc=0x80000058 a0=0x90abcdef ra=0x80000100 cycles=59
+instructions=23 cycles=59 IPC=0.389831
+exit code=0x90abcdef (expect 0x00000000)
+HIT BAD TRAP
+FAILED: 1/2
+make: *** [Makefile.cpptest:40: sim] Error 1

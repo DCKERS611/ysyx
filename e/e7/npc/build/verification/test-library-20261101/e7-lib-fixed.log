@@ -1,0 +1,22 @@
+python3 tests/run_cpu_tests.py --group functional --runner build/regress/cpu_test
+[ PASS ] functional/arithmetic: PASS: 11 checks
+[ PASS ] functional/byte_memory: PASS: 15 checks
+[ PASS ] functional/call_return: PASS: 17 checks
+[ PASS ] functional/word_memory: PASS: 10 checks
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/regress/cpu_test
+[ PASS ] boundary/consecutive_jumps: PASS: 18 checks
+[ PASS ] boundary/illegal_rd: PASS: 9 checks
+[ PASS ] boundary/illegal_rs1: PASS: 9 checks
+[ PASS ] boundary/illegal_rs2: PASS: 9 checks
+[ PASS ] boundary/illegal_store: PASS: 9 checks
+[ PASS ] boundary/immediate_sign: PASS: 14 checks
+[ PASS ] boundary/jalr_negative: PASS: 15 checks
+[ PASS ] boundary/jalr_same_register: PASS: 15 checks
+[ PASS ] boundary/u_immediate: PASS: 11 checks
+[ PASS ] boundary/unsupported_funct3: PASS: 9 checks
+[ PASS ] boundary/unsupported_funct7: PASS: 9 checks
+[ PASS ] boundary/unsupported_store: PASS: 9 checks
+[ PASS ] boundary/unsupported_system: PASS: 9 checks
+[ PASS ] boundary/x0_readonly: PASS: 24 checks
+boundary: 14/14 programs passed

@@ -1,0 +1,20 @@
+[ FAIL ] acceptance/array_sum NPC: a0=10 (0xa)
+partial output
+
+TimeoutExpired: Command '['/home/ysyx/ysyx-workbench/npc/build/regress/cpu_test', '/home/ysyx/ysyx-workbench/npc/build/acceptance/programs/array_sum.bin', '/home/ysyx/ysyx-workbench/npc/build/acceptance/programs/array_sum.expect', 'acceptance/array_sum']' timed out after 60 seconds
+
+[ FAIL ] acceptance/array_sum EMU: a0=10 (0xa)
+
+OSError: injected startup failure
+
+[ FAIL ] acceptance/array_sum DiffTest: a0=10 (0xa)
+missing result
+
+ValueError: expected one RESULT line, got 0
+
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)

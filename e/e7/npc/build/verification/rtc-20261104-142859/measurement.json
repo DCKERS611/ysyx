@@ -1,0 +1,75 @@
+{
+  "reason": "target_reached",
+  "returncode_after_controlled_stop": -2,
+  "samples": [
+    {
+      "second": 1,
+      "wall_from_start": 138.36167326298892
+    },
+    {
+      "second": 2,
+      "wall_from_start": 145.97270915999252,
+      "wall_interval": 7.611035897003603,
+      "simulated_interval": 1
+    },
+    {
+      "second": 3,
+      "wall_from_start": 153.85472565799137,
+      "wall_interval": 7.882016497998848,
+      "simulated_interval": 1
+    },
+    {
+      "second": 4,
+      "wall_from_start": 160.84101463700063,
+      "wall_interval": 6.9862889790092595,
+      "simulated_interval": 1
+    },
+    {
+      "second": 5,
+      "wall_from_start": 167.78767386000254,
+      "wall_interval": 6.946659223001916,
+      "simulated_interval": 1
+    },
+    {
+      "second": 6,
+      "wall_from_start": 175.00957903299422,
+      "wall_interval": 7.221905172991683,
+      "simulated_interval": 1
+    },
+    {
+      "second": 7,
+      "wall_from_start": 181.96787877599127,
+      "wall_interval": 6.958299742997042,
+      "simulated_interval": 1
+    },
+    {
+      "second": 8,
+      "wall_from_start": 189.0538767429971,
+      "wall_interval": 7.085997967005824,
+      "simulated_interval": 1
+    },
+    {
+      "second": 9,
+      "wall_from_start": 196.08851715599303,
+      "wall_interval": 7.034640412995941,
+      "simulated_interval": 1
+    },
+    {
+      "second": 10,
+      "wall_from_start": 203.27169552599662,
+      "wall_interval": 7.1831783700035885,
+      "simulated_interval": 1
+    },
+    {
+      "second": 11,
+      "wall_from_start": 210.29385706699395,
+      "wall_interval": 7.022161540997331,
+      "simulated_interval": 1
+    }
+  ],
+  "log_directory": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-20261104-142859",
+  "simulated_span_seconds": 10,
+  "wall_span_seconds": 71.93218380400504,
+  "wall_seconds_per_simulated_second": 7.193218380400504,
+  "relative_error": 6.193218380400504
+}

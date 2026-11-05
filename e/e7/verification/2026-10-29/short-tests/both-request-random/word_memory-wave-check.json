@@ -1,0 +1,7 @@
+{
+  "cycles": 78,
+  "ifu_stalls": 5,
+  "lsu_stalls": 0,
+  "lsu_stall_edge_times": [],
+  "checks": "PASS"
+}

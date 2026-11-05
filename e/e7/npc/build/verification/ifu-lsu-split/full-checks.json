@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "full-default",
+    "suite": "riscv-tests",
+    "pass": 38,
+    "expected_failures": [],
+    "seconds": 12.612,
+    "exit": 0
+  },
+  {
+    "mode": "full-default",
+    "suite": "cpu-tests",
+    "pass": 35,
+    "expected_failures": [
+      "wrong"
+    ],
+    "seconds": 83.49,
+    "exit": 0
+  },
+  {
+    "mode": "full-random-requests",
+    "suite": "riscv-tests",
+    "pass": 38,
+    "expected_failures": [],
+    "seconds": 12.545,
+    "exit": 0
+  },
+  {
+    "mode": "full-random-requests",
+    "suite": "cpu-tests",
+    "pass": 35,
+    "expected_failures": [
+      "wrong"
+    ],
+    "seconds": 86.997,
+    "exit": 0
+  }
+]

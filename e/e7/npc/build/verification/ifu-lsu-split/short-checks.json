@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "fixed1",
+    "case": "word_memory",
+    "cycles": 16,
+    "checks": "PASS"
+  },
+  {
+    "mode": "fixed1",
+    "case": "byte_memory",
+    "cycles": 59,
+    "checks": "PASS"
+  },
+  {
+    "mode": "mem-random",
+    "case": "word_memory",
+    "cycles": 71,
+    "checks": "PASS"
+  },
+  {
+    "mode": "mem-random",
+    "case": "byte_memory",
+    "cycles": 330,
+    "checks": "PASS"
+  },
+  {
+    "mode": "mem-random",
+    "wave_match": true,
+    "signal_count": 16,
+    "timestamps": 146
+  },
+  {
+    "mode": "both-random",
+    "case": "word_memory",
+    "cycles": 78,
+    "checks": "PASS"
+  },
+  {
+    "mode": "both-random",
+    "case": "byte_memory",
+    "cycles": 357,
+    "checks": "PASS"
+  }
+]

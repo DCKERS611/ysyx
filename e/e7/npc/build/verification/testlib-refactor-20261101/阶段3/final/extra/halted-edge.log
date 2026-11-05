@@ -1,0 +1,3 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/functional/arithmetic.bin: 20 bytes
+EDGE PASS ebreak time=89 cycles=43 retired=5 attempts=5
+step called after finish

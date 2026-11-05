@@ -1,0 +1,3 @@
+Loaded /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/string-minirv-npc.bin: 300468 bytes
+HIT BAD TRAP: a0=0x00000001
+DiffTest states agree, but the AM program returned nonzero.

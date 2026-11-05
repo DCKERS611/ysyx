@@ -1,0 +1,3 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/functional/arithmetic.bin: 20 bytes
+RESULT case=probe backend=diff verdict=fail stop=cycle_limit pc=0x80000000 inst=0x00000000 cycles=5 retired=0 attempts=0 checks=0 failures=0 delay=random core=0 core_fail=0 extra=0 extra_fail=0 memory=0 memory_fail=0
+Difftest cycle limit exceeded

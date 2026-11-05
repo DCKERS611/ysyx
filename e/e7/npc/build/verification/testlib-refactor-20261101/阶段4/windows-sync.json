@@ -1,0 +1,34 @@
+{
+  "verified_source_files": 68,
+  "copied_changed_files": 21,
+  "copied": [
+    "minirvEMU/main.cpp",
+    "npc/Makefile.cpptest",
+    "npc/Makefile.soc",
+    "npc/README.md",
+    "npc/csrc/check.h",
+    "npc/csrc/cpu_view.h",
+    "npc/csrc/sim.cpp",
+    "npc/csrc/sim.h",
+    "npc/csrc/test_suite.h",
+    "npc/tests/Makefile.mk",
+    "npc/tests/README.md",
+    "npc/tests/am_main.cpp",
+    "npc/tests/checker_test.cpp",
+    "npc/tests/cpu_test.cpp",
+    "npc/tests/difftest.cpp",
+    "npc/tests/expectations.h",
+    "npc/tests/run_acceptance.py",
+    "npc/tests/run_cpu_tests.py",
+    "npc/tests/soc_main.cpp",
+    "npc/tests/test_mkprog.py",
+    "npc/tools/mkprog.py"
+  ],
+  "removed_moved_old_paths": [
+    "npc/csrc/main.cpp",
+    "npc/csrc/difftest.cpp",
+    "npc/csrc/soc_main.cpp"
+  ],
+  "directory_comparison": "csrc/tests equal excluding caches",
+  "build_copied": false
+}

@@ -1,0 +1,45 @@
+{
+  "files": 437,
+  "bytes": 81715512,
+  "directories": 420,
+  "missing": [],
+  "hash_mismatch": [],
+  "directory_missing": [],
+  "extra_destination_files": [],
+  "symlinks": [],
+  "per_project": {
+    "light": 58,
+    "npc": 62,
+    "npc-e7": 317
+  },
+  "wrong_layout_exists": false,
+  "archived_old_mapping": [
+    {
+      "path": "verification/2026-11-05/sync-audit/previous-wrong-layout/ecc-npc/ecc.toml",
+      "exists": true,
+      "same_as_source": true
+    },
+    {
+      "path": "verification/2026-11-05/sync-audit/previous-wrong-layout/ecc-npc/rtl/filelist.f",
+      "exists": true,
+      "same_as_source": true
+    },
+    {
+      "path": "verification/2026-11-05/sync-audit/previous-wrong-layout/ecc-npc-e7/ecc.toml",
+      "exists": true,
+      "same_as_source": true
+    },
+    {
+      "path": "verification/2026-11-05/sync-audit/previous-wrong-layout/ecc-npc-e7/Makefile",
+      "exists": true,
+      "same_as_source": true
+    },
+    {
+      "path": "verification/2026-11-05/sync-audit/previous-wrong-layout/ecc-npc-e7/rtl/filelist.f",
+      "exists": true,
+      "same_as_source": true
+    }
+  ],
+  "diagnostic_files": 63,
+  "pass": true
+}

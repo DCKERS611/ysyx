@@ -1,0 +1,32 @@
+{
+    "PDK": "ics55",
+    "Design": "ecc_smoke",
+    "Top module": "ecc_smoke",
+    "Die": {
+        "Size": [],
+        "Area": 0
+    },
+    "Core": {
+        "Size": [],
+        "Area": 0,
+        "Bounding box": "",
+        "Utilitization": 0.4,
+        "Margin": [
+            2,
+            2
+        ],
+        "Aspect ratio": 1
+    },
+    "Max fanout": 20,
+    "Target density": 0.2,
+    "Target overflow": 0.1,
+    "Global right padding": 0,
+    "Cell padding x": 300,
+    "Routability opt flag": 1,
+    "Clock": "clk",
+    "Frequency max [MHz]": 100.0,
+    "Bottom layer": "MET2",
+    "Top layer": "MET5",
+    "STA max paths": 1000,
+    "PDK Root": "/home/ysyx/ysyx-workbench/icsprout55-pdk"
+}

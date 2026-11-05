@@ -1,0 +1,8 @@
+Hello, AbstractMachine!
+mainargs = ''.
+Loaded ../am-kernels/kernels/hello/build/hello-minirv-npc.bin: 297472 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] ../am-kernels/kernels/hello/build/hello-minirv-npc.bin
+PASS: 517939 (30467 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 224861
+halt_pc=0x80000504 NPC.pc=0x80000508 EMU.pc=0x80000504

@@ -1,0 +1,83 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.006 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.006 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+[ PASS ] acceptance/array_sum NPC: a0=10 (0xa)
+[ PASS ] acceptance/array_sum EMU: a0=10 (0xa)
+[ PASS ] acceptance/array_sum DiffTest: a0=10 (0xa)
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)
+Loaded /home/ysyx/ysyx-workbench/npc/build/acceptance/programs/array_sum.bin: 84 bytes
+Waveform: /home/ysyx/ysyx-workbench/npc/build/acceptance/waves/array_sum.fst
+pc=0x00000000 inst=0x08000113 --> next_pc=0x00000004
+pc=0x00000004 inst=0x00100293 --> next_pc=0x00000008
+pc=0x00000008 inst=0x00512023 --> next_pc=0x0000000c
+pc=0x0000000c inst=0x00200293 --> next_pc=0x00000010
+pc=0x00000010 inst=0x00512223 --> next_pc=0x00000014
+pc=0x00000014 inst=0x00300293 --> next_pc=0x00000018
+pc=0x00000018 inst=0x00512423 --> next_pc=0x0000001c
+pc=0x0000001c inst=0x00400293 --> next_pc=0x00000020
+pc=0x00000020 inst=0x00512623 --> next_pc=0x00000024
+pc=0x00000024 inst=0x00000513 --> next_pc=0x00000028
+pc=0x00000028 inst=0x03000067 --> next_pc=0x00000030
+pc=0x00000030 inst=0x00012303 --> next_pc=0x00000034
+pc=0x00000034 inst=0x00650533 --> next_pc=0x00000038
+pc=0x00000038 inst=0x00412303 --> next_pc=0x0000003c
+pc=0x0000003c inst=0x00650533 --> next_pc=0x00000040
+pc=0x00000040 inst=0x00812303 --> next_pc=0x00000044
+pc=0x00000044 inst=0x00650533 --> next_pc=0x00000048
+pc=0x00000048 inst=0x00c12303 --> next_pc=0x0000004c
+pc=0x0000004c inst=0x00650533 --> next_pc=0x00000050
+ebreak @ pc=0x00000050
+pc=0x00000050 inst=0x00100073 --> next_pc=0x00000054
+Result: halt_pc=0x00000050 a0=0x0000000a ra=0x00000000 cycles=20
+PASS: 1 checks
+Loaded /home/ysyx/ysyx-workbench/npc/build/acceptance/programs/byte_sum.bin: 72 bytes
+Waveform: /home/ysyx/ysyx-workbench/npc/build/acceptance/waves/byte_sum.fst
+pc=0x00000000 inst=0x10000113 --> next_pc=0x00000004
+pc=0x00000004 inst=0x123452b7 --> next_pc=0x00000008
+pc=0x00000008 inst=0x67828293 --> next_pc=0x0000000c
+pc=0x0000000c inst=0x00512023 --> next_pc=0x00000010
+pc=0x00000010 inst=0x00000513 --> next_pc=0x00000014
+pc=0x00000014 inst=0x00014303 --> next_pc=0x00000018
+pc=0x00000018 inst=0x00650533 --> next_pc=0x0000001c
+pc=0x0000001c inst=0x00114303 --> next_pc=0x00000020
+pc=0x00000020 inst=0x00650533 --> next_pc=0x00000024
+pc=0x00000024 inst=0x00214303 --> next_pc=0x00000028
+pc=0x00000028 inst=0x00650533 --> next_pc=0x0000002c
+pc=0x0000002c inst=0x00314303 --> next_pc=0x00000030
+pc=0x00000030 inst=0x00650533 --> next_pc=0x00000034
+pc=0x00000034 inst=0x0ab00393 --> next_pc=0x00000038
+pc=0x00000038 inst=0x00710123 --> next_pc=0x0000003c
+pc=0x0000003c inst=0x04400067 --> next_pc=0x00000044
+ebreak @ pc=0x00000044
+pc=0x00000044 inst=0x00100073 --> next_pc=0x00000048
+Result: halt_pc=0x00000044 a0=0x00000114 ra=0x00000000 cycles=17
+PASS: 1 checks
+add: pre_pc=0x00000034, rising edge at 28 ps
+  PASS before.inst: 0x00650533 expect=0x00650533
+  PASS before.rs1_data: 0x00000000 expect=0x00000000
+  PASS before.rs2_data: 0x00000001 expect=0x00000001
+  PASS before.alu_src: 0x00000000 expect=0x00000000
+  PASS before.alu_out: 0x00000001 expect=0x00000001
+  PASS before.wen: 0x00000001 expect=0x00000001
+  PASS before.rd: 0x0000000a expect=0x0000000a
+  PASS before.wdata: 0x00000001 expect=0x00000001
+  PASS after.pc: 0x00000038 expect=0x00000038
+Traceback (most recent call last):
+  File "/home/ysyx/ysyx-workbench/npc/tests/check_acceptance_wave.py", line 92, in <module>
+    raise SystemExit(main())
+  File "/home/ysyx/ysyx-workbench/npc/tests/check_acceptance_wave.py", line 81, in main
+    actual = getter(signal)
+  File "/home/ysyx/ysyx-workbench/npc/tests/check_acceptance_wave.py", line 49, in <lambda>
+    return lambda name: value(before, name), lambda name: value(after, name), after[0]
+  File "/home/ysyx/ysyx-workbench/npc/tests/check_acceptance_wave.py", line 44, in value
+    symbol = symbols["TOP.top." + name]
+KeyError: 'TOP.top.u_rf.rf[10]'
+make: *** [tests/Makefile.mk:80: check-waves] Error 1

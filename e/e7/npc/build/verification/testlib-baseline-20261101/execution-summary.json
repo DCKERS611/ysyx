@@ -1,0 +1,422 @@
+[
+  {
+    "name": "lint",
+    "command": "make -f Makefile.cpptest lint",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.17
+  },
+  {
+    "name": "test-library",
+    "command": "make -f Makefile.cpptest test-library",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.03
+  },
+  {
+    "name": "test-all",
+    "command": "make -f Makefile.cpptest test-all",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 1.11
+  },
+  {
+    "name": "test-fixed",
+    "command": "make -f Makefile.cpptest test-fixed",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.93
+  },
+  {
+    "name": "difftest",
+    "command": "make -f Makefile.diff difftest",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 5.45
+  },
+  {
+    "name": "difftest-fixed",
+    "command": "make -f Makefile.diff difftest-fixed",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 5.4
+  },
+  {
+    "name": "test-acceptance",
+    "command": "make -f Makefile.cpptest test-acceptance",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 1.09
+  },
+  {
+    "name": "check-waves",
+    "command": "make -f Makefile.cpptest check-waves",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 2.9
+  },
+  {
+    "name": "test_mkprog",
+    "command": "python3 -m unittest discover -s tests -p test_mkprog.py -v",
+    "cwd": "/home/ysyx/ysyx-workbench/npc",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.13
+  },
+  {
+    "name": "dummy-run",
+    "command": "make ARCH=minirv-npc ALL=dummy run",
+    "cwd": "/home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.19
+  },
+  {
+    "name": "dummy-diff",
+    "command": "make ARCH=minirv-npc ALL=dummy run DIFFTEST=1",
+    "cwd": "/home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.33
+  },
+  {
+    "name": "hello-run",
+    "command": "make ARCH=minirv-npc run",
+    "cwd": "/home/ysyx/ysyx-workbench/am-kernels/kernels/hello",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.33
+  },
+  {
+    "name": "hello-diff",
+    "command": "make ARCH=minirv-npc run DIFFTEST=1",
+    "cwd": "/home/ysyx/ysyx-workbench/am-kernels/kernels/hello",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 0.54
+  },
+  {
+    "name": "cpu-tests-diff",
+    "command": "make ARCH=minirv-npc run DIFFTEST=1",
+    "cwd": "/home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 83.52,
+    "summary": [
+      [
+        "shift",
+        "PASS"
+      ],
+      [
+        "bit",
+        "PASS"
+      ],
+      [
+        "unalign",
+        "PASS"
+      ],
+      [
+        "switch",
+        "PASS"
+      ],
+      [
+        "to-lower-case",
+        "PASS"
+      ],
+      [
+        "sum",
+        "PASS"
+      ],
+      [
+        "fact",
+        "PASS"
+      ],
+      [
+        "select-sort",
+        "PASS"
+      ],
+      [
+        "mov-c",
+        "PASS"
+      ],
+      [
+        "string",
+        "PASS"
+      ],
+      [
+        "quick-sort",
+        "PASS"
+      ],
+      [
+        "recursion",
+        "PASS"
+      ],
+      [
+        "matrix-mul",
+        "PASS"
+      ],
+      [
+        "goldbach",
+        "PASS"
+      ],
+      [
+        "leap-year",
+        "PASS"
+      ],
+      [
+        "min3",
+        "PASS"
+      ],
+      [
+        "add-longlong",
+        "PASS"
+      ],
+      [
+        "dummy",
+        "PASS"
+      ],
+      [
+        "wanshu",
+        "PASS"
+      ],
+      [
+        "mul-longlong",
+        "PASS"
+      ],
+      [
+        "add",
+        "PASS"
+      ],
+      [
+        "pascal",
+        "PASS"
+      ],
+      [
+        "movsx",
+        "PASS"
+      ],
+      [
+        "if-else",
+        "PASS"
+      ],
+      [
+        "div",
+        "PASS"
+      ],
+      [
+        "load-store",
+        "PASS"
+      ],
+      [
+        "hello-str",
+        "PASS"
+      ],
+      [
+        "wrong",
+        "***FAIL***"
+      ],
+      [
+        "prime",
+        "PASS"
+      ],
+      [
+        "bubble-sort",
+        "PASS"
+      ],
+      [
+        "sub-longlong",
+        "PASS"
+      ],
+      [
+        "mersenne",
+        "PASS"
+      ],
+      [
+        "max",
+        "PASS"
+      ],
+      [
+        "crc32",
+        "PASS"
+      ],
+      [
+        "fib",
+        "PASS"
+      ],
+      [
+        "narcissistic",
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "name": "riscv-tests-i-diff",
+    "command": "make ARCH=minirv-npc run TEST_ISA=i DIFFTEST=1",
+    "cwd": "/home/ysyx/ysyx-workbench/riscv-tests",
+    "returncode": 0,
+    "semantic_pass": true,
+    "seconds": 12.62,
+    "summary": [
+      [
+        "add",
+        "PASS"
+      ],
+      [
+        "addi",
+        "PASS"
+      ],
+      [
+        "and",
+        "PASS"
+      ],
+      [
+        "andi",
+        "PASS"
+      ],
+      [
+        "auipc",
+        "PASS"
+      ],
+      [
+        "beq",
+        "PASS"
+      ],
+      [
+        "bge",
+        "PASS"
+      ],
+      [
+        "bgeu",
+        "PASS"
+      ],
+      [
+        "blt",
+        "PASS"
+      ],
+      [
+        "bltu",
+        "PASS"
+      ],
+      [
+        "bne",
+        "PASS"
+      ],
+      [
+        "jal",
+        "PASS"
+      ],
+      [
+        "jalr",
+        "PASS"
+      ],
+      [
+        "lb",
+        "PASS"
+      ],
+      [
+        "lbu",
+        "PASS"
+      ],
+      [
+        "lh",
+        "PASS"
+      ],
+      [
+        "lhu",
+        "PASS"
+      ],
+      [
+        "lui",
+        "PASS"
+      ],
+      [
+        "lw",
+        "PASS"
+      ],
+      [
+        "or",
+        "PASS"
+      ],
+      [
+        "ori",
+        "PASS"
+      ],
+      [
+        "sb",
+        "PASS"
+      ],
+      [
+        "sh",
+        "PASS"
+      ],
+      [
+        "simple",
+        "PASS"
+      ],
+      [
+        "sll",
+        "PASS"
+      ],
+      [
+        "slli",
+        "PASS"
+      ],
+      [
+        "slt",
+        "PASS"
+      ],
+      [
+        "slti",
+        "PASS"
+      ],
+      [
+        "sltiu",
+        "PASS"
+      ],
+      [
+        "sltu",
+        "PASS"
+      ],
+      [
+        "sra",
+        "PASS"
+      ],
+      [
+        "srai",
+        "PASS"
+      ],
+      [
+        "srl",
+        "PASS"
+      ],
+      [
+        "srli",
+        "PASS"
+      ],
+      [
+        "sub",
+        "PASS"
+      ],
+      [
+        "sw",
+        "PASS"
+      ],
+      [
+        "xor",
+        "PASS"
+      ],
+      [
+        "xori",
+        "PASS"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,1247 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+
+1. Executing Liberty frontend: /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib
+Imported 747 cell types from liberty file.
+
+2. Executing Liberty frontend: /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib
+Reading Verilog sources with native parser: /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v
+Imported 747 cell types from liberty file.
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+[INFO]: STRATEGY = BALANCE-3
+[INFO]: CLK_PERIOD = 10000.0ps
+[INFO]: ABC_TARGET  = 10000ps
+[INFO]: BALANCE_RELAX_FAC  = 1.0
+[INFO]: BALANCE_RETIME_M   = 5
+[INFO]: BALANCE_MAX_FO     = 24
+[INFO]: ABC script: +fx;mfs;strash;refactor;balance;rewrite;refactor;balance;rewrite;rewrite,-z;balance;refactor,-z;rewrite,-z;balance;refactor;retime,-D,{D},-M,5;scleanup;map,-p,-B,0.2,-A,0.9,-M,0;retime,-D,{D};&get,-n;&st;&dch;&nf;&put;upsize,{D};dnsize,{D};upsize,{D};dnsize,{D};stime,-p;print_stats -m
+
+3. Executing Verilog-2005 frontend: /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v
+Parsing SystemVerilog input from `/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v' to AST representation.
+Generating RTLIL representation for module `\light_reg'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v
+Parsing SystemVerilog input from `/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v' to AST representation.
+Generating RTLIL representation for module `\Reg'.
+Generating RTLIL representation for module `\MuxKeyInternal'.
+Generating RTLIL representation for module `\MuxKey'.
+Generating RTLIL representation for module `\MuxKeyWithDefault'.
+Successfully finished Verilog frontend.
+
+5. Executing ATTRMAP pass (move or copy attributes).
+
+6. Executing ATTRMVCP pass (move or copy attributes).
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \light_reg
+Used module:     \Reg
+Parameter \WIDTH = 16
+Parameter \RESET_VAL = 16'0000000000000001
+
+7.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\Reg'.
+Parameter \WIDTH = 16
+Parameter \RESET_VAL = 16'0000000000000001
+Generating RTLIL representation for module `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg'.
+Parameter \WIDTH = 32
+Parameter \RESET_VAL = 0
+
+7.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\Reg'.
+Parameter \WIDTH = 32
+Parameter \RESET_VAL = 0
+Generating RTLIL representation for module `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg'.
+
+7.1.4. Analyzing design hierarchy..
+Top module:  \light_reg
+Used module:     $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg
+Used module:     $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg
+
+7.1.5. Analyzing design hierarchy..
+Top module:  \light_reg
+Used module:     $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg
+Used module:     $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg
+Removing unused module `\MuxKeyWithDefault'.
+Removing unused module `\MuxKey'.
+Removing unused module `\MuxKeyInternal'.
+Removing unused module `\Reg'.
+Removed 4 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$26 in module $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.
+Marked 1 switch rules as full_case in process $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$25 in module $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.
+Removed a total of 0 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$26'.
+     1/1: $0\dout[31:0]
+Creating decoders for process `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$25'.
+     1/1: $0\dout[15:0]
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.\dout' using process `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$26'.
+  created $dff cell `$procdff$37' with positive edge clock.
+Creating register for signal `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.\dout' using process `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$25'.
+  created $dff cell `$procdff$38' with positive edge clock.
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$26'.
+Removing empty process `$paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$26'.
+Found and cleaned up 2 empty switches in `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$25'.
+Removing empty process `$paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/template.v:9$proc$25'.
+Cleaned up 4 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.
+Optimizing module $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.
+Optimizing module light_reg.
+<suppressed ~1 debug messages>
+
+7.3. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg...
+Checking module $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg...
+Checking module light_reg...
+Found and reported 0 problems.
+
+7.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$7f9e490b9ced5d8980eed022c7283e4d4d2c8983\Reg.
+Deleting now unused module $paramod$203c1185041f521d637c738f2d34cc90ec20fa40\Reg.
+<suppressed ~2 debug messages>
+
+7.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+<suppressed ~2 debug messages>
+
+7.6. Executing CHECK pass (checking for obvious problems).
+Checking module light_reg...
+Found and reported 0 problems.
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+7.8. Executing OPT pass (performing simple optimizations).
+
+7.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 11 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+7.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+7.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 11 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+7.9. Executing FSM pass (extract and optimize FSM).
+
+7.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+7.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+7.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+7.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+7.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+7.10. Executing OPT pass (performing simple optimizations).
+
+7.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 11 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+7.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+7.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 11 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\cnt_reg.$procdff$37 ($dff) from module light_reg (D = $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$add$2_Y, Q = \cnt_reg.dout, rval = 0).
+Adding SRST signal on $flatten\led_reg.$procdff$38 ($dff) from module light_reg (D = \led_reg.din, Q = \led_reg.dout, rval = 16'0000000000000001).
+Adding EN signal on $auto$ff.cc:337:slice$44 ($sdff) from module light_reg (D = { \led_reg.dout [14:0] \led_reg.dout [15] }, Q = \led_reg.dout).
+
+7.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 4 unused cells and 6 unused wires.
+<suppressed ~9 debug messages>
+
+7.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+7.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+7.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 8 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.10.16. Finished fast OPT passes. (There is nothing left to do.)
+
+7.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 9 bits (of 32) from port B of cell light_reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$ge$1 ($ge).
+Removed top 31 bits (of 32) from port B of cell light_reg.$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$add$2 ($add).
+
+7.12. Executing PEEPOPT pass (run peephole optimizers).
+
+7.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module light_reg:
+  creating $macc model for $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$add$2 ($add).
+  creating $alu model for $macc $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$add$2.
+  creating $alu model for $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$ge$1 ($ge): new $alu
+  creating $alu cell for $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$ge$1: $auto$alumacc.cc:578:replace_alu$47
+  creating $alu cell for $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:26$add$2: $auto$alumacc.cc:578:replace_alu$60
+  created 2 $alu and 0 $macc cells.
+
+7.15. Executing SHARE pass (SAT-based resource sharing).
+
+7.16. Executing OPT pass (performing simple optimizations).
+
+7.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 13 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+7.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+    New input vector for $reduce_or cell $auto$simple.cc:242:combine_resets$43: { $auto$rtlil.cc:3203:Not$57 $auto$rtlil.cc:3206:ReduceAnd$53 \rst }
+  Optimizing cells in module \light_reg.
+Performed a total of 1 changes.
+
+7.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 13 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+7.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+7.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+7.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 12 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+7.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+7.16.16. Finished fast OPT passes. (There is nothing left to do.)
+
+7.17. Executing MEMORY pass.
+
+7.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+7.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+8. Executing SHARE pass (SAT-based resource sharing).
+
+9. Executing ONEHOT pass.
+
+10. Executing MUXPACK pass ($mux cell cascades to $pmux).
+Converted 0 (p)mux cells into 0 pmux cells.
+
+11. Executing OPT_DEMORGAN pass (push inverters through $reduce_* cells).
+Warning: Feature 'opt_demorgan' is deprecated and may be removed as soon as Yosys 0.72.
+Inspecting $reduce_and cell $auto$alumacc.cc:97:get_eq$52 (32 inputs)
+  0 / 32 inputs are inverted, not pushing
+Inspecting $reduce_or cell $auto$simple.cc:242:combine_resets$43 (3 inputs)
+  0 / 3 inputs are inverted, not pushing
+
+12. Executing OPT_FFINV pass (push inverters through FFs).
+Discovering LUTs.
+Pushed 0 inverters.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 12 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 2 unused cells and 8 unused wires.
+<suppressed ~10 debug messages>
+
+13.5. Finished fast OPT passes.
+
+14. Executing SYNTH pass.
+
+14.1. Executing OPT pass (performing simple optimizations).
+
+14.1.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+<suppressed ~1 debug messages>
+
+14.1.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 16 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+14.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+14.1.5. Finished fast OPT passes.
+
+14.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+14.3. Executing OPT pass (performing simple optimizations).
+
+14.3.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+14.3.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 16 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+14.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+14.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+14.3.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 16 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+14.3.6. Executing OPT_SHARE pass.
+
+14.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+14.3.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+14.3.10. Finished fast OPT passes. (There is nothing left to do.)
+
+14.4. Executing TECHMAP pass (map to technology primitives).
+
+14.4.1. Executing Verilog-2005 frontend: /home/ysyx/tools/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/ysyx/tools/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+14.4.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$060d28a60a69f847ce26a32daddc1393efec1530\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~650 debug messages>
+
+14.5. Executing OPT pass (performing simple optimizations).
+
+14.5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+<suppressed ~482 debug messages>
+
+14.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 377 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Computing hashes of 335 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+<suppressed ~126 debug messages>
+Removed a total of 42 cells.
+
+14.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 71 unused cells and 236 unused wires.
+<suppressed ~72 debug messages>
+
+14.5.5. Finished fast OPT passes.
+
+14.6. Executing ABC pass (technology mapping using ABC).
+
+14.6.1. Summary of detected clock domains:
+  232 cells in clk=\clk, en={ }, arst={ }, srst=$auto$simple.cc:240:combine_resets$42
+  32 cells in clk=\clk, en=$/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:27$eq$4_Y, arst={ }, srst=\rst
+
+14.6.2. Extracting gate netlist of module `\light_reg' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, synchronously reset by $auto$simple.cc:240:combine_resets$42
+
+14.6.3. Extracting gate netlist of module `\light_reg' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $/home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.v:27$eq$4_Y, synchronously reset by \rst
+
+14.6.3.1. Executed ABC.
+Extracted 200 gates and 233 wires to a netlist network with 33 inputs and 49 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2026 05:00:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+14.6.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       33
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:       23
+ABC RESULTS:              XNOR cells:        3
+ABC RESULTS:               XOR cells:       25
+ABC RESULTS:        internal signals:      151
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       49
+Removing temp directory.
+
+14.6.3.1. Executed ABC.
+Extracted 16 gates and 32 wires to a netlist network with 16 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2026 05:00:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+14.6.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        7
+ABC RESULTS:               NOR cells:        8
+ABC RESULTS:        internal signals:       15
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+14.7. Executing OPT pass (performing simple optimizations).
+
+14.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+14.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 161 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+14.7.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 0 unused cells and 158 unused wires.
+<suppressed ~1 debug messages>
+
+14.7.5. Finished fast OPT passes.
+
+14.8. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `light_reg'. Setting top module to light_reg.
+
+14.8.1. Analyzing design hierarchy..
+Top module:  \light_reg
+
+14.8.2. Analyzing design hierarchy..
+Top module:  \light_reg
+Removed 0 unused modules.
+
+14.9. Printing statistics.
+
+=== light_reg ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       87 wires
+      195 wire bits
+        4 public wires
+       50 public wire bits
+        4 ports
+       50 port bits
+      161 cells
+        3   $_ANDNOT_
+       40   $_AND_
+        7   $_NAND_
+       11   $_NOR_
+        1   $_NOT_
+       23   $_OR_
+       15   $_SDFFE_PP0P_
+        1   $_SDFFE_PP1P_
+       32   $_SDFF_PP0_
+        3   $_XNOR_
+       25   $_XOR_
+
+14.10. Executing CHECK pass (checking for obvious problems).
+Checking module light_reg...
+Found and reported 0 problems.
+
+15. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+16. Executing TECHMAP pass (map to technology primitives).
+
+16.1. Executing Verilog-2005 frontend: /home/ysyx/tools/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/ysyx/tools/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+16.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~77 debug messages>
+
+17. Executing OPT pass (performing simple optimizations).
+
+17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 161 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+17.5. Finished fast OPT passes.
+
+18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+19. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+20. Executing AUTONAME pass.
+Renamed 226 objects in module light_reg.
+<suppressed ~226 debug messages>
+Removed 0 unused cells and 32 unused wires.
+
+21. Executing CLOCK_GATE pass (extract clock gating out of flip flops).
+Selected rising edge ICG \ICGX0P5H7R from Liberty file
+Selected falling edge ICG \ICGNX0P5H7R from Liberty file
+Converted 0 FFs.
+<suppressed ~58 debug messages>
+
+22. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+  cell DFFNQX1H7R (noninv, pins=3, area=6.44) is a direct match for cell type $_DFF_N_.
+  cell DFFQX0P5H7R (noninv, pins=3, area=6.16) is a direct match for cell type $_DFF_P_.
+  cell DFFNRX0P5H7R (noninv, pins=5, area=8.40) is a direct match for cell type $_DFF_NN0_.
+  cell DFFNSX0P5H7R (noninv, pins=5, area=9.24) is a direct match for cell type $_DFF_NN1_.
+  cell DFFRQX0P5H7R (noninv, pins=4, area=7.84) is a direct match for cell type $_DFF_PN0_.
+  cell DFFSQX1H7R (noninv, pins=4, area=8.12) is a direct match for cell type $_DFF_PN1_.
+  cell DFFNSRX0P5H7R (noninv, pins=6, area=10.08) is a direct match for cell type $_DFFSR_NNN_.
+  cell DFFSRQX1H7R (noninv, pins=5, area=9.24) is a direct match for cell type $_DFFSR_PNN_.
+  cell LATLX0P5H7R (noninv, pins=4, area=5.32) is a direct match for cell type $_DLATCH_N_.
+  cell LATHX0P5H7R (noninv, pins=4, area=4.48) is a direct match for cell type $_DLATCH_P_.
+  cell LATLRX0P5H7R (noninv, pins=5, area=5.60) is a direct match for cell type $_DLATCH_NN0_.
+  cell LATLSX0P5H7R (noninv, pins=5, area=8.12) is a direct match for cell type $_DLATCH_NN1_.
+  cell LATHRX0P5H7R (noninv, pins=5, area=5.88) is a direct match for cell type $_DLATCH_PN0_.
+  cell LATHSX0P5H7R (noninv, pins=5, area=7.56) is a direct match for cell type $_DLATCH_PN1_.
+  cell LATLSRX0P5H7R (noninv, pins=6, area=9.52) is a direct match for cell type $_DLATCHSR_NNN_.
+  cell LATHSRX0P5H7R (noninv, pins=6, area=7.28) is a direct match for cell type $_DLATCHSR_PNN_.
+  final dff/dlatch cell mappings:
+    \DFFNQX1H7R _DFF_N_ (.CKN( C), .D( D), .Q( Q));
+    \DFFQX0P5H7R _DFF_P_ (.CK( C), .D( D), .Q( Q));
+    \DFFNRX0P5H7R _DFF_NN0_ (.CKN( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFNSX0P5H7R _DFF_NN1_ (.CKN( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff/dlatch cell: $_DFF_NP0_
+    unmapped dff/dlatch cell: $_DFF_NP1_
+    \DFFRQX0P5H7R _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .RN( R));
+    \DFFSQX1H7R _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .SN( R));
+    unmapped dff/dlatch cell: $_DFF_PP0_
+    unmapped dff/dlatch cell: $_DFF_PP1_
+    unmapped dff/dlatch cell: $_DFFE_NN_
+    unmapped dff/dlatch cell: $_DFFE_NP_
+    unmapped dff/dlatch cell: $_DFFE_PN_
+    unmapped dff/dlatch cell: $_DFFE_PP_
+    \DFFNSRX0P5H7R _DFFSR_NNN_ (.CKN( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff/dlatch cell: $_DFFSR_NNP_
+    unmapped dff/dlatch cell: $_DFFSR_NPN_
+    unmapped dff/dlatch cell: $_DFFSR_NPP_
+    \DFFSRQX1H7R _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .RN( R), .SN( S));
+    unmapped dff/dlatch cell: $_DFFSR_PNP_
+    unmapped dff/dlatch cell: $_DFFSR_PPN_
+    unmapped dff/dlatch cell: $_DFFSR_PPP_
+    \LATLX0P5H7R _DLATCH_N_ (.D( D), .GN( E), .Q( Q), .QN(~Q));
+    \LATHX0P5H7R _DLATCH_P_ (.D( D), .G( E), .Q( Q), .QN(~Q));
+    \LATLRX0P5H7R _DLATCH_NN0_ (.D( D), .GN( E), .Q( Q), .QN(~Q), .RN( R));
+    \LATLSX0P5H7R _DLATCH_NN1_ (.D( D), .GN( E), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff/dlatch cell: $_DLATCH_NP0_
+    unmapped dff/dlatch cell: $_DLATCH_NP1_
+    \LATHRX0P5H7R _DLATCH_PN0_ (.D( D), .G( E), .Q( Q), .QN(~Q), .RN( R));
+    \LATHSX0P5H7R _DLATCH_PN1_ (.D( D), .G( E), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff/dlatch cell: $_DLATCH_PP0_
+    unmapped dff/dlatch cell: $_DLATCH_PP1_
+    \LATLSRX0P5H7R _DLATCHSR_NNN_ (.D( D), .GN( E), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff/dlatch cell: $_DLATCHSR_NNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPP_
+    \LATHSRX0P5H7R _DLATCHSR_PNN_ (.D( D), .G( E), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff/dlatch cell: $_DLATCHSR_PNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPP_
+
+22.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+<suppressed ~74 debug messages>
+Mapping DFF/DLATCH cells in module `\light_reg':
+  mapped 48 $_DFF_P_ cells to \DFFQX0P5H7R cells.
+
+23. Executing TECHMAP pass (map to technology primitives).
+
+23.1. Executing Verilog-2005 frontend: /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v
+Parsing Verilog input from `/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+23.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 225 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+24.5. Finished fast OPT passes.
+
+25. Executing OPT pass (performing simple optimizations).
+
+25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 225 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \light_reg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \light_reg.
+Performed a total of 0 changes.
+
+25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\light_reg'.
+Computing hashes of 225 cells of `\light_reg'.
+Finding duplicate cells in `\light_reg'.
+Removed a total of 0 cells.
+
+25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module light_reg.
+
+25.9. Finished fast OPT passes. (There is nothing left to do.)
+
+26. Executing ABC pass (technology mapping using ABC).
+
+26.1. Summary of detected clock domains:
+  225 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+26.2. Extracting gate netlist of module `\light_reg' to `/tmp/yosys-abc-wcZipP/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache-1000/yosys_merged_36241726.scl (2 files)
+No matching clock domain found. Not extracting any FF cells.
+
+26.2.1. Executed ABC.
+Extracted 177 gates and 228 wires to a netlist network with 49 inputs and 48 outputs.
+Running ABC script: /tmp/yosys-abc-wcZipP/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2026 05:00:00)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-wcZipP/abc.script
+ABC: + read_blif /tmp/yosys-abc-wcZipP/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache-1000/yosys_merged_36241726.scl 
+ABC: Warning: Detected 12 multi-output cells (for example, "ADDFX1H7R").
+ABC: + read_constr -v /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/tmp/abc.constr 
+ABC: Setting driving cell to be "BUFX0P5H7R".
+ABC: Setting output load to be 0.015000.
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor 
+ABC: + retime -D -D 10000 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + map -p -B 0.2 -A 0.9 -M 0 
+ABC: The cell areas are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.20).
+ABC: + retime -D -D 10000 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + upsize -D 10000 
+ABC: Current delay (761.06 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000 
+ABC: + upsize -D 10000 
+ABC: Current delay (761.06 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =    166 (  1.8 %)   Cap =  1.9 ff ( 13.6 %)   Area =      262.36 (  0.0 %)   Delay =   761.06 ps  (  4.8 %)               
+ABC: Path  0 --       6 : 0    7 pi           A =   0.00  Df =  53.4  -13.6 ps  S = 105.8 ps  Cin =  0.0 ff  Cout =   5.6 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     113 : 4   15 OR4X0P5H7L   A =   2.24  Df = 229.2  -29.0 ps  S = 190.9 ps  Cin =  0.8 ff  Cout =  11.4 ff  Cmax =  45.1 ff  G = 1434  
+ABC: Path  2 --     115 : 3   15 NOR3X0P5H7L  A =   1.40  Df = 548.6 -234.5 ps  S = 503.0 ps  Cin =  0.8 ff  Cout =  10.7 ff  Cmax =  15.3 ff  G = 1388  
+ABC: Path  3 --     123 : 3    4 NAND3X0P5H7L A =   1.40  Df = 668.0 -275.2 ps  S = 193.7 ps  Cin =  0.8 ff  Cout =   3.2 ff  Cmax =  28.3 ff  G =  415  
+ABC: Path  4 --     193 : 3    1 OAI21X0P5H7L A =   1.40  Df = 761.1  -33.1 ps  S =  61.3 ps  Cin =  0.8 ff  Cout =   0.0 ff  Cmax =  22.5 ff  G =    1  
+ABC: Start-point = pi5 (\cnt [15]).  End-point = po18 ($auto$rtlil.cc:3450:MuxGate$1510).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   49/   48  lat =    0  nd =   166  edge =    506  area =92.77  delay =227.74  lev = 6
+ABC: + write_blif /tmp/yosys-abc-wcZipP/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+26.2.2. Re-integrating ABC results.
+ABC RESULTS:       AND2X0P5H7L cells:        6
+ABC RESULTS:       AND3X0P5H7L cells:        4
+ABC RESULTS:       AND4X0P5H7L cells:       11
+ABC RESULTS:    AOAI211X0P5H7L cells:        2
+ABC RESULTS:     AOI211X0P5H7L cells:       17
+ABC RESULTS:      AOI21X0P5H7L cells:       18
+ABC RESULTS:     AOI221X0P5H7L cells:        1
+ABC RESULTS:    AOI2BB1X0P5H7L cells:        1
+ABC RESULTS:      AOI31X0P5H7L cells:       17
+ABC RESULTS:        INVX0P5H7L cells:        3
+ABC RESULTS:      NAND2X0P5H7L cells:        3
+ABC RESULTS:      NAND3X0P5H7L cells:        5
+ABC RESULTS:    NAND4BBX0P5H7L cells:        2
+ABC RESULTS:      NAND4X0P5H7L cells:        3
+ABC RESULTS:       NOR2X0P5H7L cells:       10
+ABC RESULTS:      NOR3BX0P5H7L cells:        2
+ABC RESULTS:       NOR3X0P5H7L cells:       39
+ABC RESULTS:      OAI21X0P5H7L cells:        2
+ABC RESULTS:        OR2X0P5H7L cells:        2
+ABC RESULTS:        OR3X0P5H7L cells:        1
+ABC RESULTS:        OR4X0P5H7L cells:        8
+ABC RESULTS:          _const0_ cells:        9
+ABC RESULTS:        internal signals:      131
+ABC RESULTS:           input signals:       49
+ABC RESULTS:          output signals:       48
+Removing temp directory.
+Removing global temp directory.
+
+27. Executing HILOMAP pass (mapping to constant drivers).
+
+28. Executing SETUNDEF pass (replace undef values with defined constants).
+
+29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+Removed 0 unused cells and 235 unused wires.
+<suppressed ~114 debug messages>
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+31. Executing AUTONAME pass.
+Renamed 316 objects in module light_reg.
+<suppressed ~316 debug messages>
+
+32. Executing Verilog backend.
+Dumping module `\light_reg'.
+
+33. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \light_reg..
+
+36. Executing Verilog backend.
+Dumping module `\light_reg'.
+
+Warnings: 1 unique messages, 1 total
+Deprecated features used:
+    opt_demorgan (may be removed as soon as Yosys 0.72)
+End of script. Logfile hash: 7625c15bc9, time: 2.43s, user: 1.68s, system: 0.51s, MEM: 140.78 MB peak
+Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 18% 4x read_liberty (0 sec), 16% 3x stat (0 sec), ...
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.cpp:51 [1;34mInfo[0m initConfig] [Data config] begin config, path = /home/ysyx/ysyx-workbench/ecc/light/runs/default/config/db_default_config.json
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:82 [1;34mInfo[0m set_tech_lef_path] [Data config set] tech lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:88 [1;34mInfo[0m set_lef_paths] [Data config set] lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:88 [1;34mInfo[0m set_lef_paths] [Data config set] lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:94 [1;34mInfo[0m set_def_path] [Data config set] def = 
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:99 [1;34mInfo[0m set_verilog_path] [Data config set] verilog = 
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:110 [1;34mInfo[0m set_lib_paths] [Data config set] lib = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:110 [1;34mInfo[0m set_lib_paths] [Data config set] lib = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:116 [1;34mInfo[0m set_sdc_path] [Data config set] sdc = /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.sdc
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:122 [1;34mInfo[0m set_spef_path] [Data config set] spef = 
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:128 [1;34mInfo[0m set_vcd_path] [Data config set] vcd = 
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = 
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.cpp:86 [1;34mInfo[0m initConfig] [Data config] end config
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:134 [1;34mInfo[0m set_feature_path] [Data config set] feature = /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/feature
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:82 [1;34mInfo[0m set_tech_lef_path] [Data config set] tech lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z builder.cpp:221 [1;34mInfo[0m buildLef] Read LEF file : /home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:88 [1;34mInfo[0m set_lef_paths] [Data config set] lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:88 [1;34mInfo[0m set_lef_paths] [Data config set] lef = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z builder.cpp:221 [1;34mInfo[0m buildLef] Read LEF file : /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z builder.cpp:221 [1;34mInfo[0m buildLef] Read LEF file : /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:99 [1;34mInfo[0m set_verilog_path] [Data config set] verilog = /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/output/light_Synthesis.v.gz
+[ECC 20261025 21:45:30 kkrD2S8z builder.cpp:249 [1;34mInfo[0m buildVerilog] Read Verilog file success : /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/output/light_Synthesis.v.gz
+[ECC 20261025 21:45:30 kkrD2S8z VerilogReader.cc:42 [1;34mInfo[0m readVerilog] load verilog file /tmp/verilog_read_mR9vRn.v
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:110 [1;34mInfo[0m set_lib_paths] [Data config set] lib = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:30 kkrD2S8z dm_config.h:110 [1;34mInfo[0m set_lib_paths] [Data config set] lib = /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:30 kkrD2S8z LibParserCpp.cc:2055 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:32 kkrD2S8z LibParserCpp.cc:2071 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib success.
+[ECC 20261025 21:45:32 kkrD2S8z LibParserCpp.cc:2055 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib
+[ECC 20261025 21:45:34 kkrD2S8z LibParserCpp.cc:2071 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib success.
+[ECC 20261025 21:45:34 kkrD2S8z dm_config.h:116 [1;34mInfo[0m set_sdc_path] [Data config set] sdc = /home/ysyx/ysyx-workbench/ecc/light/runs/default/origin/light.sdc
+[ECC 20261025 21:45:34 kkrD2S8z dm_config.h:122 [1;34mInfo[0m set_spef_path] [Data config set] spef = 
+[ECC 20261025 21:45:34 kkrD2S8z SpefReader.cc:23 [1;33mWarn[0m parseSpefFile] open spef file failed: 
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:76 [1;34mInfo[0m initSTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:77 [1;34mInfo[0m initSTA] _____ _______________________       _______________________ ________ ________ 
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:78 [1;34mInfo[0m initSTA] ___(_)__  ___/___  __/___    |      __  ___/___  __/___    |___  __ \___  __/
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:79 [1;34mInfo[0m initSTA] __  / _____ \ __  /   __  /| |      _____ \ __  /   __  /| |__  /_/ /__  /  
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:80 [1;34mInfo[0m initSTA] _  /  ____/ / _  /    _  ___ |      ____/ / _  /    _  ___ |_  _, _/ _  /     
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:81 [1;34mInfo[0m initSTA] /_/   /____/  /_/     /_/  |_|      /____/  /_/     /_/  |_|/_/ |_|  /_/      
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:82 [1;34mInfo[0m initSTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:89 [1;34mInfo[0m initSTA] Starting...
+[STA 20261025 21:45:34 kkrD2S8z DataManager.cpp:56 [1;34mInfo[0m input] Starting...
+[STA 20261025 21:45:34 kkrD2S8z Utility.hpp:100 [1;33mWarn[0m getConfigValue<int>] The config '-thread_number' uses the default value!
+[STA 20261025 21:45:34 kkrD2S8z Utility.hpp:100 [1;33mWarn[0m getConfigValue<int>] The config '-nworst' uses the default value!
+[STA 20261025 21:45:34 kkrD2S8z Utility.hpp:100 [1;33mWarn[0m getConfigValue<std::__cxx11::basic_string<char> >] The config '-delay_type' uses the default value!
+[STA 20261025 21:45:34 kkrD2S8z Utility.hpp:100 [1;33mWarn[0m getConfigValue<std::__cxx11::basic_string<char> >] The config '-start_end_type' uses the default value!
+[STA 20261025 21:45:34 kkrD2S8z STAInterface.cpp:722 [1;34mInfo[0m wrapTimingLibrary] Starting...
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:736 [1;34mInfo[0m wrapTimingLibrary] Completed (elapsed = 00:00:07, cpu = 00:00:07, mem = 238.71MB) 
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:952 [1;34mInfo[0m printConfig] STA_CONFIG_INPUT
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:953 [1;34mInfo[0m printConfig]   temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:954 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:955 [1;34mInfo[0m printConfig]   thread_number
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:956 [1;34mInfo[0m printConfig]     128
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:957 [1;34mInfo[0m printConfig]   path_report_number
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:958 [1;34mInfo[0m printConfig]     1000
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:959 [1;34mInfo[0m printConfig]   endpoint_path_report_number
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:960 [1;34mInfo[0m printConfig]     1
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:961 [1;34mInfo[0m printConfig]   timing_report_delay_type
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:962 [1;34mInfo[0m printConfig]     max
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:963 [1;34mInfo[0m printConfig]   timing_report_start_end_type
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:964 [1;34mInfo[0m printConfig]     all
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:965 [1;34mInfo[0m printConfig]   has_timing_report_slack_lesser_than
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:966 [1;34mInfo[0m printConfig]     0
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:967 [1;34mInfo[0m printConfig]   timing_report_slack_lesser_than
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:968 [1;34mInfo[0m printConfig]     0
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:969 [1;34mInfo[0m printConfig]   has_timing_report_slack_greater_than
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:970 [1;34mInfo[0m printConfig]     0
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:971 [1;34mInfo[0m printConfig]   timing_report_slack_greater_than
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:972 [1;34mInfo[0m printConfig]     0
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:973 [1;34mInfo[0m printConfig]   output_timing_reports
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:974 [1;34mInfo[0m printConfig]     1
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:975 [1;34mInfo[0m printConfig]   output_timing_features
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:976 [1;34mInfo[0m printConfig]     1
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:977 [1;34mInfo[0m printConfig]   timing_path_limit
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:978 [1;34mInfo[0m printConfig]     20
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:980 [1;34mInfo[0m printConfig] STA_CONFIG_BUILD
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:981 [1;34mInfo[0m printConfig]   log_file_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:982 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/sta.log
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:984 [1;34mInfo[0m printConfig]   DataManager
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:985 [1;34mInfo[0m printConfig]     dm_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:986 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/data_manager/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:988 [1;34mInfo[0m printConfig]   GraphBuilder
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:989 [1;34mInfo[0m printConfig]     gb_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:990 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/graph_builder/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:992 [1;34mInfo[0m printConfig]   DelayCalculator
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:993 [1;34mInfo[0m printConfig]     dc_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:994 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/delay_calculator/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:996 [1;34mInfo[0m printConfig]   ClockPropagator
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:997 [1;34mInfo[0m printConfig]     cp_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:998 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/clock_propagator/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1000 [1;34mInfo[0m printConfig]   TimingPropagator
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1001 [1;34mInfo[0m printConfig]     tp_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1002 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/timing_propagator/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1004 [1;34mInfo[0m printConfig]   PowerPropagator
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1005 [1;34mInfo[0m printConfig]     pp_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1006 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/power_propagator/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1008 [1;34mInfo[0m printConfig]   TimingAnalyzer
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1009 [1;34mInfo[0m printConfig]     ta_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1010 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/timing_analyzer/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1012 [1;34mInfo[0m printConfig]   PowerAnalyzer
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1013 [1;34mInfo[0m printConfig]     pa_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1014 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/power_analyzer/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1016 [1;34mInfo[0m printConfig]   TimingCharacterizer
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1017 [1;34mInfo[0m printConfig]     tc_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1018 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/timing_characterizer/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1020 [1;34mInfo[0m printConfig]   TimingReporter
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1021 [1;34mInfo[0m printConfig]     tr_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1022 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/timing_reporter/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1024 [1;34mInfo[0m printConfig]   PowerReporter
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1025 [1;34mInfo[0m printConfig]     pr_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1026 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/power_reporter/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1028 [1;34mInfo[0m printConfig]   SDFWriter
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1029 [1;34mInfo[0m printConfig]     sw_temp_directory_path
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1030 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/sdf_writer/
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1044 [1;34mInfo[0m printDatabase] STA_DATABASE
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1045 [1;34mInfo[0m printDatabase]   design_name
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1046 [1;34mInfo[0m printDatabase]     light_reg
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1047 [1;34mInfo[0m printDatabase]   instance_num
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1048 [1;34mInfo[0m printDatabase]     206
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1049 [1;34mInfo[0m printDatabase]   port_num
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1050 [1;34mInfo[0m printDatabase]     50
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1051 [1;34mInfo[0m printDatabase]   pin_num
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1052 [1;34mInfo[0m printDatabase]     858
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1053 [1;34mInfo[0m printDatabase]   net_num
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:1054 [1;34mInfo[0m printDatabase]     208
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:62 [1;34mInfo[0m input] Completed (elapsed = 00:00:07, cpu = 00:00:07, mem = 238.84MB) 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:97 [1;34mInfo[0m initSTA] Completed (elapsed = 00:00:07, cpu = 00:00:07, mem = 238.84MB) 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:103 [1;34mInfo[0m runSTA] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:58 [1;34mInfo[0m init] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:62 [1;34mInfo[0m init] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z GraphBuilder.cpp:57 [1;34mInfo[0m build] Starting...
+[STA 20261025 21:45:41 kkrD2S8z GraphBuilder.cpp:69 [1;34mInfo[0m build] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z ClockPropagator.cpp:56 [1;34mInfo[0m propagate] Starting...
+[STA 20261025 21:45:41 kkrD2S8z ClockPropagator.cpp:62 [1;34mInfo[0m propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z TimingPropagator.cpp:56 [1;34mInfo[0m propagate] Starting...
+[STA 20261025 21:45:41 kkrD2S8z TimingPropagator.cpp:75 [1;34mInfo[0m propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.15MB) 
+[STA 20261025 21:45:41 kkrD2S8z PowerPropagator.cpp:55 [1;34mInfo[0m propagate] Starting...
+[STA 20261025 21:45:41 kkrD2S8z PowerPropagator.cpp:60 [1;34mInfo[0m propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB) 
+[STA 20261025 21:45:41 kkrD2S8z TimingAnalyzer.cpp:56 [1;34mInfo[0m analyze] Starting...
+[STA 20261025 21:45:41 kkrD2S8z TimingAnalyzer.cpp:62 [1;34mInfo[0m analyze] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z PowerAnalyzer.cpp:55 [1;34mInfo[0m analyze] Starting...
+[STA 20261025 21:45:41 kkrD2S8z PowerAnalyzer.cpp:60 [1;34mInfo[0m analyze] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z TimingReporter.cpp:187 [1;34mInfo[0m report] Starting...
+[STA 20261025 21:45:41 kkrD2S8z TimingReporter.cpp:191 [1;34mInfo[0m report] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.26MB) 
+[STA 20261025 21:45:41 kkrD2S8z PowerReporter.cpp:55 [1;34mInfo[0m report] Starting...
+[STA 20261025 21:45:41 kkrD2S8z PowerReporter.cpp:61 [1;34mInfo[0m report] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:60 [1;34mInfo[0m write] Starting...
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:599 [1;33mWarn[0m adjustSDFHoldTimingCheckDelay] Adjusted HOLD timing-check delay for cnt[0]_reg_p: D relative to CK would otherwise sum to less than zero with the matching SETUP delay.
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:599 [1;33mWarn[0m adjustSDFHoldTimingCheckDelay] Adjusted HOLD timing-check delay for cnt[13]_reg_p: D relative to CK would otherwise sum to less than zero with the matching SETUP delay.
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:599 [1;33mWarn[0m adjustSDFHoldTimingCheckDelay] Adjusted HOLD timing-check delay for cnt[22]_reg_p: D relative to CK would otherwise sum to less than zero with the matching SETUP delay.
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:599 [1;33mWarn[0m adjustSDFHoldTimingCheckDelay] Adjusted HOLD timing-check delay for led[0]_reg_p: D relative to CK would otherwise sum to less than zero with the matching SETUP delay.
+[STA 20261025 21:45:41 kkrD2S8z SDFWriter.cpp:64 [1;34mInfo[0mFailed to write JSON file: .
+Traceback (most recent call last):
+  File "chipcompiler/utility/json.py", line 112, in json_write
+    tmp_path.replace(target_path)
+  File "pathlib.py", line 1188, in replace
+IsADirectoryError: [Errno 21] Is a directory: '/home/ysyx/ysyx-workbench/..t7d0hka2.tmp' -> '/home/ysyx/ysyx-workbench/ecc'
+Failed to write JSON file: .
+Traceback (most recent call last):
+  File "chipcompiler/utility/json.py", line 112, in json_write
+    tmp_path.replace(target_path)
+  File "pathlib.py", line 1188, in replace
+IsADirectoryError: [Errno 21] Is a directory: '/home/ysyx/ysyx-workbench/..fdmwp7r3.tmp' -> '/home/ysyx/ysyx-workbench/ecc'
+Failed to write JSON file: .
+Traceback (most recent call last):
+  File "chipcompiler/utility/json.py", line 112, in json_write
+    tmp_path.replace(target_path)
+  File "pathlib.py", line 1188, in replace
+IsADirectoryError: [Errno 21] Is a directory: '/home/ysyx/ysyx-workbench/..lbg1_psd.tmp' -> '/home/ysyx/ysyx-workbench/ecc'
+Failed to write JSON file: .
+Traceback (most recent call last):
+  File "chipcompiler/utility/json.py", line 112, in json_write
+    tmp_path.replace(target_path)
+  File "pathlib.py", line 1188, in replace
+IsADirectoryError: [Errno 21] Is a directory: '/home/ysyx/ysyx-workbench/..gtoequ1z.tmp' -> '/home/ysyx/ysyx-workbench/ecc'
+ write] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:90 [1;34mInfo[0m destroy] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:94 [1;34mInfo[0m destroy] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:145 [1;34mInfo[0m runSTA] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.98MB) 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:183 [1;34mInfo[0m destroySTA] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:90 [1;34mInfo[0m destroy] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DelayCalculator.cpp:94 [1;34mInfo[0m destroy] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:68 [1;34mInfo[0m output] Starting...
+[STA 20261025 21:45:41 kkrD2S8z DataManager.cpp:70 [1;34mInfo[0m output] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:192 [1;34mInfo[0m destroySTA] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 21:45:41 kkrD2S8z Logger.hpp:53 [1;34mInfo[0m printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc/light/runs/default/Synthesis_yosys/data/sta/sta.log'!
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:196 [1;34mInfo[0m destroySTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:197 [1;34mInfo[0m destroySTA] _____ _______________________       _______________________   ________________________  __  
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:198 [1;34mInfo[0m destroySTA] ___(_)__  ___/___  __/___    |      ___  ____/____  _/___  | / /____  _/__  ___/___  / / /  
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:199 [1;34mInfo[0m destroySTA] __  / _____ \ __  /   __  /| |      __  /_     __  /  __   |/ /  __  /  _____ \ __  /_/ / 
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:200 [1;34mInfo[0m destroySTA] _  /  ____/ / _  /    _  ___ |      _  __/    __/ /   _  /|  /  __/ /   ____/ / _  __  /    
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:201 [1;34mInfo[0m destroySTA] /_/   /____/  /_/     /_/  |_|      /_/       /___/   /_/ |_/   /___/   /____/  /_/ /_/     
+[STA 20261025 21:45:41 kkrD2S8z STAInterface.cpp:202 [1;34mInfo[0m destroySTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,0 +1,4 @@
+step=1 pc=0x80000000 inst=0x800007b7 -> pc=0x80000004 a0=0x00000000 ra=0x00000000
+step=2 pc=0x80000004 inst=0x00700513 -> pc=0x80000008 a0=0x00000007 ra=0x00000000
+RESULT case=illegal_rd.bin backend=emu verdict=fail stop=rejected retired=2 a0=0x00000007 halt_pc=0x00000000
+step=3 pc=0x80000008 inst=0x00100813: illegal instruction

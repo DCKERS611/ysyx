@@ -1,0 +1,42 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "set clock net",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "run net optimization",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.188,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.188,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.004,
+            "info": {
+                "instance": 72
+            }
+        }
+    ]
+}

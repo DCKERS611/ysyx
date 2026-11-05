@@ -1,0 +1,36 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/104.malloc'
+# Building malloc-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+python /home/ysyx/ysyx-workbench/abstract-machine/tools/gen-ramdisk.py /home/ysyx/ysyx-workbench/archbench/bench/104.malloc/build/malloc.ramdisk.c am.filelist
++ CC /home/ysyx/ysyx-workbench/archbench/bench/104.malloc/build/malloc.ramdisk.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-npc]
++ LD -> build/malloc-minirv-npc.elf
++ OBJCOPY -> build/malloc-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/104.malloc/build/malloc-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+allocated 3262 addresses
+6675 operations in total
+Test end
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:03.660745 (3660745 us)
+             176 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:03.660745 (3660745 us)
+Total  time:   0:00:03.683295 (3683295 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/104.malloc/build/malloc-minirv-npc.bin: 477832 bytes
+Result: halt_pc=0x8000572c a0=0x00000000 ra=0x80005728 cycles=1503105474
+instructions=85194471 cycles=1503105474 IPC=0.056679
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/104.malloc'
+[WALL] 1093.50 s

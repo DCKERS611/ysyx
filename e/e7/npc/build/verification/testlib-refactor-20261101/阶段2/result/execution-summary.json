@@ -1,0 +1,107 @@
+[
+  {
+    "name": "lint",
+    "command": "make -f Makefile.cpptest lint",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.1
+  },
+  {
+    "name": "test-library",
+    "command": "make -f Makefile.cpptest test-library",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.02
+  },
+  {
+    "name": "test-all",
+    "command": "make -f Makefile.cpptest test-all",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.96
+  },
+  {
+    "name": "test-fixed",
+    "command": "make -f Makefile.cpptest test-fixed",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.86
+  },
+  {
+    "name": "difftest",
+    "command": "make -f Makefile.diff difftest",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 6.92
+  },
+  {
+    "name": "difftest-fixed",
+    "command": "make -f Makefile.diff difftest-fixed",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 4.73
+  },
+  {
+    "name": "test-acceptance",
+    "command": "make -f Makefile.cpptest test-acceptance",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.09
+  },
+  {
+    "name": "check-waves",
+    "command": "make -f Makefile.cpptest check-waves",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.86
+  },
+  {
+    "name": "test_mkprog",
+    "command": "python3 -m unittest discover -s tests -p test_mkprog.py -v",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.09
+  },
+  {
+    "name": "dummy-run",
+    "command": "make ARCH=minirv-npc ALL=dummy run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 1.12
+  },
+  {
+    "name": "dummy-diff",
+    "command": "make ARCH=minirv-npc ALL=dummy run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.28
+  },
+  {
+    "name": "hello-run",
+    "command": "make ARCH=minirv-npc run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.31
+  },
+  {
+    "name": "hello-diff",
+    "command": "make ARCH=minirv-npc run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.47
+  },
+  {
+    "name": "cpu-tests-diff",
+    "command": "make ARCH=minirv-npc run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 77.25
+  },
+  {
+    "name": "riscv-tests-i-diff",
+    "command": "make ARCH=minirv-npc run TEST_ISA=i DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 11.28
+  }
+]

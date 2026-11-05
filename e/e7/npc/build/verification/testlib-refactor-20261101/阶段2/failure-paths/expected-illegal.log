@@ -1,0 +1,7 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/boundary/illegal_rd.bin: 16 bytes
+PASS: 8 checks
+[ DIFF PASS ] probe
+PASS: 51 (3 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 21
+halt_pc=0x00000000 NPC.pc=0x80000008 EMU.pc=0x80000008
+RESULT case=probe backend=diff verdict=pass stop=rejected pc=0x80000008 inst=0x00100813 cycles=29 retired=2 attempts=3 checks=8 failures=0 delay=random core=51 core_fail=0 extra=21 extra_fail=0 memory=33554432 memory_fail=0

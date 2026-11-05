@@ -1,0 +1,5 @@
+{
+  "edge_checks": "pass",
+  "partial_initialization_fault_injection": "pass",
+  "real_unwritable_wave_path": "existing Verilator isOpen reports true; not repaired or counted as a passing failure probe"
+}

@@ -1,0 +1,911 @@
+#include "/home/ysyx/ysyx-workbench/abstract-machine/tools/minirv/inst-replace.h"
+	.file	"core_matrix.c"
+	.option nopic
+	.text
+	.globl	__mulsi3
+	.section	.text.core_init_matrix,"ax",@progbits
+	.align	2
+	.globl	core_init_matrix
+	.hidden	core_init_matrix
+	.type	core_init_matrix, @function
+core_init_matrix:
+	addi	sp,sp,-64
+	sw	s0,56(sp)
+	sw	ra,60(sp)
+	sw	s1,52(sp)
+	sw	a3,48(sp)
+	mv	s0,a0
+	bne	a2,zero,.L2
+	li	a2,1
+.L2:
+	addi	a1,a1,-1
+	andi	a5,a1,-4
+	addi	a4,a5,4
+	sw	a4,36(sp)
+	li	s1,0
+	beq	s0,zero,.L25
+	sw	s0,0(sp)
+	sw	a2,8(sp)
+.L3:
+	mv	s0,s1
+	addi	s1,s1,1
+	mv	a1,s1
+	mv	a0,s1
+	call	__mulsi3
+	lw	a5,0(sp)
+	slli	a0,a0,3
+	bgtu	a5,a0,.L3
+	lw	a2,8(sp)
+	mv	a1,s0
+	mv	a0,s0
+	sw	a2,0(sp)
+	sw	s0,4(sp)
+	call	__mulsi3
+	lw	a3,36(sp)
+	slli	a4,a0,1
+	sw	a4,40(sp)
+	add	a4,a3,a4
+	sw	a4,28(sp)
+	sw	s0,44(sp)
+	lw	a2,0(sp)
+	beq	s0,zero,.L7
+.L6:
+	li	a5,1
+	lw	a4,28(sp)
+	sw	a5,16(sp)
+	lw	a5,36(sp)
+	sw	zero,20(sp)
+	sw	zero,24(sp)
+	sub	a5,a5,a4
+	sw	a5,12(sp)
+	li	a5,65536
+	addi	a5,a5,-1
+	sw	a5,8(sp)
+	lw	a5,4(sp)
+	mv	a0,a2
+	addi	a5,a5,-1
+	sw	a5,32(sp)
+.L11:
+	lw	a5,20(sp)
+	lw	a4,28(sp)
+	lw	s0,16(sp)
+	slli	a5,a5,1
+	add	a5,a5,a4
+	li	s1,0
+.L8:
+	mv	a1,s0
+	sw	a5,0(sp)
+	call	__mulsi3
+	lw	a5,8(sp)
+	srai	a2,a0,31
+	srli	a2,a2,16
+	add	a0,a0,a2
+	and	a0,a0,a5
+	slli	a3,s0,16
+	srli	a3,a3,16
+	sub	a0,a0,a2
+	lw	a5,0(sp)
+	lw	a4,12(sp)
+	add	a2,a3,a0
+	slli	a2,a2,16
+	srli	a2,a2,16
+	sh	a2,0(a5)
+	add	a3,a2,a3
+	add	a2,a4,a5
+	lw	a4,4(sp)
+	andi	a3,a3,0xff
+	sh	a3,0(a2)
+	addi	s1,s1,1
+	addi	s0,s0,1
+	addi	a5,a5,2
+	bltu	s1,a4,.L8
+	lw	a5,16(sp)
+	lw	a3,4(sp)
+	addi	a4,a5,1
+	li	a5,0
+	beq	a3,zero,.L10
+	lw	a5,32(sp)
+.L10:
+	add	a5,a5,a4
+	lw	a3,24(sp)
+	lw	a4,20(sp)
+	sw	a5,16(sp)
+	lw	a5,4(sp)
+	addi	a3,a3,1
+	sw	a3,24(sp)
+	add	a4,a4,a5
+	sw	a4,20(sp)
+	bltu	a3,a5,.L11
+.L7:
+	lw	a3,28(sp)
+	lw	a5,40(sp)
+	lw	a4,48(sp)
+	lw	a2,36(sp)
+	add	a5,a3,a5
+	addi	a5,a5,-1
+	andi	a5,a5,-4
+	addi	a5,a5,4
+	sw	a5,12(a4)
+	lw	a5,44(sp)
+	lw	ra,60(sp)
+	lw	s0,56(sp)
+	sw	a2,4(a4)
+	sw	a3,8(a4)
+	sw	a5,0(a4)
+	lw	a0,4(sp)
+	lw	s1,52(sp)
+	addi	sp,sp,64
+	jr	ra
+.L25:
+	addi	a5,a5,6
+	sw	a5,28(sp)
+	li	a5,-1
+	sw	a5,44(sp)
+	sw	a5,4(sp)
+	li	a5,2
+	sw	a5,40(sp)
+	j	.L6
+	.size	core_init_matrix, .-core_init_matrix
+	.section	.text.matrix_sum,"ax",@progbits
+	.align	2
+	.globl	matrix_sum
+	.hidden	matrix_sum
+	.type	matrix_sum, @function
+matrix_sum:
+	addi	sp,sp,-16
+	sw	s0,12(sp)
+	sw	s1,8(sp)
+	sw	a1,0(sp)
+	beq	a0,zero,.L32
+	slli	a4,a0,2
+	mv	s1,a0
+	li	a0,0
+	add	t0,a1,a4
+	sw	a4,4(sp)
+	li	s0,0
+	li	t2,0
+	li	a4,0
+	li	a1,0
+	mv	a5,a0
+.L28:
+	lw	a0,0(sp)
+	slli	a3,s0,2
+	add	a3,a0,a3
+	j	.L31
+.L37:
+	slli	a5,t1,16
+	addi	a3,a3,4
+	srai	a5,a5,16
+	li	a1,0
+	beq	t0,a3,.L36
+.L31:
+	mv	a0,a4
+	lw	a4,0(a3)
+	slli	a5,a5,16
+	srli	a5,a5,16
+	sgt	a0,a4,a0
+	add	a1,a1,a4
+	addi	t1,a5,10
+	add	a5,a5,a0
+	blt	a2,a1,.L37
+	slli	a5,a5,16
+	addi	a3,a3,4
+	srai	a5,a5,16
+	bne	t0,a3,.L31
+.L36:
+	lw	a3,4(sp)
+	addi	t2,t2,1
+	add	s0,s0,s1
+	add	t0,t0,a3
+	bne	s1,t2,.L28
+	lw	s0,12(sp)
+	lw	s1,8(sp)
+	mv	a0,a5
+	addi	sp,sp,16
+	jr	ra
+.L32:
+	lw	s0,12(sp)
+	lw	s1,8(sp)
+	li	a0,0
+	addi	sp,sp,16
+	jr	ra
+	.size	matrix_sum, .-matrix_sum
+	.section	.text.matrix_mul_const,"ax",@progbits
+	.align	2
+	.globl	matrix_mul_const
+	.hidden	matrix_mul_const
+	.type	matrix_mul_const, @function
+matrix_mul_const:
+	addi	sp,sp,-44
+	sw	ra,40(sp)
+	sw	s0,36(sp)
+	sw	s1,32(sp)
+	sw	a0,16(sp)
+	sw	a1,20(sp)
+	sw	a2,24(sp)
+	beq	a0,zero,.L38
+	slli	a4,a0,1
+	add	a5,a2,a4
+	mv	a1,a3
+	sw	a4,28(sp)
+	sw	a5,4(sp)
+	sw	zero,8(sp)
+	sw	zero,12(sp)
+.L40:
+	lw	a4,8(sp)
+	lw	a3,24(sp)
+	slli	a5,a4,1
+	add	s1,a3,a5
+	lw	a5,20(sp)
+	slli	a4,a4,2
+	add	s0,a5,a4
+.L41:
+	lh	a0,0(s1)
+	sw	a1,0(sp)
+	addi	s1,s1,2
+	call	__mulsi3
+	lw	a5,4(sp)
+	sw	a0,0(s0)
+	lw	a1,0(sp)
+	addi	s0,s0,4
+	bne	a5,s1,.L41
+	lw	a3,8(sp)
+	lw	a4,16(sp)
+	lw	a5,12(sp)
+	lw	a2,28(sp)
+	add	a3,a3,a4
+	sw	a3,8(sp)
+	lw	a3,4(sp)
+	addi	a5,a5,1
+	sw	a5,12(sp)
+	add	a3,a3,a2
+	sw	a3,4(sp)
+	bne	a4,a5,.L40
+.L38:
+	lw	ra,40(sp)
+	lw	s0,36(sp)
+	lw	s1,32(sp)
+	addi	sp,sp,44
+	jr	ra
+	.size	matrix_mul_const, .-matrix_mul_const
+	.section	.text.matrix_add_const,"ax",@progbits
+	.align	2
+	.globl	matrix_add_const
+	.hidden	matrix_add_const
+	.type	matrix_add_const, @function
+matrix_add_const:
+	beq	a0,zero,.L47
+	slli	t2,a0,1
+	neg	t0,a0
+	slli	a2,a2,16
+	add	a3,a1,t2
+	srli	a2,a2,16
+	li	a1,0
+	slli	t0,t0,2
+.L49:
+	sub	t1,a3,t2
+	mv	a5,t1
+.L50:
+	lhu	a4,0(a5)
+	addi	a5,a5,2
+	add	a4,a2,a4
+	sh	a4,-2(a5)
+	bne	a3,a5,.L50
+	addi	a1,a1,1
+	sub	a3,t1,t0
+	bne	a0,a1,.L49
+.L47:
+	ret
+	.size	matrix_add_const, .-matrix_add_const
+	.section	.text.matrix_mul_vect,"ax",@progbits
+	.align	2
+	.globl	matrix_mul_vect
+	.hidden	matrix_mul_vect
+	.type	matrix_mul_vect, @function
+matrix_mul_vect:
+	addi	sp,sp,-44
+	sw	ra,40(sp)
+	sw	s0,36(sp)
+	sw	s1,32(sp)
+	sw	a0,16(sp)
+	sw	a2,20(sp)
+	sw	a3,24(sp)
+	beq	a0,zero,.L55
+	slli	a5,a0,2
+	slli	s0,a0,1
+	add	a4,a1,a5
+	add	a5,a3,s0
+	sw	a1,12(sp)
+	sw	a4,28(sp)
+	sw	a5,4(sp)
+	sw	zero,8(sp)
+.L58:
+	lw	a5,8(sp)
+	lw	s0,24(sp)
+	li	s1,0
+	slli	a4,a5,1
+	lw	a5,20(sp)
+	add	a4,a5,a4
+.L57:
+	lh	a0,0(a4)
+	lh	a1,0(s0)
+	addi	a4,a4,2
+	sw	a4,0(sp)
+	call	__mulsi3
+	lw	a5,4(sp)
+	addi	s0,s0,2
+	lw	a4,0(sp)
+	add	s1,s1,a0
+	bne	a5,s0,.L57
+	lw	a4,8(sp)
+	lw	a3,16(sp)
+	lw	a5,12(sp)
+	add	a4,a4,a3
+	sw	a4,8(sp)
+	lw	a4,28(sp)
+	sw	s1,0(a5)
+	addi	a5,a5,4
+	sw	a5,12(sp)
+	bne	a4,a5,.L58
+.L55:
+	lw	ra,40(sp)
+	lw	s0,36(sp)
+	lw	s1,32(sp)
+	addi	sp,sp,44
+	jr	ra
+	.size	matrix_mul_vect, .-matrix_mul_vect
+	.section	.text.matrix_mul_matrix,"ax",@progbits
+	.align	2
+	.globl	matrix_mul_matrix
+	.hidden	matrix_mul_matrix
+	.type	matrix_mul_matrix, @function
+matrix_mul_matrix:
+	addi	sp,sp,-64
+	sw	ra,60(sp)
+	sw	s0,56(sp)
+	sw	s1,52(sp)
+	sw	a0,24(sp)
+	sw	a1,40(sp)
+	sw	a2,44(sp)
+	sw	a3,48(sp)
+	beq	a0,zero,.L63
+	slli	a5,a0,1
+	sw	a5,8(sp)
+	add	a5,a2,a5
+	sw	a5,4(sp)
+	sw	zero,32(sp)
+	sw	zero,36(sp)
+.L65:
+	lw	a5,32(sp)
+	lw	a3,40(sp)
+	sw	zero,16(sp)
+	slli	a4,a5,2
+	add	a4,a3,a4
+	sw	a4,20(sp)
+	lw	a4,48(sp)
+	slli	a5,a5,1
+	sw	a4,12(sp)
+	lw	a4,44(sp)
+	add	a5,a4,a5
+	sw	a5,28(sp)
+.L67:
+	lw	s1,28(sp)
+	lw	a4,12(sp)
+	li	s0,0
+	mv	a5,s1
+	mv	s1,a4
+.L66:
+	lh	a0,0(a5)
+	addi	a5,a5,2
+	lh	a1,0(s1)
+	sw	a5,0(sp)
+	lw	a5,8(sp)
+	add	s1,s1,a5
+	call	__mulsi3
+	lw	a4,4(sp)
+	lw	a5,0(sp)
+	add	s0,s0,a0
+	bne	a4,a5,.L66
+	lw	a4,20(sp)
+	lw	a5,16(sp)
+	sw	s0,0(a4)
+	addi	a4,a4,4
+	sw	a4,20(sp)
+	lw	a4,12(sp)
+	addi	a5,a5,1
+	addi	a4,a4,2
+	sw	a4,12(sp)
+	lw	a4,24(sp)
+	beq	a4,a5,.L74
+	sw	a5,16(sp)
+	j	.L67
+.L74:
+	lw	a3,32(sp)
+	lw	a2,24(sp)
+	lw	a4,36(sp)
+	add	a3,a3,a2
+	sw	a3,32(sp)
+	lw	a2,8(sp)
+	lw	a3,4(sp)
+	addi	a5,a4,1
+	add	a3,a3,a2
+	sw	a3,4(sp)
+	lw	a3,16(sp)
+	beq	a4,a3,.L63
+	sw	a5,36(sp)
+	j	.L65
+.L63:
+	lw	ra,60(sp)
+	lw	s0,56(sp)
+	lw	s1,52(sp)
+	addi	sp,sp,64
+	jr	ra
+	.size	matrix_mul_matrix, .-matrix_mul_matrix
+	.section	.text.matrix_mul_matrix_bitextract,"ax",@progbits
+	.align	2
+	.globl	matrix_mul_matrix_bitextract
+	.hidden	matrix_mul_matrix_bitextract
+	.type	matrix_mul_matrix_bitextract, @function
+matrix_mul_matrix_bitextract:
+	addi	sp,sp,-64
+	sw	ra,60(sp)
+	sw	s0,56(sp)
+	sw	s1,52(sp)
+	sw	a0,24(sp)
+	sw	a1,40(sp)
+	sw	a2,44(sp)
+	sw	a3,48(sp)
+	beq	a0,zero,.L75
+	slli	a5,a0,1
+	sw	a5,8(sp)
+	add	a5,a2,a5
+	sw	a5,4(sp)
+	sw	zero,32(sp)
+	sw	zero,36(sp)
+.L77:
+	lw	a5,32(sp)
+	lw	a3,40(sp)
+	sw	zero,16(sp)
+	slli	a4,a5,2
+	add	a4,a3,a4
+	sw	a4,20(sp)
+	lw	a4,48(sp)
+	slli	a5,a5,1
+	sw	a4,12(sp)
+	lw	a4,44(sp)
+	add	a5,a4,a5
+	sw	a5,28(sp)
+.L79:
+	lw	s1,28(sp)
+	lw	a4,12(sp)
+	li	s0,0
+	mv	a5,s1
+	mv	s1,a4
+.L78:
+	lh	a0,0(a5)
+	addi	a5,a5,2
+	lh	a1,0(s1)
+	sw	a5,0(sp)
+	lw	a5,8(sp)
+	add	s1,s1,a5
+	call	__mulsi3
+	srai	a2,a0,2
+	srai	a1,a0,5
+	andi	a1,a1,127
+	andi	a0,a2,15
+	call	__mulsi3
+	lw	a4,4(sp)
+	lw	a5,0(sp)
+	add	s0,s0,a0
+	bne	a4,a5,.L78
+	lw	a4,20(sp)
+	lw	a5,16(sp)
+	sw	s0,0(a4)
+	addi	a4,a4,4
+	sw	a4,20(sp)
+	lw	a4,12(sp)
+	addi	a5,a5,1
+	addi	a4,a4,2
+	sw	a4,12(sp)
+	lw	a4,24(sp)
+	beq	a4,a5,.L86
+	sw	a5,16(sp)
+	j	.L79
+.L86:
+	lw	a3,32(sp)
+	lw	a2,24(sp)
+	lw	a4,36(sp)
+	add	a3,a3,a2
+	sw	a3,32(sp)
+	lw	a2,8(sp)
+	lw	a3,4(sp)
+	addi	a5,a4,1
+	add	a3,a3,a2
+	sw	a3,4(sp)
+	lw	a3,16(sp)
+	beq	a4,a3,.L75
+	sw	a5,36(sp)
+	j	.L77
+.L75:
+	lw	ra,60(sp)
+	lw	s0,56(sp)
+	lw	s1,52(sp)
+	addi	sp,sp,64
+	jr	ra
+	.size	matrix_mul_matrix_bitextract, .-matrix_mul_matrix_bitextract
+	.section	.text.matrix_test,"ax",@progbits
+	.align	2
+	.globl	matrix_test
+	.hidden	matrix_test
+	.type	matrix_test, @function
+matrix_test:
+	addi	sp,sp,-64
+	li	t1,-4096
+	sw	ra,60(sp)
+	sw	s0,56(sp)
+	sw	s1,52(sp)
+	sw	a4,4(sp)
+	sw	a1,8(sp)
+	sw	a2,24(sp)
+	sw	a3,36(sp)
+	or	t1,a4,t1
+	beq	a0,zero,.L88
+	slli	t2,a0,1
+	add	a3,t2,a2
+	neg	a5,a0
+	slli	a2,a4,16
+	srli	a2,a2,16
+	slli	ra,a5,2
+	mv	t0,a0
+	sw	t2,32(sp)
+	sw	a3,0(sp)
+	sw	a2,44(sp)
+	li	a0,0
+	sw	ra,40(sp)
+.L89:
+	sub	a1,a3,t2
+	mv	a5,a1
+.L90:
+	lhu	a4,0(a5)
+	addi	a5,a5,2
+	add	a4,a2,a4
+	sh	a4,-2(a5)
+	bne	a5,a3,.L90
+	addi	s1,a0,1
+	sub	a3,a1,ra
+	beq	t0,s1,.L91
+	mv	a0,s1
+	j	.L89
+.L91:
+	sw	a0,16(sp)
+	sw	zero,12(sp)
+	sw	zero,20(sp)
+	sw	t1,48(sp)
+	sw	s1,28(sp)
+.L93:
+	lw	a4,12(sp)
+	lw	a3,24(sp)
+	slli	a5,a4,1
+	add	s1,a3,a5
+	lw	a5,8(sp)
+	slli	a4,a4,2
+	add	s0,a4,a5
+.L92:
+	lh	a0,0(s1)
+	lw	a1,4(sp)
+	addi	s1,s1,2
+	addi	s0,s0,4
+	call	__mulsi3
+	lw	a5,0(sp)
+	sw	a0,-4(s0)
+	bne	s1,a5,.L92
+	lw	a3,12(sp)
+	lw	a2,28(sp)
+	lw	a5,20(sp)
+	add	a3,a3,a2
+	sw	a3,12(sp)
+	lw	a3,32(sp)
+	addi	a4,a5,1
+	add	a3,s1,a3
+	sw	a3,0(sp)
+	lw	a3,16(sp)
+	beq	a5,a3,.L128
+	sw	a4,20(sp)
+	j	.L93
+.L128:
+	lw	a5,8(sp)
+	lw	a4,40(sp)
+	lw	t1,48(sp)
+	li	a0,0
+	sub	s0,a5,a4
+	mv	t0,s0
+	sw	s0,0(sp)
+	mv	s1,a2
+	li	ra,0
+	li	a3,0
+	li	a1,0
+	li	t2,0
+	mv	a5,a0
+	mv	s0,a4
+.L94:
+	lw	a2,8(sp)
+	slli	a4,ra,2
+	add	a4,a2,a4
+	j	.L97
+.L130:
+	slli	a5,a0,16
+	addi	a4,a4,4
+	srai	a5,a5,16
+	li	a1,0
+	beq	t0,a4,.L129
+.L97:
+	mv	a2,a3
+	lw	a3,0(a4)
+	slli	a5,a5,16
+	srli	a5,a5,16
+	sgt	a2,a3,a2
+	add	a1,a1,a3
+	addi	a0,a5,10
+	add	a5,a5,a2
+	bgt	a1,t1,.L130
+	slli	a5,a5,16
+	addi	a4,a4,4
+	srai	a5,a5,16
+	bne	t0,a4,.L97
+.L129:
+	lw	a2,16(sp)
+	addi	a4,t2,1
+	sub	t0,t0,s0
+	add	ra,ra,s1
+	beq	t2,a2,.L98
+	mv	t2,a4
+	j	.L94
+.L98:
+	mv	a0,a5
+	li	a1,0
+	sw	t1,4(sp)
+	lw	s0,0(sp)
+	call	crc16
+	lw	a3,36(sp)
+	lw	a1,8(sp)
+	lw	a2,24(sp)
+	mv	a5,a0
+	mv	a0,s1
+	sw	a5,0(sp)
+	call	matrix_mul_vect
+	lw	t1,4(sp)
+	lw	ra,40(sp)
+	li	a0,0
+	li	t0,0
+	li	a3,0
+	li	a1,0
+	li	t2,0
+	mv	a5,a0
+.L116:
+	lw	a2,8(sp)
+	slli	a4,t0,2
+	add	a4,a2,a4
+	j	.L101
+.L132:
+	slli	a5,a0,16
+	addi	a4,a4,4
+	srai	a5,a5,16
+	li	a1,0
+	beq	s0,a4,.L131
+.L101:
+	mv	a2,a3
+	lw	a3,0(a4)
+	slli	a5,a5,16
+	srli	a5,a5,16
+	sgt	a2,a3,a2
+	add	a1,a1,a3
+	addi	a0,a5,10
+	add	a5,a5,a2
+	bgt	a1,t1,.L132
+	slli	a5,a5,16
+	addi	a4,a4,4
+	srai	a5,a5,16
+	bne	s0,a4,.L101
+.L131:
+	lw	a2,16(sp)
+	addi	a4,t2,1
+	sub	s0,s0,ra
+	add	t0,t0,s1
+	beq	t2,a2,.L102
+	mv	t2,a4
+	j	.L116
+.L102:
+	mv	a0,a5
+	lw	a5,0(sp)
+	sw	t1,4(sp)
+	mv	a1,a5
+	call	crc16
+	lw	s0,8(sp)
+	lw	a2,24(sp)
+	lw	a3,36(sp)
+	mv	a5,a0
+	mv	a1,s0
+	mv	a0,s1
+	sw	a5,0(sp)
+	call	matrix_mul_matrix
+	lw	t1,4(sp)
+	li	a0,0
+	li	ra,0
+	li	a4,0
+	li	a2,0
+	li	t2,0
+	mv	a5,a0
+.L115:
+	slli	a1,ra,2
+	add	a1,s0,a1
+	li	t0,0
+	j	.L105
+.L134:
+	slli	a5,a0,16
+	addi	t0,t0,1
+	srai	a5,a5,16
+	li	a2,0
+	addi	a1,a1,4
+	bgeu	t0,s1,.L133
+.L105:
+	mv	a3,a4
+	lw	a4,0(a1)
+	slli	a5,a5,16
+	srli	a5,a5,16
+	sgt	a3,a4,a3
+	add	a2,a2,a4
+	addi	a0,a5,10
+	add	a5,a5,a3
+	bgt	a2,t1,.L134
+	slli	a5,a5,16
+	addi	t0,t0,1
+	srai	a5,a5,16
+	addi	a1,a1,4
+	bltu	t0,s1,.L105
+.L133:
+	addi	t2,t2,1
+	add	ra,ra,s1
+	bltu	t2,s1,.L115
+	mv	a0,a5
+	lw	a5,0(sp)
+	sw	t1,4(sp)
+	mv	a1,a5
+	call	crc16
+	lw	s0,8(sp)
+	lw	a2,24(sp)
+	lw	a3,36(sp)
+	mv	a5,a0
+	mv	a1,s0
+	mv	a0,s1
+	sw	a5,0(sp)
+	call	matrix_mul_matrix_bitextract
+	lw	t1,4(sp)
+	li	a0,0
+	li	ra,0
+	li	a4,0
+	li	a2,0
+	li	t2,0
+	mv	a5,a0
+.L114:
+	slli	a1,ra,2
+	add	a1,s0,a1
+	li	t0,0
+	j	.L109
+.L136:
+	slli	a5,a0,16
+	addi	t0,t0,1
+	srai	a5,a5,16
+	li	a2,0
+	addi	a1,a1,4
+	bgeu	t0,s1,.L135
+.L109:
+	mv	a3,a4
+	lw	a4,0(a1)
+	slli	a5,a5,16
+	srli	a5,a5,16
+	sgt	a3,a4,a3
+	add	a2,a2,a4
+	addi	a0,a5,10
+	add	a5,a5,a3
+	bgt	a2,t1,.L136
+	slli	a5,a5,16
+	addi	t0,t0,1
+	srai	a5,a5,16
+	addi	a1,a1,4
+	bltu	t0,s1,.L109
+.L135:
+	addi	t2,t2,1
+	add	ra,ra,s1
+	bltu	t2,s1,.L114
+	mv	a0,a5
+	lw	a5,0(sp)
+	mv	a1,a5
+	call	crc16
+	lw	a2,44(sp)
+	lw	t0,24(sp)
+	li	t1,0
+	li	a1,0
+.L113:
+	slli	a5,t1,1
+	add	a5,t0,a5
+	li	a3,0
+.L111:
+	lhu	a4,0(a5)
+	addi	a5,a5,2
+	addi	a3,a3,1
+	sub	a4,a4,a2
+	sh	a4,-2(a5)
+	bltu	a3,s1,.L111
+	addi	a1,a1,1
+	add	t1,t1,s1
+	bltu	a1,s1,.L113
+	lw	ra,60(sp)
+	lw	s0,56(sp)
+	slli	a0,a0,16
+	lw	s1,52(sp)
+	srai	a0,a0,16
+	addi	sp,sp,64
+	jr	ra
+.L88:
+	li	a1,0
+	call	crc16
+	lw	s1,8(sp)
+	lw	a3,36(sp)
+	lw	a2,24(sp)
+	mv	s0,a0
+	mv	a1,s1
+	li	a0,0
+	call	matrix_mul_vect
+	mv	a1,s0
+	li	a0,0
+	call	crc16
+	lw	a3,36(sp)
+	lw	a2,24(sp)
+	mv	s0,a0
+	mv	a1,s1
+	li	a0,0
+	call	matrix_mul_matrix
+	mv	a1,s0
+	li	a0,0
+	call	crc16
+	lw	a3,36(sp)
+	lw	a2,24(sp)
+	mv	s0,a0
+	mv	a1,s1
+	li	a0,0
+	call	matrix_mul_matrix_bitextract
+	mv	a1,s0
+	li	a0,0
+	call	crc16
+	lw	ra,60(sp)
+	lw	s0,56(sp)
+	slli	a0,a0,16
+	lw	s1,52(sp)
+	srai	a0,a0,16
+	addi	sp,sp,64
+	jr	ra
+	.size	matrix_test, .-matrix_test
+	.section	.text.core_bench_matrix,"ax",@progbits
+	.align	2
+	.globl	core_bench_matrix
+	.hidden	core_bench_matrix
+	.type	core_bench_matrix, @function
+core_bench_matrix:
+	addi	sp,sp,-12
+	sw	s0,4(sp)
+	lw	a3,8(a0)
+	mv	s0,a2
+	mv	a4,a1
+	lw	a2,4(a0)
+	lw	a1,12(a0)
+	lw	a0,0(a0)
+	sw	ra,8(sp)
+	call	matrix_test
+	mv	a1,s0
+	lw	s0,4(sp)
+	lw	ra,8(sp)
+	addi	sp,sp,12
+	tail	crc16
+	.size	core_bench_matrix, .-core_bench_matrix
+	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
+	.section	.note.GNU-stack,"",@progbits

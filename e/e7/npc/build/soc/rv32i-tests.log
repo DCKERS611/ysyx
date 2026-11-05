@@ -1,0 +1,1525 @@
+# Building add-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/add.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/add-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 0.000367503 s, 10.9 kB/s
+320516+0 records in
+320516+0 records out
+320516 bytes (321 kB, 313 KiB) copied, 0.181104 s, 1.8 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/add-minirv-ysyxsoc.bin, 689668 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b740)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b800, 0x8004b90progress cycles=160000000 commits=764387 pc=0x300049b0 inst=0x00920023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0ff lsu_req=0 lsu_resp=0
+0)
+HIT GOOD TRAP: pc=0x800033c8 a0=0x00000000 cycles=160950039
+# Building addi-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/addi.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/addi-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.85e-05 s, 140 kB/s
+312696+0 records in
+312696+0 records out
+312696 bytes (313 kB, 305 KiB) copied, 0.164959 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/addi-minirv-ysyxsoc.bin, 681848 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004a140)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004a200, 0x8004a300)
+HIT GOOD TRAP: pc=0x80001e08 a0=0x00000000 cycles=157935137
+# Building and-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/and.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/and-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.2201e-05 s, 124 kB/s
+320948+0 records in
+320948+0 records out
+320948 bytes (321 kB, 313 KiB) copied, 0.164374 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/and-minirv-ysyxsoc.bin, 690100 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004bb40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004bc00, 0xprogress cycles=160000000 commits=764332 pc=0x30009aa0 inst=0xfed12823 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x806fff20 lsu_req=0 lsu_resp=0
+8004bd00)
+HIT GOOD TRAP: pc=0x80003848 a0=0x00000000 cycles=161586977
+# Building andi-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/andi.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/andi-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.78e-05 s, 144 kB/s
+311088+0 records in
+311088+0 records out
+311088 bytes (311 kB, 304 KiB) copied, 0.168426 s, 1.8 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/andi-minirv-ysyxsoc.bin, 680240 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049d40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049e00, 0x80049f00)
+HIT GOOD TRAP: pc=0x80001a88 a0=0x00000000 cycles=157442175
+# Building auipc-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/auipc.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/auipc-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.1e-05 s, 129 kB/s
+303184+0 records in
+303184+0 records out
+303184 bytes (303 kB, 296 KiB) copied, 0.155703 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/auipc-minirv-ysyxsoc.bin, 672336 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048740)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80048800, 0x80048900)
+HIT GOOD TRAP: pc=0x80000404 a0=0x00000000 cycles=154403466
+# Building beq-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/beq.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/beq-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.25e-05 s, 123 kB/s
+319872+0 records in
+319872+0 records out
+319872 bytes (320 kB, 312 KiB) copied, 0.168351 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/beq-minirv-ysyxsoc.bin, 689024 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b340)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b400, 0x8004b500)
+progress cycles=160000000 commits=764491 pc=0x80000240 inst=0x3c018193 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80000780 lsu_req=0 lsu_resp=0
+HIT GOOD TRAP: pc=0x80003008 a0=0x00000000 cycles=160434016
+# Building bge-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/bge.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/bge-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.0201e-05 s, 132 kB/s
+330856+0 records in
+330856+0 records out
+330856 bytes (331 kB, 323 KiB) copied, 0.169861 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/bge-minirv-ysyxsoc.bin, 700008 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004c140)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0xprogress cycles=160000000 commits=764234 pc=0x30009d34 inst=0x004181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x600838ff lsu_req=0 lsu_resp=0
+8004c200, 0x8004c300)
+HIT GOOD TRAP: pc=0x80003e88 a0=0x00000000 cycles=162321564
+# Building bgeu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/bgeu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/bgeu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.0201e-05 s, 132 kB/s
+331144+0 records in
+331144+0 records out
+331144 bytes (331 kB, 323 KiB) copied, 0.16618 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/bgeu-minirv-ysyxsoc.bin, 700296 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004c240)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0xprogress cycles=160000000 commits=764235 pc=0x30009acc inst=0x00458233 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x60023a00 lsu_req=0 lsu_resp=0
+8004c300, 0x8004c400)
+HIT GOOD TRAP: pc=0x80003ec8 a0=0x00000000 cycles=162450832
+# Building blt-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/blt.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/blt-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.89e-05 s, 138 kB/s
+325196+0 records in
+325196+0 records out
+325196 bytes (325 kB, 318 KiB) copied, 0.155717 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/blt-minirv-ysyxsoc.bin, 694348 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b640)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b700, 0x8004b800)progress cycles=160000000 commits=764411 pc=0x30004ca4 inst=0x004181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0
+
+HIT GOOD TRAP: pc=0x800032c8 a0=0x00000000 cycles=160858735
+# Building bltu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/bltu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/bltu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.94e-05 s, 136 kB/s
+325352+0 records in
+325352+0 records out
+325352 bytes (325 kB, 318 KiB) copied, 0.155477 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/bltu-minirv-ysyxsoc.bin, 694504 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b640)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b700, 0x8004b800)progress cycles=160000000 commits=764411 pc=0x30004ca4 inst=0x004181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0
+
+HIT GOOD TRAP: pc=0x80003388 a0=0x00000000 cycles=160865293
+# Building bne-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/bne.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/bne-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.3701e-05 s, 119 kB/s
+319988+0 records in
+319988+0 records out
+319988 bytes (320 kB, 312 KiB) copied, 0.151464 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/bne-minirv-ysyxsoc.bin, 689140 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b340)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b400, 0x8004b500)
+progress cycles=160000000 commits=764491 pc=0x80000240 inst=0x3c018193 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80000780 lsu_req=0 lsu_resp=0
+HIT GOOD TRAP: pc=0x80003088 a0=0x00000000 cycles=160434016
+# Building jal-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/jal.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/jal-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.48e-05 s, 115 kB/s
+302932+0 records in
+302932+0 records out
+302932 bytes (303 kB, 296 KiB) copied, 0.15073 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/jal-minirv-ysyxsoc.bin, 672084 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048640)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80048700, 0x80048800)
+HIT GOOD TRAP: pc=0x80000348 a0=0x00000000 cycles=154270138
+# Building jalr-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/jalr.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/jalr-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.7001e-05 s, 108 kB/s
+305236+0 records in
+305236+0 records out
+305236 bytes (305 kB, 298 KiB) copied, 0.159265 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/jalr-minirv-ysyxsoc.bin, 674388 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048c40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80048d00, 0x80048e00)
+HIT GOOD TRAP: pc=0x80000908 a0=0x00000000 cycles=155082828
+# Building lb-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lb.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lb-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.0701e-05 s, 130 kB/s
+312508+0 records in
+312508+0 records out
+312508 bytes (313 kB, 305 KiB) copied, 0.157483 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lb-minirv-ysyxsoc.bin, 681660 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049f40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004a000, 0x8004a110)
+HIT GOOD TRAP: pc=0x80001c08 a0=0x00000000 cycles=157775070
+# Building lbu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lbu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lbu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.16e-05 s, 127 kB/s
+310848+0 records in
+310848+0 records out
+310848 bytes (311 kB, 304 KiB) copied, 0.156787 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lbu-minirv-ysyxsoc.bin, 680000 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049c40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049d00, 0x80049e10)
+HIT GOOD TRAP: pc=0x800018c8 a0=0x00000000 cycles=157363254
+# Building lh-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lh.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lh-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.68e-05 s, 149 kB/s
+316672+0 records in
+316672+0 records out
+316672 bytes (317 kB, 309 KiB) copied, 0.157746 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lh-minirv-ysyxsoc.bin, 685824 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004aa40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004ab00, 0x8004ac10)
+HIT GOOD TRAP: pc=0x80002708 a0=0x00000000 cycles=159285478
+# Building lhu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lhu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lhu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.73e-05 s, 147 kB/s
+311108+0 records in
+311108+0 records out
+311108 bytes (311 kB, 304 KiB) copied, 0.14522 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lhu-minirv-ysyxsoc.bin, 680260 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049d40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049e00, 0x80049f10)
+HIT GOOD TRAP: pc=0x80001a88 a0=0x00000000 cycles=157507978
+# Building lui-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lui.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lui-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.85e-05 s, 140 kB/s
+304568+0 records in
+304568+0 records out
+304568 bytes (305 kB, 297 KiB) copied, 0.155314 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lui-minirv-ysyxsoc.bin, 673720 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048a40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80048b00, 0x80048c00)
+HIT GOOD TRAP: pc=0x80000788 a0=0x00000000 cycles=154811435
+# Building lw-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/lw.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/lw-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.13e-05 s, 128 kB/s
+310848+0 records in
+310848+0 records out
+310848 bytes (311 kB, 304 KiB) copied, 0.151371 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/lw-minirv-ysyxsoc.bin, 680000 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049c40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049d00, 0x80049e10)
+HIT GOOD TRAP: pc=0x80001948 a0=0x00000000 cycles=157365534
+# Building or-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/or.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/or-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.92e-05 s, 137 kB/s
+320920+0 records in
+320920+0 records out
+320920 bytes (321 kB, 313 KiB) copied, 0.16791 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/or-minirv-ysyxsoc.bin, 690072 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004bb40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004bc00, 0xprogress cycles=160000000 commits=764332 pc=0x30009aa0 inst=0xfed12823 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x806fff20 lsu_req=0 lsu_resp=0
+8004bd00)
+HIT GOOD TRAP: pc=0x80003888 a0=0x00000000 cycles=161587205
+# Building ori-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/ori.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/ori-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.83e-05 s, 141 kB/s
+311060+0 records in
+311060+0 records out
+311060 bytes (311 kB, 304 KiB) copied, 0.152115 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/ori-minirv-ysyxsoc.bin, 680212 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049d40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049e00, 0x80049f00)
+HIT GOOD TRAP: pc=0x80001a88 a0=0x00000000 cycles=157442707
+# Building sb-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sb.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sb-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.19e-05 s, 125 kB/s
+316932+0 records in
+316932+0 records out
+316932 bytes (317 kB, 310 KiB) copied, 0.154975 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sb-minirv-ysyxsoc.bin, 686084 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004ab40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004ac00, 0x8004ad10)
+HIT GOOD TRAP: pc=0x80002888 a0=0x00000000 cycles=159478395
+# Building sh-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sh.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sh-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.1099e-05 s, 129 kB/s
+321984+0 records in
+321984+0 records out
+321984 bytes (322 kB, 314 KiB) copied, 0.156307 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sh-minirv-ysyxsoc.bin, 691136 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b940)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004ba00, 0x8progress cycles=160000000 commits=764353 pc=0x300049f0 inst=0x00940233 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+004bb20)
+HIT GOOD TRAP: pc=0x80003608 a0=0x00000000 cycles=161379381
+# Building simple-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/simple.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/simple-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.8699e-05 s, 139 kB/s
+5440+0 records in
+5440+0 records out
+5440 bytes (5.4 kB, 5.3 KiB) copied, 0.00301453 s, 1.8 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/simple-minirv-ysyxsoc.bin, 374592 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80000108)
+HIT GOOD TRAP: pc=0x80000088 a0=0x00000000 cycles=3625946
+# Building sll-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sll.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sll-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.7999e-05 s, 143 kB/s
+338180+0 records in
+338180+0 records out
+338180 bytes (338 kB, 330 KiB) copied, 0.17565 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sll-minirv-ysyxsoc.bin, 707332 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004de40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004df00, 0x8004e000)
+HIT GOOD TRAP: pc=0x80005b08 a0=0x00000000 cycles=166273791
+# Building slli-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/slli.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/slli-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.13e-05 s, 128 kB/s
+313728+0 records in
+313728+0 records out
+313728 bytes (314 kB, 306 KiB) copied, 0.148068 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/slli-minirv-ysyxsoc.bin, 682880 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004a340)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004a400, 0x8004a500)
+HIT GOOD TRAP: pc=0x80002088 a0=0x00000000 cycles=158208407
+# Building slt-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/slt.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/slt-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.9201e-05 s, 137 kB/s
+334704+0 records in
+334704+0 records out
+334704 bytes (335 kB, 327 KiB) copied, 0.169684 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/slt-minirv-ysyxsoc.bin, 703856 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004d540)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004d600, 0x8004d700)
+HIT GOOD TRAP: pc=0x80005288 a0=0x00000000 cycles=165104723
+# Building slti-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/slti.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/slti-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.99e-05 s, 134 kB/s
+322556+0 records in
+322556+0 records out
+322556 bytes (323 kB, 315 KiB) copied, 0.153185 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/slti-minirv-ysyxsoc.bin, 691708 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b540)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b600, 0x8004b700)
+progress cycles=160000000 commits=764413 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x300a6810 lsu_req=0 lsu_resp=0
+HIT GOOD TRAP: pc=0x80003208 a0=0x00000000 cycles=160677147
+# Building sltiu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sltiu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sltiu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.06e-05 s, 131 kB/s
+322584+0 records in
+322584+0 records out
+322584 bytes (323 kB, 315 KiB) copied, 0.152145 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sltiu-minirv-ysyxsoc.bin, 691736 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b540)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b600, 0x8004b700)
+progress cycles=160000000 commits=764413 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x300a6810 lsu_req=0 lsu_resp=0
+HIT GOOD TRAP: pc=0x80003208 a0=0x00000000 cycles=160677147
+# Building sltu-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sltu.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sltu-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.0401e-05 s, 132 kB/s
+334704+0 records in
+334704+0 records out
+334704 bytes (335 kB, 327 KiB) copied, 0.169321 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sltu-minirv-ysyxsoc.bin, 703856 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004d540)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004d600, 0x8004d700)
+HIT GOOD TRAP: pc=0x80005288 a0=0x00000000 cycles=165104723
+# Building sra-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sra.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sra-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.7501e-05 s, 145 kB/s
+338172+0 records in
+338172+0 records out
+338172 bytes (338 kB, 330 KiB) copied, 0.16919 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sra-minirv-ysyxsoc.bin, 707324 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004e140)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004e200, 0x8004e300)
+HIT GOOD TRAP: pc=0x80005dc8 a0=0x00000000 cycles=166695239
+# Building srai-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/srai.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/srai-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.64e-05 s, 152 kB/s
+319784+0 records in
+319784+0 records out
+319784 bytes (320 kB, 312 KiB) copied, 0.156991 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/srai-minirv-ysyxsoc.bin, 688936 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b140)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b200, 0x8004b300)
+progress cycles=160000000 commits=765587 pc=0x800021a8 inst=0xff314483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x80053fe7 lsu_req=0 lsu_resp=0
+HIT GOOD TRAP: pc=0x80002e88 a0=0x00000000 cycles=160124809
+# Building srl-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/srl.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/srl-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.78e-05 s, 144 kB/s
+337652+0 records in
+337652+0 records out
+337652 bytes (338 kB, 330 KiB) copied, 0.163555 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/srl-minirv-ysyxsoc.bin, 706804 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004df40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004e000, 0x8004e100)
+HIT GOOD TRAP: pc=0x80005bc8 a0=0x00000000 cycles=166427051
+# Building srli-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/srli.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/srli-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 8.0999e-05 s, 49.4 kB/s
+319524+0 records in
+319524+0 records out
+319524 bytes (320 kB, 312 KiB) copied, 0.167319 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/srli-minirv-ysyxsoc.bin, 688676 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004b040)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004b100, 0x8004b200)
+HIT GOOD TRAP: pc=0x80002d88 a0=0x00000000 cycles=159990145
+# Building sub-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sub.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sub-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.59e-05 s, 154 kB/s
+324340+0 records in
+324340+0 records out
+324340 bytes (324 kB, 317 KiB) copied, 0.153563 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sub-minirv-ysyxsoc.bin, 693492 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004c340)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0xprogress cycles=160000000 commits=764235 pc=0x30009abc inst=0xfef14203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x806fff1f lsu_req=0 lsu_resp=0
+8004c400, 0x8004c500)
+HIT GOOD TRAP: pc=0x80003fc8 a0=0x00000000 cycles=162615757
+# Building sw-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/sw.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sw-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.74e-05 s, 146 kB/s
+314776+0 records in
+314776+0 records out
+314776 bytes (315 kB, 307 KiB) copied, 0.150462 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/sw-minirv-ysyxsoc.bin, 683928 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004a740)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004a800, 0x8004a930)
+HIT GOOD TRAP: pc=0x80002488 a0=0x00000000 cycles=158943163
+# Building xor-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/xor.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/xor-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.58e-05 s, 155 kB/s
+320948+0 records in
+320948+0 records out
+320948 bytes (321 kB, 313 KiB) copied, 0.155779 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/xor-minirv-ysyxsoc.bin, 690100 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004bb40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x8004bc00, 0xprogress cycles=160000000 commits=764332 pc=0x30009aa0 inst=0xfed12823 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x806fff20 lsu_req=0 lsu_resp=0
+8004bd00)
+HIT GOOD TRAP: pc=0x80003848 a0=0x00000000 cycles=161587129
+# Building xori-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ AS isa/rv32ui/xori.S
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/xori-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.74e-05 s, 146 kB/s
+311088+0 records in
+311088+0 records out
+311088 bytes (311 kB, 304 KiB) copied, 0.163014 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/riscv-tests/build/xori-minirv-ysyxsoc.bin, 680240 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049d40)
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+loading to memory region [0x80049e00, 0x80049f00)
+HIT GOOD TRAP: pc=0x80001a88 a0=0x00000000 cycles=157442859
+test list [38 item(s)]: add addi and andi auipc beq bge bgeu blt bltu bne jal jalr lb lbu lh lhu lui lw or ori sb sh simple sll slli slt slti sltiu sltu sra srai srl srli sub sw xor xori
+[           add] [1;32mPASS[0m
+[          addi] [1;32mPASS[0m
+[           and] [1;32mPASS[0m
+[          andi] [1;32mPASS[0m
+[         auipc] [1;32mPASS[0m
+[           beq] [1;32mPASS[0m
+[           bge] [1;32mPASS[0m
+[          bgeu] [1;32mPASS[0m
+[           blt] [1;32mPASS[0m
+[          bltu] [1;32mPASS[0m
+[           bne] [1;32mPASS[0m
+[           jal] [1;32mPASS[0m
+[          jalr] [1;32mPASS[0m
+[            lb] [1;32mPASS[0m
+[           lbu] [1;32mPASS[0m
+[            lh] [1;32mPASS[0m
+[           lhu] [1;32mPASS[0m
+[           lui] [1;32mPASS[0m
+[            lw] [1;32mPASS[0m
+[            or] [1;32mPASS[0m
+[           ori] [1;32mPASS[0m
+[            sb] [1;32mPASS[0m
+[            sh] [1;32mPASS[0m
+[        simple] [1;32mPASS[0m
+[           sll] [1;32mPASS[0m
+[          slli] [1;32mPASS[0m
+[           slt] [1;32mPASS[0m
+[          slti] [1;32mPASS[0m
+[         sltiu] [1;32mPASS[0m
+[          sltu] [1;32mPASS[0m
+[           sra] [1;32mPASS[0m
+[          srai] [1;32mPASS[0m
+[           srl] [1;32mPASS[0m
+[          srli] [1;32mPASS[0m
+[           sub] [1;32mPASS[0m
+[            sw] [1;32mPASS[0m
+[           xor] [1;32mPASS[0m
+[          xori] [1;32mPASS[0m

@@ -1,0 +1,57 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/regress/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc   -Os  -c -o pmem.o /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc   -Os  -c -o sim.o /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp: In function ‘void sim_print_result(const char*, const char*, const run_result&, bool, unsigned int, unsigned int, const char*)’:
+/home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:361:54: warning: ‘__builtin___snprintf_chk’ output may be truncated before the last format character [-Wformat-truncation=]
+  361 |         std::snprintf(delay, sizeof(delay), "fixed:%u", run.mem_delay);
+      |                                                      ^
+In file included from /usr/include/stdio.h:894,
+                 from /usr/include/c++/11/cstdio:42,
+                 from /usr/include/c++/11/ext/string_conversions.h:43,
+                 from /usr/include/c++/11/bits/basic_string.h:6608,
+                 from /usr/include/c++/11/string:55,
+                 from /usr/local/share/verilator/include/verilatedos.h:653,
+                 from /usr/local/share/verilator/include/verilated.h:43,
+                 from ./Vysyx_00000000.h:11,
+                 from /home/ysyx/ysyx-workbench/npc/csrc/cpu_view.h:6,
+                 from /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:71:35: note: ‘__builtin___snprintf_chk’ output between 8 and 17 bytes into a destination of size 16
+   71 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   72 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc   -Os  -c -o cpu_test.o /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp
+g++    dpi.o pmem.o sim.o cpu_test.o verilated.o verilated_dpi.o verilated_threads.o Vysyx_00000000__ALL.a    -pthread -lpthread -latomic   -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 1.965 s (elab=0.000, cvt=0.000, bld=1.965); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_cpu_tests.py --group functional --runner build/regress/cpu_test
+[ PASS ] functional/arithmetic: stop=ebreak cycles=43 retired=5 checks=11
+[ PASS ] functional/byte_memory: stop=ebreak cycles=330 retired=23 checks=15
+[ PASS ] functional/call_return: stop=ebreak cycles=59 retired=7 checks=17
+[ PASS ] functional/word_memory: stop=ebreak cycles=71 retired=7 checks=10
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/regress/cpu_test
+[ PASS ] boundary/consecutive_jumps: stop=ebreak cycles=59 retired=7 checks=17
+[ PASS ] boundary/illegal_rd: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_rs1: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_rs2: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_store: stop=rejected cycles=46 retired=4 checks=8
+[ PASS ] boundary/immediate_sign: stop=ebreak cycles=82 retired=10 checks=13
+[ PASS ] boundary/jalr_negative: stop=ebreak cycles=43 retired=5 checks=14
+[ PASS ] boundary/jalr_same_register: stop=ebreak cycles=43 retired=5 checks=14
+[ PASS ] boundary/u_immediate: stop=ebreak cycles=48 retired=6 checks=10
+[ PASS ] boundary/unsupported_funct3: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/unsupported_funct7: stop=rejected cycles=37 retired=3 checks=8
+[ PASS ] boundary/unsupported_store: stop=rejected cycles=46 retired=4 checks=8
+[ PASS ] boundary/unsupported_system: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/x0_readonly: stop=ebreak cycles=129 retired=12 checks=23
+boundary: 14/14 programs passed

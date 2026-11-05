@@ -1,0 +1,17 @@
+# WSL 源码与原始工具报告保留字节，避免 core.autocrlf 改写快照。
+/npc/** -text
+/minirvEMU/** -text
+/abstract-machine/** -text
+/am-kernels/** -text
+/riscv-tests/** -text
+/archbench/** -text
+/nvboard/** -text
+/ysyxSoC/** -text
+/nemu/** -text
+/fceux-am/** -text
+/ecc-smoke/** -text
+/ecc/** -text
+/verification/** -text
+/Makefile -text
+/init.sh -text
+/pdk-clone.log -text

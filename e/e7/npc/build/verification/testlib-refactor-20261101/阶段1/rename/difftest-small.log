@@ -1,0 +1,4 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+python3 tests/run_cpu_tests.py --group difftest --case small --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] difftest/small: PASS: 238 (14 steps x 17); expectations PASS: 15 checks
+difftest: 1/1 programs passed

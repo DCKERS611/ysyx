@@ -1,0 +1,133 @@
+module ifu #(parameter RESET_PC = 32'h8000_0000) (
+    input         clk,
+    input         rst,
+    input  [31:0] next_pc,
+    input  [31:0] ifu_rdata,
+    input         is_load,
+    input         is_store,
+    input         ifu_respValid,
+    input         lsu_respValid,
+
+    output [31:0] pc,
+    output reg [31:0] inst,
+    output [31:0] ifu_raddr,
+    output        inst_valid,
+    output        commit,
+    output        load_req,
+    output        ifu_reqValid,
+    output        lsu_reqValid
+);
+
+    // 配置和状态编码
+    // 置 1 开启随机请求等待，置 0 在可发送时立即发请求
+    localparam RANDOM_REQ = 1'b0;
+    localparam IDLE      = 2'b00;
+    localparam WAIT      = 2'b01;
+    localparam MEM_WAIT  = 2'b10;
+
+    // 状态、随机序列和访存请求记录
+    wire [1:0] state;
+    reg  [1:0] next_state;
+    reg  [7:0] req_lfsr;
+
+    wire lsu_sent;
+    wire lsu_sent_next;
+    wire lsu_sent_wen;
+
+    // 指令类型和完成条件
+    wire is_mem;
+    wire normal_done;
+    wire mem_done;
+
+    // 请求输出：取指从 IDLE 发出，数据请求可在取指回复拍直接发出
+    assign ifu_raddr = pc;
+    assign ifu_reqValid =
+        !rst && (state == IDLE) && (!RANDOM_REQ || req_lfsr[0]);
+
+    // 随机条件禁止时在 MEM_WAIT 中重试；发送后禁止重复请求
+    assign lsu_reqValid = !rst && !lsu_sent && !lsu_respValid &&
+        (((state == WAIT) && ifu_respValid && is_mem) || (state == MEM_WAIT)) &&
+        (!RANDOM_REQ || req_lfsr[1]);
+    assign load_req = is_load && lsu_reqValid;
+
+    // 指令和提交：等待期间保留译码信息，回复完成后才提交
+    assign is_mem = is_load || is_store;
+    assign inst_valid = !rst &&
+        (((state == WAIT) && ifu_respValid) || (state == MEM_WAIT));
+    assign normal_done = (state == WAIT) && !is_mem && ifu_respValid;
+    assign mem_done = (state == MEM_WAIT) && lsu_sent && lsu_respValid;
+    assign commit = !rst && (normal_done || mem_done);
+
+    always @(*) begin
+        if (rst)
+            inst = 32'b0;
+        else
+            inst = ifu_rdata;
+    end
+
+    // 下一状态：未发送请求或未收到回复时保持当前状态
+    always @(*) begin
+        next_state = state;
+        case (state)
+            IDLE: begin
+                if (ifu_reqValid)
+                    next_state = WAIT;
+            end
+
+            WAIT: begin
+                if (ifu_respValid)
+                    next_state = is_mem ? MEM_WAIT : IDLE;
+            end
+
+            MEM_WAIT: begin
+                if (lsu_sent && lsu_respValid)
+                    next_state = IDLE;
+            end
+
+            default: begin
+                next_state = IDLE;
+            end
+        endcase
+    end
+
+    // 访存标志输入：提交清零优先，未提交且发请求时置一
+    assign lsu_sent_next = !commit && lsu_reqValid;
+    assign lsu_sent_wen = commit || lsu_reqValid;
+
+    // 寄存器：状态、访存标志和 PC
+    Reg #(2, IDLE) u_state (
+        .clk(clk),
+        .rst(rst),
+        .din(next_state),
+        .dout(state),
+        .wen(1'b1)
+    );
+
+    Reg #(1, 1'b0) u_lsu_sent (
+        .clk(clk),
+        .rst(rst),
+        .din(lsu_sent_next),
+        .dout(lsu_sent),
+        .wen(lsu_sent_wen)
+    );
+
+    Reg #(32, RESET_PC) u_pc (
+        .clk(clk),
+        .rst(rst),
+        .din(next_pc),
+        .dout(pc),
+        .wen(commit)
+    );
+
+    // LFSR 每拍推进，避免请求被禁止时随机序列停止
+    always @(posedge clk) begin
+        if (rst)
+            req_lfsr <= 8'h01;
+        else
+            req_lfsr <= {
+                req_lfsr[6:0],
+                req_lfsr[7] ^ req_lfsr[5] ^
+                req_lfsr[4] ^ req_lfsr[3]
+            };
+    end
+endmodule

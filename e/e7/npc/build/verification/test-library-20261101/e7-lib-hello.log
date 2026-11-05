@@ -1,0 +1,7 @@
+Hello, AbstractMachine!
+mainargs = ''.
+Loaded ../am-kernels/kernels/hello/build/hello-minirv-npc.bin: 297472 bytes
+Result: halt_pc=0x80000504 a0=0x00000000 ra=0x80000500 cycles=546583
+instructions=30467 cycles=546583 IPC=0.055741
+HIT GOOD TRAP
+PASS: 2 checks

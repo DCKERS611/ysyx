@@ -1,0 +1,11 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+python3 tests/run_acceptance.py --npc build/regress/cpu_test --emu ../minirvEMU/build/minirvEMU --diff build/difftest/difftest
+[ PASS ] acceptance/array_sum NPC: a0=10 (0xa)
+[ PASS ] acceptance/array_sum EMU: a0=10 (0xa)
+[ PASS ] acceptance/array_sum DiffTest: a0=10 (0xa)
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)

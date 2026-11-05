@@ -1,0 +1,7 @@
+/usr/bin/ld: /home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir/verilated_fst_c.o: in function `fst::detail::ValueChangeData::encodePositionsAndwriteUniqueWaveData(std::ostream&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > > const&, std::vector<long, std::allocator<long> >&, fst::WriterPackType)':
+verilated_fst_c.cpp:(.text+0x492f): undefined reference to `LZ4_compressBound'
+/usr/bin/ld: verilated_fst_c.cpp:(.text+0x4958): undefined reference to `LZ4_compress_default'
+/usr/bin/ld: /home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir/verilated_fst_c.o: in function `fst::Writer::appendHierarchy_(std::ostream&)':
+verilated_fst_c.cpp:(.text+0x5c9e): undefined reference to `LZ4_compressBound'
+/usr/bin/ld: verilated_fst_c.cpp:(.text+0x5cfa): undefined reference to `LZ4_compress_default'
+collect2: error: ld returned 1 exit status

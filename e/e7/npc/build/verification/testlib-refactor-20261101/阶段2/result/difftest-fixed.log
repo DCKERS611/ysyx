@@ -1,0 +1,35 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+NPC_MEM_DELAY=1 make -f Makefile.diff difftest
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+python3 tests/run_cpu_tests.py --group functional --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] functional/arithmetic: core=85 steps=5 checks=11 memory=33554432
+[ PASS ] functional/byte_memory: core=391 steps=23 checks=15 memory=33554432
+[ PASS ] functional/call_return: core=119 steps=7 checks=17 memory=33554432
+[ PASS ] functional/word_memory: core=119 steps=7 checks=10 memory=33554432
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] boundary/consecutive_jumps: core=119 steps=7 checks=18 memory=33554432
+[ PASS ] boundary/illegal_rd: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_rs1: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_rs2: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_store: core=85 steps=5 checks=9 memory=33554432
+[ PASS ] boundary/immediate_sign: core=170 steps=10 checks=14 memory=33554432
+[ PASS ] boundary/jalr_negative: core=85 steps=5 checks=15 memory=33554432
+[ PASS ] boundary/jalr_same_register: core=85 steps=5 checks=15 memory=33554432
+[ PASS ] boundary/u_immediate: core=102 steps=6 checks=11 memory=33554432
+[ PASS ] boundary/unsupported_funct3: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_funct7: core=68 steps=4 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_store: core=85 steps=5 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_system: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/x0_readonly: core=204 steps=12 checks=24 memory=33554432
+boundary: 14/14 programs passed
+python3 tests/run_cpu_tests.py --group difftest --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] difftest/medium: core=1377 steps=81 checks=16 memory=33554432
+[ PASS ] difftest/small: core=238 steps=14 checks=16 memory=33554432
+difftest: 2/2 programs passed
+python3 tests/run_cpu_tests.py --group acceptance --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] acceptance/array_sum: core=357 steps=21 checks=14 memory=33554432
+[ PASS ] acceptance/byte_sum: core=306 steps=18 checks=13 memory=33554432
+[ PASS ] acceptance/sum_1_to_10: core=408 steps=24 checks=9 memory=33554432
+acceptance: 3/3 programs passed
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'

@@ -1,0 +1,301 @@
+{
+    "schema_version": 3,
+    "analysis_revision": "quality-gates-v4",
+    "tool": "ecc",
+    "step": "Floorplan",
+    "design": "ecc_smoke",
+    "status": "success",
+    "metrics": [
+        {
+            "id": "core_area",
+            "display_name": "Core Area",
+            "value": 234.08,
+            "unit": "um^2",
+            "category": "area_cost",
+            "direction": "lower_is_better",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/core_area"
+            }
+        },
+        {
+            "id": "core_utilization",
+            "display_name": "Core Utilization",
+            "value": 0.39,
+            "unit": "ratio",
+            "category": "area_cost",
+            "direction": "target_range",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/core_usage"
+            }
+        },
+        {
+            "id": "die_area",
+            "display_name": "Die Area",
+            "value": 372.48,
+            "unit": "um^2",
+            "category": "area_cost",
+            "direction": "lower_is_better",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/die_area"
+            }
+        },
+        {
+            "id": "die_height",
+            "display_name": "Die Height",
+            "value": 19.4,
+            "unit": "um",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/die_bounding_height"
+            }
+        },
+        {
+            "id": "die_utilization",
+            "display_name": "Die Utilization",
+            "value": 0.24,
+            "unit": "ratio",
+            "category": "area_cost",
+            "direction": "target_range",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/die_usage"
+            }
+        },
+        {
+            "id": "die_width",
+            "display_name": "Die Width",
+            "value": 19.2,
+            "unit": "um",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Layout/die_bounding_width"
+            }
+        },
+        {
+            "id": "instance_count",
+            "display_name": "Instance Count",
+            "value": 72,
+            "unit": "count",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Statis/num_instances"
+            }
+        },
+        {
+            "id": "io_pin_count",
+            "display_name": "IO Pin Count",
+            "value": 10,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "trend_only",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Statis/num_iopins"
+            }
+        },
+        {
+            "id": "net_count",
+            "display_name": "Net Count",
+            "value": 38,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "trend_only",
+            "scope": "floorplan",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "floorplan_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.db.json",
+                "selector": "/Design Statis/num_nets"
+            }
+        },
+        {
+            "id": "peak_memory_mb",
+            "display_name": "Peak Memory",
+            "value": 134.219,
+            "unit": "MB",
+            "category": "runtime",
+            "direction": "lower_is_better",
+            "scope": "floorplan_execution",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "runtime",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.step.json",
+                "selector": "/run/peak_memory_mb"
+            }
+        },
+        {
+            "id": "runtime_seconds",
+            "display_name": "Step Runtime",
+            "value": 1.229,
+            "unit": "s",
+            "category": "runtime",
+            "direction": "lower_is_better",
+            "scope": "floorplan_execution",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "runtime",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.step.json",
+                "selector": "/run/runtime_seconds"
+            }
+        }
+    ],
+    "details": [],
+    "sources": [
+        {
+            "kind": "feature",
+            "path": "feature/Floorplan.db.json"
+        },
+        {
+            "kind": "feature",
+            "path": "feature/Floorplan.step.json"
+        }
+    ],
+    "integrity": {
+        "status": "pass",
+        "invalid_metric_source_ids": [],
+        "invalid_detail_ids": []
+    },
+    "context": {
+        "timing_constraints": {
+            "sdc_sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+            "sdc_size_bytes": 253,
+            "source": {
+                "kind": "feature",
+                "path": "feature/Floorplan.step.json",
+                "selector": "/constraints/sdc"
+            }
+        }
+    }
+}

@@ -1,0 +1,547 @@
+#include "/home/ysyx/ysyx-workbench/abstract-machine/tools/minirv/inst-replace.h"
+	.file	"h264bsd_seq_param_set.c"
+	.option nopic
+	.text
+	.globl	__mulsi3
+	.globl	__udivsi3
+	.globl	__divsi3
+	.section	.text.h264bsdDecodeSeqParamSet,"ax",@progbits
+	.align	2
+	.globl	h264bsdDecodeSeqParamSet
+	.hidden	h264bsdDecodeSeqParamSet
+	.type	h264bsdDecodeSeqParamSet, @function
+h264bsdDecodeSeqParamSet:
+	addi	sp,sp,-24
+	sw	s1,12(sp)
+	mv	s1,a1
+	sw	s0,16(sp)
+	li	a2,92
+	mv	s0,a0
+	li	a1,0
+	mv	a0,s1
+	sw	ra,20(sp)
+	call	memset
+	li	a1,8
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a5,-1
+	beq	a0,a5,.L4
+	li	a1,1
+	sw	a0,0(s1)
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a5,-1
+	beq	a0,a5,.L4
+	li	a1,5
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a5,-1
+	beq	a0,a5,.L4
+	li	a1,8
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a5,-1
+	beq	a0,a5,.L4
+	sw	a0,4(s1)
+	addi	a1,s1,8
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a4,8(s1)
+	li	a5,31
+	bgtu	a4,a5,.L4
+	addi	a1,sp,8
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a5,8(sp)
+	li	a4,12
+	bgtu	a5,a4,.L4
+	li	a4,1
+	addi	a5,a5,4
+	sll	a5,a4,a5
+	sw	a5,12(s1)
+	addi	a1,sp,8
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a5,8(sp)
+	li	a4,2
+	bgtu	a5,a4,.L4
+	sw	a5,16(s1)
+	beq	a5,zero,.L52
+	li	a4,1
+	beq	a5,a4,.L53
+.L6:
+	addi	a1,s1,44
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a4,44(s1)
+	li	a5,16
+	bgtu	a4,a5,.L4
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a4,-1
+	beq	a0,a4,.L4
+	addi	a5,a0,-1
+	seqz	a5,a5
+	sw	a5,48(s1)
+	addi	a1,sp,8
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a5,8(sp)
+	addi	a1,sp,8
+	mv	a0,s0
+	addi	a5,a5,1
+	sw	a5,52(s1)
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a4,8(sp)
+	sw	a0,0(sp)
+	li	a1,1
+	addi	a4,a4,1
+	sw	a4,56(s1)
+	mv	a0,s0
+	call	h264bsdGetBits
+	addi	a4,a0,-1
+	li	a3,-3
+	bgtu	a4,a3,.L4
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a4,-1
+	beq	a0,a4,.L4
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a5,-1
+	beq	a0,a5,.L4
+	addi	a3,a0,-1
+	seqz	a3,a3
+	sw	a3,60(s1)
+	li	a3,1
+	lw	a5,0(sp)
+	beq	a0,a3,.L12
+.L26:
+	lw	a1,56(s1)
+	lw	a0,52(s1)
+	sw	a5,0(sp)
+	call	__mulsi3
+	lw	a4,4(s1)
+	li	a2,41
+	lw	a5,0(sp)
+	addi	a4,a4,-10
+	mv	a3,a0
+	bgtu	a4,a2,.L46
+	lla	a2,.L15
+	slli	a4,a4,2
+	add	a4,a4,a2
+	lw	a4,0(a4)
+	add	a4,a4,a2
+	jr	a4
+	.section	.rodata.h264bsdDecodeSeqParamSet,"a",@progbits
+	.align	2
+	.align	2
+.L15:
+	.word	.L37-.L15
+	.word	.L24-.L15
+	.word	.L23-.L15
+	.word	.L23-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L23-.L15
+	.word	.L22-.L15
+	.word	.L21-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L21-.L15
+	.word	.L20-.L15
+	.word	.L19-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L18-.L15
+	.word	.L18-.L15
+	.word	.L17-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L46-.L15
+	.word	.L16-.L15
+	.word	.L14-.L15
+	.section	.text.h264bsdDecodeSeqParamSet
+.L12:
+	addi	a1,s1,64
+	mv	a0,s0
+	sw	a5,0(sp)
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a4,a0
+	bne	a0,zero,.L43
+	addi	a1,s1,68
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a4,a0
+	bne	a0,zero,.L43
+	addi	a1,s1,72
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a4,a0
+	bne	a0,zero,.L43
+	addi	a1,s1,76
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a4,a0
+	bne	a0,zero,.L43
+	lw	a4,52(s1)
+	lw	a3,68(s1)
+	lw	a2,64(s1)
+	slli	a4,a4,3
+	addi	a3,a3,1
+	sub	a4,a4,a3
+	bgt	a2,a4,.L4
+	lw	a4,56(s1)
+	lw	a3,76(s1)
+	lw	a2,72(s1)
+	slli	a4,a4,3
+	addi	a3,a3,1
+	sub	a4,a4,a3
+	lw	a5,0(sp)
+	ble	a2,a4,.L26
+.L4:
+	li	a5,1
+.L1:
+	lw	ra,20(sp)
+	lw	s0,16(sp)
+	lw	s1,12(sp)
+	mv	a0,a5
+	addi	sp,sp,24
+	jr	ra
+.L52:
+	addi	a1,sp,8
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a5,8(sp)
+	li	a4,12
+	bgtu	a5,a4,.L4
+	addi	a5,a5,4
+	li	a4,1
+	sll	a5,a4,a5
+	sw	a5,20(s1)
+	j	.L6
+.L53:
+	li	a1,1
+	mv	a0,s0
+	call	h264bsdGetBits
+	li	a4,-1
+	beq	a0,a4,.L4
+	addi	a5,a0,-1
+	seqz	a5,a5
+	sw	a5,24(s1)
+	addi	a1,s1,28
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombSigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	addi	a1,s1,32
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombSigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	addi	a1,s1,36
+	mv	a0,s0
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a5,a0
+	bne	a0,zero,.L1
+	lw	a0,36(s1)
+	li	a4,255
+	bgtu	a0,a4,.L4
+	bne	a0,zero,.L54
+	sw	zero,40(s1)
+	j	.L6
+.L54:
+	slli	a0,a0,2
+	sw	a5,0(sp)
+	call	malloc
+	sw	a0,40(s1)
+	lw	a5,0(sp)
+	bne	a0,zero,.L9
+	j	.L42
+.L55:
+	lw	a5,0(sp)
+	addi	a5,a5,1
+.L9:
+	lw	a4,36(s1)
+	bleu	a4,a5,.L6
+	lw	a1,40(s1)
+	slli	a4,a5,2
+	mv	a0,s0
+	add	a1,a1,a4
+	sw	a5,0(sp)
+	call	h264bsdDecodeExpGolombSigned
+	mv	a4,a0
+	beq	a0,zero,.L55
+.L43:
+	mv	a5,a4
+	j	.L1
+.L42:
+	li	a5,65536
+	addi	a5,a5,-1
+	j	.L1
+.L17:
+	li	a4,8192
+	addi	a4,a4,512
+	li	a0,13369344
+.L25:
+	lw	a2,44(s1)
+	bgtu	a3,a4,.L13
+	slli	a1,a3,1
+	add	a1,a1,a3
+	slli	a1,a1,7
+	sw	a2,4(sp)
+	sw	a5,0(sp)
+	call	__udivsi3
+	li	a3,16
+	lw	a5,0(sp)
+	lw	a2,4(sp)
+	mv	a4,a0
+	bleu	a0,a3,.L28
+	li	a4,16
+.L28:
+	sw	a4,8(sp)
+	bgeu	a4,a2,.L30
+.L13:
+	sw	a2,8(sp)
+.L30:
+	lw	a4,8(sp)
+	li	a1,1
+	mv	a0,s0
+	sw	a4,88(s1)
+	sw	a5,0(sp)
+	call	h264bsdGetBits
+	li	a3,-1
+	beq	a0,a3,.L4
+	addi	a3,a0,-1
+	seqz	a3,a3
+	sw	a3,80(s1)
+	li	a3,1
+	lw	a5,0(sp)
+	bne	a0,a3,.L32
+	li	a0,952
+	call	malloc
+	sw	a0,84(s1)
+	mv	a1,a0
+	beq	a0,zero,.L42
+	mv	a0,s0
+	call	h264bsdDecodeVuiParameters
+	mv	a4,a0
+	bne	a0,zero,.L43
+	lw	a3,84(s1)
+	lw	a5,0(sp)
+	lw	a4,920(a3)
+	beq	a4,zero,.L32
+	lw	a4,948(a3)
+	lw	a3,944(a3)
+	bgtu	a3,a4,.L4
+	lw	a3,44(s1)
+	bltu	a4,a3,.L4
+	lw	a3,88(s1)
+	bgtu	a4,a3,.L4
+	bne	a4,zero,.L34
+	li	a4,1
+.L34:
+	sw	a4,88(s1)
+.L32:
+	mv	a0,s0
+	sw	a5,0(sp)
+	call	h264bsdRbspTrailingBits
+	lw	a5,0(sp)
+	j	.L1
+.L19:
+	li	a4,4096
+	addi	a4,a4,1024
+	li	a0,7864320
+	j	.L25
+.L18:
+	li	a4,8192
+	li	a0,12582912
+	j	.L25
+.L20:
+	li	a4,4096
+	li	a0,6914048
+	addi	a4,a4,-496
+	addi	a0,a0,-2048
+	j	.L25
+.L14:
+	li	a4,36864
+	li	a0,70778880
+	j	.L25
+.L16:
+	li	a4,20480
+	addi	a4,a4,1600
+	li	a0,42393600
+	j	.L25
+.L37:
+	li	a0,151552
+	li	a4,99
+	addi	a0,a0,512
+	j	.L25
+.L46:
+	lw	a2,44(s1)
+	j	.L13
+.L21:
+	li	a0,3108864
+	li	a4,1620
+	addi	a0,a0,1536
+	j	.L25
+.L22:
+	li	a0,1826816
+	li	a4,792
+	addi	a0,a0,-2048
+	j	.L25
+.L23:
+	li	a0,913408
+	li	a4,396
+	addi	a0,a0,-1024
+	j	.L25
+.L24:
+	li	a0,344064
+	li	a4,396
+	addi	a0,a0,1536
+	j	.L25
+	.size	h264bsdDecodeSeqParamSet, .-h264bsdDecodeSeqParamSet
+	.section	.text.h264bsdCompareSeqParamSets,"ax",@progbits
+	.align	2
+	.globl	h264bsdCompareSeqParamSets
+	.hidden	h264bsdCompareSeqParamSets
+	.type	h264bsdCompareSeqParamSets, @function
+h264bsdCompareSeqParamSets:
+	lw	a4,0(a0)
+	lw	a5,0(a1)
+	mv	a3,a0
+	beq	a4,a5,.L77
+.L71:
+	li	a0,1
+	ret
+.L77:
+	lw	a4,4(a0)
+	lw	a5,4(a1)
+	li	a0,1
+	beq	a4,a5,.L78
+.L56:
+	ret
+.L78:
+	lw	a4,12(a3)
+	lw	a5,12(a1)
+	bne	a4,a5,.L56
+	lw	a0,16(a3)
+	lw	a5,16(a1)
+	bne	a0,a5,.L71
+	lw	a4,44(a3)
+	lw	a5,44(a1)
+	bne	a4,a5,.L71
+	lw	a4,48(a3)
+	lw	a5,48(a1)
+	bne	a4,a5,.L71
+	lw	a4,52(a3)
+	lw	a5,52(a1)
+	bne	a4,a5,.L71
+	lw	a4,56(a3)
+	lw	a5,56(a1)
+	bne	a4,a5,.L71
+	lw	t1,60(a3)
+	lw	a5,60(a1)
+	bne	t1,a5,.L71
+	lw	a4,80(a3)
+	lw	a5,80(a1)
+	bne	a4,a5,.L71
+	bne	a0,zero,.L58
+	lw	a4,20(a3)
+	lw	a5,20(a1)
+	li	a0,1
+	bne	a4,a5,.L56
+.L59:
+	beq	t1,zero,.L73
+	lw	a4,64(a3)
+	lw	a5,64(a1)
+	li	a0,1
+	bne	a4,a5,.L56
+	lw	a4,68(a3)
+	lw	a5,68(a1)
+	bne	a4,a5,.L56
+	lw	a4,72(a3)
+	lw	a5,72(a1)
+	bne	a4,a5,.L56
+	lw	a0,76(a3)
+	lw	a5,76(a1)
+	sub	a0,a0,a5
+	snez	a0,a0
+	ret
+.L58:
+	li	a5,1
+	bne	a0,a5,.L59
+	lw	a4,24(a3)
+	lw	a5,24(a1)
+	bne	a4,a5,.L56
+	lw	a4,28(a3)
+	lw	a5,28(a1)
+	bne	a4,a5,.L56
+	lw	a4,32(a3)
+	lw	a5,32(a1)
+	bne	a4,a5,.L56
+	lw	t0,36(a3)
+	lw	a5,36(a1)
+	bne	t0,a5,.L56
+	li	a5,0
+	j	.L60
+.L61:
+	lw	a2,40(a3)
+	lw	a4,40(a1)
+	addi	a5,a5,1
+	add	a2,a2,t2
+	add	a4,a4,t2
+	lw	a2,0(a2)
+	lw	a4,0(a4)
+	bne	a2,a4,.L56
+.L60:
+	slli	t2,a5,2
+	bne	t0,a5,.L61
+	j	.L59
+.L73:
+	li	a0,0
+	ret
+	.size	h264bsdCompareSeqParamSets, .-h264bsdCompareSeqParamSets
+	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,26 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+NPC_MEM_DELAY=1 make -f Makefile.cpptest test-all
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+python3 tests/run_cpu_tests.py --group functional --runner build/regress/cpu_test
+[ PASS ] functional/arithmetic: stop=ebreak cycles=10 retired=5 checks=11
+[ PASS ] functional/byte_memory: stop=ebreak cycles=59 retired=23 checks=15
+[ PASS ] functional/call_return: stop=ebreak cycles=14 retired=7 checks=17
+[ PASS ] functional/word_memory: stop=ebreak cycles=16 retired=7 checks=10
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/regress/cpu_test
+[ PASS ] boundary/consecutive_jumps: stop=ebreak cycles=14 retired=7 checks=18
+[ PASS ] boundary/illegal_rd: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_rs1: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_rs2: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_store: stop=rejected cycles=10 retired=4 checks=9
+[ PASS ] boundary/immediate_sign: stop=ebreak cycles=22 retired=10 checks=14
+[ PASS ] boundary/jalr_negative: stop=ebreak cycles=10 retired=5 checks=15
+[ PASS ] boundary/jalr_same_register: stop=ebreak cycles=10 retired=5 checks=15
+[ PASS ] boundary/u_immediate: stop=ebreak cycles=12 retired=6 checks=11
+[ PASS ] boundary/unsupported_funct3: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/unsupported_funct7: stop=rejected cycles=7 retired=3 checks=9
+[ PASS ] boundary/unsupported_store: stop=rejected cycles=10 retired=4 checks=9
+[ PASS ] boundary/unsupported_system: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/x0_readonly: stop=ebreak cycles=27 retired=12 checks=24
+boundary: 14/14 programs passed
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'

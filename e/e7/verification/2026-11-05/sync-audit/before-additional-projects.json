@@ -1,0 +1,28 @@
+{
+  "nemu": {
+    "count": 1857,
+    "bytes": 117161941,
+    "missing": 1857,
+    "links": [
+      [
+        "nemu/tools/capstone/repo/tests/libcapstone.so",
+        "libcapstone.so.5"
+      ]
+    ],
+    "large": []
+  },
+  "fceux-am": {
+    "count": 253,
+    "bytes": 1267692,
+    "missing": 253,
+    "links": [],
+    "large": []
+  },
+  "ecc-smoke": {
+    "count": 585,
+    "bytes": 28368051,
+    "missing": 585,
+    "links": [],
+    "large": []
+  }
+}

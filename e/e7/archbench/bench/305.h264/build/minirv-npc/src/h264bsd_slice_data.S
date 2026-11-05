@@ -1,0 +1,301 @@
+#include "/home/ysyx/ysyx-workbench/abstract-machine/tools/minirv/inst-replace.h"
+	.file	"h264bsd_slice_data.c"
+	.option nopic
+	.text
+	.section	.text.h264bsdDecodeSliceData,"ax",@progbits
+	.align	2
+	.globl	h264bsdDecodeSliceData
+	.hidden	h264bsdDecodeSliceData
+	.type	h264bsdDecodeSliceData, @function
+h264bsdDecodeSliceData:
+	lw	a5,12(a1)
+	addi	sp,sp,-492
+	sw	s1,480(sp)
+	lw	a4,52(a5)
+	mv	s1,a1
+	mv	t2,a3
+	li	a5,4096
+	sw	s0,484(sp)
+	add	a5,s1,a5
+	lw	s0,48(t2)
+	lw	a5,-720(a5)
+	addi	t1,sp,48
+	lw	a3,1192(a1)
+	neg	a1,t1
+	add	a4,a4,s0
+	andi	a1,a1,15
+	lw	s0,0(t2)
+	sw	a5,24(sp)
+	add	a5,t1,a1
+	sw	ra,488(sp)
+	addi	a3,a3,1
+	sw	a5,28(sp)
+	mv	a5,s1
+	sw	a3,1192(s1)
+	sw	zero,1200(s1)
+	sw	a0,20(sp)
+	mv	s1,s0
+	sw	a2,32(sp)
+	sw	zero,40(sp)
+	sw	a4,44(sp)
+	sw	zero,8(sp)
+	sw	zero,36(sp)
+	mv	s0,a5
+.L13:
+	slli	t1,s1,3
+	sub	t1,t1,s1
+	lw	a0,1212(s0)
+	slli	t1,t1,2
+	lw	a4,36(t2)
+	sub	t1,t1,s1
+	slli	t1,t1,3
+	add	a0,a0,t1
+	bne	a4,zero,.L2
+	lw	a4,196(a0)
+	bne	a4,zero,.L5
+.L2:
+	lw	a4,12(s0)
+	lw	a1,56(t2)
+	lw	a2,60(t2)
+	lw	a3,56(a4)
+	lw	ra,1192(s0)
+	lw	a5,52(t2)
+	lw	a4,4(t2)
+	sw	a3,24(a0)
+	sw	a5,8(a0)
+	sw	ra,4(a0)
+	sw	a1,12(a0)
+	sw	a2,16(a0)
+	li	a3,2
+	beq	a4,a3,.L4
+	li	a3,7
+	beq	a4,a3,.L4
+	lw	a5,36(sp)
+	beq	a5,zero,.L28
+.L4:
+	lw	a4,40(sp)
+	beq	a4,zero,.L7
+	addi	a4,a4,-1
+	sw	a4,40(sp)
+.L8:
+	lw	a5,28(sp)
+	lw	a4,12(s0)
+	lw	a1,24(sp)
+	sw	a5,4(sp)
+	lw	a2,64(a4)
+	mv	a5,s1
+	addi	a4,sp,44
+	sw	a2,0(sp)
+	lw	a2,32(sp)
+	addi	a3,s0,1220
+	sw	t2,16(sp)
+	sw	t1,12(sp)
+	call	h264bsdDecodeMacroblock
+	mv	a4,a0
+	bne	a0,zero,.L1
+	lw	a4,1212(s0)
+	lw	t1,12(sp)
+	lw	a5,8(sp)
+	lw	a0,20(sp)
+	add	a4,a4,t1
+	lw	a4,196(a4)
+	addi	a4,a4,-1
+	seqz	a4,a4
+	add	a5,a5,a4
+	sw	a5,8(sp)
+	call	h264bsdMoreRbspData
+	lw	t2,16(sp)
+	lw	a1,40(sp)
+	li	a2,2
+	lw	a3,4(t2)
+	or	a4,a0,a1
+	beq	a3,a2,.L10
+	li	a2,7
+	beq	a3,a2,.L10
+.L11:
+	lw	a1,1176(s0)
+	lw	a0,1172(s0)
+	mv	a2,s1
+	sw	a4,12(sp)
+	sw	t2,16(sp)
+	call	h264bsdNextMbAddress
+	lw	a4,12(sp)
+	mv	s1,a0
+	bne	a4,zero,.L29
+	lw	a5,1196(s0)
+	lw	a2,8(sp)
+	lw	a3,1176(s0)
+	add	a5,a2,a5
+	bgtu	a5,a3,.L5
+	sw	a5,1196(s0)
+.L1:
+	lw	ra,488(sp)
+	lw	s0,484(sp)
+	lw	s1,480(sp)
+	mv	a0,a4
+	addi	sp,sp,492
+	jr	ra
+.L10:
+	sw	s1,1200(s0)
+	j	.L11
+.L29:
+	lw	t2,16(sp)
+	bne	a0,zero,.L13
+.L5:
+	lw	ra,488(sp)
+	lw	s0,484(sp)
+	li	a4,1
+	lw	s1,480(sp)
+	mv	a0,a4
+	addi	sp,sp,492
+	jr	ra
+.L28:
+	lw	a0,20(sp)
+	addi	a1,sp,40
+	sw	t2,16(sp)
+	sw	t1,12(sp)
+	call	h264bsdDecodeExpGolombUnsigned
+	mv	a4,a0
+	bne	a0,zero,.L1
+	lw	a4,1176(s0)
+	lw	a3,40(sp)
+	sub	a4,a4,s1
+	bltu	a4,a3,.L5
+	lw	t1,12(sp)
+	lw	t2,16(sp)
+	bne	a3,zero,.L30
+	lw	a0,1212(s0)
+	add	a0,a0,t1
+.L7:
+	mv	a2,a0
+	lw	a4,44(t2)
+	lw	a3,4(t2)
+	lw	a1,24(sp)
+	lw	a0,20(sp)
+	sw	t1,16(sp)
+	sw	t2,12(sp)
+	call	h264bsdDecodeMacroblockLayer
+	sw	a0,36(sp)
+	bne	a0,zero,.L14
+	lw	a0,1212(s0)
+	lw	t1,16(sp)
+	lw	t2,12(sp)
+	add	a0,a0,t1
+	j	.L8
+.L30:
+	lw	a5,24(sp)
+	li	a2,164
+	li	a1,0
+	addi	a0,a5,12
+	call	memset
+	lw	a5,24(sp)
+	lw	a0,1212(s0)
+	lw	t1,12(sp)
+	sw	zero,0(a5)
+	li	a5,1
+	lw	t2,16(sp)
+	sw	a5,36(sp)
+	add	a0,a0,t1
+	j	.L4
+.L14:
+	lw	a4,36(sp)
+	j	.L1
+	.size	h264bsdDecodeSliceData, .-h264bsdDecodeSliceData
+	.section	.text.h264bsdMarkSliceCorrupted,"ax",@progbits
+	.align	2
+	.globl	h264bsdMarkSliceCorrupted
+	.hidden	h264bsdMarkSliceCorrupted
+	.type	h264bsdMarkSliceCorrupted, @function
+h264bsdMarkSliceCorrupted:
+	lw	a4,1200(a0)
+	addi	sp,sp,-12
+	sw	s0,4(sp)
+	sw	s1,0(sp)
+	sw	ra,8(sp)
+	lw	s0,1192(a0)
+	lw	a3,1212(a0)
+	mv	s1,a0
+	mv	a2,a1
+	bne	a4,zero,.L32
+	slli	a5,a1,3
+	sub	a4,a5,a1
+	slli	a4,a4,2
+	sub	a4,a4,a1
+	slli	a4,a4,3
+	add	a4,a3,a4
+	lw	a4,4(a4)
+	j	.L33
+.L49:
+	lw	a4,196(a5)
+	addi	a3,a4,-1
+	beq	a4,zero,.L31
+	lw	a1,1176(s1)
+	lw	a0,1172(s1)
+	sw	a3,196(a5)
+	call	h264bsdNextMbAddress
+	slli	a5,a0,3
+	sub	a4,a5,a0
+	slli	a4,a4,2
+	sub	a4,a4,a0
+	mv	a2,a0
+	slli	a4,a4,3
+	beq	a0,zero,.L31
+	lw	a3,1212(s1)
+	add	a4,a3,a4
+	lw	a4,4(a4)
+.L33:
+	sub	a5,a5,a2
+	slli	a5,a5,2
+	sub	a5,a5,a2
+	slli	a5,a5,3
+	add	a5,a3,a5
+	beq	s0,a4,.L49
+.L31:
+	lw	ra,8(sp)
+	lw	s0,4(sp)
+	lw	s1,0(sp)
+	addi	sp,sp,12
+	jr	ra
+.L32:
+	addi	a1,a4,-1
+	bgeu	a2,a1,.L48
+	slli	a5,a4,3
+	sub	a5,a5,a4
+	slli	a5,a5,2
+	sub	a5,a5,a4
+	slli	a5,a5,3
+	addi	a5,a5,-212
+	add	a5,a3,a5
+	li	t1,0
+	li	t0,10
+	j	.L38
+.L36:
+	addi	a1,a1,-1
+	bgeu	a2,a1,.L48
+.L38:
+	lw	a4,0(a5)
+	addi	a5,a5,-216
+	bne	a4,s0,.L36
+	lw	a0,16(s1)
+	addi	t1,t1,1
+	lw	a0,52(a0)
+	bgeu	a0,t0,.L37
+	li	a0,10
+.L37:
+	bgtu	a0,t1,.L36
+	mv	a2,a1
+	slli	a5,a1,3
+	j	.L33
+.L48:
+	slli	a5,a1,3
+	sub	a4,a5,a1
+	slli	a4,a4,2
+	sub	a4,a4,a1
+	slli	a4,a4,3
+	add	a4,a3,a4
+	lw	a4,4(a4)
+	mv	a2,a1
+	j	.L33
+	.size	h264bsdMarkSliceCorrupted, .-h264bsdMarkSliceCorrupted
+	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
+	.section	.note.GNU-stack,"",@progbits

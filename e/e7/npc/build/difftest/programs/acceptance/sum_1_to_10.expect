@@ -1,0 +1,5 @@
+halt 0x80000060
+instructions 24
+cycles_fixed 1 48
+reg 10 55
+reg 5 10

@@ -1,0 +1,6 @@
+Loaded ../am-kernels/tests/cpu-tests/build/dummy-minirv-npc.bin: 144 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] ../am-kernels/tests/cpu-tests/build/dummy-minirv-npc.bin
+PASS: 289 (17 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 118
+halt_pc=0x80000040 NPC.pc=0x80000044 EMU.pc=0x80000040

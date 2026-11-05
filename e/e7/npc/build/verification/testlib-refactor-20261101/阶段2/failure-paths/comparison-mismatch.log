@@ -1,0 +1,5 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/functional/arithmetic.bin: 20 bytes
+step=1 pre_pc=0x80000000 inst=0x00500093
+x1: actual=0x00000004 expect=0x00000005
+FAILED: 1/24
+RESULT case=probe backend=diff verdict=fail stop=comparison_mismatch pc=0x80000000 inst=0x00500093 cycles=10 retired=1 attempts=1 checks=0 failures=0 delay=random core=17 core_fail=1 extra=7 extra_fail=0 memory=0 memory_fail=0

@@ -1,0 +1,30 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/106.qsort'
+# Building qsort-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/qsort-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/106.qsort/build/qsort-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+cs = 0x1f4fe60a
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.904281 (904281 us)
+             267 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.904281 (904281 us)
+Total  time:   0:00:09.400798 (9400798 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/106.qsort/build/qsort-minirv-npc.bin: 368032 bytes
+Result: halt_pc=0x80000ca4 a0=0x00000000 ra=0x80000ca0 cycles=3812432688
+instructions=216693598 cycles=3812432688 IPC=0.056839
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/106.qsort'
+[WALL] 2574.21 s

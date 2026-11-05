@@ -1,0 +1,11 @@
+[ RUN ] probe
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/functional/arithmetic.bin: 20 bytes
+Waveform: /proc/ysyx-testlib-no-wave.fst
+pc=0x80000000 inst=0x00500093 --> next_pc=0x80000004
+pc=0x80000004 inst=0x00700113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x002081b3 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x12345537 --> next_pc=0x80000010
+ebreak @ pc=0x80000010
+pc=0x80000010 inst=0x00100073 --> next_pc=0x80000014
+PASS: 11 checks
+RESULT case=probe backend=npc verdict=pass stop=ebreak pc=0x80000010 inst=0x00100073 cycles=43 retired=5 attempts=5 checks=11 failures=0 delay=random

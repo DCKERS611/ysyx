@@ -1,0 +1,496 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+# Building add-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/add-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/add-minirv-npc.bin: 309504 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] add-minirv-npc.bin
+PASS: 72641 (4273 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 31611
+halt_pc=0x800033c8 NPC.pc=0x800033cc EMU.pc=0x800033c8
+RESULT case=add-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x800033c8 inst=0x00100073 cycles=69612 retired=4273 attempts=4273 checks=0 failures=0 delay=random core=72641 core_fail=0 extra=31611 extra_fail=0 memory=33554432 memory_fail=0
+# Building addi-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/addi-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/addi-minirv-npc.bin: 303872 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] addi-minirv-npc.bin
+PASS: 38811 (2283 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 16862
+halt_pc=0x80001e08 NPC.pc=0x80001e0c EMU.pc=0x80001e08
+RESULT case=addi-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001e08 inst=0x00100073 cycles=37075 retired=2283 attempts=2283 checks=0 failures=0 delay=random core=38811 core_fail=0 extra=16862 extra_fail=0 memory=33554432 memory_fail=0
+# Building and-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/and-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/and-minirv-npc.bin: 310528 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] and-minirv-npc.bin
+PASS: 87465 (5145 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 38031
+halt_pc=0x80003848 NPC.pc=0x8000384c EMU.pc=0x80003848
+RESULT case=and-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003848 inst=0x00100073 cycles=88847 retired=5145 attempts=5145 checks=0 failures=0 delay=random core=87465 core_fail=0 extra=38031 extra_fail=0 memory=33554432 memory_fail=0
+# Building andi-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/andi-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/andi-minirv-npc.bin: 302848 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] andi-minirv-npc.bin
+PASS: 39032 (2296 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 16996
+halt_pc=0x80001a88 NPC.pc=0x80001a8c EMU.pc=0x80001a88
+RESULT case=andi-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001a88 inst=0x00100073 cycles=39854 retired=2296 attempts=2296 checks=0 failures=0 delay=random core=39032 core_fail=0 extra=16996 extra_fail=0 memory=33554432 memory_fail=0
+# Building auipc-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/auipc-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/auipc-minirv-npc.bin: 297216 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] auipc-minirv-npc.bin
+PASS: 3995 (235 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 1718
+halt_pc=0x80000404 NPC.pc=0x80000408 EMU.pc=0x80000404
+RESULT case=auipc-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000404 inst=0x00100073 cycles=3899 retired=235 attempts=235 checks=0 failures=0 delay=random core=3995 core_fail=0 extra=1718 extra_fail=0 memory=33554432 memory_fail=0
+# Building beq-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/beq-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/beq-minirv-npc.bin: 308480 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] beq-minirv-npc.bin
+PASS: 70822 (4166 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 30834
+halt_pc=0x80003008 NPC.pc=0x8000300c EMU.pc=0x80003008
+RESULT case=beq-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003008 inst=0x00100073 cycles=68537 retired=4166 attempts=4166 checks=0 failures=0 delay=random core=70822 core_fail=0 extra=30834 extra_fail=0 memory=33554432 memory_fail=0
+# Building bge-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/bge-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/bge-minirv-npc.bin: 312064 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] bge-minirv-npc.bin
+PASS: 84422 (4966 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 36811
+halt_pc=0x80003e88 NPC.pc=0x80003e8c EMU.pc=0x80003e88
+RESULT case=bge-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003e88 inst=0x00100073 cycles=83588 retired=4966 attempts=4966 checks=0 failures=0 delay=random core=84422 core_fail=0 extra=36811 extra_fail=0 memory=33554432 memory_fail=0
+# Building bgeu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/bgeu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/bgeu-minirv-npc.bin: 312320 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] bgeu-minirv-npc.bin
+PASS: 84847 (4991 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 36936
+halt_pc=0x80003ec8 NPC.pc=0x80003ecc EMU.pc=0x80003ec8
+RESULT case=bgeu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003ec8 inst=0x00100073 cycles=83927 retired=4991 attempts=4991 checks=0 failures=0 delay=random core=84847 core_fail=0 extra=36936 extra_fail=0 memory=33554432 memory_fail=0
+# Building blt-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/blt-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/blt-minirv-npc.bin: 309248 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] blt-minirv-npc.bin
+PASS: 75208 (4424 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 32791
+halt_pc=0x800032c8 NPC.pc=0x800032cc EMU.pc=0x800032c8
+RESULT case=blt-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x800032c8 inst=0x00100073 cycles=74457 retired=4424 attempts=4424 checks=0 failures=0 delay=random core=75208 core_fail=0 extra=32791 extra_fail=0 memory=33554432 memory_fail=0
+# Building bltu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/bltu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/bltu-minirv-npc.bin: 309248 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] bltu-minirv-npc.bin
+PASS: 76279 (4487 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 33201
+halt_pc=0x80003388 NPC.pc=0x8000338c EMU.pc=0x80003388
+RESULT case=bltu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003388 inst=0x00100073 cycles=75472 retired=4487 attempts=4487 checks=0 failures=0 delay=random core=76279 core_fail=0 extra=33201 extra_fail=0 memory=33554432 memory_fail=0
+# Building bne-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/bne-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/bne-minirv-npc.bin: 308480 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] bne-minirv-npc.bin
+PASS: 70822 (4166 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 30834
+halt_pc=0x80003088 NPC.pc=0x8000308c EMU.pc=0x80003088
+RESULT case=bne-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003088 inst=0x00100073 cycles=68537 retired=4166 attempts=4166 checks=0 failures=0 delay=random core=70822 core_fail=0 extra=30834 extra_fail=0 memory=33554432 memory_fail=0
+# Building jal-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/jal-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/jal-minirv-npc.bin: 296960 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] jal-minirv-npc.bin
+PASS: 3145 (185 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 1351
+halt_pc=0x80000348 NPC.pc=0x8000034c EMU.pc=0x80000348
+RESULT case=jal-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000348 inst=0x00100073 cycles=2922 retired=185 attempts=185 checks=0 failures=0 delay=random core=3145 core_fail=0 extra=1351 extra_fail=0 memory=33554432 memory_fail=0
+# Building jalr-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/jalr-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/jalr-minirv-npc.bin: 298496 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] jalr-minirv-npc.bin
+PASS: 10880 (640 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 4703
+halt_pc=0x80000908 NPC.pc=0x8000090c EMU.pc=0x80000908
+RESULT case=jalr-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000908 inst=0x00100073 cycles=10247 retired=640 attempts=640 checks=0 failures=0 delay=random core=10880 core_fail=0 extra=4703 extra_fail=0 memory=33554432 memory_fail=0
+# Building lb-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lb-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lb-minirv-npc.bin: 303376 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lb-minirv-npc.bin
+PASS: 43877 (2581 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 19072
+halt_pc=0x80001c08 NPC.pc=0x80001c0c EMU.pc=0x80001c08
+RESULT case=lb-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001c08 inst=0x00100073 cycles=42412 retired=2581 attempts=2581 checks=0 failures=0 delay=random core=43877 core_fail=0 extra=19072 extra_fail=0 memory=33554432 memory_fail=0
+# Building lbu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lbu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lbu-minirv-npc.bin: 302608 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lbu-minirv-npc.bin
+PASS: 39389 (2317 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 17104
+halt_pc=0x800018c8 NPC.pc=0x800018cc EMU.pc=0x800018c8
+RESULT case=lbu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x800018c8 inst=0x00100073 cycles=37837 retired=2317 attempts=2317 checks=0 failures=0 delay=random core=39389 core_fail=0 extra=17104 extra_fail=0 memory=33554432 memory_fail=0
+# Building lh-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lh-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lh-minirv-npc.bin: 306192 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lh-minirv-npc.bin
+PASS: 60061 (3533 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 26224
+halt_pc=0x80002708 NPC.pc=0x8000270c EMU.pc=0x80002708
+RESULT case=lh-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002708 inst=0x00100073 cycles=58987 retired=3533 attempts=3533 checks=0 failures=0 delay=random core=60061 core_fail=0 extra=26224 extra_fail=0 memory=33554432 memory_fail=0
+# Building lhu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lhu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lhu-minirv-npc.bin: 302864 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lhu-minirv-npc.bin
+PASS: 41854 (2462 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 18166
+halt_pc=0x80001a88 NPC.pc=0x80001a8c EMU.pc=0x80001a88
+RESULT case=lhu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001a88 inst=0x00100073 cycles=40660 retired=2462 attempts=2462 checks=0 failures=0 delay=random core=41854 core_fail=0 extra=18166 extra_fail=0 memory=33554432 memory_fail=0
+# Building lui-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lui-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lui-minirv-npc.bin: 297984 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lui-minirv-npc.bin
+PASS: 8007 (471 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 3481
+halt_pc=0x80000788 NPC.pc=0x8000078c EMU.pc=0x80000788
+RESULT case=lui-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000788 inst=0x00100073 cycles=7780 retired=471 attempts=471 checks=0 failures=0 delay=random core=8007 core_fail=0 extra=3481 extra_fail=0 memory=33554432 memory_fail=0
+# Building lw-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/lw-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/lw-minirv-npc.bin: 302608 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] lw-minirv-npc.bin
+PASS: 39899 (2347 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 17284
+halt_pc=0x80001948 NPC.pc=0x8000194c EMU.pc=0x80001948
+RESULT case=lw-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001948 inst=0x00100073 cycles=38187 retired=2347 attempts=2347 checks=0 failures=0 delay=random core=39899 core_fail=0 extra=17284 extra_fail=0 memory=33554432 memory_fail=0
+# Building or-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/or-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/or-minirv-npc.bin: 310528 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] or-minirv-npc.bin
+PASS: 87516 (5148 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 38050
+halt_pc=0x80003888 NPC.pc=0x8000388c EMU.pc=0x80003888
+RESULT case=or-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003888 inst=0x00100073 cycles=88891 retired=5148 attempts=5148 checks=0 failures=0 delay=random core=87516 core_fail=0 extra=38050 extra_fail=0 memory=33554432 memory_fail=0
+# Building ori-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/ori-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/ori-minirv-npc.bin: 302848 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] ori-minirv-npc.bin
+PASS: 39151 (2303 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 17038
+halt_pc=0x80001a88 NPC.pc=0x80001a8c EMU.pc=0x80001a88
+RESULT case=ori-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001a88 inst=0x00100073 cycles=39954 retired=2303 attempts=2303 checks=0 failures=0 delay=random core=39151 core_fail=0 extra=17038 extra_fail=0 memory=33554432 memory_fail=0
+# Building sb-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sb-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sb-minirv-npc.bin: 306448 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sb-minirv-npc.bin
+PASS: 71417 (4201 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 31036
+halt_pc=0x80002888 NPC.pc=0x8000288c EMU.pc=0x80002888
+RESULT case=sb-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002888 inst=0x00100073 cycles=69273 retired=4201 attempts=4201 checks=0 failures=0 delay=random core=71417 core_fail=0 extra=31036 extra_fail=0 memory=33554432 memory_fail=0
+# Building sh-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sh-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sh-minirv-npc.bin: 310048 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sh-minirv-npc.bin
+PASS: 95132 (5596 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 41485
+halt_pc=0x80003608 NPC.pc=0x8000360c EMU.pc=0x80003608
+RESULT case=sh-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003608 inst=0x00100073 cycles=92821 retired=5596 attempts=5596 checks=0 failures=0 delay=random core=95132 core_fail=0 extra=41485 extra_fail=0 memory=33554432 memory_fail=0
+# Building simple-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/simple-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/simple-minirv-npc.bin: 264 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] simple-minirv-npc.bin
+PASS: 323 (19 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 131
+halt_pc=0x80000088 NPC.pc=0x8000008c EMU.pc=0x80000088
+RESULT case=simple-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000088 inst=0x00100073 cycles=182 retired=19 attempts=19 checks=0 failures=0 delay=random core=323 core_fail=0 extra=131 extra_fail=0 memory=33554432 memory_fail=0
+# Building sll-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sll-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sll-minirv-npc.bin: 319488 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sll-minirv-npc.bin
+PASS: 129353 (7609 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 56959
+halt_pc=0x80005b08 NPC.pc=0x80005b0c EMU.pc=0x80005b08
+RESULT case=sll-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80005b08 inst=0x00100073 cycles=122619 retired=7609 attempts=7609 checks=0 failures=0 delay=random core=129353 core_fail=0 extra=56959 extra_fail=0 memory=33554432 memory_fail=0
+# Building slli-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/slli-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/slli-minirv-npc.bin: 304384 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] slli-minirv-npc.bin
+PASS: 42534 (2502 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 18628
+halt_pc=0x80002088 NPC.pc=0x8000208c EMU.pc=0x80002088
+RESULT case=slli-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002088 inst=0x00100073 cycles=39996 retired=2502 attempts=2502 checks=0 failures=0 delay=random core=42534 core_fail=0 extra=18628 extra_fail=0 memory=33554432 memory_fail=0
+# Building slt-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/slt-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/slt-minirv-npc.bin: 317184 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] slt-minirv-npc.bin
+PASS: 119391 (7023 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 52171
+halt_pc=0x80005288 NPC.pc=0x8000528c EMU.pc=0x80005288
+RESULT case=slt-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80005288 inst=0x00100073 cycles=119087 retired=7023 attempts=7023 checks=0 failures=0 delay=random core=119391 core_fail=0 extra=52171 extra_fail=0 memory=33554432 memory_fail=0
+# Building slti-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/slti-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/slti-minirv-npc.bin: 308992 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] slti-minirv-npc.bin
+PASS: 66266 (3898 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 28954
+halt_pc=0x80003208 NPC.pc=0x8000320c EMU.pc=0x80003208
+RESULT case=slti-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003208 inst=0x00100073 cycles=66580 retired=3898 attempts=3898 checks=0 failures=0 delay=random core=66266 core_fail=0 extra=28954 extra_fail=0 memory=33554432 memory_fail=0
+# Building sltiu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sltiu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sltiu-minirv-npc.bin: 308992 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sltiu-minirv-npc.bin
+PASS: 66266 (3898 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 28954
+halt_pc=0x80003208 NPC.pc=0x8000320c EMU.pc=0x80003208
+RESULT case=sltiu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003208 inst=0x00100073 cycles=66580 retired=3898 attempts=3898 checks=0 failures=0 delay=random core=66266 core_fail=0 extra=28954 extra_fail=0 memory=33554432 memory_fail=0
+# Building sltu-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sltu-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sltu-minirv-npc.bin: 317184 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sltu-minirv-npc.bin
+PASS: 119391 (7023 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 52171
+halt_pc=0x80005288 NPC.pc=0x8000528c EMU.pc=0x80005288
+RESULT case=sltu-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80005288 inst=0x00100073 cycles=119087 retired=7023 attempts=7023 checks=0 failures=0 delay=random core=119391 core_fail=0 extra=52171 extra_fail=0 memory=33554432 memory_fail=0
+# Building sra-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sra-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sra-minirv-npc.bin: 320256 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sra-minirv-npc.bin
+PASS: 132549 (7797 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 57946
+halt_pc=0x80005dc8 NPC.pc=0x80005dcc EMU.pc=0x80005dc8
+RESULT case=sra-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80005dc8 inst=0x00100073 cycles=128208 retired=7797 attempts=7797 checks=0 failures=0 delay=random core=132549 core_fail=0 extra=57946 extra_fail=0 memory=33554432 memory_fail=0
+# Building srai-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/srai-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/srai-minirv-npc.bin: 307968 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] srai-minirv-npc.bin
+PASS: 61489 (3617 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 26861
+halt_pc=0x80002e88 NPC.pc=0x80002e8c EMU.pc=0x80002e88
+RESULT case=srai-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002e88 inst=0x00100073 cycles=60014 retired=3617 attempts=3617 checks=0 failures=0 delay=random core=61489 core_fail=0 extra=26861 extra_fail=0 memory=33554432 memory_fail=0
+# Building srl-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/srl-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/srl-minirv-npc.bin: 319744 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] srl-minirv-npc.bin
+PASS: 129540 (7620 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 56713
+halt_pc=0x80005bc8 NPC.pc=0x80005bcc EMU.pc=0x80005bc8
+RESULT case=srl-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80005bc8 inst=0x00100073 cycles=126212 retired=7620 attempts=7620 checks=0 failures=0 delay=random core=129540 core_fail=0 extra=56713 extra_fail=0 memory=33554432 memory_fail=0
+# Building srli-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/srli-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/srli-minirv-npc.bin: 307712 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] srli-minirv-npc.bin
+PASS: 59857 (3521 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 26193
+halt_pc=0x80002d88 NPC.pc=0x80002d8c EMU.pc=0x80002d88
+RESULT case=srli-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002d88 inst=0x00100073 cycles=58953 retired=3521 attempts=3521 checks=0 failures=0 delay=random core=59857 core_fail=0 extra=26193 extra_fail=0 memory=33554432 memory_fail=0
+# Building sub-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sub-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sub-minirv-npc.bin: 312576 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sub-minirv-npc.bin
+PASS: 91477 (5381 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 39802
+halt_pc=0x80003fc8 NPC.pc=0x80003fcc EMU.pc=0x80003fc8
+RESULT case=sub-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003fc8 inst=0x00100073 cycles=89844 retired=5381 attempts=5381 checks=0 failures=0 delay=random core=91477 core_fail=0 extra=39802 extra_fail=0 memory=33554432 memory_fail=0
+# Building sw-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/sw-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/sw-minirv-npc.bin: 305456 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] sw-minirv-npc.bin
+PASS: 65416 (3848 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 28310
+halt_pc=0x80002488 NPC.pc=0x8000248c EMU.pc=0x80002488
+RESULT case=sw-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80002488 inst=0x00100073 cycles=62814 retired=3848 attempts=3848 checks=0 failures=0 delay=random core=65416 core_fail=0 extra=28310 extra_fail=0 memory=33554432 memory_fail=0
+# Building xor-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/xor-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/xor-minirv-npc.bin: 310528 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] xor-minirv-npc.bin
+PASS: 87499 (5147 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 38044
+halt_pc=0x80003848 NPC.pc=0x8000384c EMU.pc=0x80003848
+RESULT case=xor-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80003848 inst=0x00100073 cycles=88876 retired=5147 attempts=5147 checks=0 failures=0 delay=random core=87499 core_fail=0 extra=38044 extra_fail=0 memory=33554432 memory_fail=0
+# Building xori-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/xori-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/riscv-tests/build/xori-minirv-npc.bin: 302848 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] xori-minirv-npc.bin
+PASS: 39185 (2305 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 17050
+halt_pc=0x80001a88 NPC.pc=0x80001a8c EMU.pc=0x80001a88
+RESULT case=xori-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80001a88 inst=0x00100073 cycles=39970 retired=2305 attempts=2305 checks=0 failures=0 delay=random core=39185 core_fail=0 extra=17050 extra_fail=0 memory=33554432 memory_fail=0
+test list [38 item(s)]: add addi and andi auipc beq bge bgeu blt bltu bne jal jalr lb lbu lh lhu lui lw or ori sb sh simple sll slli slt slti sltiu sltu sra srai srl srli sub sw xor xori
+[           add] [1;32mPASS[0m
+[          addi] [1;32mPASS[0m
+[           and] [1;32mPASS[0m
+[          andi] [1;32mPASS[0m
+[         auipc] [1;32mPASS[0m
+[           beq] [1;32mPASS[0m
+[           bge] [1;32mPASS[0m
+[          bgeu] [1;32mPASS[0m
+[           blt] [1;32mPASS[0m
+[          bltu] [1;32mPASS[0m
+[           bne] [1;32mPASS[0m
+[           jal] [1;32mPASS[0m
+[          jalr] [1;32mPASS[0m
+[            lb] [1;32mPASS[0m
+[           lbu] [1;32mPASS[0m
+[            lh] [1;32mPASS[0m
+[           lhu] [1;32mPASS[0m
+[           lui] [1;32mPASS[0m
+[            lw] [1;32mPASS[0m
+[            or] [1;32mPASS[0m
+[           ori] [1;32mPASS[0m
+[            sb] [1;32mPASS[0m
+[            sh] [1;32mPASS[0m
+[        simple] [1;32mPASS[0m
+[           sll] [1;32mPASS[0m
+[          slli] [1;32mPASS[0m
+[           slt] [1;32mPASS[0m
+[          slti] [1;32mPASS[0m
+[         sltiu] [1;32mPASS[0m
+[          sltu] [1;32mPASS[0m
+[           sra] [1;32mPASS[0m
+[          srai] [1;32mPASS[0m
+[           srl] [1;32mPASS[0m
+[          srli] [1;32mPASS[0m
+[           sub] [1;32mPASS[0m
+[            sw] [1;32mPASS[0m
+[           xor] [1;32mPASS[0m
+[          xori] [1;32mPASS[0m

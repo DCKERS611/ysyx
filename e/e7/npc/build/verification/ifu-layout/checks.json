@@ -1,0 +1,25 @@
+{
+  "short_tests": "normal and DiffTest PASS",
+  "wave_match": true,
+  "signals": [
+    "clk",
+    "rst",
+    "pc",
+    "inst",
+    "commit",
+    "ifu_reqValid",
+    "ifu_respValid",
+    "lsu_reqValid",
+    "lsu_respValid",
+    "mem_ren",
+    "mem_wen",
+    "mem_addr",
+    "mem_wdata",
+    "mem_wmask",
+    "u_rf.wen_in",
+    "u_ifu.state",
+    "u_ifu.lsu_sent"
+  ],
+  "timestamps": 146,
+  "cycles": 71
+}

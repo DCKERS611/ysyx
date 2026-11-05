@@ -1,0 +1,112 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+python3 tests/run_acceptance.py --npc build/regress/cpu_test --emu ../minirvEMU/build/minirvEMU --diff build/difftest/difftest
+[ PASS ] acceptance/array_sum NPC: a0=10 (0xa)
+[ PASS ] acceptance/array_sum EMU: a0=10 (0xa)
+[ PASS ] acceptance/array_sum DiffTest: a0=10 (0xa)
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)
+make -f Makefile.cpptest REGRESS_DIR=build/wave-tests TRACE=1 build/wave-tests/cpu_test
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 --trace-fst --trace-structs \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/wave-tests/cpu_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc   -Os  -c -o cpu_test.o /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp
+g++    dpi.o pmem.o sim.o cpu_test.o verilated.o verilated_dpi.o verilated_fst_c.o verilated_threads.o Vysyx_00000000__ALL.a   -lz  -pthread -lpthread -latomic -llz4 -lz   -o /home/ysyx/ysyx-workbench/npc/build/wave-tests/cpu_test
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 1.567 s (elab=0.000, cvt=0.000, bld=1.562); cpu 0.007 s on 1 threads; allocated 20.273 MB
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+build/wave-tests/cpu_test build/acceptance/programs/array_sum.bin build/acceptance/programs/array_sum.expect acceptance/array_sum build/acceptance/waves/array_sum.fst
+[ RUN ] acceptance/array_sum
+Loaded build/acceptance/programs/array_sum.bin: 88 bytes
+Waveform: build/acceptance/waves/array_sum.fst
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x08078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x00100293 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x00512023 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00200293 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00512223 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00300293 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00512423 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00400293 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00512623 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00000513 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x03478067 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00012303 --> next_pc=0x80000038
+pc=0x80000038 inst=0x00650533 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00412303 --> next_pc=0x80000040
+pc=0x80000040 inst=0x00650533 --> next_pc=0x80000044
+pc=0x80000044 inst=0x00812303 --> next_pc=0x80000048
+pc=0x80000048 inst=0x00650533 --> next_pc=0x8000004c
+pc=0x8000004c inst=0x00c12303 --> next_pc=0x80000050
+pc=0x80000050 inst=0x00650533 --> next_pc=0x80000054
+ebreak @ pc=0x80000054
+pc=0x80000054 inst=0x00100073 --> next_pc=0x80000058
+PASS: 13 checks
+build/wave-tests/cpu_test build/acceptance/programs/byte_sum.bin build/acceptance/programs/byte_sum.expect acceptance/byte_sum build/acceptance/waves/byte_sum.fst
+[ RUN ] acceptance/byte_sum
+Loaded build/acceptance/programs/byte_sum.bin: 76 bytes
+Waveform: build/acceptance/waves/byte_sum.fst
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x10078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x123452b7 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x67828293 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00512023 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00000513 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00014303 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00650533 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00114303 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00650533 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00214303 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x00650533 --> next_pc=0x80000030
+pc=0x80000030 inst=0x00314303 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00650533 --> next_pc=0x80000038
+pc=0x80000038 inst=0x0ab00393 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00710123 --> next_pc=0x80000040
+pc=0x80000040 inst=0x04878067 --> next_pc=0x80000048
+ebreak @ pc=0x80000048
+pc=0x80000048 inst=0x00100073 --> next_pc=0x8000004c
+PASS: 12 checks
+fst2vcd build/acceptance/waves/array_sum.fst > build/acceptance/waves/array_sum.vcd
+fst2vcd build/acceptance/waves/byte_sum.fst > build/acceptance/waves/byte_sum.vcd
+python3 tests/check_acceptance_wave.py --array build/acceptance/waves/array_sum.vcd --bytes build/acceptance/waves/byte_sum.vcd
+add: pre_pc=0x80000038, rising edge at 350 ps
+  PASS before.inst: 0x00650533 expect=0x00650533
+  PASS before.rs1_data: 0x00000000 expect=0x00000000
+  PASS before.rs2_data: 0x00000001 expect=0x00000001
+  PASS before.alu_src: 0x00000000 expect=0x00000000
+  PASS before.alu_out: 0x00000001 expect=0x00000001
+  PASS before.wen: 0x00000001 expect=0x00000001
+  PASS before.rd: 0x0000000a expect=0x0000000a
+  PASS before.wdata: 0x00000001 expect=0x00000001
+  PASS after.pc: 0x8000003c expect=0x8000003c
+  PASS after.u_rf.rf.rf[10]: 0x00000001 expect=0x00000001
+lw: pre_pc=0x80000034, rising edge at 338 ps
+  PASS before.inst: 0x00012303 expect=0x00012303
+  PASS before.alu_out: 0x80000080 expect=0x80000080
+  PASS before.mem_read: 0x00000001 expect=0x00000001
+  PASS before.mem_write: 0x00000000 expect=0x00000000
+  PASS before.load_data: 0x00000001 expect=0x00000001
+  PASS before.wb_sel: 0x00000001 expect=0x00000001
+  PASS before.wdata: 0x00000001 expect=0x00000001
+  PASS before.rd: 0x00000006 expect=0x00000006
+  PASS after.pc: 0x80000038 expect=0x80000038
+  PASS after.u_rf.rf.rf[6]: 0x00000001 expect=0x00000001
+sb: pre_pc=0x8000003c, rising edge at 396 ps
+  PASS before.inst: 0x00710123 expect=0x00710123
+  PASS before.alu_out: 0x80000102 expect=0x80000102
+  PASS before.mem_write: 0x00000001 expect=0x00000001
+  PASS before.mem_read: 0x00000000 expect=0x00000000
+  PASS before.mem_byte: 0x00000001 expect=0x00000001
+  PASS before.wen: 0x00000000 expect=0x00000000
+  PASS before.io_lsu_wdata: 0x00ab0000 expect=0x00ab0000
+  PASS before.io_lsu_wmask: 0x00000004 expect=0x00000004
+  PASS after.pc: 0x80000040 expect=0x80000040
+Wave inspection: PASS add/lw/sb

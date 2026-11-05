@@ -1,0 +1,9 @@
+{
+  "changed_since_final_validation": [
+    "npc/README.md",
+    "npc/csrc/check.h",
+    "npc/tests/Makefile.mk",
+    "npc/tests/README.md"
+  ],
+  "nature": "documentation/comments only; runtime code not changed"
+}

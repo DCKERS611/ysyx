@@ -1,0 +1,59 @@
+{
+  "scope": "Read-only post-correction documentation/ignore review; Git staging intermediate state deliberately not audited.",
+  "passed": [
+    "README defines WSL relative-path to Windows relative-path mapping and exact original ECC run location.",
+    "README diagnostic paragraph distinguishes BALANCE 3/100MHz/141MHz formal estimate from BALANCE 3/200MHz/254MHz diagnostic estimate; neither is P&R or silicon.",
+    "verification is explicitly supplemental, not substitute for original paths.",
+    "Stage AGENTS now records original-layout synchronization, full manifest rather than extension whitelist, symlink preservation, two root-file exceptions, and no maintenance activity in learning record.",
+    "Stage .gitignore no longer has blanket *, /ecc/, *.log, *.fst, or entire build exclusion.",
+    "Stage .gitattributes protects WSL source and ECC/report byte fidelity against core.autocrlf.",
+    "Shared test index latest archive entry points to e/e7/ecc/<project>/runs/<run-id> and allows verification copies."
+  ],
+  "remaining_document_findings": [],
+  "nested_ignore_caveat": {
+    "evidence": "git check-ignore --no-index e/e7/npc/build/soc/soc.fst -> e/e7/npc/.gitignore:14:build/",
+    "status": "Not a sync defect if audited manifest is force-staged as root plans; complete Git publication cannot rely on ordinary git add/status."
+  },
+  "files_changed_by_agent": [
+    "E:/ysyx/e/e7/E7学习计划.md"
+  ],
+  "plan_fixes": [
+    {
+      "old": "ARCH双环境选择已具备且有历史验证；当前CSR版未复测",
+      "new": "ARCH双环境选择已具备；当前独立NPC与SoC普通Hello均通过，CSR DiffTest尚未适配"
+    },
+    {
+      "old": "6. **已记录**：写进 `E7学习记录.md`，日志存 `verification/`。",
+      "new": "6. **已记录**：写进 `E7学习记录.md`；日志与测试成果保留WSL原相对路径，`verification/`可存附加副本。"
+    },
+    {
+      "old": "| 测试日志与汇总 | `e/e7/verification/<日期>/` |",
+      "new": "| 测试日志与汇总 | 保留WSL原相对路径；`e/e7/verification/<日期>/`可存附加副本 |"
+    },
+    {
+      "old": "## 12. 当前进度（2026-11-04）",
+      "new": "## 12. 当前进度（2026-11-05）"
+    },
+    {
+      "old": "当前已完成GPIO/基本CSR/Hello IPC，以及本轮CPU综合、blockchain和k=1/k=5双时钟对照。剩余主线为o当前双环境验证和最终收尾；前面仍留有k的进位/精确计数/RTC校准等尾项。学习结果见第三十二节，当前k=1、timer /25。",
+      "new": "当前已完成GPIO/基本CSR/Hello IPC、本轮CPU综合、blockchain和k=1/k=5双时钟对照，当前独立NPC与SoC普通Hello也均已通过。下一步补CSR参考执行与DiffTest适配，再处理计数器进位、精确计数、RTC校准和最终收尾。正式综合结果为BALANCE 3、100MHz约束、估计141MHz；200MHz约束下估计254MHz仅为诊断对照。学习结果见第三十二至三十四节，当前k=1、timer /25。"
+    },
+    {
+      "old": "| o 仿真效率 | 两环境选择机制及历史验证已有；当前CSR/timer版本未复测 |",
+      "new": "| o 仿真效率 | 当前独立NPC与SoC普通Hello均通过；CSR参考执行与DiffTest尚未适配，不能将普通运行当作差分验收 |"
+    },
+    {
+      "old": "regress仍顺序调用原短回归，完整AM/ISA和SoC入口见测试索引。2026-11-02的历史发布为1119文件核对及03184a1；2026-11-03发布为1165文件核对及c13be02，均不代表本轮重新测试或发布。2026-11-04同步1182个选定文件SHA一致，未提交推送。build/缓存/Git元数据仍排除，本机计划按原约定不上传；最新现状见本节和记录第三十一节。",
+      "new": "regress仍顺序调用原短回归，完整AM/ISA和SoC入口见测试索引。2026-11-02的历史发布为1119文件核对及03184a1；2026-11-03发布为1165文件核对及c13be02，均不代表本轮重新测试或发布。2026-11-04曾核对1182个选定文件SHA一致，当次未提交推送，当时排除了build等目录；这只是历史子集核对。2026-11-05改按WSL原相对路径和完整清单核对，保留原位置的测试成果，明确排除工具、PDK、缓存和编译中间件；verification只作附加副本，本机计划仍不上游。发布状态以Git提交记录为准；最新现状见本节及学习记录第三十二至三十四节。"
+    },
+    {
+      "old": "| NPC/ysyxsoc平台隔离 | 已分TRM，2026-11-02源选择及双平台Hello验证通过；当前CSR/timer版未重跑独立平台 |",
+      "new": "| NPC/ysyxsoc平台隔离 | 已分TRM，2026-11-02源选择及双平台Hello属于历史验证；当前独立NPC与SoC普通Hello均已通过，CSR DiffTest尚未适配 |"
+    },
+    {
+      "old": "下一块验证当前独立NPC与SoC的Hello入口，再处理前面未完成的验收尾项。保持先背景、例子、一道检查题的学习节奏。测试架构新入口的独立阅读仍未完成。旧npc/e4已删除，独立E:/ysyx/e/e4备份保留。",
+      "new": "下一块补CSR参考模型的读取执行与DiffTest比较规则，再处理计数器进位、精确计数及RTC校准等尾项。当前独立NPC与SoC普通Hello已通过，无需把相同普通运行重复安排为下一步。保持先背景、例子、一道检查题的学习节奏。测试架构新入口的独立阅读仍未完成。旧npc/e4已删除，独立E:/ysyx/e/e4备份保留。"
+    }
+  ],
+  "status": "All identified repeated current-status and log-layout inconsistencies corrected in local ignored plan only."
+}

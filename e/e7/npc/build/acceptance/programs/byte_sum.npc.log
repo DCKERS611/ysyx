@@ -1,0 +1,23 @@
+[ RUN ] acceptance/byte_sum
+Loaded /home/ysyx/ysyx-workbench/npc/build/acceptance/programs/byte_sum.bin: 76 bytes
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x10078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x123452b7 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x67828293 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00512023 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00000513 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00014303 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00650533 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00114303 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00650533 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00214303 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x00650533 --> next_pc=0x80000030
+pc=0x80000030 inst=0x00314303 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00650533 --> next_pc=0x80000038
+pc=0x80000038 inst=0x0ab00393 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00710123 --> next_pc=0x80000040
+pc=0x80000040 inst=0x04878067 --> next_pc=0x80000048
+ebreak @ pc=0x80000048
+pc=0x80000048 inst=0x00100073 --> next_pc=0x8000004c
+PASS: 12 checks
+RESULT case=acceptance/byte_sum backend=npc verdict=pass stop=ebreak pc=0x80000048 inst=0x00100073 cycles=214 retired=18 attempts=18 checks=12 failures=0 delay=random

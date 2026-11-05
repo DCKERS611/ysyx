@@ -1,0 +1,295 @@
+[ECC 20261025 20:31:29 cQBzyMnA dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data
+[ECC 20261025 20:31:29 cQBzyMnA dm_config.h:134 [1;34mInfo[0m set_feature_path] [Data config set] feature = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:67 [1;34mInfo[0m initRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:68 [1;34mInfo[0m initRT] _____ ________ ________     _______________________ ________ ________  
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:69 [1;34mInfo[0m initRT] ___(_)___  __ \___  __/     __  ___/___  __/___    |___  __ \___  __/
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:70 [1;34mInfo[0m initRT] __  / __  /_/ /__  /        _____ \ __  /   __  /| |__  /_/ /__  /    
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:71 [1;34mInfo[0m initRT] _  /  _  _, _/ _  /         ____/ / _  /    _  ___ |_  _, _/ _  /      
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:72 [1;34mInfo[0m initRT] /_/   /_/ |_|  /_/          /____/  /_/     /_/  |_|/_/ |_|  /_/       
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:73 [1;34mInfo[0m initRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:80 [1;34mInfo[0m initRT] Starting...
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:56 [1;34mInfo[0m input] Starting...
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer CT eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer CT below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET1 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET1 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA1 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA1 below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET2 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET2 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA2 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA2 below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET3 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET3 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA3 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA3 below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET4 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET4 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA4 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA4 below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET5 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET5 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer T4V2 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer T4V2 below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer T4M2 notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer T4M2 eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer RV eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer RV below layer spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer RDL notch spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer RDL eol_spacing is empty!
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:714 [1;34mInfo[0m wrapObstacleList] Starting...
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:1032 [1;34mInfo[0m wrapObstacleList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3121.90MB) 
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:1038 [1;34mInfo[0m wrapMacroList] Starting...
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:1070 [1;34mInfo[0m wrapMacroList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3121.90MB) 
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:1076 [1;34mInfo[0m wrapNetList] Starting...
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:1101 [1;34mInfo[0m wrapNetList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1025 [1;34mInfo[0m buildObstacleList] Starting...
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1029 [1;34mInfo[0m buildObstacleList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1120 [1;34mInfo[0m buildNetList] Starting...
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1128 [1;34mInfo[0m buildNetList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1222 [1;34mInfo[0m buildGCellMap] Starting...
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1224 [1;34mInfo[0m buildGCellMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1248 [1;34mInfo[0m buildFixRectMap] Starting...
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1294 [1;34mInfo[0m buildFixRectMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1301 [1;34mInfo[0m printConfig] RT_CONFIG_INPUT
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1302 [1;34mInfo[0m printConfig]   temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1303 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1304 [1;34mInfo[0m printConfig]   thread_number
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1305 [1;34mInfo[0m printConfig]     50
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1306 [1;34mInfo[0m printConfig]   bottom_routing_layer
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1307 [1;34mInfo[0m printConfig]     MET2
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1308 [1;34mInfo[0m printConfig]   top_routing_layer
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1309 [1;34mInfo[0m printConfig]     MET5
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1310 [1;34mInfo[0m printConfig]   output_inter_result
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1311 [1;34mInfo[0m printConfig]     0
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1312 [1;34mInfo[0m printConfig]   enable_timing
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1313 [1;34mInfo[0m printConfig]     0
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1315 [1;34mInfo[0m printConfig] RT_CONFIG_BUILD
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1316 [1;34mInfo[0m printConfig]   log_file_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1317 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/rt.log
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1318 [1;34mInfo[0m printConfig]   bottom_routing_layer_idx
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1319 [1;34mInfo[0m printConfig]     1
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1320 [1;34mInfo[0m printConfig]   top_routing_layer_idx
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1321 [1;34mInfo[0m printConfig]     4
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1323 [1;34mInfo[0m printConfig]   DataManager
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1324 [1;34mInfo[0m printConfig]     dm_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1325 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/data_manager/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1327 [1;34mInfo[0m printConfig]   DRCEngine
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1328 [1;34mInfo[0m printConfig]     de_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1329 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/drc_engine/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1331 [1;34mInfo[0m printConfig]   GDSPlotter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1332 [1;34mInfo[0m printConfig]     gp_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1333 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/gds_plotter/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1335 [1;34mInfo[0m printConfig]   PinAccessor
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1336 [1;34mInfo[0m printConfig]     pa_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1337 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/pin_accessor/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1339 [1;34mInfo[0m printConfig]   SupplyAnalyzer
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1340 [1;34mInfo[0m printConfig]     sa_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1341 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/supply_analyzer/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1343 [1;34mInfo[0m printConfig]   PlanarRouter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1344 [1;34mInfo[0m printConfig]     pr_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1345 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/planar_router/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1347 [1;34mInfo[0m printConfig]   LayerAssigner
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1348 [1;34mInfo[0m printConfig]     la_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1349 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/layer_assigner/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1351 [1;34mInfo[0m printConfig]   SpaceRouter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1352 [1;34mInfo[0m printConfig]     sr_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1353 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/space_router/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1355 [1;34mInfo[0m printConfig]   TrackAssigner
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1356 [1;34mInfo[0m printConfig]     ta_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1357 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/track_assigner/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1359 [1;34mInfo[0m printConfig]   DetailedRouter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1360 [1;34mInfo[0m printConfig]     dr_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1361 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/detailed_router/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1363 [1;34mInfo[0m printConfig]   ViolationReporter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1364 [1;34mInfo[0m printConfig]     vr_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1365 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/violation_reporter/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1367 [1;34mInfo[0m printConfig]   EarlyRouter
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1368 [1;34mInfo[0m printConfig]     er_temp_directory_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1369 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt/early_router/
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1377 [1;34mInfo[0m printDatabase] RT_DATABASE
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1378 [1;34mInfo[0m printDatabase]   design_name
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1379 [1;34mInfo[0m printDatabase]     ecc_smoke
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1380 [1;34mInfo[0m printDatabase]   lef_file_path_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1384 [1;34mInfo[0m printDatabase]   def_file_path
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1385 [1;34mInfo[0m printDatabase]     
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1387 [1;34mInfo[0m printDatabase]   micron_dbu
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1388 [1;34mInfo[0m printDatabase]     1000
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1390 [1;34mInfo[0m printDatabase]   manufacture_grid
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1391 [1;34mInfo[0m printDatabase]     1
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1394 [1;34mInfo[0m printDatabase]   gcell_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1396 [1;34mInfo[0m printDatabase]     x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:0 step_length:1600 step_num:1 end:1600
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:1600 step_length:1400 step_num:11 end:17000
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:17000 step_length:2200 step_num:1 end:19200
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1402 [1;34mInfo[0m printDatabase]     y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:0 step_length:1600 step_num:1 end:1600
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:1600 step_length:1400 step_num:11 end:17000
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:17000 step_length:2400 step_num:1 end:19400
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1409 [1;34mInfo[0m printDatabase]   die
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1410 [1;34mInfo[0m printDatabase]     real:(0,0)-(19200,19400)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1412 [1;34mInfo[0m printDatabase]     grid:(0,0)-(12,12)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1416 [1;34mInfo[0m printDatabase]   routing_layer_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1417 [1;34mInfo[0m printDatabase]     7
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1418 [1;34mInfo[0m printDatabase]   routing_layer
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:0 order:7 name:MET1 prefer_direction:horizontal
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:1 order:9 name:MET2 prefer_direction:vertical
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:2 order:11 name:MET3 prefer_direction:horizontal
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:3 order:13 name:MET4 prefer_direction:vertical
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:4 order:15 name:MET5 prefer_direction:horizontal
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:5 order:17 name:T4M2 prefer_direction:vertical
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:6 order:19 name:RDL prefer_direction:horizontal
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1440 [1;34mInfo[0m printDatabase]   cut_layer_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1441 [1;34mInfo[0m printDatabase]     7
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1442 [1;34mInfo[0m printDatabase]   cut_layer
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:0 order:6 name:CT
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:1 order:8 name:VIA1
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:2 order:10 name:VIA2
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:3 order:12 name:VIA3
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:4 order:14 name:VIA4
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:5 order:16 name:T4V2
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:6 order:18 name:RV
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1449 [1;34mInfo[0m printDatabase]   layer_via_master_list
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET1: MET2_MET1_VIA1_0 MET2_MET1_VIA1_1 MET2_MET1_VIA1_3 MET2_MET1_VIA1_4 MET2_MET1_VIA1_2 MET2_MET1_VIA1_5 MET2_MET1_VIA1_6 MET2_MET1_VIA1_7 MET2_MET1_VIA1_8 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET2: MET3_MET2_VIA2_6 MET3_MET2_VIA2_7 MET3_MET2_VIA2_3 MET3_MET2_VIA2_4 MET3_MET2_VIA2_8 MET3_MET2_VIA2_5 MET3_MET2_VIA2_0 MET3_MET2_VIA2_1 MET3_MET2_VIA2_2 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET3: MET4_MET3_VIA3_2 MET4_MET3_VIA3_1 MET4_MET3_VIA3_5 MET4_MET3_VIA3_4 MET4_MET3_VIA3_0 MET4_MET3_VIA3_3 MET4_MET3_VIA3_8 MET4_MET3_VIA3_7 MET4_MET3_VIA3_6 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET4: MET5_MET4_VIA4_6 MET5_MET4_VIA4_7 MET5_MET4_VIA4_3 MET5_MET4_VIA4_4 MET5_MET4_VIA4_8 MET5_MET4_VIA4_5 MET5_MET4_VIA4_0 MET5_MET4_VIA4_1 MET5_MET4_VIA4_2 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET5: T4M2_MET5 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     T4M2: RDL_T4M2 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     RDL: 
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1458 [1;34mInfo[0m printDatabase]   routing_obstacle_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1459 [1;34mInfo[0m printDatabase]     1220
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1460 [1;34mInfo[0m printDatabase]   cut_obstacle_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1461 [1;34mInfo[0m printDatabase]     230
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1464 [1;34mInfo[0m printDatabase]   macro_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1465 [1;34mInfo[0m printDatabase]     0
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1468 [1;34mInfo[0m printDatabase]   net_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1469 [1;34mInfo[0m printDatabase]     40
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1474 [1;34mInfo[0m printDatabase]   pin_num
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1475 [1;34mInfo[0m printDatabase]     142
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1476 [1;34mInfo[0m printDatabase]   pin_num_ratio
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 2 pins: 23(57.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 3 pins: 2(5.00%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 4 pins: 5(12.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 5 pins: 1(2.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 6 pins: 3(7.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 7 pins: 3(7.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 8 pins: 1(2.50%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 9 pins: 2(5.00%)
+[RT 20261025 20:31:29 cQBzyMnA DataManager.cpp:63 [1;34mInfo[0m input] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:88 [1;34mInfo[0m initRT] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3122.24MB) 
+[RT 20261025 20:31:29 cQBzyMnA RTInterface.cpp:112 [1;34mInfo[0m runRT] Starting...
+[RT 20261025 20:31:29 cQBzyMnA TOPOBuilder.cpp:862 [1;34mInfo[0m init] Starting...
+[RT 20261025 20:31:31 cQBzyMnA TOPOBuilder.cpp:864 [1;34mInfo[0m init] Completed (elapsed = 00:00:02, cpu = 00:00:02, mem = 0.00MB, rss = 3132.19MB) 
+[RT 20261025 20:31:31 cQBzyMnA DRCEngine.cpp:55 [1;34mInfo[0m init] Starting...
+[RT 20261025 20:31:31 cQBzyMnA DRCEngine.cpp:60 [1;34mInfo[0m init] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3132.63MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:64 [1;34mInfo[0m access] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:120 [1;34mInfo[0m setPAComParam] max_candidate_point_num: 10
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:127 [1;34mInfo[0m initAccessPointList] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:199 [1;34mInfo[0m initAccessPointList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3133.53MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:507 [1;34mInfo[0m buildAccessPointRTree] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:531 [1;34mInfo[0m buildAccessPointRTree] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3133.53MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:559 [1;34mInfo[0m routePAModel] ***** Begin iteration 1/6(16.67%) *****
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:595 [1;34mInfo[0m setPAIterParam] prefer_wire_unit: 1
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:596 [1;34mInfo[0m setPAIterParam] non_prefer_wire_unit: 2.5
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:597 [1;34mInfo[0m setPAIterParam] via_unit: 1000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:598 [1;34mInfo[0m setPAIterParam] size: 3
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:599 [1;34mInfo[0m setPAIterParam] offset: 0
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:600 [1;34mInfo[0m setPAIterParam] schedule_interval: 3
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:601 [1;34mInfo[0m setPAIterParam] fixed_rect_unit: 2000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:602 [1;34mInfo[0m setPAIterParam] routed_rect_unit: 1000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:603 [1;34mInfo[0m setPAIterParam] violation_unit: 2000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:604 [1;34mInfo[0m setPAIterParam] max_routed_times: 20
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:605 [1;34mInfo[0m setPAIterParam] max_candidate_patch_num: 10
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:849 [1;34mInfo[0m routePABoxMap] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 4/25(16.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3137.16MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 8/25(32.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3139.78MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 10/25(40.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3143.64MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 14/25(56.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3145.85MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 18/25(72.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3147.08MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 20/25(80.00%) boxes with 9 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3128.51MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 22/25(88.00%) boxes with 15 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3130.56MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 24/25(96.00%) boxes with 15 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3131.73MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:898 [1;34mInfo[0m routePABoxMap] Routed 25/25(100.00%) boxes with 15 violations (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3131.89MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:902 [1;34mInfo[0m routePABoxMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3131.89MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:2842 [1;34mInfo[0m updateViolation] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:2868 [1;34mInfo[0m updateViolation] Checking 25 dirty boxes from 21 routed boxes
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:2872 [1;34mInfo[0m updateViolation] Dirty box ratio reached 25%, using full DRC
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:2874 [1;34mInfo[0m updateViolation] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3133.47MB) 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:3018 [1;34mInfo[0m updateBestResult] Starting...
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:3039 [1;34mInfo[0m updateBestResult] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3133.47MB) 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+-------------+---------+ +-------+------+---------+ +---------+--------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | routing | wire_length |    prop | |   cut | #via |    prop | | routing | #patch |    prop | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+-------------+---------+ +-------+------+---------+ +---------+--------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET1 |           0 |   0.00% | |    CT |    0 |   0.00% | |    MET1 |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET2 |       1.934 |  33.35% | |  VIA1 |    0 |   0.00% | |    MET2 |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET3 |       2.325 |  40.09% | |  VIA2 |  131 | 100.00% | |    MET3 |    130 | 100.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET4 |        1.54 |  26.56% | |  VIA3 |    0 |   0.00% | |    MET4 |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET5 |           0 |   0.00% | |  VIA4 |    0 |   0.00% | |    MET5 |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    T4M2 |           0 |   0.00% | |  T4V2 |    0 |   0.00% | |    T4M2 |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |     RDL |           0 |   0.00% | |    RV |    0 |   0.00% | |     RDL |      0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+-------------+---------+ +-------+------+---------+ +---------+--------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |   Total |       5.799 | 100.00% | | Total |  131 | 100.00% | |   Total |    130 | 100.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+-------------+---------+ +-------+------+---------+ +---------+--------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+------------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | routing | #violation |    prop | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+------------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET1 |          4 |  26.67% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET2 |          5 |  33.33% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET3 |          5 |  33.33% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET4 |          1 |   6.67% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET5 |          0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    T4M2 |          0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |     RDL |          0 |   0.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+------------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |   Total |         15 | 100.00% | 
+[RT 20261025 20:31:31 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+------------+---------+ 
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:578 [1;34mInfo[0m routePAModel] ***** End Iteration 1/6(16.67%) (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 3133.47MB) *****
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:559 [1;34mInfo[0m routePAModel] ***** Begin iteration 2/6(33.33%) *****
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:595 [1;34mInfo[0m setPAIterParam] prefer_wire_unit: 1
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:596 [1;34mInfo[0m setPAIterParam] non_prefer_wire_unit: 2.5
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:597 [1;34mInfo[0m setPAIterParam] via_unit: 1000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:598 [1;34mInfo[0m setPAIterParam] size: 3
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:599 [1;34mInfo[0m setPAIterParam] offset: 1
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:600 [1;34mInfo[0m setPAIterParam] schedule_interval: 3
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:601 [1;34mInfo[0m setPAIterParam] fixed_rect_unit: 2000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:602 [1;34mInfo[0m setPAIterParam] routed_rect_unit: 1000
+[RT 20261025 20:31:31 cQBzyMnA PinAccessor.cpp:603 [1;34mInfo[0m setPAIterParam] violation_unit: 2

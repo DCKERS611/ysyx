@@ -1,0 +1,27 @@
+{
+    "schema_version": 4,
+    "analysis_revision": "quality-gates-v4",
+    "tool": "yosys",
+    "step": "Synthesis",
+    "design": "light",
+    "analysis_status": "valid",
+    "quality_status": "pass",
+    "metric_count": 10,
+    "dimensions": {
+        "runtime": {
+            "metric_count": 2
+        },
+        "area_cost": {
+            "metric_count": 2
+        },
+        "routability_physical": {
+            "metric_count": 2
+        },
+        "power": {
+            "metric_count": 4
+        }
+    },
+    "gates": [],
+    "missing_metrics": [],
+    "metrics_file": "qor_metrics.json"
+}

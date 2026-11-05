@@ -1,0 +1,27 @@
+[
+  {
+    "old_path": "E:\\ysyx\\e\\e7\\synthesis\\ecc-npc\\ecc.toml",
+    "canonical_path": "E:\\ysyx\\e\\e7\\ecc\\npc\\ecc.toml",
+    "sha256": "87DE00BF33BA72CF8ECB16D033FDCA2667DE44BB3B0ED6141C72B7FF0F8E193F"
+  },
+  {
+    "old_path": "E:\\ysyx\\e\\e7\\synthesis\\ecc-npc\\rtl\\filelist.f",
+    "canonical_path": "E:\\ysyx\\e\\e7\\ecc\\npc\\rtl\\filelist.f",
+    "sha256": "E80B04AF412B5A8153CC4823B6F44648E9464282DF6DA700883B468CF5AE39D6"
+  },
+  {
+    "old_path": "E:\\ysyx\\e\\e7\\synthesis\\ecc-npc-e7\\ecc.toml",
+    "canonical_path": "E:\\ysyx\\e\\e7\\ecc\\npc-e7\\ecc.toml",
+    "sha256": "6E2A5467E9843657CBF9F628AE77CFD0D4EFBA14E5D424CC285CEF364E6CB72F"
+  },
+  {
+    "old_path": "E:\\ysyx\\e\\e7\\synthesis\\ecc-npc-e7\\Makefile",
+    "canonical_path": "E:\\ysyx\\e\\e7\\ecc\\npc-e7\\Makefile",
+    "sha256": "7659EB9D7FB5A90CE42A5498106C281666949683DC389BAED877F1AB9EE87F27"
+  },
+  {
+    "old_path": "E:\\ysyx\\e\\e7\\synthesis\\ecc-npc-e7\\rtl\\filelist.f",
+    "canonical_path": "E:\\ysyx\\e\\e7\\ecc\\npc-e7\\rtl\\filelist.f",
+    "sha256": "EE2DF51CB47E1B905C80C146B47B206FAB5F15A781B3B2E2085F4234C8A65657"
+  }
+]

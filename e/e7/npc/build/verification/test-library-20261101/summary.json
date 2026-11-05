@@ -1,0 +1,31 @@
+{
+  "environment": "WSL Ubuntu-22.04",
+  "source": "/home/ysyx/ysyx-workbench",
+  "default_reply": "LFSR 1..20, seed 0xACE1",
+  "fixed_reply": 1,
+  "cpu_random_request": false,
+  "checker_checks": 10,
+  "ordinary": {
+    "random": "4+14 PASS",
+    "fixed1": "4+14 PASS"
+  },
+  "difftest": {
+    "random": "4+14+2+3 PASS",
+    "fixed1": "4+14+2+3 PASS"
+  },
+  "acceptance": "3 cases x NPC/EMU/DiffTest PASS",
+  "wave": "add/lw/sb PASS, automatic only",
+  "hello": {
+    "instructions": 30467,
+    "cycles": 546583,
+    "ipc": 0.055741,
+    "ordinary": "PASS",
+    "difftest": "PASS"
+  },
+  "soc": "build only, not executed in this task",
+  "not_run": [
+    "full AM cpu-tests",
+    "full RV32I",
+    "archbench"
+  ]
+}

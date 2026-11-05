@@ -1,0 +1,520 @@
+{
+  "baseline_sha256": {
+    "sim.cpp": "7ab1ceca6022c0134b640be49ff0e375f4cf3ac4c30edc15e0435509a22fc5f7",
+    "ifu.v": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75"
+  },
+  "fixed": [
+    {
+      "delay": 5,
+      "sim_sha256": "9f9cf617f2176c564497a4ba4ac49461af5c3db03d98d0b8c8dc86933638bdf4",
+      "ifu_sha256": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75",
+      "cpu_random_requests": false,
+      "memory_delay_applies_to": "both IFU and LSU",
+      "suites": {
+        "riscv-tests": {
+          "pass": 38,
+          "expected_failures": [],
+          "make_exit": 0,
+          "wall_seconds": 13.103
+        },
+        "cpu-tests": {
+          "pass": 35,
+          "expected_failures": [
+            "wrong"
+          ],
+          "make_exit": 0,
+          "wall_seconds": 42.349
+        }
+      }
+    },
+    {
+      "delay": 10,
+      "sim_sha256": "ca43b5b2ed04c98e646425da6a1a1fcbf41aeba1b35474cf736bd3401a979294",
+      "ifu_sha256": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75",
+      "cpu_random_requests": false,
+      "memory_delay_applies_to": "both IFU and LSU",
+      "suites": {
+        "riscv-tests": {
+          "pass": 38,
+          "expected_failures": [],
+          "make_exit": 0,
+          "wall_seconds": 12.374
+        },
+        "cpu-tests": {
+          "pass": 35,
+          "expected_failures": [
+            "wrong"
+          ],
+          "make_exit": 0,
+          "wall_seconds": 62.952
+        }
+      }
+    },
+    {
+      "delay": 20,
+      "sim_sha256": "16ac821bdbbebc58ca8755f58564b9357d81a6c42abf1c0a46f18bdda4a130f6",
+      "ifu_sha256": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75",
+      "cpu_random_requests": false,
+      "memory_delay_applies_to": "both IFU and LSU",
+      "suites": {
+        "riscv-tests": {
+          "pass": 38,
+          "expected_failures": [],
+          "make_exit": 0,
+          "wall_seconds": 13.012
+        },
+        "cpu-tests": {
+          "pass": 35,
+          "expected_failures": [
+            "wrong"
+          ],
+          "make_exit": 0,
+          "wall_seconds": 105.127
+        }
+      }
+    }
+  ],
+  "fault": {
+    "change": "remove lsu_respValid from mem_done",
+    "model_delay": 20,
+    "mutant_make_exit": 2,
+    "detected_by_difftest": true,
+    "diagnostic": "Loaded /home/ysyx/ysyx-workbench/npc/build/regress/programs/functional/word_memory.bin: 28 bytes\nstep=5 pre_pc=0x80000010 inst=0x0020a423\ninst: actual=0x0020a423 expect=0x0080a183\nx3: actual=0x00000000 expect=0x0000002a\nFAILED: 2/120\nmake: *** [tests/Makefile.mk:55: diff] Error 1\n",
+    "wave_violations": [
+      {
+        "edge_time": 172,
+        "pc": "0x8000000c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000010"
+      },
+      {
+        "edge_time": 176,
+        "pc": "0x80000010",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000014"
+      },
+      {
+        "edge_time": 180,
+        "pc": "0x80000014",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000018"
+      },
+      {
+        "edge_time": 184,
+        "pc": "0x80000018",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000001c"
+      },
+      {
+        "edge_time": 188,
+        "pc": "0x8000001c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000020"
+      },
+      {
+        "edge_time": 192,
+        "pc": "0x80000020",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000024"
+      },
+      {
+        "edge_time": 196,
+        "pc": "0x80000024",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000028"
+      },
+      {
+        "edge_time": 200,
+        "pc": "0x80000028",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000002c"
+      },
+      {
+        "edge_time": 204,
+        "pc": "0x8000002c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000030"
+      },
+      {
+        "edge_time": 208,
+        "pc": "0x80000030",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000034"
+      },
+      {
+        "edge_time": 214,
+        "pc": "0x80000034",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000038"
+      },
+      {
+        "edge_time": 218,
+        "pc": "0x80000038",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000003c"
+      },
+      {
+        "edge_time": 222,
+        "pc": "0x8000003c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000040"
+      },
+      {
+        "edge_time": 226,
+        "pc": "0x80000040",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000044"
+      },
+      {
+        "edge_time": 230,
+        "pc": "0x80000044",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000048"
+      },
+      {
+        "edge_time": 234,
+        "pc": "0x80000048",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000004c"
+      },
+      {
+        "edge_time": 238,
+        "pc": "0x8000004c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000050"
+      },
+      {
+        "edge_time": 242,
+        "pc": "0x80000050",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000054"
+      },
+      {
+        "edge_time": 246,
+        "pc": "0x80000054",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000058"
+      },
+      {
+        "edge_time": 250,
+        "pc": "0x80000058",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000005c"
+      },
+      {
+        "edge_time": 256,
+        "pc": "0x8000005c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000060"
+      },
+      {
+        "edge_time": 260,
+        "pc": "0x80000060",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000064"
+      },
+      {
+        "edge_time": 264,
+        "pc": "0x80000064",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000068"
+      },
+      {
+        "edge_time": 268,
+        "pc": "0x80000068",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000006c"
+      },
+      {
+        "edge_time": 272,
+        "pc": "0x8000006c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000070"
+      },
+      {
+        "edge_time": 276,
+        "pc": "0x80000070",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000074"
+      },
+      {
+        "edge_time": 280,
+        "pc": "0x80000074",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000078"
+      },
+      {
+        "edge_time": 284,
+        "pc": "0x80000078",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000007c"
+      },
+      {
+        "edge_time": 288,
+        "pc": "0x8000007c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000080"
+      },
+      {
+        "edge_time": 292,
+        "pc": "0x80000080",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000084"
+      },
+      {
+        "edge_time": 298,
+        "pc": "0x80000084",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000088"
+      },
+      {
+        "edge_time": 302,
+        "pc": "0x80000088",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000008c"
+      },
+      {
+        "edge_time": 306,
+        "pc": "0x8000008c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000090"
+      },
+      {
+        "edge_time": 310,
+        "pc": "0x80000090",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000094"
+      },
+      {
+        "edge_time": 314,
+        "pc": "0x80000094",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x80000098"
+      },
+      {
+        "edge_time": 318,
+        "pc": "0x80000098",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x8000009c"
+      },
+      {
+        "edge_time": 322,
+        "pc": "0x8000009c",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000a0"
+      },
+      {
+        "edge_time": 326,
+        "pc": "0x800000a0",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000a4"
+      },
+      {
+        "edge_time": 330,
+        "pc": "0x800000a4",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000a8"
+      },
+      {
+        "edge_time": 334,
+        "pc": "0x800000a8",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000ac"
+      },
+      {
+        "edge_time": 340,
+        "pc": "0x800000ac",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000b0"
+      },
+      {
+        "edge_time": 344,
+        "pc": "0x800000b0",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000b4"
+      },
+      {
+        "edge_time": 348,
+        "pc": "0x800000b4",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000b8"
+      },
+      {
+        "edge_time": 352,
+        "pc": "0x800000b8",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000bc"
+      },
+      {
+        "edge_time": 356,
+        "pc": "0x800000bc",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000c0"
+      },
+      {
+        "edge_time": 360,
+        "pc": "0x800000c0",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000c4"
+      },
+      {
+        "edge_time": 364,
+        "pc": "0x800000c4",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000c8"
+      },
+      {
+        "edge_time": 368,
+        "pc": "0x800000c8",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000cc"
+      },
+      {
+        "edge_time": 372,
+        "pc": "0x800000cc",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000d0"
+      },
+      {
+        "edge_time": 376,
+        "pc": "0x800000d0",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000d4"
+      },
+      {
+        "edge_time": 382,
+        "pc": "0x800000d4",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000d8"
+      },
+      {
+        "edge_time": 386,
+        "pc": "0x800000d8",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000dc"
+      },
+      {
+        "edge_time": 390,
+        "pc": "0x800000dc",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000e0"
+      },
+      {
+        "edge_time": 394,
+        "pc": "0x800000e0",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000e4"
+      },
+      {
+        "edge_time": 398,
+        "pc": "0x800000e4",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000e8"
+      },
+      {
+        "edge_time": 402,
+        "pc": "0x800000e8",
+        "commit": 1,
+        "lsu_respValid": 0,
+        "pc_after": "0x800000ec"
+      }
+    ],
+    "wave_only_cycle_limit": 200,
+    "first_wave_attempt": "Manually stopped the injected infinite-commit run; regenerated trace with temporary 200-cycle main limit.",
+    "recovery": [
+      {
+        "case": "word_memory",
+        "runner": "build/regress/cpu_test",
+        "cycles": 187,
+        "exit": 0
+      },
+      {
+        "case": "word_memory",
+        "runner": "build/difftest/difftest",
+        "cycles": 187,
+        "exit": 0
+      },
+      {
+        "case": "byte_memory",
+        "runner": "build/regress/cpu_test",
+        "cycles": 743,
+        "exit": 0
+      },
+      {
+        "case": "byte_memory",
+        "runner": "build/difftest/difftest",
+        "cycles": 743,
+        "exit": 0
+      }
+    ],
+    "restored_wait_edges_without_early_commit": 38,
+    "rtl_restored_sha256": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75"
+  },
+  "final_sources_restored": {
+    "ifu.v": true,
+    "sim.cpp": true,
+    "main.cpp": true
+  },
+  "final_default_hello": {
+    "exit": 0,
+    "instructions": 30467,
+    "cycles": 546583,
+    "ipc": 0.055741
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+halt 0x80000024
+instructions 10
+cycles_fixed 1 22
+reg 2 0xffffffff
+reg 3 0xffffffff
+reg 4 0xfffff800
+reg 5 2047
+reg 6 2048
+reg 7 0xfffff7ff
+mem 0x80000100 0xffffffff

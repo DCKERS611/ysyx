@@ -1,38 +1,39 @@
-# 构建产物与仿真输出
-**/build/
+# Windows E7 副本的发布规则；不是 WSL workbench 的依赖仓库忽略规则。
+# 源码、ECC 工程/runs、原路径测试证据均允许提交。
 **/.git/
 **/__pycache__/
 **/.pytest_cache/
 **/.cache/
 **/node_modules/
+**/obj_dir*/
+**/.idea/
+**/.vscode/
 *.pyc
 *.pyo
 *.o
 *.a
 *.so
-*.fst
-*.vcd
-*.log
-core
-core.*
-
-# 编辑器与本地配置
-**/.idea/
-**/.vscode/
+*.so.*
+*.dll
+*.exe
+*.d
+*.pid
 *.swp
 *.swo
 *~
 .env
 .env.*
+!.env.example
+core
+core.*
 
-# 本机工具、安装目录与学习计划不提交
-/ecc/
-/ecc-smoke/
+# 安装包、工具本体、PDK 不属于工程源码和测试成果。
+/ecc/ecc
+/ecc/_internal/
+/ecc/ecc-cli-linux-x86_64.tar.gz
 /icsprout55-pdk/
+
+# 本地学习计划等沿用仓库规则；不笼统屏蔽 build、log、FST 或 ECC。
 *学习计划*
 *学习背景*
 *工作交接书*
-
-# 旧式 Verilator 输出目录与工具锁
-**/obj_dir/
-**/.lock

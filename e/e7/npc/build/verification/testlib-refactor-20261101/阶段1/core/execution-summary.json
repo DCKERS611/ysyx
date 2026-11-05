@@ -1,0 +1,93 @@
+[
+  {
+    "name": "lint",
+    "command": "make -f Makefile.cpptest lint",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.09
+  },
+  {
+    "name": "test-library",
+    "command": "make -f Makefile.cpptest test-library",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.01
+  },
+  {
+    "name": "test-all",
+    "command": "make -f Makefile.cpptest test-all",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.96
+  },
+  {
+    "name": "test-fixed",
+    "command": "make -f Makefile.cpptest test-fixed",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.87
+  },
+  {
+    "name": "difftest",
+    "command": "make -f Makefile.diff difftest",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 6.8
+  },
+  {
+    "name": "difftest-fixed",
+    "command": "make -f Makefile.diff difftest-fixed",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 5.06
+  },
+  {
+    "name": "test-acceptance",
+    "command": "make -f Makefile.cpptest test-acceptance",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 1.02
+  },
+  {
+    "name": "check-waves",
+    "command": "make -f Makefile.cpptest check-waves",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 3.1
+  },
+  {
+    "name": "test_mkprog",
+    "command": "python3 -m unittest discover -s tests -p test_mkprog.py -v",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.11
+  },
+  {
+    "name": "dummy-run",
+    "command": "make ARCH=minirv-npc ALL=dummy run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 1.31
+  },
+  {
+    "name": "dummy-diff",
+    "command": "make ARCH=minirv-npc ALL=dummy run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.33
+  },
+  {
+    "name": "hello-run",
+    "command": "make ARCH=minirv-npc run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.33
+  },
+  {
+    "name": "hello-diff",
+    "command": "make ARCH=minirv-npc run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.49
+  }
+]

@@ -1,0 +1,3394 @@
+{
+  "source_root": "/home/ysyx/ysyx-workbench/ecc",
+  "destination_root": "/mnt/e/ysyx/e/e7/ecc",
+  "projects": {
+    "light": {
+      "files": 58,
+      "bytes": 884038,
+      "missing": [
+        "light/ecc.toml",
+        "light/rtl/filelist.f",
+        "light/rtl/template.v",
+        "light/rtl/light.v",
+        "light/runs/default/log/light.2026-10-25_21-45-27",
+        "light/runs/default/origin/filelist.f",
+        "light/runs/default/origin/template.v",
+        "light/runs/default/origin/light.sdc",
+        "light/runs/default/origin/light.v",
+        "light/runs/default/home/parameters.json",
+        "light/runs/default/home/flow.json",
+        "light/runs/default/home/home.json",
+        "light/runs/default/home/home.json.lock",
+        "light/runs/default/home/checklist.json",
+        "light/runs/default/Synthesis_yosys/subflow.json",
+        "light/runs/default/Synthesis_yosys/checklist.json",
+        "light/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl",
+        "light/runs/default/Synthesis_yosys/script/init_tech.tcl",
+        "light/runs/default/Synthesis_yosys/report/Synthesis_check.rpt",
+        "light/runs/default/Synthesis_yosys/report/Synthesis_stat.json",
+        "light/runs/default/Synthesis_yosys/report/post_synthesis/light_reg.sdf",
+        "light/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+        "light/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+        "light/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+        "light/runs/default/Synthesis_yosys/log/Synthesis.log",
+        "light/runs/default/Synthesis_yosys/analysis/qor_metrics.json",
+        "light/runs/default/Synthesis_yosys/analysis/qor_hotspots.json",
+        "light/runs/default/Synthesis_yosys/analysis/qor_summary.json",
+        "light/runs/default/Synthesis_yosys/feature/Synthesis.step.json",
+        "light/runs/default/Synthesis_yosys/feature/Synthesis_stat.json",
+        "light/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+        "light/runs/default/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+        "light/runs/default/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+        "light/runs/default/Synthesis_yosys/data/global_var.tcl",
+        "light/runs/default/Synthesis_yosys/data/sta/sta.log",
+        "light/runs/default/Synthesis_yosys/data/sta/sdf_writer/light_reg.sdf",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+        "light/runs/default/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+        "light/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+        "light/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+        "light/runs/default/Synthesis_yosys/data/tmp/abc.constr",
+        "light/runs/default/Synthesis_yosys/output/light_Synthesis_sim.v.gz",
+        "light/runs/default/Synthesis_yosys/output/light_Synthesis.v.gz",
+        "light/runs/default/config/fp_default_config.json",
+        "light/runs/default/config/flow_config.json",
+        "light/runs/default/config/no_default_config_fixfanout.json",
+        "light/runs/default/config/pl_default_config.json",
+        "light/runs/default/config/drc_default_config.json",
+        "light/runs/default/config/sta.json",
+        "light/runs/default/config/dreamplace.json",
+        "light/runs/default/config/cts_default_config.json",
+        "light/runs/default/config/macro_locations.txt",
+        "light/runs/default/config/rt_default_config.json",
+        "light/runs/default/config/rcx.json",
+        "light/runs/default/config/db_default_config.json"
+      ],
+      "different": [],
+      "identical": 0,
+      "symlinks": [],
+      "largest": [
+        {
+          "bytes": 233610,
+          "path": "light/runs/default/Synthesis_yosys/report/post_synthesis/light_reg.sdf"
+        },
+        {
+          "bytes": 233610,
+          "path": "light/runs/default/Synthesis_yosys/data/sta/sdf_writer/light_reg.sdf"
+        },
+        {
+          "bytes": 102237,
+          "path": "light/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json"
+        },
+        {
+          "bytes": 102237,
+          "path": "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json"
+        },
+        {
+          "bytes": 70224,
+          "path": "light/runs/default/Synthesis_yosys/log/Synthesis.log"
+        },
+        {
+          "bytes": 26990,
+          "path": "light/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl"
+        },
+        {
+          "bytes": 17122,
+          "path": "light/runs/default/log/light.2026-10-25_21-45-27"
+        },
+        {
+          "bytes": 15461,
+          "path": "light/runs/default/Synthesis_yosys/data/sta/sta.log"
+        },
+        {
+          "bytes": 13463,
+          "path": "light/runs/default/home/checklist.json"
+        },
+        {
+          "bytes": 9088,
+          "path": "light/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin"
+        },
+        {
+          "bytes": 8876,
+          "path": "light/runs/default/Synthesis_yosys/analysis/qor_metrics.json"
+        },
+        {
+          "bytes": 4978,
+          "path": "light/runs/default/Synthesis_yosys/output/light_Synthesis.v.gz"
+        }
+      ],
+      "by_section": {
+        "light/ecc.toml": {
+          "files": 1,
+          "bytes": 972
+        },
+        "light/rtl": {
+          "files": 3,
+          "bytes": 3723
+        },
+        "light/runs/default": {
+          "files": 54,
+          "bytes": 879343
+        }
+      },
+      "destination_only": [],
+      "files_manifest": [
+        {
+          "path": "light/ecc.toml",
+          "size": 972,
+          "sha256": "ba16a7e8d2007669c5d70de7d2f24dbc841a928b154558226febb90e0d637f4e"
+        },
+        {
+          "path": "light/rtl/filelist.f",
+          "size": 19,
+          "sha256": "dc32bc54e7d90de49b095aa23f15b24919545398eda32859a820a67e6e83eae0"
+        },
+        {
+          "path": "light/rtl/template.v",
+          "size": 3061,
+          "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27"
+        },
+        {
+          "path": "light/rtl/light.v",
+          "size": 643,
+          "sha256": "95add7568ae6ea1d13d90550174a94aac15d06c19d3c9868877c294a5891b98b"
+        },
+        {
+          "path": "light/runs/default/log/light.2026-10-25_21-45-27",
+          "size": 17122,
+          "sha256": "19b23be0ee7fc38fd5053bf8f804c77203e7b00a050a1a7e47beb74c2a0e135a"
+        },
+        {
+          "path": "light/runs/default/origin/filelist.f",
+          "size": 19,
+          "sha256": "dc32bc54e7d90de49b095aa23f15b24919545398eda32859a820a67e6e83eae0"
+        },
+        {
+          "path": "light/runs/default/origin/template.v",
+          "size": 3061,
+          "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27"
+        },
+        {
+          "path": "light/runs/default/origin/light.sdc",
+          "size": 253,
+          "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b"
+        },
+        {
+          "path": "light/runs/default/origin/light.v",
+          "size": 643,
+          "sha256": "95add7568ae6ea1d13d90550174a94aac15d06c19d3c9868877c294a5891b98b"
+        },
+        {
+          "path": "light/runs/default/home/parameters.json",
+          "size": 698,
+          "sha256": "714b98dc3e0799d51ff6a0371167aa28f0d784389ab2263a830b1ab76903dcd6"
+        },
+        {
+          "path": "light/runs/default/home/flow.json",
+          "size": 236,
+          "sha256": "e3fc6de04247ea0800bc358e7fafd639cd6a5f0d46e38ca64f92c6812512b39c"
+        },
+        {
+          "path": "light/runs/default/home/home.json",
+          "size": 498,
+          "sha256": "277b1d7b27cc2b89b2b40c65ced6f0d625a6f5e0bf7757909a43525bb13b0eec"
+        },
+        {
+          "path": "light/runs/default/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "light/runs/default/home/checklist.json",
+          "size": 13463,
+          "sha256": "ff2bc2ffff6e179bce192a4e9ce50d6d369e4ba8c139e3260f8d2d294142004d"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/subflow.json",
+          "size": 477,
+          "sha256": "86bcdf7aa6b890cf3fc88c5de696dfccb328b28277689d25e57cc71e18254455"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/checklist.json",
+          "size": 1022,
+          "sha256": "e5055bd7b0eedcbb6bc7b3fa1e53fa552f00270b32b2280ae3fff6c4dfdf0e2b"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 118,
+          "sha256": "58daa3b018a7bb6da4240946153891e0ce7dd3f8df4d3f1b53c20cac9b618c73"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 1132,
+          "sha256": "53e4e75abed66de2007d4f80651d2bf7461cdfb3268f688775569dbf568fab9a"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/post_synthesis/light_reg.sdf",
+          "size": 233610,
+          "sha256": "7bf2705428279362491088e33b24f21637a9252d4bf14d9203cc51f28b99e8f1"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 264,
+          "sha256": "55ddbcb02fae82471d577e6826645af2fb47cadf3a16631e6c9cfeab9c6064c1"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1510,
+          "sha256": "1a888991ee2da64a88e724c08519b511ed77fe938453b935e0481f19dacda81d"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "d2055f44c27e4291c85af94b090ed8811ad2c14f995d1b4754bc00e6235dd5e8"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/log/Synthesis.log",
+          "size": 70224,
+          "sha256": "2a5065fc2bc4dab39dd9bc3c18c9591438b805c877940f3560ba3cc618e65607"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8876,
+          "sha256": "7991b4bba4b828396a1516efe2f13a2fad837a66aae69ca48f2ee25d941f5fd3"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 161,
+          "sha256": "1e61f33dafdcf9323efca8705b75d4b2335dd11a60337aec74e799fd6948f0b5"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 598,
+          "sha256": "8f9fd2cc6940181b761e4f135498bf211c5ab54b712932e7bee5e97c106db7b0"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 336,
+          "sha256": "14a9948d365d456ea05aa2478946a84058af7d5577a2fca4fe842c25b117656b"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 2954,
+          "sha256": "e590ade0beb371656beed9ebb38f4f9abefdfeab10295a3ce15be5c66823c0bf"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 102237,
+          "sha256": "514fd7f106dd6be2415c4e1f55db7a6eea3695acaa29331641468c902e6f93b9"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 393,
+          "sha256": "bd52b342ddf7e267cd245008539c6f2552ec3ac1cf618453831583a2933ad933"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 142,
+          "sha256": "21d9c566c2ca3cf01695ddc0a85e95482ef4038bdd74f4d7920878432fdc11f0"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/global_var.tcl",
+          "size": 2514,
+          "sha256": "f63062997057f2e3c2ceda0bedcb62bf37dedf2044adaa8e1a6dac2c4dca8f4d"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/sta.log",
+          "size": 15461,
+          "sha256": "860d68c8c26dbc652746e92859a80a1ec0e7e612565e1b64af1a9e6ba57be531"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/sdf_writer/light_reg.sdf",
+          "size": 233610,
+          "sha256": "7bf2705428279362491088e33b24f21637a9252d4bf14d9203cc51f28b99e8f1"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 264,
+          "sha256": "55ddbcb02fae82471d577e6826645af2fb47cadf3a16631e6c9cfeab9c6064c1"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "d2055f44c27e4291c85af94b090ed8811ad2c14f995d1b4754bc00e6235dd5e8"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 102237,
+          "sha256": "514fd7f106dd6be2415c4e1f55db7a6eea3695acaa29331641468c902e6f93b9"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 393,
+          "sha256": "bd52b342ddf7e267cd245008539c6f2552ec3ac1cf618453831583a2933ad933"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1510,
+          "sha256": "1a888991ee2da64a88e724c08519b511ed77fe938453b935e0481f19dacda81d"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 9088,
+          "sha256": "72558f1ac6c7d8f490bfc4ce352243e549c74bf9d2b5438fee19847cf31d549e"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/output/light_Synthesis_sim.v.gz",
+          "size": 4552,
+          "sha256": "8f2ae7d0af54c922f5840fa84758604a29ca4c4efee15156ef137d920cb560b3"
+        },
+        {
+          "path": "light/runs/default/Synthesis_yosys/output/light_Synthesis.v.gz",
+          "size": 4978,
+          "sha256": "9f6eb1eb11e5cea14db1ab4e660ec4ff780661844974aaa70f21abe2df0f6fc9"
+        },
+        {
+          "path": "light/runs/default/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "light/runs/default/config/flow_config.json",
+          "size": 644,
+          "sha256": "3287f1e833cfbfd5ced962b889e7f1a5f935bf4417b95512a4740a1379edbd45"
+        },
+        {
+          "path": "light/runs/default/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "light/runs/default/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "light/runs/default/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "light/runs/default/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "light/runs/default/config/dreamplace.json",
+          "size": 3421,
+          "sha256": "6ecc0bdf347a06ef0b1b7c84948ec5735907e1327e681bfa915c4bcd4e0137c5"
+        },
+        {
+          "path": "light/runs/default/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "light/runs/default/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "light/runs/default/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "light/runs/default/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "light/runs/default/config/db_default_config.json",
+          "size": 1057,
+          "sha256": "e1996a7a82d54f484013544ff2367f235ecb35768884cb70cdc0841057e6e650"
+        }
+      ],
+      "directories": [
+        "light/rtl",
+        "light/runs",
+        "light/constraints",
+        "light/runs/default",
+        "light/runs/default/log",
+        "light/runs/default/origin",
+        "light/runs/default/home",
+        "light/runs/default/Synthesis_yosys",
+        "light/runs/default/config",
+        "light/runs/default/Synthesis_yosys/script",
+        "light/runs/default/Synthesis_yosys/report",
+        "light/runs/default/Synthesis_yosys/log",
+        "light/runs/default/Synthesis_yosys/analysis",
+        "light/runs/default/Synthesis_yosys/feature",
+        "light/runs/default/Synthesis_yosys/data",
+        "light/runs/default/Synthesis_yosys/output",
+        "light/runs/default/Synthesis_yosys/report/post_synthesis",
+        "light/runs/default/Synthesis_yosys/feature/post_synthesis",
+        "light/runs/default/Synthesis_yosys/data/sta",
+        "light/runs/default/Synthesis_yosys/data/tmp",
+        "light/runs/default/Synthesis_yosys/data/sta/sdf_writer",
+        "light/runs/default/Synthesis_yosys/data/sta/power_propagator",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_reporter",
+        "light/runs/default/Synthesis_yosys/data/sta/graph_builder",
+        "light/runs/default/Synthesis_yosys/data/sta/clock_propagator",
+        "light/runs/default/Synthesis_yosys/data/sta/power_reporter",
+        "light/runs/default/Synthesis_yosys/data/sta/power_analyzer",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_propagator",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_analyzer",
+        "light/runs/default/Synthesis_yosys/data/sta/timing_characterizer",
+        "light/runs/default/Synthesis_yosys/data/sta/data_manager",
+        "light/runs/default/Synthesis_yosys/data/sta/delay_calculator"
+      ]
+    },
+    "npc": {
+      "files": 62,
+      "bytes": 8370590,
+      "missing": [
+        "npc/ecc.toml",
+        "npc/rtl/filelist.f",
+        "npc/runs/default/log/npc.2026-10-25_23-33-57",
+        "npc/runs/default/origin/wbu.v",
+        "npc/runs/default/origin/idu.v",
+        "npc/runs/default/origin/npc.sdc",
+        "npc/runs/default/origin/gpr.v",
+        "npc/runs/default/origin/exu.v",
+        "npc/runs/default/origin/lsu.v",
+        "npc/runs/default/origin/filelist.f",
+        "npc/runs/default/origin/template.v",
+        "npc/runs/default/origin/ifu.v",
+        "npc/runs/default/origin/top.v",
+        "npc/runs/default/home/parameters.json",
+        "npc/runs/default/home/flow.json",
+        "npc/runs/default/home/home.json",
+        "npc/runs/default/home/home.json.lock",
+        "npc/runs/default/home/checklist.json",
+        "npc/runs/default/Synthesis_yosys/subflow.json",
+        "npc/runs/default/Synthesis_yosys/checklist.json",
+        "npc/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl",
+        "npc/runs/default/Synthesis_yosys/script/init_tech.tcl",
+        "npc/runs/default/Synthesis_yosys/report/Synthesis_check.rpt",
+        "npc/runs/default/Synthesis_yosys/report/Synthesis_stat.json",
+        "npc/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+        "npc/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+        "npc/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+        "npc/runs/default/Synthesis_yosys/report/post_synthesis/top.sdf",
+        "npc/runs/default/Synthesis_yosys/log/Synthesis.log",
+        "npc/runs/default/Synthesis_yosys/analysis/qor_metrics.json",
+        "npc/runs/default/Synthesis_yosys/analysis/qor_hotspots.json",
+        "npc/runs/default/Synthesis_yosys/analysis/qor_summary.json",
+        "npc/runs/default/Synthesis_yosys/feature/Synthesis.step.json",
+        "npc/runs/default/Synthesis_yosys/feature/Synthesis_stat.json",
+        "npc/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+        "npc/runs/default/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+        "npc/runs/default/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+        "npc/runs/default/Synthesis_yosys/data/global_var.tcl",
+        "npc/runs/default/Synthesis_yosys/data/sta/sta.log",
+        "npc/runs/default/Synthesis_yosys/data/sta/sdf_writer/top.sdf",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+        "npc/runs/default/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+        "npc/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+        "npc/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+        "npc/runs/default/Synthesis_yosys/data/tmp/abc.constr",
+        "npc/runs/default/Synthesis_yosys/output/npc_Synthesis.v.gz",
+        "npc/runs/default/Synthesis_yosys/output/npc_Synthesis_sim.v.gz",
+        "npc/runs/default/config/fp_default_config.json",
+        "npc/runs/default/config/flow_config.json",
+        "npc/runs/default/config/no_default_config_fixfanout.json",
+        "npc/runs/default/config/pl_default_config.json",
+        "npc/runs/default/config/drc_default_config.json",
+        "npc/runs/default/config/sta.json",
+        "npc/runs/default/config/dreamplace.json",
+        "npc/runs/default/config/cts_default_config.json",
+        "npc/runs/default/config/macro_locations.txt",
+        "npc/runs/default/config/rt_default_config.json",
+        "npc/runs/default/config/rcx.json",
+        "npc/runs/default/config/db_default_config.json"
+      ],
+      "different": [],
+      "identical": 0,
+      "symlinks": [],
+      "largest": [
+        {
+          "bytes": 3455550,
+          "path": "npc/runs/default/Synthesis_yosys/report/post_synthesis/top.sdf"
+        },
+        {
+          "bytes": 3455550,
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/sdf_writer/top.sdf"
+        },
+        {
+          "bytes": 398133,
+          "path": "npc/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json"
+        },
+        {
+          "bytes": 398133,
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json"
+        },
+        {
+          "bytes": 210401,
+          "path": "npc/runs/default/Synthesis_yosys/log/Synthesis.log"
+        },
+        {
+          "bytes": 108968,
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin"
+        },
+        {
+          "bytes": 94617,
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/sta.log"
+        },
+        {
+          "bytes": 61873,
+          "path": "npc/runs/default/Synthesis_yosys/output/npc_Synthesis.v.gz"
+        },
+        {
+          "bytes": 60318,
+          "path": "npc/runs/default/Synthesis_yosys/output/npc_Synthesis_sim.v.gz"
+        },
+        {
+          "bytes": 26990,
+          "path": "npc/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl"
+        },
+        {
+          "bytes": 16970,
+          "path": "npc/runs/default/log/npc.2026-10-25_23-33-57"
+        },
+        {
+          "bytes": 13455,
+          "path": "npc/runs/default/home/checklist.json"
+        }
+      ],
+      "by_section": {
+        "npc/ecc.toml": {
+          "files": 1,
+          "bytes": 964
+        },
+        "npc/rtl": {
+          "files": 1,
+          "bytes": 333
+        },
+        "npc/runs/default": {
+          "files": 60,
+          "bytes": 8369293
+        }
+      },
+      "destination_only": [],
+      "files_manifest": [
+        {
+          "path": "npc/ecc.toml",
+          "size": 964,
+          "sha256": "87de00bf33ba72cf8ecb16d033fdca2667de44bb3b0ed6141c72b7ff0f8e193f"
+        },
+        {
+          "path": "npc/rtl/filelist.f",
+          "size": 333,
+          "sha256": "e80b04af412b5a8153cc4823b6f44648e9464282df6da700883b468cf5ae39d6"
+        },
+        {
+          "path": "npc/runs/default/log/npc.2026-10-25_23-33-57",
+          "size": 16970,
+          "sha256": "e917423c5f4907b166432e183a6a673c8cda957824b0f5690cba5412c2e11fed"
+        },
+        {
+          "path": "npc/runs/default/origin/wbu.v",
+          "size": 659,
+          "sha256": "787c473faf039259020855a984d4afff5df28370ab581bfd19f49370c1c861c1"
+        },
+        {
+          "path": "npc/runs/default/origin/idu.v",
+          "size": 2734,
+          "sha256": "661bd70f0387473148773a50b4eb119d5dc92eb91737c8b45b5a85244e7b46b2"
+        },
+        {
+          "path": "npc/runs/default/origin/npc.sdc",
+          "size": 253,
+          "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b"
+        },
+        {
+          "path": "npc/runs/default/origin/gpr.v",
+          "size": 700,
+          "sha256": "e1151c178e142c51132cfb9dfc431ab0da6e97b2ec0c1466a766c292467c68dc"
+        },
+        {
+          "path": "npc/runs/default/origin/exu.v",
+          "size": 241,
+          "sha256": "f6204d01883c08baa7dd69db25400c6e0e0df34d7655ae68007dbab0295ffd01"
+        },
+        {
+          "path": "npc/runs/default/origin/lsu.v",
+          "size": 1124,
+          "sha256": "f3c01dc27cee13a35b02cce27ab73c37ed0c4c1445650945e9d88180c0bf8d62"
+        },
+        {
+          "path": "npc/runs/default/origin/filelist.f",
+          "size": 333,
+          "sha256": "e80b04af412b5a8153cc4823b6f44648e9464282df6da700883b468cf5ae39d6"
+        },
+        {
+          "path": "npc/runs/default/origin/template.v",
+          "size": 3061,
+          "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27"
+        },
+        {
+          "path": "npc/runs/default/origin/ifu.v",
+          "size": 413,
+          "sha256": "2911331864a29e302fdd977548289d81bb801072731c69c6f978d5f0c8de88ea"
+        },
+        {
+          "path": "npc/runs/default/origin/top.v",
+          "size": 2304,
+          "sha256": "ba523b591e6beec4468a22e3f19602a6a37a8159e1c67593ab93ef7f9eeb834a"
+        },
+        {
+          "path": "npc/runs/default/home/parameters.json",
+          "size": 690,
+          "sha256": "3054c0d47b856ebbe645ae04188baa2eb4cd62c5f2c89bbd8ed4a4b516cb0ee9"
+        },
+        {
+          "path": "npc/runs/default/home/flow.json",
+          "size": 236,
+          "sha256": "0aba4148ce973cdfcd182bc766dda33ad2f7b4dc0759695dc819bc87cac26e9b"
+        },
+        {
+          "path": "npc/runs/default/home/home.json",
+          "size": 496,
+          "sha256": "5ae82b13397f67fffda5130dcefd6cba96a2d60f7c9f4fb84decaff055260729"
+        },
+        {
+          "path": "npc/runs/default/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc/runs/default/home/checklist.json",
+          "size": 13455,
+          "sha256": "f75665a5c17d1baf527071c400ea40c93d25083ecb90b600b8c5bfdd1b16a221"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/subflow.json",
+          "size": 473,
+          "sha256": "5ba72c94d80a2437b243ac5c2a3cb7f680eecf840127538ad660f41d777ee883"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/checklist.json",
+          "size": 1018,
+          "sha256": "4bc17095affdca47fa3f9c03fc17bf73e47a66f32c95e2766d73ac34b41ecdd9"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 112,
+          "sha256": "e4b5d2c86bfd982bb1d98cb484beb887606a9255ed2f3b17cb3b63d086fbe235"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 13350,
+          "sha256": "434543774dc8f735a3f169a0ed57991414fc585d393ce44945cbba9b1317c2b0"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 258,
+          "sha256": "371c8f19f30bad78bbca34f2e869935934d88c86725c87316e3351d1b7176e2f"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1504,
+          "sha256": "b498c4f91521dc87ecf9e285d27cbf03f17890b05be46b7197b1759734a42114"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "80ffa509f9c56d1aee8dc1bbbe28867f40f1c81b293d9593cd365568c502de66"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/report/post_synthesis/top.sdf",
+          "size": 3455550,
+          "sha256": "2cd2c505e225be414ca246e9681ee413ca7c1057a9ae6e92f6c906095157d13c"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/log/Synthesis.log",
+          "size": 210401,
+          "sha256": "084110dddaca2ad5ae9781c0e84fe0a6a4c75ec726b5698d1b20478c831e514b"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8887,
+          "sha256": "c31d159841f970cdb7b24158daf574ecf3fda9f360ecd6c2e9d1743125cf244b"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 159,
+          "sha256": "b0ca59cd07c0c54ed1139d48fecdfa2e7a92a1c5201d8c4fcb4e1b50b2581784"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 596,
+          "sha256": "a80d32419c71f52ea8d21943bbb4793bb71761ee8999faf406710c3c5c632117"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 336,
+          "sha256": "d9f093809ee659c9a20173ac4aade125795abcce39b3b78360384bf7dd3df1c1"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 5330,
+          "sha256": "6bdc11f2ad14b9ece28c54d7cba7b220c5896ce71666eaa7b807ce75b6b243bc"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 398133,
+          "sha256": "ff3e55539585591e92a15879c901993bf7cb3ec9bdcd730774be4d4054ecd5d5"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 392,
+          "sha256": "6d109a8db646f39565864d1158dac4347d5ab69be239267f7216ec3315c059a5"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 151,
+          "sha256": "6a1a22810febe726ca49ad3dbc7e0f37b6da789a7ab2aad4e8bada65b9c78b8b"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/global_var.tcl",
+          "size": 2690,
+          "sha256": "364b137cafdd729fba75f487022f2fcfc0e86a5f6893bc6cfd20b19578a40007"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/sta.log",
+          "size": 94617,
+          "sha256": "9244abfd9bc70328994065eaccbbd5aed384d7ce811793b1a79cc163635b7c41"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/sdf_writer/top.sdf",
+          "size": 3455550,
+          "sha256": "2cd2c505e225be414ca246e9681ee413ca7c1057a9ae6e92f6c906095157d13c"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 258,
+          "sha256": "371c8f19f30bad78bbca34f2e869935934d88c86725c87316e3351d1b7176e2f"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "80ffa509f9c56d1aee8dc1bbbe28867f40f1c81b293d9593cd365568c502de66"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 398133,
+          "sha256": "ff3e55539585591e92a15879c901993bf7cb3ec9bdcd730774be4d4054ecd5d5"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 392,
+          "sha256": "6d109a8db646f39565864d1158dac4347d5ab69be239267f7216ec3315c059a5"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1504,
+          "sha256": "b498c4f91521dc87ecf9e285d27cbf03f17890b05be46b7197b1759734a42114"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 108968,
+          "sha256": "958db60a3ebb4410b8b02e768476aa4c4cb4aac0792c48a2c4e2dc4dceace043"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/output/npc_Synthesis.v.gz",
+          "size": 61873,
+          "sha256": "3c18f1af64fa726b54e7e20262484771d37161c791908a88a215254e15712c11"
+        },
+        {
+          "path": "npc/runs/default/Synthesis_yosys/output/npc_Synthesis_sim.v.gz",
+          "size": 60318,
+          "sha256": "b66b5550c94886552c3287e6d2222747eb148fefe1e8d42d68c4429782e540f0"
+        },
+        {
+          "path": "npc/runs/default/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "npc/runs/default/config/flow_config.json",
+          "size": 632,
+          "sha256": "8bbe2aff05af1e0dbf196646a54dd6459ae9a89c2f78c4db74fe911c457e1561"
+        },
+        {
+          "path": "npc/runs/default/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc/runs/default/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc/runs/default/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc/runs/default/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc/runs/default/config/dreamplace.json",
+          "size": 3419,
+          "sha256": "0aaa61377086fd52a27dd1dc43af86493dd7a5acbb6958eaee53f9504fc51855"
+        },
+        {
+          "path": "npc/runs/default/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc/runs/default/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc/runs/default/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "npc/runs/default/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc/runs/default/config/db_default_config.json",
+          "size": 1053,
+          "sha256": "bc374140c990feafa0517921aee2bba4d4c541bf579de4fd1c84455495ed531b"
+        }
+      ],
+      "directories": [
+        "npc/rtl",
+        "npc/runs",
+        "npc/constraints",
+        "npc/runs/default",
+        "npc/runs/default/log",
+        "npc/runs/default/origin",
+        "npc/runs/default/home",
+        "npc/runs/default/Synthesis_yosys",
+        "npc/runs/default/config",
+        "npc/runs/default/Synthesis_yosys/script",
+        "npc/runs/default/Synthesis_yosys/report",
+        "npc/runs/default/Synthesis_yosys/log",
+        "npc/runs/default/Synthesis_yosys/analysis",
+        "npc/runs/default/Synthesis_yosys/feature",
+        "npc/runs/default/Synthesis_yosys/data",
+        "npc/runs/default/Synthesis_yosys/output",
+        "npc/runs/default/Synthesis_yosys/report/post_synthesis",
+        "npc/runs/default/Synthesis_yosys/feature/post_synthesis",
+        "npc/runs/default/Synthesis_yosys/data/sta",
+        "npc/runs/default/Synthesis_yosys/data/tmp",
+        "npc/runs/default/Synthesis_yosys/data/sta/sdf_writer",
+        "npc/runs/default/Synthesis_yosys/data/sta/power_propagator",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_reporter",
+        "npc/runs/default/Synthesis_yosys/data/sta/graph_builder",
+        "npc/runs/default/Synthesis_yosys/data/sta/clock_propagator",
+        "npc/runs/default/Synthesis_yosys/data/sta/power_reporter",
+        "npc/runs/default/Synthesis_yosys/data/sta/power_analyzer",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_propagator",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc/runs/default/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc/runs/default/Synthesis_yosys/data/sta/data_manager",
+        "npc/runs/default/Synthesis_yosys/data/sta/delay_calculator"
+      ]
+    },
+    "npc-e7": {
+      "files": 317,
+      "bytes": 72460884,
+      "missing": [
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/diagnostic_comparison.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/log/npc-e7.2026-11-05_20-09-08",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_ifu.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_gpr.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/npc-e7.sdc",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_lsu.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_idu.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/filelist.f",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_csr.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/template.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_exu.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_wbu.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/parameters.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/flow.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/home.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/cli-param-overrides.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/home.json.lock",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/checklist.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/subflow.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/checklist.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/script/yosys_synthesis.tcl",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/script/init_tech.tcl",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/Synthesis_check.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/Synthesis_stat.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/power.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/log/Synthesis.log",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_metrics.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_hotspots.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_summary.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/Synthesis.step.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/Synthesis_stat.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/global_var.tcl",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sta.log",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/tmp/abc.constr",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/fp_default_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/flow_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/no_default_config_fixfanout.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/pl_default_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/drc_default_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/sta.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/dreamplace.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/cts_default_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/macro_locations.txt",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/rt_default_config.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/rcx.json",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/db_default_config.json"
+      ],
+      "different": [],
+      "identical": 254,
+      "symlinks": [],
+      "largest": [
+        {
+          "bytes": 7652448,
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/timing_max.rpt"
+        },
+        {
+          "bytes": 7652448,
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt"
+        },
+        {
+          "bytes": 5403922,
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5403922,
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5403922,
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5403922,
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5403922,
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5400173,
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 5400173,
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 4903897,
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 4903897,
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf"
+        },
+        {
+          "bytes": 658080,
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/post_synthesis/timing_paths.json"
+        }
+      ],
+      "by_section": {
+        "npc-e7/Makefile": {
+          "files": 1,
+          "bytes": 534
+        },
+        "npc-e7/ecc.toml": {
+          "files": 1,
+          "bytes": 979
+        },
+        "npc-e7/rtl": {
+          "files": 1,
+          "bytes": 482
+        },
+        "npc-e7/runs/area-20261105-161740": {
+          "files": 61,
+          "bytes": 27460280
+        },
+        "npc-e7/runs/balance-20261105-161653": {
+          "files": 61,
+          "bytes": 12768829
+        },
+        "npc-e7/runs/e7-syn-sta-01": {
+          "files": 61,
+          "bytes": 12766671
+        },
+        "npc-e7/runs/e7-csr-syn": {
+          "files": 68,
+          "bytes": 6848490
+        },
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105": {
+          "files": 63,
+          "bytes": 12614619
+        }
+      },
+      "destination_only": [],
+      "files_manifest": [
+        {
+          "path": "npc-e7/Makefile",
+          "size": 534,
+          "sha256": "7659eb9d7fb5a90ce42a5498106c281666949683dc389baed877f1ab9ee87f27"
+        },
+        {
+          "path": "npc-e7/ecc.toml",
+          "size": 979,
+          "sha256": "6e2a5467e9843657cbf9f628ae77cfd0d4efba14e5d424cc285cef364e6cb72f"
+        },
+        {
+          "path": "npc-e7/rtl/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/log/npc-e7.2026-11-05_16-17-41",
+          "size": 18588,
+          "sha256": "b64201e9bef4b5368c64af52aadf718b8b9214d9255f0e340a02e528e49866b6"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_ifu.v",
+          "size": 2920,
+          "sha256": "9df1c42d49ed028b7b809f0b93fdcb01d33569f306e6878ccdd0934fe3a19d7f"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_gpr.v",
+          "size": 714,
+          "sha256": "14e881ff523efcecc7f17a643c5fbe30e1b1c1a355ae8c9c2ff8ecb4dee0bcca"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/npc-e7.sdc",
+          "size": 257,
+          "sha256": "5d84aa9bb79fd0458d282e337af15bae4e9f40edac449e4bb68e2b549fa7a11e"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_lsu.v",
+          "size": 4111,
+          "sha256": "085357e24f306decde6c1891b91923d57db36f2760efcb5420e94b4e164bd84d"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000.v",
+          "size": 3720,
+          "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_idu.v",
+          "size": 2848,
+          "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_csr.v",
+          "size": 955,
+          "sha256": "6ac90ac368b14c911c37cb4476831bc09fef909fe79fc48179b5dd02ce7e9dad"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/template.v",
+          "size": 3173,
+          "sha256": "cb74e9c14e9938e545f5dd0e843a409a6a2cb71907759d6be47b5bc65a8247de"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_exu.v",
+          "size": 255,
+          "sha256": "99a2a61674e5a87d1df4d0dc409aaa13579f3456ea43af7cb4e20ad99dd7fcf8"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/origin/ysyx_00000000_wbu.v",
+          "size": 755,
+          "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/home/parameters.json",
+          "size": 705,
+          "sha256": "de1399bef540c73cffc63157eda1fa0d7c95e2496026740cc8691c7287ab1457"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/home/flow.json",
+          "size": 234,
+          "sha256": "cc640986e7757379d1853c14b4977ebabc12ff860894f1cb5040edc5cc72bc66"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/home/home.json",
+          "size": 496,
+          "sha256": "a17b4c594efa1843205b6511e23e491cced931ba50399d7abb3bca8e9533e22e"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/home/checklist.json",
+          "size": 13467,
+          "sha256": "dbbb9420e968c064f323eed8cec2da89988e52bd8a53deb5ff32504b509fc855"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/subflow.json",
+          "size": 489,
+          "sha256": "64ffa84beb6c0e771ba8c5e70d043d1287691709faeb39745b816a49c4f147a8"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/checklist.json",
+          "size": 1024,
+          "sha256": "2d7204c1a11bb833541d09eb63008f9faa51100c3d91e02523aed83faaca1175"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 122,
+          "sha256": "b5ff40da083e142ba2e9f26f05960ee4694870db4bf3258c171a8f763ca18e23"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 28761,
+          "sha256": "0329dd687cd0330964cd8f03df155c7c628e97ed4a63da2ebb47207c0d13eb77"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 7652448,
+          "sha256": "3a296597f57fd259019eb122de4657feed674c122555d33d70c8fe41b863c27a"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1514,
+          "sha256": "c59a427262dc935c1369748f1d05b6c35d0327b2d3338bce13d174afcbd45ef5"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "479c4aa8087c6f16a20a8272b0817334281b028856117b940f99b6f347d3a7dc"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf",
+          "size": 4903897,
+          "sha256": "0df0553e5759ec49dff568a89f7fe8e9e078ca6a69c228f237e11c9ba3298249"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/log/Synthesis.log",
+          "size": 339229,
+          "sha256": "14a4f93b162e5cc9f45368a6abd2568bf3df9d8d4deea928b8195b87abfe9392"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8887,
+          "sha256": "d8f8c7b0aa17e713b59262a9588a8df46a3b996243d9b5ba5dc8534da69639f8"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 162,
+          "sha256": "9a1a89217d23b3e694d51f7404ee8ebc2264d3964789433c0bc583fb09a9f4ac"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 599,
+          "sha256": "96e2ba1dec9affd87bc1b59f3d0ffa26c3db61fab30ca9ba304ced566f5c798a"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 334,
+          "sha256": "47d713379409e825c15908ef1cff3cbec74956fabe3e21d647e2b6c87907e84d"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 5034,
+          "sha256": "c202dbc05c07908c921e70717368144d48749e3c7a6faca9904a70dd4cf96484"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 658080,
+          "sha256": "cd1b019163c2fc571b61ea0f6e2fc50177ab408ca476450ed2688e9eb082fd01"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 404,
+          "sha256": "ef2e38d209308bc2f330d535d047268df60eb537f92c2a809d9f4228409dd9bb"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 150,
+          "sha256": "daf7a42bcfd38c9c492ce295b7b18f8e4349c0a94b2e425cb625bd10d634ffda"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/global_var.tcl",
+          "size": 2983,
+          "sha256": "5a6c1ee5d44200cf1aba9f72ad2d7e5e4622e2f3124e091bfdeaf197fed02b1c"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/sta.log",
+          "size": 180718,
+          "sha256": "e9e9a1ed4ae121ab17d3e166aff7bc2fbcd26744ca2a1833ee70fc327f56bdee"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+          "size": 4903897,
+          "sha256": "0df0553e5759ec49dff568a89f7fe8e9e078ca6a69c228f237e11c9ba3298249"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 7652448,
+          "sha256": "3a296597f57fd259019eb122de4657feed674c122555d33d70c8fe41b863c27a"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "479c4aa8087c6f16a20a8272b0817334281b028856117b940f99b6f347d3a7dc"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 658080,
+          "sha256": "cd1b019163c2fc571b61ea0f6e2fc50177ab408ca476450ed2688e9eb082fd01"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 404,
+          "sha256": "ef2e38d209308bc2f330d535d047268df60eb537f92c2a809d9f4228409dd9bb"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1514,
+          "sha256": "c59a427262dc935c1369748f1d05b6c35d0327b2d3338bce13d174afcbd45ef5"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 182624,
+          "sha256": "f1e404353afb60aa39c7f2adc4a437ff26ba362e530c926ea96e3e8398f197dd"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+          "size": 89723,
+          "sha256": "64d08752b537e2230e16b77baf077c384f73dcc6e4cd320c73c8e977c12b559e"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+          "size": 88286,
+          "sha256": "eca1b3ab073f6c15b2381ec0eba7a647b2b2e2bd899dd48168d87050656071fc"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/flow_config.json",
+          "size": 728,
+          "sha256": "d4f4c57d55cb13fe3af3ac42ee5fe6bb57ddc965eb9435bdffe6622e37c88840"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/dreamplace.json",
+          "size": 3422,
+          "sha256": "26f5fce4bf7a53bd1f75d443761dfa0c74411d37b2160bd31a14251fe8059307"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc-e7/runs/area-20261105-161740/config/db_default_config.json",
+          "size": 1072,
+          "sha256": "52f962d464a73a5aca14a2f54624bd6126a0bfd0a87c6dfe3e8246c7df076377"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/log/npc-e7.2026-11-05_16-16-54",
+          "size": 18567,
+          "sha256": "fbb92173beb7f3b335ae471589941f2cebb9ae876c16158aacd7adde22d15c1f"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_ifu.v",
+          "size": 2920,
+          "sha256": "9df1c42d49ed028b7b809f0b93fdcb01d33569f306e6878ccdd0934fe3a19d7f"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_gpr.v",
+          "size": 714,
+          "sha256": "14e881ff523efcecc7f17a643c5fbe30e1b1c1a355ae8c9c2ff8ecb4dee0bcca"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/npc-e7.sdc",
+          "size": 257,
+          "sha256": "5d84aa9bb79fd0458d282e337af15bae4e9f40edac449e4bb68e2b549fa7a11e"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_lsu.v",
+          "size": 4111,
+          "sha256": "085357e24f306decde6c1891b91923d57db36f2760efcb5420e94b4e164bd84d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000.v",
+          "size": 3720,
+          "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_idu.v",
+          "size": 2848,
+          "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_csr.v",
+          "size": 955,
+          "sha256": "6ac90ac368b14c911c37cb4476831bc09fef909fe79fc48179b5dd02ce7e9dad"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/template.v",
+          "size": 3173,
+          "sha256": "cb74e9c14e9938e545f5dd0e843a409a6a2cb71907759d6be47b5bc65a8247de"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_exu.v",
+          "size": 255,
+          "sha256": "99a2a61674e5a87d1df4d0dc409aaa13579f3456ea43af7cb4e20ad99dd7fcf8"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/origin/ysyx_00000000_wbu.v",
+          "size": 755,
+          "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/home/parameters.json",
+          "size": 705,
+          "sha256": "de1399bef540c73cffc63157eda1fa0d7c95e2496026740cc8691c7287ab1457"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/home/flow.json",
+          "size": 236,
+          "sha256": "cba10e2d1457593ac8d939971dfee31f7d754147f39bcca1dd58874eb2728068"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/home/home.json",
+          "size": 496,
+          "sha256": "b2d59ea1e9fc5b9ac8a92ad68b81befd0b1d7770f657c0e3f0503f95b983038d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/home/checklist.json",
+          "size": 13467,
+          "sha256": "904a75d2942dfd48db6bc7fd83579050c2f97bbb34cf2c51069409f569887ca4"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/subflow.json",
+          "size": 492,
+          "sha256": "00640185764ef685491c44a556c2114803662aee2f12638c8b44a2a8b00fa20d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/checklist.json",
+          "size": 1024,
+          "sha256": "2363ef17c5a3d1bbcaffeee15b34f3426d96f38282158594baec2bca1d21e4a8"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 122,
+          "sha256": "b5ff40da083e142ba2e9f26f05960ee4694870db4bf3258c171a8f763ca18e23"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 28761,
+          "sha256": "0329dd687cd0330964cd8f03df155c7c628e97ed4a63da2ebb47207c0d13eb77"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1514,
+          "sha256": "e69a071e3790180a53eeb0ae8178554eab54452c834374b05ec097e5965641e2"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "bd26033f8784962fd938630bd4239daca8cc1170a48f0c5f0fec7df281765b70"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf",
+          "size": 5403922,
+          "sha256": "e0436fa17bc1158fa3b6f5ec3b77aa92c035680a1066707beb331067763be809"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/log/Synthesis.log",
+          "size": 308961,
+          "sha256": "cf2c3c654ffb70f6c7d2e97ebf59a158534c5242539e91feb649a1c632a7ee73"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8879,
+          "sha256": "ead68251260a10535286f42755af64ffaccc571bc7103c55644e5a58f8546dd5"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 162,
+          "sha256": "9a1a89217d23b3e694d51f7404ee8ebc2264d3964789433c0bc583fb09a9f4ac"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 599,
+          "sha256": "96e2ba1dec9affd87bc1b59f3d0ffa26c3db61fab30ca9ba304ced566f5c798a"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 336,
+          "sha256": "8f617a1a8bf2fd4161dd9c9780593dde7defd0d84b7d34a5389b89e66d6dbca0"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 6226,
+          "sha256": "a6630b5d6c3afe85d3432674e9d5c1a7591f92834990cccac39164944699bf1e"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 518398,
+          "sha256": "0f99f0c9b5e3f996bc429f835cdaff0cdd016b670a642aa84411560f8b66375d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 395,
+          "sha256": "505eb885416d4276de856ebb1801a1c5a43e5b72aa86e2c7eeb1aa71ca0b0cc8"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 139,
+          "sha256": "fd1dfbe7f4b7abf7ac9c0a4efa3f943c18355bd1539d6a1b7c8bde85bec3698d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/global_var.tcl",
+          "size": 3007,
+          "sha256": "95d35dcdec109c15dbab641b5716663c5d1a8280fdf346692da78efc7c0e9646"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/sta.log",
+          "size": 146380,
+          "sha256": "480b9358082aedb2c1164ed3d2991586a51509ad6e24ba9a623662b3137da484"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+          "size": 5403922,
+          "sha256": "e0436fa17bc1158fa3b6f5ec3b77aa92c035680a1066707beb331067763be809"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "bd26033f8784962fd938630bd4239daca8cc1170a48f0c5f0fec7df281765b70"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 518398,
+          "sha256": "0f99f0c9b5e3f996bc429f835cdaff0cdd016b670a642aa84411560f8b66375d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 395,
+          "sha256": "505eb885416d4276de856ebb1801a1c5a43e5b72aa86e2c7eeb1aa71ca0b0cc8"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1514,
+          "sha256": "e69a071e3790180a53eeb0ae8178554eab54452c834374b05ec097e5965641e2"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 149316,
+          "sha256": "ceb5efc99d3d99afb61ba76e78e24d2e79b6aff7327f676cac637e5a65af298a"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+          "size": 84195,
+          "sha256": "631aa33afa71bf3d0a84b1f5d3ce1f8ee3f56863fbbffcab1176545735f77451"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+          "size": 82765,
+          "sha256": "b4bd34ffaad7b26472120115a21ca2145099ba6c73bce17b1bcd76d6e256ae8e"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/flow_config.json",
+          "size": 746,
+          "sha256": "b4fa6350e321335f3e1599abbeaba6718d8db0cdf82643d1a384b0574689645f"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/dreamplace.json",
+          "size": 3422,
+          "sha256": "26f5fce4bf7a53bd1f75d443761dfa0c74411d37b2160bd31a14251fe8059307"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc-e7/runs/balance-20261105-161653/config/db_default_config.json",
+          "size": 1075,
+          "sha256": "bf32c71753dd75a0be7fcc2028199109f541b3543f603d82120b5d989307b883"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/log/npc-e7.2026-11-04_21-00-50",
+          "size": 17777,
+          "sha256": "a7b0f5bfd8cc0f641ea91e4d3b6ccd1a61b386a52ec067e827b99e563624dd07"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_ifu.v",
+          "size": 2920,
+          "sha256": "9df1c42d49ed028b7b809f0b93fdcb01d33569f306e6878ccdd0934fe3a19d7f"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_gpr.v",
+          "size": 714,
+          "sha256": "14e881ff523efcecc7f17a643c5fbe30e1b1c1a355ae8c9c2ff8ecb4dee0bcca"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/npc-e7.sdc",
+          "size": 257,
+          "sha256": "5d84aa9bb79fd0458d282e337af15bae4e9f40edac449e4bb68e2b549fa7a11e"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_lsu.v",
+          "size": 4111,
+          "sha256": "085357e24f306decde6c1891b91923d57db36f2760efcb5420e94b4e164bd84d"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000.v",
+          "size": 3720,
+          "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_idu.v",
+          "size": 2848,
+          "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_csr.v",
+          "size": 955,
+          "sha256": "6ac90ac368b14c911c37cb4476831bc09fef909fe79fc48179b5dd02ce7e9dad"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/template.v",
+          "size": 3173,
+          "sha256": "cb74e9c14e9938e545f5dd0e843a409a6a2cb71907759d6be47b5bc65a8247de"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_exu.v",
+          "size": 255,
+          "sha256": "99a2a61674e5a87d1df4d0dc409aaa13579f3456ea43af7cb4e20ad99dd7fcf8"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/origin/ysyx_00000000_wbu.v",
+          "size": 755,
+          "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/home/parameters.json",
+          "size": 705,
+          "sha256": "de1399bef540c73cffc63157eda1fa0d7c95e2496026740cc8691c7287ab1457"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/home/flow.json",
+          "size": 236,
+          "sha256": "07755b0c5a50a9e68db4e1924fe1312ccad9ac4d64b00718c0d62a90093a37a7"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/home/home.json",
+          "size": 717,
+          "sha256": "e302d4b24598b8ed4ddc1ebcf24b9012f45a6dee524d08017ed020fc473247ee"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/home/checklist.json",
+          "size": 13481,
+          "sha256": "c25e4e8763af5d138d0ebc864503931915bf5f9de23e82a307b0e224e25495f5"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/subflow.json",
+          "size": 482,
+          "sha256": "ddf2a9a56ff4d539e4aac148f726785e0cf9470764a249a040b5b3456f4bec79"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/checklist.json",
+          "size": 1024,
+          "sha256": "ecc248a806f0457cb5ad5bed58d2d611d76d878711e9e571fc9f5465d6eed7ef"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 122,
+          "sha256": "b5ff40da083e142ba2e9f26f05960ee4694870db4bf3258c171a8f763ca18e23"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 28761,
+          "sha256": "0329dd687cd0330964cd8f03df155c7c628e97ed4a63da2ebb47207c0d13eb77"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1514,
+          "sha256": "e69a071e3790180a53eeb0ae8178554eab54452c834374b05ec097e5965641e2"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "bd26033f8784962fd938630bd4239daca8cc1170a48f0c5f0fec7df281765b70"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf",
+          "size": 5403922,
+          "sha256": "cd37b5f32ecc990fc7ab18cef5b814c767db3d47c5d2f2cd0138ef3c46a323c2"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/log/Synthesis.log",
+          "size": 307668,
+          "sha256": "f9e824694e9b072e6543fb9ea248c00c6fecc8ad682fd0688355b179976287b6"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8879,
+          "sha256": "3c57dc6cdc8782a3230c73df7b7a6dc73e5608ce62965de25898db90129d5607"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 162,
+          "sha256": "9a1a89217d23b3e694d51f7404ee8ebc2264d3964789433c0bc583fb09a9f4ac"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 599,
+          "sha256": "96e2ba1dec9affd87bc1b59f3d0ffa26c3db61fab30ca9ba304ced566f5c798a"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 336,
+          "sha256": "970321a66fbabd256f41d23c04f43a3f00367985ede3476b2321042f3bccac2a"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 6226,
+          "sha256": "a6630b5d6c3afe85d3432674e9d5c1a7591f92834990cccac39164944699bf1e"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 518398,
+          "sha256": "0f99f0c9b5e3f996bc429f835cdaff0cdd016b670a642aa84411560f8b66375d"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 395,
+          "sha256": "505eb885416d4276de856ebb1801a1c5a43e5b72aa86e2c7eeb1aa71ca0b0cc8"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 139,
+          "sha256": "fd1dfbe7f4b7abf7ac9c0a4efa3f943c18355bd1539d6a1b7c8bde85bec3698d"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/global_var.tcl",
+          "size": 2927,
+          "sha256": "8511b02d180a66f54be4cd28e0ad486fc7e0e80bee50c4c702de2780dd190e59"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/sta.log",
+          "size": 146230,
+          "sha256": "0a1f8297be3f224dd0d09ddd5f47dd6c6486d2d3e90b59533f0ce5e6a0390259"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+          "size": 5403922,
+          "sha256": "cd37b5f32ecc990fc7ab18cef5b814c767db3d47c5d2f2cd0138ef3c46a323c2"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "bd26033f8784962fd938630bd4239daca8cc1170a48f0c5f0fec7df281765b70"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 518398,
+          "sha256": "0f99f0c9b5e3f996bc429f835cdaff0cdd016b670a642aa84411560f8b66375d"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 395,
+          "sha256": "505eb885416d4276de856ebb1801a1c5a43e5b72aa86e2c7eeb1aa71ca0b0cc8"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1514,
+          "sha256": "e69a071e3790180a53eeb0ae8178554eab54452c834374b05ec097e5965641e2"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 149316,
+          "sha256": "ceb5efc99d3d99afb61ba76e78e24d2e79b6aff7327f676cac637e5a65af298a"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+          "size": 84195,
+          "sha256": "631aa33afa71bf3d0a84b1f5d3ce1f8ee3f56863fbbffcab1176545735f77451"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+          "size": 82765,
+          "sha256": "b4bd34ffaad7b26472120115a21ca2145099ba6c73bce17b1bcd76d6e256ae8e"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/flow_config.json",
+          "size": 686,
+          "sha256": "b1c5b05b9cd6573a1ea910a165832d2daac1dad35d2f643c2425b371df8ae794"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/dreamplace.json",
+          "size": 3422,
+          "sha256": "26f5fce4bf7a53bd1f75d443761dfa0c74411d37b2160bd31a14251fe8059307"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc-e7/runs/e7-syn-sta-01/config/db_default_config.json",
+          "size": 1065,
+          "sha256": "abd62158d8fb51a12b45aaa36fc73d51258efaa51fe02adcb3cba07cee0bf725"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/place_dreamplace/subflow.json",
+          "size": 808,
+          "sha256": "57d208278e91f07b396ca84faecd4a2d1b27122e6905bf2fa421a7592dc8ef38"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/place_dreamplace/checklist.json",
+          "size": 309,
+          "sha256": "156a4dcb48cdd7241f1fd26b38a3b3cded09dd87fafddd78196d5ebdd28953de"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/fixFanout_ecc/subflow.json",
+          "size": 987,
+          "sha256": "93c14454b52f55d8e980a6ce39ddd0b93f48c5347b180ed963a12b25e1ccc76c"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/fixFanout_ecc/checklist.json",
+          "size": 309,
+          "sha256": "7948b28a4664f2b73604dccf8e4c5ac84398c56722a9d12531bcf6365ec701dc"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/log/npc-e7.2026-11-04_20-56-06",
+          "size": 14828,
+          "sha256": "d28975eac8604f9e94d66393004af4bc7a2f4f1e7653b400a7823787362e2ede"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/CTS_ecc/subflow.json",
+          "size": 793,
+          "sha256": "335911fef078e5002d51641f4e0f565514b8fb5a1257313146d23abb4c8b5f43"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/CTS_ecc/checklist.json",
+          "size": 309,
+          "sha256": "aaf2f21412e7ba2cb5e41cd9cb6302dbdc95673c9efd85adc9d1665705776f7e"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/route_ecc/subflow.json",
+          "size": 799,
+          "sha256": "ff1e2b0675cc2532e38ed07f3d6fc23a5e2a5e0afe58471773b9f7628c922e1f"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/route_ecc/checklist.json",
+          "size": 309,
+          "sha256": "65a72ca9345595fb036240d50e002789301567c2b3db5ba317f2f60c9ed7891f"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/lvs_ecc/subflow.json",
+          "size": 793,
+          "sha256": "ed58d2f4c8ba186317cd01a4f36de79eb5c54a110a91353ed183ac136ea53fc9"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/lvs_ecc/checklist.json",
+          "size": 4079,
+          "sha256": "4417726142dde283aa99c07a2c0a390772f62f03116b4d8df810e44d93ad1d94"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/filler_ecc/subflow.json",
+          "size": 799,
+          "sha256": "62bc8620a7414108af4ea76494a38f32641b31b20f53c12529b1a8ca0f7befd9"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/filler_ecc/checklist.json",
+          "size": 309,
+          "sha256": "13a2d3926471c24121439615c648c259a4f9400cf50803223fdcb6b8ede877e2"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/legalization_dreamplace/subflow.json",
+          "size": 818,
+          "sha256": "d13815daeae474be9b9d6085cd207898ab66d320e03eaf45b98dcd94ad841684"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/legalization_dreamplace/checklist.json",
+          "size": 309,
+          "sha256": "54e81a79d1df6d209014c1337f6846c74ecebe0d81019ee0973962cec98c53d6"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_ifu.v",
+          "size": 2920,
+          "sha256": "9df1c42d49ed028b7b809f0b93fdcb01d33569f306e6878ccdd0934fe3a19d7f"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_gpr.v",
+          "size": 714,
+          "sha256": "14e881ff523efcecc7f17a643c5fbe30e1b1c1a355ae8c9c2ff8ecb4dee0bcca"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/npc-e7.sdc",
+          "size": 257,
+          "sha256": "5d84aa9bb79fd0458d282e337af15bae4e9f40edac449e4bb68e2b549fa7a11e"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_lsu.v",
+          "size": 4111,
+          "sha256": "085357e24f306decde6c1891b91923d57db36f2760efcb5420e94b4e164bd84d"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000.v",
+          "size": 3720,
+          "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_idu.v",
+          "size": 2848,
+          "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_csr.v",
+          "size": 955,
+          "sha256": "6ac90ac368b14c911c37cb4476831bc09fef909fe79fc48179b5dd02ce7e9dad"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/template.v",
+          "size": 3173,
+          "sha256": "cb74e9c14e9938e545f5dd0e843a409a6a2cb71907759d6be47b5bc65a8247de"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_exu.v",
+          "size": 255,
+          "sha256": "99a2a61674e5a87d1df4d0dc409aaa13579f3456ea43af7cb4e20ad99dd7fcf8"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/origin/ysyx_00000000_wbu.v",
+          "size": 755,
+          "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Floorplan_ecc/subflow.json",
+          "size": 1666,
+          "sha256": "9e579f2f7448b8627b187e73e9dd4163f73ca3a76888e78cca0ebadba488f0b7"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Floorplan_ecc/checklist.json",
+          "size": 309,
+          "sha256": "d860973c24ad7c7f0834f99d46824e07cd9d62ac2027606536539dfde68b99f4"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/drc_ecc/subflow.json",
+          "size": 793,
+          "sha256": "bd9908f8e8d0039f697a8e429486f200a16a48d0ba4804f49f8f861c19850ce1"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/drc_ecc/checklist.json",
+          "size": 899,
+          "sha256": "0ab3f5e560417d625ade1ae9e7a836b7c0bcdb996eef15e81c29978972bb7b7c"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/home/parameters.json",
+          "size": 705,
+          "sha256": "de1399bef540c73cffc63157eda1fa0d7c95e2496026740cc8691c7287ab1457"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/home/flow.json",
+          "size": 1993,
+          "sha256": "b0e3ac510347a61ad948492c87042b59b891b4bfb6286cbc147aca7fa38d9d22"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/home/home.json",
+          "size": 596,
+          "sha256": "e46a99ef5f3ff8671978a71f2cfd04580dfa3335b08f47ed1a5b8f60ffd1d8c8"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/home/checklist.json",
+          "size": 16647,
+          "sha256": "de387363cb6877f5cb40ce4171f69e099f317e1b98eb579609f4dcbd6f93b3ca"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/subflow.json",
+          "size": 468,
+          "sha256": "13f37e1b5b86089a0a848e001e83db806fa702beeb21d5b439d5f30a5f348df5"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/checklist.json",
+          "size": 1012,
+          "sha256": "fd809e3bb03a75716ba3531c0801ba153df931261eb94546700294f9f079e206"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 122,
+          "sha256": "b5ff40da083e142ba2e9f26f05960ee4694870db4bf3258c171a8f763ca18e23"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 28761,
+          "sha256": "0329dd687cd0330964cd8f03df155c7c628e97ed4a63da2ebb47207c0d13eb77"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/log/Synthesis.log",
+          "size": 307418,
+          "sha256": "40280de3f82036eea7bf6aca050d6d74dfa738870d2d3d899bbe1eee75b18052"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 6226,
+          "sha256": "a6630b5d6c3afe85d3432674e9d5c1a7591f92834990cccac39164944699bf1e"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/global_var.tcl",
+          "size": 2903,
+          "sha256": "fb5d8f038fa4d36cb4e99e088ef36fa5ce4d34f3a80fca97bb19ab8e298aff0c"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/sta.log",
+          "size": 146185,
+          "sha256": "6350f1ed2e04cc0e4c95800f1e2c60ed3235ec7f9427de8f0caa41e676c90d6c"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+          "size": 5403922,
+          "sha256": "56fe1932b8553ef2c0e5613cc8fffb9b589f94637d9e8cff3bcca5d0d37e14da"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "bd26033f8784962fd938630bd4239daca8cc1170a48f0c5f0fec7df281765b70"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 518398,
+          "sha256": "0f99f0c9b5e3f996bc429f835cdaff0cdd016b670a642aa84411560f8b66375d"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 395,
+          "sha256": "505eb885416d4276de856ebb1801a1c5a43e5b72aa86e2c7eeb1aa71ca0b0cc8"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1514,
+          "sha256": "e69a071e3790180a53eeb0ae8178554eab54452c834374b05ec097e5965641e2"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 149316,
+          "sha256": "ceb5efc99d3d99afb61ba76e78e24d2e79b6aff7327f676cac637e5a65af298a"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+          "size": 84195,
+          "sha256": "631aa33afa71bf3d0a84b1f5d3ce1f8ee3f56863fbbffcab1176545735f77451"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+          "size": 82765,
+          "sha256": "b4bd34ffaad7b26472120115a21ca2145099ba6c73bce17b1bcd76d6e256ae8e"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/fp_default_config.json",
+          "size": 3356,
+          "sha256": "131c75073870d48cdab323067b6bc3a170e8dce43508b8a7f52f82dcd277d700"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/flow_config.json",
+          "size": 668,
+          "sha256": "5e72c5b250ac045f5beac06ca27e89289670672c02b79b40826463785e2cd7b6"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/dreamplace.json",
+          "size": 3674,
+          "sha256": "dcfb64e4b0544676d06eebf38d1727bab0470ad66c77066cba8fef9af4efdbf1"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/rt_default_config.json",
+          "size": 333,
+          "sha256": "2a140d6481a0f3f144f049a1b50463521506e47586fef41f5fc744e2a852e8ae"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc-e7/runs/e7-csr-syn/config/db_default_config.json",
+          "size": 1300,
+          "sha256": "31d5967a19dd71e9032e7570fa22c493ad5047dba9e13dd3a805ffd8634f661a"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/diagnostic_comparison.json",
+          "size": 1738,
+          "sha256": "9930cb9b29ab6bf4b5fc65e9d2531530f0d09362d22ce06967ad75171ff1f9d5"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/log/npc-e7.2026-11-05_20-09-08",
+          "size": 19436,
+          "sha256": "f44ab4cf66e059f8f80f3c11cffa5052f54a561c738a03c644de5103d62ad288"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_ifu.v",
+          "size": 2920,
+          "sha256": "9df1c42d49ed028b7b809f0b93fdcb01d33569f306e6878ccdd0934fe3a19d7f"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_gpr.v",
+          "size": 714,
+          "sha256": "14e881ff523efcecc7f17a643c5fbe30e1b1c1a355ae8c9c2ff8ecb4dee0bcca"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/npc-e7.sdc",
+          "size": 257,
+          "sha256": "8b303eefb299d63666ed505fee86ec849f54b5c7b2e49aae1316c56e984e9154"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_lsu.v",
+          "size": 4111,
+          "sha256": "085357e24f306decde6c1891b91923d57db36f2760efcb5420e94b4e164bd84d"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000.v",
+          "size": 3720,
+          "sha256": "f3c2bd1fb3e0571fe656d91a9227461af914b228bd57fe42df4e8886cf128af3"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_idu.v",
+          "size": 2848,
+          "sha256": "1780783fe37b3877bce41e19e35f3a6e7bd96635b3e086af6a13d94b2ab9d649"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/filelist.f",
+          "size": 482,
+          "sha256": "ee2df51cb47e1b905c80c146b47b206fab5f15a781b3b2e2085f4234c8a65657"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_csr.v",
+          "size": 955,
+          "sha256": "6ac90ac368b14c911c37cb4476831bc09fef909fe79fc48179b5dd02ce7e9dad"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/template.v",
+          "size": 3173,
+          "sha256": "cb74e9c14e9938e545f5dd0e843a409a6a2cb71907759d6be47b5bc65a8247de"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_exu.v",
+          "size": 255,
+          "sha256": "99a2a61674e5a87d1df4d0dc409aaa13579f3456ea43af7cb4e20ad99dd7fcf8"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin/ysyx_00000000_wbu.v",
+          "size": 755,
+          "sha256": "33c70eb993bebbb4c1339b2b844b21f36573f30fac9ad0460b8494bec9198709"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/parameters.json",
+          "size": 705,
+          "sha256": "b54d4a2c6004ac3723fcad13ce3aab8ec587e7f7b12702b7aa93163261a500a7"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/flow.json",
+          "size": 236,
+          "sha256": "7f22cdbf8fee53ac05f5e8baa1f558856f97608dc4068be74735563513a613c0"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/home.json",
+          "size": 780,
+          "sha256": "52fc50d53fd720e2bdc42177f4b754e73891715a0290d0b2b0e891b2ae8e7e3e"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/cli-param-overrides.json",
+          "size": 31,
+          "sha256": "afd404bd44888eea94071e787e8055e83982ba9137f055fc4b0eb582ee23485b"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/home.json.lock",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/home/checklist.json",
+          "size": 13481,
+          "sha256": "f3103a5f42301df8dff35fc9921118340e9d0b00c5dbd806cef0f081d47b14f1"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/subflow.json",
+          "size": 503,
+          "sha256": "f509e03a27d8530c6e0863680a6f9a7bb4b586a77fe7a1bc0485f4dca336e1df"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/checklist.json",
+          "size": 1024,
+          "sha256": "68baf60e8a6b438e0997d69a7a2f4b089567b9c3d0326acbfdcfae161a5b43c6"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/script/yosys_synthesis.tcl",
+          "size": 26990,
+          "sha256": "15ad2080e88a7f3ccb5015806bdba4e7402f0cd7c79de0d5cb032df460431368"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/script/init_tech.tcl",
+          "size": 839,
+          "sha256": "536755095d017ae9233a82e45024387739b4cf5dfdb34625d26f3201274026ee"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/Synthesis_check.rpt",
+          "size": 122,
+          "sha256": "b5ff40da083e142ba2e9f26f05960ee4694870db4bf3258c171a8f763ca18e23"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/Synthesis_stat.json",
+          "size": 28761,
+          "sha256": "0329dd687cd0330964cd8f03df155c7c628e97ed4a63da2ebb47207c0d13eb77"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/power.rpt",
+          "size": 1514,
+          "sha256": "bea8f63348bfcdcb8b9f0f0cfa9d6547e1b93d3a484a782e75cc74eea64162d5"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "97949fafd938b61444c250f6a5a99524beed28e383a98be98880e23c601937d2"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis/ysyx_00000000.sdf",
+          "size": 5400173,
+          "sha256": "ddfc4b3f0ef691eda692dd8f009222c4ecc5588283f86e5d93eb391d10c27902"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/log/Synthesis.log",
+          "size": 274021,
+          "sha256": "d2d780caa099f0d62016c07707cbe38effffacbea0321c3865cf3ec7845c9aed"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_metrics.json",
+          "size": 8879,
+          "sha256": "ce92e449dbb6694ca054e4909eedd843c29db0c7865bc491ce92a84b944067c5"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_hotspots.json",
+          "size": 162,
+          "sha256": "9a1a89217d23b3e694d51f7404ee8ebc2264d3964789433c0bc583fb09a9f4ac"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis/qor_summary.json",
+          "size": 599,
+          "sha256": "96e2ba1dec9affd87bc1b59f3d0ffa26c3db61fab30ca9ba304ced566f5c798a"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/Synthesis.step.json",
+          "size": 336,
+          "sha256": "73b73027df356f9fa5373d827859588c1d9c6b8ee3d856c8e81f899dff06e18e"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/Synthesis_stat.json",
+          "size": 7758,
+          "sha256": "cf4efb4e96863bd8175cf946b5e6d82505963d349c8d643fc0a11b0478908a22"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/timing_paths.json",
+          "size": 476017,
+          "sha256": "8e22a1180c39afb52479dc59b00518faebb26a13189a6041682d2762ec3a43e9"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/qor_summary.json",
+          "size": 395,
+          "sha256": "106e49114d665797df1e36cae7bbf8ba78d9e4bfe2775f3fb56fc22a77f2655e"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis/power_summary.json",
+          "size": 139,
+          "sha256": "11e08d7a55ec8f9a2583e6aa2ee6f86d9eb3ec1bf8b216ee81590ef33346466b"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/global_var.tcl",
+          "size": 3095,
+          "sha256": "bc61a98ed38081a6391d5aec620c0d66b350f8a925cd951121869dd56c44ac12"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sta.log",
+          "size": 113514,
+          "sha256": "9c702d230ae61531bdcc6bdebfdc2a48b921f9c0657e82c29db2a5df7706e4e6"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sdf_writer/ysyx_00000000.sdf",
+          "size": 5400173,
+          "sha256": "ddfc4b3f0ef691eda692dd8f009222c4ecc5588283f86e5d93eb391d10c27902"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/timing_max.rpt",
+          "size": 268,
+          "sha256": "8008590860dccc7d454492d1a7cb52338b87c0bc1a8465757cda68631932949c"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/qor_summary.rpt",
+          "size": 1087,
+          "sha256": "97949fafd938b61444c250f6a5a99524beed28e383a98be98880e23c601937d2"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/timing_paths.json",
+          "size": 476017,
+          "sha256": "8e22a1180c39afb52479dc59b00518faebb26a13189a6041682d2762ec3a43e9"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter/qor_summary.json",
+          "size": 395,
+          "sha256": "106e49114d665797df1e36cae7bbf8ba78d9e4bfe2775f3fb56fc22a77f2655e"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_reporter/power.rpt",
+          "size": 1514,
+          "sha256": "bea8f63348bfcdcb8b9f0f0cfa9d6547e1b93d3a484a782e75cc74eea64162d5"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_reporter/instance_power.bin",
+          "size": 149316,
+          "sha256": "0d1feb3cdd830b4987f84fa59a13ccbc231920734e686568a45984170e20d55d"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/tmp/ics55_latch_map.v",
+          "size": 244,
+          "sha256": "410745fa21dbb6f498de3f833cf338008b0e2caea213ce59ab4e382d55fa6aee"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/tmp/abc.constr",
+          "size": 43,
+          "sha256": "1458625adde99805fac3b6ca55ab7fa1d1e06a9a9767882053673fe4b5e34880"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/output/npc-e7_Synthesis.v.gz",
+          "size": 84797,
+          "sha256": "91fcb49d0a4c39448cdfb823d6a4d8ab3c7796ae16e75d64c4131a262f4f0f5a"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/output/npc-e7_Synthesis_sim.v.gz",
+          "size": 83375,
+          "sha256": "9e57de550ee073a3fae3a785b950d77019638519b932defae82df27a9822b0a2"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/fp_default_config.json",
+          "size": 3282,
+          "sha256": "4cefc9dc2e89db3132480c58e37d2fcef6168efd728af9632f6425f1f59a9533"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/flow_config.json",
+          "size": 812,
+          "sha256": "3bd24975734c8bbf0d09ebd9be63ab12dd3b518d6d6efbe461e681ffb19541b3"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/no_default_config_fixfanout.json",
+          "size": 290,
+          "sha256": "5d0fbe6213910c3ff11d6f8bd4dcdabb19674ce911d06c95a748c85845feb979"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/pl_default_config.json",
+          "size": 2102,
+          "sha256": "24bbbbfbf6ba98e40ba70ffbc8cd8d0d8d17b668575427f1fd260dbe98a41b7a"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/drc_default_config.json",
+          "size": 3,
+          "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/sta.json",
+          "size": 2806,
+          "sha256": "20fd888d21b6bfc96db68c6928a068048c82c14a524d29e35487e7f73cc57975"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/dreamplace.json",
+          "size": 3422,
+          "sha256": "26f5fce4bf7a53bd1f75d443761dfa0c74411d37b2160bd31a14251fe8059307"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/cts_default_config.json",
+          "size": 473,
+          "sha256": "adba127dbf158f13c43d162f7a7e1b77e40f47a1d194289ca5ff21940c1a132d"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/macro_locations.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/rt_default_config.json",
+          "size": 263,
+          "sha256": "15271a1eb1d01c201d6196b3355e495ab6f3f4cdab5a3cc53c14929bcccfed6f"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/rcx.json",
+          "size": 58,
+          "sha256": "314e0a15bbdabb98a461c5ab483fdfa0498e06128dbf51038f92898bef45af39"
+        },
+        {
+          "path": "npc-e7/runs/diagnostic-balance-200mhz-20261105/config/db_default_config.json",
+          "size": 1086,
+          "sha256": "e52434cdd3a4c51fd2c72dd1b898a354c717e4c5fa17a624892094515b431aad"
+        }
+      ],
+      "directories": [
+        "npc-e7/rtl",
+        "npc-e7/runs",
+        "npc-e7/constraints",
+        "npc-e7/runs/area-20261105-161740",
+        "npc-e7/runs/balance-20261105-161653",
+        "npc-e7/runs/e7-syn-sta-01",
+        "npc-e7/runs/e7-csr-syn",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105",
+        "npc-e7/runs/area-20261105-161740/log",
+        "npc-e7/runs/area-20261105-161740/origin",
+        "npc-e7/runs/area-20261105-161740/home",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys",
+        "npc-e7/runs/area-20261105-161740/config",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/script",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/log",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/analysis",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/output",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/report/post_synthesis",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/feature/post_synthesis",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/tmp",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/sdf_writer",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_propagator",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_reporter",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/graph_builder",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/clock_propagator",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_reporter",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_analyzer",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_propagator",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/data_manager",
+        "npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/delay_calculator",
+        "npc-e7/runs/balance-20261105-161653/log",
+        "npc-e7/runs/balance-20261105-161653/origin",
+        "npc-e7/runs/balance-20261105-161653/home",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys",
+        "npc-e7/runs/balance-20261105-161653/config",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/script",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/log",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/analysis",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/output",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/report/post_synthesis",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/feature/post_synthesis",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/tmp",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/sdf_writer",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_propagator",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_reporter",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/graph_builder",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/clock_propagator",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_reporter",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_analyzer",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_propagator",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/data_manager",
+        "npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/delay_calculator",
+        "npc-e7/runs/e7-syn-sta-01/log",
+        "npc-e7/runs/e7-syn-sta-01/origin",
+        "npc-e7/runs/e7-syn-sta-01/home",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys",
+        "npc-e7/runs/e7-syn-sta-01/config",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/script",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/log",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/analysis",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/output",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/report/post_synthesis",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/feature/post_synthesis",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/tmp",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/sdf_writer",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_propagator",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_reporter",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/graph_builder",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/clock_propagator",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_reporter",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_analyzer",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_propagator",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/data_manager",
+        "npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/delay_calculator",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc",
+        "npc-e7/runs/e7-csr-syn/log",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc",
+        "npc-e7/runs/e7-csr-syn/route_ecc",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc",
+        "npc-e7/runs/e7-csr-syn/filler_ecc",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace",
+        "npc-e7/runs/e7-csr-syn/origin",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc",
+        "npc-e7/runs/e7-csr-syn/drc_ecc",
+        "npc-e7/runs/e7-csr-syn/home",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys",
+        "npc-e7/runs/e7-csr-syn/config",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/script",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/report",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/log",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/analysis",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/feature",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/output",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/rt",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/to",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/sta",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/rcx",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/drc",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/lvs",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/fp",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/cts",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/no",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/script",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/report",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/log",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/output",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/script",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/report",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/log",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/output",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/route_ecc/script",
+        "npc-e7/runs/e7-csr-syn/route_ecc/report",
+        "npc-e7/runs/e7-csr-syn/route_ecc/log",
+        "npc-e7/runs/e7-csr-syn/route_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/route_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data",
+        "npc-e7/runs/e7-csr-syn/route_ecc/output",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/route_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/script",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/report",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/log",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/output",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/script",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/report",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/log",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/output",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/script",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/report",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/log",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/analysis",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/feature",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/output",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/rt",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/to",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/sta",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/rcx",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/drc",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/lvs",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/fp",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/cts",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/no",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/script",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/report",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/log",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/output",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/script",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/report",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/log",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/analysis",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/feature",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/output",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/rt",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/to",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/sta",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/rcx",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/drc",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/lvs",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/fp",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/cts",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/no",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/report",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/log",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/density",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/gui",
+        "npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/plot",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/script",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/report",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/log",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/analysis",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/feature",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/output",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/tmp",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/sdf_writer",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_propagator",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_reporter",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/graph_builder",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/clock_propagator",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_reporter",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_analyzer",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_propagator",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/data_manager",
+        "npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/delay_calculator",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/log",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/origin",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/home",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/config",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/script",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/log",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/analysis",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/output",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/report/post_synthesis",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/feature/post_synthesis",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/tmp",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/sdf_writer",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_propagator",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_reporter",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/graph_builder",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/clock_propagator",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_reporter",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_analyzer",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_propagator",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_analyzer",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_characterizer",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/data_manager",
+        "npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/delay_calculator"
+      ]
+    }
+  },
+  "old_mapping": {
+    "npc": {
+      "files": [
+        {
+          "destination": "synthesis/ecc-npc/ecc.toml",
+          "canonical": "npc/ecc.toml",
+          "canonical_exists": true,
+          "identical": true,
+          "bytes": 964
+        },
+        {
+          "destination": "synthesis/ecc-npc/rtl/filelist.f",
+          "canonical": "npc/rtl/filelist.f",
+          "canonical_exists": true,
+          "identical": true,
+          "bytes": 333
+        }
+      ]
+    },
+    "npc-e7": {
+      "files": [
+        {
+          "destination": "synthesis/ecc-npc-e7/ecc.toml",
+          "canonical": "npc-e7/ecc.toml",
+          "canonical_exists": true,
+          "identical": true,
+          "bytes": 979
+        },
+        {
+          "destination": "synthesis/ecc-npc-e7/Makefile",
+          "canonical": "npc-e7/Makefile",
+          "canonical_exists": true,
+          "identical": true,
+          "bytes": 534
+        },
+        {
+          "destination": "synthesis/ecc-npc-e7/rtl/filelist.f",
+          "canonical": "npc-e7/rtl/filelist.f",
+          "canonical_exists": true,
+          "identical": true,
+          "bytes": 482
+        }
+      ]
+    }
+  },
+  "verification": {
+    "verification/2026-11-05/synthesis-constraint-diagnostic": {
+      "files": 9,
+      "bytes": 1016599
+    }
+  },
+  "excluded_tool_installation": [
+    "ecc/ecc",
+    "ecc/_internal/",
+    "ecc/ecc-cli-linux-x86_64.tar.gz"
+  ],
+  "recommendation": "Mirror complete ecc/light, ecc/npc, ecc/npc-e7 including every runs file at unchanged relative paths. All run home directories contain small metadata, no symlinks or PDK/tool copies. Remove obsolete synthesis/ecc-* source duplicates only after verifying canonical counterparts; preserve Windows-only docs if any. Keep verification extra copies.",
+  "root_regular_files": [
+    {
+      "path": "ecc/wget-log",
+      "bytes": 235979,
+      "category": "installation download log"
+    },
+    {
+      "path": "ecc/安装说明.md",
+      "bytes": 1853,
+      "category": "documentation"
+    },
+    {
+      "path": "ecc/ecc",
+      "bytes": 54378192,
+      "category": "tool installation"
+    },
+    {
+      "path": "ecc/wget-log.2",
+      "bytes": 545658,
+      "category": "installation download log"
+    },
+    {
+      "path": "ecc/wget-log.3",
+      "bytes": 35325,
+      "category": "installation download log"
+    },
+    {
+      "path": "ecc/pdk-clone.log",
+      "bytes": 72,
+      "category": "installation download log"
+    },
+    {
+      "path": "ecc/ecc-cli-linux-x86_64.tar.gz",
+      "bytes": 513549656,
+      "category": "tool installation"
+    },
+    {
+      "path": "ecc/wget-log.1",
+      "bytes": 284629,
+      "category": "installation download log"
+    }
+  ],
+  "empty_project_directories": [
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/data_manager",
+    "ecc/light/runs/default/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/light/constraints",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc/runs/default/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc/constraints",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc-e7/runs/balance-20261105-161653/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc-e7/runs/e7-syn-sta-01/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/script",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/report",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/log",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/place_dreamplace/output",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/CTS_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/route_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/lvs_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/filler_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/script",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/report",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/log",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/output",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/Floorplan_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/script",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/report",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/log",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/feature",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/rt",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/to",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/sta",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/rcx",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/drc",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/lvs",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/fp",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/cts",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/report",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/log",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/density",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/gui",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/pl/plot",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/data/no",
+    "ecc/npc-e7/runs/e7-csr-syn/drc_ecc/output",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/analysis",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc-e7/runs/e7-csr-syn/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_propagator",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/graph_builder",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/clock_propagator",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/power_analyzer",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_propagator",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_analyzer",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/timing_characterizer",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/data_manager",
+    "ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105/Synthesis_yosys/data/sta/delay_calculator",
+    "ecc/npc-e7/constraints"
+  ],
+  "canonical_note": "Absolute Linux RTL/PDK references inside original config/filelist/metadata should remain unchanged in snapshot; Windows copy is not a runnable Windows ECC port. e7-csr-syn contains empty P&R step skeletons; copying them does not mean P&R succeeded."
+}

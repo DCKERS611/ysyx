@@ -1,0 +1,146 @@
+#include "/home/ysyx/ysyx-workbench/abstract-machine/tools/minirv/inst-replace.h"
+	.file	"subband.c"
+	.option nopic
+	.text
+	.section	.text.Subband,"ax",@progbits
+	.align	2
+	.globl	Subband
+	.hidden	Subband
+	.type	Subband, @function
+Subband:
+	beq	a0,zero,.L7
+	lw	a5,12(a0)
+	beq	a5,zero,.L7
+	lw	a5,20(a0)
+	addi	sp,sp,-48
+	sw	ra,44(sp)
+	sw	s0,40(sp)
+	sw	s1,36(sp)
+	sw	a5,12(sp)
+	beq	a5,zero,.L9
+	lw	s0,24(a0)
+	beq	s0,zero,.L9
+	lw	a3,1980(a0)
+	li	a5,8192
+	add	a5,s0,a5
+	li	a4,2
+	lw	a2,512(a5)
+	mv	s1,a1
+	li	a5,0
+	li	t0,8192
+	beq	a3,a4,.L20
+	sw	s0,0(sp)
+.L3:
+	lw	t1,12(sp)
+	andi	a3,a5,1
+	slli	a0,a5,7
+	add	a4,t1,t0
+	sw	a5,8(sp)
+	lw	a5,0(sp)
+	lw	a4,-1256(a4)
+	add	a0,t1,a0
+	mv	a1,a5
+	add	s0,a5,t0
+	sw	a3,4(sp)
+	call	FDCT32
+	lw	a3,4(sp)
+	lw	a4,512(s0)
+	lw	a5,0(sp)
+	slli	a1,a3,4
+	add	a1,a1,a3
+	slli	a1,a1,6
+	add	a1,a1,a4
+	slli	a1,a1,2
+	mv	a0,s1
+	lla	a2,polyCoef
+	add	a1,a5,a1
+	call	PolyphaseMono
+	lw	a2,512(s0)
+	lw	a3,4(sp)
+	lw	a5,8(sp)
+	li	a4,18
+	sub	a2,a2,a3
+	andi	a2,a2,7
+	addi	a5,a5,1
+	sw	a2,512(s0)
+	addi	s1,s1,64
+	li	t0,8192
+	bne	a5,a4,.L3
+.L5:
+	li	a0,0
+.L1:
+	lw	ra,44(sp)
+	lw	s0,40(sp)
+	lw	s1,36(sp)
+	addi	sp,sp,48
+	jr	ra
+.L20:
+	addi	a4,s0,128
+	sw	a4,28(sp)
+	lw	a4,12(sp)
+	li	a5,4096
+	addi	a5,a5,-1792
+	sw	a5,32(sp)
+	add	a5,a4,a5
+	sw	s0,0(sp)
+	sw	a5,24(sp)
+	li	t0,0
+	mv	s0,a4
+	sw	a1,4(sp)
+.L4:
+	lw	a5,12(sp)
+	li	s1,8192
+	lw	a1,0(sp)
+	add	t2,a5,s1
+	lw	a4,-1256(t2)
+	andi	a3,t0,1
+	mv	a0,s0
+	sw	t0,16(sp)
+	sw	t2,20(sp)
+	sw	a3,8(sp)
+	call	FDCT32
+	lw	a5,0(sp)
+	lw	t2,20(sp)
+	lw	a3,32(sp)
+	add	s1,a5,s1
+	lw	a4,-1252(t2)
+	add	a0,s0,a3
+	lw	a2,512(s1)
+	lw	a3,8(sp)
+	lw	a1,28(sp)
+	addi	s0,s0,128
+	call	FDCT32
+	lw	a3,8(sp)
+	lw	a4,512(s1)
+	lw	a5,0(sp)
+	slli	a1,a3,4
+	add	a1,a1,a3
+	slli	a1,a1,6
+	add	a1,a1,a4
+	lw	a0,4(sp)
+	slli	a1,a1,2
+	lla	a2,polyCoef
+	add	a1,a5,a1
+	call	PolyphaseStereo
+	lw	a5,4(sp)
+	lw	a2,512(s1)
+	lw	a3,8(sp)
+	addi	a5,a5,128
+	lw	t0,16(sp)
+	sw	a5,4(sp)
+	sub	a2,a2,a3
+	lw	a5,24(sp)
+	andi	a2,a2,7
+	sw	a2,512(s1)
+	addi	t0,t0,1
+	bne	a5,s0,.L4
+	j	.L5
+.L9:
+	li	a0,-1
+	j	.L1
+.L7:
+	li	a0,-1
+	ret
+	.size	Subband, .-Subband
+	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
+	.section	.note.GNU-stack,"",@progbits

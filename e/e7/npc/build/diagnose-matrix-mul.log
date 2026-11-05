@@ -1,0 +1,2 @@
+Loaded /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/matrix-mul-minirv-npc.bin: 299840 bytes
+DiffTest timed out after 1000000 steps at pc=0x80000658

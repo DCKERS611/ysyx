@@ -1,0 +1,23 @@
+{
+  "cycles": 357,
+  "ifu_request_stalls": 12,
+  "lsu_request_stalls": 15,
+  "lsu_stall_edge_times": [
+    120,
+    148,
+    194,
+    196,
+    270,
+    354,
+    356,
+    502,
+    504,
+    506,
+    508,
+    510,
+    512,
+    514,
+    582
+  ],
+  "status": "PASS"
+}

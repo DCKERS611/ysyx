@@ -1,0 +1,5 @@
+step=1 pc=0x80000000 inst=0x800007b7 -> pc=0x80000004 a0=0x00000000 ra=0x00000000
+step=2 pc=0x80000004 inst=0x00278093 -> pc=0x80000008 a0=0x00000000 ra=0x80000002
+step=3 pc=0x80000008 inst=0x00008067 -> pc=0x80000002 a0=0x00000000 ra=0x80000002
+RESULT case=unaligned.bin backend=emu verdict=fail stop=reference_fault retired=3 a0=0x00000000 halt_pc=0x00000000
+step=4 pc=0x80000002 inst=0x00000000: reference fetch outside aligned memory

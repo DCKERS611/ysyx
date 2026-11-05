@@ -1,0 +1,39 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/archbench/bench/200.genann'
+# Building genann-run [minirv-npc]
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+# Building libbench-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/archbench/libbench'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-npc]
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
++ OBJCOPY -> build/genann-minirv-npc.bin
+mainargs=train
+make -C /home/ysyx/ysyx-workbench/npc -f Makefile.cpptest run PROGRAM="/home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-npc.bin"
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+GENANN TEST SUITE
+	basic         pass: 7   fail: 0   4519us
+	xor           pass: 5   fail: 0   13972us
+	backprop      pass: 1   fail: 0   5052us
+	train and     pass: 4   fail: 0   295799us
+	train or      pass: 4   fail: 0   290544us
+Train an ANN on the IRIS dataset using backpropagation.
+Training for 4 loops over data.
+80/150 correct
+ALL TESTS PASSED (21/21)
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:34.274014 (34274014 us)
+               1 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:34.274014 (34274014 us)
+Total  time:   0:00:34.275777 (34275777 us)
+Loaded /home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-npc.bin: 754340 bytes
+Result: halt_pc=0x8000ec2c a0=0x00000000 ra=0x8000ec28 cycles=13864862840
+instructions=782143131 cycles=13864862840 IPC=0.056412
+HIT GOOD TRAP
+PASS: 2 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make: Leaving directory '/home/ysyx/ysyx-workbench/archbench/bench/200.genann'
+[WALL] 4835.39 s

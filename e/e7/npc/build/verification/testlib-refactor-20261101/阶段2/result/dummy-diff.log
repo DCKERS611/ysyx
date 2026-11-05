@@ -1,0 +1,15 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+# Building dummy-run [minirv-npc]
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
++ OBJCOPY -> build/dummy-minirv-npc.bin
+mainargs=
+Loaded /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/dummy-minirv-npc.bin: 144 bytes
+HIT GOOD TRAP: a0=0x00000000
+[ DIFF PASS ] dummy-minirv-npc.bin
+PASS: 289 (17 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 118
+halt_pc=0x80000040 NPC.pc=0x80000044 EMU.pc=0x80000040
+RESULT case=dummy-minirv-npc.bin backend=diff verdict=pass stop=ebreak pc=0x80000040 inst=0x00100073 cycles=172 retired=17 attempts=17 checks=0 failures=0 delay=random core=289 core_fail=0 extra=118 extra_fail=0 memory=33554432 memory_fail=0
+test list [1 item(s)]: dummy
+[         dummy] [1;32mPASS[0m

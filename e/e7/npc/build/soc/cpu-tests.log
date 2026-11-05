@@ -1,0 +1,238 @@
+# Building shift-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/shift.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/shift-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3e-05 s, 133 kB/s
+305032+0 records in
+305032+0 records out
+305032 bytes (305 kB, 298 KiB) copied, 0.151689 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/shift-minirv-ysyxsoc.bin, 674184 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048c40)
+loading to memory region [0x80048d00, 0x80048e80)
+HIT GOOD TRAP: pc=0x80000938 a0=0x00000000 cycles=155630567
+# Building bit-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/bit.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/bit-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.24e-05 s, 123 kB/s
+307092+0 records in
+307092+0 records out
+307092 bytes (307 kB, 300 KiB) copied, 0.159552 s, 1.9 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/bit-minirv-ysyxsoc.bin, 676244 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80049440)
+HIT GOOD TRAP: pc=0x80001100 a0=0x00000000 cycles=153315014
+# Building unalign-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/unalign.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/unalign-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.11e-05 s, 129 kB/s
+302592+0 records in
+302592+0 records out
+302592 bytes (303 kB, 296 KiB) copied, 0.146781 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/unalign-minirv-ysyxsoc.bin, 671744 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048740)
+loading to memory region [0x80048740, 0x80048754)
+HIT GOOD TRAP: pc=0x800004b4 a0=0x00000000 cycles=154517199
+# Building switch-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/switch.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/switch-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.96e-05 s, 135 kB/s
+303116+0 records in
+303116+0 records out
+303116 bytes (303 kB, 296 KiB) copied, 0.150083 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/switch-minirv-ysyxsoc.bin, 672268 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048774)
+loading to memory region [0x80048800, 0x8004893c)
+HIT GOOD TRAP: pc=0x80000414 a0=0x00000000 cycles=155002449
+# Building to-lower-case-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/to-lower-case.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/to-lower-case-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.82e-05 s, 142 kB/s
+303716+0 records in
+303716+0 records out
+303716 bytes (304 kB, 297 KiB) copied, 0.150457 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/to-lower-case-minirv-ysyxsoc.bin, 672868 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048840)
+loading to memory region [0x80048900, 0x80048a80)
+HIT GOOD TRAP: pc=0x800005e0 a0=0x00000000 cycles=159087289
+# Building sum-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/sum.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/sum-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.84e-05 s, 141 kB/s
+302364+0 records in
+302364+0 records out
+302364 bytes (302 kB, 295 KiB) copied, 0.141564 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/sum-minirv-ysyxsoc.bin, 671516 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048540)
+loading to memory region [0x80048600, 0x80048700)
+HIT GOOD TRAP: pc=0x8000028c a0=0x00000000 cycles=154816406
+# Building fact-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/fact.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/fact-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.7301e-05 s, 107 kB/s
+304432+0 records in
+304432+0 records out
+304432 bytes (304 kB, 297 KiB) copied, 0.142787 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/fact-minirv-ysyxsoc.bin, 673584 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048a40)
+loading to memory region [0x80048b00, 0x80048c70)
+HIT GOOD TRAP: pc=0x80000520 a0=0x00000000 cycles=159358805
+# Building select-sort-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/select-sort.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/select-sort-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 2.8101e-05 s, 142 kB/s
+304624+0 records in
+304624+0 records out
+304624 bytes (305 kB, 297 KiB) copied, 0.14855 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/select-sort-minirv-ysyxsoc.bin, 673776 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048b40)
+loading to memory region [0x80048c00, 0x80048d50)
+HIT GOOD TRAP: pc=0x80000848 a0=0x00000000 cycles=161356757
+# Building mov-c-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/mov-c.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/mov-c-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.1101e-05 s, 129 kB/s
+302348+0 records in
+302348+0 records out
+302348 bytes (302 kB, 295 KiB) copied, 0.140944 s, 2.1 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/mov-c-minirv-ysyxsoc.bin, 671500 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80048740)
+loading to memory region [0x80048740, 0x8004876c)
+HIT GOOD TRAP: pc=0x80000488 a0=0x00000000 cycles=154561025
+# Building string-run [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC tests/string.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:6: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/string-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.5701e-05 s, 112 kB/s
+308840+0 records in
+308840+0 records out
+308840 bytes (309 kB, 302 KiB) copied, 0.152718 s, 2.0 MB/s
+mainargs=
+Loaded Flash: /home/ysyx/ysyx-workbench/am-kernels/tests/cpu-tests/build/string-minirv-ysyxsoc.bin, 677992 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004977e)
+loading to memory region [0x80049780, 0x800497b4)

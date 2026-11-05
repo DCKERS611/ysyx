@@ -1,0 +1,1558 @@
+2026-10-25 20:29:56,762 - ecc_smoke - INFO - 
+2026-10-25 20:29:56,762 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:56,762 - ecc_smoke - INFO -                        workspace info                       
+2026-10-25 20:29:56,762 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:56,762 - ecc_smoke - INFO - 
+2026-10-25 20:29:56,762 - ecc_smoke - INFO - workspace      : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - config         : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - PDK            : ics55
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - design         : ecc_smoke
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - top module     : ecc_smoke
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - origin def     : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/origin/ecc_smoke.def
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - origin verilog : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/origin/ecc_smoke.v
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - input filelist : None
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - sdc            : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/origin/ecc_smoke.sdc
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - spef           : None
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - 
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:56,763 - ecc_smoke - INFO -                       parameters info                      
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - 
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - parameters     : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/parameters.json
+2026-10-25 20:29:56,763 - ecc_smoke - INFO - 
++------------+-----------+
+| Key        | Value     |
++------------+-----------+
+| PDK        | ics55     |
+| Design     | ecc_smoke |
+| Top module | ecc_smoke |
++------------+-----------+
+
+[Die]
++------+-------+
+| Key  | Value |
++------+-------+
+| Size | []    |
+| Area | 0     |
++------+-------+
+
+[Core]
++---------------+--------+
+| Key           | Value  |
++---------------+--------+
+| Size          | []     |
+| Area          | 0      |
+| Bounding box  |        |
+| Utilitization | 0.4    |
+| Margin        | [2, 2] |
+| Aspect ratio  | 1      |
++---------------+--------+
+
++----------------------+------------------------------------------+
+| Key                  | Value                                    |
++----------------------+------------------------------------------+
+| Max fanout           | 20                                       |
+| Target density       | 0.2                                      |
+| Target overflow      | 0.1                                      |
+| Global right padding | 0                                        |
+| Cell padding x       | 300                                      |
+| Routability opt flag | 1                                        |
+| Clock                | clk                                      |
+| Frequency max [MHz]  | 100.0                                    |
+| Bottom layer         | MET2                                     |
+| Top layer            | MET5                                     |
+| STA max paths        | 1000                                     |
+| PDK Root             | /home/ysyx/ysyx-workbench/icsprout55-pdk |
++----------------------+------------------------------------------+
+2026-10-25 20:29:58,064 - ecc_smoke - INFO - 
+2026-10-25 20:29:58,065 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:58,065 - ecc_smoke - INFO -                yosys - begin step - Synthesis               
+2026-10-25 20:29:58,065 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:58,065 - ecc_smoke - INFO - 
+2026-10-25 20:29:58,067 - ecc_smoke - INFO - [STEP] Synthesis(yosys) pid=44556 started
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - 
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:58,081 - ecc_smoke - INFO -                     step Synthesis info                    
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - 
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - step name         : Synthesis
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - step eda          : yosys
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:29:58,081 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+input - 
++---------+---------------------------------------------------------------------+
+| Key     | Value                                                               |
++---------+---------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/origin/ecc_smoke.v |
++---------+---------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+output - 
++-------------+------------------------------------------------------------------------------------------------------+
+| Key         | Value                                                                                                |
++-------------+------------------------------------------------------------------------------------------------------+
+| dir         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output                              |
+| def         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.def.gz   |
+| verilog     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.v.gz     |
+| json        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.json     |
+| image       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.png      |
+| sim_verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis_sim.v.gz |
+| report      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.rpt      |
++-------------+------------------------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+data - 
++-----+---------------------------------------------------------------------------+
+| Key | Value                                                                     |
++-----+---------------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/data     |
+| tmp | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/data/tmp |
++-----+---------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+feature - 
++--------------+------------------------------------------------------------------------------------------------------+
+| Key          | Value                                                                                                |
++--------------+------------------------------------------------------------------------------------------------------+
+| dir          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/feature                             |
+| step         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/feature/Synthesis.step.json         |
+| generic_stat | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/feature/Synthesis_generic_stat.json |
+| stat         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/feature/Synthesis_stat.json         |
++--------------+------------------------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+report - 
++-------+---------------------------------------------------------------------------------------------+
+| Key   | Value                                                                                       |
++-------+---------------------------------------------------------------------------------------------+
+| dir   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/report                     |
+| stat  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/report/Synthesis_stat.json |
+| check | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/report/Synthesis_check.rpt |
++-------+---------------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+log - 
++------+------------------------------------------------------------------------------------+
+| Key  | Value                                                                              |
++------+------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/log               |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/log/Synthesis.log |
++------+------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+script - 
++------+--------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                      |
++------+--------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/script                    |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/script/Synthesis_main.tcl |
++------+--------------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+analysis - 
++--------------+---------------------------------------------------------------------------------------------+
+| Key          | Value                                                                                       |
++--------------+---------------------------------------------------------------------------------------------+
+| dir          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/analysis                   |
+| metrics      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/analysis/qor_metrics.json  |
+| qor_metrics  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/analysis/qor_metrics.json  |
+| qor_summary  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/analysis/qor_summary.json  |
+| qor_hotspots | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/analysis/qor_hotspots.json |
++--------------+---------------------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+subflow - 
++------+-------------------------------------------------------------------------------+
+| Key  | Value                                                                         |
++------+-------------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/subflow.json |
++------+-------------------------------------------------------------------------------+
+
+[steps]
++---+-----------+---------+---------+------------------+------+
+| # | name      | state   | runtime | peak memory (mb) | info |
++---+-----------+---------+---------+------------------+------+
+| 1 | run yosys | Unstart |         | 0                | {}   |
+| 2 | analysis  | Unstart |         | 0                | {}   |
++---+-----------+---------+---------+------------------+------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - 
+checklist - 
++------+---------------------------------------------------------------------------------+
+| Key  | Value                                                                           |
++------+---------------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/checklist.json |
++------+---------------------------------------------------------------------------------+
+
+[checklist]
++---+----------------------------+-----------+----------+-----------+--------+--------+---------+--------------------------+---------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+| # | id                         | step      | category | owner     | policy | state  | blocked | title                    | summary                   | source                                                                        | evidence                                                                        |
++---+----------------------------+-----------+----------+-----------+--------+--------+---------+--------------------------+---------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+| 1 | artifact.synthesis.netlist | Synthesis | artifact | checklist | block  | failed | true    | Mapped synthesis netlist | Required file is missing. | {"kind": "output", "path": "Synthesis_yosys/output/ecc_smoke_Synthesis.v.gz"} | [{"kind": "output", "path": "Synthesis_yosys/output/ecc_smoke_Synthesis.v.gz"}] |
++---+----------------------------+-----------+----------+-----------+--------+--------+---------+--------------------------+---------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+2026-10-25 20:29:58,082 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,027 - ecc_smoke - INFO - Post-synthesis STA artifacts saved to report=/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/report/post_synthesis feature=/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/feature/post_synthesis
+2026-10-25 20:30:17,028 - ecc_smoke - INFO - 
+metrics - 
++----------------------+---------------------+
+| Key                  | Value               |
++----------------------+---------------------+
+| Tool                 | yosys               |
+| Cell number          | 36                  |
+| Cell area            | 91.0                |
+| Wire number          | 38                  |
+| Port number          | 10                  |
+| Power internal [uW]  | 6.8166              |
+| Power switching [uW] | 0.1288897           |
+| Power dynamic [uW]   | 6.9455              |
+| Power leakage [uW]   | 0.11360110000000001 |
++----------------------+---------------------+
+2026-10-25 20:30:17,050 - ecc_smoke - INFO - [STEP] Synthesis(yosys) finished result=True
+2026-10-25 20:30:17,052 - ecc_smoke - INFO - [RESULT] Synthesis(yosys) state=Success runtime=0:0:18 mem=1162.414MB exitcode=0
+2026-10-25 20:30:17,054 - ecc_smoke - INFO - 
+metrics - 
++----------------------+---------------------+
+| Key                  | Value               |
++----------------------+---------------------+
+| Tool                 | yosys               |
+| Cell number          | 36                  |
+| Cell area            | 91.0                |
+| Wire number          | 38                  |
+| Port number          | 10                  |
+| Power internal [uW]  | 6.8166              |
+| Power switching [uW] | 0.1288897           |
+| Power dynamic [uW]   | 6.9455              |
+| Power leakage [uW]   | 0.11360110000000001 |
++----------------------+---------------------+
+2026-10-25 20:30:17,273 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,273 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,274 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - Floorplan            | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - fixFanout            | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - place                | dreamplace           | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - CTS                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - legalization         | dreamplace           | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,274 - ecc_smoke - INFO -                 yosys - end step - Synthesis                
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,274 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,275 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,275 - ecc_smoke - INFO -                 ecc - begin step - Floorplan                
+2026-10-25 20:30:17,275 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,275 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,430 - ecc_smoke - INFO - ecc db initialize success for step Floorplan.
+2026-10-25 20:30:17,434 - ecc_smoke - INFO - [STEP] Floorplan(ecc) pid=44556 started
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,450 - ecc_smoke - INFO -                     step Floorplan info                    
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - step name         : Floorplan
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - step eda          : ecc
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+input - 
++---------+----------------------------------------------------------------------------------------------------+
+| Key     | Value                                                                                              |
++---------+----------------------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/output/ecc_smoke_Synthesis.def.gz |
++---------+----------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+output - 
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                                  |
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output                                                  |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/geometry                                         |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/geometry/geometry.manifest                       |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.lib                          |
+| spef              | []                                                                                                                     |
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+data - 
++---------------------+-------------------------------------------------------------------------+
+| Key                 | Value                                                                   |
++---------------------+-------------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/rcx |
++---------------------+-------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+feature - 
++------+--------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                      |
++------+--------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature                     |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature/Floorplan.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature/Floorplan.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature/Floorplan.map.json  |
++------+--------------------------------------------------------------------------------------------+
+
+[sta]
++-------------------+------------------------------------------------------------------------+
+| Key               | Value                                                                  |
++-------------------+------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature |
++-------------------+------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+report - 
++------+----------------------------------------------------------------------------------------+
+| Key  | Value                                                                                  |
++------+----------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/report                  |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/report/Floorplan.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/report/Floorplan.rpt    |
++------+----------------------------------------------------------------------------------------+
+
+[sta]
++-----+-----------------------------------------------------------------------+
+| Key | Value                                                                 |
++-----+-----------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/report |
++-----+-----------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+log - 
++------+----------------------------------------------------------------------------------+
+| Key  | Value                                                                            |
++------+----------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/log               |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/log/Floorplan.log |
++------+----------------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+script - 
++------+------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                    |
++------+------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/script                    |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/script/Floorplan_main.tcl |
++------+------------------------------------------------------------------------------------------+
+2026-10-25 20:30:17,450 - ecc_smoke - INFO - 
+analysis - 
++-------------------+------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                          |
++-------------------+------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis                        |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/qor_metrics.json       |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/qor_metrics.json       |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/qor_summary.json       |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/qor_hotspots.json      |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/sta_timing_issues.json |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/analysis/Floorplan_statis.csv   |
++-------------------+------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:17,451 - ecc_smoke - INFO - 
+subflow - 
++------+-----------------------------------------------------------------------------+
+| Key  | Value                                                                       |
++------+-----------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/subflow.json |
++------+-----------------------------------------------------------------------------+
+
+[steps]
++---+----------------+---------+---------+------------------+------+
+| # | name           | state   | runtime | peak memory (mb) | info |
++---+----------------+---------+---------+------------------+------+
+| 1 | load data      | Unstart |         | 0                | {}   |
+| 2 | init floorplan | Unstart |         | 0                | {}   |
+| 3 | create tracks  | Unstart |         | 0                | {}   |
+| 4 | place io pins  | Unstart |         | 0                | {}   |
+| 5 | tap cell       | Unstart |         | 0                | {}   |
+| 6 | PDN            | Unstart |         | 0                | {}   |
+| 7 | set clock net  | Unstart |         | 0                | {}   |
+| 8 | save data      | Unstart |         | 0                | {}   |
+| 9 | analysis       | Unstart |         | 0                | {}   |
++---+----------------+---------+---------+------------------+------+
+2026-10-25 20:30:17,451 - ecc_smoke - INFO - 
+checklist - 
++-----------+-------------------------------------------------------------------------------+
+| Key       | Value                                                                         |
++-----------+-------------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/checklist.json |
+| checklist | []                                                                            |
++-----------+-------------------------------------------------------------------------------+
+2026-10-25 20:30:17,451 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:17,529 - ecc_smoke - INFO - 
+metrics - 
++------------------+--------+
+| Key              | Value  |
++------------------+--------+
+| Tool             | ecc    |
+| Die area [μm^2]  | 372.48 |
+| Core area [μm^2] | 234.08 |
+| Die width [um]   | 19.2   |
+| Die height [um]  | 19.4   |
+| Die util         | 0.24   |
+| Core util        | 0.39   |
+| Total io pins    | 10     |
+| Total instances  | 72     |
+| Total nets       | 38     |
++------------------+--------+
+2026-10-25 20:30:18,659 - ecc_smoke - INFO - [STEP] Floorplan(ecc) finished result=True
+2026-10-25 20:30:18,661 - ecc_smoke - INFO - [RESULT] Floorplan(ecc) state=Success runtime=0:0:1 mem=134.219MB exitcode=0
+2026-10-25 20:30:18,673 - ecc_smoke - INFO - 
+metrics - 
++------------------+--------+
+| Key              | Value  |
++------------------+--------+
+| Tool             | ecc    |
+| Die area [μm^2]  | 372.48 |
+| Core area [μm^2] | 234.08 |
+| Die width [um]   | 19.2   |
+| Die height [um]  | 19.4   |
+| Die util         | 0.24   |
+| Core util        | 0.39   |
+| Total io pins    | 10     |
+| Total instances  | 72     |
+| Total nets       | 38     |
++------------------+--------+
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - Floorplan            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - fixFanout            | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - place                | dreamplace           | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - CTS                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - legalization         | dreamplace           | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO -                  ecc - end step - Floorplan                 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO -                 ecc - begin step - fixFanout                
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,813 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,816 - ecc_smoke - INFO - [STEP] fixFanout(ecc) pid=44556 started
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,827 - ecc_smoke - INFO -                     step fixFanout info                    
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - step name         : fixFanout
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - step eda          : ecc
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+input - 
++---------+--------------------------------------------------------------------------------------------------+
+| Key     | Value                                                                                            |
++---------+--------------------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.def.gz |
+| db      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan_db     |
++---------+--------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+output - 
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                                  |
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output                                                  |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/geometry                                         |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/geometry/geometry.manifest                       |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.lib                          |
+| spef              | []                                                                                                                     |
++-------------------+------------------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+data - 
++---------------------+-------------------------------------------------------------------------+
+| Key                 | Value                                                                   |
++---------------------+-------------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/data/rcx |
++---------------------+-------------------------------------------------------------------------+
+2026-10-25 20:30:18,827 - ecc_smoke - INFO - 
+feature - 
++------+--------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                      |
++------+--------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature                     |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature/fixFanout.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature/fixFanout.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature/fixFanout.map.json  |
++------+--------------------------------------------------------------------------------------------+
+
+[sta]
++-------------------+------------------------------------------------------------------------+
+| Key               | Value                                                                  |
++-------------------+------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/feature |
++-------------------+------------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+report - 
++------+----------------------------------------------------------------------------------------+
+| Key  | Value                                                                                  |
++------+----------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/report                  |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/report/fixFanout.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/report/fixFanout.rpt    |
++------+----------------------------------------------------------------------------------------+
+
+[sta]
++-----+-----------------------------------------------------------------------+
+| Key | Value                                                                 |
++-----+-----------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/report |
++-----+-----------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+log - 
++------+----------------------------------------------------------------------------------+
+| Key  | Value                                                                            |
++------+----------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/log               |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/log/fixFanout.log |
++------+----------------------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+script - 
++------+------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                    |
++------+------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/script                    |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/script/fixFanout_main.tcl |
++------+------------------------------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+analysis - 
++-------------------+------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                          |
++-------------------+------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis                        |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/qor_metrics.json       |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/qor_metrics.json       |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/qor_summary.json       |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/qor_hotspots.json      |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/sta_timing_issues.json |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/analysis/fixFanout_statis.csv   |
++-------------------+------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+subflow - 
++------+-----------------------------------------------------------------------------+
+| Key  | Value                                                                       |
++------+-----------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/subflow.json |
++------+-----------------------------------------------------------------------------+
+
+[steps]
++---+----------------------+---------+---------+------------------+------+
+| # | name                 | state   | runtime | peak memory (mb) | info |
++---+----------------------+---------+---------+------------------+------+
+| 1 | load data            | Unstart |         | 0                | {}   |
+| 2 | set clock net        | Unstart |         | 0                | {}   |
+| 3 | run net optimization | Unstart |         | 0                | {}   |
+| 4 | save data            | Unstart |         | 0                | {}   |
+| 5 | analysis             | Unstart |         | 0                | {}   |
++---+----------------------+---------+---------+------------------+------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - 
+checklist - 
++-----------+-------------------------------------------------------------------------------+
+| Key       | Value                                                                         |
++-----------+-------------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/checklist.json |
+| checklist | []                                                                            |
++-----------+-------------------------------------------------------------------------------+
+2026-10-25 20:30:18,828 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:18,880 - ecc_smoke - INFO - 
+metrics - 
++------------------+--------+
+| Key              | Value  |
++------------------+--------+
+| Tool             | ecc    |
+| Die area [μm^2]  | 372.48 |
+| Core area [μm^2] | 234.08 |
+| Die width [um]   | 19.2   |
+| Die height [um]  | 19.4   |
+| Die util         | 0.24   |
+| Core util        | 0.39   |
+| Total io pins    | 10     |
+| Total instances  | 72     |
+| Total nets       | 38     |
+| Max fanout       | 32     |
++------------------+--------+
+2026-10-25 20:30:19,987 - ecc_smoke - INFO - [STEP] fixFanout(ecc) finished result=True
+2026-10-25 20:30:19,989 - ecc_smoke - INFO - [RESULT] fixFanout(ecc) state=Success runtime=0:0:1 mem=69.766MB exitcode=0
+2026-10-25 20:30:20,000 - ecc_smoke - INFO - 
+metrics - 
++------------------+--------+
+| Key              | Value  |
++------------------+--------+
+| Tool             | ecc    |
+| Die area [μm^2]  | 372.48 |
+| Core area [μm^2] | 234.08 |
+| Die width [um]   | 19.2   |
+| Die height [um]  | 19.4   |
+| Die util         | 0.24   |
+| Core util        | 0.39   |
+| Total io pins    | 10     |
+| Total instances  | 72     |
+| Total nets       | 38     |
+| Max fanout       | 32     |
++------------------+--------+
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - Floorplan            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - fixFanout            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - place                | dreamplace           | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - CTS                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - legalization         | dreamplace           | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO -                  ecc - end step - fixFanout                 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO -               dreamplace - begin step - place              
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,118 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,120 - ecc_smoke - INFO - [STEP] place(dreamplace) pid=44556 started
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,138 - ecc_smoke - INFO -                       step place info                      
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - 
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - step name         : place
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - step eda          : dreamplace
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - 
+input - 
++---------+--------------------------------------------------------------------------------------------------+
+| Key     | Value                                                                                            |
++---------+--------------------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout.def.gz |
+| db      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/fixFanout_ecc/output/ecc_smoke_fixFanout_db     |
++---------+--------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - 
+output - 
++-------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                                 |
++-------------------+-----------------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output                                              |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/geometry                                     |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/geometry/geometry.manifest                   |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.lib                          |
+| spef              | []                                                                                                                    |
++-------------------+-----------------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:20,138 - ecc_smoke - INFO - 
+data - 
++---------------------+----------------------------------------------------------------------------+
+| Key                 | Value                                                                      |
++---------------------+----------------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/data/rcx |
++---------------------+----------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+feature - 
++------+-------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                     |
++------+-------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature                 |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/place.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/place.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/place.map.json  |
++------+-------------------------------------------------------------------------------------------+
+
+[sta]
++-------------------+---------------------------------------------------------------------------+
+| Key               | Value                                                                     |
++-------------------+---------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature |
++-------------------+---------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+report - 
++------+---------------------------------------------------------------------------------------+
+| Key  | Value                                                                                 |
++------+---------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/report              |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/report/place.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/report/place.rpt    |
++------+---------------------------------------------------------------------------------------+
+
+[sta]
++-----+--------------------------------------------------------------------------+
+| Key | Value                                                                    |
++-----+--------------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/report |
++-----+--------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+log - 
++------+---------------------------------------------------------------------------------+
+| Key  | Value                                                                           |
++------+---------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/log           |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/log/place.log |
++------+---------------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+script - 
++------+-----------------------------------------------------------------------------------------+
+| Key  | Value                                                                                   |
++------+-----------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/script                |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/script/place_main.tcl |
++------+-----------------------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+analysis - 
++-------------------+---------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                             |
++-------------------+---------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis                        |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/qor_metrics.json       |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/qor_metrics.json       |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/qor_summary.json       |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/qor_hotspots.json      |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/sta_timing_issues.json |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/analysis/place_statis.csv       |
++-------------------+---------------------------------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+subflow - 
++------+--------------------------------------------------------------------------------+
+| Key  | Value                                                                          |
++------+--------------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/subflow.json |
++------+--------------------------------------------------------------------------------+
+
+[steps]
++---+---------------+---------+---------+------------------+------+
+| # | name          | state   | runtime | peak memory (mb) | info |
++---+---------------+---------+---------+------------------+------+
+| 1 | load data     | Unstart |         | 0                | {}   |
+| 2 | run placement | Unstart |         | 0                | {}   |
+| 3 | save data     | Unstart |         | 0                | {}   |
+| 4 | analysis      | Unstart |         | 0                | {}   |
++---+---------------+---------+---------+------------------+------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - 
+checklist - 
++-----------+----------------------------------------------------------------------------------+
+| Key       | Value                                                                            |
++-----------+----------------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/checklist.json |
+| checklist | []                                                                               |
++-----------+----------------------------------------------------------------------------------+
+2026-10-25 20:30:20,139 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:30:55,495 - ecc_smoke - INFO - 
+metrics - 
++------------------+------------+
+| Key              | Value      |
++------------------+------------+
+| Tool             | dreamplace |
+| Die area [μm^2]  | 372.48     |
+| Core area [μm^2] | 234.08     |
+| Die width [um]   | 19.2       |
+| Die height [um]  | 19.4       |
+| Die util         | 0.24       |
+| Core util        | 0.39       |
+| Total io pins    | 10         |
+| Total instances  | 72         |
+| Total nets       | 38         |
++------------------+------------+
+
+[place_map_metrics]
++------------------------+------------------------------------------------------------------------------------------+
+| Key                    | Value                                                                                    |
++------------------------+------------------------------------------------------------------------------------------+
+| schema_version         | 1                                                                                        |
+| source_file            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/place.map.json |
+| top_average_definition | mean of the highest 5 percent of valid bins                                              |
+| high_bin_definition    | valid bins at or above 90 percent of the map peak                                        |
++------------------------+------------------------------------------------------------------------------------------+
+
+  [maps]
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+  | #  | group      | metric              | direction  | source_file                                                                                                                    | available | row_count | column_count | value_count | nonzero_count | nonzero_ratio      | max      | top_5_percent_average | high_bin_threshold    | high_bin_count | high_bin_ratio     |
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+  | 1  | congestion | egr                 | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_horizontal_overflow.csv | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 2  | congestion | egr                 | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_union_overflow.csv      | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 3  | congestion | egr                 | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_vertical_overflow.csv   | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 4  | congestion | lutrudy             | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_horizontal.csv               | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001529 | 0.001529              | 0.0013761000000000001 | 1              | 0.1111111111111111 |
+  | 5  | congestion | lutrudy             | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_union.csv                    | true      | 3         | 3            | 9           | 9             | 1.0                | 0.002917 | 0.002917              | 0.0026253             | 1              | 0.1111111111111111 |
+  | 6  | congestion | lutrudy             | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_vertical.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001388 | 0.001388              | 0.0012492             | 1              | 0.1111111111111111 |
+  | 7  | congestion | rudy                | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_horizontal.csv                   | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001347 | 0.001347              | 0.0012123000000000001 | 1              | 0.1111111111111111 |
+  | 8  | congestion | rudy                | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_union.csv                        | true      | 3         | 3            | 9           | 9             | 1.0                | 0.002601 | 0.002601              | 0.0023409             | 1              | 0.1111111111111111 |
+  | 9  | congestion | rudy                | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_vertical.csv                     | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001254 | 0.001254              | 0.0011286             | 1              | 0.1111111111111111 |
+  | 10 | cell       | allcell_density     |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_density.csv                | true      | 3         | 3            | 9           | 9             | 1.0                | 0.58449  | 0.58449               | 0.526041              | 2              | 0.2222222222222222 |
+  | 11 | cell       | macro_density       |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_density.csv                  | true      | 3         | 3            | 9           | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 12 | cell       | stdcell_density     |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_density.csv                | true      | 3         | 3            | 9           | 9             | 1.0                | 0.509388 | 0.509388              | 0.45844919999999995   | 1              | 0.1111111111111111 |
+  | 13 | margin     | horizontal          |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_horizontal_margin.csv               | true      | 3         | 3            | 9           | 9             | 1.0                | 15200    | 15200.0               | 13680.0               | 9              | 1.0                |
+  | 14 | margin     | union               |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_union_margin.csv                    | true      | 3         | 3            | 9           | 9             | 1.0                | 30600    | 30600.0               | 27540.0               | 9              | 1.0                |
+  | 15 | margin     | vertical            |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_vertical_margin.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 15400    | 15400.0               | 13860.0               | 9              | 1.0                |
+  | 16 | net        | allnet_density      |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allnet_density.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 28       | 28.0                  | 25.2                  | 1              | 0.1111111111111111 |
+  | 17 | net        | global_net_density  |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_global_net_density.csv             | true      | 3         | 3            | 9           | 9             | 1.0                | 26       | 26.0                  | 23.400000000000002    | 1              | 0.1111111111111111 |
+  | 18 | net        | local_net_density   |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_local_net_density.csv              | true      | 3         | 3            | 9           | 4             | 0.4444444444444444 | 4        | 4.0                   | 3.6                   | 2              | 0.2222222222222222 |
+  | 19 | pin        | allcell_pin_density |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_pin_density.csv            | true      | 3         | 3            | 9           | 9             | 1.0                | 72       | 72.0                  | 64.8                  | 1              | 0.1111111111111111 |
+  | 20 | pin        | macro_pin_density   |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_pin_density.csv              | true      | 3         | 3            | 9           | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 21 | pin        | stdcell_pin_density |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_pin_density.csv            | true      | 3         | 3            | 9           | 9             | 1.0                | 72       | 72.0                  | 64.8                  | 1              | 0.1111111111111111 |
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+
++-------------------------------------+-----------------------+
+| Key                                 | Value                 |
++-------------------------------------+-----------------------+
+| HPWL                                | 321.025               |
+| GRWL                                | 352                   |
+| FLUTE                               | 361.271               |
+| place_congestion_egr_overflow_total | 0                     |
+| place_congestion_egr_overflow_max   | 0                     |
+| place_rudy_utilization_max          | 0.002601000014692545  |
+| place_lutrudy_utilization_max       | 0.0029170000925660133 |
++-------------------------------------+-----------------------+
+2026-10-25 20:31:03,650 - ecc_smoke - INFO - [STEP] place(dreamplace) finished result=True
+2026-10-25 20:31:03,652 - ecc_smoke - INFO - [RESULT] place(dreamplace) state=Success runtime=0:0:43 mem=1252.453MB exitcode=0
+2026-10-25 20:31:03,670 - ecc_smoke - INFO - 
+metrics - 
++------------------+------------+
+| Key              | Value      |
++------------------+------------+
+| Tool             | dreamplace |
+| Die area [μm^2]  | 372.48     |
+| Core area [μm^2] | 234.08     |
+| Die width [um]   | 19.2       |
+| Die height [um]  | 19.4       |
+| Die util         | 0.24       |
+| Core util        | 0.39       |
+| Total io pins    | 10         |
+| Total instances  | 72         |
+| Total nets       | 38         |
++------------------+------------+
+
+[place_map_metrics]
++------------------------+------------------------------------------------------------------------------------------+
+| Key                    | Value                                                                                    |
++------------------------+------------------------------------------------------------------------------------------+
+| schema_version         | 1                                                                                        |
+| source_file            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/place.map.json |
+| top_average_definition | mean of the highest 5 percent of valid bins                                              |
+| high_bin_definition    | valid bins at or above 90 percent of the map peak                                        |
++------------------------+------------------------------------------------------------------------------------------+
+
+  [maps]
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+  | #  | group      | metric              | direction  | source_file                                                                                                                    | available | row_count | column_count | value_count | nonzero_count | nonzero_ratio      | max      | top_5_percent_average | high_bin_threshold    | high_bin_count | high_bin_ratio     |
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+  | 1  | congestion | egr                 | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_horizontal_overflow.csv | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 2  | congestion | egr                 | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_union_overflow.csv      | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 3  | congestion | egr                 | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_vertical_overflow.csv   | true      | 13        | 13           | 169         | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 4  | congestion | lutrudy             | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_horizontal.csv               | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001529 | 0.001529              | 0.0013761000000000001 | 1              | 0.1111111111111111 |
+  | 5  | congestion | lutrudy             | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_union.csv                    | true      | 3         | 3            | 9           | 9             | 1.0                | 0.002917 | 0.002917              | 0.0026253             | 1              | 0.1111111111111111 |
+  | 6  | congestion | lutrudy             | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_vertical.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001388 | 0.001388              | 0.0012492             | 1              | 0.1111111111111111 |
+  | 7  | congestion | rudy                | horizontal | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_horizontal.csv                   | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001347 | 0.001347              | 0.0012123000000000001 | 1              | 0.1111111111111111 |
+  | 8  | congestion | rudy                | union      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_union.csv                        | true      | 3         | 3            | 9           | 9             | 1.0                | 0.002601 | 0.002601              | 0.0023409             | 1              | 0.1111111111111111 |
+  | 9  | congestion | rudy                | vertical   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_vertical.csv                     | true      | 3         | 3            | 9           | 9             | 1.0                | 0.001254 | 0.001254              | 0.0011286             | 1              | 0.1111111111111111 |
+  | 10 | cell       | allcell_density     |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_density.csv                | true      | 3         | 3            | 9           | 9             | 1.0                | 0.58449  | 0.58449               | 0.526041              | 2              | 0.2222222222222222 |
+  | 11 | cell       | macro_density       |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_density.csv                  | true      | 3         | 3            | 9           | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 12 | cell       | stdcell_density     |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_density.csv                | true      | 3         | 3            | 9           | 9             | 1.0                | 0.509388 | 0.509388              | 0.45844919999999995   | 1              | 0.1111111111111111 |
+  | 13 | margin     | horizontal          |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_horizontal_margin.csv               | true      | 3         | 3            | 9           | 9             | 1.0                | 15200    | 15200.0               | 13680.0               | 9              | 1.0                |
+  | 14 | margin     | union               |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_union_margin.csv                    | true      | 3         | 3            | 9           | 9             | 1.0                | 30600    | 30600.0               | 27540.0               | 9              | 1.0                |
+  | 15 | margin     | vertical            |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_vertical_margin.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 15400    | 15400.0               | 13860.0               | 9              | 1.0                |
+  | 16 | net        | allnet_density      |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allnet_density.csv                 | true      | 3         | 3            | 9           | 9             | 1.0                | 28       | 28.0                  | 25.2                  | 1              | 0.1111111111111111 |
+  | 17 | net        | global_net_density  |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_global_net_density.csv             | true      | 3         | 3            | 9           | 9             | 1.0                | 26       | 26.0                  | 23.400000000000002    | 1              | 0.1111111111111111 |
+  | 18 | net        | local_net_density   |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_local_net_density.csv              | true      | 3         | 3            | 9           | 4             | 0.4444444444444444 | 4        | 4.0                   | 3.6                   | 2              | 0.2222222222222222 |
+  | 19 | pin        | allcell_pin_density |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_pin_density.csv            | true      | 3         | 3            | 9           | 9             | 1.0                | 72       | 72.0                  | 64.8                  | 1              | 0.1111111111111111 |
+  | 20 | pin        | macro_pin_density   |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_pin_density.csv              | true      | 3         | 3            | 9           | 0             | 0.0                | 0        | 0.0                   | 0.0                   | 0              | 0.0                |
+  | 21 | pin        | stdcell_pin_density |            | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_pin_density.csv            | true      | 3         | 3            | 9           | 9             | 1.0                | 72       | 72.0                  | 64.8                  | 1              | 0.1111111111111111 |
+  +----+------------+---------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+--------------+-------------+---------------+--------------------+----------+-----------------------+-----------------------+----------------+--------------------+
+
++-------------------------------------+-----------------------+
+| Key                                 | Value                 |
++-------------------------------------+-----------------------+
+| HPWL                                | 321.025               |
+| GRWL                                | 352                   |
+| FLUTE                               | 361.271               |
+| place_congestion_egr_overflow_total | 0                     |
+| place_congestion_egr_overflow_max   | 0                     |
+| place_rudy_utilization_max          | 0.002601000014692545  |
+| place_lutrudy_utilization_max       | 0.0029170000925660133 |
++-------------------------------------+-----------------------+
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,844 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - Floorplan            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - fixFanout            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - place                | dreamplace           | Success              | 0:0:43              
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - CTS                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - legalization         | dreamplace           | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,844 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,844 - ecc_smoke - INFO -                dreamplace - end step - place               
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,845 - ecc_smoke - INFO -                    ecc - begin step - CTS                   
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,845 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,847 - ecc_smoke - INFO - [STEP] CTS(ecc) pid=44556 started
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,860 - ecc_smoke - INFO -                        step CTS info                       
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - step name         : CTS
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - step eda          : ecc
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+input - 
++---------+-------------------------------------------------------------------------------------------------+
+| Key     | Value                                                                                           |
++---------+-------------------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place.def.gz |
+| db      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/output/ecc_smoke_place_db     |
++---------+-------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+output - 
++-------------------+------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                      |
++-------------------+------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output                                            |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/geometry                                   |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/geometry/geometry.manifest                 |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.lib                          |
+| spef              | []                                                                                                         |
++-------------------+------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+data - 
++---------------------+-------------------------------------------------------------------+
+| Key                 | Value                                                             |
++---------------------+-------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rcx |
++---------------------+-------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+feature - 
++------+--------------------------------------------------------------------------------+
+| Key  | Value                                                                          |
++------+--------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature               |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.map.json  |
++------+--------------------------------------------------------------------------------+
+
+[sta]
++-------------------+------------------------------------------------------------------+
+| Key               | Value                                                            |
++-------------------+------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature |
++-------------------+------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+report - 
++------+----------------------------------------------------------------------------+
+| Key  | Value                                                                      |
++------+----------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/report            |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/report/CTS.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/report/CTS.rpt    |
++------+----------------------------------------------------------------------------+
+
+[sta]
++-----+-----------------------------------------------------------------+
+| Key | Value                                                           |
++-----+-----------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/report |
++-----+-----------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+log - 
++------+----------------------------------------------------------------------+
+| Key  | Value                                                                |
++------+----------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/log         |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/log/CTS.log |
++------+----------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+script - 
++------+------------------------------------------------------------------------------+
+| Key  | Value                                                                        |
++------+------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/script              |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/script/CTS_main.tcl |
++------+------------------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+analysis - 
++-------------------+------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                    |
++-------------------+------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis                        |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/qor_metrics.json       |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/qor_metrics.json       |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/qor_summary.json       |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/qor_hotspots.json      |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/sta_timing_issues.json |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/analysis/CTS_statis.csv         |
++-------------------+------------------------------------------------------------------------------------------+
+2026-10-25 20:31:03,860 - ecc_smoke - INFO - 
+subflow - 
++------+-----------------------------------------------------------------------+
+| Key  | Value                                                                 |
++------+-----------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/subflow.json |
++------+-----------------------------------------------------------------------+
+
+[steps]
++---+-----------+---------+---------+------------------+------+
+| # | name      | state   | runtime | peak memory (mb) | info |
++---+-----------+---------+---------+------------------+------+
+| 1 | load data | Unstart |         | 0                | {}   |
+| 2 | run CTS   | Unstart |         | 0                | {}   |
+| 3 | save data | Unstart |         | 0                | {}   |
+| 4 | analysis  | Unstart |         | 0                | {}   |
++---+-----------+---------+---------+------------------+------+
+2026-10-25 20:31:03,861 - ecc_smoke - INFO - 
+checklist - 
++-----------+-------------------------------------------------------------------------+
+| Key       | Value                                                                   |
++-----------+-------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/checklist.json |
+| checklist | []                                                                      |
++-----------+-------------------------------------------------------------------------+
+2026-10-25 20:31:03,861 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:20,073 - ecc_smoke - INFO - 
+metrics - 
++-------------------------+--------+
+| Key                     | Value  |
++-------------------------+--------+
+| Tool                    | ecc    |
+| Die area [μm^2]         | 372.48 |
+| Core area [μm^2]        | 234.08 |
+| Die width [um]          | 19.2   |
+| Die height [um]         | 19.4   |
+| Die util                | 0.26   |
+| Core util               | 0.41   |
+| Total io pins           | 10     |
+| Total instances         | 74     |
+| Total nets              | 40     |
+| buffer_num              | 2      |
+| buffer_area             | 5.6    |
+| clock_path_max_buffer   | 2      |
+| clock_path_min_buffer   | 2      |
+| total_clock_wirelength  | 46959  |
+| max_clock_wirelength    | 30408  |
+| max_level_of_clock_tree | 2      |
++-------------------------+--------+
+2026-10-25 20:31:27,412 - ecc_smoke - INFO - [STEP] CTS(ecc) finished result=True
+2026-10-25 20:31:27,414 - ecc_smoke - INFO - [RESULT] CTS(ecc) state=Success runtime=0:0:23 mem=1396.336MB exitcode=0
+2026-10-25 20:31:27,427 - ecc_smoke - INFO - 
+metrics - 
++-------------------------+--------+
+| Key                     | Value  |
++-------------------------+--------+
+| Tool                    | ecc    |
+| Die area [μm^2]         | 372.48 |
+| Core area [μm^2]        | 234.08 |
+| Die width [um]          | 19.2   |
+| Die height [um]         | 19.4   |
+| Die util                | 0.26   |
+| Core util               | 0.41   |
+| Total io pins           | 10     |
+| Total instances         | 74     |
+| Total nets              | 40     |
+| buffer_num              | 2      |
+| buffer_area             | 5.6    |
+| clock_path_max_buffer   | 2      |
+| clock_path_min_buffer   | 2      |
+| total_clock_wirelength  | 46959  |
+| max_clock_wirelength    | 30408  |
+| max_level_of_clock_tree | 2      |
++-------------------------+--------+
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - Floorplan            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - fixFanout            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - place                | dreamplace           | Success              | 0:0:43              
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - CTS                  | ecc                  | Success              | 0:0:23              
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - legalization         | dreamplace           | Unstart              |                     
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO -                     ecc - end step - CTS                    
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO -            dreamplace - begin step - legalization           
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,599 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,602 - ecc_smoke - INFO - [STEP] legalization(dreamplace) pid=44556 started
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,624 - ecc_smoke - INFO -                    step legalization info                   
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - 
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - step name         : legalization
+2026-10-25 20:31:27,624 - ecc_smoke - INFO - step eda          : dreamplace
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+input - 
++---------+--------------------------------------------------------------------------------------+
+| Key     | Value                                                                                |
++---------+--------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.def.gz |
+| db      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS_db     |
++---------+--------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+output - 
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                                               |
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output                                                     |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/geometry                                            |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/geometry/geometry.manifest                          |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.lib                          |
+| spef              | []                                                                                                                                  |
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+data - 
++---------------------+-----------------------------------------------------------------------------------+
+| Key                 | Value                                                                             |
++---------------------+-----------------------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/rcx |
++---------------------+-----------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+feature - 
++------+---------------------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                                   |
++------+---------------------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature                        |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature/legalization.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature/legalization.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature/legalization.map.json  |
++------+---------------------------------------------------------------------------------------------------------+
+
+[sta]
++-------------------+----------------------------------------------------------------------------------+
+| Key               | Value                                                                            |
++-------------------+----------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature |
++-------------------+----------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+report - 
++------+-----------------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                               |
++------+-----------------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/report                     |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/report/legalization.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/report/legalization.rpt    |
++------+-----------------------------------------------------------------------------------------------------+
+
+[sta]
++-----+---------------------------------------------------------------------------------+
+| Key | Value                                                                           |
++-----+---------------------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/report |
++-----+---------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+log - 
++------+-----------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                         |
++------+-----------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/log                  |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/log/legalization.log |
++------+-----------------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+script - 
++------+-------------------------------------------------------------------------------------------------------+
+| Key  | Value                                                                                                 |
++------+-------------------------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/script                       |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/script/legalization_main.tcl |
++------+-------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+analysis - 
++-------------------+-----------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                     |
++-------------------+-----------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis                         |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/qor_metrics.json        |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/qor_metrics.json        |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/qor_summary.json        |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/qor_hotspots.json       |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/sta_timing_issues.json  |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/analysis/legalization_statis.csv |
++-------------------+-----------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+subflow - 
++------+---------------------------------------------------------------------------------------+
+| Key  | Value                                                                                 |
++------+---------------------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/subflow.json |
++------+---------------------------------------------------------------------------------------+
+
+[steps]
++---+------------------+---------+---------+------------------+------+
+| # | name             | state   | runtime | peak memory (mb) | info |
++---+------------------+---------+---------+------------------+------+
+| 1 | load data        | Unstart |         | 0                | {}   |
+| 2 | run legalization | Unstart |         | 0                | {}   |
+| 3 | save data        | Unstart |         | 0                | {}   |
+| 4 | analysis         | Unstart |         | 0                | {}   |
++---+------------------+---------+---------+------------------+------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - 
+checklist - 
++-----------+-----------------------------------------------------------------------------------------+
+| Key       | Value                                                                                   |
++-----------+-----------------------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/checklist.json |
+| checklist | []                                                                                      |
++-----------+-----------------------------------------------------------------------------------------+
+2026-10-25 20:31:27,625 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:27,920 - ecc_smoke - INFO - 
+metrics - 
++------------------+------------+
+| Key              | Value      |
++------------------+------------+
+| Tool             | dreamplace |
+| Die area [μm^2]  | 372.48     |
+| Core area [μm^2] | 234.08     |
+| Die width [um]   | 19.2       |
+| Die height [um]  | 19.4       |
+| Die util         | 0.26       |
+| Core util        | 0.41       |
+| Total io pins    | 10         |
+| Total instances  | 74         |
+| Total nets       | 40         |
++------------------+------------+
+2026-10-25 20:31:29,012 - ecc_smoke - INFO - [STEP] legalization(dreamplace) finished result=True
+2026-10-25 20:31:29,014 - ecc_smoke - INFO - [RESULT] legalization(dreamplace) state=Success runtime=0:0:1 mem=43.578MB exitcode=0
+2026-10-25 20:31:29,028 - ecc_smoke - INFO - 
+metrics - 
++------------------+------------+
+| Key              | Value      |
++------------------+------------+
+| Tool             | dreamplace |
+| Die area [μm^2]  | 372.48     |
+| Core area [μm^2] | 234.08     |
+| Die width [um]   | 19.2       |
+| Die height [um]  | 19.4       |
+| Die util         | 0.26       |
+| Core util        | 0.41       |
+| Total io pins    | 10         |
+| Total instances  | 74         |
+| Total nets       | 40         |
++------------------+------------+
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,192 - ecc_smoke - INFO -                          flow info                         
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - flow           : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/home/flow.json
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - name                 | tool                 | state                | runtime             
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - Synthesis            | yosys                | Success              | 0:0:18              
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - Floorplan            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - fixFanout            | ecc                  | Success              | 0:0:1               
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - place                | dreamplace           | Success              | 0:0:43              
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - CTS                  | ecc                  | Success              | 0:0:23              
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - legalization         | dreamplace           | Success              | 0:0:1               
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - route                | ecc                  | Unstart              |                     
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - drc                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - lvs                  | ecc                  | Unstart              |                     
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - filler               | ecc                  | Unstart              |                     
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,192 - ecc_smoke - INFO -             dreamplace - end step - legalization            
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,192 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,192 - ecc_smoke - INFO -                   ecc - begin step - route                  
+2026-10-25 20:31:29,193 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,193 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,195 - ecc_smoke - INFO - [STEP] route(ecc) pid=44556 started
+2026-10-25 20:31:29,209 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,210 - ecc_smoke - INFO -                       step route info                      
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - ############################################################
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - step name         : route
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - step eda          : ecc
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - step eda version  : 0.1
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - step subworkspace : /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+input - 
++---------+---------------------------------------------------------------------------------------------------------------+
+| Key     | Value                                                                                                         |
++---------+---------------------------------------------------------------------------------------------------------------+
+| verilog | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.v.gz   |
+| def     | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.def.gz |
+| db      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization_db     |
++---------+---------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+output - 
++-------------------+----------------------------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                                          |
++-------------------+----------------------------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output                                              |
+| def               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.def.gz                       |
+| verilog           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.v.gz                         |
+| json              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.json                         |
+| image             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.png                          |
+| db                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route_db                           |
+| gds               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.gds                          |
+| geometry          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/geometry                                     |
+| geometry_manifest | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/geometry/geometry.manifest                   |
+| view_json         | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route_view                         |
+| view_json_edits   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route_view/edits/layout_edits.json |
+| lef               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.lef                          |
+| lib               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/output/ecc_smoke_route.lib                          |
+| spef              | []                                                                                                             |
++-------------------+----------------------------------------------------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+data - 
++---------------------+---------------------------------------------------------------------+
+| Key                 | Value                                                               |
++---------------------+---------------------------------------------------------------------+
+| dir                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data     |
+| Floorplan           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/fp  |
+| place               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/pl  |
+| legalization        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/pl  |
+| filler              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/pl  |
+| CTS                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/cts |
+| fixFanout           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/no  |
+| Timing optimization | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/to  |
+| route               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rt  |
+| sta                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/sta |
+| drc                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/drc |
+| lvs                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/lvs |
+| RCX                 | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/data/rcx |
++---------------------+---------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+feature - 
++------+------------------------------------------------------------------------------------+
+| Key  | Value                                                                              |
++------+------------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature                 |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature/route.db.json   |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature/route.step.json |
+| map  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature/route.map.json  |
++------+------------------------------------------------------------------------------------+
+
+[sta]
++-------------------+--------------------------------------------------------------------+
+| Key               | Value                                                              |
++-------------------+--------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature |
+| qor_summary_root  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature |
+| timing_paths_root | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/feature |
++-------------------+--------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+report - 
++------+--------------------------------------------------------------------------------+
+| Key  | Value                                                                          |
++------+--------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/report              |
+| db   | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/report/route.db.rpt |
+| step | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/report/route.rpt    |
++------+--------------------------------------------------------------------------------+
+
+[sta]
++-----+-------------------------------------------------------------------+
+| Key | Value                                                             |
++-----+-------------------------------------------------------------------+
+| dir | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/report |
++-----+-------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+log - 
++------+--------------------------------------------------------------------------+
+| Key  | Value                                                                    |
++------+--------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/log           |
+| file | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/log/route.log |
++------+--------------------------------------------------------------------------+
+2026-10-25 20:31:29,210 - ecc_smoke - INFO - 
+script - 
++------+----------------------------------------------------------------------------------+
+| Key  | Value                                                                            |
++------+----------------------------------------------------------------------------------+
+| dir  | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/script                |
+| main | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/script/route_main.tcl |
++------+----------------------------------------------------------------------------------+
+2026-10-25 20:31:29,211 - ecc_smoke - INFO - 
+analysis - 
++-------------------+--------------------------------------------------------------------------------------------+
+| Key               | Value                                                                                      |
++-------------------+--------------------------------------------------------------------------------------------+
+| dir               | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis                        |
+| metrics           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/qor_metrics.json       |
+| qor_metrics       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/qor_metrics.json       |
+| qor_summary       | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/qor_summary.json       |
+| qor_hotspots      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/qor_hotspots.json      |
+| sta_timing_issues | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/sta_timing_issues.json |
+| statis_csv        | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/analysis/route_statis.csv       |
++-------------------+--------------------------------------------------------------------------------------------+
+2026-10-25 20:31:29,211 - ecc_smoke - INFO - 
+subflow - 
++------+-------------------------------------------------------------------------+
+| Key  | Value                                                                   |
++------+-------------------------------------------------------------------------+
+| path | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/subflow.json |
++------+-------------------------------------------------------------------------+
+
+[steps]
++---+-------------+---------+---------+------------------+------+
+| # | name        | state   | runtime | peak memory (mb) | info |
++---+-------------+---------+---------+------------------+------+
+| 1 | load data   | Unstart |         | 0                | {}   |
+| 2 | run routing | Unstart |         | 0                | {}   |
+| 3 | save data   | Unstart |         | 0                | {}   |
+| 4 | analysis    | Unstart |         | 0                | {}   |
++---+-------------+---------+---------+------------------+------+
+2026-10-25 20:31:29,211 - ecc_smoke - INFO - 
+checklist - 
++-----------+---------------------------------------------------------------------------+
+| Key       | Value                                                                     |
++-----------+---------------------------------------------------------------------------+
+| path      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/route_ecc/checklist.json |
+| checklist | []                                                                        |
++-----------+---------------------------------------------------------------------------+
+2026-10-25 20:31:29,211 - ecc_smoke - INFO - ############################################################

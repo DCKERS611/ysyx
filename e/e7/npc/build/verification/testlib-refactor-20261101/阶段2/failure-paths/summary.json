@@ -1,0 +1,287 @@
+[
+  {
+    "name": "normal",
+    "returncode": 0,
+    "result": {
+      "case": "probe",
+      "backend": "npc",
+      "verdict": "pass",
+      "stop": "ebreak",
+      "pc": 2147483664,
+      "inst": 1048691,
+      "cycles": 43,
+      "retired": 5,
+      "attempts": 5,
+      "checks": 11,
+      "failures": 0,
+      "delay": "random"
+    }
+  },
+  {
+    "name": "expect-mismatch",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "npc",
+      "verdict": "fail",
+      "stop": "ebreak",
+      "pc": 2147483664,
+      "inst": 1048691,
+      "cycles": 43,
+      "retired": 5,
+      "attempts": 5,
+      "checks": 11,
+      "failures": 1,
+      "delay": "random"
+    }
+  },
+  {
+    "name": "expected-illegal",
+    "returncode": 0,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "pass",
+      "stop": "rejected",
+      "pc": 2147483656,
+      "inst": 1050643,
+      "cycles": 29,
+      "retired": 2,
+      "attempts": 3,
+      "checks": 8,
+      "failures": 0,
+      "delay": "random",
+      "core": 51,
+      "core_fail": 0,
+      "extra": 21,
+      "extra_fail": 0,
+      "memory": 33554432,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "unexpected-illegal",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "rejected",
+      "pc": 2147483656,
+      "inst": 1050643,
+      "cycles": 29,
+      "retired": 2,
+      "attempts": 3,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 51,
+      "core_fail": 0,
+      "extra": 21,
+      "extra_fail": 2,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "unaligned-npc",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "npc",
+      "verdict": "fail",
+      "stop": "fetch_unaligned",
+      "pc": 2147483650,
+      "inst": 32871,
+      "cycles": 30,
+      "retired": 3,
+      "attempts": 3,
+      "checks": 5,
+      "failures": 3,
+      "delay": "random"
+    }
+  },
+  {
+    "name": "unaligned-diff",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "fetch_unaligned",
+      "pc": 2147483650,
+      "inst": 32871,
+      "cycles": 30,
+      "retired": 3,
+      "attempts": 3,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 51,
+      "core_fail": 0,
+      "extra": 20,
+      "extra_fail": 0,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "unaligned-emu",
+    "returncode": 1,
+    "result": {
+      "case": "unaligned.bin",
+      "backend": "emu",
+      "verdict": "fail",
+      "stop": "reference_fault",
+      "retired": 3,
+      "a0": 0,
+      "halt_pc": 0
+    }
+  },
+  {
+    "name": "illegal-emu",
+    "returncode": 1,
+    "result": {
+      "case": "illegal_rd.bin",
+      "backend": "emu",
+      "verdict": "fail",
+      "stop": "rejected",
+      "retired": 2,
+      "a0": 7,
+      "halt_pc": 0
+    }
+  },
+  {
+    "name": "limit-emu",
+    "returncode": 1,
+    "result": {
+      "case": "loop.bin",
+      "backend": "emu",
+      "verdict": "fail",
+      "stop": "attempt_limit",
+      "retired": 1000,
+      "a0": 0,
+      "halt_pc": 0
+    }
+  },
+  {
+    "name": "cycle-limit",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "cycle_limit",
+      "pc": 2147483648,
+      "inst": 0,
+      "cycles": 5,
+      "retired": 0,
+      "attempts": 0,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 0,
+      "core_fail": 0,
+      "extra": 0,
+      "extra_fail": 0,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "attempt-limit",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "attempt_limit",
+      "pc": 2147483652,
+      "inst": 5243027,
+      "cycles": 10,
+      "retired": 1,
+      "attempts": 1,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 17,
+      "core_fail": 0,
+      "extra": 7,
+      "extra_fail": 0,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "comparison-mismatch",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "comparison_mismatch",
+      "pc": 2147483648,
+      "inst": 5243027,
+      "cycles": 10,
+      "retired": 1,
+      "attempts": 1,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 17,
+      "core_fail": 1,
+      "extra": 7,
+      "extra_fail": 0,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "reference-fault",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "reference_fault",
+      "pc": 2147483648,
+      "inst": 5243027,
+      "cycles": 10,
+      "retired": 1,
+      "attempts": 1,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 0,
+      "core_fail": 0,
+      "extra": 0,
+      "extra_fail": 0,
+      "memory": 0,
+      "memory_fail": 0
+    }
+  },
+  {
+    "name": "memory-mismatch",
+    "returncode": 1,
+    "result": {
+      "case": "probe",
+      "backend": "diff",
+      "verdict": "fail",
+      "stop": "comparison_mismatch",
+      "pc": 2147483664,
+      "inst": 1048691,
+      "cycles": 43,
+      "retired": 5,
+      "attempts": 5,
+      "checks": 0,
+      "failures": 0,
+      "delay": "random",
+      "core": 85,
+      "core_fail": 0,
+      "extra": 37,
+      "extra_fail": 0,
+      "memory": 33554432,
+      "memory_fail": 1
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "tests": [
+    {
+      "case": "word_memory",
+      "runner": "build/regress/cpu_test",
+      "exit": 0
+    },
+    {
+      "case": "word_memory",
+      "runner": "build/difftest/difftest",
+      "exit": 0
+    },
+    {
+      "case": "byte_memory",
+      "runner": "build/regress/cpu_test",
+      "exit": 0
+    },
+    {
+      "case": "byte_memory",
+      "runner": "build/difftest/difftest",
+      "exit": 0
+    }
+  ],
+  "wave_signals_compared": [
+    "clk",
+    "rst",
+    "pc",
+    "inst",
+    "commit",
+    "ifu_reqValid",
+    "ifu_respValid",
+    "lsu_reqValid",
+    "lsu_respValid",
+    "mem_ren",
+    "mem_wen",
+    "mem_addr",
+    "mem_wdata",
+    "mem_wmask",
+    "u_rf.wen_in",
+    "u_ifu.state",
+    "u_ifu.lsu_sent"
+  ],
+  "wave_timestamps_compared": 146,
+  "wave_match": true,
+  "cycles": 71
+}

@@ -1,0 +1,7 @@
+halt 0x80000014
+instructions 6
+cycles_fixed 1 12
+reg 1 0xfffff000
+reg 2 0x80000000
+reg 3 0x00001000
+reg 10 0xffffefff

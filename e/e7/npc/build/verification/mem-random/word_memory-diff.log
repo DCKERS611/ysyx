@@ -1,0 +1,6 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/regress/programs/functional/word_memory.bin: 28 bytes
+[ DIFF PASS ] word_memory
+PASS: 119 (7 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 51
+halt_pc=0x80000018 NPC.pc=0x8000001c EMU.pc=0x80000018
+PASS: 9 checks

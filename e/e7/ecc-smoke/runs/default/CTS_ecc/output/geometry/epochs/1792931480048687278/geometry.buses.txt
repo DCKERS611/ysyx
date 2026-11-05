@@ -1,0 +1,1 @@
+name	type	left	right	net_count	pin_count	nets	pins

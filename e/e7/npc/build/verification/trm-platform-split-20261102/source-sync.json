@@ -1,0 +1,22 @@
+[
+  {
+    "path": "abstract-machine/am/src/riscv/npc/trm.c",
+    "sha256": "cd9967f97550991b7ae316a5f0d9ea7ac38b1010f57b3811d07a8e12ee620b66"
+  },
+  {
+    "path": "abstract-machine/am/src/riscv/ysyxsoc/trm.c",
+    "sha256": "af6593f6572f16e68250d7ddddf12b0081081cc5e79ba9a096a95f300e0a73fd"
+  },
+  {
+    "path": "abstract-machine/scripts/minirv-ysyxsoc.mk",
+    "sha256": "f74ac6bd7e52744e4f41409f324091f98b74c1f36757869959a5a19501a57c4d"
+  },
+  {
+    "path": "npc/Makefile.soc",
+    "sha256": "e645fc499196fdfcdb3fff7135e6a460f23171673c191c28cb3f7fe332803699"
+  },
+  {
+    "path": "npc/tests/soc_main.cpp",
+    "sha256": "b2f598e27103493c83dbcb1f85877320fe986fb48f6aea3ee0389ab743743f39"
+  }
+]

@@ -1,0 +1,23 @@
+{
+    "CTS": {
+        "buffer_area": 5.6,
+        "buffer_num": 2,
+        "clock_path_max_buffer": 2,
+        "clock_path_min_buffer": 2,
+        "max_clock_wirelength": 30408,
+        "max_level_of_clock_tree": 2,
+        "total_clock_wirelength": 46959.0
+    },
+    "run": {
+        "state": "Success",
+        "runtime_seconds": 23.568,
+        "peak_memory_mb": 1396.336
+    },
+    "constraints": {
+        "sdc": {
+            "availability": "available",
+            "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+            "size_bytes": 253
+        }
+    }
+}

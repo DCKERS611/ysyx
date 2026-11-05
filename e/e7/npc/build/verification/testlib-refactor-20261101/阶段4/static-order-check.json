@@ -1,0 +1,6 @@
+{
+  "request_rising_edge_write_reply_block_byte_equal": true,
+  "sampling": "before step; no added eval",
+  "device_sync": "unchanged condition before comparison",
+  "fst_cleanup": "dut.final then close/reset"
+}

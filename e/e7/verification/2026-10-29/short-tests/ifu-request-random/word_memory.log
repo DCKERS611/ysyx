@@ -1,0 +1,11 @@
+[ RUN ] word_memory
+Loaded /home/ysyx/ysyx-workbench/npc/build/regress/programs/functional/word_memory.bin: 28 bytes
+pc=0x80000000 inst=0x800000b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x10008093 --> next_pc=0x80000008
+pc=0x80000008 inst=0x02a00113 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x0020a423 --> next_pc=0x80000010
+pc=0x80000010 inst=0x0080a183 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00018513 --> next_pc=0x80000018
+ebreak @ pc=0x80000018
+pc=0x80000018 inst=0x00100073 --> next_pc=0x8000001c
+PASS: 9 checks

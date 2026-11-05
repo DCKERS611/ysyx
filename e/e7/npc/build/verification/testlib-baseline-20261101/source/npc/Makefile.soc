@@ -1,0 +1,60 @@
+.DEFAULT_GOAL := build
+
+VERILATOR ?= verilator
+CPU_TOP := ysyx_00000000
+
+SOC_DIR := $(abspath ../ysyxSoC)
+BUILD_DIR := $(abspath build/soc)
+OBJ_DIR := $(BUILD_DIR)/obj_dir
+BIN := $(BUILD_DIR)/sim
+
+CPU_VSRCS := $(abspath $(wildcard vsrc/*.v))
+PERIP_VSRCS := $(shell find $(SOC_DIR)/perip -type f \
+	\( -name '*.v' -o -name '*.sv' \))
+SOC_TOP := $(SOC_DIR)/ready-to-run/minirv/ElaborateTop.v
+
+VSRCS := $(CPU_VSRCS) $(SOC_TOP) $(PERIP_VSRCS)
+CSRCS := $(abspath csrc/soc_main.cpp)
+
+SOC_FLAGS := \
+	--timescale "1ns/1ns" \
+	--no-timing \
+	-D__VERILOG__ \
+	-DPDK_BEHAV \
+	-D__UART_TO_CONSOLE__ \
+	-I$(SOC_DIR)/perip/uart16550/rtl \
+	-I$(SOC_DIR)/perip/spi/rtl
+
+# 外设警告仍显示，但不作为构建终止条件。
+SOC_WARN_FLAGS := -Wall -Wno-DECLFILENAME -Wno-fatal
+
+.PHONY: build lint-cpu lint run wave
+
+build: $(BIN)
+
+$(BIN): $(VSRCS) $(CSRCS) $(MAKEFILE_LIST)
+	mkdir -p $(BUILD_DIR)
+	$(VERILATOR) --cc --exe --build \
+		--top-module SimTop \
+		--trace-fst --trace-structs \
+		$(SOC_WARN_FLAGS) $(SOC_FLAGS) \
+		--Mdir $(OBJ_DIR) \
+		$(VSRCS) $(CSRCS) \
+		-CFLAGS "-std=c++17 -O2" \
+		-o $(BIN)
+
+# 自己的 CPU 仍然使用严格检查。
+lint-cpu:
+	$(VERILATOR) --lint-only -Wall -Wno-DECLFILENAME \
+		--top-module $(CPU_TOP) $(CPU_VSRCS)
+
+lint:
+	$(VERILATOR) --lint-only \
+		--top-module SimTop \
+		$(SOC_WARN_FLAGS) $(SOC_FLAGS) $(VSRCS)
+
+run: $(BIN)
+	$(BIN)
+
+wave: $(BIN)
+	$(BIN) $(BUILD_DIR)/soc.fst

@@ -1,0 +1,9 @@
+halt 0x80000048
+instructions 18
+cycles_fixed 1 42
+reg 2 0x80000100
+reg 5 0x12345678
+reg 6 0x12
+reg 7 0xab
+reg 10 0x114
+mem 0x80000100 0x12ab5678

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "lint",
+    "command": "make -f Makefile.cpptest lint",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.1
+  },
+  {
+    "name": "test-library",
+    "command": "make -f Makefile.cpptest test-library",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.48
+  },
+  {
+    "name": "test-all",
+    "command": "make -f Makefile.cpptest test-all",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.91
+  },
+  {
+    "name": "test_mkprog",
+    "command": "python3 -m unittest discover -s tests -p test_mkprog.py -v",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.1
+  },
+  {
+    "name": "dummy-run",
+    "command": "make ARCH=minirv-npc ALL=dummy run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 1.36
+  },
+  {
+    "name": "dummy-diff",
+    "command": "make ARCH=minirv-npc ALL=dummy run DIFFTEST=1",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 2.16
+  },
+  {
+    "name": "hello-run",
+    "command": "make ARCH=minirv-npc run",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.31
+  },
+  {
+    "name": "difftest-small",
+    "command": "make -f Makefile.diff difftest-small",
+    "returncode": 0,
+    "pass_gate": true,
+    "seconds": 0.27
+  }
+]

@@ -1,0 +1,15 @@
+bash: initialize_job_control: no job control in background: Bad file descriptor
+test_aliases_and_comments (test_mkprog.mkprog_tests) ... ok
+test_all_nine_instructions (test_mkprog.mkprog_tests) ... ok
+test_cli_outputs_and_error (test_mkprog.mkprog_tests) ... ok
+test_forward_and_backward_labels (test_mkprog.mkprog_tests) ... ok
+test_invalid_inputs (test_mkprog.mkprog_tests) ... ok
+test_jump_range (test_mkprog.mkprog_tests) ... ok
+test_lecture_six_words (test_mkprog.mkprog_tests) ... ok
+test_listing_and_little_endian (test_mkprog.mkprog_tests) ... ok
+test_signed_boundaries (test_mkprog.mkprog_tests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.052s
+
+OK

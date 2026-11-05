@@ -40,3 +40,13 @@ WSL 正式源码与 Windows 阶段副本不自动同步。工作目录可能被�
 - 新增或调整构建、测试入口时，更新对应索引；E7 阶段完成后必须更新该部分。
 - `README.md` 补充必要的执行环境、工作目录、环境变量、构建与运行说明，以及波形生成和查看方法；具体测试清单以测试索引为准。
 - 只记录项目实际支持的命令，未验证的步骤明确标注。实际执行结果保存在学习记录中，不把入口存在当作测试通过。
+
+
+## 原路径同步（2026-11-05用户明确要求）
+
+- WSL工作台相对路径必须原样保留到Windows E7根目录；例如ecc/npc-e7/runs/<run-id>不能改放synthesis或仅放verification。
+- 测试成果必须保留原位置，verification允许额外副本，不能取代原目录。
+- 不用源码扩展名白名单宣称全量同步。以完整文件/链接清单和哈希核对，明确列出工具、PDK、编译中间件和缓存等排除项。
+- 保留WSL符号链接类型；Windows学习资料、历史备份独立保留，不作为过期源码删除。
+- E7根README.md和.gitignore分别承担Windows导航与发布策略，不能被WSL同名文件覆盖；WSL原件另存verification/2026-11-05/sync-audit/wsl-workbench-root。
+- 现有同步入口为tools/sync_wsl_snapshot.ps1，默认审计，-Apply才复制。维护审计放README/verification，不写入学习记录。

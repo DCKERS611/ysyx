@@ -1,0 +1,48 @@
+{
+  "balance-20261105-161653": {
+    "area": 10122.28,
+    "worst": {
+      "start_point": "u_ifu.u_state.dout_2__reg_p:Q",
+      "end_point": "u_rf.rf[0]_29__reg_p:D",
+      "slack_ns": 2.9261926212,
+      "arrival_ns": 6.9825752385
+    },
+    "inst18_gates": [
+      {
+        "cell": "INVX0P5H7L",
+        "instance": "inst_18__INVX0P5H7L_Y",
+        "load_pins": 128
+      },
+      {
+        "cell": "AOI21X0P5H7L",
+        "instance": "\\u_ifu.inst_saved_18__INVX0P5H7L_A_Y_AOI211X0P5H7L_B0_Y_AOI21X0P5H7L_B0",
+        "load_pins": 123
+      }
+    ],
+    "sdc": "# Auto-generated SDC file\n\nset clk_name clock \nset clk_port_name clock\nset clk_freq_mhz 100.0\nset clk_period [expr 1000.0 / $clk_freq_mhz]\nset clk_io_pct 0.2\nset clk_port [get_ports $clk_port_name]\ncreate_clock -name $clk_name -period $clk_period $clk_port\n"
+  },
+  "diagnostic-balance-200mhz-20261105": {
+    "area": 10176.32,
+    "worst": {
+      "start_point": "u_ifu.inst_saved_15__reg_p:Q",
+      "end_point": "u_csr.csr_minstret_61__reg_p:D",
+      "slack_ns": 1.0691016666,
+      "arrival_ns": 3.8897478832
+    },
+    "inst18_gates": [
+      {
+        "cell": "INVX2P5H7L",
+        "instance": "inst_18__INVX2P5H7L_Y",
+        "load_pins": 128
+      },
+      {
+        "cell": "AOI21X4H7L",
+        "instance": "\\u_ifu.inst_saved_18__INVX0P5H7L_A_Y_AOI211X0P5H7L_B0_Y_AOI21X4H7L_B0",
+        "load_pins": 123
+      }
+    ],
+    "sdc": "# Auto-generated SDC file\n\nset clk_name clock \nset clk_port_name clock\nset clk_freq_mhz 200.0\nset clk_period [expr 1000.0 / $clk_freq_mhz]\nset clk_io_pct 0.2\nset clk_port [get_ports $clk_port_name]\ncreate_clock -name $clk_name -period $clk_period $clk_port\n"
+  },
+  "rtl_identical": true,
+  "rtl_files": 9
+}

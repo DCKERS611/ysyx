@@ -1,0 +1,155 @@
+{
+  "goal_scope": "v2 steps 1-4 (stages 0-4)",
+  "stage_gates": {
+    "阶段0": "/home/ysyx/ysyx-workbench/npc/build/verification/testlib-baseline-20261101/execution-summary.json",
+    "阶段1改名": "/home/ysyx/ysyx-workbench/npc/build/verification/testlib-refactor-20261101/阶段1/rename/execution-summary.json",
+    "阶段1核心": "/home/ysyx/ysyx-workbench/npc/build/verification/testlib-refactor-20261101/阶段1/core/execution-summary.json",
+    "阶段2": "/home/ysyx/ysyx-workbench/npc/build/verification/testlib-refactor-20261101/阶段2/result/execution-summary.json",
+    "阶段3": "/home/ysyx/ysyx-workbench/npc/build/verification/testlib-refactor-20261101/阶段3/final/execution-summary.json"
+  },
+  "section13_review": [
+    {
+      "item": "1",
+      "finding": "提交前只读采样保持在 step 之前",
+      "evidence": "tests/difftest.cpp + 基线计数"
+    },
+    {
+      "item": "2",
+      "finding": "ebreak 完成当前拍；拒绝只做低电平求值",
+      "evidence": "阶段3/final/extra/*-edge.log"
+    },
+    {
+      "item": "3",
+      "finding": "比较/参考故障原因和失败矩阵落地",
+      "evidence": "阶段2/failure-paths/summary.json"
+    },
+    {
+      "item": "4",
+      "finding": "LFSR 接受条件、IFU→LSU 和原请求块保持",
+      "evidence": "static-order-check.json"
+    },
+    {
+      "item": "5",
+      "finding": "设备读同步条件与位置保持",
+      "evidence": "tests/difftest.cpp + numeric-comparison.json"
+    },
+    {
+      "item": "6",
+      "finding": "final→FST close/reset",
+      "evidence": "csrc/sim.cpp + 部分初始化注入"
+    },
+    {
+      "item": "7",
+      "finding": "调用方 checker 引用与既有计数接口",
+      "evidence": "tests/expectations.h + 逐案例检查数"
+    },
+    {
+      "item": "8",
+      "finding": "最终 V1–V16 通过，V15旧基线 N/A",
+      "evidence": "阶段3/final/execution-summary.json"
+    },
+    {
+      "item": "9",
+      "finding": "阶段0 40项 SHA；结束68项 SHA与目录对照",
+      "evidence": "source-sha256-check.log/windows-sync-check.log"
+    },
+    {
+      "item": "10",
+      "finding": "RESULT/预算/RAII/内存未执行语义验证",
+      "evidence": "失败探针、单拍探针、Python后端继续运行"
+    },
+    {
+      "item": "11",
+      "finding": "E4/E5引用检查无输出",
+      "evidence": "completion-audit.json"
+    }
+  ],
+  "protected_files": [
+    "abstract-machine/scripts/minirv-npc.mk",
+    "abstract-machine/scripts/platform/npc.mk",
+    "am-kernels/tests/cpu-tests/Makefile",
+    "minirvEMU/emu.cpp",
+    "minirvEMU/emu.h",
+    "npc/csrc/dpi.cpp",
+    "npc/csrc/dpi.h",
+    "npc/csrc/pmem.cpp",
+    "npc/csrc/pmem.h",
+    "npc/tests/programs/acceptance/array_sum.s",
+    "npc/tests/programs/acceptance/byte_sum.s",
+    "npc/tests/programs/acceptance/sum_1_to_10.s",
+    "npc/tests/programs/boundary/consecutive_jumps.s",
+    "npc/tests/programs/boundary/illegal_rd.s",
+    "npc/tests/programs/boundary/illegal_rs1.s",
+    "npc/tests/programs/boundary/illegal_rs2.s",
+    "npc/tests/programs/boundary/illegal_store.s",
+    "npc/tests/programs/boundary/immediate_sign.s",
+    "npc/tests/programs/boundary/jalr_negative.s",
+    "npc/tests/programs/boundary/jalr_same_register.s",
+    "npc/tests/programs/boundary/u_immediate.s",
+    "npc/tests/programs/boundary/unsupported_funct3.s",
+    "npc/tests/programs/boundary/unsupported_funct7.s",
+    "npc/tests/programs/boundary/unsupported_store.s",
+    "npc/tests/programs/boundary/unsupported_system.s",
+    "npc/tests/programs/boundary/x0_readonly.s",
+    "npc/tests/programs/difftest/medium.s",
+    "npc/tests/programs/difftest/small.s",
+    "npc/tests/programs/ebreak.s",
+    "npc/tests/programs/functional/arithmetic.s",
+    "npc/tests/programs/functional/byte_memory.s",
+    "npc/tests/programs/functional/call_return.s",
+    "npc/tests/programs/functional/word_memory.s",
+    "npc/tests/programs/lecture.s",
+    "npc/vsrc/template.v",
+    "npc/vsrc/ysyx_00000000.v",
+    "npc/vsrc/ysyx_00000000_exu.v",
+    "npc/vsrc/ysyx_00000000_gpr.v",
+    "npc/vsrc/ysyx_00000000_idu.v",
+    "npc/vsrc/ysyx_00000000_ifu.v",
+    "npc/vsrc/ysyx_00000000_lsu.v",
+    "npc/vsrc/ysyx_00000000_wbu.v",
+    "riscv-tests/Makefile"
+  ],
+  "check_header_only_renamed": true,
+  "soc_driver_only_moved": true,
+  "changed_source_or_docs": [
+    "minirvEMU/main.cpp",
+    "npc/Makefile.cpptest",
+    "npc/Makefile.soc",
+    "npc/README.md",
+    "npc/csrc/check.h",
+    "npc/csrc/cpu_view.h",
+    "npc/csrc/sim.cpp",
+    "npc/csrc/sim.h",
+    "npc/csrc/test_suite.h",
+    "npc/tests/Makefile.mk",
+    "npc/tests/README.md",
+    "npc/tests/am_main.cpp",
+    "npc/tests/checker_test.cpp",
+    "npc/tests/cpu_test.cpp",
+    "npc/tests/difftest.cpp",
+    "npc/tests/expectations.h",
+    "npc/tests/run_acceptance.py",
+    "npc/tests/run_cpu_tests.py",
+    "npc/tests/test_mkprog.py",
+    "npc/tools/mkprog.py"
+  ],
+  "moves": {
+    "npc/csrc/main.cpp": "npc/tests/am_main.cpp",
+    "npc/csrc/difftest.cpp": "npc/tests/difftest.cpp",
+    "npc/csrc/soc_main.cpp": "npc/tests/soc_main.cpp"
+  },
+  "external_references": {
+    "/mnt/e/ysyx/e/e4": "no references",
+    "/mnt/e/ysyx/e/e5": "no references"
+  },
+  "windows_source_files": 68,
+  "git_head": "f93e6f10c1d42edb2a3ea222d85951feeb6ef004",
+  "git_index_empty": true,
+  "diff_check_pass": true,
+  "limitations": [
+    "Verilator FST isOpen may report true for unwritable paths; existing behavior retained",
+    "SoC not executed, hello acceptance pending",
+    "Root E7 README old entry references left outside specified document scope",
+    "archbench and future steps 5-7 not run"
+  ]
+}

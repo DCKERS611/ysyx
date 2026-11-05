@@ -1,0 +1,83 @@
+{
+  "audit_scope": "Read-only Git history, ignore rules, README/AGENTS/plan/index path references. No project file or Git index changes.",
+  "git_head": "b64c22d3b5f98b7910946e00090f7da45883dc42",
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "path": "e/e7/.gitignore",
+      "problem": "The Windows snapshot policy was overwritten by the WSL workbench .gitignore. Patterns *.*, *, and explicit dependency-directory exclusions ignore almost all new source, ECC run, and verification files. Existing tracked paths still update, hiding the error in ordinary git status.",
+      "evidence": [
+        "git diff e/e7/.gitignore shows full replacement of snapshot policy",
+        "git check-ignore -v attributes diagnostic_comparison.json in both ecc and verification to e/e7/.gitignore:2:*"
+      ],
+      "recommendation": "Do not treat WSL workbench VCS ownership rules as the Windows publication policy. Preserve exact WSL source files when mirroring, but stage the audited manifest explicitly with git add -f and verify its complete staged path set, or keep a clearly documented Windows-only ignore overlay. Avoid broad directory ignores for ecc because project inputs and runs must remain publishable."
+    },
+    {
+      "id": "H2",
+      "severity": "high",
+      "path": "e/e7/synthesis/ecc-npc and e/e7/synthesis/ecc-npc-e7",
+      "problem": "These are artificial alternate mappings of WSL ecc/npc and ecc/npc-e7. They replace the original layout with partial file subsets and led to a missing diagnostic run at its expected Windows path.",
+      "recommendation": "Copy full project/run trees at ecc/npc and ecc/npc-e7 first, hash verify, then remove duplicate mappings only after proving no unique content. Preserve verification as an additional copy, never the sole source-layout snapshot."
+    },
+    {
+      "id": "H3",
+      "severity": "medium",
+      "path": "e/e7/README.md:116; e/e7/E7学习计划.md:766,958; e/测试与构建入口索引.md:158",
+      "problem": "Current guidance points to synthesis/ecc-* or synthesis/ rather than ecc/... as the real snapshot path.",
+      "recommendation": "Update current guidance to ecc/npc-e7 and ecc/npc; do not rewrite dated historical validation into new tests. Diagnostic result source-layout location should be primary, verification copy secondary."
+    },
+    {
+      "id": "H4",
+      "severity": "medium",
+      "path": "e/e7/README.md:3; e/e7/E7学习计划.md:4,767",
+      "problem": "1184 selected files were verified, not a full WSL source tree. This cannot support a complete-sync claim. Current top paragraph still describes the older Nov4 snapshot.",
+      "recommendation": "Replace current snapshot counts with results of the full new audit, name explicit excluded tool/cache/build paths, and keep excluded files inventoried. Old dated statements may remain historical."
+    },
+    {
+      "id": "H5",
+      "severity": "medium",
+      "path": "e/e7/README.md and WSL root README.md",
+      "problem": "The canonical WSL root README is a 227-byte course initializer, while the same Windows path contains the stage guide. A naive full mirror would destroy the guide; keeping it silently is not byte-identical mirroring.",
+      "recommendation": "Preserve the existing stage guide under a clearly named stage-only documentation path and update AGENTS links if the source root README is to be mirrored exactly. Alternative: explicitly declare README.md as a Windows-only overlay and include its source conflict in the audit. Do not silently overwrite or invent source equivalence."
+    },
+    {
+      "id": "H6",
+      "severity": "medium",
+      "path": "e/e7/abstract-machine/.gitignore and dependency ignore files",
+      "problem": "Nested original ignore rules also suppress new dependency files. Restoring only the top stage ignore does not guarantee completeness.",
+      "recommendation": "Use full audited source/run manifest for scoped forced staging and audit its staged set; retain nested .git directories excluded. Do not recursively force-add unclassified artifacts or secrets."
+    },
+    {
+      "id": "H7",
+      "severity": "low",
+      "path": "e/e7/README.md:88",
+      "problem": "The blanket statement that raw waves and build outputs are not synchronized conflicts with the latest user request to keep relevant test outputs at original paths.",
+      "recommendation": "Separate source sync policy from Git publication and clearly allow relevant tests/reports/waves in original paths; only exclude actual tool installs, caches, and transient compiler outputs where appropriate."
+    }
+  ],
+  "already_present": {
+    "commit": "b64c22d",
+    "description": "ecc/npc-e7/Makefile,ecc.toml,rtl/filelist.f and the existing area/balance/e7-syn-sta-01 runs are tracked at original paths; do not delete these as duplicates."
+  },
+  "git_scope": {
+    "include": [
+      "e/e7 source files and explicitly approved test/synthesis output paths",
+      "e/e7 project guidance and sync audit report",
+      "e/测试与构建入口索引.md E7 changes only"
+    ],
+    "exclude_unrelated_dirty": [
+      "e/e5/**",
+      "AGENTS.md at repository root",
+      "backups/ at repository root"
+    ],
+    "ignore_note": "Root policy intentionally excludes local learning plans/background/handoff documents; do not accidentally force-stage those. User asked repository submission but preserve unrelated working tree changes."
+  },
+  "line_endings": {
+    "core.autocrlf": true,
+    "core.symlinks": false,
+    "existing_attributes": "e/e7/backups/2026-11-03-gpio-csr-timer/.gitattributes has * -text",
+    "recommendation": "Hash synchronization bytes before stage and review normalization effects; do not alter the historical backup attributes or force existing symlinks into incorrect source bytes."
+  },
+  "learning_record_instruction": "Do not add synchronization maintenance activity to E7学习记录.md; use README or a dedicated synchronization audit artifact."
+}

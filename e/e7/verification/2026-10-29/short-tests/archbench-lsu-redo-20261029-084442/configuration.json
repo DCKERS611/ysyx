@@ -1,0 +1,12 @@
+{
+  "configuration": "CPU requests immediate; memory LFSR replies 1..20; three states plus lsu_sent",
+  "command": "bash run.sh ARCH=minirv-npc DIFFTEST=0 mainargs=train",
+  "previous_results": "/home/ysyx/ysyx-workbench/archbench/result-history/before-lsu-redo-20261029-084442",
+  "source_sha256": {
+    "npc/vsrc/ifu.v": "b05ad7a4a46b11b26ea4b7b218fcd1b2d22c3646aaebe76c546609834b4ccb75",
+    "npc/vsrc/top.v": "fc995d2729de18e1faf0c62ce1dcdee0dc46ddb985f1e360f8fa3059b8af89df",
+    "npc/vsrc/lsu.v": "9674902bcd1d231fe836cb6b50e1ba8abb7ef87127964413b01ae070cfb7ff16",
+    "npc/csrc/sim.cpp": "7ab1ceca6022c0134b640be49ff0e375f4cf3ac4c30edc15e0435509a22fc5f7",
+    "npc/csrc/main.cpp": "5639e07fbfbd21dda026f7ddc22364ca97d69d0bbf29a3c5271602c167465fe7"
+  }
+}

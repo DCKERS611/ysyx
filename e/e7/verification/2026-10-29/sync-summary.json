@@ -1,0 +1,20 @@
+{
+  "source_files_checked": 1257,
+  "source_files_copied": [
+    "npc/vsrc/ifu.v",
+    "npc/csrc/difftest.cpp",
+    "npc/csrc/sim.cpp",
+    "npc/csrc/main.cpp"
+  ],
+  "evidence_files_copied": 216,
+  "evidence_bytes": 10589070,
+  "excluded": [
+    ".git",
+    "build",
+    "cache",
+    "FST/VCD",
+    "obj_dir",
+    "runs"
+  ],
+  "preserved": "WSL originals and Windows-only learning documents"
+}

@@ -1,0 +1,476 @@
+{
+  "dummy-diff": {
+    "cases": 1,
+    "all_counts_equal": true,
+    "values": {
+      "dummy-minirv-npc.bin": [
+        289,
+        17,
+        33554432,
+        118
+      ]
+    }
+  },
+  "hello-diff": {
+    "cases": 1,
+    "all_counts_equal": true,
+    "values": {
+      "hello-minirv-npc.bin": [
+        517939,
+        30467,
+        33554432,
+        224861
+      ]
+    }
+  },
+  "cpu-tests-diff": {
+    "cases": 35,
+    "all_counts_equal": true,
+    "values": {
+      "shift-minirv-npc.bin": [
+        84150,
+        4950,
+        33554432,
+        36591
+      ],
+      "bit-minirv-npc.bin": [
+        80223,
+        4719,
+        33554432,
+        35202
+      ],
+      "unalign-minirv-npc.bin": [
+        18105,
+        1065,
+        33554432,
+        7871
+      ],
+      "switch-minirv-npc.bin": [
+        55658,
+        3274,
+        33554432,
+        24090
+      ],
+      "to-lower-case-minirv-npc.bin": [
+        659872,
+        38816,
+        33554432,
+        287358
+      ],
+      "sum-minirv-npc.bin": [
+        106947,
+        6291,
+        33554432,
+        46756
+      ],
+      "fact-minirv-npc.bin": [
+        621197,
+        36541,
+        33554432,
+        270818
+      ],
+      "select-sort-minirv-npc.bin": [
+        965022,
+        56766,
+        33554432,
+        421181
+      ],
+      "mov-c-minirv-npc.bin": [
+        8432,
+        496,
+        33554432,
+        3605
+      ],
+      "string-minirv-npc.bin": [
+        378692,
+        22276,
+        33554432,
+        164075
+      ],
+      "quick-sort-minirv-npc.bin": [
+        877540,
+        51620,
+        33554432,
+        383304
+      ],
+      "recursion-minirv-npc.bin": [
+        1351908,
+        79524,
+        33554432,
+        589890
+      ],
+      "matrix-mul-minirv-npc.bin": [
+        52919232,
+        3112896,
+        33554432,
+        23103905
+      ],
+      "goldbach-minirv-npc.bin": [
+        2997967,
+        176351,
+        33554432,
+        1309983
+      ],
+      "leap-year-minirv-npc.bin": [
+        3553782,
+        209046,
+        33554432,
+        1553675
+      ],
+      "min3-minirv-npc.bin": [
+        295409,
+        17377,
+        33554432,
+        128064
+      ],
+      "add-longlong-minirv-npc.bin": [
+        340680,
+        20040,
+        33554432,
+        148579
+      ],
+      "dummy-minirv-npc.bin": [
+        289,
+        17,
+        33554432,
+        118
+      ],
+      "wanshu-minirv-npc.bin": [
+        7122354,
+        418962,
+        33554432,
+        3114040
+      ],
+      "mul-longlong-minirv-npc.bin": [
+        2462790,
+        144870,
+        33554432,
+        1078903
+      ],
+      "add-minirv-npc.bin": [
+        183192,
+        10776,
+        33554432,
+        79141
+      ],
+      "pascal-minirv-npc.bin": [
+        581264,
+        34192,
+        33554432,
+        253378
+      ],
+      "movsx-minirv-npc.bin": [
+        14229,
+        837,
+        33554432,
+        6097
+      ],
+      "if-else-minirv-npc.bin": [
+        101439,
+        5967,
+        33554432,
+        44174
+      ],
+      "div-minirv-npc.bin": [
+        8574851,
+        504403,
+        33554432,
+        3757311
+      ],
+      "load-store-minirv-npc.bin": [
+        99875,
+        5875,
+        33554432,
+        43530
+      ],
+      "hello-str-minirv-npc.bin": [
+        397443,
+        23379,
+        33554432,
+        172709
+      ],
+      "prime-minirv-npc.bin": [
+        23511255,
+        1383015,
+        33554432,
+        10283157
+      ],
+      "bubble-sort-minirv-npc.bin": [
+        984096,
+        57888,
+        33554432,
+        429461
+      ],
+      "sub-longlong-minirv-npc.bin": [
+        415752,
+        24456,
+        33554432,
+        181219
+      ],
+      "mersenne-minirv-npc.bin": [
+        10205117,
+        600301,
+        33554432,
+        4472428
+      ],
+      "max-minirv-npc.bin": [
+        253300,
+        14900,
+        33554432,
+        109801
+      ],
+      "crc32-minirv-npc.bin": [
+        6393649,
+        376097,
+        33554432,
+        2791380
+      ],
+      "fib-minirv-npc.bin": [
+        100657,
+        5921,
+        33554432,
+        43509
+      ],
+      "narcissistic-minirv-npc.bin": [
+        56025251,
+        3295603,
+        33554432,
+        24508726
+      ]
+    }
+  },
+  "riscv-tests-i-diff": {
+    "cases": 38,
+    "all_counts_equal": true,
+    "values": {
+      "add-minirv-npc.bin": [
+        72641,
+        4273,
+        33554432,
+        31611
+      ],
+      "addi-minirv-npc.bin": [
+        38811,
+        2283,
+        33554432,
+        16862
+      ],
+      "and-minirv-npc.bin": [
+        87465,
+        5145,
+        33554432,
+        38031
+      ],
+      "andi-minirv-npc.bin": [
+        39032,
+        2296,
+        33554432,
+        16996
+      ],
+      "auipc-minirv-npc.bin": [
+        3995,
+        235,
+        33554432,
+        1718
+      ],
+      "beq-minirv-npc.bin": [
+        70822,
+        4166,
+        33554432,
+        30834
+      ],
+      "bge-minirv-npc.bin": [
+        84422,
+        4966,
+        33554432,
+        36811
+      ],
+      "bgeu-minirv-npc.bin": [
+        84847,
+        4991,
+        33554432,
+        36936
+      ],
+      "blt-minirv-npc.bin": [
+        75208,
+        4424,
+        33554432,
+        32791
+      ],
+      "bltu-minirv-npc.bin": [
+        76279,
+        4487,
+        33554432,
+        33201
+      ],
+      "bne-minirv-npc.bin": [
+        70822,
+        4166,
+        33554432,
+        30834
+      ],
+      "jal-minirv-npc.bin": [
+        3145,
+        185,
+        33554432,
+        1351
+      ],
+      "jalr-minirv-npc.bin": [
+        10880,
+        640,
+        33554432,
+        4703
+      ],
+      "lb-minirv-npc.bin": [
+        43877,
+        2581,
+        33554432,
+        19072
+      ],
+      "lbu-minirv-npc.bin": [
+        39389,
+        2317,
+        33554432,
+        17104
+      ],
+      "lh-minirv-npc.bin": [
+        60061,
+        3533,
+        33554432,
+        26224
+      ],
+      "lhu-minirv-npc.bin": [
+        41854,
+        2462,
+        33554432,
+        18166
+      ],
+      "lui-minirv-npc.bin": [
+        8007,
+        471,
+        33554432,
+        3481
+      ],
+      "lw-minirv-npc.bin": [
+        39899,
+        2347,
+        33554432,
+        17284
+      ],
+      "or-minirv-npc.bin": [
+        87516,
+        5148,
+        33554432,
+        38050
+      ],
+      "ori-minirv-npc.bin": [
+        39151,
+        2303,
+        33554432,
+        17038
+      ],
+      "sb-minirv-npc.bin": [
+        71417,
+        4201,
+        33554432,
+        31036
+      ],
+      "sh-minirv-npc.bin": [
+        95132,
+        5596,
+        33554432,
+        41485
+      ],
+      "simple-minirv-npc.bin": [
+        323,
+        19,
+        33554432,
+        131
+      ],
+      "sll-minirv-npc.bin": [
+        129353,
+        7609,
+        33554432,
+        56959
+      ],
+      "slli-minirv-npc.bin": [
+        42534,
+        2502,
+        33554432,
+        18628
+      ],
+      "slt-minirv-npc.bin": [
+        119391,
+        7023,
+        33554432,
+        52171
+      ],
+      "slti-minirv-npc.bin": [
+        66266,
+        3898,
+        33554432,
+        28954
+      ],
+      "sltiu-minirv-npc.bin": [
+        66266,
+        3898,
+        33554432,
+        28954
+      ],
+      "sltu-minirv-npc.bin": [
+        119391,
+        7023,
+        33554432,
+        52171
+      ],
+      "sra-minirv-npc.bin": [
+        132549,
+        7797,
+        33554432,
+        57946
+      ],
+      "srai-minirv-npc.bin": [
+        61489,
+        3617,
+        33554432,
+        26861
+      ],
+      "srl-minirv-npc.bin": [
+        129540,
+        7620,
+        33554432,
+        56713
+      ],
+      "srli-minirv-npc.bin": [
+        59857,
+        3521,
+        33554432,
+        26193
+      ],
+      "sub-minirv-npc.bin": [
+        91477,
+        5381,
+        33554432,
+        39802
+      ],
+      "sw-minirv-npc.bin": [
+        65416,
+        3848,
+        33554432,
+        28310
+      ],
+      "xor-minirv-npc.bin": [
+        87499,
+        5147,
+        33554432,
+        38044
+      ],
+      "xori-minirv-npc.bin": [
+        39185,
+        2305,
+        33554432,
+        17050
+      ]
+    }
+  }
+}

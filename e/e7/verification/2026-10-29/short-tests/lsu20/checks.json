@@ -1,0 +1,58 @@
+{
+  "delay": 20,
+  "tests": [
+    {
+      "case": "word_memory",
+      "runner": "build/regress/cpu_test",
+      "cycles": 187,
+      "exit": 0
+    },
+    {
+      "case": "word_memory",
+      "runner": "build/difftest/difftest",
+      "cycles": 187,
+      "exit": 0
+    },
+    {
+      "case": "byte_memory",
+      "runner": "build/regress/cpu_test",
+      "cycles": 743,
+      "exit": 0
+    },
+    {
+      "case": "byte_memory",
+      "runner": "build/difftest/difftest",
+      "cycles": 743,
+      "exit": 0
+    }
+  ],
+  "wave": "PASS",
+  "events": [
+    {
+      "event": "request",
+      "time": 170,
+      "write": 1
+    },
+    {
+      "event": "reply",
+      "time": 208
+    },
+    {
+      "event": "commit",
+      "time": 210
+    },
+    {
+      "event": "request",
+      "time": 252,
+      "write": 0
+    },
+    {
+      "event": "reply",
+      "time": 290
+    },
+    {
+      "event": "commit",
+      "time": 292
+    }
+  ]
+}

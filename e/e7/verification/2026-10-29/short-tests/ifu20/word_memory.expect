@@ -1,0 +1,5 @@
+halt 0x80000018
+cycles 148
+reg 3 42
+reg 10 42
+mem 0x80000108 42

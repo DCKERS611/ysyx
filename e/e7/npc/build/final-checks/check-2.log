@@ -1,0 +1,30 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.006 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+[ PASS ] functional/arithmetic: PASS: 85 (5 steps x 17); expectations PASS: 10 checks
+[ PASS ] functional/byte_memory: PASS: 374 (22 steps x 17); expectations PASS: 14 checks
+[ PASS ] functional/call_return: PASS: 102 (6 steps x 17); expectations PASS: 15 checks
+[ PASS ] functional/word_memory: PASS: 102 (6 steps x 17); expectations PASS: 9 checks
+functional: 4/4 programs passed
+[ PASS ] boundary/consecutive_jumps: PASS: 102 (6 steps x 17); expectations PASS: 16 checks
+[ PASS ] boundary/illegal_rd: PASS: 34 (2 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/illegal_rs1: PASS: 34 (2 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/illegal_rs2: PASS: 34 (2 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/illegal_store: PASS: 68 (4 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/immediate_sign: PASS: 153 (9 steps x 17); expectations PASS: 13 checks
+[ PASS ] boundary/jalr_negative: PASS: 68 (4 steps x 17); expectations PASS: 13 checks
+[ PASS ] boundary/jalr_same_register: PASS: 68 (4 steps x 17); expectations PASS: 13 checks
+[ PASS ] boundary/u_immediate: PASS: 85 (5 steps x 17); expectations PASS: 10 checks
+[ PASS ] boundary/unsupported_funct3: PASS: 34 (2 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/unsupported_funct7: PASS: 51 (3 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/unsupported_store: PASS: 68 (4 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/unsupported_system: PASS: 34 (2 steps x 17); expectations PASS: 8 checks
+[ PASS ] boundary/x0_readonly: PASS: 187 (11 steps x 17); expectations PASS: 22 checks
+boundary: 14/14 programs passed
+[ PASS ] difftest/medium: PASS: 1360 (80 steps x 17); expectations PASS: 15 checks
+[ PASS ] difftest/small: PASS: 221 (13 steps x 17); expectations PASS: 15 checks
+difftest: 2/2 programs passed
+[ PASS ] acceptance/array_sum: PASS: 340 (20 steps x 17); expectations PASS: 13 checks
+[ PASS ] acceptance/byte_sum: PASS: 289 (17 steps x 17); expectations PASS: 12 checks
+[ PASS ] acceptance/sum_1_to_10: PASS: 391 (23 steps x 17); expectations PASS: 8 checks
+acceptance: 3/3 programs passed

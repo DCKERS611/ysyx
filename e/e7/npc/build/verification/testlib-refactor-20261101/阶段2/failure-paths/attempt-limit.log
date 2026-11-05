@@ -1,0 +1,3 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/functional/arithmetic.bin: 20 bytes
+RESULT case=probe backend=diff verdict=fail stop=attempt_limit pc=0x80000004 inst=0x00500093 cycles=10 retired=1 attempts=1 checks=0 failures=0 delay=random core=17 core_fail=0 extra=7 extra_fail=0 memory=0 memory_fail=0
+DiffTest timed out after 1 steps at pc=0x80000004

@@ -1,0 +1,27 @@
+[ RUN ] byte_memory
+Loaded /home/ysyx/ysyx-workbench/npc/build/regress/programs/functional/byte_memory.bin: 92 bytes
+pc=0x80000000 inst=0x800000b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x10008093 --> next_pc=0x80000008
+pc=0x80000008 inst=0x12345137 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x67810113 --> next_pc=0x80000010
+pc=0x80000010 inst=0x0020a023 --> next_pc=0x80000014
+pc=0x80000014 inst=0x0020a223 --> next_pc=0x80000018
+pc=0x80000018 inst=0x0000c303 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x0010c383 --> next_pc=0x80000020
+pc=0x80000020 inst=0x0020c403 --> next_pc=0x80000024
+pc=0x80000024 inst=0x0030c483 --> next_pc=0x80000028
+pc=0x80000028 inst=0x0ef00193 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x00308023 --> next_pc=0x80000030
+pc=0x80000030 inst=0x0cd00193 --> next_pc=0x80000034
+pc=0x80000034 inst=0x003080a3 --> next_pc=0x80000038
+pc=0x80000038 inst=0x0ab00193 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00308123 --> next_pc=0x80000040
+pc=0x80000040 inst=0x09000193 --> next_pc=0x80000044
+pc=0x80000044 inst=0x003081a3 --> next_pc=0x80000048
+pc=0x80000048 inst=0x0ff00193 --> next_pc=0x8000004c
+pc=0x8000004c inst=0x003082a3 --> next_pc=0x80000050
+pc=0x80000050 inst=0x0050c583 --> next_pc=0x80000054
+pc=0x80000054 inst=0x0000a503 --> next_pc=0x80000058
+ebreak @ pc=0x80000058
+pc=0x80000058 inst=0x00100073 --> next_pc=0x8000005c
+PASS: 14 checks

@@ -1,0 +1,10 @@
+halt 0x80000054
+instructions 21
+cycles_fixed 1 50
+reg 2 0x80000080
+reg 6 4
+reg 10 10
+mem 0x80000080 1
+mem 0x80000084 2
+mem 0x80000088 3
+mem 0x8000008c 4

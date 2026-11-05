@@ -1,0 +1,4 @@
+illegal 0x80000008 0x00100813
+instructions 2
+cycles_fixed 1 5
+reg 10 7

@@ -1,0 +1,7 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/acceptance/programs/sum_1_to_10.bin: 100 bytes
+PASS: 8 checks
+[ DIFF PASS ] acceptance/sum_1_to_10
+PASS: 408 (24 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 179
+halt_pc=0x80000060 NPC.pc=0x80000064 EMU.pc=0x80000060
+RESULT case=acceptance/sum_1_to_10 backend=diff verdict=pass stop=ebreak pc=0x80000060 inst=0x00100073 cycles=220 retired=24 attempts=24 checks=8 failures=0 delay=random core=408 core_fail=0 extra=179 extra_fail=0 memory=33554432 memory_fail=0

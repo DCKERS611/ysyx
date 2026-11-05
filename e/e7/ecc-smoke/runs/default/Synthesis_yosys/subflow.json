@@ -1,0 +1,19 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Synthesis_yosys/subflow.json",
+    "steps": [
+        {
+            "name": "run yosys",
+            "state": "Success",
+            "runtime": "0:0:3",
+            "peak memory (mb)": 0.008,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:15",
+            "peak memory (mb)": 56.543,
+            "info": {}
+        }
+    ]
+}

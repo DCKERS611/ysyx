@@ -1,0 +1,71 @@
+{
+   "creator": "Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)",
+   "invocation": "stat -json -top ecc_smoke -liberty /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib -liberty /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib ",
+   "modules": {
+      "\\ecc_smoke": {
+         "num_wires":         38,
+         "num_wire_bits":     38,
+         "num_pub_wires":     38,
+         "num_pub_wire_bits": 38,
+         "num_ports":         10,
+         "num_port_bits":     10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         36,
+         "num_submodules":       0,
+         "area":              91.280000,
+         "sequential_area":    49.280000,
+         "num_cells_by_type": {
+            "AND2X0P5H7L": 1,
+            "AND3X0P5H7L": 2,
+            "AO31X0P5H7L": 1,
+            "AOI21X0P5H7L": 4,
+            "AOI2BB1X0P5H7L": 2,
+            "DFFQX0P5H7R": 8,
+            "INVX0P5H7L": 5,
+            "NAND2X0P5H7L": 1,
+            "NAND3X0P5H7L": 1,
+            "NAND4BBX0P5H7L": 1,
+            "NAND4X0P5H7L": 1,
+            "NOR2X0P5H7L": 3,
+            "NOR3X0P5H7L": 1,
+            "OAI21X0P5H7L": 3,
+            "OAI31X0P5H7L": 2
+         }
+      }
+   },
+      "design": {
+         "num_wires":         38,
+         "num_wire_bits":     38,
+         "num_pub_wires":     38,
+         "num_pub_wire_bits": 38,
+         "num_ports":         10,
+         "num_port_bits":     10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         36,
+         "num_submodules":       0,
+         "area":              91.280000,
+         "sequential_area":    49.280000,
+         "num_cells_by_type": {
+            "AND2X0P5H7L": 1,
+            "AND3X0P5H7L": 2,
+            "AO31X0P5H7L": 1,
+            "AOI21X0P5H7L": 4,
+            "AOI2BB1X0P5H7L": 2,
+            "DFFQX0P5H7R": 8,
+            "INVX0P5H7L": 5,
+            "NAND2X0P5H7L": 1,
+            "NAND3X0P5H7L": 1,
+            "NAND4BBX0P5H7L": 1,
+            "NAND4X0P5H7L": 1,
+            "NOR2X0P5H7L": 3,
+            "NOR3X0P5H7L": 1,
+            "OAI21X0P5H7L": 3,
+            "OAI31X0P5H7L": 2
+         }
+      }
+}
+

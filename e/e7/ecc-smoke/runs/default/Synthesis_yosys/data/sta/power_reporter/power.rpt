@@ -1,0 +1,28 @@
+Design : ecc_smoke
+Operating Conditions: ICS_N55_H7BL_ss_mos_RCworst_1.08_125
+Analysis Effort : low
+Wire Load Model : ZeroWireload
+Global Operating Voltage = 1.08
+
+Dynamic Power Units = 1mW
+Leakage Power Units = 1nW
+
+Cell Internal Power  =    6.8166 uW
+Net Switching Power  =  128.8897 nW
+Total Dynamic Power  =    6.9455 uW
+Cell Leakage Power   =  113.6011 nW
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register       6.7698e-03        6.4293e-05           54.2695        6.8883e-03  (  97.58%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.6821e-05        6.4597e-05           59.3316        1.7075e-04  (   2.42%)
+--------------------------------------------------------------------------------------------------
+Total          6.8166e-03 mW     1.2889e-04 mW       113.6011 nW     7.0591e-03 mW
+
+i - Including register clock pin internal power

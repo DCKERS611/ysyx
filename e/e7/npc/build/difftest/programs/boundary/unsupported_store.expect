@@ -1,0 +1,4 @@
+illegal 0x80000010 0x00209023
+instructions 4
+cycles_fixed 1 10
+mem 0x80000100 85

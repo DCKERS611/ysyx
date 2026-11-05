@@ -1,0 +1,13 @@
+[
+  "npc/csrc/check.h",
+  "npc/csrc/test_suite.h",
+  "npc/csrc/cpu_view.h",
+  "npc/tests/expectations.h",
+  "npc/tests/checker_test.cpp",
+  "npc/tests/cpu_test.cpp",
+  "npc/csrc/difftest.cpp",
+  "npc/csrc/main.cpp",
+  "npc/tools/mkprog.py",
+  "npc/tests/run_cpu_tests.py",
+  "npc/tests/test_mkprog.py"
+]

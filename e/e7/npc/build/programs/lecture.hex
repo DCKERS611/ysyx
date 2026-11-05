@@ -1,0 +1,6 @@
+00000000  01400513  addi a0, zero, 20
+00000004  010000e7  jalr ra, zero, fun
+00000008  00c000e7  jalr ra, zero, halt
+0000000c  00c00067  j halt
+00000010  00a50513  addi a0, a0, 10
+00000014  00008067  jalr zero, ra, 0
