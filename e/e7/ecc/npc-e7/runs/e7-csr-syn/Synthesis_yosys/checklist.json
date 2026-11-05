@@ -1,0 +1,36 @@
+{
+    "schema_version": 3,
+    "kind": "signoff_checklist",
+    "checker_revision": "signoff-v1",
+    "generated_at": "2026-11-04T12:56:07.922080Z",
+    "status": "blocked",
+    "summary": {
+        "passed": 0,
+        "blocked": 1,
+        "attention": 0,
+        "unavailable": 0
+    },
+    "checklist": [
+        {
+            "id": "artifact.synthesis.netlist",
+            "step": "Synthesis",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "Mapped synthesis netlist",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "Synthesis_yosys/output/npc-e7_Synthesis.v.gz"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "Synthesis_yosys/output/npc-e7_Synthesis.v.gz"
+                }
+            ]
+        }
+    ]
+}

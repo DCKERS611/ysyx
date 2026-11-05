@@ -1,0 +1,21 @@
+type	index	direction	start	step	count	width	layers
+track	0	y	300	200	95	0	RDL
+track	1	x	300	200	94	0	RDL
+track	2	y	300	200	95	0	T4M2
+track	3	x	300	200	94	0	T4M2
+track	4	y	300	200	95	0	MET5
+track	5	x	300	200	94	0	MET5
+track	6	y	300	200	95	0	MET4
+track	7	x	300	200	94	0	MET4
+track	8	y	300	200	95	0	MET3
+track	9	x	300	200	94	0	MET3
+track	10	y	300	200	95	0	MET2
+track	11	x	300	200	94	0	MET2
+track	12	y	300	200	95	0	MET1
+track	13	x	300	200	94	0	MET1
+gcell	0	x	0	1600	2	1	
+gcell	1	x	1600	1400	12	1	
+gcell	2	x	17000	2200	2	1	
+gcell	3	y	0	1600	2	1	
+gcell	4	y	1600	1400	12	1	
+gcell	5	y	17000	2400	2	1	

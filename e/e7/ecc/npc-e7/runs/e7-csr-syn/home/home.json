@@ -1,0 +1,24 @@
+{
+    "parameters": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/home/parameters.json",
+    "flow": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/home/flow.json",
+    "layout": "",
+    "checklist": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/home/checklist.json",
+    "metrics": {},
+    "monitor": {
+        "step": [
+            "Synthesis - run yosys"
+        ],
+        "memory": [
+            "0.0"
+        ],
+        "runtime": [
+            "0:0:6"
+        ],
+        "instance": [
+            0
+        ],
+        "frequency": [
+            0.0
+        ]
+    }
+}

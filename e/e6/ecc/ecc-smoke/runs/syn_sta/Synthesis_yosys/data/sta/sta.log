@@ -1,0 +1,133 @@
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:76 Info initSTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:77 Info initSTA] _____ _______________________       _______________________ ________ ________ 
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:78 Info initSTA] ___(_)__  ___/___  __/___    |      __  ___/___  __/___    |___  __ \___  __/
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:79 Info initSTA] __  / _____ \ __  /   __  /| |      _____ \ __  /   __  /| |__  /_/ /__  /  
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:80 Info initSTA] _  /  ____/ / _  /    _  ___ |      ____/ / _  /    _  ___ |_  _, _/ _  /     
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:81 Info initSTA] /_/   /____/  /_/     /_/  |_|      /____/  /_/     /_/  |_|/_/ |_|  /_/      
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:82 Info initSTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:89 Info initSTA] Starting...
+[STA 20261025 20:34:46 wMQiqDJA DataManager.cpp:56 Info input] Starting...
+[STA 20261025 20:34:46 wMQiqDJA Utility.hpp:100 Warn getConfigValue<int>] The config '-thread_number' uses the default value!
+[STA 20261025 20:34:46 wMQiqDJA Utility.hpp:100 Warn getConfigValue<int>] The config '-nworst' uses the default value!
+[STA 20261025 20:34:46 wMQiqDJA Utility.hpp:100 Warn getConfigValue<std::__cxx11::basic_string<char> >] The config '-delay_type' uses the default value!
+[STA 20261025 20:34:46 wMQiqDJA Utility.hpp:100 Warn getConfigValue<std::__cxx11::basic_string<char> >] The config '-start_end_type' uses the default value!
+[STA 20261025 20:34:46 wMQiqDJA STAInterface.cpp:722 Info wrapTimingLibrary] Starting...
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:736 Info wrapTimingLibrary] Completed (elapsed = 00:00:06, cpu = 00:00:06, mem = 238.20MB) 
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:952 Info printConfig] STA_CONFIG_INPUT
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:953 Info printConfig]   temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:954 Info printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:955 Info printConfig]   thread_number
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:956 Info printConfig]     128
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:957 Info printConfig]   path_report_number
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:958 Info printConfig]     1000
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:959 Info printConfig]   endpoint_path_report_number
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:960 Info printConfig]     1
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:961 Info printConfig]   timing_report_delay_type
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:962 Info printConfig]     max
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:963 Info printConfig]   timing_report_start_end_type
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:964 Info printConfig]     all
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:965 Info printConfig]   has_timing_report_slack_lesser_than
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:966 Info printConfig]     0
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:967 Info printConfig]   timing_report_slack_lesser_than
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:968 Info printConfig]     0
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:969 Info printConfig]   has_timing_report_slack_greater_than
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:970 Info printConfig]     0
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:971 Info printConfig]   timing_report_slack_greater_than
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:972 Info printConfig]     0
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:973 Info printConfig]   output_timing_reports
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:974 Info printConfig]     1
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:975 Info printConfig]   output_timing_features
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:976 Info printConfig]     1
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:977 Info printConfig]   timing_path_limit
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:978 Info printConfig]     20
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:980 Info printConfig] STA_CONFIG_BUILD
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:981 Info printConfig]   log_file_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:982 Info printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/sta.log
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:984 Info printConfig]   DataManager
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:985 Info printConfig]     dm_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:986 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/data_manager/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:988 Info printConfig]   GraphBuilder
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:989 Info printConfig]     gb_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:990 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/graph_builder/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:992 Info printConfig]   DelayCalculator
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:993 Info printConfig]     dc_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:994 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/delay_calculator/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:996 Info printConfig]   ClockPropagator
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:997 Info printConfig]     cp_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:998 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/clock_propagator/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1000 Info printConfig]   TimingPropagator
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1001 Info printConfig]     tp_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1002 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/timing_propagator/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1004 Info printConfig]   PowerPropagator
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1005 Info printConfig]     pp_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1006 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/power_propagator/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1008 Info printConfig]   TimingAnalyzer
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1009 Info printConfig]     ta_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1010 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/timing_analyzer/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1012 Info printConfig]   PowerAnalyzer
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1013 Info printConfig]     pa_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1014 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/power_analyzer/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1016 Info printConfig]   TimingCharacterizer
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1017 Info printConfig]     tc_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1018 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/timing_characterizer/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1020 Info printConfig]   TimingReporter
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1021 Info printConfig]     tr_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1022 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/timing_reporter/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1024 Info printConfig]   PowerReporter
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1025 Info printConfig]     pr_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1026 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/power_reporter/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1028 Info printConfig]   SDFWriter
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1029 Info printConfig]     sw_temp_directory_path
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1030 Info printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/sdf_writer/
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1044 Info printDatabase] STA_DATABASE
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1045 Info printDatabase]   design_name
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1046 Info printDatabase]     ecc_smoke
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1047 Info printDatabase]   instance_num
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1048 Info printDatabase]     36
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1049 Info printDatabase]   port_num
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1050 Info printDatabase]     10
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1051 Info printDatabase]   pin_num
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1052 Info printDatabase]     136
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1053 Info printDatabase]   net_num
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:1054 Info printDatabase]     38
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:62 Info input] Completed (elapsed = 00:00:07, cpu = 00:00:07, mem = 238.32MB) 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:97 Info initSTA] Completed (elapsed = 00:00:07, cpu = 00:00:07, mem = 238.32MB) 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:103 Info runSTA] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:58 Info init] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:62 Info init] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA GraphBuilder.cpp:57 Info build] Starting...
+[STA 20261025 20:34:53 wMQiqDJA GraphBuilder.cpp:69 Info build] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB) 
+[STA 20261025 20:34:53 wMQiqDJA ClockPropagator.cpp:56 Info propagate] Starting...
+[STA 20261025 20:34:53 wMQiqDJA ClockPropagator.cpp:62 Info propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA TimingPropagator.cpp:56 Info propagate] Starting...
+[STA 20261025 20:34:53 wMQiqDJA TimingPropagator.cpp:75 Info propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB) 
+[STA 20261025 20:34:53 wMQiqDJA PowerPropagator.cpp:55 Info propagate] Starting...
+[STA 20261025 20:34:53 wMQiqDJA PowerPropagator.cpp:60 Info propagate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB) 
+[STA 20261025 20:34:53 wMQiqDJA TimingAnalyzer.cpp:56 Info analyze] Starting...
+[STA 20261025 20:34:53 wMQiqDJA TimingAnalyzer.cpp:62 Info analyze] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA PowerAnalyzer.cpp:55 Info analyze] Starting...
+[STA 20261025 20:34:53 wMQiqDJA PowerAnalyzer.cpp:60 Info analyze] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA TimingReporter.cpp:187 Info report] Starting...
+[STA 20261025 20:34:53 wMQiqDJA TimingReporter.cpp:191 Info report] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB) 
+[STA 20261025 20:34:53 wMQiqDJA PowerReporter.cpp:55 Info report] Starting...
+[STA 20261025 20:34:53 wMQiqDJA PowerReporter.cpp:61 Info report] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA SDFWriter.cpp:60 Info write] Starting...
+[STA 20261025 20:34:53 wMQiqDJA SDFWriter.cpp:599 Warn adjustSDFHoldTimingCheckDelay] Adjusted HOLD timing-check delay for count[4]_reg_p: D relative to CK would otherwise sum to less than zero with the matching SETUP delay.
+[STA 20261025 20:34:53 wMQiqDJA SDFWriter.cpp:64 Info write] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:90 Info destroy] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:94 Info destroy] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:145 Info runSTA] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 1.02MB) 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:183 Info destroySTA] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:90 Info destroy] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DelayCalculator.cpp:94 Info destroy] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:68 Info output] Starting...
+[STA 20261025 20:34:53 wMQiqDJA DataManager.cpp:70 Info output] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:192 Info destroySTA] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[STA 20261025 20:34:53 wMQiqDJA Logger.hpp:53 Info printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/Synthesis_yosys/data/sta/sta.log'!
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:196 Info destroySTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:197 Info destroySTA] _____ _______________________       _______________________   ________________________  __  
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:198 Info destroySTA] ___(_)__  ___/___  __/___    |      ___  ____/____  _/___  | / /____  _/__  ___/___  / / /  
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:199 Info destroySTA] __  / _____ \ __  /   __  /| |      __  /_     __  /  __   |/ /  __  /  _____ \ __  /_/ / 
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:200 Info destroySTA] _  /  ____/ / _  /    _  ___ |      _  __/    __/ /   _  /|  /  __/ /   ____/ / _  __  /    
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:201 Info destroySTA] /_/   /____/  /_/     /_/  |_|      /_/       /___/   /_/ |_/   /___/   /____/  /_/ /_/     
+[STA 20261025 20:34:53 wMQiqDJA STAInterface.cpp:202 Info destroySTA] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

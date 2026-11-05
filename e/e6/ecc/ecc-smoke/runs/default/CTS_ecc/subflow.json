@@ -1,0 +1,35 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "run CTS",
+            "state": "Success",
+            "runtime": "0:0:16",
+            "peak memory (mb)": 99.684,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 104.148,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {
+                "instance": 74
+            }
+        }
+    ]
+}

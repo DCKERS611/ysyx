@@ -1,0 +1,133 @@
+[ECC 20261025 20:30:17 cQBzyMnA dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data
+[ECC 20261025 20:30:17 cQBzyMnA dm_config.h:134 [1;34mInfo[0m set_feature_path] [Data config set] feature = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:63 [1;34mInfo[0m initFP] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:64 [1;34mInfo[0m initFP] ______________________     _____________________________________  
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:65 [1;34mInfo[0m initFP] ___(_)__  ____/__  __ \    __  ___/__  __/__    |__  __ \__  __/
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:66 [1;34mInfo[0m initFP] __  /__  /_   __  /_/ /    _____ \__  /  __  /| |_  /_/ /_  /    
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:67 [1;34mInfo[0m initFP] _  / _  __/   _  ____/     ____/ /_  /   _  ___ |  _, _/_  /      
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:68 [1;34mInfo[0m initFP] /_/  /_/      /_/          /____/ /_/    /_/  |_/_/ |_| /_/       
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:69 [1;34mInfo[0m initFP] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:76 [1;34mInfo[0m initFP] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:54 [1;34mInfo[0m input] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:159 [1;34mInfo[0m printConfig] FP_CONFIG_INPUT
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:160 [1;34mInfo[0m printConfig]   temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:161 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:162 [1;34mInfo[0m printConfig]   thread_number
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:163 [1;34mInfo[0m printConfig]     16
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:164 [1;34mInfo[0m printConfig]   macro_placer
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:165 [1;34mInfo[0m printConfig]     location_path: /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/macro_locations.txt, placement_halo: 3, routing_halo: 3
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:168 [1;34mInfo[0m printConfig]   die
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:169 [1;34mInfo[0m printConfig]     site: core7, mode: die_util, margin: {l: 2, r: 2, t: 2, b: 2}
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:174 [1;34mInfo[0m printConfig]     aspect_ratio: 1, utilization: 0.4
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:189 [1;34mInfo[0m printConfig]   io_pin
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:190 [1;34mInfo[0m printConfig]     layer: {MET3 MET4}
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:192 [1;34mInfo[0m printConfig]   pg_connect_list
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:214 [1;34mInfo[0m printConfig]     pg_net: VDD, connect_pin: {VDD}, type: power
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:214 [1;34mInfo[0m printConfig]     pg_net: VSS, connect_pin: {VSS}, type: ground
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:217 [1;34mInfo[0m printConfig]   pdn_mesh
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:219 [1;34mInfo[0m printConfig]     rail: MET1, rail_width: 0.16
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:223 [1;34mInfo[0m printConfig]     stripe: MET4, width: 1, pitch: 16, offset: 0.5
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:223 [1;34mInfo[0m printConfig]     stripe: MET5, width: 1, pitch: 16, offset: 0.5
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:228 [1;34mInfo[0m printConfig]   phy_insert
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:229 [1;34mInfo[0m printConfig]     well_tap: FILLTAPH7R, interval: 58
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:231 [1;34mInfo[0m printConfig]     side_endcap: {left: FILLTAPH7R, right: FILLTAPH7R}
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:249 [1;34mInfo[0m printConfig]     edge_endcap: {top: {FILLCAP4H7R FILLCAP8H7R FILLCAP16H7R FILLCAP32H7R FILLER2H7R FILLER1H7R}, bottom: {FILLCAP4H7R FILLCAP8H7R FILLCAP16H7R FILLCAP32H7R FILLER2H7R FILLER1H7R}}
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:267 [1;34mInfo[0m printConfig]     boundary_tap: {top: {FILLCAP4H7R FILLCAP8H7R FILLCAP16H7R FILLCAP32H7R FILLER2H7R FILLER1H7R}, bottom: {FILLCAP4H7R FILLCAP8H7R FILLCAP16H7R FILLCAP32H7R FILLER2H7R FILLER1H7R}, rule: 30}
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:270 [1;34mInfo[0m printConfig] FP_CONFIG_BUILD
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:271 [1;34mInfo[0m printConfig]   log_file_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:272 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/fp.log
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:273 [1;34mInfo[0m printConfig]   dm_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:274 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/data_manager/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:275 [1;34mInfo[0m printConfig]   db_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:276 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/die_builder/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:277 [1;34mInfo[0m printConfig]   ip_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:278 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/io_placer/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:279 [1;34mInfo[0m printConfig]   mp_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:280 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/macro_placer/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:281 [1;34mInfo[0m printConfig]   pg_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:282 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/pdn_generator/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:283 [1;34mInfo[0m printConfig]   pp_temp_directory_path
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:284 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/phy_placer/
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:290 [1;34mInfo[0m printDatabase] FP_DATABASE_INPUT
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:291 [1;34mInfo[0m printDatabase]   design_name
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:292 [1;34mInfo[0m printDatabase]     ecc_smoke
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:293 [1;34mInfo[0m printDatabase]   micron_dbu
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:294 [1;34mInfo[0m printDatabase]     1000
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:295 [1;34mInfo[0m printDatabase]   manufacture_grid
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:296 [1;34mInfo[0m printDatabase]     1
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:297 [1;34mInfo[0m printDatabase]   cell_area
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:298 [1;34mInfo[0m printDatabase]     91
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:299 [1;34mInfo[0m printDatabase]   instance_num
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:300 [1;34mInfo[0m printDatabase]     36
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:301 [1;34mInfo[0m printDatabase]   net_num
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:302 [1;34mInfo[0m printDatabase]     38
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:303 [1;34mInfo[0m printDatabase]   routing_layer_num
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:304 [1;34mInfo[0m printDatabase]     7
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:305 [1;34mInfo[0m printDatabase]   io_pin_num
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:306 [1;34mInfo[0m printDatabase]     10
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:62 [1;34mInfo[0m input] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:81 [1;34mInfo[0m initFP] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:87 [1;34mInfo[0m runFP] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DieBuilder.cpp:56 [1;34mInfo[0m build] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DieBuilder.cpp:61 [1;34mInfo[0m build] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA IOPlacer.cpp:56 [1;34mInfo[0m place] Starting...
+[FP 20261025 20:30:17 cQBzyMnA IOPlacer.cpp:60 [1;34mInfo[0m place] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA MacroPlacer.cpp:56 [1;34mInfo[0m place] Starting...
+[FP 20261025 20:30:17 cQBzyMnA MacroPlacer.cpp:73 [1;34mInfo[0m setMPComParam] placement_halo_micron: 3
+[FP 20261025 20:30:17 cQBzyMnA MacroPlacer.cpp:74 [1;34mInfo[0m setMPComParam] routing_halo_micron: 3
+[FP 20261025 20:30:17 cQBzyMnA MacroPlacer.cpp:66 [1;34mInfo[0m place] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:55 [1;34mInfo[0m generate] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:76 [1;34mInfo[0m buildPGNet] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:103 [1;34mInfo[0m buildPGNet] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:115 [1;34mInfo[0m buildRail] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:178 [1;34mInfo[0m buildRail] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:348 [1;34mInfo[0m buildStripe] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:404 [1;34mInfo[0m buildStripe] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:410 [1;34mInfo[0m alignStripeSegmentList] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:419 [1;34mInfo[0m alignStripeSegmentList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:666 [1;34mInfo[0m buildLayerConnect] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:711 [1;34mInfo[0m buildLayerConnect] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:748 [1;34mInfo[0m buildMacroConnect] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:789 [1;34mInfo[0m buildMacroConnect] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PDNGenerator.cpp:60 [1;34mInfo[0m generate] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA PhyPlacer.cpp:55 [1;34mInfo[0m place] Starting...
+[FP 20261025 20:30:17 cQBzyMnA PhyPlacer.cpp:60 [1;34mInfo[0m place] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:109 [1;34mInfo[0m runFP] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:115 [1;34mInfo[0m destroyFP] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:68 [1;34mInfo[0m output] Starting...
+[FP 20261025 20:30:17 cQBzyMnA DataManager.cpp:72 [1;34mInfo[0m output] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:120 [1;34mInfo[0m destroyFP] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[FP 20261025 20:30:17 cQBzyMnA Logger.hpp:53 [1;34mInfo[0m printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/data/fp/fp.log'!
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:123 [1;34mInfo[0m destroyFP] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:124 [1;34mInfo[0m destroyFP] ______________________     _____________________   _____________________  __ 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:125 [1;34mInfo[0m destroyFP] ___(_)__  ____/__  __ \    ___  ____/___  _/__  | / /___  _/_  ___/__  / / /
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:126 [1;34mInfo[0m destroyFP] __  /__  /_   __  /_/ /    __  /_    __  / __   |/ / __  / _____ \__  /_/ / 
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:127 [1;34mInfo[0m destroyFP] _  / _  __/   _  ____/     _  __/   __/ /  _  /|  / __/ /  ____/ /_  __  /   
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:128 [1;34mInfo[0m destroyFP] /_/  /_/      /_/          /_/      /___/  /_/ |_/  /___/  /____/ /_/ /_/    
+[FP 20261025 20:30:17 cQBzyMnA FPInterface.cpp:129 [1;34mInfo[0m destroyFP] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[ECC 20261025 20:30:17 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.def.gz )
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:376 [1;34mInfo[0m write_version] Write VERSION success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:398 [1;34mInfo[0m write_busbit_char] Write BUSBITCHARS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:413 [1;34mInfo[0m write_design] Write DESIGN name success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:435 [1;34mInfo[0m write_units] Write UNITS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:457 [1;34mInfo[0m write_die] Write DIE success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:574 [1;34mInfo[0m write_row] Write ROWS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:485 [1;34mInfo[0m write_track_grid] Write Track Grid success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:1108 [1;34mInfo[0m write_gcell_grid] No GCELLGRID...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:550 [1;34mInfo[0m write_via] Write VIAS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:629 [1;34mInfo[0m write_component] Write COMPONENTS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:700 [1;34mInfo[0m write_pin] Write PINS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:715 [1;34mInfo[0m write_blockage] No VIA To Write...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:1134 [1;34mInfo[0m write_region] No REGION To Write...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:1168 [1;34mInfo[0m write_slot] No SLOT To Write...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:1200 [1;34mInfo[0m write_group] No GROUP To Write...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:1237 [1;34mInfo[0m write_fill] No FILL To Write...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:931 [1;34mInfo[0m write_special_net] Write SPECIALNETS success...
+[ECC 20261025 20:30:17 cQBzyMnA def_write.cpp:986 [1;34mInfo[0m write_net] Write NETS success...
+[ECC 20261025 20:30:17 cQBzyMnA verilog_write.cpp:113 [1;34mInfo[0m writeModule] start write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.v.gz
+[ECC 20261025 20:30:17 cQBzyMnA verilog_write.cpp:129 [1;34mInfo[0m writeModule] finish write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.v.gz
+[ECC 20261025 20:30:17 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/output/ecc_smoke_Floorplan.gds )
+[ECC 20261025 20:30:17 cQBzyMnA gds_write.cpp:638 [1;34mInfo[0m write_component] Write COMPONENTS success. 72 / 72
+[ECC 20261025 20:30:17 cQBzyMnA gds_write.cpp:942 [1;34mInfo[0m write_fill] No FILLS ...
+[ECC 20261025 20:30:17 cQBzyMnA gds_write.cpp:833 [1;34mInfo[0m write_net] Write NETS success. 38 / 38
+[ECC 20261025 20:30:17 cQBzyMnA feature_parser.cpp:91 [1;34mInfo[0m buildSummary] Save feature json success, path = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/feature/Floorplan.db.json

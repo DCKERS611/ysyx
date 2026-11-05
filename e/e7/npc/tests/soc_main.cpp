@@ -107,37 +107,72 @@ int main(int argc, char** argv)
     nvboard_init();
     #endif
 
+    bool trace_started = false;
+    uint64_t trace_start_time = 0;
+
     auto eval_step = [&]() {
         dut.eval();
-        if (tracing)
-            wave.dump(ctx.time());
+        if (tracing) {
+            const uint32_t pc = dut.rootp->
+                SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__pc;
+
+            // 第一次进入 PSRAM 后，记录约一万拍
+            if (!trace_started &&
+                pc >= 0x80000000u && pc < 0x80800000u) {
+                trace_started = true;
+                trace_start_time = ctx.time();
+            }
+
+            if (trace_started &&
+                ctx.time() - trace_start_time < 20000) {
+                wave.dump(ctx.time());
+            }
+        }
         ctx.timeInc(1);
     };
 
     uint64_t commits = 0;
+    constexpr unsigned cpu_clock_ratio = 1;
+    unsigned clock_phase_index = 0;
 
-    // 当前阶段两个时钟同频、同相。
-    auto single_cycle = [&]() {
-        dut.clock = 0;
-        dut.cpuClock = 0;
+    // 每次调用, 推进一个CPU半周期对应的外设时钟相位
+    auto advance_soc_clock = [&]() {
+        dut.clock = (clock_phase_index / cpu_clock_ratio) & 1u;
+        clock_phase_index = 
+            (clock_phase_index + 1) % (2 * cpu_clock_ratio);
+    };
+
+    // 推进一个CPU 半周期, 再求值
+    auto clock_half_cycle = [&](bool cpu_high) {
+        const bool soc_was_high = dut.clock;
+
+        dut.cpuClock = cpu_high;
+        advance_soc_clock();
         eval_step();
+
+        // 每个时钟外设时钟周期只更新一次NVBoard
+        if (!soc_was_high && dut.clock) {
+#ifdef CONFIG_NVBOARD
+            nvboard_update();
+#endif
+        }
+    };
+
+    auto single_cycle = [&]() {
+        clock_half_cycle(false);
 
         // 在上升沿前采样提交使能，记录实际执行进度。
-        if (!dut.reset && dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__u_pc__DOT__wen)
+        if (!dut.reset && 
+            dut.rootp->
+            SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__u_ifu__DOT__u_pc__DOT__wen)
             ++commits;
 
-        dut.clock = 1;
-        dut.cpuClock = 1;
-        eval_step();
+        clock_half_cycle(true);
 
-        // NVBOARD 采样
-        #ifdef CONFIG_NVBOARD
-        nvboard_update();
-        #endif
     };
 
     // 复位期间仍然持续驱动时钟。
-    for (unsigned i = 0; i < 100; ++i)
+    for (unsigned i = 0; i < 100 * cpu_clock_ratio; ++i)
         single_cycle();
 
     dut.reset = 0;
@@ -184,6 +219,17 @@ int main(int argc, char** argv)
             a0 == 0 ? "HIT GOOD TRAP" : "HIT BAD TRAP",
             halt_pc, a0,
             static_cast<unsigned long long>(cycles));
+
+        const double ipc = cycles 
+            ? static_cast<double>(commits) / cycles
+            : 0.0;
+
+        std::printf(
+                "Statistics (including loader): "
+                "instructions=%llu cycles=%llu IPC=%.6f\n",
+                static_cast<unsigned long long>(commits),
+                static_cast<unsigned long long>(cycles),
+                ipc);
 
         #ifdef CONFIG_NVBOARD
         if (a0 == 0) {

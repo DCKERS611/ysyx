@@ -1,0 +1,21 @@
+layer_id	order	type	direction	width	pitch_x	pitch_y	name	min_spacing	min_area	min_step	cut_spacing	enclosure_below	enclosure_above	lef58_rule_count
+1	0	overlap	unknown	0	0	0	OVERLAP	0	0	0	0			0
+2	1	masterslice	unknown	0	0	0	ACT	0	0	0	0			0
+3	2	masterslice	unknown	0	0	0	NP	0	0	0	0			0
+4	3	masterslice	unknown	0	0	0	PP	0	0	0	0			0
+5	4	masterslice	unknown	0	0	0	NW1	0	0	0	0			0
+6	5	masterslice	unknown	0	0	0	POLY	0	0	0	0			0
+7	6	cut	unknown	90	0	0	CT	0	0	0	110	-1,-1	40,0	0
+8	7	routing	horizontal	90	200	200	MET1	90	42000	0	0			0
+9	8	cut	unknown	90	0	0	VIA1	0	0	0	110	-1,-1	-1,-1	0
+10	9	routing	vertical	100	200	200	MET2	100	52000	0	0			0
+11	10	cut	unknown	90	0	0	VIA2	0	0	0	110	-1,-1	-1,-1	0
+12	11	routing	horizontal	100	200	200	MET3	100	52000	0	0			0
+13	12	cut	unknown	90	0	0	VIA3	0	0	0	110	-1,-1	-1,-1	0
+14	13	routing	vertical	100	200	200	MET4	100	52000	0	0			0
+15	14	cut	unknown	90	0	0	VIA4	0	0	0	110	5,-1	-1,-1	0
+16	15	routing	horizontal	100	200	200	MET5	100	52000	0	0			0
+17	16	cut	unknown	360	0	0	T4V2	0	0	0	340	20,-1	-1,-1	0
+18	17	routing	vertical	400	800	800	T4M2	400	400000	0	0			0
+19	18	cut	unknown	3000	0	0	RV	0	0	0	3000	1500,-1	1500,1500	0
+20	19	routing	horizontal	3000	5000	5000	RDL	2000	0	0	0			0

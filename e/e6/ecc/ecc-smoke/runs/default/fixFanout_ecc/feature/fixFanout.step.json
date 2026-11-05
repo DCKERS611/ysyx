@@ -1,0 +1,17 @@
+{
+    "fixFanout": {
+        "clocks_timing": null
+    },
+    "run": {
+        "state": "Success",
+        "runtime_seconds": 1.174,
+        "peak_memory_mb": 69.766
+    },
+    "constraints": {
+        "sdc": {
+            "availability": "available",
+            "sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+            "size_bytes": 253
+        }
+    }
+}

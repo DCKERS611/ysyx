@@ -1,0 +1,836 @@
+{
+    "schema_version": 3,
+    "analysis_revision": "quality-gates-v4",
+    "tool": "dreamplace",
+    "step": "place",
+    "design": "ecc_smoke",
+    "status": "success",
+    "metrics": [
+        {
+            "id": "core_area",
+            "display_name": "Core Area",
+            "value": 234.08,
+            "unit": "um^2",
+            "category": "area_cost",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/core_area"
+            }
+        },
+        {
+            "id": "core_utilization",
+            "display_name": "Core Utilization",
+            "value": 0.39,
+            "unit": "ratio",
+            "category": "area_cost",
+            "direction": "target_range",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/core_usage"
+            }
+        },
+        {
+            "id": "die_area",
+            "display_name": "Die Area",
+            "value": 372.48,
+            "unit": "um^2",
+            "category": "area_cost",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/die_area"
+            }
+        },
+        {
+            "id": "die_height",
+            "display_name": "Die Height",
+            "value": 19.4,
+            "unit": "um",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/die_bounding_height"
+            }
+        },
+        {
+            "id": "die_utilization",
+            "display_name": "Die Utilization",
+            "value": 0.24,
+            "unit": "ratio",
+            "category": "area_cost",
+            "direction": "target_range",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/die_usage"
+            }
+        },
+        {
+            "id": "die_width",
+            "display_name": "Die Width",
+            "value": 19.2,
+            "unit": "um",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Layout/die_bounding_width"
+            }
+        },
+        {
+            "id": "instance_count",
+            "display_name": "Instance Count",
+            "value": 72,
+            "unit": "count",
+            "category": "area_cost",
+            "direction": "trend_only",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Statis/num_instances"
+            }
+        },
+        {
+            "id": "io_pin_count",
+            "display_name": "IO Pin Count",
+            "value": 10,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "trend_only",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Statis/num_iopins"
+            }
+        },
+        {
+            "id": "net_count",
+            "display_name": "Net Count",
+            "value": 38,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "trend_only",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.db.json",
+                "selector": "/Design Statis/num_nets"
+            }
+        },
+        {
+            "id": "peak_memory_mb",
+            "display_name": "Peak Memory",
+            "value": 1252.453,
+            "unit": "MB",
+            "category": "runtime",
+            "direction": "lower_is_better",
+            "scope": "place_execution",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "runtime",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.step.json",
+                "selector": "/run/peak_memory_mb"
+            }
+        },
+        {
+            "id": "place_congestion_egr_overflow_max",
+            "display_name": "Place EGR Overflow Max",
+            "value": 0,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/overflow/max/union"
+            }
+        },
+        {
+            "id": "place_congestion_egr_overflow_total",
+            "display_name": "Place EGR Overflow Total",
+            "value": 0,
+            "unit": "count",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/overflow/total/union"
+            }
+        },
+        {
+            "id": "place_flute_wirelength",
+            "display_name": "Place FLUTE Wirelength",
+            "value": 361.271,
+            "unit": "um",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Wirelength/FLUTE"
+            }
+        },
+        {
+            "id": "place_grwl",
+            "display_name": "Place GRWL",
+            "value": 352,
+            "unit": "um",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Wirelength/GRWL"
+            }
+        },
+        {
+            "id": "place_hpwl",
+            "display_name": "Place HPWL",
+            "value": 321.025,
+            "unit": "um",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Wirelength/HPWL"
+            }
+        },
+        {
+            "id": "place_lutrudy_utilization_max",
+            "display_name": "Place LUT-RUDY Utilization Max",
+            "value": 0.0029170000925660133,
+            "unit": "ratio",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/utilization/lutrudy/max/union"
+            }
+        },
+        {
+            "id": "place_rudy_utilization_max",
+            "display_name": "Place RUDY Utilization Max",
+            "value": 0.002601000014692545,
+            "unit": "ratio",
+            "category": "routability_physical",
+            "direction": "lower_is_better",
+            "scope": "placement",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "primary",
+            "analysis_group": "place_metrics",
+            "rating": {
+                "gate": false,
+                "score": true,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/utilization/rudy/max/union"
+            }
+        },
+        {
+            "id": "runtime_seconds",
+            "display_name": "Step Runtime",
+            "value": 43.532,
+            "unit": "s",
+            "category": "runtime",
+            "direction": "lower_is_better",
+            "scope": "place_execution",
+            "corner": null,
+            "project_role": "trend",
+            "step_role": "secondary",
+            "analysis_group": "runtime",
+            "rating": {
+                "gate": false,
+                "score": false,
+                "trend": true
+            },
+            "confidence": "high",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.step.json",
+                "selector": "/run/runtime_seconds"
+            }
+        }
+    ],
+    "details": [
+        {
+            "id": "place_map_metrics",
+            "presentation": "place_map_summary",
+            "summary": {
+                "schema_version": 1,
+                "source_file": "feature/place.map.json",
+                "top_average_definition": "mean of the highest 5 percent of valid bins",
+                "high_bin_definition": "valid bins at or above 90 percent of the map peak",
+                "maps": [
+                    {
+                        "group": "congestion",
+                        "metric": "egr",
+                        "direction": "horizontal",
+                        "source_file": "feature/egr_congestion_map/place_egr_horizontal_overflow.csv",
+                        "available": true,
+                        "row_count": 13,
+                        "column_count": 13,
+                        "value_count": 169,
+                        "nonzero_count": 0,
+                        "nonzero_ratio": 0.0,
+                        "max": 0,
+                        "top_5_percent_average": 0.0,
+                        "high_bin_threshold": 0.0,
+                        "high_bin_count": 0,
+                        "high_bin_ratio": 0.0
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "egr",
+                        "direction": "union",
+                        "source_file": "feature/egr_congestion_map/place_egr_union_overflow.csv",
+                        "available": true,
+                        "row_count": 13,
+                        "column_count": 13,
+                        "value_count": 169,
+                        "nonzero_count": 0,
+                        "nonzero_ratio": 0.0,
+                        "max": 0,
+                        "top_5_percent_average": 0.0,
+                        "high_bin_threshold": 0.0,
+                        "high_bin_count": 0,
+                        "high_bin_ratio": 0.0
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "egr",
+                        "direction": "vertical",
+                        "source_file": "feature/egr_congestion_map/place_egr_vertical_overflow.csv",
+                        "available": true,
+                        "row_count": 13,
+                        "column_count": 13,
+                        "value_count": 169,
+                        "nonzero_count": 0,
+                        "nonzero_ratio": 0.0,
+                        "max": 0,
+                        "top_5_percent_average": 0.0,
+                        "high_bin_threshold": 0.0,
+                        "high_bin_count": 0,
+                        "high_bin_ratio": 0.0
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "lutrudy",
+                        "direction": "horizontal",
+                        "source_file": "feature/RUDY_map/place_lut_rudy_horizontal.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.001529,
+                        "top_5_percent_average": 0.001529,
+                        "high_bin_threshold": 0.0013761000000000001,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "lutrudy",
+                        "direction": "union",
+                        "source_file": "feature/RUDY_map/place_lut_rudy_union.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.002917,
+                        "top_5_percent_average": 0.002917,
+                        "high_bin_threshold": 0.0026253,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "lutrudy",
+                        "direction": "vertical",
+                        "source_file": "feature/RUDY_map/place_lut_rudy_vertical.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.001388,
+                        "top_5_percent_average": 0.001388,
+                        "high_bin_threshold": 0.0012492,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "rudy",
+                        "direction": "horizontal",
+                        "source_file": "feature/RUDY_map/place_rudy_horizontal.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.001347,
+                        "top_5_percent_average": 0.001347,
+                        "high_bin_threshold": 0.0012123000000000001,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "rudy",
+                        "direction": "union",
+                        "source_file": "feature/RUDY_map/place_rudy_union.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.002601,
+                        "top_5_percent_average": 0.002601,
+                        "high_bin_threshold": 0.0023409,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "congestion",
+                        "metric": "rudy",
+                        "direction": "vertical",
+                        "source_file": "feature/RUDY_map/place_rudy_vertical.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.001254,
+                        "top_5_percent_average": 0.001254,
+                        "high_bin_threshold": 0.0011286,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "cell",
+                        "metric": "allcell_density",
+                        "source_file": "feature/density_map/place_allcell_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.58449,
+                        "top_5_percent_average": 0.58449,
+                        "high_bin_threshold": 0.526041,
+                        "high_bin_count": 2,
+                        "high_bin_ratio": 0.2222222222222222
+                    },
+                    {
+                        "group": "cell",
+                        "metric": "macro_density",
+                        "source_file": "feature/density_map/place_macro_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 0,
+                        "nonzero_ratio": 0.0,
+                        "max": 0,
+                        "top_5_percent_average": 0.0,
+                        "high_bin_threshold": 0.0,
+                        "high_bin_count": 0,
+                        "high_bin_ratio": 0.0
+                    },
+                    {
+                        "group": "cell",
+                        "metric": "stdcell_density",
+                        "source_file": "feature/density_map/place_stdcell_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 0.509388,
+                        "top_5_percent_average": 0.509388,
+                        "high_bin_threshold": 0.45844919999999995,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "margin",
+                        "metric": "horizontal",
+                        "source_file": "feature/margin_map/place_horizontal_margin.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 15200,
+                        "top_5_percent_average": 15200.0,
+                        "high_bin_threshold": 13680.0,
+                        "high_bin_count": 9,
+                        "high_bin_ratio": 1.0
+                    },
+                    {
+                        "group": "margin",
+                        "metric": "union",
+                        "source_file": "feature/margin_map/place_union_margin.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 30600,
+                        "top_5_percent_average": 30600.0,
+                        "high_bin_threshold": 27540.0,
+                        "high_bin_count": 9,
+                        "high_bin_ratio": 1.0
+                    },
+                    {
+                        "group": "margin",
+                        "metric": "vertical",
+                        "source_file": "feature/margin_map/place_vertical_margin.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 15400,
+                        "top_5_percent_average": 15400.0,
+                        "high_bin_threshold": 13860.0,
+                        "high_bin_count": 9,
+                        "high_bin_ratio": 1.0
+                    },
+                    {
+                        "group": "net",
+                        "metric": "allnet_density",
+                        "source_file": "feature/density_map/place_allnet_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 28,
+                        "top_5_percent_average": 28.0,
+                        "high_bin_threshold": 25.2,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "net",
+                        "metric": "global_net_density",
+                        "source_file": "feature/density_map/place_global_net_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 26,
+                        "top_5_percent_average": 26.0,
+                        "high_bin_threshold": 23.400000000000002,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "net",
+                        "metric": "local_net_density",
+                        "source_file": "feature/density_map/place_local_net_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 4,
+                        "nonzero_ratio": 0.4444444444444444,
+                        "max": 4,
+                        "top_5_percent_average": 4.0,
+                        "high_bin_threshold": 3.6,
+                        "high_bin_count": 2,
+                        "high_bin_ratio": 0.2222222222222222
+                    },
+                    {
+                        "group": "pin",
+                        "metric": "allcell_pin_density",
+                        "source_file": "feature/density_map/place_allcell_pin_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 72,
+                        "top_5_percent_average": 72.0,
+                        "high_bin_threshold": 64.8,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    },
+                    {
+                        "group": "pin",
+                        "metric": "macro_pin_density",
+                        "source_file": "feature/density_map/place_macro_pin_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 0,
+                        "nonzero_ratio": 0.0,
+                        "max": 0,
+                        "top_5_percent_average": 0.0,
+                        "high_bin_threshold": 0.0,
+                        "high_bin_count": 0,
+                        "high_bin_ratio": 0.0
+                    },
+                    {
+                        "group": "pin",
+                        "metric": "stdcell_pin_density",
+                        "source_file": "feature/density_map/place_stdcell_pin_density.csv",
+                        "available": true,
+                        "row_count": 3,
+                        "column_count": 3,
+                        "value_count": 9,
+                        "nonzero_count": 9,
+                        "nonzero_ratio": 1.0,
+                        "max": 72,
+                        "top_5_percent_average": 72.0,
+                        "high_bin_threshold": 64.8,
+                        "high_bin_count": 1,
+                        "high_bin_ratio": 0.1111111111111111
+                    }
+                ]
+            },
+            "feature_source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": ""
+            }
+        }
+    ],
+    "sources": [
+        {
+            "kind": "feature",
+            "path": "feature/place.db.json"
+        },
+        {
+            "kind": "feature",
+            "path": "feature/place.step.json"
+        },
+        {
+            "kind": "feature",
+            "path": "feature/place.map.json"
+        }
+    ],
+    "integrity": {
+        "status": "pass",
+        "invalid_metric_source_ids": [],
+        "invalid_detail_ids": []
+    },
+    "context": {
+        "timing_constraints": {
+            "sdc_sha256": "6a09beaf8196cfaa9c4b5e34b427a6a5dd5e10dc5ab3abb3618b436f83d1476b",
+            "sdc_size_bytes": 253,
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.step.json",
+                "selector": "/constraints/sdc"
+            }
+        }
+    }
+}

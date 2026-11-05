@@ -1,0 +1,4 @@
+name	class	symmetry	orient	width	height	is_overlap
+CoreSite	CORE	Y		200	1400	0
+core7	CORE	Y		200	1400	0
+core9	CORE	Y		200	1800	0

@@ -1,0 +1,388 @@
+[CTS 20261025 20:31:03 nQw6be7hz57 CTSAPI.cc:177 Info init] Starting CTS initialization...
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:259 Info input] Starting CTS data input...
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 Warn parse] CTS config warning: invalid config key "max_length" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 Warn parse] CTS config warning: invalid config key "net_list" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 Warn parse] CTS config warning: invalid config key "use_netlist" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] ============================================= CTS Runtime Paths =============================================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Path                    | Value                                                                           |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Configuration           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Work Directory          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts               |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Log File                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/cts.log       |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Statistics Directory    | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] | Visualization Directory | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 Info logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] ======================== Runtime Configuration =========================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Option                               | Value |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Skew Bound (ns)                      | 0.08  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Fanout                       | 32    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Root Input Slew (ns)                 | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Sink Transition (ns)         | 0.5   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Buffer Transition Configured | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Buffer Transition (ns)       | 0.5   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Capacitance Configured       | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Maximum Capacitance (pF)             | 0.15  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Routing Layer                        | 4     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Routing Layer Count                  | 2     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Wire Width (um)                      | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Buffer Master Count                  | 4     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Sink Clustering                      | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] | Analytical HTree                     | false |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 Info logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] ==================== Characterization Configuration ====================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Option                   | Value |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Wirelength Unit (um)     | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Wirelength Iterations    | 3     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Slew Steps               | 10    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Capacitance Steps        | 10    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Buffer Redundancy (%)    | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | Force Branch Buffer      | false |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] | HTree Topology Tolerance | 0.1   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 Info logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] ====================== Runtime Routing / Wire RC =======================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] +--------------------------+-----------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Property                 | Value                 |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] +--------------------------+-----------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Routing Setup Source     | Runtime Configuration |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Routing Layer            | 4                     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Query Length (um)        | 1                     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | DBU per um               | 1000                  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Unit Resistance (ohm/um) | 0.914                 |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Unit Capacitance (pF/um) | 0.00020067            |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] | Status                   | available             |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 Info logRuntimeConfiguration] +--------------------------+-----------------------+
+[CTS 20261025 20:31:12 nQw6be7hz57 WrapperLiberty.cc:439 Info loadLibertyIfNeeded] Wrapper: loaded 2 Liberty file(s) for CTS queries.
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] ========================= Clock Trace Overview =========================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Metric                  | Count |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Clock Declarations      | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Case Analysis Records   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Trace Records           | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Accepted Records        | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Accepted Target Nets    | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Trace Stop Records      | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Ambiguous Records       | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Rejected Records        | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Skipped Records         | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Other Records           | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] | Unowned Clock-like Nets | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 Info logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] ======================================= SDC Clock Ownership Overview ========================================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] | Clock | Kind    | Master | Period (ns) | Resolved | Targets | Sources | Trace | Accepted | Nets | Virtual |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] | clk   | primary | n/a    | 10          | true     | 1       | 0       | 1     | 1        | 1    | false   |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 Info logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] =================== CTS Inst Classification Summary ====================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Class         | Count |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Total         | 8     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Buffer        | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Inverter      | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Flip-flop     | 8     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Latch         | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Clock Gate    | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Mux           | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Clock Logic   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Boundary Load | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Macro Block   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] | Unknown       | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 Info logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] ============================================ Clock Distribution Overview =============================================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] | Clock | Net | Period | Source | Nets | Insts | Sinks | Seq | Macro | Boundary | Propagation | IO | Reuse | Anchors |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] | clk   | clk | 10     | sdc    | 0    | 0     | 8     | 8   | 0     | 0        | 0           | 0  | false | 0       |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] | TOTAL | -   | -      | -      | 1    | 8     | 8     | -   | -     | -        | -           | -  | -     | -       |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 Info logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:307 Info input] CTS data input completed with 1 clock(s) (elapsed = 00:00:09, cpu = 00:00:09, mem = 183.85MB) 
+[CTS 20261025 20:31:12 nQw6be7hz57 CTSAPI.cc:190 Info init] Completed CTS initialization (elapsed = 00:00:09, cpu = 00:00:09, mem = 183.85MB) 
+[CTS 20261025 20:31:12 nQw6be7hz57 Logger.cc:197 Info printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/cts.log'!
+[CTS 20261025 20:31:12 nQw6be7hz57 CTSAPI.cc:100 Info runCTS] Starting CTS flow...
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:275 Info run] Starting CTS synthesis...
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] ================================ CTS Sink Domain Overview ================================
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] | Clock | Net | Valid Sinks | Hard Macro | Regular | Active Domains | Preclustered Reuse |
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] | clk   | clk | 8           | 0          | 8       | 1              | false              |
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 Info run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] ======================== CTS Clustering Summary ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Metric                              | Value                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Strategy                            | recursive_spatial_bisect |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Loads                               | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Clusters                            | 1                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Fanout Minimum                      | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Fanout Average                      | 8.000                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Fanout Maximum                      | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Constraint Maximum Fanout           | 32                       |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Constraint Maximum Diameter (DBU)   | 2147483647               |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Constraint Maximum Capacitance (pF) | 0.15                     |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Exact Clusters                      | 1                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Exact Route Failures                | 0                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Maximum Diameter (DBU)              | 20000                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Total Capacitance Minimum (pF)      | 0.012901                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Total Capacitance Maximum (pF)      | 0.012901                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] | Routed Wirelength (DBU)             | 30408                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 Info run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] ======================= HTree Synthesis Overview =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Metric             | Value       |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Clock              | clk         |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Sink Domain        | regular     |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Mode               | single_load |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Levels             | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Inserted Instances | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Inserted Pins      | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Inserted Nets      | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] | Selected Depth     | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 Info build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 WrapperLiberty.cc:282 Warn queryConfiguredMaxCapBoundaryPf] Clock-source drive-cap query uses configured max_cap=0.15 pF as the hard source boundary for clk because source-specific Liberty cap limit is unavailable.
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] ==================== Source Trunk Segment Selection ====================
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Metric                  | Value  |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Length (um)             | 16.551 |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Length Index            | 1      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Strict Candidates       | 470    |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Relaxed Candidates      | 0      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Required Load Cap Index | 1      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Source Drive Cap Index  | 10     |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] | Boundary Relaxed        | false  |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 Info BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] ========================= Source Trunk Summary =========================
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Property         | Value          |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Clock            | clk            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Net              | clk            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Sink Domain      | source_to_root |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Stage            | top_segment    |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Success          | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Selected Depth   | n/a            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Selected Levels  | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Inserted Buffers | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Inserted Nets    | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Boundary Relaxed | false          |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] | Failure Reason   | n/a            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 Info EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] ================== CTS Clock Tree Synthesis Overview ===================
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Metric                 | Value    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Outcome                | finished |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Success                | true     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Total Clocks           | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Successful Clocks      | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Skipped Clocks         | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Failed Clocks          | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Sink Domains           | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Hard Macro Sinks       | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Regular Sinks          | 8        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Selected HTree Levels  | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Selected HTree Depth   | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Inserted HTree Buffers | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | Inserted HTree Nets    | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] | No-op Reason           | n/a      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 Info run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] ========================= CTS Clock Tree Sink Domains ==========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] | Clock | Net | Domain         | Status   | Valid | Domain Sinks | Detail      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] | clk   | clk | regular        | finished | 8     | 8            | synthesis   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] | clk   | clk | source_to_root | finished | 8     | 1            | top_segment |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 Info run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:402 Info run] Completed CTS synthesis (elapsed = 00:00:02, cpu = 00:00:02, mem = 17.15MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:246 Info run] Starting CTS optimization...
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] ===================== CTS Optimization Stage Setup =====================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] | Property                       | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] | Clocks                         | 1     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] | Configured Buffer Masters      | 4     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] | Legal Buffer Master Candidates | 4     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] | Target Skew (ns)               | 0.08  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 Info run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] ======================== CTS Optimization Setup ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Property                 | Value                  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Clock                    | clk                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Net                      | clk                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Target Skew (ns)         | 0.08                   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Solve Mode               | exact_full_power_batch |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Buffer Master Candidates | 4                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Graph Nodes              | 13                     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Graph Nets               | 3                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Graph Sinks              | 8                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Buffer Inputs            | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Buffer Outputs           | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Optimizable Buffers      | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] | Generated Candidates     | 0                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 Info logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] ====================== CTS Optimization Evolution ======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Metric                 | Before      | After / Result |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Skew (ns)              | 9.95969e-06 | 9.95969e-06    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Area (um^2)            | 5.6         | 5.6            |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Power (W)              | 3.06366e-06 | 3.06366e-06    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Capacitance Violations | 0           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Slew Violations        | 0           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Valid                  | -           | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Target Met             | -           | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Changed                | -           | false          |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Iterations             | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Trials                 | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Batch Trials           | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Accepted Edits         | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Accepted Batches       | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Rejected Candidates    | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Capacitance Rejected   | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Slew Rejected          | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] | Stop Reason            | -           | target_met     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 Info logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] ================= CTS Optimization Master Transitions ==================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] | Clock | From | To   | Count | Area Delta (um^2) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] | clk   | none | none | 0     | 0                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 Info logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] =================== CTS Optimization Runtime Profile ===================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Stage                  | Runtime (s) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Route Tree Cache       | 7.2801e-05  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | FastSTA Context        | 0.000206301 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Route Injection        | 3.7301e-05  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Collect Buffers        | 1.8e-06     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Collect Cap Baseline   | 5e-07       |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Collect Slew Baseline  | 7e-07       |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Solve                  | 0.000190801 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Apply Edits            | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Capture Initial State  | 0.000129101 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Topology Index         | 2.06e-05    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Candidate Generation   | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Batch Trial Evaluation | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Accepted Batch Apply   | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Stage Total            | 0.000510204 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] | Solver Detail          | 0.000149701 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 Info logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] ============================================ CTS Optimization Result =============================================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] | Clock | Sinks | Initial Skew | Optimized Skew | Target | Target Met | Min Latency | Max Latency | Mean Latency |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] | clk   | 8     | 9.95969e-06  | 9.95969e-06    | 0.08   | true       | 0.104872    | 0.104882    | 0.104877     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 Info run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] ================== CTS Optimization Selection Summary ==================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] | Metric                | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] | Accepted Sizing Edits | 0     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] | Optimized Clocks      | 0     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 Info run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:430 Info run] Completed CTS optimization (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.26MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:38 Info run] Starting CTS instantiation...
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] ====================== CTS Instantiation Overview ======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Property                | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Design Ready            | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Clocks                  | 1     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Write Success           | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | iDB Clock Tree Restored | false |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Success                 | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Failed Clock            | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Failed Net              | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] | Reason                  | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 Info run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:77 Info run] Completed CTS instantiation (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:39 Info run] Starting CTS evaluation...
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] ======================= CTS Evaluation Overview ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Metric                   | Value          |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Ready                    | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | QoR Metric Status        | partial        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Physical Metric Source   | cts_clock_tree |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Path Depth Status        | available      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | DBU per um               | 1000           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Final Clock Buffers      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Final Buffer Area (um^2) | 5.6            |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Clock Member Buffers     | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Path Buffer Minimum      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Path Buffer Maximum      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] | Maximum Clock Level      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 Info run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] ====================== CTS Evaluation Wirelength =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Region      | Routed (um) | HPWL (um) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Top         | 16.551      | 16.551    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Trunk       | 0           | 0         |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Leaf        | 30.408      | 20        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Total       | 46.959      | 36.551    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Maximum Net | 30.408      | 20        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] | Valid       | true        | -         |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 Info run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:83 Info run] Completed CTS evaluation (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] =========================== CTS Key Results ============================
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Metric                              | Value  |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Final Clock Buffers                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Final Buffer Area (um^2)            | 5.6    |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Accepted Sizing Edits               | 0      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Maximum Clock Net Wirelength (um)   | 30.408 |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Total Clock Network Wirelength (um) | 46.959 |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Path Buffer Minimum                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Path Buffer Maximum                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] | Maximum Clock Level                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 Info runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:137 Info runCTS] Completed CTS flow (elapsed = 00:00:02, cpu = 00:00:02, mem = 17.41MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:43 Info run] Starting CTS output...
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] ======================== Wirelength Statistics =========================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Metric         | Routed Wirelength (um) | HPWL Wirelength (um) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Top            | 16.551                 | 16.551               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Trunk          | 0.000                  | 0.000                |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Leaf           | 30.408                 | 20.000               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Total          | 46.959                 | 36.551               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Max Net Length | 30.408                 | 20.000               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] ============================== Cell Stats ==============================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Cell Type | Count | Total Area (um^2) | Total Cap (pF) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Buffer    | 2     | 5.600             | unavailable    |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] ====================== Library Cell Distribution =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | Cell Master | Cell Type | Count | Total Area (um^2) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] | BUFX8H7L    | Buffer    | 2     | 5.600             |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 Info writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] ============================================================ CTS Report Artifacts =============================================================
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Artifact                         | Path                                                                                           | Status  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Output Root                      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts                              | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Statistics Directory             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics                   | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Visualization Directory          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Wirelength Report                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/wirelength.rpt    | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Cell Statistics Report           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/cell_stats.rpt    | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | Library Cell Distribution Report | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/lib_cell_dist.rpt | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | SVG                              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] | GDS                              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 Info run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:81 Info run] Completed CTS output (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 

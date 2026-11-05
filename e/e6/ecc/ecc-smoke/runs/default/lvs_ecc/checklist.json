@@ -1,0 +1,137 @@
+{
+    "schema_version": 3,
+    "kind": "signoff_checklist",
+    "checker_revision": "signoff-v1",
+    "generated_at": "2026-10-25T12:29:58.040879Z",
+    "status": "blocked",
+    "summary": {
+        "passed": 0,
+        "blocked": 6,
+        "attention": 0,
+        "unavailable": 0
+    },
+    "checklist": [
+        {
+            "id": "quality.lvs.clean",
+            "step": "lvs",
+            "category": "quality_gate",
+            "owner": "qor",
+            "policy": "block",
+            "state": "unavailable",
+            "blocked": true,
+            "title": "qor.lvs.clean",
+            "summary": "Current QoR gate is unavailable; rerun analysis for this step.",
+            "source": {
+                "kind": "qor_gate",
+                "path": "lvs_ecc/analysis/qor_summary.json",
+                "gate_id": "qor.lvs.clean"
+            },
+            "evidence": []
+        },
+        {
+            "id": "artifact.lvs.def",
+            "step": "lvs",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "LVS DEF",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "lvs_ecc/output/ecc_smoke_lvs.def.gz"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "lvs_ecc/output/ecc_smoke_lvs.def.gz"
+                }
+            ]
+        },
+        {
+            "id": "artifact.lvs.verilog",
+            "step": "lvs",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "LVS Verilog",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "lvs_ecc/output/ecc_smoke_lvs.v.gz"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "lvs_ecc/output/ecc_smoke_lvs.v.gz"
+                }
+            ]
+        },
+        {
+            "id": "artifact.lvs.gds",
+            "step": "lvs",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "LVS GDS",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "lvs_ecc/output/ecc_smoke_lvs.gds"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "lvs_ecc/output/ecc_smoke_lvs.gds"
+                }
+            ]
+        },
+        {
+            "id": "artifact.lvs.report",
+            "step": "lvs",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "LVS report",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "lvs_ecc/report/lvs.rpt"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "lvs_ecc/report/lvs.rpt"
+                }
+            ]
+        },
+        {
+            "id": "artifact.lvs.json",
+            "step": "lvs",
+            "category": "artifact",
+            "owner": "checklist",
+            "policy": "block",
+            "state": "failed",
+            "blocked": true,
+            "title": "LVS JSON",
+            "summary": "Required file is missing.",
+            "source": {
+                "kind": "output",
+                "path": "lvs_ecc/feature/lvs.step.json"
+            },
+            "evidence": [
+                {
+                    "kind": "output",
+                    "path": "lvs_ecc/feature/lvs.step.json"
+                }
+            ]
+        }
+    ]
+}

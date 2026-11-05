@@ -1,0 +1,19 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/area-20261105-161740/Synthesis_yosys/subflow.json",
+    "steps": [
+        {
+            "name": "run yosys",
+            "state": "Success",
+            "runtime": "0:0:5",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:19",
+            "peak memory (mb)": 86.867,
+            "info": {}
+        }
+    ]
+}

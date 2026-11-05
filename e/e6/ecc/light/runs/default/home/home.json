@@ -1,0 +1,29 @@
+{
+    "parameters": "",
+    "flow": "",
+    "layout": "",
+    "checklist": "",
+    "metrics": {},
+    "monitor": {
+        "step": [
+            "Synthesis - run yosys",
+            "Synthesis - analysis"
+        ],
+        "memory": [
+            "0.008",
+            "57.652"
+        ],
+        "runtime": [
+            "0:0:2",
+            "0:0:11"
+        ],
+        "instance": [
+            0,
+            0
+        ],
+        "frequency": [
+            0.0,
+            0.0
+        ]
+    }
+}

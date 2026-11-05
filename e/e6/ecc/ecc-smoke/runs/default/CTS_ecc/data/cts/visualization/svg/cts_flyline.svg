@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040.00" height="920.00" viewBox="0 0 1040.00 920.00">
+<rect width="100%" height="100%" fill="#ffffff" />
+<title>cts_flyline.svg</title>
+<g fill="none" stroke-linecap="round">
+<line x1="605.00" y1="381.87" x2="605.00" y2="381.87" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="306.67" y2="206.67" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="813.33" y2="580.00" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="813.33" y2="113.87" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="813.33" y2="20.00" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="226.67" y2="673.87" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="600.00" y2="766.67" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="680.00" y2="673.87" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="605.00" y1="381.87" x2="586.67" y2="20.00" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+<line x1="20.00" y1="900.27" x2="605.00" y2="381.87" stroke="#6a3d9a" stroke-width="1.20" stroke-opacity="0.62" stroke-dasharray="8,5" />
+</g>
+<g fill="#ffbf69" fill-opacity="0.86" stroke="#8c4f00" stroke-width="0.8">
+<rect x="284.42" y="251.35" width="4.50" height="4.50" />
+<rect x="791.08" y="624.68" width="4.50" height="4.50" />
+<rect x="791.08" y="158.02" width="4.50" height="4.50" />
+<rect x="791.08" y="64.68" width="4.50" height="4.50" />
+<rect x="204.42" y="718.02" width="4.50" height="4.50" />
+<rect x="577.75" y="811.35" width="4.50" height="4.50" />
+<rect x="657.75" y="718.02" width="4.50" height="4.50" />
+<rect x="564.42" y="64.68" width="4.50" height="4.50" />
+<rect x="602.75" y="379.62" width="4.50" height="4.50" />
+<rect x="602.75" y="379.62" width="4.50" height="4.50" />
+</g>
+<g stroke-width="0.7">
+<circle cx="20.00" cy="900.27" r="3.00" fill="#d62728" stroke="#ffffff" />
+<circle cx="605.00" cy="381.87" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="605.00" cy="381.87" r="3.00" fill="#d62728" stroke="#ffffff" />
+<circle cx="605.00" cy="381.87" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="605.00" cy="381.87" r="3.00" fill="#d62728" stroke="#ffffff" />
+<circle cx="306.67" cy="206.67" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="813.33" cy="580.00" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="813.33" cy="113.87" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="813.33" cy="20.00" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="226.67" cy="673.87" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="600.00" cy="766.67" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="680.00" cy="673.87" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+<circle cx="586.67" cy="20.00" r="2.00" fill="#1f77b4" fill-opacity="0.78" stroke="#0c4068" />
+</g>
+<g font-family="monospace" font-size="12" fill="#222222"><rect x="10.00" y="754.00" width="260" height="132.00" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#d0d0d0" /><text x="18.00" y="770.00">Legend</text><line x1="18.00" y1="784.00" x2="32.00" y2="784.00" stroke="#2ca25f" stroke-width="1.8" /><text x="38.00" y="788.00">routed segment</text><line x1="18.00" y1="802.00" x2="32.00" y2="802.00" stroke="#6a3d9a" stroke-width="1.2" stroke-dasharray="8,5" /><text x="38.00" y="806.00">flyline segment</text><line x1="18.00" y1="820.00" x2="32.00" y2="820.00" stroke="#ff8c42" stroke-width="1.4" stroke-dasharray="5,3" /><text x="38.00" y="824.00">degraded segment</text><circle cx="25.00" cy="838.00" r="3.00" fill="#d62728" /><text x="38.00" y="842.00">driver/root</text><circle cx="25.00" cy="856.00" r="2.00" fill="#1f77b4" /><text x="38.00" y="860.00">sink load</text><rect x="22.00" y="870.00" width="4.50" height="4.50" fill="#ffbf69" stroke="#8c4f00" stroke-width="1.0" /><text x="38.00" y="878.00">CTS buffer</text></g>
+</svg>

@@ -1,0 +1,10 @@
+{
+    "ConfigPath": {
+        "idb_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/db_default_config.json",
+        "ifp_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/fp_default_config.json",
+        "ipl_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/pl_default_config.json",
+        "irt_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/rt_default_config.json",
+        "idrc_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/drc_default_config.json",
+        "icts_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-syn-sta-01/config/cts_default_config.json"
+    }
+}

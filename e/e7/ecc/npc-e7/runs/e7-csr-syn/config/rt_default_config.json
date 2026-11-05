@@ -1,0 +1,11 @@
+{
+    "RT": {
+        "-temp_directory_path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/route_ecc/data/rt",
+        "-bottom_routing_layer": "MET2",
+        "-top_routing_layer": "MET5",
+        "-thread_number": "50",
+        "-enable_timing": "0",
+        "-output_csv": "0",
+        "-output_inter_result": "0"
+    }
+}

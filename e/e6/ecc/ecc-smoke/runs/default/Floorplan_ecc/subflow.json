@@ -1,0 +1,70 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/Floorplan_ecc/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "init floorplan",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.637,
+            "info": {}
+        },
+        {
+            "name": "create tracks",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 1.039,
+            "info": {}
+        },
+        {
+            "name": "place io pins",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 1.039,
+            "info": {}
+        },
+        {
+            "name": "tap cell",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 1.039,
+            "info": {}
+        },
+        {
+            "name": "PDN",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 1.043,
+            "info": {}
+        },
+        {
+            "name": "set clock net",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 1.16,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 5.223,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {
+                "instance": 72
+            }
+        }
+    ]
+}

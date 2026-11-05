@@ -1,0 +1,39 @@
+{
+    "schema_version": 3,
+    "analysis_revision": "quality-gates-v4",
+    "tool": "dreamplace",
+    "step": "place",
+    "design": "ecc_smoke",
+    "hotspots": [
+        {
+            "kind": "congestion",
+            "severity": "warning",
+            "metric_id": "place_lutrudy_utilization_max",
+            "display_name": "Place LUT-RUDY Utilization Max",
+            "value": 0.0029170000925660133,
+            "unit": "ratio",
+            "category": "routability_physical",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/utilization/lutrudy/max/union"
+            },
+            "description": "Placement LUT-RUDY utilization peak is present."
+        },
+        {
+            "kind": "congestion",
+            "severity": "warning",
+            "metric_id": "place_rudy_utilization_max",
+            "display_name": "Place RUDY Utilization Max",
+            "value": 0.002601000014692545,
+            "unit": "ratio",
+            "category": "routability_physical",
+            "source": {
+                "kind": "feature",
+                "path": "feature/place.map.json",
+                "selector": "/Congestion/utilization/rudy/max/union"
+            },
+            "description": "Placement RUDY utilization peak is present."
+        }
+    ]
+}

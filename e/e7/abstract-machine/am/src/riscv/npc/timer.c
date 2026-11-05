@@ -17,9 +17,11 @@ void __am_timer_init() {
 }
 
 void __am_timer_uptime(AM_TIMER_UPTIME_T *uptime) {
-    
-    uint64_t cycles = read_mcycle();
-    uptime->us = (cycles * 17782ull) >> 16;
+
+    // CPU: 25MHz, 每微妙25个周期
+    // 综合报告的频率为141MHz
+    // 更新换算系数: 123
+    uptime->us = read_mcycle() / 25;
 }
 
 void __am_timer_rtc(AM_TIMER_RTC_T *rtc) {

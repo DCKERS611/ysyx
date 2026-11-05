@@ -1,0 +1,35 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.0,
+            "info": {}
+        },
+        {
+            "name": "run placement",
+            "state": "Success",
+            "runtime": "0:0:35",
+            "peak memory (mb)": 13.941,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 18.363,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:0",
+            "peak memory (mb)": 0.004,
+            "info": {
+                "instance": 72
+            }
+        }
+    ]
+}

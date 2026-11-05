@@ -28,6 +28,8 @@ module ysyx_00000000_csr (
         (csr_addr == 12'hB80) ? csr_mcycle[63:32]   :
         (csr_addr == 12'hB02) ? csr_minstret[31:0]  :
         (csr_addr == 12'hB82) ? csr_minstret[63:32] :
+        (csr_addr == 12'hF11) ? 32'h79737978        :
+        (csr_addr == 12'hF12) ? 32'd100023589       :
         32'b0;
 
 endmodule

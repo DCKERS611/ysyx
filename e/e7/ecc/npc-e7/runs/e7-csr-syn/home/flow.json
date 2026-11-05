@@ -1,0 +1,84 @@
+{
+    "steps": [
+        {
+            "name": "Synthesis",
+            "tool": "yosys",
+            "state": "Ongoing",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "Floorplan",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "fixFanout",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "place",
+            "tool": "dreamplace",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "CTS",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "legalization",
+            "tool": "dreamplace",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "route",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "drc",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "lvs",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "filler",
+            "tool": "ecc",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "Congestion": {
+        "map": {
+            "egr": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_horizontal_overflow.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_union_overflow.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/egr_congestion_map/place_egr_vertical_overflow.csv"
+            },
+            "lutrudy": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_horizontal.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_union.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_lut_rudy_vertical.csv"
+            },
+            "rudy": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_horizontal.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_union.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/RUDY_map/place_rudy_vertical.csv"
+            }
+        },
+        "overflow": {
+            "max": {
+                "horizontal": 0,
+                "union": 0,
+                "vertical": 0
+            },
+            "top_average": {
+                "horizontal": 0.0,
+                "union": 0.0,
+                "vertical": 0.0
+            },
+            "total": {
+                "horizontal": 0,
+                "union": 0,
+                "vertical": 0
+            }
+        },
+        "utilization": {
+            "lutrudy": {
+                "max": {
+                    "horizontal": 0.0015290000010281801,
+                    "union": 0.0029170000925660133,
+                    "vertical": 0.0013879999751225114
+                },
+                "top_average": {
+                    "horizontal": 0.00038225000025704503,
+                    "union": 0.0007292500231415033,
+                    "vertical": 0.00034699999378062785
+                }
+            },
+            "rudy": {
+                "max": {
+                    "horizontal": 0.0013470000121742487,
+                    "union": 0.002601000014692545,
+                    "vertical": 0.0012540000025182962
+                },
+                "top_average": {
+                    "horizontal": 0.0003367500030435622,
+                    "union": 0.0006502500036731362,
+                    "vertical": 0.0003135000297334045
+                }
+            }
+        }
+    },
+    "Density": {
+        "cell": {
+            "allcell_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_density.csv",
+            "macro_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_density.csv",
+            "stdcell_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_density.csv"
+        },
+        "margin": {
+            "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_horizontal_margin.csv",
+            "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_union_margin.csv",
+            "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/margin_map/place_vertical_margin.csv"
+        },
+        "net": {
+            "allnet_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allnet_density.csv",
+            "global_net_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_global_net_density.csv",
+            "local_net_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_local_net_density.csv"
+        },
+        "pin": {
+            "allcell_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_allcell_pin_density.csv",
+            "macro_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_macro_pin_density.csv",
+            "stdcell_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/place_dreamplace/feature/density_map/place_stdcell_pin_density.csv"
+        }
+    },
+    "Wirelength": {
+        "FLUTE": 361271,
+        "GRWL": 352000,
+        "HPWL": 321025,
+        "HTree": 441215,
+        "VTree": 413856
+    }
+}

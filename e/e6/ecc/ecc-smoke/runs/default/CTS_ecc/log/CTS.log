@@ -1,0 +1,802 @@
+[ECC 20261025 20:31:03 cQBzyMnA dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data
+[ECC 20261025 20:31:03 cQBzyMnA dm_config.h:134 [1;34mInfo[0m set_feature_path] [Data config set] feature = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature
+[CTS 20261025 20:31:03 nQw6be7hz57 CTSAPI.cc:156 [1;34mInfo[0m destroyCTS] Starting CTS destruction...
+[CTS 20261025 20:31:03 nQw6be7hz57 CTSAPI.cc:162 [1;34mInfo[0m destroyCTS] Completed CTS destruction; allocator release supported, RSS before=1704.45 MiB, RSS after=1128.44 MiB.
+[CTS 20261025 20:31:03 nQw6be7hz57 CTSAPI.cc:177 [1;34mInfo[0m init] Starting CTS initialization...
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:259 [1;34mInfo[0m input] Starting CTS data input...
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 [1;33mWarn[0m parse] CTS config warning: invalid config key "max_length" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 [1;33mWarn[0m parse] CTS config warning: invalid config key "net_list" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 Config.cc:336 [1;33mWarn[0m parse] CTS config warning: invalid config key "use_netlist" in /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json; ignored.
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] ============================================= CTS Runtime Paths =============================================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Path                    | Value                                                                           |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Configuration           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/config/cts_default_config.json |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Work Directory          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts               |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Log File                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/cts.log       |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Statistics Directory    | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] | Visualization Directory | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:80 [1;34mInfo[0m logRuntimeConfiguration] +-------------------------+---------------------------------------------------------------------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] ======================== Runtime Configuration =========================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Option                               | Value |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Skew Bound (ns)                      | 0.08  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Fanout                       | 32    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Root Input Slew (ns)                 | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Sink Transition (ns)         | 0.5   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Buffer Transition Configured | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Buffer Transition (ns)       | 0.5   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Capacitance Configured       | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Maximum Capacitance (pF)             | 0.15  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Routing Layer                        | 4     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Routing Layer Count                  | 2     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Wire Width (um)                      | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Buffer Master Count                  | 4     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Sink Clustering                      | true  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] | Analytical HTree                     | false |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:87 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] ==================== Characterization Configuration ====================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Option                   | Value |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Wirelength Unit (um)     | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Wirelength Iterations    | 3     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Slew Steps               | 10    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Capacitance Steps        | 10    |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Buffer Redundancy (%)    | 0     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | Force Branch Buffer      | false |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] | HTree Topology Tolerance | 0.1   |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:103 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] ====================== Runtime Routing / Wire RC =======================
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-----------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Property                 | Value                 |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-----------------------+
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Routing Setup Source     | Runtime Configuration |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Routing Layer            | 4                     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Query Length (um)        | 1                     |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | DBU per um               | 1000                  |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Unit Resistance (ohm/um) | 0.914                 |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Unit Capacitance (pF/um) | 0.00020067            |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] | Status                   | available             |
+[CTS 20261025 20:31:03 nQw6be7hz57 DataManager.cc:112 [1;34mInfo[0m logRuntimeConfiguration] +--------------------------+-----------------------+
+[ECC 20261025 20:31:03 cQBzyMnA LibParserCpp.cc:2055 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib
+[ECC 20261025 20:31:05 cQBzyMnA LibParserCpp.cc:2071 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib success.
+[ECC 20261025 20:31:05 cQBzyMnA LibParserCpp.cc:2082 [1;34mInfo[0m linkLib] link liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib start.
+[ECC 20261025 20:31:05 cQBzyMnA LibParserCpp.cc:981 [1;34mInfo[0m visitComplexAttri] unkown attri name: voltage_map in /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib line no 28
+[ECC 20261025 20:31:05 cQBzyMnA LibParserCpp.cc:2047 [1;34mInfo[0m visitGroup] group operating_conditions is not supported.
+[ECC 20261025 20:31:08 cQBzyMnA LibParserCpp.cc:2095 [1;34mInfo[0m linkLib] link liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib success.
+[ECC 20261025 20:31:08 cQBzyMnA LibParserCpp.cc:2055 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p08_125_nldm.lib
+[ECC 20261025 20:31:09 cQBzyMnA LibParserCpp.cc:2071 [1;34mInfo[0m readLib] load liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p08_125_nldm.lib success.
+[ECC 20261025 20:31:09 cQBzyMnA LibParserCpp.cc:2082 [1;34mInfo[0m linkLib] link liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p08_125_nldm.lib start.
+[ECC 20261025 20:31:12 cQBzyMnA LibParserCpp.cc:2095 [1;34mInfo[0m linkLib] link liberty file /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p08_125_nldm.lib success.
+[CTS 20261025 20:31:12 nQw6be7hz57 WrapperLiberty.cc:439 [1;34mInfo[0m loadLibertyIfNeeded] Wrapper: loaded 2 Liberty file(s) for CTS queries.
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] ========================= Clock Trace Overview =========================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Metric                  | Count |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Clock Declarations      | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Case Analysis Records   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Trace Records           | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Accepted Records        | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Accepted Target Nets    | 1     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Trace Stop Records      | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Ambiguous Records       | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Rejected Records        | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Skipped Records         | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Other Records           | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] | Unowned Clock-like Nets | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:131 [1;34mInfo[0m logClockTraceSummary] +-------------------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] ======================================= SDC Clock Ownership Overview ========================================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] | Clock | Kind    | Master | Period (ns) | Resolved | Targets | Sources | Trace | Accepted | Nets | Virtual |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] | clk   | primary | n/a    | 10          | true     | 1       | 0       | 1     | 1        | 1    | false   |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:159 [1;34mInfo[0m logClockTraceSummary] +-------+---------+--------+-------------+----------+---------+---------+-------+----------+------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] =================== CTS Inst Classification Summary ====================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Class         | Count |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Total         | 8     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Buffer        | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Inverter      | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Flip-flop     | 8     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Latch         | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Clock Gate    | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Mux           | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Clock Logic   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Boundary Load | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Macro Block   | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] | Unknown       | 0     |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:171 [1;34mInfo[0m logDesignDistribution] +---------------+-------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] ============================================ Clock Distribution Overview =============================================
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] | Clock | Net | Period | Source | Nets | Insts | Sinks | Seq | Macro | Boundary | Propagation | IO | Reuse | Anchors |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] | clk   | clk | 10     | sdc    | 0    | 0     | 8     | 8   | 0     | 0        | 0           | 0  | false | 0       |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] | TOTAL | -   | -      | -      | 1    | 8     | 8     | -   | -     | -        | -           | -  | -     | -       |
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:213 [1;34mInfo[0m logDesignDistribution] +-------+-----+--------+--------+------+-------+-------+-----+-------+----------+-------------+----+-------+---------+
+[CTS 20261025 20:31:12 nQw6be7hz57 DataManager.cc:307 [1;34mInfo[0m input] CTS data input completed with 1 clock(s) (elapsed = 00:00:09, cpu = 00:00:09, mem = 183.85MB) 
+[CTS 20261025 20:31:12 nQw6be7hz57 CTSAPI.cc:190 [1;34mInfo[0m init] Completed CTS initialization (elapsed = 00:00:09, cpu = 00:00:09, mem = 183.85MB) 
+[CTS 20261025 20:31:12 nQw6be7hz57 Logger.cc:197 [1;34mInfo[0m printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/cts.log'!
+[CTS 20261025 20:31:12 nQw6be7hz57 CTSAPI.cc:100 [1;34mInfo[0m runCTS] Starting CTS flow...
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:275 [1;34mInfo[0m run] Starting CTS synthesis...
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] ================================ CTS Sink Domain Overview ================================
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] | Clock | Net | Valid Sinks | Hard Macro | Regular | Active Domains | Preclustered Reuse |
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] | clk   | clk | 8           | 0          | 8       | 1              | false              |
+[CTS 20261025 20:31:12 nQw6be7hz57 Synthesis.cc:249 [1;34mInfo[0m run] +-------+-----+-------------+------------+---------+----------------+--------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] ======================== CTS Clustering Summary ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Metric                              | Value                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Strategy                            | recursive_spatial_bisect |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Loads                               | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Clusters                            | 1                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Fanout Minimum                      | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Fanout Average                      | 8.000                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Fanout Maximum                      | 8                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Constraint Maximum Fanout           | 32                       |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Constraint Maximum Diameter (DBU)   | 2147483647               |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Constraint Maximum Capacitance (pF) | 0.15                     |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Exact Clusters                      | 1                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Exact Route Failures                | 0                        |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Maximum Diameter (DBU)              | 20000                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Total Capacitance Minimum (pF)      | 0.012901                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Total Capacitance Maximum (pF)      | 0.012901                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] | Routed Wirelength (DBU)             | 30408                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 FastClustering.cc:116 [1;34mInfo[0m run] +-------------------------------------+--------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] ======================= HTree Synthesis Overview =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Metric             | Value       |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Clock              | clk         |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Sink Domain        | regular     |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Mode               | single_load |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Levels             | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Inserted Instances | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Inserted Pins      | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Inserted Nets      | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] | Selected Depth     | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 HTree.cc:107 [1;34mInfo[0m build] +--------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 WrapperLiberty.cc:282 [1;33mWarn[0m queryConfiguredMaxCapBoundaryPf] Clock-source drive-cap query uses configured max_cap=0.15 pF as the hard source boundary for clk because source-specific Liberty cap limit is unavailable.
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] ==================== Source Trunk Segment Selection ====================
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Metric                  | Value  |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Length (um)             | 16.551 |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Length Index            | 1      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Strict Candidates       | 470    |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Relaxed Candidates      | 0      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Required Load Cap Index | 1      |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Source Drive Cap Index  | 10     |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] | Boundary Relaxed        | false  |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:274 [1;34mInfo[0m BuildSourceTrunkTree] +-------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] ========================= Source Trunk Summary =========================
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Property         | Value          |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Clock            | clk            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Net              | clk            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Sink Domain      | source_to_root |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Stage            | top_segment    |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Success          | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Selected Depth   | n/a            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Selected Levels  | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Inserted Buffers | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Inserted Nets    | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Boundary Relaxed | false          |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] | Failure Reason   | n/a            |
+[CTS 20261025 20:31:15 nQw6be7hz57 SourceTrunk.cc:194 [1;34mInfo[0m EmitSourceTrunkSummary] +------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] ================== CTS Clock Tree Synthesis Overview ===================
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Metric                 | Value    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Outcome                | finished |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Success                | true     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Total Clocks           | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Successful Clocks      | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Skipped Clocks         | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Failed Clocks          | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Sink Domains           | 1        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Hard Macro Sinks       | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Regular Sinks          | 8        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Selected HTree Levels  | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Selected HTree Depth   | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Inserted HTree Buffers | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | Inserted HTree Nets    | 0        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] | No-op Reason           | n/a      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:371 [1;34mInfo[0m run] +------------------------+----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] ========================= CTS Clock Tree Sink Domains ==========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] | Clock | Net | Domain         | Status   | Valid | Domain Sinks | Detail      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] | clk   | clk | regular        | finished | 8     | 8            | synthesis   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] | clk   | clk | source_to_root | finished | 8     | 1            | top_segment |
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:393 [1;34mInfo[0m run] +-------+-----+----------------+----------+-------+--------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Synthesis.cc:402 [1;34mInfo[0m run] Completed CTS synthesis (elapsed = 00:00:02, cpu = 00:00:02, mem = 17.15MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:246 [1;34mInfo[0m run] Starting CTS optimization...
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] ===================== CTS Optimization Stage Setup =====================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] | Property                       | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] | Clocks                         | 1     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] | Configured Buffer Masters      | 4     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] | Legal Buffer Master Candidates | 4     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] | Target Skew (ns)               | 0.08  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:279 [1;34mInfo[0m run] +--------------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] ======================== CTS Optimization Setup ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Property                 | Value                  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Clock                    | clk                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Net                      | clk                    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Target Skew (ns)         | 0.08                   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Solve Mode               | exact_full_power_batch |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Buffer Master Candidates | 4                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Graph Nodes              | 13                     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Graph Nets               | 3                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Graph Sinks              | 8                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Buffer Inputs            | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Buffer Outputs           | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Optimizable Buffers      | 2                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] | Generated Candidates     | 0                      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:169 [1;34mInfo[0m logClockSizingSummary] +--------------------------+------------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] ====================== CTS Optimization Evolution ======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Metric                 | Before      | After / Result |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Skew (ns)              | 9.95969e-06 | 9.95969e-06    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Area (um^2)            | 5.6         | 5.6            |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Power (W)              | 3.06366e-06 | 3.06366e-06    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Capacitance Violations | 0           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Slew Violations        | 0           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Valid                  | -           | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Target Met             | -           | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Changed                | -           | false          |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Iterations             | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Trials                 | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Batch Trials           | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Accepted Edits         | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Accepted Batches       | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Rejected Candidates    | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Capacitance Rejected   | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Slew Rejected          | -           | 0              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] | Stop Reason            | -           | target_met     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:183 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] ================= CTS Optimization Master Transitions ==================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] | Clock | From | To   | Count | Area Delta (um^2) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] | clk   | none | none | 0     | 0                 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:216 [1;34mInfo[0m logClockSizingSummary] +-------+------+------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] =================== CTS Optimization Runtime Profile ===================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Stage                  | Runtime (s) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Route Tree Cache       | 7.2801e-05  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | FastSTA Context        | 0.000206301 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Route Injection        | 3.7301e-05  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Collect Buffers        | 1.8e-06     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Collect Cap Baseline   | 5e-07       |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Collect Slew Baseline  | 7e-07       |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Solve                  | 0.000190801 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Apply Edits            | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Capture Initial State  | 0.000129101 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Topology Index         | 2.06e-05    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Candidate Generation   | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Batch Trial Evaluation | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Accepted Batch Apply   | 0           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Stage Total            | 0.000510204 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] | Solver Detail          | 0.000149701 |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:223 [1;34mInfo[0m logClockSizingSummary] +------------------------+-------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] ============================================ CTS Optimization Result =============================================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] | Clock | Sinks | Initial Skew | Optimized Skew | Target | Target Met | Min Latency | Max Latency | Mean Latency |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] | clk   | 8     | 9.95969e-06  | 9.95969e-06    | 0.08   | true       | 0.104872    | 0.104882    | 0.104877     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:412 [1;34mInfo[0m run] +-------+-------+--------------+----------------+--------+------------+-------------+-------------+--------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] ================== CTS Optimization Selection Summary ==================
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] | Metric                | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] | Accepted Sizing Edits | 0     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] | Optimized Clocks      | 0     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:414 [1;34mInfo[0m run] +-----------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Optimization.cc:430 [1;34mInfo[0m run] Completed CTS optimization (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.26MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:38 [1;34mInfo[0m run] Starting CTS instantiation...
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] ====================== CTS Instantiation Overview ======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Property                | Value |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Design Ready            | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Clocks                  | 1     |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Write Success           | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | iDB Clock Tree Restored | false |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Success                 | true  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Failed Clock            | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Failed Net              | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] | Reason                  | n/a   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:68 [1;34mInfo[0m run] +-------------------------+-------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Instantiation.cc:77 [1;34mInfo[0m run] Completed CTS instantiation (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:39 [1;34mInfo[0m run] Starting CTS evaluation...
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] ======================= CTS Evaluation Overview ========================
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Metric                   | Value          |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Ready                    | true           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | QoR Metric Status        | partial        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Physical Metric Source   | cts_clock_tree |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Path Depth Status        | available      |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | DBU per um               | 1000           |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Final Clock Buffers      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Final Buffer Area (um^2) | 5.6            |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Clock Member Buffers     | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Path Buffer Minimum      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Path Buffer Maximum      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] | Maximum Clock Level      | 2              |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:52 [1;34mInfo[0m run] +--------------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] ====================== CTS Evaluation Wirelength =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Region      | Routed (um) | HPWL (um) |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Top         | 16.551      | 16.551    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Trunk       | 0           | 0         |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Leaf        | 30.408      | 20        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Total       | 46.959      | 36.551    |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Maximum Net | 30.408      | 20        |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] | Valid       | true        | -         |
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:64 [1;34mInfo[0m run] +-------------+-------------+-----------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Evaluation.cc:83 [1;34mInfo[0m run] Completed CTS evaluation (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] =========================== CTS Key Results ============================
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Metric                              | Value  |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Final Clock Buffers                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Final Buffer Area (um^2)            | 5.6    |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Accepted Sizing Edits               | 0      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Maximum Clock Net Wirelength (um)   | 30.408 |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Total Clock Network Wirelength (um) | 46.959 |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Path Buffer Minimum                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Path Buffer Maximum                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] | Maximum Clock Level                 | 2      |
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:128 [1;34mInfo[0m runCTS] +-------------------------------------+--------+
+[CTS 20261025 20:31:15 nQw6be7hz57 CTSAPI.cc:137 [1;34mInfo[0m runCTS] Completed CTS flow (elapsed = 00:00:02, cpu = 00:00:02, mem = 17.41MB) 
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:43 [1;34mInfo[0m run] Starting CTS output...
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] ======================== Wirelength Statistics =========================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Metric         | Routed Wirelength (um) | HPWL Wirelength (um) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Top            | 16.551                 | 16.551               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Trunk          | 0.000                  | 0.000                |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Leaf           | 30.408                 | 20.000               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Total          | 46.959                 | 36.551               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Max Net Length | 30.408                 | 20.000               |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +----------------+------------------------+----------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] ============================== Cell Stats ==============================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Cell Type | Count | Total Area (um^2) | Total Cap (pF) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Buffer    | 2     | 5.600             | unavailable    |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-----------+-------+-------------------+----------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] ====================== Library Cell Distribution =======================
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | Cell Master | Cell Type | Count | Total Area (um^2) |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] | BUFX8H7L    | Buffer    | 2     | 5.600             |
+[CTS 20261025 20:31:15 nQw6be7hz57 QORReport.cc:140 [1;34mInfo[0m writeReportFile] +-------------+-----------+-------+-------------------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] ============================================================ CTS Report Artifacts =============================================================
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Artifact                         | Path                                                                                           | Status  |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Output Root                      | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts                              | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Statistics Directory             | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics                   | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Visualization Directory          | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | ready   |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Wirelength Report                | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/wirelength.rpt    | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Cell Statistics Report           | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/cell_stats.rpt    | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | Library Cell Distribution Report | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/statistics/lib_cell_dist.rpt | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | SVG                              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] | GDS                              | /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/cts/visualization                | written |
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:72 [1;34mInfo[0m run] +----------------------------------+------------------------------------------------------------------------------------------------+---------+
+[CTS 20261025 20:31:15 nQw6be7hz57 Output.cc:81 [1;34mInfo[0m run] Completed CTS output (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB) 
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:67 [1;34mInfo[0m initRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:68 [1;34mInfo[0m initRT] _____ ________ ________     _______________________ ________ ________  
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:69 [1;34mInfo[0m initRT] ___(_)___  __ \___  __/     __  ___/___  __/___    |___  __ \___  __/
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:70 [1;34mInfo[0m initRT] __  / __  /_/ /__  /        _____ \ __  /   __  /| |__  /_/ /__  /    
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:71 [1;34mInfo[0m initRT] _  /  _  _, _/ _  /         ____/ / _  /    _  ___ |_  _, _/ _  /      
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:72 [1;34mInfo[0m initRT] /_/   /_/ |_|  /_/          /____/  /_/     /_/  |_|/_/ |_|  /_/       
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:73 [1;34mInfo[0m initRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:80 [1;34mInfo[0m initRT] Starting...
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:56 [1;34mInfo[0m input] Starting...
+[RT 20261025 20:31:15 cQBzyMnA Utility.hpp:2227 [1;33mWarn[0m getConfigValue<int>] The config '-thread_number' uses the default value!
+[RT 20261025 20:31:15 cQBzyMnA Utility.hpp:2227 [1;33mWarn[0m getConfigValue<int>] The config '-output_inter_result' uses the default value!
+[RT 20261025 20:31:15 cQBzyMnA Utility.hpp:2227 [1;33mWarn[0m getConfigValue<int>] The config '-enable_timing' uses the default value!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer CT eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer CT below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET1 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET1 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA1 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA1 below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET2 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET2 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA2 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA2 below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET3 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET3 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA3 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA3 below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET4 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET4 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA4 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer VIA4 below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET5 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer MET5 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer T4V2 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer T4V2 below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer T4M2 notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer T4M2 eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:600 [1;33mWarn[0m wrapCutDesignRule] The idb layer RV eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:636 [1;33mWarn[0m wrapCutDesignRule] The idb layer RV below layer spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:495 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer RDL notch spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:543 [1;33mWarn[0m wrapRoutingDesignRule] The idb layer RDL eol_spacing is empty!
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:714 [1;34mInfo[0m wrapObstacleList] Starting...
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:1032 [1;34mInfo[0m wrapObstacleList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:1038 [1;34mInfo[0m wrapMacroList] Starting...
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:1070 [1;34mInfo[0m wrapMacroList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:1076 [1;34mInfo[0m wrapNetList] Starting...
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:1101 [1;34mInfo[0m wrapNetList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1025 [1;34mInfo[0m buildObstacleList] Starting...
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1029 [1;34mInfo[0m buildObstacleList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1120 [1;34mInfo[0m buildNetList] Starting...
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1128 [1;34mInfo[0m buildNetList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1222 [1;34mInfo[0m buildGCellMap] Starting...
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1224 [1;34mInfo[0m buildGCellMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1248 [1;34mInfo[0m buildFixRectMap] Starting...
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1294 [1;34mInfo[0m buildFixRectMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1301 [1;34mInfo[0m printConfig] RT_CONFIG_INPUT
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1302 [1;34mInfo[0m printConfig]   temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1303 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1304 [1;34mInfo[0m printConfig]   thread_number
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1305 [1;34mInfo[0m printConfig]     128
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1306 [1;34mInfo[0m printConfig]   bottom_routing_layer
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1307 [1;34mInfo[0m printConfig]     MET2
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1308 [1;34mInfo[0m printConfig]   top_routing_layer
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1309 [1;34mInfo[0m printConfig]     MET5
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1310 [1;34mInfo[0m printConfig]   output_inter_result
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1311 [1;34mInfo[0m printConfig]     0
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1312 [1;34mInfo[0m printConfig]   enable_timing
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1313 [1;34mInfo[0m printConfig]     0
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1315 [1;34mInfo[0m printConfig] RT_CONFIG_BUILD
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1316 [1;34mInfo[0m printConfig]   log_file_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1317 [1;34mInfo[0m printConfig]     /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/rt.log
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1318 [1;34mInfo[0m printConfig]   bottom_routing_layer_idx
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1319 [1;34mInfo[0m printConfig]     1
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1320 [1;34mInfo[0m printConfig]   top_routing_layer_idx
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1321 [1;34mInfo[0m printConfig]     4
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1323 [1;34mInfo[0m printConfig]   DataManager
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1324 [1;34mInfo[0m printConfig]     dm_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1325 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/data_manager/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1327 [1;34mInfo[0m printConfig]   DRCEngine
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1328 [1;34mInfo[0m printConfig]     de_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1329 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/drc_engine/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1331 [1;34mInfo[0m printConfig]   GDSPlotter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1332 [1;34mInfo[0m printConfig]     gp_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1333 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/gds_plotter/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1335 [1;34mInfo[0m printConfig]   PinAccessor
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1336 [1;34mInfo[0m printConfig]     pa_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1337 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/pin_accessor/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1339 [1;34mInfo[0m printConfig]   SupplyAnalyzer
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1340 [1;34mInfo[0m printConfig]     sa_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1341 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/supply_analyzer/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1343 [1;34mInfo[0m printConfig]   PlanarRouter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1344 [1;34mInfo[0m printConfig]     pr_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1345 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/planar_router/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1347 [1;34mInfo[0m printConfig]   LayerAssigner
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1348 [1;34mInfo[0m printConfig]     la_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1349 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/layer_assigner/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1351 [1;34mInfo[0m printConfig]   SpaceRouter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1352 [1;34mInfo[0m printConfig]     sr_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1353 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/space_router/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1355 [1;34mInfo[0m printConfig]   TrackAssigner
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1356 [1;34mInfo[0m printConfig]     ta_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1357 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/track_assigner/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1359 [1;34mInfo[0m printConfig]   DetailedRouter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1360 [1;34mInfo[0m printConfig]     dr_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1361 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/detailed_router/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1363 [1;34mInfo[0m printConfig]   ViolationReporter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1364 [1;34mInfo[0m printConfig]     vr_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1365 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/violation_reporter/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1367 [1;34mInfo[0m printConfig]   EarlyRouter
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1368 [1;34mInfo[0m printConfig]     er_temp_directory_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1369 [1;34mInfo[0m printConfig]       /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/early_router/
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1377 [1;34mInfo[0m printDatabase] RT_DATABASE
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1378 [1;34mInfo[0m printDatabase]   design_name
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1379 [1;34mInfo[0m printDatabase]     ecc_smoke
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1380 [1;34mInfo[0m printDatabase]   lef_file_path_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1382 [1;34mInfo[0m printDatabase]     /home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1384 [1;34mInfo[0m printDatabase]   def_file_path
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1385 [1;34mInfo[0m printDatabase]     
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1387 [1;34mInfo[0m printDatabase]   micron_dbu
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1388 [1;34mInfo[0m printDatabase]     1000
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1390 [1;34mInfo[0m printDatabase]   manufacture_grid
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1391 [1;34mInfo[0m printDatabase]     1
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1394 [1;34mInfo[0m printDatabase]   gcell_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1396 [1;34mInfo[0m printDatabase]     x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:0 step_length:1600 step_num:1 end:1600
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:1600 step_length:1400 step_num:11 end:17000
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1398 [1;34mInfo[0m printDatabase]       start:17000 step_length:2200 step_num:1 end:19200
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1402 [1;34mInfo[0m printDatabase]     y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:0 step_length:1600 step_num:1 end:1600
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:1600 step_length:1400 step_num:11 end:17000
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1404 [1;34mInfo[0m printDatabase]       start:17000 step_length:2400 step_num:1 end:19400
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1409 [1;34mInfo[0m printDatabase]   die
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1410 [1;34mInfo[0m printDatabase]     real:(0,0)-(19200,19400)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1412 [1;34mInfo[0m printDatabase]     grid:(0,0)-(12,12)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1416 [1;34mInfo[0m printDatabase]   routing_layer_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1417 [1;34mInfo[0m printDatabase]     7
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1418 [1;34mInfo[0m printDatabase]   routing_layer
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:0 order:7 name:MET1 prefer_direction:horizontal
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:1 order:9 name:MET2 prefer_direction:vertical
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:2 order:11 name:MET3 prefer_direction:horizontal
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:3 order:13 name:MET4 prefer_direction:vertical
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:4 order:15 name:MET5 prefer_direction:horizontal
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:5 order:17 name:T4M2 prefer_direction:vertical
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1420 [1;34mInfo[0m printDatabase]     idx:6 order:19 name:RDL prefer_direction:horizontal
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1424 [1;34mInfo[0m printDatabase]     track_axis
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1426 [1;34mInfo[0m printDatabase]       x_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1428 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:93 end:18900
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1432 [1;34mInfo[0m printDatabase]       y_grid_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1434 [1;34mInfo[0m printDatabase]         start:300 step_length:200 step_num:94 end:19100
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1440 [1;34mInfo[0m printDatabase]   cut_layer_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1441 [1;34mInfo[0m printDatabase]     7
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1442 [1;34mInfo[0m printDatabase]   cut_layer
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:0 order:6 name:CT
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:1 order:8 name:VIA1
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:2 order:10 name:VIA2
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:3 order:12 name:VIA3
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:4 order:14 name:VIA4
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:5 order:16 name:T4V2
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1444 [1;34mInfo[0m printDatabase]     idx:6 order:18 name:RV
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1449 [1;34mInfo[0m printDatabase]   layer_via_master_list
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET1: MET2_MET1_VIA1_0 MET2_MET1_VIA1_1 MET2_MET1_VIA1_3 MET2_MET1_VIA1_4 MET2_MET1_VIA1_2 MET2_MET1_VIA1_5 MET2_MET1_VIA1_6 MET2_MET1_VIA1_7 MET2_MET1_VIA1_8 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET2: MET3_MET2_VIA2_6 MET3_MET2_VIA2_7 MET3_MET2_VIA2_3 MET3_MET2_VIA2_4 MET3_MET2_VIA2_8 MET3_MET2_VIA2_5 MET3_MET2_VIA2_0 MET3_MET2_VIA2_1 MET3_MET2_VIA2_2 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET3: MET4_MET3_VIA3_2 MET4_MET3_VIA3_1 MET4_MET3_VIA3_5 MET4_MET3_VIA3_4 MET4_MET3_VIA3_0 MET4_MET3_VIA3_3 MET4_MET3_VIA3_8 MET4_MET3_VIA3_7 MET4_MET3_VIA3_6 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET4: MET5_MET4_VIA4_6 MET5_MET4_VIA4_7 MET5_MET4_VIA4_3 MET5_MET4_VIA4_4 MET5_MET4_VIA4_8 MET5_MET4_VIA4_5 MET5_MET4_VIA4_0 MET5_MET4_VIA4_1 MET5_MET4_VIA4_2 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     MET5: T4M2_MET5 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     T4M2: RDL_T4M2 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1455 [1;34mInfo[0m printDatabase]     RDL: 
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1458 [1;34mInfo[0m printDatabase]   routing_obstacle_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1459 [1;34mInfo[0m printDatabase]     1220
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1460 [1;34mInfo[0m printDatabase]   cut_obstacle_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1461 [1;34mInfo[0m printDatabase]     230
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1464 [1;34mInfo[0m printDatabase]   macro_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1465 [1;34mInfo[0m printDatabase]     0
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1468 [1;34mInfo[0m printDatabase]   net_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1469 [1;34mInfo[0m printDatabase]     40
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1474 [1;34mInfo[0m printDatabase]   pin_num
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1475 [1;34mInfo[0m printDatabase]     142
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1476 [1;34mInfo[0m printDatabase]   pin_num_ratio
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 2 pins: 23(57.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 3 pins: 2(5.00%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 4 pins: 5(12.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 5 pins: 1(2.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 6 pins: 3(7.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 7 pins: 3(7.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 8 pins: 1(2.50%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:1488 [1;34mInfo[0m printDatabase]     net with 9 pins: 2(5.00%)
+[RT 20261025 20:31:15 cQBzyMnA DataManager.cpp:63 [1;34mInfo[0m input] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:88 [1;34mInfo[0m initRT] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:15 cQBzyMnA RTInterface.cpp:94 [1;34mInfo[0m runERT] Starting...
+[RT 20261025 20:31:15 cQBzyMnA TOPOBuilder.cpp:862 [1;34mInfo[0m init] Starting...
+[RT 20261025 20:31:17 cQBzyMnA TOPOBuilder.cpp:864 [1;34mInfo[0m init] Completed (elapsed = 00:00:02, cpu = 00:00:02, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:59 [1;34mInfo[0m route] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:207 [1;34mInfo[0m setERComParam] stage: egr3D
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:208 [1;34mInfo[0m setERComParam] resolve_congestion: low
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:209 [1;34mInfo[0m setERComParam] max_candidate_point_num: 10
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:210 [1;34mInfo[0m setERComParam] supply_reduction: 0
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:211 [1;34mInfo[0m setERComParam] boundary_wire_unit: 1
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:212 [1;34mInfo[0m setERComParam] internal_wire_unit: 1
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:213 [1;34mInfo[0m setERComParam] internal_via_unit: 1
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:214 [1;34mInfo[0m setERComParam] topo_spilt_length: 10
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:215 [1;34mInfo[0m setERComParam] expand_step_num: 5
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:216 [1;34mInfo[0m setERComParam] expand_step_length: 2
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:217 [1;34mInfo[0m setERComParam] via_unit: 5
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:218 [1;34mInfo[0m setERComParam] overflow_unit: 10
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:219 [1;34mInfo[0m setERComParam] schedule_interval: 3
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2831 [1;34mInfo[0m outputGCellCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2848 [1;34mInfo[0m outputGCellCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:227 [1;34mInfo[0m initAccessPointList] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:282 [1;34mInfo[0m initAccessPointList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:457 [1;34mInfo[0m buildConflictList] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:509 [1;34mInfo[0m buildConflictList] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:603 [1;34mInfo[0m eliminateConflict] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:619 [1;34mInfo[0m eliminateConflict] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:673 [1;34mInfo[0m uploadAccessPoint] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:693 [1;34mInfo[0m uploadAccessPoint] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:699 [1;34mInfo[0m uploadAccessPatch] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:782 [1;34mInfo[0m uploadAccessPatch] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.79MB) 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | routing | #patch |    prop | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET1 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET2 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET3 |    132 | 100.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET4 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET5 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    T4M2 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |     RDL |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |   Total |    132 | 100.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:823 [1;34mInfo[0m analyzeSupply] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 78/624(12.50%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB, rss = 2269.82MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 156/624(25.00%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.83MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 234/624(37.50%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.84MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 312/624(50.00%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.84MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 390/624(62.50%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.84MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 468/624(75.00%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.84MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 546/624(87.50%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.84MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:932 [1;34mInfo[0m analyzeSupply] Analyzed 624/624(100.00%) grid pairs (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:936 [1;34mInfo[0m analyzeSupply] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | routing | supply |    prop | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET1 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET2 |   3648 |  23.68% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET3 |   3852 |  25.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET4 |   3924 |  25.47% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET5 |   3984 |  25.86% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    T4M2 |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |     RDL |      0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |   Total |  15408 | 100.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1129 [1;34mInfo[0m buildPlanarNodeMap] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1150 [1;34mInfo[0m buildPlanarNodeMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1156 [1;34mInfo[0m buildPlanarNodeNeighbor] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1179 [1;34mInfo[0m buildPlanarNodeNeighbor] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1185 [1;34mInfo[0m buildPlanarOrientSupply] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1203 [1;34mInfo[0m buildPlanarOrientSupply] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1209 [1;34mInfo[0m generateTopology] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 5/40(12.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 10/40(25.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 15/40(37.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 20/40(50.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 25/40(62.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 30/40(75.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 35/40(87.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1227 [1;34mInfo[0m generateTopology] Routed 40/40(100.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1232 [1;34mInfo[0m generateTopology] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2854 [1;34mInfo[0m outputPlanarSupplyCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2875 [1;34mInfo[0m outputPlanarSupplyCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2881 [1;34mInfo[0m outputPlanarGuide] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2952 [1;34mInfo[0m outputPlanarGuide] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2958 [1;34mInfo[0m outputPlanarNetCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2971 [1;34mInfo[0m outputPlanarNetCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2977 [1;34mInfo[0m outputPlanarOverflowCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2990 [1;34mInfo[0m outputPlanarOverflowCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +-------------------+-------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |      total_demand |   582 | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +-------------------+-------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    total_overflow |     0 | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +-------------------+-------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | total_wire_length | 364.9 | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +-------------------+-------+ 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1765 [1;34mInfo[0m buildLayerNodeMap] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1792 [1;34mInfo[0m buildLayerNodeMap] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1798 [1;34mInfo[0m buildLayerNodeNeighbor] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1845 [1;34mInfo[0m buildLayerNodeNeighbor] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1851 [1;34mInfo[0m buildLayerOrientSupply] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1866 [1;34mInfo[0m buildLayerOrientSupply] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1872 [1;34mInfo[0m buildPlaneTree] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1894 [1;34mInfo[0m buildPlaneTree] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1900 [1;34mInfo[0m assignLayer] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 5/40(12.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 10/40(25.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 15/40(37.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 20/40(50.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 25/40(62.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 30/40(75.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 35/40(87.50%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1918 [1;34mInfo[0m assignLayer] Routed 40/40(100.00%) nets (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:1923 [1;34mInfo[0m assignLayer] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:2996 [1;34mInfo[0m outputLayerSupplyCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3018 [1;34mInfo[0m outputLayerSupplyCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3024 [1;34mInfo[0m outputLayerGuide] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3095 [1;34mInfo[0m outputLayerGuide] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3101 [1;34mInfo[0m outputLayerNetCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3118 [1;34mInfo[0m outputLayerNetCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3124 [1;34mInfo[0m outputLayerOverflowCSV] Starting...
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:3143 [1;34mInfo[0m outputLayerOverflowCSV] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ +---------+----------+-------+ +---------+-------------+---------+ +-------+------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] | routing | demand |    prop | | routing | overflow |  prop | | routing | wire_length |    prop | |   cut | #via |    prop | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ +---------+----------+-------+ +---------+-------------+---------+ +-------+------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET1 |      0 |   0.00% | |    MET1 |        0 | 0.00% | |    MET1 |           0 |   0.00% | |    CT |    0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET2 |    172 |  27.04% | |    MET2 |        0 | 0.00% | |    MET2 |       122.8 |  33.65% | |  VIA1 |    0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET3 |    271 |  42.61% | |    MET3 |        0 | 0.00% | |    MET3 |       172.7 |  47.33% | |  VIA2 |  117 |  70.91% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET4 |    149 |  23.43% | |    MET4 |        0 | 0.00% | |    MET4 |          54 |  14.80% | |  VIA3 |   38 |  23.03% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    MET5 |     44 |   6.92% | |    MET5 |        0 | 0.00% | |    MET5 |        15.4 |   4.22% | |  VIA4 |   10 |   6.06% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |    T4M2 |      0 |   0.00% | |    T4M2 |        0 | 0.00% | |    T4M2 |           0 |   0.00% | |  T4V2 |    0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |     RDL |      0 |   0.00% | |     RDL |        0 | 0.00% | |     RDL |           0 |   0.00% | |    RV |    0 |   0.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ +---------+----------+-------+ +---------+-------------+---------+ +-------+------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] |   Total |    636 | 100.00% | |   Total |        0 | 0.00% | |   Total |       364.9 | 100.00% | | Total |  165 | 100.00% | 
+[RT 20261025 20:31:17 cQBzyMnA Utility.hpp:2314 [1;34mInfo[0m printTableList] +---------+--------+---------+ +---------+----------+-------+ +---------+-------------+---------+ +-------+------+---------+ 
+[RT 20261025 20:31:17 cQBzyMnA EarlyRouter.cpp:130 [1;34mInfo[0m route] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.13MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA TOPOBuilder.cpp:918 [1;34mInfo[0m destroy] Starting...
+[RT 20261025 20:31:17 cQBzyMnA TOPOBuilder.cpp:920 [1;34mInfo[0m destroy] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:106 [1;34mInfo[0m runERT] Completed (elapsed = 00:00:02, cpu = 00:00:02, mem = 0.13MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:164 [1;34mInfo[0m destroyRT] Starting...
+[RT 20261025 20:31:17 cQBzyMnA DataManager.cpp:69 [1;34mInfo[0m output] Starting...
+[RT 20261025 20:31:17 cQBzyMnA DataManager.cpp:72 [1;34mInfo[0m output] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 2269.85MB) 
+[RT 20261025 20:31:17 cQBzyMnA Utility.cpp:67 [1;34mInfo[0m releaseMemory] Memory trim after DataManager (rss_before = 2269.85MB, rss_after = 1855.99MB)
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:173 [1;34mInfo[0m destroyRT] Completed (elapsed = 00:00:00, cpu = 00:00:00, mem = 0.00MB, rss = 1855.99MB) 
+[RT 20261025 20:31:17 cQBzyMnA Logger.hpp:52 [1;34mInfo[0m printLogFilePath] The log file path is '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/data/rt/rt_temp_directory/rt.log'!
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:177 [1;34mInfo[0m destroyRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:178 [1;34mInfo[0m destroyRT] _____ ________ ________     _______________________   ________________________  __  
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:179 [1;34mInfo[0m destroyRT] ___(_)___  __ \___  __/     ___  ____/____  _/___  | / /____  _/__  ___/___  / / / 
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:180 [1;34mInfo[0m destroyRT] __  / __  /_/ /__  /        __  /_     __  /  __   |/ /  __  /  _____ \ __  /_/ /  
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:181 [1;34mInfo[0m destroyRT] _  /  _  _, _/ _  /         _  __/    __/ /   _  /|  /  __/ /   ____/ / _  __  /    
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:182 [1;34mInfo[0m destroyRT] /_/   /_/ |_|  /_/          /_/       /___/   /_/ |_/   /___/   /____/  /_/ /_/     
+[RT 20261025 20:31:17 cQBzyMnA RTInterface.cpp:183 [1;34mInfo[0m destroyRT] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[ECC 20261025 20:31:20 cQBzyMnA feature_parser.cpp:228 [1;34mInfo[0m buildSummaryEval] Save eval json success, path = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.map.json
+[ECC 20261025 20:31:20 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.def.gz )
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:376 [1;34mInfo[0m write_version] Write VERSION success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:398 [1;34mInfo[0m write_busbit_char] Write BUSBITCHARS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:413 [1;34mInfo[0m write_design] Write DESIGN name success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:435 [1;34mInfo[0m write_units] Write UNITS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:457 [1;34mInfo[0m write_die] Write DIE success...
+[ECC 20261025 20:31:20 cQBzyMnA def_wriPlotting array maps:   0%|          | 0/18 [00:00<?, ?file/s]Plotting array maps:   6%|▌         | 1/18 [00:03<00:56,  3.31s/file]Plotting array maps:  11%|█         | 2/18 [00:03<00:27,  1.74s/file]Plotting array maps:  39%|███▉      | 7/18 [00:04<00:04,  2.60file/s]Plotting array maps:  44%|████▍     | 8/18 [00:04<00:03,  2.98file/s]Plotting array maps:  56%|█████▌    | 10/18 [00:04<00:01,  4.01file/s]Plotting array maps:  61%|██████    | 11/18 [00:05<00:02,  2.77file/s]Plotting array maps:  67%|██████▋   | 12/18 [00:05<00:01,  3.24file/s]Plotting array maps:  78%|███████▊  | 14/18 [00:05<00:00,  4.65file/s]Plotting array maps:  89%|████████▉ | 16/18 [00:05<00:00,  6.01file/s]Plotting array maps: 100%|██████████| 18/18 [00:05<00:00,  7.19file/s]Plotting array maps: 100%|██████████| 18/18 [00:05<00:00,  3.02file/s]
+te.cpp:574 [1;34mInfo[0m write_row] Write ROWS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:485 [1;34mInfo[0m write_track_grid] Write Track Grid success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:1121 [1;34mInfo[0m write_gcell_grid] Write GCELLGRID success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:550 [1;34mInfo[0m write_via] Write VIAS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:629 [1;34mInfo[0m write_component] Write COMPONENTS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:700 [1;34mInfo[0m write_pin] Write PINS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:715 [1;34mInfo[0m write_blockage] No VIA To Write...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:1134 [1;34mInfo[0m write_region] No REGION To Write...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:1168 [1;34mInfo[0m write_slot] No SLOT To Write...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:1200 [1;34mInfo[0m write_group] No GROUP To Write...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:1237 [1;34mInfo[0m write_fill] No FILL To Write...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:931 [1;34mInfo[0m write_special_net] Write SPECIALNETS success...
+[ECC 20261025 20:31:20 cQBzyMnA def_write.cpp:986 [1;34mInfo[0m write_net] Write NETS success...
+[ECC 20261025 20:31:20 cQBzyMnA verilog_write.cpp:113 [1;34mInfo[0m writeModule] start write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.v.gz
+[ECC 20261025 20:31:20 cQBzyMnA verilog_write.cpp:129 [1;34mInfo[0m writeModule] finish write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.v.gz
+[ECC 20261025 20:31:20 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.gds )
+[ECC 20261025 20:31:20 cQBzyMnA gds_write.cpp:638 [1;34mInfo[0m write_component] Write COMPONENTS success. 74 / 74
+[ECC 20261025 20:31:20 cQBzyMnA gds_write.cpp:942 [1;34mInfo[0m write_fill] No FILLS ...
+[ECC 20261025 20:31:20 cQBzyMnA gds_write.cpp:833 [1;34mInfo[0m write_net] Write NETS success. 40 / 40
+[ECC 20261025 20:31:20 cQBzyMnA feature_parser.cpp:91 [1;34mInfo[0m buildSummary] Save feature json success, path = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.db.json
+[ECC 20261025 20:31:20 cQBzyMnA feature_parser.cpp:126 [1;34mInfo[0m buildTools] Save feature json success, path = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/CTS.step.json

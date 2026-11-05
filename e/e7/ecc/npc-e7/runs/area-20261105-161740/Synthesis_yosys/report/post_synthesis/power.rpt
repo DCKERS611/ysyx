@@ -1,0 +1,28 @@
+Design : ysyx_00000000
+Operating Conditions: ICS_N55_H7BR_tt_mos_TYP_1.2_25
+Analysis Effort : low
+Wire Load Model : ZeroWireload
+Global Operating Voltage = 1.2
+
+Dynamic Power Units = 1mW
+Leakage Power Units = 1nW
+
+Cell Internal Power  =  360.0360 uW
+Net Switching Power  =   23.3325 uW
+Total Dynamic Power  =  383.3685 uW
+Cell Leakage Power   =  638.2747 nW
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  1.6075e-02            0.0000            4.6446        1.6079e-02  (   4.19%)  i
+register           0.3161        2.5090e-04          295.3972            0.3166  (  82.45%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.7905e-02        2.3082e-02          338.2330        5.1324e-02  (  13.37%)
+--------------------------------------------------------------------------------------------------
+Total              0.3600 mW     2.3332e-02 mW       638.2747 nW         0.3840 mW
+
+i - Including register clock pin internal power

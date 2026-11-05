@@ -1,0 +1,24 @@
+{
+    "schema_version": 4,
+    "analysis_revision": "quality-gates-v4",
+    "tool": "ecc",
+    "step": "Floorplan",
+    "design": "ecc_smoke",
+    "analysis_status": "valid",
+    "quality_status": "pass",
+    "metric_count": 11,
+    "dimensions": {
+        "area_cost": {
+            "metric_count": 7
+        },
+        "routability_physical": {
+            "metric_count": 2
+        },
+        "runtime": {
+            "metric_count": 2
+        }
+    },
+    "gates": [],
+    "missing_metrics": [],
+    "metrics_file": "qor_metrics.json"
+}

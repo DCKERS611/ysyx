@@ -1,0 +1,160 @@
+[INFO   ] parameters = {'aux_input': '', 'lef_input': ['/home/ysyx/ysyx-workbench/icsprout55-pdk/prtech/techLEF/N551P6M_ecos.lef', '/home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR_ecos.lef', '/home/ysyx/ysyx-workbench/icsprout55-pdk/IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL_ecos.lef'], 'def_input': '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.def.gz', 'verilog_input': '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/output/ecc_smoke_CTS.v.gz', 'gpu': 0, 'gpu_id': 0, 'num_bins_x': 32, 'num_bins_y': 32, 'global_place_stages': [{'num_bins_x': 32, 'num_bins_y': 32, 'iteration': 1000, 'learning_rate': 1.0, 'wirelength': 'weighted_average', 'optimizer': 'nesterov', 'Llambda_density_weight_iteration': 1, 'Lsub_iteration': 1, 'learning_rate_decay': 0.99}], 'target_density': 0.2, 'density_weight': 0.00085, 'random_seed': 3000, 'result_dir': '/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl', 'scale_factor': 1.0, 'ignore_net_weight': 1, 'shift_factor': [0, 0], 'ignore_net_degree': 100, 'gp_noise_ratio': 0.0, 'auto_adjust_bins': 1, 'enable_fillers': 0, 'global_place_flag': 0, 'legalize_flag': 1, 'detailed_place_flag': 0, 'stop_overflow': 0.1, 'dtype': 'float32', 'detailed_place_engine': '', 'detailed_place_command': '', 'plot_flag': 0, 'RePlAce_ref_hpwl': 350000, 'RePlAce_LOWER_PCOF': 0.95, 'RePlAce_UPPER_PCOF': 1.05, 'gamma': 4, 'RePlAce_skip_energy_flag': 0, 'random_center_init_flag': 0, 'init_loc_perc_x': 0.5, 'init_loc_perc_y': 0.5, 'sort_nets_by_degree': 0, 'num_threads': 8, 'dump_global_place_solution_flag': 0, 'dump_legalize_solution_flag': 0, 'routability_opt_flag': 1, 'macro_place_flag': 0, 'use_bb': 0, 'route_num_bins_x': 512, 'route_num_bins_y': 512, 'node_area_adjust_overflow': 0.15, 'two_stage_density_scaler': 1000, 'max_num_area_adjust': 3, 'adjust_nctugr_area_flag': 1, 'adjust_rudy_area_flag': 0, 'adjust_pin_area_flag': 0, 'area_adjust_stop_ratio': 0.01, 'route_area_adjust_stop_ratio': 0.01, 'pin_area_adjust_stop_ratio': 0.05, 'unit_horizontal_capacity': 1.5625, 'unit_vertical_capacity': 1.45, 'unit_pin_capacity': 0.058, 'max_route_opt_adjust_rate': 2.0, 'route_opt_adjust_exponent': 2.0, 'pin_stretch_ratio': 1.414213562, 'max_pin_opt_adjust_rate': 1.5, 'deterministic_flag': 1, 'get_congestion_map': 1, 'macro_halo_x': 0, 'macro_halo_y': 0, 'macro_overlap_flag': 0, 'macro_overlap_weight': 8e-06, 'macro_overlap_mult_weight': 1, 'cell_padding_x': 300, 'bndry_padding_x': 0, 'bndry_padding_y': 0, 'pin_density': 0.6, 'route_info_input': 'default', 'evaluate_pl': 0, 'risa_weights': 0, 'macro_pin_halo_x': 0, 'macro_pin_halo_y': 0, 'timing_opt_flag': 0, 'timing_eval_flag': 0, 'enable_net_weighting': 0, 'with_sta': False, 'differentiable_timing_obj': 0, 'pin2pin_max_weight': 1, 'pin2pin_min_weight': 1, 'pin2pin_accumulate_weight': 0.1, 'pin2pin_weight': 2.5e-05, 'pin2pin_net_weighting': 0, 'net_weighting_scheme': 'lilith', 'momentum_decay_factor': 0.5, 'start_iter': 0, 'max_net_weight': 'inf', 'base_design_name': 'ecc_smoke'}
+[INFO   ] setting up raw database takes 0.06 seconds
+[INFO   ] set shift_factor = (2000, 2000), as original row bbox = (2000, 2000, 17200, 17400)
+[INFO   ] set scale_factor = 0.005, as site_width = 200
+[INFO   ] shift coordinate system by (2000, 2000), scale coordinate system by 0.005
+[WARNING] target_density 0.2 is smaller than utilization 0.826563, ignored
+[INFO   ] 
+================================= Benchmark Statistics =================================
+#nodes = 84, #terminals = 36, # terminal_NIs = 10, #movable = 38, #nets = 37
+die area = (0, 0, 76, 77) 5852
+row height = 7, site width = 1
+num_bins = 8x8, bin sizes = 9.5x9.625
+#pins = 129, #movable_pins = 120
+total_movable_node_area = 3479, total_fixed_node_area = 1372, total_space_area = 4480
+total_movable_node_area = 3479, total_fixed_node_area = 1372, total_space_area = 4480
+total_movable_cell_area = 3479, total_movable_macro_area = 0
+utilization = 0.776563, target_density = 0.826563
+total_filler_node_area = 0, #fillers = 0, filler sizes = 0x0
+================================== routing information =================================
+routing grids (512, 512)
+routing grid sizes (0.148438, 0.150391)
+routing capacity H/V (3.33366, 3.368) per tile
+========================================================================================
+[INFO   ] setting up placement database takes 0.08 seconds
+[INFO   ] Using Torch CPU device
+[INFO   ] unit_pin_capacity = 0.0361856
+[INFO   ] POWVFILE = /home/ysyx/ysyx-workbench/ecc/_internal/thirdparty/flute/lut.ICCAD2015/POWV9.dat
+[INFO   ] POSTFILE = /home/ysyx/ysyx-workbench/ecc/_internal/thirdparty/flute/lut.ICCAD2015/POST9.dat
+[INFO   ] non-linear placement initialization takes 0.00 seconds
+[INFO   ] iteration    0, HPWL 2.959210E+05, time 0.342ms
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter9999.png takes 0.020 seconds
+[INFO   ] Start legalization
+[ERROR  ] legality check failed in greedy legalization, return illegal results after greedy legalization.
+[INFO   ] legalization takes 0.001 seconds
+[INFO   ] iteration    0, HPWL 3.408360E+05, time 0.349ms
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png takes 0.020 seconds
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png takes 0.019 seconds
+[INFO   ] flute rsmt 3.742030E+02 um
+[INFO   ] unweighted hpwl 3.408360E+05
+[INFO   ] non-linear placement takes 0.07 seconds
+[INFO   ] placement takes 0.145 seconds
+[INFO   ] Final PPA: {'rsmt': 374.2030029296875, 'hpwl': 340836.0, 'congestion': inf, 'density': 0.8265625000000001, 'iteration': 1, 'objective': -1, 'overflow': -1, 'max_density': -1}
+ghting': 0, 'with_sta': False, 'differentiable_timing_obj': 0, 'pin2pin_max_weight': 1, 'pin2pin_min_weight': 1, 'pin2pin_accumulate_weight': 0.1, 'pin2pin_weight': 2.5e-05, 'pin2pin_net_weighting': 0, 'net_weighting_scheme': 'lilith', 'momentum_decay_factor': 0.5, 'start_iter': 0, 'max_net_weight': 'inf', 'base_design_name': 'ecc_smoke'}
+[INFO   ] setting up raw database takes 0.06 seconds
+read verilog done
+init db done
+[INFO   ] set shift_factor = (2000, 2000), as original row bbox = (2000, 2000, 17200, 17400)
+[INFO   ] set scale_factor = 0.005, as site_width = 200
+[INFO   ] shift coordinate system by (2000, 2000), scale coordinate system by 0.005
+[WARNING] target_density 0.2 is smaller than utilization 0.826563, ignored
+[INFO   ] 
+================================= Benchmark Statistics =================================
+#nodes = 84, #terminals = 36, # terminal_NIs = 10, #movable = 38, #nets = 37
+die area = (0, 0, 76, 77) 5852
+row height = 7, site width = 1
+num_bins = 8x8, bin sizes = 9.5x9.625
+#pins = 129, #movable_pins = 120
+total_movable_node_area = 3479, total_fixed_node_area = 1372, total_space_area = 4480
+total_movable_node_area = 3479, total_fixed_node_area = 1372, total_space_area = 4480
+total_movable_cell_area = 3479, total_movable_macro_area = 0
+utilization = 0.776563, target_density = 0.826563
+total_filler_node_area = 0, #fillers = 0, filler sizes = 0x0
+================================== routing information =================================
+routing grids (512, 512)
+routing grid sizes (0.148438, 0.150391)
+routing capacity H/V (3.33366, 3.368) per tile
+========================================================================================
+net_degrees max{} min{} 9 2
+[INFO   ] setting up placement database takes 0.08 seconds
+[INFO   ] Using Torch CPU device
+[INFO   ] unit_pin_capacity = 0.0361856
+[INFO   ] POWVFILE = /home/ysyx/ysyx-workbench/ecc/_internal/thirdparty/flute/lut.ICCAD2015/POWV9.dat
+[INFO   ] POSTFILE = /home/ysyx/ysyx-workbench/ecc/_internal/thirdparty/flute/lut.ICCAD2015/POST9.dat
+[INFO   ] non-linear placement initialization takes 0.00 seconds
+[INFO   ] iteration    0, HPWL 2.959210E+05, time 0.342ms
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter9999.png takes 0.020 seconds
+[INFO   ] Start legalization
+[ECC 20261025 20:31:27 cQBzyMnA dm_config.h:104 [1;34mInfo[0m set_output_path] [Data config set] output dir = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data
+[ECC 20261025 20:31:27 cQBzyMnA dm_config.h:134 [1;34mInfo[0m set_feature_path] [Data config set] feature = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:55 [1;34mInfo[0m set] PyPlaceDB::set start. Db address is 0x320d8bb0
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:56 [1;34mInfo[0m set] PyPlaceDB::set start. idb_design address is 0x320fb0c0
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin clk, coordinate (400, 2100).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin rst, coordinate (400, 9700).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_0_, coordinate (400, 17300).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_1_, coordinate (18800, 2100).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_2_, coordinate (18800, 9700).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_3_, coordinate (18800, 17300).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_4_, coordinate (2100, 400).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_5_, coordinate (9500, 400).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_6_, coordinate (17100, 400).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:301 [1;34mInfo[0m set] IO pin count_7_, coordinate (9500, 19000).
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:305 [1;34mInfo[0m set] num_terminals 36, num_place_blockages 0, num_terminal_NIs 10.
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:325 [1;34mInfo[0m set] PyPlaceDB fixed geometry: body_union_area 54880000, halo_union_area 0, residual_obstacle_area 0, terminal_union_area 5.488e+07, terminal_area_sum 5.488e+07, synthetic_rectangles 0.
+[ECC 20261025 20:31:27 cQBzyMnA PyPlaceDB.cpp:535 [1;34mInfo[0m set] PyPlaceDB::set end.
+[INFO   ] writing placement to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter9999.png
+Show filler run !!!!! m_num_filler_nodes 0
+[INFO   ] Macro legalization: regard 0 cells as dummy fixed (movable macros)
+[INFO   ] Macro legalization takes 0.0083 ms
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 11
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 9
+[INFO   ] Standard cell legalization legalizeBin takes 0.032 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 0
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 11
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 9
+[INFO   ] Standard cell legalization legalizeBin takes 0.016 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 3
+[INFO   ] Greedy legalization takes 0.064301 ms
+[ERROR  ] legality check failed in greedy legalization, return illegal results after greedy legalization.
+[INFO   ] legalization takes 0.001 seconds
+[INFO   ] iteration    0, HPWL 3.408360E+05, time 0.349ms
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png takes 0.020 seconds
+[INFO   ] plotting to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png takes 0.019 seconds
+[INFO   ] flute rsmt 3.742030E+02 um
+[INFO   ] unweighted hpwl 3.408360E+05
+[INFO   ] non-linear placement takes 0.07 seconds
+[INFO   ] placement takes 0.145 seconds
+[INFO   ] Final PPA: {'rsmt': 374.2030029296875, 'hpwl': 340836.0, 'congestion': inf, 'density': 0.8265625000000001, 'iteration': 1, 'objective': -1, 'overflow': -1, 'max_density': -1}
+[ERROR  ] row 3 (21, 28), overlap node 13 (25, 21, 51, 28) with node 2 (48, 21, 74, 28), gap 3
+[ERROR  ] row 3 (21, 28), overlap node 2 (48, 21, 74, 28) with node 4 (65, 21, 74, 28), gap 9
+[ERROR  ] row 8 (56, 63), overlap node 5 (48, 56, 74, 63) with node 22 (48, 56, 74, 63), gap 26
+[ERROR  ] row 9 (63, 70), overlap node 28 (26, 63, 52, 70) with node 9 (48, 63, 74, 70), gap 4
+[ERROR  ] row 9 (63, 70), overlap node 9 (48, 63, 74, 70) with node 12 (61, 63, 74, 70), gap 13
+[INFO   ] Legality check takes 0.0197 ms
+[INFO   ] writing placement to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png
+Show filler run !!!!! m_num_filler_nodes 0
+[ECC 20261025 20:31:27 cQBzyMnA idm.cpp:128 [1;34mInfo[0m write_placement_back] write_placement_back start. Db address is 0x320d8bb0
+[ECC 20261025 20:31:27 cQBzyMnA idm.cpp:129 [1;34mInfo[0m write_placement_back] write_placement_back start. idb_design address is 0x320fb0c0
+[ECC 20261025 20:31:27 cQBzyMnA idm.cpp:207 [1;34mInfo[0m write_placement_back] WriteBack placement finished!!
+[INFO   ] writing placement to /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/data/pl/ecc_smoke/plot/iter0001.png
+Show filler run !!!!! m_num_filler_nodes 0
+[ECC 20261025 20:31:27 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.def.gz )
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:376 [1;34mInfo[0m write_version] Write VERSION success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:398 [1;34mInfo[0m write_busbit_char] Write BUSBITCHARS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:413 [1;34mInfo[0m write_design] Write DESIGN name success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:435 [1;34mInfo[0m write_units] Write UNITS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:457 [1;34mInfo[0m write_die] Write DIE success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:574 [1;34mInfo[0m write_row] Write ROWS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:485 [1;34mInfo[0m write_track_grid] Write Track Grid success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:1121 [1;34mInfo[0m write_gcell_grid] Write GCELLGRID success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:550 [1;34mInfo[0m write_via] Write VIAS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:629 [1;34mInfo[0m write_component] Write COMPONENTS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:700 [1;34mInfo[0m write_pin] Write PINS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:715 [1;34mInfo[0m write_blockage] No VIA To Write...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:1134 [1;34mInfo[0m write_region] No REGION To Write...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:1168 [1;34mInfo[0m write_slot] No SLOT To Write...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:1200 [1;34mInfo[0m write_group] No GROUP To Write...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:1237 [1;34mInfo[0m write_fill] No FILL To Write...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:931 [1;34mInfo[0m write_special_net] Write SPECIALNETS success...
+[ECC 20261025 20:31:27 cQBzyMnA def_write.cpp:986 [1;34mInfo[0m write_net] Write NETS success...
+[ECC 20261025 20:31:27 cQBzyMnA verilog_write.cpp:113 [1;34mInfo[0m writeModule] start write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.v.gz
+[ECC 20261025 20:31:27 cQBzyMnA verilog_write.cpp:129 [1;34mInfo[0m writeModule] finish write verilog file /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.v.gz
+[ECC 20261025 20:31:27 cQBzyMnA def_service.cpp:87 [1;34mInfo[0m DefFileWriteInit] Create file success ( /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/output/ecc_smoke_legalization.gds )
+[ECC 20261025 20:31:27 cQBzyMnA gds_write.cpp:638 [1;34mInfo[0m write_component] Write COMPONENTS success. 74 / 74
+[ECC 20261025 20:31:27 cQBzyMnA gds_write.cpp:942 [1;34mInfo[0m write_fill] No FILLS ...
+[ECC 20261025 20:31:27 cQBzyMnA gds_write.cpp:833 [1;34mInfo[0m write_net] Write NETS success. 40 / 40
+[ECC 20261025 20:31:27 cQBzyMnA feature_parser.cpp:91 [1;34mInfo[0m buildSummary] Save feature json success, path = /home/ysyx/ysyx-workbench/ecc-smoke/runs/default/legalization_dreamplace/feature/legalization.db.json

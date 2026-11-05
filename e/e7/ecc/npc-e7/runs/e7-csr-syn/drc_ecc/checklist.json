@@ -1,0 +1,32 @@
+{
+    "schema_version": 3,
+    "kind": "signoff_checklist",
+    "checker_revision": "signoff-v1",
+    "generated_at": "2026-11-04T12:56:07.861802Z",
+    "status": "blocked",
+    "summary": {
+        "passed": 0,
+        "blocked": 1,
+        "attention": 0,
+        "unavailable": 0
+    },
+    "checklist": [
+        {
+            "id": "quality.drc.clean",
+            "step": "drc",
+            "category": "quality_gate",
+            "owner": "qor",
+            "policy": "block",
+            "state": "unavailable",
+            "blocked": true,
+            "title": "qor.drc.clean",
+            "summary": "Current QoR gate is unavailable; rerun analysis for this step.",
+            "source": {
+                "kind": "qor_gate",
+                "path": "drc_ecc/analysis/qor_summary.json",
+                "gate_id": "qor.drc.clean"
+            },
+            "evidence": []
+        }
+    ]
+}

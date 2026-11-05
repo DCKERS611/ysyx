@@ -1,0 +1,93 @@
+{
+    "Congestion": {
+        "map": {
+            "egr": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/egr_congestion_map/cts_egr_horizontal_overflow.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/egr_congestion_map/cts_egr_union_overflow.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/egr_congestion_map/cts_egr_vertical_overflow.csv"
+            },
+            "lutrudy": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_lut_rudy_horizontal.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_lut_rudy_union.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_lut_rudy_vertical.csv"
+            },
+            "rudy": {
+                "horizontal": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_rudy_horizontal.csv",
+                "union": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_rudy_union.csv",
+                "vertical": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/RUDY_map/cts_rudy_vertical.csv"
+            }
+        },
+        "overflow": {
+            "max": {
+                "horizontal": 0,
+                "union": 0,
+                "vertical": 0
+            },
+            "top_average": {
+                "horizontal": 0.0,
+                "union": 0.0,
+                "vertical": 0.0
+            },
+            "total": {
+                "horizontal": 0,
+                "union": 0,
+                "vertical": 0
+            }
+        },
+        "utilization": {
+            "lutrudy": {
+                "max": {
+                    "horizontal": 0.0015999999595806003,
+                    "union": 0.0030509999487549067,
+                    "vertical": 0.0014509999891743064
+                },
+                "top_average": {
+                    "horizontal": 0.0004000000189989805,
+                    "union": 0.0007627500453963876,
+                    "vertical": 0.00036275002639740705
+                }
+            },
+            "rudy": {
+                "max": {
+                    "horizontal": 0.0014039999805390835,
+                    "union": 0.0027000000700354576,
+                    "vertical": 0.0012969999806955457
+                },
+                "top_average": {
+                    "horizontal": 0.0003510000242386013,
+                    "union": 0.0006750000757165253,
+                    "vertical": 0.0003242500242777169
+                }
+            }
+        }
+    },
+    "Density": {
+        "cell": {
+            "allcell_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_allcell_density.csv",
+            "macro_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_macro_density.csv",
+            "stdcell_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_stdcell_density.csv"
+        },
+        "margin": {
+            "horizontal": "",
+            "union": "",
+            "vertical": ""
+        },
+        "net": {
+            "allnet_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_allnet_density.csv",
+            "global_net_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_global_net_density.csv",
+            "local_net_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_local_net_density.csv"
+        },
+        "pin": {
+            "allcell_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_allcell_pin_density.csv",
+            "macro_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_macro_pin_density.csv",
+            "stdcell_pin_density": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/default/CTS_ecc/feature/density_map/cts_stdcell_pin_density.csv"
+        }
+    },
+    "Wirelength": {
+        "FLUTE": 373535,
+        "GRWL": 364000,
+        "HPWL": 334681,
+        "HTree": 448258,
+        "VTree": 423282
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "ConfigPath": {
+        "idb_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/db_default_config.json",
+        "ifp_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/fp_default_config.json",
+        "ipl_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/pl_default_config.json",
+        "irt_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/rt_default_config.json",
+        "idrc_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/drc_default_config.json",
+        "icts_path": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/config/cts_default_config.json"
+    }
+}

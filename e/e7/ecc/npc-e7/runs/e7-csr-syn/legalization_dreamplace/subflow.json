@@ -1,0 +1,33 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/legalization_dreamplace/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "run legalization",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        }
+    ]
+}

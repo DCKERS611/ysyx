@@ -1,0 +1,29 @@
+{
+    "parameters": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/home/parameters.json",
+    "flow": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/home/flow.json",
+    "layout": "",
+    "checklist": "/home/ysyx/ysyx-workbench/ecc-smoke/runs/syn_sta/home/checklist.json",
+    "metrics": {},
+    "monitor": {
+        "step": [
+            "Synthesis - run yosys",
+            "Synthesis - analysis"
+        ],
+        "memory": [
+            "0.012",
+            "56.375"
+        ],
+        "runtime": [
+            "0:0:3",
+            "0:0:10"
+        ],
+        "instance": [
+            0,
+            0
+        ],
+        "frequency": [
+            0.0,
+            0.0
+        ]
+    }
+}

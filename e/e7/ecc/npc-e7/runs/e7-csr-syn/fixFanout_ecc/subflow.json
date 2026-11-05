@@ -1,0 +1,40 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/e7-csr-syn/fixFanout_ecc/subflow.json",
+    "steps": [
+        {
+            "name": "load data",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "set clock net",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "run net optimization",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "save data",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Unstart",
+            "runtime": "",
+            "peak memory (mb)": 0,
+            "info": {}
+        }
+    ]
+}
