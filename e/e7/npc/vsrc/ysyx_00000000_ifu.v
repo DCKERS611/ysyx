@@ -7,6 +7,7 @@ module ysyx_00000000_ifu #(parameter RESET_PC = 32'h8000_0000) (
     input         is_store,
     input         ifu_respValid,
     input         lsu_done,
+    input         reject,
 
     output [31:0] pc,
     output [31:0] inst,
@@ -22,6 +23,7 @@ module ysyx_00000000_ifu #(parameter RESET_PC = 32'h8000_0000) (
     localparam IDLE      = 2'b00;
     localparam WAIT      = 2'b01;
     localparam MEM_WAIT  = 2'b10;
+    localparam REJECTED  = 2'b11;
 
     wire [1:0] state;
     reg  [1:0] next_state;
@@ -41,11 +43,11 @@ module ysyx_00000000_ifu #(parameter RESET_PC = 32'h8000_0000) (
 
     // 仅在拿到访存指令时交付一次任务，具体请求和回复由 LSU 管理
     assign is_mem = is_load || is_store;
-    assign mem_start = fetch_done && is_mem;
-    assign inst_valid = !rst && (fetch_done || (state == MEM_WAIT));
+    assign mem_start = fetch_done && is_mem && !reject;
+    assign inst_valid = !rst && (fetch_done || (state == MEM_WAIT) || (state == REJECTED));
     assign normal_done = fetch_done && !is_mem;
     assign mem_done = (state == MEM_WAIT) && lsu_done;
-    assign commit = !rst && (normal_done || mem_done);
+    assign commit = !rst && !reject && (normal_done || mem_done);
 
     // IFU 只跟踪取指及本条指令是否完成，不再保存 LSU 发送标志
     always @(*) begin
@@ -57,11 +59,14 @@ module ysyx_00000000_ifu #(parameter RESET_PC = 32'h8000_0000) (
             end
             WAIT: begin
                 if (ifu_respValid)
-                    next_state = is_mem ? MEM_WAIT : IDLE;
+                    next_state = reject ? REJECTED : (is_mem ? MEM_WAIT : IDLE);
             end
             MEM_WAIT: begin
                 if (lsu_done)
                     next_state = IDLE;
+            end
+            REJECTED: begin
+                next_state = REJECTED;
             end
             default: begin
                 next_state = IDLE;

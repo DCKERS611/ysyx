@@ -1,0 +1,129 @@
+{
+  "k": 1,
+  "frequency_mhz": 25,
+  "q16": 0,
+  "images": [
+    {
+      "name": "100.blockchain",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "101.igemm",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "102.queen",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "103.dinic",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "104.malloc",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "105.bf",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "106.qsort",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "107.stream",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "108.ntt",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "200.genann",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "201.jpeg",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "202.llama2",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "203.rsa",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "204.hypergraph",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "300.bzip3",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "301.gsim",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "302.lua",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "303.cproc",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "304.mp3",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "305.h264",
+      "mainargs": "train",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    }
+  ],
+  "simulator_sha_matches": true,
+  "score_review": "bench.c prints actual score before reference 1000000 Marks; first regex match is correct for current format. benchmark validation failure returns 1, simulator reports BAD TRAP/nonzero; runner additionally requires GOOD TRAP. Parallel host load does not change cycle-based score, but wall_seconds is not comparable to isolated runs."
+}

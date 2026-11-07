@@ -1,0 +1,9 @@
+{
+  "old_rtl_rejected": true,
+  "old_rtl_exit_code": 2,
+  "lint_exit_code": 0,
+  "old_rtl_test_summary": [
+    "GPIO_APB transactions=568",
+    "FAILED: 8337/26068"
+  ]
+}

@@ -3,7 +3,7 @@ name = "npc-e7"
 top = "ysyx_00000000"
 rtl = ["rtl/filelist.f"]
 clock_port = "clock"
-frequency_mhz = 100.0
+frequency_mhz = 400.0
 
 [pdk]
 name = "ics55"

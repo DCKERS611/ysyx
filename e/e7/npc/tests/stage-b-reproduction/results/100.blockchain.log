@@ -1,0 +1,17 @@
+Mining block 1...
+Block mined: 09012f93b703f873d4c5377b433a54c141b0d7166c65834c6dd13735f6f944e8
+Mining block 2...
+Block mined: 01fce4f8a5c43ecf83069c188ddccadf2b5e661f818fed19e5f8f0fc7ffedd35
+Mining block 3...
+Block mined: 0c3cfe22ac49f0dcf205d5c2d83b56f5e713c88e531b6ffa94aa7729e76bab6c
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.080780 (80780 us)
+             532 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.080780 (80780 us)
+Total  time:   0:00:00.081080 (81080 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/100.blockchain.bin: 393908 bytes
+Result: halt_pc=0x80003978 a0=0x00000000 ra=0x80003974 cycles=33989196
+instructions=16994598 cycles=33989196 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

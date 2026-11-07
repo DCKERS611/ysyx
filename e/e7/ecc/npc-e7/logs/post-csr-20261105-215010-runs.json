@@ -1,0 +1,14 @@
+[
+  {
+    "run_id": "post-csr-balance-400mhz-20261105-215010",
+    "strategy": "balance",
+    "exit_code": 0,
+    "seconds": 29.535
+  },
+  {
+    "run_id": "post-csr-area-400mhz-20261105-215010",
+    "strategy": "area",
+    "exit_code": 0,
+    "seconds": 25.099
+  }
+]

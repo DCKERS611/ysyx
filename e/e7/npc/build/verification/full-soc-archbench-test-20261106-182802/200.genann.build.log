@@ -1,0 +1,19 @@
+# Building genann-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building libbench-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/genann-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 2.82e-05 s, 142 kB/s
+836276+0 records in
+836276+0 records out
+836276 bytes (836 kB, 817 KiB) copied, 0.445152 s, 1.9 MB/s
+mainargs=test

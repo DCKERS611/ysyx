@@ -1,0 +1,19 @@
+# Building queen-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building libbench-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/queen-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/archbench/bench/102.queen/build/queen-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/archbench/bench/102.queen/build/queen-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 2.6e-05 s, 154 kB/s
+407104+0 records in
+407104+0 records out
+407104 bytes (407 kB, 398 KiB) copied, 0.251551 s, 1.6 MB/s
+mainargs=test

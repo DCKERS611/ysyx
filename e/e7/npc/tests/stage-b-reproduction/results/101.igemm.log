@@ -1,0 +1,12 @@
+Dot product with row major order took 1519797 us, KOPS: 84
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:01.519798 (1519798 us)
+              14 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:01.519798 (1519798 us)
+Total  time:   0:00:01.823155 (1823155 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/101.igemm.bin: 378552 bytes
+Result: halt_pc=0x80001f54 a0=0x00000000 ra=0x80001f50 cycles=738137330
+instructions=369068665 cycles=738137330 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

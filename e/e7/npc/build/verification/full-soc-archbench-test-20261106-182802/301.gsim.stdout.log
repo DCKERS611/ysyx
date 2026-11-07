@@ -1,0 +1,16 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/301.gsim.bin, 1363408 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800be231)
+loading to memory region [0x800be300, 0x800beaf4)
+image size = 36
+A
+npc: [1;32mHIT GOOD TRAP[0m
+finish after 23 cycles, 8353463 us, simulation freq = 2 Hz
+#inst = 7, IPC = 304 * 10^{-3}
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:08.562395 (8562395 us)
+
+Scored time:   0:00:08.562395 (8562395 us)
+Total  time:   0:00:10.059817 (10059817 us)
+HIT GOOD TRAP: pc=0x8006183c a0=0x00000000 cycles=727320463
+Statistics (including loader): instructions=4626252 cycles=727320463 IPC=0.006361

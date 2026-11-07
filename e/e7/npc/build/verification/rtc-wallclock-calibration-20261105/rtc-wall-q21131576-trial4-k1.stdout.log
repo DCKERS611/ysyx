@@ -1,0 +1,17 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-calibration-20261105/rtc-wall-q21131576-trial4-k1.bin, 760308 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800564b0)
+loading to memory region [0x80056500, 0x80056800)
+RTC_TICK sec=1 elapsed_us=1099604 CPU_MHZ=25
+RTC_TICK sec=2 elapsed_us=2044033 CPU_MHZ=25
+RTC_TICK sec=3 elapsed_us=3005503 CPU_MHZ=25
+RTC_TICK sec=4 elapsed_us=4102180 CPU_MHZ=25
+RTC_TICK sec=5 elapsed_us=5103205 CPU_MHZ=25
+RTC_TICK sec=6 elapsed_us=6010003 CPU_MHZ=25
+RTC_TICK sec=7 elapsed_us=7022376 CPU_MHZ=25
+RTC_TICK sec=8 elapsed_us=8042951 CPU_MHZ=25
+RTC_TICK sec=9 elapsed_us=9059119 CPU_MHZ=25
+RTC_TICK sec=10 elapsed_us=10084748 CPU_MHZ=25
+RTC_TICK sec=11 elapsed_us=11015261 CPU_MHZ=25
+HIT GOOD TRAP: pc=0x80000b88 a0=0x00000000 cycles=470161208
+Statistics (including loader): instructions=3290894 cycles=470161208 IPC=0.007000

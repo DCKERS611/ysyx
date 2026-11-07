@@ -1,0 +1,19 @@
+# Building dinic-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building libbench-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/dinic-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/archbench/bench/103.dinic/build/dinic-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/archbench/bench/103.dinic/build/dinic-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 3.2901e-05 s, 122 kB/s
+417468+0 records in
+417468+0 records out
+417468 bytes (417 kB, 408 KiB) copied, 0.270365 s, 1.5 MB/s
+mainargs=train

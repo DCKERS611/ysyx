@@ -1,0 +1,13 @@
+Image size = 97 x 89
+checksum = 0xdabb6a5f
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.254229 (254229 us)
+             326 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.254229 (254229 us)
+Total  time:   0:00:00.291289 (291289 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/201.jpeg.bin: 556680 bytes
+Result: halt_pc=0x800275ec a0=0x00000000 ra=0x800275e8 cycles=119061918
+instructions=59530959 cycles=119061918 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

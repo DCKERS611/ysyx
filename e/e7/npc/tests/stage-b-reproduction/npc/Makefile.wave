@@ -1,0 +1,23 @@
+# 与 C++ 测试共用驱动，通过 TRACE=1 开启 FST 波形。
+.DEFAULT_GOAL := sim
+BUILD_DIR := build/wave
+TRACE := 1
+WAVE_FILE ?= $(BUILD_DIR)/wave.fst
+RUN_ARGS = "$(abspath $(PROGRAM))" "$(abspath $(WAVE_FILE))"
+GTKWAVE ?= gtkwave
+
+include Makefile.cpptest
+
+.PHONY: wave view
+# 执行测试生成 FST，然后直接用 GTKWave 打开。
+wave: sim
+	$(GTKWAVE) "$(abspath $(WAVE_FILE))"
+
+# 保留原来的查看命令，行为与 wave 相同。
+view: wave
+
+.PHONY: wave-dir
+wave-dir:
+	@mkdir -p "$(dir $(abspath $(WAVE_FILE)))"
+
+sim run test: | wave-dir

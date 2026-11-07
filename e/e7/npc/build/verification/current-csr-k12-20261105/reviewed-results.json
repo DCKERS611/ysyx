@@ -1,0 +1,32 @@
+{
+  "blockchain": {
+    "k1": {
+      "exit_code": 0,
+      "scored_us": 76161768,
+      "host_seconds": 798.058325611,
+      "cycles": 2221368432,
+      "instructions": 18111436
+    },
+    "k12": {
+      "exit_code": 0,
+      "scored_us": 75514772,
+      "host_seconds": 3570.213894325,
+      "cycles": 26456738215,
+      "instructions": 18124352
+    },
+    "speedup": 1.0085678071040194,
+    "time_reduction_percent": 0.8495023382335346
+  },
+  "rtc": {
+    "1": {
+      "mean_host_interval_seconds": 8.689069036900001,
+      "wallclock_one_second_pass": false,
+      "timer_divisor": 25
+    },
+    "12": {
+      "mean_host_interval_seconds": 42.8091463787,
+      "wallclock_one_second_pass": false,
+      "timer_divisor": 300
+    }
+  }
+}

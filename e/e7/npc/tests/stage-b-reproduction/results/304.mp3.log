@@ -1,0 +1,17 @@
+Encode MP3 size = 309 bytes
+Decode data size = 4608 bytes
+MP3 compression rate = 6%
+Audio time = 96000 us
+Decode time = 1818493 us
+Decode frequency = 5%
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:01.819843 (1819843 us)
+               8 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:01.819843 (1819843 us)
+Total  time:   0:00:01.833131 (1833131 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/304.mp3.bin: 791340 bytes
+Result: halt_pc=0x8005a9fc a0=0x00000000 ra=0x8005a9f8 cycles=742155694
+instructions=371077847 cycles=742155694 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

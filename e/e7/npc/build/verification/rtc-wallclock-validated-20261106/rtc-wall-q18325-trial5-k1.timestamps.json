@@ -1,0 +1,57 @@
+[
+  {
+    "sec": 1,
+    "host_monotonic_ns": 233780368237955,
+    "line": "RTC_TICK sec=01"
+  },
+  {
+    "sec": 2,
+    "host_monotonic_ns": 233781390289585,
+    "line": "RTC_TICK sec=02"
+  },
+  {
+    "sec": 3,
+    "host_monotonic_ns": 233782391532429,
+    "line": "RTC_TICK sec=03"
+  },
+  {
+    "sec": 4,
+    "host_monotonic_ns": 233783393414679,
+    "line": "RTC_TICK sec=04"
+  },
+  {
+    "sec": 5,
+    "host_monotonic_ns": 233784404023903,
+    "line": "RTC_TICK sec=05"
+  },
+  {
+    "sec": 6,
+    "host_monotonic_ns": 233785386920685,
+    "line": "RTC_TICK sec=06"
+  },
+  {
+    "sec": 7,
+    "host_monotonic_ns": 233786353652725,
+    "line": "RTC_TICK sec=07"
+  },
+  {
+    "sec": 8,
+    "host_monotonic_ns": 233787325963112,
+    "line": "RTC_TICK sec=08"
+  },
+  {
+    "sec": 9,
+    "host_monotonic_ns": 233788312083020,
+    "line": "RTC_TICK sec=09"
+  },
+  {
+    "sec": 10,
+    "host_monotonic_ns": 233789306264427,
+    "line": "RTC_TICK sec=10"
+  },
+  {
+    "sec": 11,
+    "host_monotonic_ns": 233790330473498,
+    "line": "RTC_TICK sec=11"
+  }
+]

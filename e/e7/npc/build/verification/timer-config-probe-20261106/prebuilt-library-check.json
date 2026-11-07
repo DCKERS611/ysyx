@@ -1,0 +1,14 @@
+[
+  {
+    "arch": "minirv-npc",
+    "exit_code": 0,
+    "archive_unchanged": true,
+    "sha256": "fa3380ecca1b3e5fa4c129617b0a6d07102e1966e9c77e49d21947572ef218ec"
+  },
+  {
+    "arch": "minirv-ysyxsoc",
+    "exit_code": 0,
+    "archive_unchanged": true,
+    "sha256": "fa3380ecca1b3e5fa4c129617b0a6d07102e1966e9c77e49d21947572ef218ec"
+  }
+]

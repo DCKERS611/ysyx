@@ -1,0 +1,7 @@
+{
+  "stage": "sampling",
+  "k": 1,
+  "frequency_mhz": 25,
+  "q16": 22778,
+  "trial": 1
+}

@@ -1,0 +1,74 @@
+{
+  "exit_code": 0,
+  "host_elapsed_seconds": 63.720530507,
+  "ticks": [
+    {
+      "sec": 1,
+      "host_monotonic_ns": 234595825421932,
+      "line": "T01"
+    },
+    {
+      "sec": 2,
+      "host_monotonic_ns": 234596903350040,
+      "line": "T02"
+    },
+    {
+      "sec": 3,
+      "host_monotonic_ns": 234597959355429,
+      "line": "T03"
+    },
+    {
+      "sec": 4,
+      "host_monotonic_ns": 234599021809572,
+      "line": "T04"
+    },
+    {
+      "sec": 5,
+      "host_monotonic_ns": 234600027123220,
+      "line": "T05"
+    },
+    {
+      "sec": 6,
+      "host_monotonic_ns": 234601052496431,
+      "line": "T06"
+    },
+    {
+      "sec": 7,
+      "host_monotonic_ns": 234602012090976,
+      "line": "T07"
+    },
+    {
+      "sec": 8,
+      "host_monotonic_ns": 234602978164168,
+      "line": "T08"
+    },
+    {
+      "sec": 9,
+      "host_monotonic_ns": 234604057564114,
+      "line": "T09"
+    },
+    {
+      "sec": 10,
+      "host_monotonic_ns": 234605076851741,
+      "line": "T10"
+    },
+    {
+      "sec": 11,
+      "host_monotonic_ns": 234606088318303,
+      "line": "T11"
+    }
+  ],
+  "intervals_seconds": [
+    1.077928108,
+    1.056005389,
+    1.062454143,
+    1.005313648,
+    1.025373211,
+    0.959594545,
+    0.966073192,
+    1.079399946,
+    1.019287627,
+    1.011466562
+  ],
+  "mean_interval_seconds": 1.0262896371
+}

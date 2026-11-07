@@ -1,0 +1,24 @@
+Clock configuration: CPU/SoC=1:1
+progress cycles=10000000 commits=47949 pc=0x30003064 inst=0x00672023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80003480 lsu_req=0 lsu_resp=0
+progress cycles=20000000 commits=95683 pc=0x3000307c inst=0xff06a303 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30063510 lsu_req=0 lsu_resp=0
+progress cycles=30000000 commits=143417 pc=0x30003094 inst=0xffc6a383 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x3006839c lsu_req=0 lsu_resp=0
+progress cycles=40000000 commits=191153 pc=0x300030b4 inst=0x00040413 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff000 lsu_req=0 lsu_resp=0
+progress cycles=50000000 commits=238889 pc=0x300030d4 inst=0x00024183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0a0 lsu_req=0 lsu_resp=0
+progress cycles=60000000 commits=286625 pc=0x300030f4 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff0bd lsu_req=0 lsu_resp=0
+progress cycles=70000000 commits=334361 pc=0x30003114 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff002 lsu_req=0 lsu_resp=0
+progress cycles=80000000 commits=382098 pc=0x30003138 inst=0x00048023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=90000000 commits=429833 pc=0x30003154 inst=0x00024203 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x30011b03 lsu_req=0 lsu_resp=0
+progress cycles=100000000 commits=477571 pc=0x3000317c inst=0xfe312623 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffcc lsu_req=0 lsu_resp=0
+progress cycles=110000000 commits=525306 pc=0x30003068 inst=0x00772223 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x800345a4 lsu_req=0 lsu_resp=0
+progress cycles=120000000 commits=573040 pc=0x30003080 inst=0xff06a303 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x30094630 lsu_req=0 lsu_resp=0
+progress cycles=130000000 commits=620774 pc=0x30003098 inst=0xfe672c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x8003e2b8 lsu_req=0 lsu_resp=0
+progress cycles=140000000 commits=668510 pc=0x300030b8 inst=0xff014183 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd0 lsu_req=0 lsu_resp=0
+progress cycles=150000000 commits=716246 pc=0x300030d8 inst=0xff114483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd1 lsu_req=0 lsu_resp=0
+progress cycles=160000000 commits=763982 pc=0x300030f8 inst=0x009181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000002 lsu_req=0 lsu_resp=0
+progress cycles=170000000 commits=811718 pc=0x30003118 inst=0x00024483 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff005 lsu_req=0 lsu_resp=0
+progress cycles=180000000 commits=859454 pc=0x30003138 inst=0x00024483 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x807ff080 lsu_req=0 lsu_resp=0
+progress cycles=190000000 commits=910048 pc=0x80003640 inst=0x30020213 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x80011600 lsu_req=0 lsu_resp=0
+progress cycles=200000000 commits=996595 pc=0x800021e0 inst=0xfe912423 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x80061fa8 lsu_req=0 lsu_resp=0
+progress cycles=210000000 commits=1081594 pc=0x80003874 inst=0x00420233 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000004 lsu_req=0 lsu_resp=0
+progress cycles=220000000 commits=1166494 pc=0x80002448 inst=0x80011237 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00072fc0 lsu_req=0 lsu_resp=0
+progress cycles=230000000 commits=1251490 pc=0x80003acc inst=0xfeb14183 ifu_state=2 ifu_req=0 ifu_resp=0 lsu_addr=0x80061fab lsu_req=0 lsu_resp=0

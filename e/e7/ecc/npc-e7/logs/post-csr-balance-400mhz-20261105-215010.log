@@ -1,0 +1,1 @@
+YOSYS_SYNTH_STRATEGY="BALANCE 3" ecc run --project "/home/ysyx/ysyx-workbench/ecc/npc-e7" --run-id "post-csr-balance-400mhz-20261105-215010"

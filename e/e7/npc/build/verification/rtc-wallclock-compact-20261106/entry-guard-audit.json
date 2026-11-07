@@ -1,0 +1,7 @@
+{
+  "existing_directory_rejected": true,
+  "exit_code": 1,
+  "stage_sha256_unchanged": "8749394fba08952eb28c64b0d657ce716970ac8849a3a811bc0e2c96e219f650",
+  "final_script_sha256": "5811e293183a135ad54d02afd627f0974f3a5b6b3a7beee180fc45acbafb7837",
+  "note": "running calibration used executed-calibrate_wallclock.py snapshot; final changes only result routing, initial seeds and status reporting"
+}

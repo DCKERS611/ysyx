@@ -36,7 +36,9 @@ module mygpio_top_apb(
     assign in_prdata = (in_paddr[3:2] == 2'b00) 
                        ? {16'b0, reg_led} 
                        : (in_paddr[3:2] == 2'b01) 
-                       ? {16'b0, gpio_in} 
+                       ? {16'b0, gpio_in}
+                       : (in_paddr[3:2] == 2'b10)
+                       ? reg_seg
                        : 32'b0;
     assign in_pready = in_psel & in_penable;
     assign in_pslverr = 1'b0;
@@ -45,15 +47,23 @@ module mygpio_top_apb(
     always @(posedge clock) begin
         if (reset) 
             reg_led <= 16'b0;
-        else if (led_we)
-            reg_led <= in_pwdata[15:0];
+        else if (led_we) begin
+            // LED只实现低16位；PSTRB未选中的字节保持原值。
+            if (in_pstrb[0]) reg_led[7:0] <= in_pwdata[7:0];
+            if (in_pstrb[1]) reg_led[15:8] <= in_pwdata[15:8];
+        end
     end
         
     always @(posedge clock) begin
         if (reset)
             reg_seg <= 32'b0;
-        else if (seg_we)
-            reg_seg <= in_pwdata;
+        else if (seg_we) begin
+            // 数码管寄存器支持四个字节独立写入，0x8读回保存的原始数值。
+            if (in_pstrb[0]) reg_seg[7:0] <= in_pwdata[7:0];
+            if (in_pstrb[1]) reg_seg[15:8] <= in_pwdata[15:8];
+            if (in_pstrb[2]) reg_seg[23:16] <= in_pwdata[23:16];
+            if (in_pstrb[3]) reg_seg[31:24] <= in_pwdata[31:24];
+        end
     end
 
 

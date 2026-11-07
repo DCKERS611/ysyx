@@ -1,0 +1,110 @@
+{
+  "stage": "needs_review",
+  "ended_epoch": 1793926012.1927855,
+  "results": [
+    {
+      "stage": "needs_review",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 4537560,
+      "trial": 4,
+      "image_sha256": "6ff73c56d6edf8bafa56ab21f7102023207f6761d9eb79e435995c3428b53f6d",
+      "compiled_timer_config": "freq=25 q16=4537560",
+      "mean_interval_seconds": 7.595677142900001,
+      "history": [
+        {
+          "stage": "measured",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 22778,
+          "trial": 1,
+          "image_sha256": "6465ecb5ba4e9c47fec28885395cd9e21faae99f03960d68ac97f090855933e2",
+          "compiled_timer_config": "freq=25 q16=22778",
+          "mean_interval_seconds": 5.0618985909
+        },
+        {
+          "stage": "measured",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 115300,
+          "trial": 2,
+          "image_sha256": "029e82dae57af625e040c51f4eceec9f6fb92876507619ac371b1a1a63a6b1b7",
+          "compiled_timer_config": "freq=25 q16=115300",
+          "mean_interval_seconds": 6.164200957
+        },
+        {
+          "stage": "measured",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 710732,
+          "trial": 3,
+          "image_sha256": "6bba726b7cdf9cb879357d29ac10d10008f1ba400b2177f550d69fe2f0711f03",
+          "compiled_timer_config": "freq=25 q16=710732",
+          "mean_interval_seconds": 6.3843477863
+        },
+        {
+          "stage": "measured",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 4537560,
+          "trial": 4,
+          "image_sha256": "6ff73c56d6edf8bafa56ab21f7102023207f6761d9eb79e435995c3428b53f6d",
+          "compiled_timer_config": "freq=25 q16=4537560",
+          "mean_interval_seconds": 7.595677142900001
+        }
+      ]
+    },
+    {
+      "stage": "needs_review",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 250299763,
+      "trial": 4,
+      "image_sha256": "5711feef9cc38dbe5141fc1ae12f4a10b4801cdc25e9b6527356f0a818d9621e",
+      "compiled_timer_config": "freq=300 q16=250299763",
+      "mean_interval_seconds": 40.290667931099996,
+      "history": [
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 9352,
+          "trial": 1,
+          "image_sha256": "bba233ae31f8d4c95a5dfdb0270110c373cbdada0b346ad1833d3c8b06ee4945",
+          "compiled_timer_config": "freq=300 q16=9352",
+          "mean_interval_seconds": 23.970392814
+        },
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 224171,
+          "trial": 2,
+          "image_sha256": "7d4926b35d4325f3019499a186312ff84a86992292364b321533b944b519bb2c",
+          "compiled_timer_config": "freq=300 q16=224171",
+          "mean_interval_seconds": 31.6087404419
+        },
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 7085763,
+          "trial": 3,
+          "image_sha256": "e0ee49e3e12ad6a2307d688e21364759c6b3a8d8370c1be153a14bd4b72b8737",
+          "compiled_timer_config": "freq=300 q16=7085763",
+          "mean_interval_seconds": 35.3243204332
+        },
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 250299763,
+          "trial": 4,
+          "image_sha256": "5711feef9cc38dbe5141fc1ae12f4a10b4801cdc25e9b6527356f0a818d9621e",
+          "compiled_timer_config": "freq=300 q16=250299763",
+          "mean_interval_seconds": 40.290667931099996
+        }
+      ]
+    }
+  ]
+}

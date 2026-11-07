@@ -1,0 +1,12 @@
+cs = 0x1f4fe60a
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.104732 (104732 us)
+            2310 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.104732 (104732 us)
+Total  time:   0:00:01.068750 (1068750 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/106.qsort.bin: 368032 bytes
+Result: halt_pc=0x80000ca4 a0=0x00000000 ra=0x80000ca0 cycles=433173996
+instructions=216586998 cycles=433173996 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

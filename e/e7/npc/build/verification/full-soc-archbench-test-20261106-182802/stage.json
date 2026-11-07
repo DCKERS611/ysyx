@@ -1,0 +1,147 @@
+{
+  "stage": "complete",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "name": "101.igemm",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 139.06171285698656,
+      "marks": null
+    },
+    {
+      "name": "102.queen",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 194.86016320204362,
+      "marks": null
+    },
+    {
+      "name": "100.blockchain",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 203.64601141802268,
+      "marks": null
+    },
+    {
+      "name": "104.malloc",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 150.12911442300538,
+      "marks": null
+    },
+    {
+      "name": "103.dinic",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 334.9820723030134,
+      "marks": null
+    },
+    {
+      "name": "105.bf",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 172.51190854801098,
+      "marks": null
+    },
+    {
+      "name": "106.qsort",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 268.4915833679843,
+      "marks": null
+    },
+    {
+      "name": "201.jpeg",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 268.4218191829859,
+      "marks": null
+    },
+    {
+      "name": "108.ntt",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 677.7624416769831,
+      "marks": null
+    },
+    {
+      "name": "107.stream",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 1429.7533433299977,
+      "marks": null
+    },
+    {
+      "name": "204.hypergraph",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 156.08774988498772,
+      "marks": null
+    },
+    {
+      "name": "300.bzip3",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 422.29122150101466,
+      "marks": null
+    },
+    {
+      "name": "203.rsa",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 1485.1992458599852,
+      "marks": null
+    },
+    {
+      "name": "301.gsim",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 273.94967142801033,
+      "marks": null
+    },
+    {
+      "name": "303.cproc",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 225.38835177599685,
+      "marks": null
+    },
+    {
+      "name": "302.lua",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 676.3286721299519,
+      "marks": null
+    },
+    {
+      "name": "305.h264",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 616.0473800089676,
+      "marks": null
+    },
+    {
+      "name": "202.llama2",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 3441.265313107986,
+      "marks": null
+    },
+    {
+      "name": "200.genann",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 4397.801497548993,
+      "marks": null
+    },
+    {
+      "name": "304.mp3",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 3647.2405529930256,
+      "marks": null
+    }
+  ]
+}

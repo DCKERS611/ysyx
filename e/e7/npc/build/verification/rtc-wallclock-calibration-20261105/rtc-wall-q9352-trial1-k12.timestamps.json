@@ -1,0 +1,57 @@
+[
+  {
+    "sec": 1,
+    "host_monotonic_ns": 227440772407315,
+    "line": "RTC_TICK sec=1 elapsed_us=1186597 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 2,
+    "host_monotonic_ns": 227462743047815,
+    "line": "RTC_TICK sec=2 elapsed_us=16395097 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 3,
+    "host_monotonic_ns": 227486540193766,
+    "line": "RTC_TICK sec=3 elapsed_us=34479254 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 4,
+    "host_monotonic_ns": 227509738926240,
+    "line": "RTC_TICK sec=4 elapsed_us=53688326 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 5,
+    "host_monotonic_ns": 227535132282532,
+    "line": "RTC_TICK sec=5 elapsed_us=73273164 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 6,
+    "host_monotonic_ns": 227561619823000,
+    "line": "RTC_TICK sec=6 elapsed_us=93500214 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 7,
+    "host_monotonic_ns": 227586861619294,
+    "line": "RTC_TICK sec=7 elapsed_us=113888563 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 8,
+    "host_monotonic_ns": 227610058507988,
+    "line": "RTC_TICK sec=8 elapsed_us=134820154 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 9,
+    "host_monotonic_ns": 227633709125817,
+    "line": "RTC_TICK sec=9 elapsed_us=155859277 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 10,
+    "host_monotonic_ns": 227657395731594,
+    "line": "RTC_TICK sec=10 elapsed_us=177032071 CPU_MHZ=300 Q16=9352"
+  },
+  {
+    "sec": 11,
+    "host_monotonic_ns": 227680476335455,
+    "line": "RTC_TICK sec=11 elapsed_us=198560968 CPU_MHZ=300 Q16=9352"
+  }
+]

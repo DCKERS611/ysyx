@@ -1,0 +1,4 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-20261106-180125/101.igemm.bin, 797732 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8005c468)
+loading to memory region [0x8005c500, 0x8005c8b8)

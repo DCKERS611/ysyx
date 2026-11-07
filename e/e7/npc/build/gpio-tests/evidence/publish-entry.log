@@ -1,0 +1,13 @@
+verilator --cc --exe --build --trace-fst -Wall -Wno-DECLFILENAME -Wno-UNUSEDSIGNAL \
+	--top-module mygpio_top_apb --Mdir /home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir \
+	/home/ysyx/ysyx-workbench/ysyxSoC/perip/gpio/mygpio_top_apb.v /home/ysyx/ysyx-workbench/npc/tests/gpio_apb_test.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/gpio-tests/gpio_apb_test
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir'
+make[1]: Nothing to be done for 'default'.
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.012 s (elab=0.000, cvt=0.000, bld=0.011); cpu 0.001 s on 1 threads; allocated 20.273 MB
+build/gpio-tests/gpio_apb_test /home/ysyx/ysyx-workbench/npc/build/gpio-tests/gpio-apb.fst
+GPIO_APB transactions=568
+PASS: 26068 checks

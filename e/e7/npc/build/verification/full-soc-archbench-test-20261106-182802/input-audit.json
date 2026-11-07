@@ -1,0 +1,130 @@
+{
+  "k": 1,
+  "frequency_mhz": 25,
+  "q16": 0,
+  "dataset": "test",
+  "images": [
+    {
+      "name": "100.blockchain",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "101.igemm",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "102.queen",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "103.dinic",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "104.malloc",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "105.bf",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "106.qsort",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "107.stream",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "108.ntt",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "200.genann",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "201.jpeg",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "202.llama2",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "203.rsa",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "204.hypergraph",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "300.bzip3",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "301.gsim",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "302.lua",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "303.cproc",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "304.mp3",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    },
+    {
+      "name": "305.h264",
+      "mainargs": "test",
+      "timer_has_li_25": true,
+      "sha_matches": true
+    }
+  ],
+  "simulator_sha_matches": true,
+  "runner_review": "test correctly does not require Marks or calculate score means; requires exit0, PASS and GOOD TRAP. benchmark bench_validate failure returns1. Host parallelism affects wall time, not cycle-based target time."
+}

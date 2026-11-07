@@ -1,0 +1,4 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-20261106-180125/102.queen.bin, 776256 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80058ff9)
+loading to memory region [0x80059000, 0x8005938c)

@@ -1,0 +1,17 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/100.blockchain.bin, 815448 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8005f9a0)
+loading to memory region [0x8005fa00, 0x800604b4)
+Mining block 1...
+Block mined: 7294fcfb2d18e13f78b3103091298da42bd48b0cd6bf34d7c2e1df4843f82dd3
+Mining block 2...
+Block mined: d582f5f992b65ff6bdac97b3a4d7effb0d7377e3f67a91626011ecbb507db648
+Mining block 3...
+Block mined: ebe00baca758a5295b15eb1096e4ee2a3a2e3b96c2cb12f05674c3fd8ee916c9
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:05.735419 (5735419 us)
+
+Scored time:   0:00:05.735419 (5735419 us)
+Total  time:   0:00:06.208533 (6208533 us)
+HIT GOOD TRAP: pc=0x80003ac8 a0=0x00000000 cycles=435235546
+Statistics (including loader): instructions=2943618 cycles=435235546 IPC=0.006763

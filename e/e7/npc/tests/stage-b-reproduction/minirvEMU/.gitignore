@@ -1,0 +1,13 @@
+!*.cpp
+!*.h
+!Makefile
+!README.md
+!.gitignore
+build/
+obj_dir/
+__pycache__/
+*.o
+*.d
+*.bin
+*.fst
+*.vcd

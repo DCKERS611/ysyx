@@ -1,0 +1,19 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/convergence-balance-400mhz-20261105/Synthesis_yosys/subflow.json",
+    "steps": [
+        {
+            "name": "run yosys",
+            "state": "Success",
+            "runtime": "0:0:5",
+            "peak memory (mb)": 0.004,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:20",
+            "peak memory (mb)": 83.848,
+            "info": {}
+        }
+    ]
+}

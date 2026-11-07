@@ -1,0 +1,102 @@
+[
+  {
+    "name": "100.blockchain",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "101.igemm",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "102.queen",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "103.dinic",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "104.malloc",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "105.bf",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "106.qsort",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "107.stream",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "108.ntt",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "200.genann",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "201.jpeg",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "202.llama2",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "203.rsa",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "204.hypergraph",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "300.bzip3",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "301.gsim",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "302.lua",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "303.cproc",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "304.mp3",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  },
+  {
+    "name": "305.h264",
+    "explicit_result_pass": true,
+    "exit_code": 0
+  }
+]

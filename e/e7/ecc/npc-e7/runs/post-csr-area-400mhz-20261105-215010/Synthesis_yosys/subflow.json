@@ -1,0 +1,19 @@
+{
+    "path": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/post-csr-area-400mhz-20261105-215010/Synthesis_yosys/subflow.json",
+    "steps": [
+        {
+            "name": "run yosys",
+            "state": "Success",
+            "runtime": "0:0:5",
+            "peak memory (mb)": 0.004,
+            "info": {}
+        },
+        {
+            "name": "analysis",
+            "state": "Success",
+            "runtime": "0:0:18",
+            "peak memory (mb)": 92.301,
+            "info": {}
+        }
+    ]
+}

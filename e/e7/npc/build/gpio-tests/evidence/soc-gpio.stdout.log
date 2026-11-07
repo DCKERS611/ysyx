@@ -1,0 +1,7 @@
+Loaded Flash: gpio-byte-access-k1.bin, 772160 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80058970)
+loading to memory region [0x80058a00, 0x80058b00)
+GPIO_BYTE_ACCESS PASS
+HIT GOOD TRAP: pc=0x800030ac a0=0x00000000 cycles=187998322
+Statistics (including loader): instructions=900993 cycles=187998322 IPC=0.004793

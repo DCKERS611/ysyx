@@ -1,0 +1,3 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-fixed-20261106/rtc-wall-q9352-trial1-k12.bin, 778068 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80059148)

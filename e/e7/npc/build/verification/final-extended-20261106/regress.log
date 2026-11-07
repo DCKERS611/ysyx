@@ -1,0 +1,390 @@
+make -f Makefile.cpptest lint
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --lint-only -Wall -Wno-DECLFILENAME --public-flat-rw \
+	--top-module ysyx_00000000 /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.265 MB sources in 13 modules, into 0.195 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.036 s (elab=0.003, cvt=0.020, bld=0.000); cpu 0.033 s on 1 threads; allocated 24.551 MB
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-csr
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/csr-tests/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/csr_test.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/csr-tests/csr_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/csr-tests/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/csr-tests/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.012 s (elab=0.000, cvt=0.000, bld=0.011); cpu 0.001 s on 1 threads; allocated 20.273 MB
+build/csr-tests/csr_test
+CSR integration: 78 cases PASS
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-gpio
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build --trace-fst -Wall -Wno-DECLFILENAME -Wno-UNUSEDSIGNAL \
+	--top-module mygpio_top_apb --Mdir /home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir \
+	/home/ysyx/ysyx-workbench/ysyxSoC/perip/gpio/mygpio_top_apb.v /home/ysyx/ysyx-workbench/npc/tests/gpio_apb_test.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/gpio-tests/gpio_apb_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/gpio-tests/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.008 s (elab=0.000, cvt=0.000, bld=0.007); cpu 0.001 s on 1 threads; allocated 20.273 MB
+build/gpio-tests/gpio_apb_test /home/ysyx/ysyx-workbench/npc/build/gpio-tests/gpio-apb.fst
+GPIO_APB transactions=568
+PASS: 26068 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-library
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+build/test-library/checker_test
+PASS: 1 checks
+FAILED: no checks executed
+PASS: 5 checks
+FAIL 故意错误数值: actual=0x00000001 expect=0x00000002
+FAIL 零对齐参数必须失败: value=0x00000000 is not aligned to 0
+FAIL 错误字节: byte[1] actual=0x56 expect=0x57
+FAIL 同时显示多个错误:
+  pc: actual=0x00000004 expect=0x00000008
+  x1: actual=0x00000001 expect=0x00000002
+FAILED: 4/4
+PASS: 10 checks
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-all
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/regress/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests" -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.011 s (elab=0.000, cvt=0.000, bld=0.009); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_cpu_tests.py --group functional --runner build/regress/cpu_test
+[ PASS ] functional/arithmetic: stop=ebreak cycles=43 retired=5 checks=11
+[ PASS ] functional/byte_memory: stop=ebreak cycles=330 retired=23 checks=15
+[ PASS ] functional/call_return: stop=ebreak cycles=59 retired=7 checks=17
+[ PASS ] functional/word_memory: stop=ebreak cycles=71 retired=7 checks=10
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/regress/cpu_test
+[ PASS ] boundary/consecutive_jumps: stop=ebreak cycles=59 retired=7 checks=17
+[ PASS ] boundary/illegal_rd: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_rs1: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_rs2: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/illegal_store: stop=rejected cycles=46 retired=4 checks=8
+[ PASS ] boundary/immediate_sign: stop=ebreak cycles=82 retired=10 checks=13
+[ PASS ] boundary/jalr_negative: stop=ebreak cycles=43 retired=5 checks=14
+[ PASS ] boundary/jalr_same_register: stop=ebreak cycles=43 retired=5 checks=14
+[ PASS ] boundary/u_immediate: stop=ebreak cycles=48 retired=6 checks=10
+[ PASS ] boundary/unsupported_funct3: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/unsupported_funct7: stop=rejected cycles=37 retired=3 checks=8
+[ PASS ] boundary/unsupported_store: stop=rejected cycles=46 retired=4 checks=8
+[ PASS ] boundary/unsupported_system: stop=rejected cycles=29 retired=2 checks=8
+[ PASS ] boundary/x0_readonly: stop=ebreak cycles=129 retired=12 checks=23
+boundary: 14/14 programs passed
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-fixed
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+NPC_MEM_DELAY=1 make -f Makefile.cpptest test-all
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/regress/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests" -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[3]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+make[3]: Nothing to be done for 'default'.
+make[3]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.006 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_cpu_tests.py --group functional --runner build/regress/cpu_test
+[ PASS ] functional/arithmetic: stop=ebreak cycles=10 retired=5 checks=11
+[ PASS ] functional/byte_memory: stop=ebreak cycles=59 retired=23 checks=15
+[ PASS ] functional/call_return: stop=ebreak cycles=14 retired=7 checks=17
+[ PASS ] functional/word_memory: stop=ebreak cycles=16 retired=7 checks=10
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/regress/cpu_test
+[ PASS ] boundary/consecutive_jumps: stop=ebreak cycles=14 retired=7 checks=18
+[ PASS ] boundary/illegal_rd: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_rs1: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_rs2: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/illegal_store: stop=rejected cycles=10 retired=4 checks=9
+[ PASS ] boundary/immediate_sign: stop=ebreak cycles=22 retired=10 checks=14
+[ PASS ] boundary/jalr_negative: stop=ebreak cycles=10 retired=5 checks=15
+[ PASS ] boundary/jalr_same_register: stop=ebreak cycles=10 retired=5 checks=15
+[ PASS ] boundary/u_immediate: stop=ebreak cycles=12 retired=6 checks=11
+[ PASS ] boundary/unsupported_funct3: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/unsupported_funct7: stop=rejected cycles=7 retired=3 checks=9
+[ PASS ] boundary/unsupported_store: stop=rejected cycles=10 retired=4 checks=9
+[ PASS ] boundary/unsupported_system: stop=rejected cycles=5 retired=2 checks=9
+[ PASS ] boundary/x0_readonly: stop=ebreak cycles=27 retired=12 checks=24
+boundary: 14/14 programs passed
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.diff difftest
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/difftest.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp /home/ysyx/ysyx-workbench/minirvEMU/emu.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests -I/home/ysyx/ysyx-workbench/minirvEMU" \
+	-o /home/ysyx/ysyx-workbench/npc/build/difftest/difftest
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.010 s (elab=0.000, cvt=0.000, bld=0.009); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_cpu_tests.py --group functional --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] functional/arithmetic: core=85 steps=5 checks=11 memory=33554432
+[ PASS ] functional/byte_memory: core=391 steps=23 checks=15 memory=33554432
+[ PASS ] functional/call_return: core=119 steps=7 checks=17 memory=33554432
+[ PASS ] functional/word_memory: core=119 steps=7 checks=10 memory=33554432
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] boundary/consecutive_jumps: core=119 steps=7 checks=17 memory=33554432
+[ PASS ] boundary/illegal_rd: core=51 steps=3 checks=8 memory=33554432
+[ PASS ] boundary/illegal_rs1: core=51 steps=3 checks=8 memory=33554432
+[ PASS ] boundary/illegal_rs2: core=51 steps=3 checks=8 memory=33554432
+[ PASS ] boundary/illegal_store: core=85 steps=5 checks=8 memory=33554432
+[ PASS ] boundary/immediate_sign: core=170 steps=10 checks=13 memory=33554432
+[ PASS ] boundary/jalr_negative: core=85 steps=5 checks=14 memory=33554432
+[ PASS ] boundary/jalr_same_register: core=85 steps=5 checks=14 memory=33554432
+[ PASS ] boundary/u_immediate: core=102 steps=6 checks=10 memory=33554432
+[ PASS ] boundary/unsupported_funct3: core=51 steps=3 checks=8 memory=33554432
+[ PASS ] boundary/unsupported_funct7: core=68 steps=4 checks=8 memory=33554432
+[ PASS ] boundary/unsupported_store: core=85 steps=5 checks=8 memory=33554432
+[ PASS ] boundary/unsupported_system: core=51 steps=3 checks=8 memory=33554432
+[ PASS ] boundary/x0_readonly: core=204 steps=12 checks=23 memory=33554432
+boundary: 14/14 programs passed
+python3 tests/run_cpu_tests.py --group difftest --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] difftest/medium: core=1377 steps=81 checks=15 memory=33554432
+[ PASS ] difftest/small: core=238 steps=14 checks=15 memory=33554432
+difftest: 2/2 programs passed
+python3 tests/run_cpu_tests.py --group acceptance --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] acceptance/array_sum: core=357 steps=21 checks=13 memory=33554432
+[ PASS ] acceptance/byte_sum: core=306 steps=18 checks=12 memory=33554432
+[ PASS ] acceptance/sum_1_to_10: core=408 steps=24 checks=8 memory=33554432
+acceptance: 3/3 programs passed
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.diff difftest-fixed
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+NPC_MEM_DELAY=1 make -f Makefile.diff difftest
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/difftest.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp /home/ysyx/ysyx-workbench/minirvEMU/emu.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests -I/home/ysyx/ysyx-workbench/minirvEMU" \
+	-o /home/ysyx/ysyx-workbench/npc/build/difftest/difftest
+make[3]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+make[3]: Nothing to be done for 'default'.
+make[3]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.007 s (elab=0.000, cvt=0.000, bld=0.007); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_cpu_tests.py --group functional --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] functional/arithmetic: core=85 steps=5 checks=11 memory=33554432
+[ PASS ] functional/byte_memory: core=391 steps=23 checks=15 memory=33554432
+[ PASS ] functional/call_return: core=119 steps=7 checks=17 memory=33554432
+[ PASS ] functional/word_memory: core=119 steps=7 checks=10 memory=33554432
+functional: 4/4 programs passed
+python3 tests/run_cpu_tests.py --group boundary --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] boundary/consecutive_jumps: core=119 steps=7 checks=18 memory=33554432
+[ PASS ] boundary/illegal_rd: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_rs1: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_rs2: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/illegal_store: core=85 steps=5 checks=9 memory=33554432
+[ PASS ] boundary/immediate_sign: core=170 steps=10 checks=14 memory=33554432
+[ PASS ] boundary/jalr_negative: core=85 steps=5 checks=15 memory=33554432
+[ PASS ] boundary/jalr_same_register: core=85 steps=5 checks=15 memory=33554432
+[ PASS ] boundary/u_immediate: core=102 steps=6 checks=11 memory=33554432
+[ PASS ] boundary/unsupported_funct3: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_funct7: core=68 steps=4 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_store: core=85 steps=5 checks=9 memory=33554432
+[ PASS ] boundary/unsupported_system: core=51 steps=3 checks=9 memory=33554432
+[ PASS ] boundary/x0_readonly: core=204 steps=12 checks=24 memory=33554432
+boundary: 14/14 programs passed
+python3 tests/run_cpu_tests.py --group difftest --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] difftest/medium: core=1377 steps=81 checks=16 memory=33554432
+[ PASS ] difftest/small: core=238 steps=14 checks=16 memory=33554432
+difftest: 2/2 programs passed
+python3 tests/run_cpu_tests.py --group acceptance --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] acceptance/array_sum: core=357 steps=21 checks=14 memory=33554432
+[ PASS ] acceptance/byte_sum: core=306 steps=18 checks=13 memory=33554432
+[ PASS ] acceptance/sum_1_to_10: core=408 steps=24 checks=9 memory=33554432
+acceptance: 3/3 programs passed
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest test-acceptance
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/regress/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests" -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.006 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/difftest.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp /home/ysyx/ysyx-workbench/minirvEMU/emu.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests -I/home/ysyx/ysyx-workbench/minirvEMU" \
+	-o /home/ysyx/ysyx-workbench/npc/build/difftest/difftest
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.009 s (elab=0.000, cvt=0.000, bld=0.009); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_acceptance.py --npc build/regress/cpu_test --emu ../minirvEMU/build/minirvEMU --diff build/difftest/difftest
+[ PASS ] acceptance/array_sum NPC: a0=10 (0xa)
+[ PASS ] acceptance/array_sum EMU: a0=10 (0xa)
+[ PASS ] acceptance/array_sum DiffTest: a0=10 (0xa)
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+make -f Makefile.cpptest check-waves
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000  \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/regress/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests" -o /home/ysyx/ysyx-workbench/npc/build/regress/cpu_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/regress/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.007 s (elab=0.000, cvt=0.000, bld=0.006); cpu 0.001 s on 1 threads; allocated 20.273 MB
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/difftest.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp /home/ysyx/ysyx-workbench/minirvEMU/emu.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests -I/home/ysyx/ysyx-workbench/minirvEMU" \
+	-o /home/ysyx/ysyx-workbench/npc/build/difftest/difftest
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/difftest/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.007 s (elab=0.000, cvt=0.000, bld=0.007); cpu 0.001 s on 1 threads; allocated 20.273 MB
+python3 tests/run_acceptance.py --npc build/regress/cpu_test --emu ../minirvEMU/build/minirvEMU --diff build/difftest/difftest
+[ PASS ] acceptance/array_sum NPC: a0=10 (0xa)
+[ PASS ] acceptance/array_sum EMU: a0=10 (0xa)
+[ PASS ] acceptance/array_sum DiffTest: a0=10 (0xa)
+[ PASS ] acceptance/byte_sum NPC: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum EMU: a0=276 (0x114)
+[ PASS ] acceptance/byte_sum DiffTest: a0=276 (0x114)
+[ PASS ] acceptance/sum_1_to_10 NPC: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 EMU: a0=55 (0x37)
+[ PASS ] acceptance/sum_1_to_10 DiffTest: a0=55 (0x37)
+make -f Makefile.cpptest REGRESS_DIR=build/wave-tests TRACE=1 build/wave-tests/cpu_test
+make[2]: Entering directory '/home/ysyx/ysyx-workbench/npc'
+verilator --cc --exe --build -Wall -Wno-DECLFILENAME \
+	--public-flat-rw --top-module ysyx_00000000 --trace-fst --trace-structs \
+	--Mdir /home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir /home/ysyx/ysyx-workbench/npc/vsrc/template.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v /home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v /home/ysyx/ysyx-workbench/npc/tests/cpu_test.cpp /home/ysyx/ysyx-workbench/npc/csrc/pmem.cpp /home/ysyx/ysyx-workbench/npc/csrc/sim.cpp /home/ysyx/ysyx-workbench/npc/csrc/dpi.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc -I/home/ysyx/ysyx-workbench/npc/tests" -o /home/ysyx/ysyx-workbench/npc/build/wave-tests/cpu_test
+make[3]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir'
+make[3]: Nothing to be done for 'default'.
+make[3]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/wave-tests/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.018 s (elab=0.000, cvt=0.000, bld=0.016); cpu 0.001 s on 1 threads; allocated 20.273 MB
+make[2]: Leaving directory '/home/ysyx/ysyx-workbench/npc'
+build/wave-tests/cpu_test build/acceptance/programs/array_sum.bin build/acceptance/programs/array_sum.expect acceptance/array_sum build/acceptance/waves/array_sum.fst
+[ RUN ] acceptance/array_sum
+Loaded build/acceptance/programs/array_sum.bin: 88 bytes
+Waveform: build/acceptance/waves/array_sum.fst
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x08078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x00100293 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x00512023 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00200293 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00512223 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00300293 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00512423 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00400293 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00512623 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00000513 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x03478067 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00012303 --> next_pc=0x80000038
+pc=0x80000038 inst=0x00650533 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00412303 --> next_pc=0x80000040
+pc=0x80000040 inst=0x00650533 --> next_pc=0x80000044
+pc=0x80000044 inst=0x00812303 --> next_pc=0x80000048
+pc=0x80000048 inst=0x00650533 --> next_pc=0x8000004c
+pc=0x8000004c inst=0x00c12303 --> next_pc=0x80000050
+pc=0x80000050 inst=0x00650533 --> next_pc=0x80000054
+ebreak @ pc=0x80000054
+pc=0x80000054 inst=0x00100073 --> next_pc=0x80000058
+PASS: 13 checks
+RESULT case=acceptance/array_sum backend=npc verdict=pass stop=ebreak pc=0x80000054 inst=0x00100073 cycles=252 retired=21 attempts=21 checks=13 failures=0 delay=random
+build/wave-tests/cpu_test build/acceptance/programs/byte_sum.bin build/acceptance/programs/byte_sum.expect acceptance/byte_sum build/acceptance/waves/byte_sum.fst
+[ RUN ] acceptance/byte_sum
+Loaded build/acceptance/programs/byte_sum.bin: 76 bytes
+Waveform: build/acceptance/waves/byte_sum.fst
+pc=0x80000000 inst=0x800007b7 --> next_pc=0x80000004
+pc=0x80000004 inst=0x10078113 --> next_pc=0x80000008
+pc=0x80000008 inst=0x123452b7 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x67828293 --> next_pc=0x80000010
+pc=0x80000010 inst=0x00512023 --> next_pc=0x80000014
+pc=0x80000014 inst=0x00000513 --> next_pc=0x80000018
+pc=0x80000018 inst=0x00014303 --> next_pc=0x8000001c
+pc=0x8000001c inst=0x00650533 --> next_pc=0x80000020
+pc=0x80000020 inst=0x00114303 --> next_pc=0x80000024
+pc=0x80000024 inst=0x00650533 --> next_pc=0x80000028
+pc=0x80000028 inst=0x00214303 --> next_pc=0x8000002c
+pc=0x8000002c inst=0x00650533 --> next_pc=0x80000030
+pc=0x80000030 inst=0x00314303 --> next_pc=0x80000034
+pc=0x80000034 inst=0x00650533 --> next_pc=0x80000038
+pc=0x80000038 inst=0x0ab00393 --> next_pc=0x8000003c
+pc=0x8000003c inst=0x00710123 --> next_pc=0x80000040
+pc=0x80000040 inst=0x04878067 --> next_pc=0x80000048
+ebreak @ pc=0x80000048
+pc=0x80000048 inst=0x00100073 --> next_pc=0x8000004c
+PASS: 12 checks
+RESULT case=acceptance/byte_sum backend=npc verdict=pass stop=ebreak pc=0x80000048 inst=0x00100073 cycles=214 retired=18 attempts=18 checks=12 failures=0 delay=random
+fst2vcd build/acceptance/waves/array_sum.fst > build/acceptance/waves/array_sum.vcd
+fst2vcd build/acceptance/waves/byte_sum.fst > build/acceptance/waves/byte_sum.vcd
+python3 tests/check_acceptance_wave.py --array build/acceptance/waves/array_sum.vcd --bytes build/acceptance/waves/byte_sum.vcd
+add: pre_pc=0x80000038, rising edge at 350 ps
+  PASS before.inst: 0x00650533 expect=0x00650533
+  PASS before.rs1_data: 0x00000000 expect=0x00000000
+  PASS before.rs2_data: 0x00000001 expect=0x00000001
+  PASS before.alu_src: 0x00000000 expect=0x00000000
+  PASS before.alu_out: 0x00000001 expect=0x00000001
+  PASS before.wen: 0x00000001 expect=0x00000001
+  PASS before.rd: 0x0000000a expect=0x0000000a
+  PASS before.wdata: 0x00000001 expect=0x00000001
+  PASS after.pc: 0x8000003c expect=0x8000003c
+  PASS after.u_rf.rf.rf[10]: 0x00000001 expect=0x00000001
+lw: pre_pc=0x80000034, rising edge at 338 ps
+  PASS before.inst: 0x00012303 expect=0x00012303
+  PASS before.alu_out: 0x80000080 expect=0x80000080
+  PASS before.mem_read: 0x00000001 expect=0x00000001
+  PASS before.mem_write: 0x00000000 expect=0x00000000
+  PASS before.load_data: 0x00000001 expect=0x00000001
+  PASS before.wb_sel: 0x00000001 expect=0x00000001
+  PASS before.wdata: 0x00000001 expect=0x00000001
+  PASS before.rd: 0x00000006 expect=0x00000006
+  PASS after.pc: 0x80000038 expect=0x80000038
+  PASS after.u_rf.rf.rf[6]: 0x00000001 expect=0x00000001
+sb: pre_pc=0x8000003c, rising edge at 396 ps
+  PASS before.inst: 0x00710123 expect=0x00710123
+  PASS before.alu_out: 0x80000102 expect=0x80000102
+  PASS before.mem_write: 0x00000001 expect=0x00000001
+  PASS before.mem_read: 0x00000000 expect=0x00000000
+  PASS before.mem_byte: 0x00000001 expect=0x00000001
+  PASS before.wen: 0x00000000 expect=0x00000000
+  PASS before.io_lsu_wdata: 0x00ab0000 expect=0x00ab0000
+  PASS before.io_lsu_wmask: 0x00000004 expect=0x00000004
+  PASS after.pc: 0x80000040 expect=0x80000040
+Wave inspection: PASS add/lw/sb
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc'

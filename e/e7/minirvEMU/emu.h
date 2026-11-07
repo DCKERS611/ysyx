@@ -13,6 +13,8 @@ struct CPUState {
     uint32_t pc = memory_base;
     std::array<uint32_t, 16> R{};
     std::array<uint8_t, memory_size> M{};
+    uint64_t mcycle = 0;
+    uint64_t minstret = 0;
     bool halted = false;
     uint32_t halt_pc = 0;
 };
@@ -38,6 +40,8 @@ public:
     void reset();
     bool load_program(const char* path, std::string& error);
     StepInfo step();
+    // 总线等待没有执行指令，只推进参考模型的时钟计数。
+    void advance_cycles(uint64_t count = 1) { state_.mcycle += count; }
     const CPUState& get_state() const { return state_; }
     uint32_t word(unsigned address) const;
     void set_reg(unsigned index, uint32_t value) {

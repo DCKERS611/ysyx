@@ -1,0 +1,14 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/204.hypergraph.bin, 906068 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8006d730)
+loading to memory region [0x8006d800, 0x8006dccc)
+SEED = 1 fname = input/test-hp1
+pass_no = 2 Final cutsize = 3 Check cutsize = 3
+cs = 0xb1880007
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:01.471114 (1471114 us)
+
+Scored time:   0:00:01.471114 (1471114 us)
+Total  time:   0:00:02.689272 (2689272 us)
+HIT GOOD TRAP: pc=0x8000ff40 a0=0x00000000 cycles=368837097
+Statistics (including loader): instructions=2294061 cycles=368837097 IPC=0.006220

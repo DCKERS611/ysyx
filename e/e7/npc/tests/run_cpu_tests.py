@@ -93,7 +93,7 @@ def parse_result(completed, backend, case_name):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--group", choices=("functional", "boundary", "difftest", "acceptance"), required=True)
+    parser.add_argument("--group", choices=("functional", "boundary", "difftest", "acceptance", "csr"), required=True)
     parser.add_argument("--case", help="only run one source stem")
     parser.add_argument("--runner", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, default=ROOT / "build/regress/programs")

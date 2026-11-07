@@ -1,0 +1,74 @@
+{
+  "exit_code": 0,
+  "host_elapsed_seconds": 289.568727586,
+  "ticks": [
+    {
+      "sec": 1,
+      "host_monotonic_ns": 320908417896239,
+      "line": "1900-0-0 00:00:00 GMT (1 second)."
+    },
+    {
+      "sec": 2,
+      "host_monotonic_ns": 320909284813650,
+      "line": "1900-0-0 00:00:00 GMT (2 seconds)."
+    },
+    {
+      "sec": 3,
+      "host_monotonic_ns": 320910128628352,
+      "line": "1900-0-0 00:00:00 GMT (3 seconds)."
+    },
+    {
+      "sec": 4,
+      "host_monotonic_ns": 320910983720564,
+      "line": "1900-0-0 00:00:00 GMT (4 seconds)."
+    },
+    {
+      "sec": 5,
+      "host_monotonic_ns": 320911829592695,
+      "line": "1900-0-0 00:00:00 GMT (5 seconds)."
+    },
+    {
+      "sec": 6,
+      "host_monotonic_ns": 320912692951792,
+      "line": "1900-0-0 00:00:00 GMT (6 seconds)."
+    },
+    {
+      "sec": 7,
+      "host_monotonic_ns": 320913580971523,
+      "line": "1900-0-0 00:00:00 GMT (7 seconds)."
+    },
+    {
+      "sec": 8,
+      "host_monotonic_ns": 320914454558721,
+      "line": "1900-0-0 00:00:00 GMT (8 seconds)."
+    },
+    {
+      "sec": 9,
+      "host_monotonic_ns": 320915305965853,
+      "line": "1900-0-0 00:00:00 GMT (9 seconds)."
+    },
+    {
+      "sec": 10,
+      "host_monotonic_ns": 320916176888064,
+      "line": "1900-0-0 00:00:00 GMT (10 seconds)."
+    },
+    {
+      "sec": 11,
+      "host_monotonic_ns": 320917079718766,
+      "line": "1900-0-0 00:00:00 GMT (11 seconds)."
+    }
+  ],
+  "intervals_seconds": [
+    0.866917411,
+    0.843814702,
+    0.855092212,
+    0.845872131,
+    0.863359097,
+    0.888019731,
+    0.873587198,
+    0.851407132,
+    0.870922211,
+    0.902830702
+  ],
+  "mean_interval_seconds": 0.8661822527
+}

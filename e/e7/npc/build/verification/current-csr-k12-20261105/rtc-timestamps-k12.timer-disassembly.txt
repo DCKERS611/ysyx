@@ -1,0 +1,95 @@
+<__am_timer_uptime>:
+800010bc:	ff410113          	addi	sp,sp,-12
+800010c0:	00812223          	sw	s0,4(sp)
+800010c4:	00112423          	sw	ra,8(sp)
+800010c8:	00050413          	mv	s0,a0
+800010cc:	b80025f3          	csrr	a1,mcycleh
+800010d0:	b0002573          	csrr	a0,mcycle
+800010d4:	b80027f3          	csrr	a5,mcycleh
+
+800010d8 <bne_0.L4>:
+800010d8:	feb12823          	sw	a1,-16(sp)
+800010dc:	fef12623          	sw	a5,-20(sp)
+800010e0:	fe812e23          	sw	s0,-4(sp)
+800010e4:	fe912c23          	sw	s1,-8(sp)
+800010e8:	80056437          	lui	s0,0x80056
+800010ec:	50040413          	addi	s0,s0,1280 # 80056500 <_end+0xffff7500>
+800010f0:	ff014183          	lbu	gp,-16(sp)
+800010f4:	00340233          	add	tp,s0,gp
+800010f8:	00100193          	li	gp,1
+800010fc:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80001100:	fec14183          	lbu	gp,-20(sp)
+80001104:	003401b3          	add	gp,s0,gp
+80001108:	00018023          	sb	zero,0(gp)
+8000110c:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80001110:	ff114483          	lbu	s1,-15(sp)
+80001114:	00940233          	add	tp,s0,s1
+80001118:	00100493          	li	s1,1
+8000111c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001120:	fed14483          	lbu	s1,-19(sp)
+80001124:	009404b3          	add	s1,s0,s1
+80001128:	00048023          	sb	zero,0(s1)
+8000112c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001130:	009181b3          	add	gp,gp,s1
+80001134:	ff214483          	lbu	s1,-14(sp)
+80001138:	00940233          	add	tp,s0,s1
+8000113c:	00100493          	li	s1,1
+80001140:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001144:	fee14483          	lbu	s1,-18(sp)
+80001148:	009404b3          	add	s1,s0,s1
+8000114c:	00048023          	sb	zero,0(s1)
+80001150:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001154:	009181b3          	add	gp,gp,s1
+80001158:	ff314483          	lbu	s1,-13(sp)
+8000115c:	00940233          	add	tp,s0,s1
+80001160:	00100493          	li	s1,1
+80001164:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80001168:	fef14483          	lbu	s1,-17(sp)
+8000116c:	009404b3          	add	s1,s0,s1
+80001170:	00048023          	sb	zero,0(s1)
+80001174:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80001178:	009181b3          	add	gp,gp,s1
+8000117c:	8000e237          	lui	tp,0x8000e
+80001180:	00020213          	mv	tp,tp
+80001184:	00320233          	add	tp,tp,gp
+80001188:	ff812483          	lw	s1,-8(sp)
+8000118c:	ffc12403          	lw	s0,-4(sp)
+80001190:	00024203          	lbu	tp,0(tp) # 8000e000 <_end+0xfffaf000>
+
+80001194 <slli_9>:
+80001194:	00420233          	add	tp,tp,tp
+80001198:	00420233          	add	tp,tp,tp
+8000119c:	00410233          	add	tp,sp,tp
+800011a0:	800011b7          	lui	gp,0x80001
+800011a4:	1c018193          	addi	gp,gp,448 # 800011c0 <_end+0xfffa21c0>
+800011a8:	fe312823          	sw	gp,-16(sp)
+800011ac:	800011b7          	lui	gp,0x80001
+800011b0:	0cc18193          	addi	gp,gp,204 # 800010cc <_end+0xfffa20cc>
+800011b4:	fe312623          	sw	gp,-20(sp)
+800011b8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ffa0fec>
+800011bc:	00020067          	jr	tp # 0 <_entry_offset>
+
+800011c0 <non_taken_0.L4>:
+800011c0:	12c00613          	li	a2,300
+800011c4:	00000693          	li	a3,0
+800011c8:	800010b7          	lui	ra,0x80001
+800011cc:	21808093          	addi	ra,ra,536 # 80001218 <_end+0xfffa2218>
+800011d0:	000080e7          	jalr	ra
+800011d4:	00812083          	lw	ra,8(sp)
+800011d8:	00a42023          	sw	a0,0(s0)
+800011dc:	00b42223          	sw	a1,4(s0)
+800011e0:	00412403          	lw	s0,4(sp)
+800011e4:	00c10113          	addi	sp,sp,12
+800011e8:	00008067          	ret
+
+800011ec <__am_timer_rtc>:
+800011ec:	76c00793          	li	a5,1900
+800011f0:	00052a23          	sw	zero,20(a0)
+800011f4:	00052823          	sw	zero,16(a0)
+800011f8:	00052623          	sw	zero,12(a0)
+800011fc:	00052423          	sw	zero,8(a0)
+80001200:	00052223          	sw	zero,4(a0)
+80001204:	00f52023          	sw	a5,0(a0)
+80001208:	00008067          	ret
+
+8000120c <__am_input_keybrd>:

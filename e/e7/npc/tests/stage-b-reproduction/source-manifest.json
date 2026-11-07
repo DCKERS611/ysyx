@@ -1,0 +1,312 @@
+[
+  {
+    "path": "minirvEMU/.gitignore",
+    "source_commit": "9fb61ad",
+    "sha256": "02fd50217035ae1ccbff1fa0837535af82657be68b583a4aa7e0e7bfecdc27e0"
+  },
+  {
+    "path": "minirvEMU/Makefile",
+    "source_commit": "9fb61ad",
+    "sha256": "c9cf2c9a4604c6613addcd99d2e414aade6fb13a7d0288dcf201ac1ae5758f1f"
+  },
+  {
+    "path": "minirvEMU/README.md",
+    "source_commit": "9fb61ad",
+    "sha256": "71d59b7f6f54f3baf756c787cfac3efcab00bc1b9f237a659f47e2ee47eb6e04"
+  },
+  {
+    "path": "minirvEMU/emu.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "9ecf45133128e6afa7d7fc549ee32337389c76f8bc4a7d6777939206eff2d9dc"
+  },
+  {
+    "path": "minirvEMU/emu.h",
+    "source_commit": "9fb61ad",
+    "sha256": "25c766c19ac6a21778b895cf2f1a5b1feeb844462ed6188a123150abe11a6c55"
+  },
+  {
+    "path": "minirvEMU/main.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "ee5b1fd346eb61c17c2939619ad83b05e9b6447181bd07ba4edac48ec51d3976"
+  },
+  {
+    "path": "npc/Makefile",
+    "source_commit": "9fb61ad",
+    "sha256": "f60c3a9094d4c32ca04df3200fa1960059444e3de0d67fd4e47ee04d17fb585a"
+  },
+  {
+    "path": "npc/Makefile.cpptest",
+    "source_commit": "9fb61ad",
+    "sha256": "425cc48bc83d33b8d50c7bb3b1b42a6fa3bac55ef26380461a59eb6dc1e7584a"
+  },
+  {
+    "path": "npc/Makefile.diff",
+    "source_commit": "9fb61ad",
+    "sha256": "7a5e7c275781dc9e695184a143f150638b33eccf22b554eb03ec82670f50be96"
+  },
+  {
+    "path": "npc/Makefile.test",
+    "source_commit": "9fb61ad",
+    "sha256": "2e150f68576e07cf1dd2f1ade8d90f08102b25ba7997cb7784329d4cec3cdc4b"
+  },
+  {
+    "path": "npc/Makefile.wave",
+    "source_commit": "9fb61ad",
+    "sha256": "5a0bf7504d1e5f7c19a12e32fb664a7ddc7d04c498bbc21913113385365c5e73"
+  },
+  {
+    "path": "npc/csrc/difftest.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "2fc88d73359aa9df411564b59f81f62d5f8f840517fbd5f878c1e60d608eb76e"
+  },
+  {
+    "path": "npc/csrc/dpi.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "6c890ef34826edb4a940531d9e5af57e77b3eceb67712bb265cf09719e2f8cbf"
+  },
+  {
+    "path": "npc/csrc/dpi.h",
+    "source_commit": "9fb61ad",
+    "sha256": "ae14f3fc985adceca1f55643af53fef1caeb42ce620bb44c03e2e7194e3c70b8"
+  },
+  {
+    "path": "npc/csrc/main.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "a2c7a20ccc6aff8b51509d65474a275e9b731738b835dd8063ee91065dfe25fc"
+  },
+  {
+    "path": "npc/csrc/pmem.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "cf38e8bfffd56922e426f94ef0559de96213d7410a0bdf859a617fa8f9d13b34"
+  },
+  {
+    "path": "npc/csrc/pmem.h",
+    "source_commit": "9fb61ad",
+    "sha256": "8c846d509297166426f9ad90c41643bba41f976b3f5dafc353574ffc2f4d5620"
+  },
+  {
+    "path": "npc/csrc/sim.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "53cf841f08e9e435649ce38a400301bb1872a939f3dc2aa8cbb6dd4b57d750de"
+  },
+  {
+    "path": "npc/csrc/sim.h",
+    "source_commit": "9fb61ad",
+    "sha256": "7b99a6bcb1abc2f4a75e084ee8a200d9c23aadeb0b85bbbbc603cd2fea769528"
+  },
+  {
+    "path": "npc/csrc/test_suite.h",
+    "source_commit": "9fb61ad",
+    "sha256": "753c041c18024070096f8c6a54602a0f6874f35f3cea9342b3a1ab12b1a3efb1"
+  },
+  {
+    "path": "npc/tests/Makefile.mk",
+    "source_commit": "9fb61ad",
+    "sha256": "0fcbd0d4212a498530ef81dbd6a09382eb89c425ad8d9f1f8aab22634117a404"
+  },
+  {
+    "path": "npc/tests/README.md",
+    "source_commit": "9fb61ad",
+    "sha256": "8769c1a5bb95a11607ef20dde6e08b85ef04d25c27c728219e745b7d48c0d9d4"
+  },
+  {
+    "path": "npc/tests/check_acceptance_wave.py",
+    "source_commit": "9fb61ad",
+    "sha256": "fb8837a27413df975265e8ed5a5b5df8890f2ff078eaac39eb888ba96b8719f9"
+  },
+  {
+    "path": "npc/tests/cpu_test.cpp",
+    "source_commit": "9fb61ad",
+    "sha256": "57483674f3e8443b7e064d3d678b9b66b7cab911560cbaa227fbbc83fe066847"
+  },
+  {
+    "path": "npc/tests/expectations.h",
+    "source_commit": "9fb61ad",
+    "sha256": "611fe6697672e38ed9245fdf01910f941f0f2c9689042538a509c4639125354d"
+  },
+  {
+    "path": "npc/tests/gen_program.py",
+    "source_commit": "9fb61ad",
+    "sha256": "e2ca374753ecd84bcfb0670eeaf31e6b6bec0d9425f6422f315ad37402c5e85a"
+  },
+  {
+    "path": "npc/tests/programs/acceptance/array_sum.s",
+    "source_commit": "9fb61ad",
+    "sha256": "084047bf4a688e6c939d63f80bca992d548128b70283a476906eef490d0a5dc4"
+  },
+  {
+    "path": "npc/tests/programs/acceptance/byte_sum.s",
+    "source_commit": "9fb61ad",
+    "sha256": "d6d868120ae2641425567a164ae06615926fbda51c10c9fe90bc6051ad625668"
+  },
+  {
+    "path": "npc/tests/programs/acceptance/sum_1_to_10.s",
+    "source_commit": "9fb61ad",
+    "sha256": "a1a5b18d9630766cd23fe5b4dd0b9d392e7a479dee52786afcddc6a536b1e14e"
+  },
+  {
+    "path": "npc/tests/programs/boundary/consecutive_jumps.s",
+    "source_commit": "9fb61ad",
+    "sha256": "291ce80daf1ac40f7c1750d66d154722e220bf72d6b5a48cfb0f3cbbfe43d3dd"
+  },
+  {
+    "path": "npc/tests/programs/boundary/illegal_rd.s",
+    "source_commit": "9fb61ad",
+    "sha256": "fbb5505de9cb5af4e8c740e285307487b5cbc4a23ea5ce25b31c1daf3ada0557"
+  },
+  {
+    "path": "npc/tests/programs/boundary/illegal_rs1.s",
+    "source_commit": "9fb61ad",
+    "sha256": "bf42a7db03c77ae6378a7e0a1ad75a47fb2bfc1de1b791129351cf4e043040bb"
+  },
+  {
+    "path": "npc/tests/programs/boundary/illegal_rs2.s",
+    "source_commit": "9fb61ad",
+    "sha256": "48413cb99137b6cb0647d78571fe099d7eabd237f278dcf81e2935a9411db861"
+  },
+  {
+    "path": "npc/tests/programs/boundary/illegal_store.s",
+    "source_commit": "9fb61ad",
+    "sha256": "663d5a311df8f2e95c86198b41eb9d3c6af7f937a254f3359ec3c106a34267a3"
+  },
+  {
+    "path": "npc/tests/programs/boundary/immediate_sign.s",
+    "source_commit": "9fb61ad",
+    "sha256": "99d5bb5f96c12b5db4e6c9719723dc4112648cfd273cd4913051d874073c3f32"
+  },
+  {
+    "path": "npc/tests/programs/boundary/jalr_negative.s",
+    "source_commit": "9fb61ad",
+    "sha256": "5863d14c1b327e0b8a82c65b872b09873f21b42cd88c412f5a468d9c937d2fc4"
+  },
+  {
+    "path": "npc/tests/programs/boundary/jalr_same_register.s",
+    "source_commit": "9fb61ad",
+    "sha256": "5543c59f7d59ba8651923fe9316ca81811c821b3bb7920399814c1a6417530db"
+  },
+  {
+    "path": "npc/tests/programs/boundary/u_immediate.s",
+    "source_commit": "9fb61ad",
+    "sha256": "414382f4924990fb52f313d5599a31ee53cd626348b868a0b120a85d0ef0ea91"
+  },
+  {
+    "path": "npc/tests/programs/boundary/unsupported_funct3.s",
+    "source_commit": "9fb61ad",
+    "sha256": "ac97fb7254d5022d994420a137dee5da17eb5f4b8870ea44a3b18c55c119e0c6"
+  },
+  {
+    "path": "npc/tests/programs/boundary/unsupported_funct7.s",
+    "source_commit": "9fb61ad",
+    "sha256": "f11aa3686e788a3471976849fa36fc97359d63f0f7a0b4518e372479b067b91c"
+  },
+  {
+    "path": "npc/tests/programs/boundary/unsupported_store.s",
+    "source_commit": "9fb61ad",
+    "sha256": "b411301cac1787e98f63e40e989aa5ec4cd4fb8c7129311ec9a7bc75ab19991c"
+  },
+  {
+    "path": "npc/tests/programs/boundary/unsupported_system.s",
+    "source_commit": "9fb61ad",
+    "sha256": "e77c83775548fe00ee3e3a9644594e93eb9fd91bf72ea466a3da90fb9e429d7d"
+  },
+  {
+    "path": "npc/tests/programs/boundary/x0_readonly.s",
+    "source_commit": "9fb61ad",
+    "sha256": "89af471b6813905c8f3dfb503769d2b19d284e2a1dc060d826e24107e2cf0381"
+  },
+  {
+    "path": "npc/tests/programs/difftest/medium.s",
+    "source_commit": "9fb61ad",
+    "sha256": "cfbf1a820f52d9df57c68db471a22770baa7cb85daf1527cde3475d78a928ec3"
+  },
+  {
+    "path": "npc/tests/programs/difftest/small.s",
+    "source_commit": "9fb61ad",
+    "sha256": "19e038787ef82bf33b87522844b8af57a38353d7d1457683694e74369ef23db9"
+  },
+  {
+    "path": "npc/tests/programs/ebreak.s",
+    "source_commit": "9fb61ad",
+    "sha256": "1569e1cc6d22c485976ddaaec02e24f1e4bfbb3ae2728906c20d3309d856ca1f"
+  },
+  {
+    "path": "npc/tests/programs/functional/arithmetic.s",
+    "source_commit": "9fb61ad",
+    "sha256": "3b3eedf005a05cecc907cd8cc846c26c56139226f3ffbb226e53b83d4c90edbe"
+  },
+  {
+    "path": "npc/tests/programs/functional/byte_memory.s",
+    "source_commit": "9fb61ad",
+    "sha256": "85225f94f7ba183cdd5f9396723ec52c24233fd073eb6b7565f0003d87271853"
+  },
+  {
+    "path": "npc/tests/programs/functional/call_return.s",
+    "source_commit": "9fb61ad",
+    "sha256": "17a70de39906707e29199cfbc0b9e1509c0004f576509d520d1540dd5556b4b7"
+  },
+  {
+    "path": "npc/tests/programs/functional/word_memory.s",
+    "source_commit": "9fb61ad",
+    "sha256": "3df44aafbe5d30a3f8bd09499d8946e516d4690dcda39e1c2a96ca17830a40fd"
+  },
+  {
+    "path": "npc/tests/programs/lecture.s",
+    "source_commit": "9fb61ad",
+    "sha256": "d0816edf824a250e1623b11be7e6927bb9cc6329335b53b736dc7c261305eeb4"
+  },
+  {
+    "path": "npc/tests/run_acceptance.py",
+    "source_commit": "9fb61ad",
+    "sha256": "8e8b35f79ffe0a9a1544918e2f1f723f576d82d67e85c976697b169939fbd66a"
+  },
+  {
+    "path": "npc/tests/run_cpu_tests.py",
+    "source_commit": "9fb61ad",
+    "sha256": "7c4578cce2e62d8f3a063131c5a39124bfa38698d7f2358dc4371bc9c30e637e"
+  },
+  {
+    "path": "npc/tests/test_mkprog.py",
+    "source_commit": "9fb61ad",
+    "sha256": "ae13ac1e3e0436dca13167a67d00883b6bc93b74f5f68f950a112256eb5c87e9"
+  },
+  {
+    "path": "npc/vsrc/exu.v",
+    "source_commit": "9fb61ad",
+    "sha256": "f6204d01883c08baa7dd69db25400c6e0e0df34d7655ae68007dbab0295ffd01"
+  },
+  {
+    "path": "npc/vsrc/gpr.v",
+    "source_commit": "9fb61ad",
+    "sha256": "e1151c178e142c51132cfb9dfc431ab0da6e97b2ec0c1466a766c292467c68dc"
+  },
+  {
+    "path": "npc/vsrc/idu.v",
+    "source_commit": "9fb61ad",
+    "sha256": "661bd70f0387473148773a50b4eb119d5dc92eb91737c8b45b5a85244e7b46b2"
+  },
+  {
+    "path": "npc/vsrc/ifu.v",
+    "source_commit": "9fb61ad",
+    "sha256": "ab2e3d9be558f1d52ac221158778afa23333d5dc952f7bb94ac123e9b397e9bd"
+  },
+  {
+    "path": "npc/vsrc/lsu.v",
+    "source_commit": "9fb61ad",
+    "sha256": "9674902bcd1d231fe836cb6b50e1ba8abb7ef87127964413b01ae070cfb7ff16"
+  },
+  {
+    "path": "npc/vsrc/template.v",
+    "source_commit": "9fb61ad",
+    "sha256": "3acd9b2fb970a6e247f8f6043aeb8cab6ed92d3d6c51ebd7944562e1eb0bbf27"
+  },
+  {
+    "path": "npc/vsrc/top.v",
+    "source_commit": "9fb61ad",
+    "sha256": "4d646c1ddd09480ba16ffe27191e35e58aa97ad4744f0197a1d842ff68427415"
+  },
+  {
+    "path": "npc/vsrc/wbu.v",
+    "source_commit": "9fb61ad",
+    "sha256": "787c473faf039259020855a984d4afff5df28370ab581bfd19f49370c1c861c1"
+  }
+]

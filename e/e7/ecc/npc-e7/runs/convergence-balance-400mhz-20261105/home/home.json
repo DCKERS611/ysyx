@@ -1,0 +1,29 @@
+{
+    "parameters": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/convergence-balance-400mhz-20261105/home/parameters.json",
+    "flow": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/convergence-balance-400mhz-20261105/home/flow.json",
+    "layout": "",
+    "checklist": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/convergence-balance-400mhz-20261105/home/checklist.json",
+    "metrics": {},
+    "monitor": {
+        "step": [
+            "Synthesis - run yosys",
+            "Synthesis - analysis"
+        ],
+        "memory": [
+            "0.004",
+            "83.848"
+        ],
+        "runtime": [
+            "0:0:5",
+            "0:0:20"
+        ],
+        "instance": [
+            0,
+            0
+        ],
+        "frequency": [
+            0.0,
+            0.0
+        ]
+    }
+}

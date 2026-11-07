@@ -1,0 +1,25 @@
+make: Entering directory '/home/ysyx/ysyx-workbench/npc/tests/csr-functional/carry'
+# Building csr-carry-image [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
++ CC main.c
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/am'
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:24: warning: ignoring old recipe for target 'image'
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/abstract-machine/klib'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/csr-carry-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/npc/tests/csr-functional/carry/build/csr-carry-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/npc/tests/csr-functional/carry/build/csr-carry-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 1.58e-05 s, 253 kB/s
+390952+0 records in
+390952+0 records out
+390952 bytes (391 kB, 382 KiB) copied, 0.190375 s, 2.1 MB/s
+make: Leaving directory '/home/ysyx/ysyx-workbench/npc/tests/csr-functional/carry'

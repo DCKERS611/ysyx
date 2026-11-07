@@ -1,0 +1,18 @@
+{
+  "sha256": {
+    "ysyxSoC/perip/gpio/mygpio_top_apb.v": "b18916d1b95c535fc94d4367cf3f93f599d55e97e448f3e32362febb896e54c8",
+    "npc/tests/gpio_apb_test.cpp": "3ffbd4be7037b24c949e50728439ef40eba2c65048147d6654c73cec1d533098",
+    "npc/tests/Makefile.mk": "381ad0533462a354470fac6bd361b1ee13d9ce3ac555db51fd972b5861384136",
+    "npc/tests/gpio-functional/main.c": "43bfde0e8225cdbc998d2185063ae62276aae43739b1c16f7da3ff99fa7f4314",
+    "npc/tests/gpio-functional/Makefile": "910027ab57543130569f42cf845b8a38780899d8abaa4ae8bcf29994a8904711",
+    "npc/build/gpio-tests/evidence/soc-sim": "922a1cf46f3ab51f68537a0061e18d0f8be6af8acffeb7131139594ed6f9c43c",
+    "npc/build/gpio-tests/evidence/gpio-byte-access-k1.bin": "a043d297535d50455f7fdc40bf3eb56014943ac4aaef7bd7ec47e6fb2644d428"
+  },
+  "runtime_environment": {
+    "NPC_CPU_CLOCK_RATIO": "1"
+  },
+  "build_parameters": {
+    "NPC_CPU_FREQ_MHZ": 25,
+    "NPC_TIMER_CALIBRATION_Q16": 0
+  }
+}

@@ -34,6 +34,12 @@ def exclusion(path):
     name = path.name
     if name == '.git' or name == '.env' or name.startswith('.env.') and name != '.env.example':
         return 'repository metadata or local environment'
+    # 课程预编译klib是当前测试的实际输入，源码仍含未实现桩，不能当缓存丢弃。
+    if path.relative_to(SOURCE).as_posix() in {
+        'abstract-machine/klib/build/klib-minirv-npc.a',
+        'abstract-machine/klib/build/klib-minirv-ysyxsoc.a',
+    }:
+        return None
     if path.suffix in SKIP_SUFFIXES or name.endswith('~'):
         return 'compiled output or temporary file'
     # 上游跟踪的调试镜像是测试输入，不把预置 ELF 误判成临时编译输出。

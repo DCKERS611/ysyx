@@ -1,0 +1,18 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-calibration-20261105/rtc-wall-q250299763-trial4-k12.bin, 770436 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80057e50)
+loading to memory region [0x80057f00, 0x80058200)
+TIMER_CONFIG_OK CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=1 elapsed_us=2100159567 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=2 elapsed_us=249494837 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=3 elapsed_us=1586996348 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=4 elapsed_us=1125104718 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=5 elapsed_us=643013048 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=6 elapsed_us=4201754701 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=7 elapsed_us=2667090536 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=8 elapsed_us=2975203888 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=9 elapsed_us=1396415767 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=10 elapsed_us=3191696323 CPU_MHZ=300 Q16=250299763
+RTC_TICK sec=11 elapsed_us=1925036196 CPU_MHZ=300 Q16=250299763
+HIT GOOD TRAP: pc=0x80001a1c a0=0x00000000 cycles=5319672307
+Statistics (including loader): instructions=3158991 cycles=5319672307 IPC=0.000594

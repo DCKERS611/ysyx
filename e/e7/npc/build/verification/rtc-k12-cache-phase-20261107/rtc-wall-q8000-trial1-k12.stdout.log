@@ -1,0 +1,20 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-k12-cache-phase-20261107/rtc-wall-q8000-trial1-k12.bin, 802536 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80060cfb)
+loading to memory region [0x80060d00, 0x80063834)
+RTC_FORMAT_PROBE -2147483648 4294967295 07 deadbeef ok Z %
+TIMER_CONFIG_OK CPU_MHZ=300 Q16=8000
+1900-0-0 00:00:00 GMT (1 second).
+1900-0-0 00:00:00 GMT (2 seconds).
+1900-0-0 00:00:00 GMT (3 seconds).
+1900-0-0 00:00:00 GMT (4 seconds).
+1900-0-0 00:00:00 GMT (5 seconds).
+1900-0-0 00:00:00 GMT (6 seconds).
+1900-0-0 00:00:00 GMT (7 seconds).
+1900-0-0 00:00:00 GMT (8 seconds).
+1900-0-0 00:00:00 GMT (9 seconds).
+1900-0-0 00:00:00 GMT (10 seconds).
+1900-0-0 00:00:00 GMT (11 seconds).
+RTC_DIAG max_late_us=466612
+HIT GOOD TRAP: pc=0x8000cf10 a0=0x00000000 cycles=2727549847
+Statistics (including loader): instructions=1177832 cycles=2727549847 IPC=0.000432

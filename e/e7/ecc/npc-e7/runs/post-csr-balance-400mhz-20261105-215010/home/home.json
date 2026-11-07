@@ -1,0 +1,29 @@
+{
+    "parameters": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/post-csr-balance-400mhz-20261105-215010/home/parameters.json",
+    "flow": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/post-csr-balance-400mhz-20261105-215010/home/flow.json",
+    "layout": "",
+    "checklist": "/home/ysyx/ysyx-workbench/ecc/npc-e7/runs/post-csr-balance-400mhz-20261105-215010/home/checklist.json",
+    "metrics": {},
+    "monitor": {
+        "step": [
+            "Synthesis - run yosys",
+            "Synthesis - analysis"
+        ],
+        "memory": [
+            "0.004",
+            "85.395"
+        ],
+        "runtime": [
+            "0:0:6",
+            "0:0:21"
+        ],
+        "instance": [
+            0,
+            0
+        ],
+        "frequency": [
+            0.0,
+            0.0
+        ]
+    }
+}

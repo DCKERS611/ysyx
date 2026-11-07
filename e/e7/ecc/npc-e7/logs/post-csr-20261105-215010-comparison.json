@@ -1,0 +1,20 @@
+[
+  {
+    "strategy": "balance",
+    "constraint_mhz": 400,
+    "wns_ns": -0.733,
+    "freq_mhz": 309,
+    "cella_um2": 11032.84,
+    "cost_yuan": 551.64,
+    "run_id": "post-csr-balance-400mhz-20261105-215010"
+  },
+  {
+    "strategy": "area",
+    "constraint_mhz": 400,
+    "wns_ns": -9.646,
+    "freq_mhz": 82,
+    "cella_um2": 10539.76,
+    "cost_yuan": 526.99,
+    "run_id": "post-csr-area-400mhz-20261105-215010"
+  }
+]

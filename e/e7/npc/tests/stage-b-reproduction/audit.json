@@ -1,0 +1,134 @@
+{
+  "kind": "read-only audit of reconstructed stage b, not recovered original historical code/results",
+  "snapshot_files": 62,
+  "modified_files": [
+    "npc/csrc/sim.cpp",
+    "npc/vsrc/ifu.v"
+  ],
+  "timing_model": "pmem.cpp sim_cycles()*1000000/404000000; frozen images use MMIO 0x20000000 and 0x20000004",
+  "images": [
+    {
+      "name": "100.blockchain",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "101.igemm",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "102.queen",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "103.dinic",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "104.malloc",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "105.bf",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "106.qsort",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "107.stream",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "108.ntt",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "200.genann",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "201.jpeg",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "202.llama2",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "203.rsa",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "204.hypergraph",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "300.bzip3",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "301.gsim",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "302.lua",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "303.cproc",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "304.mp3",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    },
+    {
+      "name": "305.h264",
+      "mainargs": "train",
+      "timer_mmio_low_high_exact": true,
+      "sha_matches": true
+    }
+  ],
+  "handshake_review": "IDLE fetch; WAIT commit. Load data supplied combinationally before WAIT rising edge; stores captured before edge and applied once at commit; GPR writes commit gated. No arbitrary-latency handshake belongs to this reconstructed stage.",
+  "difftest_boundary": "hello passes 35322 steps and 33554432 RAM words; device loads copy DUT result into reference register, so DiffTest does not independently prove MMIO timing.",
+  "source_unchanged_by_audit": true
+}

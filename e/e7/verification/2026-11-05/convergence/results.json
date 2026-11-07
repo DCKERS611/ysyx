@@ -1,0 +1,60 @@
+{
+  "strategy": "BALANCE 3",
+  "rows": [
+    {
+      "constraint_mhz": 100,
+      "run": "balance-20261105-161653",
+      "wns_ns": 2.9261926212,
+      "freq_mhz": 141,
+      "area_um2": 10122.28,
+      "large_drive_cells_ge_X2": 3,
+      "buffers": 0,
+      "start": "u_ifu.u_state.dout_2__reg_p:Q",
+      "end": "u_rf.rf[0]_29__reg_p:D",
+      "arrival_ns": 6.9825752385
+    },
+    {
+      "constraint_mhz": 200,
+      "run": "diagnostic-balance-200mhz-20261105",
+      "wns_ns": 1.0691016666,
+      "freq_mhz": 254,
+      "area_um2": 10176.32,
+      "large_drive_cells_ge_X2": 28,
+      "buffers": 0,
+      "start": "u_ifu.inst_saved_15__reg_p:Q",
+      "end": "u_csr.csr_minstret_61__reg_p:D",
+      "arrival_ns": 3.8897478832
+    },
+    {
+      "constraint_mhz": 400,
+      "run": "convergence-balance-400mhz-20261105",
+      "wns_ns": -1.4195372036,
+      "freq_mhz": 255,
+      "area_um2": 10211.6,
+      "large_drive_cells_ge_X2": 39,
+      "buffers": 0,
+      "start": "u_ifu.inst_saved_15__reg_p:Q",
+      "end": "u_rf.rf[0]_29__reg_p:D",
+      "arrival_ns": 3.8283240716
+    },
+    {
+      "constraint_mhz": 800,
+      "run": "convergence-balance-800mhz-20261105",
+      "wns_ns": -2.6695372036,
+      "freq_mhz": 255,
+      "area_um2": 10211.6,
+      "large_drive_cells_ge_X2": 39,
+      "buffers": 0,
+      "start": "u_ifu.inst_saved_15__reg_p:Q",
+      "end": "u_rf.rf[0]_29__reg_p:D",
+      "arrival_ns": 3.8283240716
+    }
+  ],
+  "rtl_files_identical": 9,
+  "netlists_400_800_identical": true,
+  "selected_constraint_mhz": 400,
+  "estimated_frequency_mhz": 255,
+  "selected_k": 10,
+  "cpu_mhz": 250,
+  "area_cost_yuan": 510.58
+}

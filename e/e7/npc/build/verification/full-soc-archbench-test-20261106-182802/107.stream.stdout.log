@@ -1,0 +1,41 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/107.stream.bin, 822320 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80060511)
+loading to memory region [0x80060600, 0x800616a0)
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 4 bytes per array element.
+-------------------------------------------------------------
+Array size = 4 (elements), Offset = 0 (elements)
+Memory per array = 0 MiB (0 KiB).
+Total memory required = 0 MiB (0 KiB).
+Each kernel will be executed 100 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 198271 microseconds.
+Each test below will take on the order of 103670 microseconds.
+   (= 0 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate KB/s  Avg time(us) Min time(us) Max time(us)
+Copy:                 0       109984       103700       114427
+Scale:                0       110002       103718       114446
+Add:                  0       110074       103754       114482
+Triad:                0       110099       103778       114506
+-------------------------------------------------------------
+Solution Validates: no error on all three arrays
+-------------------------------------------------------------
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:01:27.843109 (87843109 us)
+
+Scored time:   0:01:27.843109 (87843109 us)
+Total  time:   0:01:40.914333 (100914333 us)
+HIT GOOD TRAP: pc=0x80006f08 a0=0x00000000 cycles=2827912170
+Statistics (including loader): instructions=22754288 cycles=2827912170 IPC=0.008046

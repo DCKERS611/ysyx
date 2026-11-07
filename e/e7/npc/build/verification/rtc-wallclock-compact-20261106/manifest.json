@@ -1,0 +1,18 @@
+{
+  "source_sha256": {
+    "npc/tests/soc-timing/main.c": "a7ee7216a41bc4d78f210d722303549cb295341c5ab017d54fe190b3f24037d3",
+    "npc/tests/soc-timing/calibrate_wallclock.py": "6ae23bfde7b6a2d541c2048b874ee27840a7b50db06d274f27e6df4fd496d4c0",
+    "npc/tests/soc-timing/measure_host.py": "ca4da461c3959ea9fbe3a2fb32c6750b68c3389cb287b5f706bf5e60aebf4e30",
+    "abstract-machine/am/src/riscv/npc/timer.c": "b58efd3fd2deb1ad67f10aa270e4b5ba7fee07e7f42178bb93367f8848d13703",
+    "npc/build/soc/sim": "34aa6b01e5b352eb28217945b83bf00f775b02bf4c6637aede4a7811d2b76f0e"
+  },
+  "started_epoch": 1793930595.9250839,
+  "invocation_environment": {
+    "NPC_RTC_MAX_TRIALS": "4",
+    "NPC_RTC_INITIAL_Q16_K1": "18325",
+    "NPC_RTC_INITIAL_Q16_K12": "7754"
+  },
+  "criterion": "two independent runs, each 10-interval mean 1s +/-5%; no missed whole-second guest deadline",
+  "sampling_bytes": 4,
+  "concurrency": 1
+}

@@ -1,0 +1,74 @@
+{
+  "exit_code": 0,
+  "host_elapsed_seconds": 65.265051525,
+  "ticks": [
+    {
+      "sec": 1,
+      "host_monotonic_ns": 233717789246179,
+      "line": "RTC_TICK sec=01"
+    },
+    {
+      "sec": 2,
+      "host_monotonic_ns": 233718815497723,
+      "line": "RTC_TICK sec=02"
+    },
+    {
+      "sec": 3,
+      "host_monotonic_ns": 233719728901482,
+      "line": "RTC_TICK sec=03"
+    },
+    {
+      "sec": 4,
+      "host_monotonic_ns": 233720612803683,
+      "line": "RTC_TICK sec=04"
+    },
+    {
+      "sec": 5,
+      "host_monotonic_ns": 233721628751934,
+      "line": "RTC_TICK sec=05"
+    },
+    {
+      "sec": 6,
+      "host_monotonic_ns": 233722499336018,
+      "line": "RTC_TICK sec=06"
+    },
+    {
+      "sec": 7,
+      "host_monotonic_ns": 233723391571889,
+      "line": "RTC_TICK sec=07"
+    },
+    {
+      "sec": 8,
+      "host_monotonic_ns": 233724463964629,
+      "line": "RTC_TICK sec=08"
+    },
+    {
+      "sec": 9,
+      "host_monotonic_ns": 233725345220437,
+      "line": "RTC_TICK sec=09"
+    },
+    {
+      "sec": 10,
+      "host_monotonic_ns": 233726355251606,
+      "line": "RTC_TICK sec=10"
+    },
+    {
+      "sec": 11,
+      "host_monotonic_ns": 233727214805193,
+      "line": "RTC_TICK sec=11"
+    }
+  ],
+  "intervals_seconds": [
+    1.026251544,
+    0.913403759,
+    0.883902201,
+    1.015948251,
+    0.870584084,
+    0.892235871,
+    1.07239274,
+    0.881255808,
+    1.010031169,
+    0.859553587
+  ],
+  "mean_interval_seconds": 0.9425559014000001
+}

@@ -1,0 +1,17 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/rtc-timestamps-k12.bin, 760308 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800564b0)
+loading to memory region [0x80056500, 0x80056800)
+RTC_TICK sec=1 elapsed_us=1090502 CPU_MHZ=25
+RTC_TICK sec=2 elapsed_us=2026991 CPU_MHZ=25
+RTC_TICK sec=3 elapsed_us=3079018 CPU_MHZ=25
+RTC_TICK sec=4 elapsed_us=4041173 CPU_MHZ=25
+RTC_TICK sec=5 elapsed_us=5008963 CPU_MHZ=25
+RTC_TICK sec=6 elapsed_us=6079156 CPU_MHZ=25
+RTC_TICK sec=7 elapsed_us=7063834 CPU_MHZ=25
+RTC_TICK sec=8 elapsed_us=8075195 CPU_MHZ=25
+RTC_TICK sec=9 elapsed_us=9086557 CPU_MHZ=25
+RTC_TICK sec=10 elapsed_us=10001992 CPU_MHZ=25
+RTC_TICK sec=11 elapsed_us=11024341 CPU_MHZ=25
+HIT GOOD TRAP: pc=0x80000b88 a0=0x00000000 cycles=5632370899
+Statistics (including loader): instructions=3311737 cycles=5632370899 IPC=0.000588

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "hello",
+    "ratio": 12,
+    "pid": 37135,
+    "log": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/hello-k12.log",
+    "started": 1793887574.9301424
+  },
+  {
+    "name": "rtc",
+    "ratio": 1,
+    "pid": 37136,
+    "log": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/rtc-k1.log",
+    "started": 1793887574.9305408
+  },
+  {
+    "name": "rtc",
+    "ratio": 12,
+    "pid": 37137,
+    "log": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/rtc-k12.log",
+    "started": 1793887574.930958
+  }
+]

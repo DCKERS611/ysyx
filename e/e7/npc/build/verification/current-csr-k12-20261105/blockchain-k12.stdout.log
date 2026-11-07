@@ -1,0 +1,18 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/blockchain-k12.bin, 815448 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8005f9a0)
+loading to memory region [0x8005fa00, 0x800604b4)
+Mining block 1...
+Block mined: 09012f93b703f873d4c5377b433a54c141b0d7166c65834c6dd13735f6f944e8
+Mining block 2...
+Block mined: 01fce4f8a5c43ecf83069c188ddccadf2b5e661f818fed19e5f8f0fc7ffedd35
+Mining block 3...
+Block mined: 0c3cfe22ac49f0dcf205d5c2d83b56f5e713c88e531b6ffa94aa7729e76bab6c
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:01:15.514772 (75514772 us)
+               1 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:01:15.514772 (75514772 us)
+Total  time:   0:01:15.992457 (75992457 us)
+HIT GOOD TRAP: pc=0x80003ac8 a0=0x00000000 cycles=26456738215
+Statistics (including loader): instructions=18124352 cycles=26456738215 IPC=0.000685

@@ -1,0 +1,18 @@
+# Building rtc-printf-profile-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC main.c
++ CC formatter.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/rtc-printf-profile-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/npc/tests/soc-timing/full-printf/profile/build/rtc-printf-profile-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/npc/tests/soc-timing/full-printf/profile/build/rtc-printf-profile-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 2.5801e-05 s, 155 kB/s
+424564+0 records in
+424564+0 records out
+424564 bytes (425 kB, 415 KiB) copied, 0.229691 s, 1.8 MB/s
+mainargs=

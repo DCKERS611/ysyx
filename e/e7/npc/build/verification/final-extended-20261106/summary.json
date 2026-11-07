@@ -1,0 +1,23 @@
+[
+  {
+    "name": "regress",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.cpptest",
+      "regress"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "csr-diff",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.diff",
+      "difftest-csr",
+      "difftest-csr-fixed"
+    ],
+    "exit_code": 0
+  }
+]

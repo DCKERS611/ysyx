@@ -1,0 +1,42 @@
+[
+  {
+    "name": "soc",
+    "seconds": 2.267624594969675,
+    "returncode": 1,
+    "tail": [
+      "progress cycles=10000000 commits=3902 pc=0x300015cc inst=0x00a78023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x10000000 lsu_req=0 lsu_resp=0",
+      "progress cycles=20000000 commits=8026 pc=0x30009bec inst=0x00022203 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0",
+      "\u8fbe\u5230\u5468\u671f\u4e0a\u9650\uff1a20000000\uff0c\u672a\u89c2\u5bdf\u5230 ebreak"
+    ]
+  },
+  {
+    "name": "soc-rtc-fast",
+    "seconds": 2.1902355600032024,
+    "returncode": 1,
+    "tail": [
+      "progress cycles=10000000 commits=3902 pc=0x300015cc inst=0x00a78023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x10000000 lsu_req=0 lsu_resp=0",
+      "progress cycles=20000000 commits=8026 pc=0x30009bec inst=0x00022203 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0",
+      "\u8fbe\u5230\u5468\u671f\u4e0a\u9650\uff1a20000000\uff0c\u672a\u89c2\u5bdf\u5230 ebreak"
+    ]
+  },
+  {
+    "name": "soc",
+    "seconds": 2.3523245269898325,
+    "returncode": 1,
+    "tail": [
+      "progress cycles=10000000 commits=3902 pc=0x300015cc inst=0x00a78023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x10000000 lsu_req=0 lsu_resp=0",
+      "progress cycles=20000000 commits=8026 pc=0x30009bec inst=0x00022203 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0",
+      "\u8fbe\u5230\u5468\u671f\u4e0a\u9650\uff1a20000000\uff0c\u672a\u89c2\u5bdf\u5230 ebreak"
+    ]
+  },
+  {
+    "name": "soc-rtc-fast",
+    "seconds": 2.201845513016451,
+    "returncode": 1,
+    "tail": [
+      "progress cycles=10000000 commits=3902 pc=0x300015cc inst=0x00a78023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x10000000 lsu_req=0 lsu_resp=0",
+      "progress cycles=20000000 commits=8026 pc=0x30009bec inst=0x00022203 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0",
+      "\u8fbe\u5230\u5468\u671f\u4e0a\u9650\uff1a20000000\uff0c\u672a\u89c2\u5bdf\u5230 ebreak"
+    ]
+  }
+]

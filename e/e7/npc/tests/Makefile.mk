@@ -102,6 +102,8 @@ test-library: $(CHECKER_BIN)
 .PHONY: regress
 regress:
 	$(MAKE) -f Makefile.cpptest lint
+	$(MAKE) -f Makefile.cpptest test-csr
+	$(MAKE) -f Makefile.cpptest test-gpio
 	$(MAKE) -f Makefile.cpptest test-library
 	$(MAKE) -f Makefile.cpptest test-all
 	$(MAKE) -f Makefile.cpptest test-fixed
@@ -109,3 +111,40 @@ regress:
 	$(MAKE) -f Makefile.diff difftest-fixed
 	$(MAKE) -f Makefile.cpptest test-acceptance
 	$(MAKE) -f Makefile.cpptest check-waves
+
+# CSR 定向测试直接驱动真实 CPU 的取指回复，检查等待与拒绝边界。
+CSR_TEST_DIR := build/csr-tests
+CSR_TEST_BIN := $(CSR_TEST_DIR)/csr_test
+$(CSR_TEST_BIN): $(VSRCS) tests/csr_test.cpp $(HEADERS) $(MAKEFILE_LIST)
+	@mkdir -p $(CSR_TEST_DIR)
+	$(VERILATOR) --cc --exe --build -Wall -Wno-DECLFILENAME \
+		--public-flat-rw --top-module $(TOPNAME) \
+		--Mdir $(abspath $(CSR_TEST_DIR)/obj_dir) $(VSRCS) $(abspath tests/csr_test.cpp) \
+		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath csrc)" -o $(abspath $(CSR_TEST_BIN))
+
+.PHONY: test-csr
+test-csr: $(CSR_TEST_BIN)
+	$(CSR_TEST_BIN)
+
+# 新CSR语义及计数器独立模型的逐提交验证。
+.PHONY: difftest-csr difftest-csr-fixed
+difftest-csr: $(DIFF_BIN)
+	$(PYTHON) tests/run_cpu_tests.py --group csr --runner $(DIFF_BIN) --output-dir $(DIFF_DIR)/programs
+
+difftest-csr-fixed: $(DIFF_BIN)
+	NPC_MEM_DELAY=1 $(PYTHON) tests/run_cpu_tests.py --group csr --runner $(DIFF_BIN) --output-dir $(DIFF_DIR)/programs
+
+# GPIO独立APB验证，不构建AM或整个SoC；仍复用通用checker。
+GPIO_TEST_DIR ?= build/gpio-tests
+GPIO_TEST_RTL ?= $(abspath ../ysyxSoC/perip/gpio/mygpio_top_apb.v)
+GPIO_TEST_BIN := $(GPIO_TEST_DIR)/gpio_apb_test
+$(GPIO_TEST_BIN): $(GPIO_TEST_RTL) tests/gpio_apb_test.cpp csrc/check.h $(MAKEFILE_LIST)
+	@mkdir -p $(GPIO_TEST_DIR)
+	$(VERILATOR) --cc --exe --build --trace-fst -Wall -Wno-DECLFILENAME -Wno-UNUSEDSIGNAL \
+		--top-module mygpio_top_apb --Mdir $(abspath $(GPIO_TEST_DIR)/obj_dir) \
+		$(GPIO_TEST_RTL) $(abspath tests/gpio_apb_test.cpp) \
+		-CFLAGS "$(TEST_CXXFLAGS) -I$(abspath csrc)" -o $(abspath $(GPIO_TEST_BIN))
+
+.PHONY: test-gpio
+test-gpio: $(GPIO_TEST_BIN)
+	$(GPIO_TEST_BIN) $(abspath $(GPIO_TEST_DIR)/gpio-apb.fst)

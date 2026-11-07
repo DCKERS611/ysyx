@@ -1,0 +1,10 @@
+{
+  "pid": 139731,
+  "cpu": 2,
+  "ratios": [
+    12
+  ],
+  "max_trials": 3,
+  "initial_q16": 8000,
+  "output": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-k12-final-20261107"
+}

@@ -1,0 +1,18 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/108.ntt.bin, 844892 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800640b0)
+loading to memory region [0x80064100, 0x800644b0)
+The prime number is : 998244353
+The primitive root is : 3
+The length of the 1st polynomial is : 2
+The length of the 2nd polynomial is : 2
+Computing the result of polynomial multiplication...
+Checking result...
+cs = 0xe052005f
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:37.591551 (37591551 us)
+
+Scored time:   0:00:37.591551 (37591551 us)
+Total  time:   0:00:38.775587 (38775587 us)
+HIT GOOD TRAP: pc=0x80003444 a0=0x00000000 cycles=1272899894
+Statistics (including loader): instructions=9904180 cycles=1272899894 IPC=0.007781

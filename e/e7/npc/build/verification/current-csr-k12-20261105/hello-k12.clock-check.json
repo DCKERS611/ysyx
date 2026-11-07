@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "soc_intervals": 832,
+  "cpu_rises_per_soc_period": {
+    "12": 832
+  },
+  "cpu_periods": {
+    "2": 9998
+  },
+  "soc_periods": {
+    "24": 832
+  }
+}

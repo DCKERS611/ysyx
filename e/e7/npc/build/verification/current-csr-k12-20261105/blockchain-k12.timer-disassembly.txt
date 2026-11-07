@@ -1,0 +1,95 @@
+<__am_timer_uptime>:
+80015b88:	ff410113          	addi	sp,sp,-12
+80015b8c:	00812223          	sw	s0,4(sp)
+80015b90:	00112423          	sw	ra,8(sp)
+80015b94:	00050413          	mv	s0,a0
+80015b98:	b80025f3          	csrr	a1,mcycleh
+80015b9c:	b0002573          	csrr	a0,mcycle
+80015ba0:	b80027f3          	csrr	a5,mcycleh
+
+80015ba4 <bne_0.L4>:
+80015ba4:	feb12823          	sw	a1,-16(sp)
+80015ba8:	fef12623          	sw	a5,-20(sp)
+80015bac:	fe812e23          	sw	s0,-4(sp)
+80015bb0:	fe912c23          	sw	s1,-8(sp)
+80015bb4:	80060437          	lui	s0,0x80060
+80015bb8:	a0040413          	addi	s0,s0,-1536 # 8005fa00 <_end+0xffff6a00>
+80015bbc:	ff014183          	lbu	gp,-16(sp)
+80015bc0:	00340233          	add	tp,s0,gp
+80015bc4:	00100193          	li	gp,1
+80015bc8:	00320023          	sb	gp,0(tp) # 0 <_entry_offset>
+80015bcc:	fec14183          	lbu	gp,-20(sp)
+80015bd0:	003401b3          	add	gp,s0,gp
+80015bd4:	00018023          	sb	zero,0(gp)
+80015bd8:	00024183          	lbu	gp,0(tp) # 0 <_entry_offset>
+80015bdc:	ff114483          	lbu	s1,-15(sp)
+80015be0:	00940233          	add	tp,s0,s1
+80015be4:	00100493          	li	s1,1
+80015be8:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80015bec:	fed14483          	lbu	s1,-19(sp)
+80015bf0:	009404b3          	add	s1,s0,s1
+80015bf4:	00048023          	sb	zero,0(s1)
+80015bf8:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80015bfc:	009181b3          	add	gp,gp,s1
+80015c00:	ff214483          	lbu	s1,-14(sp)
+80015c04:	00940233          	add	tp,s0,s1
+80015c08:	00100493          	li	s1,1
+80015c0c:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80015c10:	fee14483          	lbu	s1,-18(sp)
+80015c14:	009404b3          	add	s1,s0,s1
+80015c18:	00048023          	sb	zero,0(s1)
+80015c1c:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80015c20:	009181b3          	add	gp,gp,s1
+80015c24:	ff314483          	lbu	s1,-13(sp)
+80015c28:	00940233          	add	tp,s0,s1
+80015c2c:	00100493          	li	s1,1
+80015c30:	00920023          	sb	s1,0(tp) # 0 <_entry_offset>
+80015c34:	fef14483          	lbu	s1,-17(sp)
+80015c38:	009404b3          	add	s1,s0,s1
+80015c3c:	00048023          	sb	zero,0(s1)
+80015c40:	00024483          	lbu	s1,0(tp) # 0 <_entry_offset>
+80015c44:	009181b3          	add	gp,gp,s1
+80015c48:	80017237          	lui	tp,0x80017
+80015c4c:	20020213          	addi	tp,tp,512 # 80017200 <_end+0xfffae200>
+80015c50:	00320233          	add	tp,tp,gp
+80015c54:	ff812483          	lw	s1,-8(sp)
+80015c58:	ffc12403          	lw	s0,-4(sp)
+80015c5c:	00024203          	lbu	tp,0(tp) # 0 <_entry_offset>
+
+80015c60 <slli_9>:
+80015c60:	00420233          	add	tp,tp,tp
+80015c64:	00420233          	add	tp,tp,tp
+80015c68:	00410233          	add	tp,sp,tp
+80015c6c:	800161b7          	lui	gp,0x80016
+80015c70:	c8c18193          	addi	gp,gp,-884 # 80015c8c <_end+0xfffacc8c>
+80015c74:	fe312823          	sw	gp,-16(sp)
+80015c78:	800161b7          	lui	gp,0x80016
+80015c7c:	b9818193          	addi	gp,gp,-1128 # 80015b98 <_end+0xfffacb98>
+80015c80:	fe312623          	sw	gp,-20(sp)
+80015c84:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0x7ff96fec>
+80015c88:	00020067          	jr	tp # 0 <_entry_offset>
+
+80015c8c <non_taken_0.L4>:
+80015c8c:	12c00613          	li	a2,300
+80015c90:	00000693          	li	a3,0
+80015c94:	8000e0b7          	lui	ra,0x8000e
+80015c98:	6ac08093          	addi	ra,ra,1708 # 8000e6ac <_end+0xfffa56ac>
+80015c9c:	000080e7          	jalr	ra
+80015ca0:	00812083          	lw	ra,8(sp)
+80015ca4:	00a42023          	sw	a0,0(s0)
+80015ca8:	00b42223          	sw	a1,4(s0)
+80015cac:	00412403          	lw	s0,4(sp)
+80015cb0:	00c10113          	addi	sp,sp,12
+80015cb4:	00008067          	ret
+
+80015cb8 <__am_timer_rtc>:
+80015cb8:	76c00793          	li	a5,1900
+80015cbc:	00052a23          	sw	zero,20(a0)
+80015cc0:	00052823          	sw	zero,16(a0)
+80015cc4:	00052623          	sw	zero,12(a0)
+80015cc8:	00052423          	sw	zero,8(a0)
+80015ccc:	00052223          	sw	zero,4(a0)
+80015cd0:	00f52023          	sw	a5,0(a0)
+80015cd4:	00008067          	ret
+
+80015cd8 <__am_input_keybrd>:

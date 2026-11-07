@@ -1,0 +1,18 @@
+# Building soc-uptime-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC main.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC src/riscv/npc/timer.c
++ AR -> build/am-minirv-ysyxsoc.a
+# Creating image [minirv-ysyxsoc]
++ LD -> build/soc-uptime-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.38e-05 s, 118 kB/s
+411132+0 records in
+411132+0 records out
+411132 bytes (411 kB, 401 KiB) copied, 0.187302 s, 2.2 MB/s
+mainargs=

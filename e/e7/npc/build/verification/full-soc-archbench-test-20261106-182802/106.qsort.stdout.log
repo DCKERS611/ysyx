@@ -1,0 +1,12 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/106.qsort.bin, 782692 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80059be8)
+loading to memory region [0x80059c00, 0x80059fa0)
+cs = 0x6a368bc9
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.604955 (604955 us)
+
+Scored time:   0:00:00.604955 (604955 us)
+Total  time:   0:00:09.850268 (9850268 us)
+HIT GOOD TRAP: pc=0x80000df4 a0=0x00000000 cycles=505444214
+Statistics (including loader): instructions=3616937 cycles=505444214 IPC=0.007156

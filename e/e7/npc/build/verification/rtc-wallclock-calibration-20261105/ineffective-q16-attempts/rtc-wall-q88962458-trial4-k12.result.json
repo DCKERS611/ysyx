@@ -1,0 +1,74 @@
+{
+  "exit_code": 0,
+  "host_elapsed_seconds": 507.509683792,
+  "ticks": [
+    {
+      "sec": 1,
+      "host_monotonic_ns": 200396220619740,
+      "line": "RTC_TICK sec=1 elapsed_us=1344118 CPU_MHZ=300"
+    },
+    {
+      "sec": 2,
+      "host_monotonic_ns": 200413822106872,
+      "line": "RTC_TICK sec=2 elapsed_us=5877500 CPU_MHZ=300"
+    },
+    {
+      "sec": 3,
+      "host_monotonic_ns": 200431083067504,
+      "line": "RTC_TICK sec=3 elapsed_us=10928953 CPU_MHZ=300"
+    },
+    {
+      "sec": 4,
+      "host_monotonic_ns": 200449054022896,
+      "line": "RTC_TICK sec=4 elapsed_us=16170401 CPU_MHZ=300"
+    },
+    {
+      "sec": 5,
+      "host_monotonic_ns": 200466791302520,
+      "line": "RTC_TICK sec=5 elapsed_us=21524589 CPU_MHZ=300"
+    },
+    {
+      "sec": 6,
+      "host_monotonic_ns": 200484251809180,
+      "line": "RTC_TICK sec=6 elapsed_us=26984024 CPU_MHZ=300"
+    },
+    {
+      "sec": 7,
+      "host_monotonic_ns": 200502330167521,
+      "line": "RTC_TICK sec=7 elapsed_us=32503576 CPU_MHZ=300"
+    },
+    {
+      "sec": 8,
+      "host_monotonic_ns": 200520995349172,
+      "line": "RTC_TICK sec=8 elapsed_us=38158100 CPU_MHZ=300"
+    },
+    {
+      "sec": 9,
+      "host_monotonic_ns": 200539755474743,
+      "line": "RTC_TICK sec=9 elapsed_us=43835188 CPU_MHZ=300"
+    },
+    {
+      "sec": 10,
+      "host_monotonic_ns": 200557881920345,
+      "line": "RTC_TICK sec=10 elapsed_us=49609945 CPU_MHZ=300"
+    },
+    {
+      "sec": 11,
+      "host_monotonic_ns": 200577295095123,
+      "line": "RTC_TICK sec=11 elapsed_us=55401840 CPU_MHZ=300"
+    }
+  ],
+  "intervals_seconds": [
+    17.601487132,
+    17.260960632,
+    17.970955392,
+    17.737279624,
+    17.46050666,
+    18.078358341,
+    18.665181651,
+    18.760125571,
+    18.126445602,
+    19.413174778
+  ],
+  "mean_interval_seconds": 18.1074475383
+}

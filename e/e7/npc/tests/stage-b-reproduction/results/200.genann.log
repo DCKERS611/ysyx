@@ -1,0 +1,21 @@
+GENANN TEST SUITE
+	basic         pass: 7   fail: 0   509us
+	xor           pass: 5   fail: 0   1574us
+	backprop      pass: 1   fail: 0   567us
+	train and     pass: 4   fail: 0   33430us
+	train or      pass: 4   fail: 0   32681us
+Train an ANN on the IRIS dataset using backpropagation.
+Training for 4 loops over data.
+80/150 correct
+ALL TESTS PASSED (21/21)
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:03.866443 (3866443 us)
+              17 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:03.866443 (3866443 us)
+Total  time:   0:00:03.866645 (3866645 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/200.genann.bin: 754340 bytes
+Result: halt_pc=0x8000ec2c a0=0x00000000 ra=0x8000ec28 cycles=1563808498
+instructions=781904249 cycles=1563808498 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

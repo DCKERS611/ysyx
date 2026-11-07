@@ -1,0 +1,11 @@
+# Building rtc-wait-profile-insert-arg [minirv-npc]
++ CC main.c
++ CC rtc.c
++ CC formatter.c
+# Building am-archive [minirv-npc]
++ CC src/riscv/npc/timer.c
++ AR -> build/am-minirv-npc.a
+# Creating image [minirv-npc]
++ LD -> build/rtc-wait-profile-minirv-npc.elf
++ OBJCOPY -> build/rtc-wait-profile-minirv-npc.bin
+mainargs=

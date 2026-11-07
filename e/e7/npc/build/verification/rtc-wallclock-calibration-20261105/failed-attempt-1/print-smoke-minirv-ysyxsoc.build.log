@@ -1,0 +1,20 @@
+# Building rtc-print-smoke-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:37: warning: ignoring old recipe for target 'image'
++ CC main.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:37: warning: ignoring old recipe for target 'image'
+# Building klib-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:37: warning: ignoring old recipe for target 'image'
++ AR -> build/klib-minirv-ysyxsoc.a
+# Creating image [minirv-ysyxsoc]
++ LD -> build/rtc-print-smoke-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 3.5101e-05 s, 114 kB/s
+384548+0 records in
+384548+0 records out
+384548 bytes (385 kB, 376 KiB) copied, 0.2169 s, 1.8 MB/s
+mainargs=

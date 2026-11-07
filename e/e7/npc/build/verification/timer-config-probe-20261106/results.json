@@ -1,0 +1,29 @@
+[
+  {
+    "q16": 1,
+    "exit_code": 0,
+    "timer_recompiled": true,
+    "image_sha256": "ba9e2b93468bc1bf4650929bd5472e391f758818bce00b0b9c1c1415746724f1",
+    "output": [
+      "TIMER_CONFIG_PROBE PASS freq=25 q16=1 value=3"
+    ]
+  },
+  {
+    "q16": 65536,
+    "exit_code": 0,
+    "timer_recompiled": true,
+    "image_sha256": "2359399160882839c556b69802e261b0206c18ee4e3755b9eff6e9f2022098c6",
+    "output": [
+      "TIMER_CONFIG_PROBE PASS freq=25 q16=65536 value=205417"
+    ]
+  },
+  {
+    "q16": 0,
+    "exit_code": 0,
+    "timer_recompiled": true,
+    "image_sha256": "038d57d1d86db38750b1bfbd2defeb06ac1d52c7ccd670a7ef6db85eba44a473",
+    "output": [
+      "TIMER_CONFIG_PROBE PASS freq=25 q16=0 value=8219"
+    ]
+  }
+]

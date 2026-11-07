@@ -1,0 +1,6 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-20261106-180125/104.malloc.bin, 903952 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80074849)
+loading to memory region [0x80074900, 0x80074d88)
+allocated 3262 addresses
+6675 operations in total

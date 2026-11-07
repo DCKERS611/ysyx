@@ -1,0 +1,1 @@
+YOSYS_SYNTH_STRATEGY="AREA 0" ecc run --project "/home/ysyx/ysyx-workbench/ecc/npc-e7" --run-id "post-csr-area-400mhz-20261105-215010"

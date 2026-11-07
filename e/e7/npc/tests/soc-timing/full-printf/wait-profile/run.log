@@ -1,0 +1,18 @@
+1900-0-0 00:00:00 GMT (1 second).
+1900-0-0 00:00:00 GMT (2 seconds).
+1900-0-0 00:00:00 GMT (3 seconds).
+1900-0-0 00:00:00 GMT (4 seconds).
+1900-0-0 00:00:00 GMT (5 seconds).
+1900-0-0 00:00:00 GMT (6 seconds).
+1900-0-0 00:00:00 GMT (7 seconds).
+1900-0-0 00:00:00 GMT (8 seconds).
+1900-0-0 00:00:00 GMT (9 seconds).
+1900-0-0 00:00:00 GMT (10 seconds).
+1900-0-0 00:00:00 GMT (11 seconds).
+RTC_DIAG max_late_us=301
+Loaded build/rtc-wait-profile-minirv-npc.bin: 389672 bytes
+Result: halt_pc=0x8000a69c a0=0x00000000 ra=0x8000a698 cycles=90330715
+instructions=34893145 cycles=90330715 IPC=0.386282
+HIT GOOD TRAP
+PASS: 2 checks
+RESULT case=rtc-wait-profile-minirv-npc.bin backend=am verdict=pass stop=ebreak pc=0x8000a69c inst=0x00100073 cycles=90330715 retired=34893145 attempts=34893145 checks=2 failures=0 delay=fixed:1

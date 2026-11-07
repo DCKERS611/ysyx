@@ -184,7 +184,7 @@ step_event sim_session::step()
     const uint32_t inst = npc::inst(dut);
     last_pc = old_pc;
     last_inst = inst;
-    if (executing) ++g_attempts;
+    if (executing || npc::illegal(dut)) ++g_attempts;
 
     if ((old_pc & 3u) != 0) {
         return step_event::fault;

@@ -1,0 +1,12 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/102.queen.bin, 776256 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80058ff9)
+loading to memory region [0x80059000, 0x8005938c)
+There are 92 solutions for 8 queen problem
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:05.360546 (5360546 us)
+
+Scored time:   0:00:05.360546 (5360546 us)
+Total  time:   0:00:05.637248 (5637248 us)
+HIT GOOD TRAP: pc=0x80001174 a0=0x00000000 cycles=406431938
+Statistics (including loader): instructions=2707592 cycles=406431938 IPC=0.006662

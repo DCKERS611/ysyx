@@ -74,8 +74,10 @@ int main(int argc, char** argv)
             std::fprintf(stderr, "Difftest cycle limit exceeded\n");
             return finish(stop_reason::cycle_limit, false);
         }
-        if (!npc::commit(dut)) {
+        if (!npc::commit(dut) && !npc::illegal(dut)) {
+            const uint64_t cycle_before = sim.cycles();
             const auto event = sim.step();
+            emu.advance_cycles(sim.cycles() - cycle_before);
             if (event == step_event::fault)
                 return finish(stop_reason::fetch_unaligned, false);
             if (event != step_event::waiting) {
@@ -117,6 +119,11 @@ int main(int argc, char** argv)
             emu.set_reg(info.device_load_rd, npc::gpr(dut, info.device_load_rd));
 
         diff_collector core, extra;
+        // 对照独立计数器模型；绝不把DUT计数值灌进参考模型掩盖计数错误。
+        extra.compare("mcycle.low", uint32_t(npc::mcycle(dut)), uint32_t(reference.mcycle));
+        extra.compare("mcycle.high", uint32_t(npc::mcycle(dut) >> 32), uint32_t(reference.mcycle >> 32));
+        extra.compare("minstret.low", uint32_t(npc::minstret(dut)), uint32_t(reference.minstret));
+        extra.compare("minstret.high", uint32_t(npc::minstret(dut) >> 32), uint32_t(reference.minstret >> 32));
         const bool rejected = info.status == minirv::StepStatus::illegal;
         extra.compare("pre_pc", pre_pc, info.pc);
         extra.compare("inst", inst, info.inst);

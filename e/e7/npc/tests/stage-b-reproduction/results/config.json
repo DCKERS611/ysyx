@@ -1,0 +1,88 @@
+{
+  "source_commit": "9fb61ad",
+  "kind": "reconstructed stage b; not recovered historical measurement",
+  "frequency_mhz": 404,
+  "dataset": "train",
+  "images": {
+    "100.blockchain": {
+      "sha256": "26b8aa021d3ea864b6b00bcd272771ae18848ec1f9b298fddf900202bd18c4dc",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/100.blockchain/build/blockchain-minirv-npc.bin"
+    },
+    "101.igemm": {
+      "sha256": "df0fc8b2d38ab268f83b078a98f5b7c32019688b1b78d8a53562cc589390e9a8",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/101.igemm/build/igemm-minirv-npc.bin"
+    },
+    "102.queen": {
+      "sha256": "b99a18ed0ba0c522822418efa07829151f138b42d7755407475296c3ce3518e0",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/102.queen/build/queen-minirv-npc.bin"
+    },
+    "103.dinic": {
+      "sha256": "87996af0c00d59c82e52e4329bbabb77126abc3d8b812cb1c6f07813a798db17",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/103.dinic/build/dinic-minirv-npc.bin"
+    },
+    "104.malloc": {
+      "sha256": "411c5d79653e43dd5fd7a54a2e6e5c9f1d262c8e16e330a20e81a50e5268362f",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/104.malloc/build/malloc-minirv-npc.bin"
+    },
+    "105.bf": {
+      "sha256": "bd89234c4847299f999879a517e5a25b6739f71149e68ac100f2947f30549fc0",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/105.bf/build/bf-minirv-npc.bin"
+    },
+    "106.qsort": {
+      "sha256": "e9443aad8a5030470d10657d9ccd64f35b832a0de2bc1b763cb41872951d62b9",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/106.qsort/build/qsort-minirv-npc.bin"
+    },
+    "107.stream": {
+      "sha256": "343ff6403889a836f82fb6b29d876ae4963b2420fd1b29103d3ddd36bc78c2c5",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/107.stream/build/stream-minirv-npc.bin"
+    },
+    "108.ntt": {
+      "sha256": "081f8bb68fc0695bba5ade059039a6ce829f8e60b7e11cc485f9c2e2ec85dfa5",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/108.ntt/build/ntt-minirv-npc.bin"
+    },
+    "200.genann": {
+      "sha256": "cb5a28a43da083422b31d21f50f65f2f5dee2ef3714aee0b446d10393088d8fe",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/200.genann/build/genann-minirv-npc.bin"
+    },
+    "201.jpeg": {
+      "sha256": "5492ae8e2ca0a1a93dce97ef8c304b69cfc379f52df3ba8701567e6578c7bb32",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/201.jpeg/build/jpeg-minirv-npc.bin"
+    },
+    "202.llama2": {
+      "sha256": "3b39e3cc6fad524cdff276f08e40dbcb4f7cf95af55371b489062d02f8cc04f4",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/202.llama2/build/llama2-minirv-npc.bin"
+    },
+    "203.rsa": {
+      "sha256": "39a16ba7afb5d60163df925eb1a4dba464df6b1b40a115400a3d185d05f4763c",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/203.rsa/build/rsa-minirv-npc.bin"
+    },
+    "204.hypergraph": {
+      "sha256": "029c066f3805577c8a88239e715fe4844a5fc418ada7d05504c4e2796ae266d4",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/204.hypergraph/build/hypergraph-minirv-npc.bin"
+    },
+    "300.bzip3": {
+      "sha256": "06b793c4642ba670980c06f9221716785bd44423303ba750046dc665dea483fd",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/300.bzip3/build/bzip3-minirv-npc.bin"
+    },
+    "301.gsim": {
+      "sha256": "3da14f5090987b8b5c6276046f7f1f09e0a3fe1f1035efb3a8c1bcb9eb3d4f23",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/301.gsim/build/gsim-minirv-npc.bin"
+    },
+    "302.lua": {
+      "sha256": "91994b55ec9c0bf7153ed5763a597fa466e70607cbecc4ee017cdcd3f941abf8",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/302.lua/build/lua-minirv-npc.bin"
+    },
+    "303.cproc": {
+      "sha256": "2644b5907c1cba42f7169fc53dfce7c053a277a43a873238587fc20f3607c655",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/303.cproc/build/cproc-minirv-npc.bin"
+    },
+    "304.mp3": {
+      "sha256": "d164f768379459dbfcbc3f6c9a74647f34555ae251dd28411976485ea4342214",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/304.mp3/build/mp3-minirv-npc.bin"
+    },
+    "305.h264": {
+      "sha256": "50c71a376f1369e045f6712af0a78205dc6fd11371ab4e87d861fb1a3b20d0b3",
+      "input": "/home/ysyx/ysyx-workbench/archbench/bench/305.h264/build/h264-minirv-npc.bin"
+    }
+  }
+}

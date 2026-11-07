@@ -1,0 +1,16 @@
+image size = 256
+Hello, RISC-V!
+npc: [1;32mHIT GOOD TRAP[0m
+finish after 702 cycles, 167405 us, simulation freq = 4193 Hz
+#inst = 156, IPC = 222 * 10^{-3}
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.167406 (167406 us)
+             573 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.167406 (167406 us)
+Total  time:   0:00:00.204672 (204672 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/301.gsim.bin: 780532 bytes
+Result: halt_pc=0x800616ec a0=0x00000000 ra=0x800616e8 cycles=84020826
+instructions=42010413 cycles=84020826 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

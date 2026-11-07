@@ -1,0 +1,81 @@
+[
+  {
+    "name": "regress",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.cpptest",
+      "regress"
+    ],
+    "exit_code": 0,
+    "seconds": 21.073715448379517
+  },
+  {
+    "name": "csr-diff",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.diff",
+      "difftest-csr",
+      "difftest-csr-fixed"
+    ],
+    "exit_code": 0,
+    "seconds": 4.779571771621704
+  },
+  {
+    "name": "soc-build",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.soc",
+      "build",
+      "NVBOARD=0"
+    ],
+    "exit_code": 0,
+    "seconds": 0.020893573760986328
+  },
+  {
+    "name": "hello-build-k1",
+    "command": [
+      "make",
+      "ARCH=minirv-ysyxsoc",
+      "NPC_CPU_FREQ_MHZ=25",
+      "NPC_TIMER_CALIBRATION_Q16=0",
+      "mainargs=E7_FINAL",
+      "insert-arg"
+    ],
+    "exit_code": 0,
+    "seconds": 0.5045549869537354
+  },
+  {
+    "name": "hello-run-k1",
+    "command": [
+      "/home/ysyx/ysyx-workbench/npc/build/soc/sim",
+      "/home/ysyx/ysyx-workbench/npc/build/verification/final-acceptance-20261106/hello-k1.bin"
+    ],
+    "exit_code": 0,
+    "seconds": 44.6569561958313
+  },
+  {
+    "name": "hello-build-k12",
+    "command": [
+      "make",
+      "ARCH=minirv-ysyxsoc",
+      "NPC_CPU_FREQ_MHZ=300",
+      "NPC_TIMER_CALIBRATION_Q16=0",
+      "mainargs=E7_FINAL",
+      "insert-arg"
+    ],
+    "exit_code": 0,
+    "seconds": 0.4304170608520508
+  },
+  {
+    "name": "hello-run-k12",
+    "command": [
+      "/home/ysyx/ysyx-workbench/npc/build/soc/sim",
+      "/home/ysyx/ysyx-workbench/npc/build/verification/final-acceptance-20261106/hello-k12.bin"
+    ],
+    "exit_code": 0,
+    "seconds": 239.9027717113495
+  }
+]

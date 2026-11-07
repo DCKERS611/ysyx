@@ -1,0 +1,5 @@
+{
+  "case": "readonly-write",
+  "exit_code": 1,
+  "wall_seconds": 69.98
+}

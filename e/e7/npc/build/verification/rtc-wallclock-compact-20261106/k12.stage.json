@@ -1,0 +1,72 @@
+{
+  "stage": "passed",
+  "k": 12,
+  "frequency_mhz": 300,
+  "q16": 7754,
+  "trial": 2,
+  "image_sha256": "9059127ab1c05c6c31fef5f2c94bda2c80555d5229b978568f445c94209f3bad",
+  "compiled_timer_config": "freq=300 q16=7754",
+  "mean_interval_seconds": 0.9879705492000002,
+  "max_late_us": 703780,
+  "intervals_seconds": [
+    0.880823255,
+    0.901910879,
+    1.609365317,
+    0.841544275,
+    0.847666726,
+    0.822513307,
+    1.526824789,
+    0.80824068,
+    0.813692925,
+    0.827123339
+  ],
+  "criterion": "two independent runs: each 10-interval mean within 5% of one host second; guest lateness <1000000us",
+  "history": [
+    {
+      "stage": "measured",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 7754,
+      "trial": 1,
+      "image_sha256": "9059127ab1c05c6c31fef5f2c94bda2c80555d5229b978568f445c94209f3bad",
+      "compiled_timer_config": "freq=300 q16=7754",
+      "mean_interval_seconds": 1.0115071782,
+      "max_late_us": 703780,
+      "intervals_seconds": [
+        0.86692784,
+        0.877471627,
+        1.678166386,
+        0.884866182,
+        0.857615372,
+        0.825870111,
+        1.576994159,
+        0.857279776,
+        0.860577202,
+        0.829303127
+      ]
+    },
+    {
+      "stage": "measured",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 7754,
+      "trial": 2,
+      "image_sha256": "9059127ab1c05c6c31fef5f2c94bda2c80555d5229b978568f445c94209f3bad",
+      "compiled_timer_config": "freq=300 q16=7754",
+      "mean_interval_seconds": 0.9879705492000002,
+      "max_late_us": 703780,
+      "intervals_seconds": [
+        0.880823255,
+        0.901910879,
+        1.609365317,
+        0.841544275,
+        0.847666726,
+        0.822513307,
+        1.526824789,
+        0.80824068,
+        0.813692925,
+        0.827123339
+      ]
+    }
+  ]
+}

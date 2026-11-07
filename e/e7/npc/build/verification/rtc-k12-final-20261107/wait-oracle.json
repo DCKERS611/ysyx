@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "monotonic_cases": 195819,
+  "seed": 20261107,
+  "checks": "signed low32 deadline versus original uint64 elapsed, within +/-1s deadline window"
+}

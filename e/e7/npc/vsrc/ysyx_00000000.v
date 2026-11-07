@@ -26,6 +26,11 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
     wire mem_start;
     wire lsu_done;
     wire illegal_raw;
+    wire decode_illegal;
+    wire csr_access;
+    wire csr_write;
+    wire csr_illegal;
+    wire [31:0] csr_source;
     wire halt_raw;
     wire [3:0] rd;
     wire [3:0] rs1;
@@ -55,7 +60,10 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
     wire [31:0] load_data;
     wire unused_mem_ren;
 
+    assign illegal_raw = decode_illegal || csr_illegal;
     assign illegal = illegal_raw && inst_valid;
+    assign retire = commit;
+    assign csr_source = inst[14] ? {27'b0, inst[19:15]} : rs1_data;
     assign halt = halt_raw && commit;
 
     ysyx_00000000_ifu #(.RESET_PC(RESET_PC)) u_ifu (
@@ -69,6 +77,7 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
         .inst_valid(inst_valid),
         .is_load(mem_read),
         .is_store(mem_write),
+        .reject(illegal),
         .commit(commit),
         .mem_start(mem_start),
         .ifu_respValid(io_ifu_respValid),
@@ -85,11 +94,13 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
         .alu_src(alu_src),
         .wb_sel(wb_sel),
         .pc_sel(pc_sel),
-        .illegal(illegal_raw),
+        .illegal(decode_illegal),
         .halt(halt_raw),
         .mem_read(mem_read),
         .mem_write(mem_write),
-        .mem_byte(mem_byte)
+        .mem_byte(mem_byte),
+        .is_csr(csr_access),
+        .csr_write(csr_write)
     );
     ysyx_00000000_RegisterFile #(4, 32) u_rf (
         .clk(clock),
@@ -142,10 +153,17 @@ module ysyx_00000000 #(parameter RESET_PC = 32'h8000_0000) (
     );
     
     ysyx_00000000_csr u_csr (
-    .clock(clock),
-    .reset(reset),
-    .retire(commit && !illegal),
-    .csr_addr(inst[31:20]),
-    .csr_rdata(csr_rdata)
-);
+        .clock(clock),
+        .reset(reset),
+        .retire(retire),
+        .csr_access(csr_access),
+        .csr_commit(commit && csr_access),
+        .csr_write(csr_write),
+        .csr_cmd(inst[13:12]),
+        .csr_rd(inst[11:7]),
+        .csr_source(csr_source),
+        .csr_addr(inst[31:20]),
+        .csr_rdata(csr_rdata),
+        .csr_illegal(csr_illegal)
+    );
 endmodule

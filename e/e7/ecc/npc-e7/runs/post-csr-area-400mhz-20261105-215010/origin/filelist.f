@@ -1,0 +1,9 @@
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_wbu.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_exu.v
+/home/ysyx/ysyx-workbench/npc/vsrc/template.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_csr.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_idu.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_lsu.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_gpr.v
+/home/ysyx/ysyx-workbench/npc/vsrc/ysyx_00000000_ifu.v

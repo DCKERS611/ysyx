@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
+#include <cstdlib>
 
 #include "verilated.h"
 #include "verilated_fst_c.h"
@@ -132,14 +133,31 @@ int main(int argc, char** argv)
     };
 
     uint64_t commits = 0;
-    constexpr unsigned cpu_clock_ratio = 1;
+    // 负向验收可继续观察拒绝状态；默认仍立即报错退出。
+    const bool observe_rejection = std::getenv("NPC_CONTINUE_ON_REJECT") &&
+        std::strcmp(std::getenv("NPC_CONTINUE_ON_REJECT"), "1") == 0;
+    bool rejected = false;
+    uint32_t rejected_pc = 0, rejected_inst = 0;
+    // 默认CPU300MHz、外设25MHz；基线验收可显式选择倍率1。
+    const char* ratio_env = std::getenv("NPC_CPU_CLOCK_RATIO");
+    const unsigned cpu_clock_ratio = ratio_env ? std::strtoul(ratio_env, nullptr, 10) : 12;
+    if (cpu_clock_ratio == 0 || cpu_clock_ratio > 1000) {
+        std::fprintf(stderr, "无效NPC_CPU_CLOCK_RATIO\n");
+        return 1;
+    }
+    std::fprintf(stderr, "Clock configuration: CPU/SoC=%u:1\n", cpu_clock_ratio);
     unsigned clock_phase_index = 0;
+    bool soc_clock_high = false;
 
     // 每次调用, 推进一个CPU半周期对应的外设时钟相位
     auto advance_soc_clock = [&]() {
-        dut.clock = (clock_phase_index / cpu_clock_ratio) & 1u;
-        clock_phase_index = 
-            (clock_phase_index + 1) % (2 * cpu_clock_ratio);
+        // 与原相位除法完全相同：每ratio个CPU半周期翻转一次，省去热循环整数除法。
+        if (clock_phase_index == cpu_clock_ratio) {
+            clock_phase_index = 0;
+            soc_clock_high = !soc_clock_high;
+        }
+        dut.clock = soc_clock_high;
+        ++clock_phase_index;
     };
 
     // 推进一个CPU 半周期, 再求值
@@ -161,6 +179,13 @@ int main(int argc, char** argv)
     auto single_cycle = [&]() {
         clock_half_cycle(false);
 
+        if (!dut.reset &&
+            dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__illegal) {
+            rejected = true;
+            rejected_pc = dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__pc;
+            rejected_inst = dut.rootp->SimTop__DOT__asic__DOT__soc__DOT__cpu__DOT__core0__DOT__inst;
+        }
+
         // 在上升沿前采样提交使能，记录实际执行进度。
         if (!dut.reset && 
             dut.rootp->
@@ -178,10 +203,19 @@ int main(int argc, char** argv)
     dut.reset = 0;
 
     // 连通性测试设置周期上限，避免无限等待。
-    constexpr uint64_t max_cycles = 100000000000;
+    uint64_t max_cycles = 100000000000;
+    if (const char* limit = std::getenv("NPC_MAX_CYCLES")) {
+        char* end = nullptr;
+        const auto value = std::strtoull(limit, &end, 10);
+        if (!*limit || *end || !value || *limit == '-') {
+            std::fprintf(stderr, "NPC_MAX_CYCLES必须为正整数\n");
+            return 1;
+        }
+        max_cycles = value;
+    }
     uint64_t cycles = 0;
 
-    while (!halted && !ctx.gotFinish() && cycles < max_cycles) {
+    while (!halted && (!rejected || observe_rejection) && !ctx.gotFinish() && cycles < max_cycles) {
         single_cycle();
         ++cycles;
 
@@ -232,7 +266,7 @@ int main(int argc, char** argv)
                 ipc);
 
         #ifdef CONFIG_NVBOARD
-        if (a0 == 0) {
+        if (a0 == 0 && !std::getenv("NPC_NVBOARD_AUTOCLOSE")) {
             std::fflush(stdout);
             std::fprintf(stderr,
                 "程序执行成功，窗口保留；关闭NVBoard窗口结束。\n");
@@ -250,6 +284,16 @@ int main(int argc, char** argv)
     #ifdef CONFIG_NVBOARD
     nvboard_quit();
     #endif
+
+    if (rejected) {
+        if (observe_rejection && cycles == max_cycles)
+            std::fprintf(stderr, "达到周期上限：%llu，拒绝指令未退休，commits=%llu\n",
+                static_cast<unsigned long long>(cycles),
+                static_cast<unsigned long long>(commits));
+        std::fprintf(stderr, "ILLEGAL INSTRUCTION: pc=0x%08x inst=0x%08x\n",
+                     rejected_pc, rejected_inst);
+        return 1;
+    }
 
     if (ctx.gotFinish()) {
         std::fprintf(stderr, "仿真提前结束，未观察到 ebreak\n");

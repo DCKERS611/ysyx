@@ -1,0 +1,21 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/200.genann.bin, 1205428 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800b40b8)
+loading to memory region [0x800b4100, 0x800b84a4)
+GENANN TEST SUITE
+	basic         pass: 7   fail: 0   542275us
+	xor           pass: 5   fail: 0   1515193us
+	backprop      pass: 1   fail: 0   605259us
+	train and     pass: 4   fail: 0   31484978us
+	train or      pass: 4   fail: 0   30923260us
+Train an ANN on the IRIS dataset using backpropagation.
+Training for 0 loops over data.
+50/150 correct
+ALL TESTS PASSED (21/21)
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:05:02.844477 (302844477 us)
+
+Scored time:   0:05:02.844477 (302844477 us)
+Total  time:   0:05:03.142534 (303142534 us)
+HIT GOOD TRAP: pc=0x8000ed7c a0=0x00000000 cycles=8069128611
+Statistics (including loader): instructions=67813093 cycles=8069128611 IPC=0.008404

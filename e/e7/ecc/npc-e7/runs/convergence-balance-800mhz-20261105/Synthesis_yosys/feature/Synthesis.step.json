@@ -1,0 +1,14 @@
+{
+    "run": {
+        "state": "Success",
+        "runtime_seconds": 25.453,
+        "peak_memory_mb": 1200.918
+    },
+    "constraints": {
+        "sdc": {
+            "availability": "available",
+            "sha256": "e2d858ac66d21a2fcd481936472cb7eae4fad9e50bf2d5fe6351b437d2caabe4",
+            "size_bytes": 257
+        }
+    }
+}

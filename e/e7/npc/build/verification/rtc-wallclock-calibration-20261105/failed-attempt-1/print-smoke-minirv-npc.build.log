@@ -1,0 +1,8 @@
+# Building rtc-print-smoke-insert-arg [minirv-npc]
++ CC main.c
+# Building am-archive [minirv-npc]
+# Building klib-archive [minirv-npc]
+# Creating image [minirv-npc]
++ LD -> build/rtc-print-smoke-minirv-npc.elf
++ OBJCOPY -> build/rtc-print-smoke-minirv-npc.bin
+mainargs=

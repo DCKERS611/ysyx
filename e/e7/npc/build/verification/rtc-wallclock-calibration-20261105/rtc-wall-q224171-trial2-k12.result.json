@@ -1,0 +1,74 @@
+{
+  "exit_code": 0,
+  "host_elapsed_seconds": 699.828485802,
+  "ticks": [
+    {
+      "sec": 1,
+      "host_monotonic_ns": 228065254107584,
+      "line": "RTC_TICK sec=1 elapsed_us=26467885 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 2,
+      "host_monotonic_ns": 228095665257085,
+      "line": "RTC_TICK sec=2 elapsed_us=563566058 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 3,
+      "host_monotonic_ns": 228126812053537,
+      "line": "RTC_TICK sec=3 elapsed_us=1208742291 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 4,
+      "host_monotonic_ns": 228158523690022,
+      "line": "RTC_TICK sec=4 elapsed_us=1882362902 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 5,
+      "host_monotonic_ns": 228190501736557,
+      "line": "RTC_TICK sec=5 elapsed_us=2572687809 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 6,
+      "host_monotonic_ns": 228222219219912,
+      "line": "RTC_TICK sec=6 elapsed_us=3273294482 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 7,
+      "host_monotonic_ns": 228255839636826,
+      "line": "RTC_TICK sec=7 elapsed_us=3982480374 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 8,
+      "host_monotonic_ns": 228284882529207,
+      "line": "RTC_TICK sec=8 elapsed_us=401839853 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 9,
+      "host_monotonic_ns": 228315725072351,
+      "line": "RTC_TICK sec=9 elapsed_us=1030006031 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 10,
+      "host_monotonic_ns": 228349091277242,
+      "line": "RTC_TICK sec=10 elapsed_us=1695609559 CPU_MHZ=300 Q16=224171"
+    },
+    {
+      "sec": 11,
+      "host_monotonic_ns": 228381341512003,
+      "line": "RTC_TICK sec=11 elapsed_us=2392213621 CPU_MHZ=300 Q16=224171"
+    }
+  ],
+  "intervals_seconds": [
+    30.411149501,
+    31.146796452,
+    31.711636485,
+    31.978046535,
+    31.717483355,
+    33.620416914,
+    29.042892381,
+    30.842543144,
+    33.366204891,
+    32.250234761
+  ],
+  "mean_interval_seconds": 31.6087404419
+}

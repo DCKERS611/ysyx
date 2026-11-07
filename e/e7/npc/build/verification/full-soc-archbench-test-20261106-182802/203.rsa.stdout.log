@@ -1,0 +1,31 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/203.rsa.bin, 932256 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8006fb30)
+loading to memory region [0x8006fc00, 0x80070358)
+Got first prime factor, p = 37
+Got second prime factor, q = 47
+Got modulus, n = pq = 1739
+Got totient, phi = 1656
+Chose public exponent, e = 1840579931
+Public key is (1840579931, 1739)
+Calculated private exponent, d = 1283
+Private key is (1283, 1739)
+Opening file "input/test.txt" for reading
+File "input/test.txt" read successfully, 5 bytes read. Encoding byte stream in chunks of 1 bytes
+.....
+
+
+Encoding finished successfully
+Decoding encoded message
+Hi!
+
+
+
+Finished RSA demonstration!
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:01:54.080692 (114080692 us)
+
+Scored time:   0:01:54.080692 (114080692 us)
+Total  time:   0:01:54.445727 (114445727 us)
+HIT GOOD TRAP: pc=0x80012f18 a0=0x00000000 cycles=3195777112
+Statistics (including loader): instructions=26199120 cycles=3195777112 IPC=0.008198

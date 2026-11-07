@@ -1,0 +1,19 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-compact-20261106/rtc-wall-q7754-trial1-k12.bin, 771988 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80058238)
+loading to memory region [0x80058300, 0x80058600)
+TIMER_CONFIG_OK CPU_MHZ=300 Q16=7754
+T01
+T02
+T03
+T04
+T05
+T06
+T07
+T08
+T09
+T10
+T11
+RTC_DIAG max_late_us=703780
+HIT GOOD TRAP: pc=0x80001dcc a0=0x00000000 cycles=2466211891
+Statistics (including loader): instructions=1064523 cycles=2466211891 IPC=0.000432

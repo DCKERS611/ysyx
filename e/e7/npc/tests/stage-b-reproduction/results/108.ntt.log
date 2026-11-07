@@ -1,0 +1,18 @@
+The prime number is : 998244353
+The primitive root is : 3
+The length of the 1st polynomial is : 8
+The length of the 2nd polynomial is : 8
+Computing the result of polynomial multiplication...
+Checking result...
+cs = 0x977ed4e2
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.604536 (604536 us)
+              11 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.604536 (604536 us)
+Total  time:   0:00:00.607643 (607643 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/108.ntt.bin: 410288 bytes
+Result: halt_pc=0x800032f4 a0=0x00000000 ra=0x800032f0 cycles=246917014
+instructions=123458507 cycles=246917014 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

@@ -17,3 +17,8 @@ _*
 build/
 !.gitignore
 .vscode
+# minirv课程预编译klib是构建输入；其余build产物继续忽略。
+!/klib/build/
+/klib/build/*
+!/klib/build/klib-minirv-npc.a
+!/klib/build/klib-minirv-ysyxsoc.a

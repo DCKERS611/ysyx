@@ -1,0 +1,12 @@
+[
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 9352,
+    "trial": 1,
+    "image_sha256": "2fdbecaba05ffcf2bc5efc055b41b493f21da05e585f9f8d5cbc315933c254b2",
+    "compiled_timer_config": "freq=300 q16=9352",
+    "mean_interval_seconds": 1.1636257949
+  }
+]

@@ -23,13 +23,13 @@ __am_timer_uptime:
 	mv	s0,a0
 .L4:
 #APP
-# 8 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
+# 15 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
 	csrr a1, mcycleh
 # 0 "" 2
-# 9 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
+# 16 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
 	csrr a0, mcycle
 # 0 "" 2
-# 10 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
+# 17 "/home/ysyx/ysyx-workbench/abstract-machine/am/src/riscv/npc/timer.c" 1
 	csrr a5, mcycleh
 # 0 "" 2
 #NO_APP

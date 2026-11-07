@@ -1,0 +1,63 @@
+{
+  "id": {
+    "vendor": "0x79737978",
+    "arch": 100023589,
+    "good_trap": true
+  },
+  "carry": {
+    "first": "0x100000096",
+    "second": "0x100001a74",
+    "delta_cycles": 6622,
+    "good_trap": true
+  },
+  "carry-tight": {
+    "first": "0x100000096",
+    "second": "0x10000017a",
+    "delta_cycles": 228,
+    "good_trap": true
+  },
+  "invalid-address": {
+    "pc": "0x80000020",
+    "instruction": "0x123022f3",
+    "progress_rows": [
+      [
+        "190000000",
+        "863206",
+        "80000020",
+        "123022f3",
+        "3"
+      ],
+      [
+        "200000000",
+        "863206",
+        "80000020",
+        "123022f3",
+        "3"
+      ]
+    ],
+    "cycle_limit": 200000000,
+    "exit_code": 1
+  },
+  "readonly-write": {
+    "pc": "0x80000024",
+    "instruction": "0xf11322f3",
+    "progress_rows": [
+      [
+        "190000000",
+        "863053",
+        "80000024",
+        "f11322f3",
+        "3"
+      ],
+      [
+        "200000000",
+        "863053",
+        "80000024",
+        "f11322f3",
+        "3"
+      ]
+    ],
+    "cycle_limit": 200000000,
+    "exit_code": 1
+  }
+}

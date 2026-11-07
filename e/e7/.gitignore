@@ -37,3 +37,8 @@ core.*
 *学习计划*
 *学习背景*
 *工作交接书*
+
+# 课程预编译klib为明确构建输入，仅这两份库例外。
+!/abstract-machine/klib/build/
+!/abstract-machine/klib/build/klib-minirv-npc.a
+!/abstract-machine/klib/build/klib-minirv-ysyxsoc.a

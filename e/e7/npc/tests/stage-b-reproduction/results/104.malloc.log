@@ -1,0 +1,14 @@
+allocated 3262 addresses
+6675 operations in total
+Test end
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.415059 (415059 us)
+            1558 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.415059 (415059 us)
+Total  time:   0:00:00.417618 (417618 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/104.malloc.bin: 477832 bytes
+Result: halt_pc=0x8000572c a0=0x00000000 ra=0x80005728 cycles=170160784
+instructions=85080392 cycles=170160784 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

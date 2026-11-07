@@ -1,0 +1,301 @@
+[
+  {
+    "directory": "npc/build/verification/rtc-wallclock-calibration-20261105/failed-attempt-1",
+    "reason": "klib rebuilt from unimplemented source stubs; both stdout contain Not implemented stdio.c:6 and BAD TRAP; stage was failed, not needs_review",
+    "stage_sha256": "7a8a467696904c4f0ec1108f109a726fb124a3a0828c9e232e92ce573331ea62",
+    "stage": {
+      "stage": "failed",
+      "error": "k1 run or configuration-label validation failed",
+      "ended_epoch": 1793893923.5882888
+    }
+  },
+  {
+    "directory": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts",
+    "reason": "Q16 changes did not rebuild timer.o; four frozen binaries per ratio have identical SHA256",
+    "stage_sha256": "013704ac9e72dbb14d1f34b6fba9de1cb43ca235a3446f4ec3931742e7c32488",
+    "stage": {
+      "stage": "needs_review",
+      "ended_epoch": 1793896631.2838967,
+      "results": [
+        {
+          "stage": "needs_review",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 21131576,
+          "trial": 4,
+          "mean_interval_seconds": 9.561227278500002,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 22778,
+              "trial": 1,
+              "mean_interval_seconds": 10.136305775
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 230885,
+              "trial": 2,
+              "mean_interval_seconds": 9.487341192099999
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 2190485,
+              "trial": 3,
+              "mean_interval_seconds": 9.646984846699999
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 21131576,
+              "trial": 4,
+              "mean_interval_seconds": 9.561227278500002
+            }
+          ]
+        },
+        {
+          "stage": "needs_review",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 88962458,
+          "trial": 4,
+          "mean_interval_seconds": 18.1074475383,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 9352,
+              "trial": 1,
+              "mean_interval_seconds": 23.5062231148
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 219830,
+              "trial": 2,
+              "mean_interval_seconds": 20.1792773515
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 4436011,
+              "trial": 3,
+              "mean_interval_seconds": 20.0546072785
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 88962458,
+              "trial": 4,
+              "mean_interval_seconds": 18.1074475383
+            }
+          ]
+        }
+      ]
+    },
+    "frozen_image_hashes": {
+      "1": {
+        "rtc-wall-q2190485-trial3-k1.bin": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc",
+        "rtc-wall-q230885-trial2-k1.bin": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc",
+        "rtc-wall-q21131576-trial4-k1.bin": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc",
+        "rtc-wall-q22778-trial1-k1.bin": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+      },
+      "12": {
+        "rtc-wall-q9352-trial1-k12.bin": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667",
+        "rtc-wall-q219830-trial2-k12.bin": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667",
+        "rtc-wall-q4436011-trial3-k12.bin": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667",
+        "rtc-wall-q88962458-trial4-k12.bin": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667"
+      }
+    }
+  },
+  {
+    "directory": "npc/build/verification/rtc-wallclock-calibration-20261105",
+    "reason": "Q16 effective, but printf/output took multiple guest seconds; repeated coefficient increases cannot remove output throughput floor",
+    "stage_sha256": "f8140e423536b5d3bb28d35f790761dc95e1bf22d041d1942531ac38756807ff",
+    "stage": {
+      "stage": "needs_review",
+      "ended_epoch": 1793926012.1927855,
+      "results": [
+        {
+          "stage": "needs_review",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 4537560,
+          "trial": 4,
+          "image_sha256": "6ff73c56d6edf8bafa56ab21f7102023207f6761d9eb79e435995c3428b53f6d",
+          "compiled_timer_config": "freq=25 q16=4537560",
+          "mean_interval_seconds": 7.595677142900001,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 22778,
+              "trial": 1,
+              "image_sha256": "6465ecb5ba4e9c47fec28885395cd9e21faae99f03960d68ac97f090855933e2",
+              "compiled_timer_config": "freq=25 q16=22778",
+              "mean_interval_seconds": 5.0618985909
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 115300,
+              "trial": 2,
+              "image_sha256": "029e82dae57af625e040c51f4eceec9f6fb92876507619ac371b1a1a63a6b1b7",
+              "compiled_timer_config": "freq=25 q16=115300",
+              "mean_interval_seconds": 6.164200957
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 710732,
+              "trial": 3,
+              "image_sha256": "6bba726b7cdf9cb879357d29ac10d10008f1ba400b2177f550d69fe2f0711f03",
+              "compiled_timer_config": "freq=25 q16=710732",
+              "mean_interval_seconds": 6.3843477863
+            },
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 4537560,
+              "trial": 4,
+              "image_sha256": "6ff73c56d6edf8bafa56ab21f7102023207f6761d9eb79e435995c3428b53f6d",
+              "compiled_timer_config": "freq=25 q16=4537560",
+              "mean_interval_seconds": 7.595677142900001
+            }
+          ]
+        },
+        {
+          "stage": "needs_review",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 250299763,
+          "trial": 4,
+          "image_sha256": "5711feef9cc38dbe5141fc1ae12f4a10b4801cdc25e9b6527356f0a818d9621e",
+          "compiled_timer_config": "freq=300 q16=250299763",
+          "mean_interval_seconds": 40.290667931099996,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 9352,
+              "trial": 1,
+              "image_sha256": "bba233ae31f8d4c95a5dfdb0270110c373cbdada0b346ad1833d3c8b06ee4945",
+              "compiled_timer_config": "freq=300 q16=9352",
+              "mean_interval_seconds": 23.970392814
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 224171,
+              "trial": 2,
+              "image_sha256": "7d4926b35d4325f3019499a186312ff84a86992292364b321533b944b519bb2c",
+              "compiled_timer_config": "freq=300 q16=224171",
+              "mean_interval_seconds": 31.6087404419
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 7085763,
+              "trial": 3,
+              "image_sha256": "e0ee49e3e12ad6a2307d688e21364759c6b3a8d8370c1be153a14bd4b72b8737",
+              "compiled_timer_config": "freq=300 q16=7085763",
+              "mean_interval_seconds": 35.3243204332
+            },
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 250299763,
+              "trial": 4,
+              "image_sha256": "5711feef9cc38dbe5141fc1ae12f4a10b4801cdc25e9b6527356f0a818d9621e",
+              "compiled_timer_config": "freq=300 q16=250299763",
+              "mean_interval_seconds": 40.290667931099996
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "directory": "npc/build/verification/rtc-wallclock-retest-20261106",
+    "reason": "simplified output with old coefficients; means 1.1763548168/1.1636257949 outside original +/-5%; configured one trial only",
+    "stage_sha256": "56ba7321a87956153722d83535428eb2e73a460cb3e673b5d10e914242782e2a",
+    "stage": {
+      "stage": "needs_review",
+      "ended_epoch": 1793928897.02215,
+      "results": [
+        {
+          "stage": "needs_review",
+          "k": 1,
+          "frequency_mhz": 25,
+          "q16": 22778,
+          "trial": 1,
+          "image_sha256": "805313c6448a3040bc5798fe8152b5fbc6ea453a2513d00cd443054a8c894ece",
+          "compiled_timer_config": "freq=25 q16=22778",
+          "mean_interval_seconds": 1.1763548168,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 1,
+              "frequency_mhz": 25,
+              "q16": 22778,
+              "trial": 1,
+              "image_sha256": "805313c6448a3040bc5798fe8152b5fbc6ea453a2513d00cd443054a8c894ece",
+              "compiled_timer_config": "freq=25 q16=22778",
+              "mean_interval_seconds": 1.1763548168
+            }
+          ]
+        },
+        {
+          "stage": "needs_review",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 9352,
+          "trial": 1,
+          "image_sha256": "2fdbecaba05ffcf2bc5efc055b41b493f21da05e585f9f8d5cbc315933c254b2",
+          "compiled_timer_config": "freq=300 q16=9352",
+          "mean_interval_seconds": 1.1636257949,
+          "history": [
+            {
+              "stage": "measured",
+              "k": 12,
+              "frequency_mhz": 300,
+              "q16": 9352,
+              "trial": 1,
+              "image_sha256": "2fdbecaba05ffcf2bc5efc055b41b493f21da05e585f9f8d5cbc315933c254b2",
+              "compiled_timer_config": "freq=300 q16=9352",
+              "mean_interval_seconds": 1.1636257949
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "directory": "npc/build/verification/rtc-wallclock-fixed-20261106",
+    "reason": "diagnostic k1 mean 0.8434445905, lateness 180157us; additional 100ms diagnostic guard too strict; removed newly introduced seconds /10 software division and changed guard to missed whole-second deadline, original mean tolerance unchanged",
+    "stage_sha256": "04785881269cf274cce027ce957e04218336cf4df8343650899b1da449a8e0ff",
+    "stage": {
+      "stage": "interrupted_diagnostic",
+      "reason": "k1 diagnosed 180157us polling lateness; remove software division in output; use missed whole deadline criterion",
+      "stopped_epoch": 1793929520.658843
+    }
+  }
+]

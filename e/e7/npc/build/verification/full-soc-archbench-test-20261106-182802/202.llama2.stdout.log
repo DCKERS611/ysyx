@@ -1,0 +1,13 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/202.llama2.bin, 1068832 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800886c0)
+loading to memory region [0x80088700, 0x80088e64)
+Start...
+Once
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:03:57.210376 (237210376 us)
+
+Scored time:   0:03:57.210376 (237210376 us)
+Total  time:   0:04:07.444532 (247444532 us)
+HIT GOOD TRAP: pc=0x8001ecd4 a0=0x00000000 cycles=6577432816
+Statistics (including loader): instructions=55553684 cycles=6577432816 IPC=0.008446

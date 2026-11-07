@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793929386.6429532,
+  "source_sha256": {
+    "npc/tests/soc-timing/main.c": "e88b8a1170e796c9a1355811bea4b2ed3d347dae10429760d60f068428fce565",
+    "npc/tests/soc-timing/calibrate_wallclock.py": "808f195e70aa10f504302b1fae60ca6fb52df7325b745bd86dc4c2184ed98288",
+    "npc/tests/soc-timing/measure_host.py": "0b4871a7e1e5140cec33df7564c4bb78fdb680446f1dbd92ec1074e7cb737b04",
+    "abstract-machine/am/src/riscv/npc/timer.c": "b58efd3fd2deb1ad67f10aa270e4b5ba7fee07e7f42178bb93367f8848d13703",
+    "npc/build/soc/sim": "34aa6b01e5b352eb28217945b83bf00f775b02bf4c6637aede4a7811d2b76f0e"
+  },
+  "criterion": "unchanged mean 1s +/-5%, add guest lateness <=100ms and independent confirmation",
+  "concurrency": 1
+}

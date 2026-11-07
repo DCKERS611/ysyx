@@ -1,0 +1,16 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/305.h264.bin, 1999376 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8011c440)
+loading to memory region [0x8011c500, 0x8011d6d4)
+Decoded headers. Image size (cropped) 8x6.
+1 pictures decoded.
+Encode h264 size = 689 bytes
+Decode data size = 72 bytes
+h264 compression rate = 95694*10^{-4}
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:03.304166 (3304166 us)
+
+Scored time:   0:00:03.304166 (3304166 us)
+Total  time:   0:00:05.170015 (5170015 us)
+HIT GOOD TRAP: pc=0x800bc5b8 a0=0x00000000 cycles=791378507
+Statistics (including loader): instructions=4566087 cycles=791378507 IPC=0.005770

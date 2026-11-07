@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "rising_edges": 70644,
+  "commits": 35322,
+  "loads": 13146,
+  "stores": 8608,
+  "wait_edges": 35322,
+  "commit_spacing_cycles": 2,
+  "pre_edge_sampling": true
+}

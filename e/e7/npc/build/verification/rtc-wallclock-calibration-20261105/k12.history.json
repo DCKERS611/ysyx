@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 9352,
+    "trial": 1,
+    "image_sha256": "bba233ae31f8d4c95a5dfdb0270110c373cbdada0b346ad1833d3c8b06ee4945",
+    "compiled_timer_config": "freq=300 q16=9352",
+    "mean_interval_seconds": 23.970392814
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 224171,
+    "trial": 2,
+    "image_sha256": "7d4926b35d4325f3019499a186312ff84a86992292364b321533b944b519bb2c",
+    "compiled_timer_config": "freq=300 q16=224171",
+    "mean_interval_seconds": 31.6087404419
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 7085763,
+    "trial": 3,
+    "image_sha256": "e0ee49e3e12ad6a2307d688e21364759c6b3a8d8370c1be153a14bd4b72b8737",
+    "compiled_timer_config": "freq=300 q16=7085763",
+    "mean_interval_seconds": 35.3243204332
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 250299763,
+    "trial": 4,
+    "image_sha256": "5711feef9cc38dbe5141fc1ae12f4a10b4801cdc25e9b6527356f0a818d9621e",
+    "compiled_timer_config": "freq=300 q16=250299763",
+    "mean_interval_seconds": 40.290667931099996
+  }
+]

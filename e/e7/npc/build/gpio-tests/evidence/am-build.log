@@ -1,0 +1,19 @@
+# Building gpio-byte-access-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC main.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC src/riscv/npc/timer.c
++ AR -> build/am-minirv-ysyxsoc.a
+# Creating image [minirv-ysyxsoc]
++ LD -> build/gpio-byte-access-minirv-ysyxsoc.elf
+cd /home/ysyx/ysyx-workbench/abstract-machine/../ysyxSoC/ready-to-run/minirv && bash gen.sh /home/ysyx/ysyx-workbench/npc/tests/gpio-functional/build/gpio-byte-access-minirv-ysyxsoc.elf /home/ysyx/ysyx-workbench/npc/tests/gpio-functional/build/gpio-byte-access-minirv-ysyxsoc.bin
+4+0 records in
+4+0 records out
+4 bytes copied, 2.22e-05 s, 180 kB/s
+403008+0 records in
+403008+0 records out
+403008 bytes (403 kB, 394 KiB) copied, 0.32644 s, 1.2 MB/s
+mainargs=

@@ -1,0 +1,374 @@
+{
+  "verified_copies": [
+    {
+      "path": "abstract-machine/scripts/platform/npc.mk",
+      "sha256": "994e9716ba34ac602db7f9ed121ee288c8cf2cb56d7f941ddd5f4fd3b47d7042"
+    },
+    {
+      "path": "abstract-machine/klib/Makefile",
+      "sha256": "cce06c6f9f0a47538684e78cc47c41fce3453cfd6b8aab2daad6352ef4e2420f"
+    },
+    {
+      "path": "abstract-machine/klib/build/klib-minirv-npc.a",
+      "sha256": "fa3380ecca1b3e5fa4c129617b0a6d07102e1966e9c77e49d21947572ef218ec"
+    },
+    {
+      "path": "abstract-machine/klib/build/klib-minirv-ysyxsoc.a",
+      "sha256": "fa3380ecca1b3e5fa4c129617b0a6d07102e1966e9c77e49d21947572ef218ec"
+    },
+    {
+      "path": "npc/tests/soc-timing/Makefile",
+      "sha256": "d8ddf605cd8ef4ed9cb283655a9910adb25dcf1c61f809cadffa10fd640cfc4b"
+    },
+    {
+      "path": "npc/tests/soc-timing/main.c",
+      "sha256": "583e122a744cd508e7a58a8a2c2d2ad47caeaa5fa34687105943d3a68f1412c9"
+    },
+    {
+      "path": "npc/tests/soc-timing/calibrate_wallclock.py",
+      "sha256": "0f8190b5ef5631726d683b256360c3c4098bdaf5d8e4b46cf050fb83acbb63fc"
+    },
+    {
+      "path": "npc/tests/soc-timing/config-probe/Makefile",
+      "sha256": "af867f49c2c6cb0ba184ccd9676ccd7a04925afa58537180e0680c9e9f382ee7"
+    },
+    {
+      "path": "npc/tests/soc-timing/config-probe/main.c",
+      "sha256": "522e50a1e45fd06365e5b48827c4b9c7b8f9ae36daf32c046aa1206e1cca6676"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/final-build.log",
+      "sha256": "a9977638c969455d8cd321170a6e99059c268d6bf4098f8114e177971d0d6f45"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q65536.bin",
+      "sha256": "2359399160882839c556b69802e261b0206c18ee4e3755b9eff6e9f2022098c6"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k1.build.log",
+      "sha256": "1cd992b9e69def02e764964bd7730ace9b23df5e3315e5f280dcc2131cd2cb06"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q65536.build.log",
+      "sha256": "b55ba1364637ed1797eb2bbbeee9c3905fa2d740a0c5c3de4481c81f35bc9450"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q0.bin",
+      "sha256": "038d57d1d86db38750b1bfbd2defeb06ac1d52c7ccd670a7ef6db85eba44a473"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q1.build.log",
+      "sha256": "b55ba1364637ed1797eb2bbbeee9c3905fa2d740a0c5c3de4481c81f35bc9450"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k12-timer.S",
+      "sha256": "ca36816a1e83bdc557b7ca615eb9cc60e4f3b0fc3a60af0e0d0461f8528182af"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k12-q9352.bin",
+      "sha256": "bba233ae31f8d4c95a5dfdb0270110c373cbdada0b346ad1833d3c8b06ee4945"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k12.build.log",
+      "sha256": "162829cbd153874cee38701f4c735bbd16bfc1059b66d65c00eafdc8ff9880f1"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q1.bin",
+      "sha256": "ba9e2b93468bc1bf4650929bd5472e391f758818bce00b0b9c1c1415746724f1"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/results.json",
+      "sha256": "d3d52f87ed50b9dd232a48d37c9ba917363d9ad00016f17906d5ca52c375c56a"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k1-timer.S",
+      "sha256": "b1c1d9e317657611c5ac3c81afa4fb94456fe746adc875c1bc540088b997049b"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q1.run.log",
+      "sha256": "9188517f9d03a88511770e610a3c2d33f1f897af340a11f98332c6d8fa51dff5"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q65536.run.log",
+      "sha256": "8a705c319a024add9808415fd2473680af9409f0fd045d9cd2cfbec1dfbd273e"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q0.build.log",
+      "sha256": "b55ba1364637ed1797eb2bbbeee9c3905fa2d740a0c5c3de4481c81f35bc9450"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/freq300-q0.run.log",
+      "sha256": "75cbd85a6b1245621fceb3278f27c9bea4c7f355445b7e0782357d3c5fa010bb"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/freq300-q0.build.log",
+      "sha256": "b55ba1364637ed1797eb2bbbeee9c3905fa2d740a0c5c3de4481c81f35bc9450"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/soc-k1-q22778.bin",
+      "sha256": "6465ecb5ba4e9c47fec28885395cd9e21faae99f03960d68ac97f090855933e2"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/final-run.log",
+      "sha256": "dc4187862306ad14b4c57c7281e1a13824f1be6499f8bf974f28d11fcf1e4bf1"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/q0.run.log",
+      "sha256": "a6cdded52b27dfacf1c996a7efb72a7e443d6ce4b7edac81ada796b02f7204c2"
+    },
+    {
+      "path": "npc/build/verification/timer-config-probe-20261106/prebuilt-library-check.json",
+      "sha256": "a430b8ac4eaa881fd119670f5b47f4ee15f16abbe318b701e19dd84750e1640e"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.bin",
+      "sha256": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.stderr.log",
+      "sha256": "87059f9e6788d93e163506d12a9f96d16404f3b3bbee95df61ccaf9df9507bc0"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/stage.json",
+      "sha256": "013704ac9e72dbb14d1f34b6fba9de1cb43ca235a3446f4ec3931742e7c32488"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.result.json",
+      "sha256": "c91baede5fb053113336a41f7e7199e958b9b1e66b0c4258bee564a37adb0462"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.timestamps.json",
+      "sha256": "77080a2dd8c302e91bd290a57c4935523b2dae100bd4da158fc5798471b475db"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/klib-recovery.json",
+      "sha256": "99d0cf365b8e46c98e291b9917f18acfd9c4f5424dd879b46645600ac11d5045"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/runner-pid.json",
+      "sha256": "19806db96442018d574c961af5cf63f47ca15766f39355c6d78fd86a0a17a2ef"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/summary.json",
+      "sha256": "14ab12b30eed5dd51756535f91eabe2ee1c29ed2a9d890e5533b9a82c2e868a3"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/print-smoke-minirv-npc.build.log",
+      "sha256": "d8b02aec0985cd09a4e27660bb7ed1d5e0c31a5923b5a592cd168ccc2a3b14e1"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.result.json",
+      "sha256": "11caf6983caaef8415181adb847368cd043c0c6589a6126d6672e80900439018"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.bin",
+      "sha256": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/print-smoke-minirv-ysyxsoc.build.log",
+      "sha256": "d71671ec9150b081661f73e7be46d4c2b56f01bdbb6798dac9298c7df5798828"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.build.log",
+      "sha256": "9d3935650d83e66b13d9f637c094a69ca78dd402aeeae7088a1b94949765a39e"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.stderr.log",
+      "sha256": "a97cb097869f46c0a3e1ab4c3400a5765476fa01ea12fd15bcc8b33e9e24b215"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/k12.history.json",
+      "sha256": "3940d9323f79a6f959eecfc5fb4beba8518edf4a72ca91b138e24953cd338b39"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.stderr.log",
+      "sha256": "87059f9e6788d93e163506d12a9f96d16404f3b3bbee95df61ccaf9df9507bc0"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.timestamps.json",
+      "sha256": "28ed9de912cc7d6390ec22fdf4076b1cbbe7c85784dcaa9ba46d591c55a5ece7"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.result.json",
+      "sha256": "c0f974536e906962a9264fbe32a07937bb9542e7033196901b1352ea40f40c73"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.stderr.log",
+      "sha256": "a97cb097869f46c0a3e1ab4c3400a5765476fa01ea12fd15bcc8b33e9e24b215"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.bin",
+      "sha256": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.stderr.log",
+      "sha256": "a97cb097869f46c0a3e1ab4c3400a5765476fa01ea12fd15bcc8b33e9e24b215"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.stdout.log",
+      "sha256": "c83d9fbe787553e40c2ea12b678f7fa4645f2ec39976acebc0ebc7c1bf8d37b0"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.stderr.log",
+      "sha256": "a97cb097869f46c0a3e1ab4c3400a5765476fa01ea12fd15bcc8b33e9e24b215"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.stderr.log",
+      "sha256": "87059f9e6788d93e163506d12a9f96d16404f3b3bbee95df61ccaf9df9507bc0"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.bin",
+      "sha256": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.bin",
+      "sha256": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.build.log",
+      "sha256": "a081ec42c5baac5d68ec53647ef782a2bf459be1981148a3affa2e66b1625bc6"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.bin",
+      "sha256": "766a8830a32529f87d02b911ac140dd65e23e5b6c80ecfb83bbabba7f4338667"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q4436011-trial3-k12.stdout.log",
+      "sha256": "f8eae80fc17c30f37269231baf6c5d411a5a8a4cd91470b9aa8f0b05ba4cad64"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.stderr.log",
+      "sha256": "87059f9e6788d93e163506d12a9f96d16404f3b3bbee95df61ccaf9df9507bc0"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.stdout.log",
+      "sha256": "0f0d4b14574ed15066eb4beb8a28e80166fcffdda805458c8bab2c59fac945d5"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.result.json",
+      "sha256": "4a0d1638c482f3ee7067f70b76691e1b90bcc48bc3b4ef8f99967e271df9fdfd"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/k1.history.json",
+      "sha256": "34023fc6490e689c551ded1ea24fa93c10b37ffa374869d1a3a33ab36317c8ed"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.timestamps.json",
+      "sha256": "00ff62eb17158ed01e9c1d03656b960f9fc1f88bf1d62aff0f553311ab7575ef"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.stdout.log",
+      "sha256": "8a487b89351ff768d8e309c2e8b1f10a28efe911126502a7a5ec227a541d9261"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.result.json",
+      "sha256": "185d9038720f9b7c3e585ac0efbf487aef468c7b40dfe11cd4d2495701fe09ca"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.timestamps.json",
+      "sha256": "6320b95d71f074a8ba90a806c4be2b4c01963914ed3317b3c68b5309a6301215"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/print-smoke-npc.log",
+      "sha256": "4ab609c5c42a6a68e5a7ddf122a8b728f3c522dae38c16357577d7f5ea17eb64"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.result.json",
+      "sha256": "7f2478ce78424556afe2d77a2b3c37187b5924ff8b658601835a0a0629f566b1"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.stdout.log",
+      "sha256": "e1f35ab62c25fbe8d52741ae18026da71d956278e62651faef9a884025410511"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.build.log",
+      "sha256": "01220494f6f9f09eae2d52a80ce4f926e22b8aea955faf6bb0a11c08fe3bef19"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/build.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.bin",
+      "sha256": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.build.log",
+      "sha256": "d002838229cac837cd930d1025d413177e0c3ddd1627bcee98df54305cef504d"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.bin",
+      "sha256": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/retry-2-runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q2190485-trial3-k1.stdout.log",
+      "sha256": "ce16bcc248a1359a300af6fb6a3b8f5133a7e82b945081d4ba65f32f165fb0ed"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q9352-trial1-k12.stdout.log",
+      "sha256": "c1529cc54936bed592730d74ab13e7e8c3ce301b1ab0a2719d792e682a658199"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/runner.log",
+      "sha256": "44e03b00008364f2a07dc15b85111e25725a6d6b6903fa552c9bf6f51ad3f655"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.timestamps.json",
+      "sha256": "b98ddc0f6c43d43b1f4af8a699483058852dd32aad6845d4cfd7c6efbd669e1a"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.timestamps.json",
+      "sha256": "3f6e2932429c91915a3f86e0a360d09ca0d918266cc0035e2d29b6aedf4192b4"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.timestamps.json",
+      "sha256": "6100b2c2ee432ce9ce6620b36532a384bef5d63928e6deb6aa4d9de9386f2715"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.result.json",
+      "sha256": "ef66f080baaaba3c342f7fb4d4e20e4f23dcaeb135b15906a2628a5429e977bd"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.result.json",
+      "sha256": "72f8cbfd39668ace1c62649c66d51ce5753667ac98708fdaa8f0d994e979b379"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.timestamps.json",
+      "sha256": "63ea8a2219ebc1ed1114d23ff894582f1904caa15e3d54cfb58c0291d9e4352e"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q219830-trial2-k12.build.log",
+      "sha256": "ec9217aa2e4ae6145aeb2a8a003864c6db16deb1f28f71777364571bbdee1507"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q230885-trial2-k1.stdout.log",
+      "sha256": "7468eac9f457196b58b9cba98a3930a75afc980b783b361a976f7088e43a6cff"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/k12.stage.json",
+      "sha256": "68e0e943d51ed922af875d34d3a58307f8f467f2dddb86da4582d38b4e948ee7"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q88962458-trial4-k12.build.log",
+      "sha256": "532cf005d3ef12fd071945ce35bb71af375a9d05a7fb1c45f473cf08bc244d6f"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/k1.stage.json",
+      "sha256": "d4a1a852a710f4e826ead55a3e16d9520cdf62192fdfaf2c70f8b95394762686"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q21131576-trial4-k1.build.log",
+      "sha256": "ffab5c3ea8964ff3216ee03253b106441cc229a6dd2b1d0b76bdc909754d1668"
+    },
+    {
+      "path": "npc/build/verification/rtc-wallclock-calibration-20261105/ineffective-q16-attempts/rtc-wall-q22778-trial1-k1.build.log",
+      "sha256": "5789caf20ea0e11bc18ee68fde2843c8e03f51c318118167157e35ffa0f6207e"
+    }
+  ],
+  "background_run_monitored": false,
+  "git_committed": false
+}

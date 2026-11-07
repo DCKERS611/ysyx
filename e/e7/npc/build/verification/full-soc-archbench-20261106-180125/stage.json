@@ -1,0 +1,13 @@
+{
+  "stage": "train_deferred_by_user",
+  "reason": "user selected full test first; existing completed train entries retained, partial runs not counted",
+  "completed": [
+    {
+      "name": "100.blockchain",
+      "stage": "passed",
+      "exit_code": 0,
+      "wall_seconds": 1068.4714115160168,
+      "marks": 1
+    }
+  ]
+}

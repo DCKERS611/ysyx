@@ -1,0 +1,33 @@
+{
+  "frozen_images": [
+    {
+      "image": "rtc-timestamps",
+      "k": 1,
+      "timer_divisor_verified": 25,
+      "printed_CPU_MHZ": 25,
+      "timer_implementation_valid": true
+    },
+    {
+      "image": "rtc-timestamps",
+      "k": 12,
+      "timer_divisor_verified": 300,
+      "printed_CPU_MHZ": 25,
+      "timer_implementation_valid": true
+    },
+    {
+      "image": "blockchain",
+      "k": 1,
+      "timer_divisor_verified": 25,
+      "printed_CPU_MHZ": null,
+      "timer_implementation_valid": true
+    },
+    {
+      "image": "blockchain",
+      "k": 12,
+      "timer_divisor_verified": 300,
+      "printed_CPU_MHZ": null,
+      "timer_implementation_valid": true
+    }
+  ],
+  "rtc_label_issue": "k12 application object retained CPU_MHZ=25; library timer divisor is 300. Original logs retained."
+}

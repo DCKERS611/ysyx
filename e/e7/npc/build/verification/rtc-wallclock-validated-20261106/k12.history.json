@@ -1,0 +1,48 @@
+[
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 9352,
+    "trial": 1,
+    "image_sha256": "aa7d738de7c6eb00018c3aa58d128d9e71cc4d0c18f457492e4c1c91f78bcb19",
+    "compiled_timer_config": "freq=300 q16=9352",
+    "mean_interval_seconds": 0.8291337234,
+    "max_late_us": 191212,
+    "intervals_seconds": [
+      0.675586637,
+      0.857904038,
+      0.855187314,
+      0.85704323,
+      0.890098218,
+      0.879152722,
+      0.676967546,
+      0.85050897,
+      0.891305128,
+      0.857583431
+    ]
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 7754,
+    "trial": 2,
+    "image_sha256": "ac57c7bbf4cbe47238ccf2c76be03b14e62f637fcb1677ddf1e969215de93094",
+    "compiled_timer_config": "freq=300 q16=7754",
+    "mean_interval_seconds": 1.0832614681000003,
+    "max_late_us": 1076730,
+    "intervals_seconds": [
+      1.038748766,
+      1.035002934,
+      1.054137401,
+      1.06031496,
+      1.044945534,
+      1.086641299,
+      1.140108765,
+      1.120150591,
+      1.115065445,
+      1.137498986
+    ]
+  }
+]

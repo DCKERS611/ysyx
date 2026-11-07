@@ -1,0 +1,34 @@
+[
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 9352,
+    "trial": 1,
+    "mean_interval_seconds": 23.5062231148
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 219830,
+    "trial": 2,
+    "mean_interval_seconds": 20.1792773515
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 4436011,
+    "trial": 3,
+    "mean_interval_seconds": 20.0546072785
+  },
+  {
+    "stage": "measured",
+    "k": 12,
+    "frequency_mhz": 300,
+    "q16": 88962458,
+    "trial": 4,
+    "mean_interval_seconds": 18.1074475383
+  }
+]

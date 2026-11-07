@@ -1,0 +1,12 @@
+ans = 12911
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:00:00.067157 (67157 us)
+            1637 Marks
+  vs.    1000000 Marks @ AMD Ryzen(TM) 9 7950X3D
+Scored time:   0:00:00.067157 (67157 us)
+Total  time:   0:00:00.574128 (574128 us)
+Loaded /home/ysyx/ysyx-workbench/npc/tests/stage-b-reproduction/results/103.dinic.bin: 370852 bytes
+Result: halt_pc=0x800021ec a0=0x00000000 ra=0x800021e8 cycles=233276494
+instructions=116638247 cycles=233276494 IPC=0.500000
+HIT GOOD TRAP
+PASS: 2 checks

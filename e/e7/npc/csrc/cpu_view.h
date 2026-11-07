@@ -18,6 +18,9 @@ inline bool illegal(const cpu& dut) { return dut.rootp->ysyx_00000000__DOT__ille
 inline uint32_t rs1_data(const cpu& dut) { return dut.rootp->ysyx_00000000__DOT__rs1_data; }
 inline uint32_t rs2_data(const cpu& dut) { return dut.rootp->ysyx_00000000__DOT__rs2_data; }
 
+inline uint64_t mcycle(const cpu& dut) { return dut.rootp->ysyx_00000000__DOT__u_csr__DOT__csr_mcycle; }
+inline uint64_t minstret(const cpu& dut) { return dut.rootp->ysyx_00000000__DOT__u_csr__DOT__csr_minstret; }
+
 // 原始 GPR 存储槽：测试初始化可以写入；x0 读行为仍由指令测试验证。
 inline auto& gpr(cpu& dut, unsigned index)
 {

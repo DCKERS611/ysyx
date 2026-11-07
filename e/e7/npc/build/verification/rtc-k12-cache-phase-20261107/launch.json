@@ -1,0 +1,18 @@
+{
+  "pid": 163696,
+  "cpu": 2,
+  "max_trials": 3,
+  "initial_q16": 8000,
+  "max_cycles_per_run": 4000000000,
+  "simulator": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-k12-cache-phase-20261107/sim",
+  "simulator_sha256": "71aaf5e40551ffea0402ae48e4da35d516605a1980e11c39c8bc2428395b463f",
+  "sim_build_commands": [
+    "make -f Makefile.soc BUILD_DIR=build/soc-rtc-fast build",
+    "make -C build/soc-rtc-fast/obj_dir -B -j2 -f VSimTop.mk OPT_FAST=-O3"
+  ],
+  "phase_equivalence_ratios": [
+    1,
+    12,
+    1000
+  ]
+}

@@ -2,7 +2,41 @@
 
 正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是 Windows 副本。2026-11-05按原相对路径核对并同步源码、ECC工程/runs和测试证据；完整文件、链接及排除清单见 `verification/2026-11-05/sync-audit/`。以本次Git提交记录确认发布版本；同步期间未重新编译、仿真或运行DiffTest，也没有Windows功能复测。此前1184等数字只表示当时选取的子集。
 
-## 当前实现与停点
+
+## 2026-11-07：已完成部分先同步
+
+已按原相对路径从WSL正式工作台同步本次明确范围的921个文件，逐文件SHA-256一致。包括CSR/时钟比例源码、两份预编译klib、GPIO字节写与数码管读回、两拍行为重建及20项train结果、SoC全量test 20/20结果、回归和现有综合证据。范围与排除清单见[同步清单](verification/2026-11-07/completed-sync/sync-manifest.json)，这是指定范围同步，不代表整个工作台全量同步。
+
+RTC源码是当前工作版本；最新rtc-k12-final-20261107结果目录本次未复制，k=12仍待用户反馈后验收。未复制编译对象、可执行程序、缓存及锁文件；两拍波形保留原FST，105MiB派生VCD不重复复制。Windows独有学习资料、README和本地计划保留。此次没有重新运行测试，也没有提交或推送Git。
+## 2026-11-06 当前运行入口（§39–44）
+
+正式执行环境为WSL Ubuntu-22.04的`/home/ysyx/ysyx-workbench`。SoC驱动`npc/tests/soc_main.cpp`从`NPC_CPU_CLOCK_RATIO`读取k，默认12，基线显式设1；外设按25MHz，CPU分别25/300MHz。同一仿真器可以选择两档，但AM镜像必须分别以`NPC_CPU_FREQ_MHZ=25/300`构建，不能只切运行k而复用错误频率镜像。
+
+在工作台`am-kernels/kernels/hello`目录运行（先设置AM_HOME；默认不启用NVBoard）：
+
+```bash
+export AM_HOME=/home/ysyx/ysyx-workbench/abstract-machine
+NPC_CPU_CLOCK_RATIO=1 make ARCH=minirv-ysyxsoc NPC_CPU_FREQ_MHZ=25 NPC_TIMER_CALIBRATION_Q16=0 run
+NPC_CPU_CLOCK_RATIO=12 make ARCH=minirv-ysyxsoc NPC_CPU_FREQ_MHZ=300 NPC_TIMER_CALIBRATION_Q16=0 run
+```
+
+AM的`NPC_TIMER_CALIBRATION_Q16`默认0，按实际配置的MHz换算mcycle；非零Q16只用于RTC墙钟演示，不能用于性能跑分。`abstract-machine/scripts/platform/npc.mk`的配置戳只驱动明确路径的timer.o，`npc/tests/soc-timing/Makefile`另让main.o依赖参数戳，避免参数未生效或重编klib源码桩。
+
+在工作台`npc`运行`make -f Makefile.cpptest regress`及`make -f Makefile.diff difftest-csr difftest-csr-fixed`。SoC仍用`Makefile.soc`；测试清单与适用范围见共用测试索引E7部分。
+
+RTC独立演示在工作台`npc/tests/soc-timing`运行`python3 calibrate_wallclock.py`。默认每档最多4轮、两档串行，必须同系数连续两次独立运行的10间隔均值均落在1秒±5%，且目标未漏过下一整秒。默认初值k1=18325、k12=7754，可用`NPC_RTC_INITIAL_Q16_K1/K12`覆盖；默认生成时间戳结果目录，可用`NPC_RTC_CALIBRATION_OUTPUT_DIR`指定新目录，拒绝覆盖旧证据，needs_review返回非零。`measure_host.py`同时识别旧RTC_TICK和4字节T01格式。
+
+最终演示证据：`npc/build/verification/rtc-wallclock-compact-20261106`，两档各两次平均间隔通过；k12单间隔约0.81～1.68秒，所以不保证逐秒稳定，也未替代完整printf RTC。当前RTLblockchain计分76.161768/75.514772秒，改善0.8495%，均使用Q16=0；原镜像和配置在`current-csr-k12-20261105`，不重写旧错误标签日志。
+
+预编译klib是当前构建输入：`abstract-machine/klib/build/klib-minirv-npc.a`与`klib-minirv-ysyxsoc.a`按原路径保留、同步和提交；minirv默认`NPC_USE_PREBUILT_KLIB=1`，缺库即报错，clean保留。只有实现源码后才显式选0进行源码构建；保留库不代表源码桩已经实现。其他.a仍按生成物排除。
+
+本次最终验收的实际命令、日志及退出码见`npc/build/verification/final-acceptance-20261106`；§46记录四问与清单复核。学习计划仍为本地资料，不随代码发布。
+
+## 历史实现与停点（以各条日期为准）
+
+2026-11-05完成回报：当前RTL k=1/k=12 blockchain均PASS和GOOD TRAP，计分76.161768/75.514772秒，缩短0.8495%；运行k由NPC_CPU_CLOCK_RATIO选择。RTC主机间隔8.689069/42.809146秒，墙钟一秒未达标。k12 RTC打印标签25属于应用对象缓存错误；从冻结镜像反汇编已确认两档实际timer除数25/300，跑分有效。已用全对象配置戳修复参数缓存；独立RTC墙钟演示校准待反馈，见记录第四十节。
+
+2026-11-05当前：CSR读抑制修正后400/800MHz BALANCE 3均估计306MHz，网表相同；k=12（CPU300MHz）定案，k由环境变量NPC_CPU_CLOCK_RATIO选择、默认12，基线显式设1。镜像分别用NPC_CPU_FREQ_MHZ=25/300编译并独立保存，AM中间目录串行复用且timer切档重编。普通/NVBoard Hello与12:1自动波形检查通过；CSR参考执行、11例两档CSR DiffTest、真实AM CSR-ID DiffTest及78例含访存等待计数检查通过。当前两档RTC墙钟采样/新blockchain及最终墙钟校准未作完成验收，旧性能表仅历史。详见学习记录第三十九节及npc/build/verification/current-csr-k12-20261105/run-configs.json。
 
 - CPU 顶层为 `npc/vsrc/ysyx_00000000.v`，临时编号统一使用00000000，内部模块也使用相同前缀。
 - IFU 保存指令，LSU 保存访存任务，通过 start/done 连接；请求与回复走 SimpleBus，等待期间不提交。
@@ -15,8 +49,8 @@
 - 阶段g/h已验证自编hello、UART初始化/发送、NVBoard TX接收，以及错误除数对照和恢复。UART除数13、NVBoard接收间隔208；执行阶段每完整SoC时钟周期更新一次NVBoard。
 - GPIO已有LED读写、拨码读取、八位数码管译码；用户验证了流水灯、读回、密码锁和10023589显示。整字使用，PSTRB未处理，数码管未加读回。
 - 独立CSR模块已接入mcycle/minstret及高低位、mvendorid/marchid常量读取；hello.c当前已恢复普通Hello，新增CSR/ID测试另存hello-csr-id.c.bak。
-- AM计时当前为高-低-高读取mcycle后除以25（25MHz口径）；11月3日乘17782右移16属于旧校准尝试。当前CPU正式结果为BALANCE 3、100MHz约束、综合估计141MHz；k=1/k=5的blockchain及比例校准已完成，当前源码保留k=1、/25。
-- Hello整体统计包含loader：746454条、155534601周期、IPC=0.004799；新增CSR尚未接入现有DiffTest；当前只实现读路径，非零rs1写语义和无效地址拒绝未实现。
+- AM默认uptime按NPC_CPU_FREQ_MHZ换算；SoC默认300MHz，基线25MHz，运行k由NPC_CPU_CLOCK_RATIO选择12或1。墙钟演示系数NPC_TIMER_CALIBRATION_Q16默认0，不用于跑分。当前BALANCE代表档306MHz，见记录第三十九节。
+- 当前SoC普通/NVBoard Hello均747870条、1859353315周期、IPC0.000402（k=12，K12_VALIDATE）；CSR参考执行/DiffTest及含访存等待的78例逐沿检查已通过。
 
 ## 先看这些代码
 
@@ -117,10 +151,10 @@ soc_main.cpp在停止时输出instructions/cycles/IPC，范围从复位结束到
 
 三路审计后的清单与阶段状态已统一：基本功能、严格讲义差异、未实现语义和未验证项目分别记录。最新接续以学习计划顶部/第12节及学习记录第三十二至三十四节为准，不用旧日期的当前快照覆盖今日状态。
 
-当前双时钟：cpu_clock_ratio为1、timer /25；k=5验证时使用125MHz和/125，外设均按25MHz。NVBoard每个外设上升沿更新一次，复位覆盖100个外设周期。两档train计分时间分别76.161768/75.514772秒，均1 Mark；源日志留在WSL /tmp/e7-blockchian-k1-train.log及-k5-train.log。改变倍率时必须同步更改时间换算，不能用旧镜像冒充已重编译程序。面积策略对照已完成，保留BALANCE 3；当前独立NPC普通Hello通过，CSR DiffTest尚未适配。
+历史k=1/k=5对照：cpu_clock_ratio为1、timer /25；k=5验证时使用125MHz和/125，外设均按25MHz。NVBoard每个外设上升沿更新一次，复位覆盖100个外设周期。两档train计分时间分别76.161768/75.514772秒，均1 Mark；源日志留在WSL /tmp/e7-blockchian-k1-train.log及-k5-train.log。改变倍率时必须同步更改时间换算，不能用旧镜像冒充已重编译程序。面积策略对照已完成，保留BALANCE 3；当前独立NPC普通Hello通过，CSR DiffTest尚未适配。
 
 
-2026-11-05约束诊断：保持BALANCE 3和RTL不变，使用ecc run --project /home/ysyx/ysyx-workbench/ecc/npc-e7 --run-id diagnostic-balance-200mhz-20261105 --set design.frequency_mhz=200.0（环境YOSYS_SYNTH_STRATEGY="BALANCE 3"）单独运行成功，综合估计254MHz、10176.32μm²。正式成绩保留BALANCE 3、100MHz约束、综合估计141MHz、10122.28μm²。均非P&R或硅上结果，诊断不更改正式配置和仿真倍率。原始运行证据在ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105；verification/2026-11-05/synthesis-constraint-diagnostic仅为附加副本，分析见学习记录第三十四节。
+2026-11-05约束诊断：保持BALANCE 3和RTL不变，使用ecc run --project /home/ysyx/ysyx-workbench/ecc/npc-e7 --run-id diagnostic-balance-200mhz-20261105 --set design.frequency_mhz=200.0（环境YOSYS_SYNTH_STRATEGY="BALANCE 3"）单独运行成功，综合估计254MHz、10176.32μm²。当时成绩保留BALANCE 3、100MHz约束、综合估计141MHz、10122.28μm²；该停点已被后续收敛扫描更新。均非P&R或硅上结果，诊断不更改正式配置和仿真倍率。原始运行证据在ecc/npc-e7/runs/diagnostic-balance-200mhz-20261105；verification/2026-11-05/synthesis-constraint-diagnostic仅为附加副本，分析见学习记录第三十四节。
 
 
 ## 源码同步与目录约定
@@ -137,4 +171,22 @@ WSL `/home/ysyx/ysyx-workbench/<相对路径>` 对应 Windows `E:/ysyx/e/e7/<相
 & E:/ysyx/e/e7/tools/sync_wsl_snapshot.ps1 -Apply
 ```
 
-工具只复制到E7副本，保留WSL源和Windows独有学习资料，不做普遍删除，不编译或运行程序。ECC二进制、`ecc/_internal`、安装压缩包和`icsprout55-pdk`不属于源码/成果范围。build中保留报告和测试输入，排除obj_dir、对象文件、静态库、ELF可执行程序、PID等生成项。Git收录按清单选取；依赖自带忽略规则不能代替同步审计。新增源文件时无需补扩展名白名单。
+工具只复制到E7副本，保留WSL源和Windows独有学习资料，不做普遍删除，不编译或运行程序。ECC二进制、`ecc/_internal`、安装压缩包和`icsprout55-pdk`不属于源码/成果范围。build中保留报告和测试输入，排除obj_dir、对象文件、ELF可执行程序、PID等生成项；静态库仅上述两份课程预编译klib作为输入保留。Git收录按清单选取；依赖自带忽略规则不能代替同步审计。新增源文件时无需补扩展名白名单。
+
+
+历史（CSR写语义修改前，后由学习记录第三十八节更新）：2026-11-05收敛结果（取代此前“正式仍141、254仅诊断”的当前停点，旧条目保留历史）：BALANCE 3扫描100/200/400/800MHz约束，FREQ为141/254/255/255MHz；400与800网表完全相同，选择400MHz约束下综合估计255MHz、10211.60μm²、约510.58元为当前代表档。ecc/npc-e7/ecc.toml默认约束已设400MHz；k定为10（CPU250MHz、外设25MHz），驱动仍k=1、timer /25，新档待运行。未做P&R，未证明RTL绝对极限。详见学习记录第三十五节。
+
+
+历史检查点：2026-11-05 CSR写语义：WSL与本Windows副本已包含六种CSR指令、计数器显式写优先级、只读ID写保护及未知地址拒绝。新增 `npc/tests/csr_test.cpp`，入口 `make -f Makefile.cpptest test-csr`；本次75例通过，默认/固定一拍普通回归均18/18，原有整数DiffTest均23/23，SoC仅重编译通过。没有运行本次SoC Hello、全量AM/ISA或CSR DiffTest；之前综合频率/面积属于修改前RTL。
+
+历史检查点：2026-11-05 CSR四项SoC功能验收已完成：原ID程序GOOD TRAP、置位后高位进位、连续采样差228拍；两个负向PC和commits固定至2亿周期上限。程序、原始日志及反汇编见[npc/tests/csr-functional](npc/tests/csr-functional/README.md)。本次仅为负向验收增加可选环境变量NPC_CONTINUE_ON_REJECT=1与NPC_MAX_CYCLES=200000000；未设置时仍立即报错。先前6622拍的循环读取结果也保留，CSR参考模型尚未适配。
+
+历史检查点：2026-11-05当前RTL综合：同为400MHz约束，BALANCE 3为309MHz、11032.84μm²、WNS -0.733ns、约551.64元；AREA 0为82MHz、10539.76μm²、WNS -9.646ns、约526.99元。AREA省4.47%面积但频率低73.46%，继续选BALANCE。两次运行原路径为ecc/npc-e7/runs/post-csr-{balance,area}-400mhz-20261105-215010；完整报告及快照已保留。旧255MHz属于修改前RTL；没有修改当前k=1、timer /25或重跑性能档。两档均未满足400MHz目标，未做P&R。
+
+
+RTC校准修复：参数依赖只覆盖timer和RTC应用main.o，不能扩大到未实现源码桩所在的预编译klib。当前依赖的两份klib-minirv-*.a作为明确构建输入保留原路径；源码未实现不等于可从源码重建。首轮失败已归档，当前重试状态沿用rtc-wallclock-calibration-20261105/stage.json，最终校准待验收。详见学习记录第四十一节。
+
+
+2026-11-06计时构建修复：timer依赖必须使用明确路径$(DST_DIR)/src/riscv/npc/timer.o，不能在AM_SRCS赋值前从OBJS筛选；RTC应用main.o单独依赖参数戳。四项数值短测及SoC构建静态检查通过。minirv klib默认使用明确预编译输入，避免覆盖为源码桩。旧Q16校准轮次均未生效、已归档作废；本轮重试待用户回报，不表示墙钟已验收。详见记录第四十二节。
+
+2026-11-07最终更新：k12完整printf RTC已通过，Q16=6929，两次平均0.967607/0.994096秒；源代码与证据已按原路径同步。Q16仍仅用于墙钟演示。同步发布规则见《同步与推送指导.md》。

@@ -1,0 +1,209 @@
+{
+  "stage": "complete",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "name": "100.blockchain",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 532,
+      "instructions": 16994598,
+      "cycles": 33989196,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 20.27985790296225
+    },
+    {
+      "name": "101.igemm",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 14,
+      "instructions": 369068665,
+      "cycles": 738137330,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 436.8805723420228
+    },
+    {
+      "name": "102.queen",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1257,
+      "instructions": 89283212,
+      "cycles": 178566424,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 103.87378702295246
+    },
+    {
+      "name": "103.dinic",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1637,
+      "instructions": 116638247,
+      "cycles": 233276494,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 139.61798964999616
+    },
+    {
+      "name": "104.malloc",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1558,
+      "instructions": 85080392,
+      "cycles": 170160784,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 100.32474070700118
+    },
+    {
+      "name": "105.bf",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1052,
+      "instructions": 32075743,
+      "cycles": 64151486,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 38.15852426097263
+    },
+    {
+      "name": "106.qsort",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 2310,
+      "instructions": 216586998,
+      "cycles": 433173996,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 255.2220390959992
+    },
+    {
+      "name": "107.stream",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 703,
+      "instructions": 88801495,
+      "cycles": 177602990,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 107.4790572989732
+    },
+    {
+      "name": "108.ntt",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 11,
+      "instructions": 123458507,
+      "cycles": 246917014,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 146.9831062980229
+    },
+    {
+      "name": "200.genann",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 17,
+      "instructions": 781904249,
+      "cycles": 1563808498,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 869.8753392999643
+    },
+    {
+      "name": "201.jpeg",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 326,
+      "instructions": 59530959,
+      "cycles": 119061918,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 64.97194904496428
+    },
+    {
+      "name": "202.llama2",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 10,
+      "instructions": 4005018477,
+      "cycles": 8010036954,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 3988.391327060992
+    },
+    {
+      "name": "203.rsa",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 185,
+      "instructions": 236790729,
+      "cycles": 473581458,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 275.50294279505033
+    },
+    {
+      "name": "204.hypergraph",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 2016,
+      "instructions": 231101497,
+      "cycles": 462202994,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 269.9471743410104
+    },
+    {
+      "name": "300.bzip3",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1034,
+      "instructions": 110193767,
+      "cycles": 220387534,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 128.44449585099937
+    },
+    {
+      "name": "301.gsim",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 573,
+      "instructions": 42010413,
+      "cycles": 84020826,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 48.286735745030455
+    },
+    {
+      "name": "302.lua",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1158,
+      "instructions": 12643361,
+      "cycles": 25286722,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 14.175768238026649
+    },
+    {
+      "name": "303.cproc",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 1885,
+      "instructions": 22518530,
+      "cycles": 45037060,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 25.967720768996514
+    },
+    {
+      "name": "304.mp3",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 8,
+      "instructions": 371077847,
+      "cycles": 742155694,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 382.7348395519657
+    },
+    {
+      "name": "305.h264",
+      "stage": "passed",
+      "exit_code": 0,
+      "marks": 513,
+      "instructions": 92962653,
+      "cycles": 185925306,
+      "two_cycles_per_instruction": true,
+      "wall_seconds": 104.08001514495118
+    }
+  ],
+  "arithmetic_mean": 839.95,
+  "geometric_mean": 305.21783021173906
+}

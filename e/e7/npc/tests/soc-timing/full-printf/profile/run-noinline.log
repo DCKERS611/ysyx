@@ -1,0 +1,18 @@
+1900-0-0 00:00:00 GMT (1 second).
+1900-0-0 00:00:00 GMT (2 seconds).
+1900-0-0 00:00:00 GMT (3 seconds).
+1900-0-0 00:00:00 GMT (4 seconds).
+1900-0-0 00:00:00 GMT (5 seconds).
+1900-0-0 00:00:00 GMT (6 seconds).
+1900-0-0 00:00:00 GMT (7 seconds).
+1900-0-0 00:00:00 GMT (8 seconds).
+1900-0-0 00:00:00 GMT (9 seconds).
+1900-0-0 00:00:00 GMT (10 seconds).
+1900-0-0 00:00:00 GMT (11 seconds).
+PRINTF_PROFILE max_cycles=60480
+Loaded build/rtc-printf-profile-minirv-npc.bin: 381576 bytes
+Result: halt_pc=0x80007834 a0=0x00000000 ra=0x80007830 cycles=707855
+instructions=286712 cycles=707855 IPC=0.405043
+HIT GOOD TRAP
+PASS: 2 checks
+RESULT case=rtc-printf-profile-minirv-npc.bin backend=am verdict=pass stop=ebreak pc=0x80007834 inst=0x00100073 cycles=707855 retired=286712 attempts=286712 checks=2 failures=0 delay=fixed:1

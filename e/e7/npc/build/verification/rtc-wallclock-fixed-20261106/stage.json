@@ -1,0 +1,5 @@
+{
+  "stage": "interrupted_diagnostic",
+  "reason": "k1 diagnosed 180157us polling lateness; remove software division in output; use missed whole deadline criterion",
+  "stopped_epoch": 1793929520.658843
+}

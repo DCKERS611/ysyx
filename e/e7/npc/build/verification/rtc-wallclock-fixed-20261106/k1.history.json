@@ -1,0 +1,25 @@
+[
+  {
+    "stage": "measured",
+    "k": 1,
+    "frequency_mhz": 25,
+    "q16": 22778,
+    "trial": 1,
+    "image_sha256": "ce1aa3b3adf1e18b4a5a17811089776d8d3f38ca202b1f0a602cc95d817e8c92",
+    "compiled_timer_config": "freq=25 q16=22778",
+    "mean_interval_seconds": 0.8434445905000001,
+    "max_late_us": 180157,
+    "intervals_seconds": [
+      0.94986273,
+      0.79668188,
+      0.944671411,
+      0.737826512,
+      0.746289184,
+      0.927815561,
+      0.803247876,
+      0.955336397,
+      0.78084688,
+      0.791867474
+    ]
+  }
+]

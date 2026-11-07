@@ -1,0 +1,7 @@
+TIMER_CONFIG_PROBE PASS freq=25 q16=65536 value=205417
+Loaded /home/ysyx/ysyx-workbench/npc/build/verification/timer-config-probe-20261106/q65536.bin: 357376 bytes
+Result: halt_pc=0x80001364 a0=0x00000000 ra=0x80001360 cycles=2035559
+instructions=116372 cycles=2035559 IPC=0.057170
+HIT GOOD TRAP
+PASS: 2 checks
+RESULT case=q65536.bin backend=am verdict=pass stop=ebreak pc=0x80001364 inst=0x00100073 cycles=2035559 retired=116372 attempts=116372 checks=2 failures=0 delay=random

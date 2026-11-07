@@ -1,0 +1,56 @@
+{
+  "simulator": "/home/ysyx/ysyx-workbench/npc/build/soc/sim",
+  "simulator_sha256": "34aa6b01e5b352eb28217945b83bf00f775b02bf4c6637aede4a7811d2b76f0e",
+  "selection": "k is selected by environment variable NPC_CPU_CLOCK_RATIO; default 12",
+  "build_policy": "AM intermediate directories reused serially; timer recompiled at switch; images copied before next configuration",
+  "configurations": [
+    {
+      "k": 1,
+      "runtime_environment": {
+        "NPC_CPU_CLOCK_RATIO": "1"
+      },
+      "compile_parameters": {
+        "NPC_CPU_FREQ_MHZ": 25,
+        "NPC_TIMER_CALIBRATION_Q16": 0
+      },
+      "images": {
+        "hello": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/hello-k1.bin",
+          "sha256": "9902c7d8f2ee9eac92206a730992c1935a0f1baab15a0e6a809fe329c885ab51"
+        },
+        "rtc-timestamps": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/rtc-timestamps-k1.bin",
+          "sha256": "f623cca1e3ebb666bfe3e52dfb047dcf464e4df9cb379e07bb84ff3318e974fc"
+        },
+        "blockchain": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/blockchain-k1.bin",
+          "sha256": "521339e80fdd02347590202c0b4216be2d17f165107a40c05652ea0ee433c4fb"
+        }
+      }
+    },
+    {
+      "k": 12,
+      "runtime_environment": {
+        "NPC_CPU_CLOCK_RATIO": "12"
+      },
+      "compile_parameters": {
+        "NPC_CPU_FREQ_MHZ": 300,
+        "NPC_TIMER_CALIBRATION_Q16": 0
+      },
+      "images": {
+        "hello": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/hello-k12.bin",
+          "sha256": "9902c7d8f2ee9eac92206a730992c1935a0f1baab15a0e6a809fe329c885ab51"
+        },
+        "rtc-timestamps": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/rtc-timestamps-k12.bin",
+          "sha256": "5922d057052f58f2b67935ed1aba4a95142fa9ad4d32201d8b5f2a6d4c320ea3"
+        },
+        "blockchain": {
+          "path": "/home/ysyx/ysyx-workbench/npc/build/verification/current-csr-k12-20261105/blockchain-k12.bin",
+          "sha256": "431c750818a35aad61534796ecac87075702d3d12097ecd1d8f7ff59b331af56"
+        }
+      }
+    }
+  ]
+}

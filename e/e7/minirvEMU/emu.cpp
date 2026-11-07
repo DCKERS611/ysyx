@@ -11,6 +11,8 @@ void Emulator::reset()
     // CPU 复位不清除已装载的程序。
     state_.pc = CPUState::memory_base;
     state_.R.fill(0);
+    state_.mcycle = 0;
+    state_.minstret = 0;
     state_.halted = false;
     state_.halt_pc = 0;
 }
@@ -79,10 +81,16 @@ StepInfo Emulator::step()
     const uint32_t imm_i = sext12(inst >> 20);
     const uint32_t imm_s = sext12(((inst >> 25) << 5) | ((inst >> 7) & 31));
 
-    enum class Op { add, addi, lui, lw, lbu, sw, sb, jalr, ebreak };
+    enum class Op { add, addi, lui, lw, lbu, sw, sb, jalr, ebreak, csr };
     Op operation = Op::ebreak;
     bool writes_rd = false;
     bool supported = true;
+    const bool csr_instruction = op == 0x73 && (f3 & 3) != 0;
+    const unsigned csr_address = inst >> 20;
+    const unsigned csr_command = f3 & 3;
+    const bool csr_write = csr_instruction && (csr_command == 1 || rs1 != 0);
+    const bool csr_counter = csr_address == 0xB00 || csr_address == 0xB80 || csr_address == 0xB02 || csr_address == 0xB82;
+    const bool csr_id = csr_address == 0xF11 || csr_address == 0xF12;
 
     switch (op) {
         case 0x33:
@@ -115,8 +123,10 @@ StepInfo Emulator::step()
             info.reads_rs1 = info.reads_rs2 = true;
             break;
         case 0x73:
-            supported = inst == 0x00100073;
-            operation = Op::ebreak;
+            supported = csr_instruction ? ((csr_counter || csr_id) && !(csr_write && csr_id)) : inst == 0x00100073;
+            operation = csr_instruction ? Op::csr : Op::ebreak;
+            writes_rd = csr_instruction;
+            info.reads_rs1 = csr_instruction && (f3 & 4) == 0;
             break;
         default:
             supported = false;
@@ -163,7 +173,31 @@ StepInfo Emulator::step()
     }
     info.device_load = device_load;
     info.device_load_rd = rd;
+    bool wrote_cycle = false, wrote_retired = false;
     switch (operation) {
+        case Op::csr: {
+            // CSRRS/CSRRC即使rd=x0也读取旧值；CSRRW[I] x0只执行写。
+            uint64_t* counter = nullptr;
+            if (csr_address == 0xB00 || csr_address == 0xB80) counter = &state_.mcycle;
+            if (csr_address == 0xB02 || csr_address == 0xB82) counter = &state_.minstret;
+            const bool high = (csr_address & 0x80) != 0;
+            uint32_t old = 0;
+            if (!(csr_command == 1 && rd == 0)) {
+                old = counter ? static_cast<uint32_t>(*counter >> (high ? 32 : 0))
+                    : csr_address == 0xF11 ? 0x79737978u : 100023589u;
+            }
+            value = old;
+            if (csr_write) {
+                const uint32_t source = (f3 & 4) ? rs1 : a;
+                const uint32_t updated = csr_command == 1 ? source
+                    : csr_command == 2 ? old | source : old & ~source;
+                if (high) *counter = (*counter & 0xFFFFFFFFull) | (uint64_t(updated) << 32);
+                else *counter = (*counter & 0xFFFFFFFF00000000ull) | updated;
+                wrote_cycle = counter == &state_.mcycle;
+                wrote_retired = counter == &state_.minstret;
+            }
+            break;
+        }
         case Op::add: value = a + b; break;
         case Op::addi: value = a + imm_i; break;
         case Op::lui: value = inst & 0xfffff000u; break;
@@ -186,6 +220,8 @@ StepInfo Emulator::step()
             }
             break;
         case Op::ebreak:
+            ++state_.mcycle;
+            ++state_.minstret;
             state_.halted = true;
             state_.halt_pc = state_.pc;
             // 约定：EMU 执行 ebreak 后保留当前 PC。
@@ -193,6 +229,9 @@ StepInfo Emulator::step()
             return info;
     }
 
+    // 显式写该计数器优先于同拍自动递增；另一个计数器正常推进。
+    if (!wrote_cycle) ++state_.mcycle;
+    if (!wrote_retired) ++state_.minstret;
     if (writes_rd && rd != 0) state_.R[rd] = value;
     state_.R[0] = 0;
     state_.pc = next_pc;

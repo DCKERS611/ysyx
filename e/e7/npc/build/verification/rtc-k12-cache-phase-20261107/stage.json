@@ -1,0 +1,104 @@
+{
+  "stage": "complete",
+  "ended_epoch": 1794017548.507645,
+  "selected_ratios": [
+    12
+  ],
+  "results": [
+    {
+      "stage": "passed",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 6929,
+      "trial": 3,
+      "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+      "compiled_timer_config": "freq=300 q16=6929",
+      "mean_interval_seconds": 0.9940958558999998,
+      "max_late_us": 137474,
+      "intervals_seconds": [
+        0.986936561,
+        1.003882313,
+        0.864182646,
+        1.014868217,
+        1.028494842,
+        1.021843685,
+        0.991175507,
+        1.009711478,
+        1.011282613,
+        1.008580697
+      ],
+      "criterion": "two independent runs: each 10-interval mean within 5% of one host second; guest lateness <1000000us",
+      "history": [
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 8000,
+          "trial": 1,
+          "image_sha256": "0398b83a3f72d3d14aa2b1b7d206f97036d1f99f77a38e0cfd892f41840386c8",
+          "compiled_timer_config": "freq=300 q16=8000",
+          "mean_interval_seconds": 0.8661822527,
+          "max_late_us": 466612,
+          "intervals_seconds": [
+            0.866917411,
+            0.843814702,
+            0.855092212,
+            0.845872131,
+            0.863359097,
+            0.888019731,
+            0.873587198,
+            0.851407132,
+            0.870922211,
+            0.902830702
+          ]
+        },
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 6929,
+          "trial": 2,
+          "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+          "compiled_timer_config": "freq=300 q16=6929",
+          "mean_interval_seconds": 0.9676074982999999,
+          "max_late_us": 137474,
+          "intervals_seconds": [
+            1.015245516,
+            0.997903342,
+            0.837327658,
+            0.960822505,
+            0.980666493,
+            0.965050851,
+            1.032615182,
+            0.945747579,
+            0.961442694,
+            0.979253163
+          ]
+        },
+        {
+          "stage": "measured",
+          "k": 12,
+          "frequency_mhz": 300,
+          "q16": 6929,
+          "trial": 3,
+          "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+          "compiled_timer_config": "freq=300 q16=6929",
+          "mean_interval_seconds": 0.9940958558999998,
+          "max_late_us": 137474,
+          "intervals_seconds": [
+            0.986936561,
+            1.003882313,
+            0.864182646,
+            1.014868217,
+            1.028494842,
+            1.021843685,
+            0.991175507,
+            1.009711478,
+            1.011282613,
+            1.008580697
+          ]
+        }
+      ]
+    }
+  ]
+}

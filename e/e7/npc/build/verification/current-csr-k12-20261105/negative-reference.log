@@ -1,0 +1,5 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/difftest/programs/csr/ids.bin: 20 bytes
+step=1 pre_pc=0x80000000 inst=0xf1102173
+mcycle.low: actual=0x0000000a expect=0x00000013
+FAILED: 1/28
+RESULT case=ids.bin backend=diff verdict=fail stop=comparison_mismatch pc=0x80000000 inst=0xf1102173 cycles=10 retired=1 attempts=1 checks=0 failures=0 delay=random core=17 core_fail=0 extra=11 extra_fail=1 memory=0 memory_fail=0

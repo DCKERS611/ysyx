@@ -1,0 +1,9 @@
+# Building timer-config-probe-insert-arg [minirv-npc]
++ CC main.c
+# Building am-archive [minirv-npc]
++ CC src/riscv/npc/timer.c
++ AR -> build/am-minirv-npc.a
+# Creating image [minirv-npc]
++ LD -> build/timer-config-probe-minirv-npc.elf
++ OBJCOPY -> build/timer-config-probe-minirv-npc.bin
+mainargs=

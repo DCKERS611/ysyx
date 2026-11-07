@@ -1,0 +1,59 @@
+--- npc/vsrc/ifu.v.stage-c
++++ npc/vsrc/ifu.v.reconstructed-b
+@@ -14,21 +14,16 @@
+ 
+     localparam IDLE = 2'b00;
+     localparam WAIT = 2'b01;
+-    localparam LOAD_WAIT = 2'b10;
+ 
+     wire [1:0] state, next_state;
+     assign next_state = (state == IDLE) ? WAIT 
+-                                        : (state == WAIT) ? (is_load ? LOAD_WAIT : IDLE)
++                                        : (state == WAIT) ? IDLE
+                                                           : IDLE;
+ 
+     assign ifu_raddr = pc;
+-    assign inst_valid = !rst && ((state == WAIT) || (state == LOAD_WAIT));
++    assign inst_valid = !rst && (state == WAIT);
+ 
+-    wire normal_done;   // 非load指令
+-    wire load_done;     // load指令
+-    assign normal_done = (state == WAIT) && !is_load;
+-    assign load_done = (state == LOAD_WAIT);
+-    assign commit = !rst && (normal_done || load_done);
++    assign commit = !rst && (state == WAIT);
+     
+     assign load_req = !rst && (state == WAIT) && is_load;
+ 
+--- npc/csrc/sim.cpp.stage-c
++++ npc/csrc/sim.cpp.reconstructed-b
+@@ -108,6 +108,10 @@
+     dut.clk = 0;
+     eval_step(dut);
+ 
++    // 阶段b重建：数据存储器组合读，load在执行拍上升沿前得到结果。
++    dut.mem_rdata = dut.mem_ren ? static_cast<uint32_t>(pmem_read(static_cast<int>(dut.mem_addr))) : 0;
++    dut.eval();
++
+     const bool executing = dut.commit;
+     const uint32_t old_pc = dut.pc;
+     const uint32_t inst = dut.inst;
+@@ -126,8 +130,7 @@
+     // 存储器采样本拍取指地址
+     const uint32_t fetched_inst = static_cast<uint32_t>(
+         pmem_read(static_cast<int>(dut.ifu_raddr)));
+-    const uint32_t fetched_data = dut.mem_ren ? static_cast<uint32_t>(pmem_read(static_cast<int>(dut.mem_addr)))
+-                                              : 0;
++
+ 
+     // 保存当前指令的写请求，避免上升沿后信号变成下一条指令的值。
+     const bool write_enable = dut.mem_wen;
+@@ -150,7 +153,7 @@
+ 
+     // 存储器更新返回数据
+     dut.ifu_rdata = fetched_inst;
+-    dut.mem_rdata = fetched_data;
++
+     eval_step(dut);
+ 
+     if (verbose && executing) {

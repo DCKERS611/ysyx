@@ -1,0 +1,12 @@
+{
+  "max_trials": 1,
+  "ticks": 11,
+  "intervals": 10,
+  "output_mode": "literal strings and seconds index; host monotonic timestamps",
+  "source_sha256": {
+    "npc/tests/soc-timing/main.c": "d9e1bc0bdbbea04c5bd39c06bea57c74d3e85eabcf25b7ef542b33f57add32d1",
+    "npc/tests/soc-timing/calibrate_wallclock.py": "2c7961e2fcdf1341c9d980ced13dec6648cdc3df8b970a23ea63fa5c76357025",
+    "abstract-machine/scripts/platform/npc.mk": "994e9716ba34ac602db7f9ed121ee288c8cf2cb56d7f941ddd5f4fd3b47d7042",
+    "abstract-machine/am/src/riscv/npc/timer.c": "b58efd3fd2deb1ad67f10aa270e4b5ba7fee07e7f42178bb93367f8848d13703"
+  }
+}

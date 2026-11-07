@@ -1,0 +1,18 @@
+{
+  "started_epoch": 1793929520.6599276,
+  "source_sha256": {
+    "npc/tests/soc-timing/main.c": "591376ea8a650bf57728e35af27e77881de20147c4edad7bd2685fa3cdfeefa3",
+    "npc/tests/soc-timing/calibrate_wallclock.py": "6ae23bfde7b6a2d541c2048b874ee27840a7b50db06d274f27e6df4fd496d4c0",
+    "npc/tests/soc-timing/measure_host.py": "0b4871a7e1e5140cec33df7564c4bb78fdb680446f1dbd92ec1074e7cb737b04",
+    "abstract-machine/am/src/riscv/npc/timer.c": "b58efd3fd2deb1ad67f10aa270e4b5ba7fee07e7f42178bb93367f8848d13703",
+    "npc/build/soc/sim": "34aa6b01e5b352eb28217945b83bf00f775b02bf4c6637aede4a7811d2b76f0e"
+  },
+  "criterion": "two independent runs at same q16, each 10-interval mean 1s +/-5%; no guest missed whole-second deadline",
+  "concurrency": 1,
+  "diagnostic_predecessor": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-fixed-20261106",
+  "invocation_environment": {
+    "NPC_RTC_MAX_TRIALS": "8",
+    "NPC_RTC_INITIAL_Q16_K1": "19213",
+    "NPC_RTC_CALIBRATION_OUTPUT_DIR": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-validated-20261106"
+  }
+}

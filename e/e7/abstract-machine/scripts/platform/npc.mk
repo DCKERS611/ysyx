@@ -1,3 +1,17 @@
+NPC_CPU_FREQ_MHZ ?= 25
+NPC_TIMER_CALIBRATION_Q16 ?= 0
+CFLAGS += -DNPC_CPU_FREQ_MHZ=$(NPC_CPU_FREQ_MHZ) -DNPC_TIMER_CALIBRATION_Q16=$(NPC_TIMER_CALIBRATION_Q16)
+# 参数戳只作用于消费这些参数的对象；保留课程预编译klib。
+NPC_TIMER_CONFIG = $(DST_DIR)/.npc-timer-config
+.PHONY: npc-timer-config-force
+npc-timer-config-force:
+$(NPC_TIMER_CONFIG): npc-timer-config-force
+	@printf '%s\n' 'freq=$(NPC_CPU_FREQ_MHZ) q16=$(NPC_TIMER_CALIBRATION_Q16)' > "$@.tmp"
+	@cmp -s "$@.tmp" "$@" || cp "$@.tmp" "$@"
+	@rm -f "$@.tmp"
+# 此处AM_SRCS尚未赋值，不能通过OBJS筛选；使用明确的目标路径。
+$(DST_DIR)/src/riscv/npc/timer.o: $(NPC_TIMER_CONFIG)
+
 AM_SRCS := riscv/npc/start.S \
            riscv/npc/trm.c \
            riscv/npc/ioe.c \

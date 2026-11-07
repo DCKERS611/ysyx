@@ -1,0 +1,9 @@
+{
+  "stage": "sampling",
+  "k": 12,
+  "frequency_mhz": 300,
+  "q16": 9352,
+  "trial": 1,
+  "image_sha256": "7bc0ebc4949c80fd0e2215adfecd4174fed401ccacfac223cdaf5c445ae459f8",
+  "compiled_timer_config": "freq=300 q16=9352"
+}

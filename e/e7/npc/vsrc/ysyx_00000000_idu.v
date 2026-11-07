@@ -15,7 +15,9 @@ module ysyx_00000000_idu(
 
     output mem_read,
     output mem_write,
-    output mem_byte
+    output mem_byte,
+    output is_csr,
+    output csr_write
 );
 
     wire [6:0] opcode = inst[6:0];
@@ -48,7 +50,10 @@ module ysyx_00000000_idu(
     wire is_load = is_lw || is_lbu;
     wire is_store = is_sw ||is_sb;
 
-    wire is_csr = (opcode == 7'b1110011) && (funct3 == 3'b010);
+    // Zicsr六种形式的低两位分别是写入/置位/清位；bit2选择立即数。
+    assign is_csr = (opcode == 7'b1110011) && (funct3[1:0] != 2'b00);
+    assign csr_write = is_csr &&
+        ((funct3[1:0] == 2'b01) || (inst[19:15] != 5'b0));
 
     wire supported = is_addi || is_jalr  || is_ebreak ||
                      is_add  || is_store || is_load   ||
@@ -59,7 +64,7 @@ module ysyx_00000000_idu(
                        (uses_rs2 && inst[24]);
     wire uses_rd   = is_add || is_jalr || is_addi ||
                      is_lui || is_load || is_csr;             // 检查rd
-    wire uses_rs1  = is_add || is_addi || is_jalr || is_load || is_store || is_csr;
+    wire uses_rs1  = is_add || is_addi || is_jalr || is_load || is_store || (is_csr && !funct3[2]);
     wire uses_rs2  = is_add || is_store;
 
     assign illegal = !supported || reg_illegal;     // rd[4] || rs1[4]

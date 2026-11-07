@@ -1,0 +1,7 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/rtc-wallclock-calibration-20261105/rtc-wall-q22778-trial1-k1.bin, 697816 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x8004c834)
+loading to memory region [0x8004c900, 0x8004cc00)
+AM Panic: Not implemented @ /home/ysyx/ysyx-workbench/abstract-machine/klib/src/stdio.c:6  
+HIT BAD TRAP: pc=0x80000a08 a0=0x00000001 cycles=193450214
+Statistics (including loader): instructions=1032326 cycles=193450214 IPC=0.005336

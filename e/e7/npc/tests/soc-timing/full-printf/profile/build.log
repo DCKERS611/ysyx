@@ -1,0 +1,7 @@
+# Building rtc-printf-profile-insert-arg [minirv-npc]
++ CC main.c
+# Building am-archive [minirv-npc]
+# Creating image [minirv-npc]
++ LD -> build/rtc-printf-profile-minirv-npc.elf
++ OBJCOPY -> build/rtc-printf-profile-minirv-npc.bin
+mainargs=

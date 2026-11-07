@@ -1,0 +1,17 @@
+Loaded Flash: /home/ysyx/ysyx-workbench/npc/build/verification/full-soc-archbench-test-20261106-182802/304.mp3.bin, 1384552 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x800bbbc0)
+loading to memory region [0x800bbc00, 0x800c152c)
+Encode MP3 size = 69 bytes
+Decode data size = 1152 bytes
+MP3 compression rate = 5%
+Audio time = 24000 us
+Decode time = 254432798 us
+Decode frequency = 0%
+==================================================
+[RESULT] [1;32mPASS[0m with min time:   0:04:15.223158 (255223158 us)
+
+Scored time:   0:04:15.223158 (255223158 us)
+Total  time:   0:04:24.340775 (264340775 us)
+HIT GOOD TRAP: pc=0x8005ab4c a0=0x00000000 cycles=7113428436
+Statistics (including loader): instructions=59617803 cycles=7113428436 IPC=0.008381

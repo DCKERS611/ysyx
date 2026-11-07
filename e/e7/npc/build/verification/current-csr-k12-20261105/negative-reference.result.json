@@ -1,0 +1,6 @@
+{
+  "expected_failure_detected": true,
+  "exit_code": 1,
+  "fault": "reference adds an extra waiting cycle",
+  "field": "mcycle.low"
+}

@@ -1,0 +1,42 @@
+{
+  "stage": "needs_review",
+  "k": 1,
+  "frequency_mhz": 25,
+  "q16": 21131576,
+  "trial": 4,
+  "mean_interval_seconds": 9.561227278500002,
+  "history": [
+    {
+      "stage": "measured",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 22778,
+      "trial": 1,
+      "mean_interval_seconds": 10.136305775
+    },
+    {
+      "stage": "measured",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 230885,
+      "trial": 2,
+      "mean_interval_seconds": 9.487341192099999
+    },
+    {
+      "stage": "measured",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 2190485,
+      "trial": 3,
+      "mean_interval_seconds": 9.646984846699999
+    },
+    {
+      "stage": "measured",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 21131576,
+      "trial": 4,
+      "mean_interval_seconds": 9.561227278500002
+    }
+  ]
+}

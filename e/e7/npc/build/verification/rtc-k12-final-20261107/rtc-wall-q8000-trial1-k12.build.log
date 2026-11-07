@@ -1,0 +1,16 @@
+# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
++ CC rtc_entry.c
+# Building am-archive [minirv-ysyxsoc]
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/minirv-ysyxsoc.mk:10: warning: overriding recipe for target 'image'
+/home/ysyx/ysyx-workbench/abstract-machine/scripts/platform/npc.mk:38: warning: ignoring old recipe for target 'image'
+# Creating image [minirv-ysyxsoc]
++ LD -> build/rtc-full-printf-minirv-ysyxsoc.elf
+4+0 records in
+4+0 records out
+4 bytes copied, 0.000511404 s, 7.8 kB/s
+430024+0 records in
+430024+0 records out
+430024 bytes (430 kB, 420 KiB) copied, 0.219507 s, 2.0 MB/s
+mainargs=

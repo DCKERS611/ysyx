@@ -1,0 +1,14 @@
+{
+  "source_archive": "/home/ysyx/ysyx-workbench/abstract-machine/klib/build/klib-minirv-npc.a",
+  "source_sha256": "fa3380ecca1b3e5fa4c129617b0a6d07102e1966e9c77e49d21947572ef218ec",
+  "overwritten_archive_sha256": "c7748b298f8e8875ad8d04b2be81b25d11a6c6e77d297600c059a9681c90206a",
+  "members": [
+    "int64.o",
+    "fileio.o",
+    "cpp.o",
+    "ctypes.o",
+    "string.o",
+    "stdio.o",
+    "stdlib.o"
+  ]
+}
