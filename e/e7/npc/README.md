@@ -2,8 +2,9 @@
 
 当前 E7 的结构与语义见 [tests/README.md](tests/README.md)，独立入口结束时输出唯一 RESULT 行；下文保留早期 E5/E6 的背景说明。
 
-当前 RTL 支持 minirv 的8条指令和 ebreak，IFU 通过 DPI-C 取指，LSU 通过 DPI-C 访存。
-在 WSL 的 `~/ysyx-workbench/npc` 中运行以下命令。
+当前独立 NPC 用 SimpleBus 请求和回复连接取指、访存与 C++ 存储器模型，支持 CSR。SoC 使用 `Makefile.soc` 运行带 loader 的 Flash 镜像，DiffTest 与总线监视分别由 `NPC_SOC_REF` 与 `NPC_SOC_BUS=1` 启用。当前的回归入口、预算与波形用途见 [测试库说明](tests/README.md)。
+
+以下是早期 E5/E6 的历史说明。旧指令数量、镜像大小限制、周期上限与示例结果按当时版本阅读。
 
 ## 构建入口
 

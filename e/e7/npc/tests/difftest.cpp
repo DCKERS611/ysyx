@@ -1,6 +1,8 @@
 // 逐提交对照独立 EMU；通过条件包含辅助检查、整块内存和可选 EXPECT。
 #include "cpu_view.h"
+#include <chrono>
 #include <cstdio>
+#include <cstdlib>
 #include <cstring>
 #include <string>
 #include <vector>
@@ -29,6 +31,12 @@ int main(int argc, char** argv)
         std::fprintf(stderr, "Usage: %s <program.bin> [expectations case-name]\n", argv[0]);
         return 1;
     }
+    using timing_clock = std::chrono::steady_clock;
+    const char* timing_env = std::getenv("NPC_DIFF_MEM_TIMING");
+    const bool timing_enabled = timing_env != nullptr && std::strcmp(timing_env, "1") == 0;
+    const auto total_start = timing_enabled ? timing_clock::now() : timing_clock::time_point{};
+    double memory_seconds = 0.0;
+
     const char* filename = std::strrchr(argv[1], '/');
     const std::string name = argc == 4 ? argv[3] : (filename ? filename + 1 : argv[1]);
     expected_program expected;
@@ -57,10 +65,19 @@ int main(int argc, char** argv)
     unsigned core_fail = 0, extra_fail = 0, memory_fail = 0;
     checker checks;
     const auto finish = [&](stop_reason reason, bool passed) {
-        const std::string extra =
+        // 总线协议违例只影响本次运行的判定，不掩盖已经发生的比较结果。
+        passed = passed && sim_bus_ok();
+        std::string extra =
             "core=" + std::to_string(core_checks) + " core_fail=" + std::to_string(core_fail)
             + " extra=" + std::to_string(extra_checks) + " extra_fail=" + std::to_string(extra_fail)
             + " memory=" + std::to_string(memory_checks) + " memory_fail=" + std::to_string(memory_fail);
+        if (timing_enabled) {
+            const double total_seconds = std::chrono::duration<double>(timing_clock::now() - total_start).count();
+            char timing_fields[128];
+            std::snprintf(timing_fields, sizeof(timing_fields),
+                          " memory_seconds=%.6f total_seconds=%.6f", memory_seconds, total_seconds);
+            extra += timing_fields;
+        }
         sim_print_result(name.c_str(), "diff", sim.result(reason), passed,
                          checks.total(), checks.failures(), extra.c_str());
         return passed ? 0 : 1;
@@ -180,16 +197,28 @@ int main(int argc, char** argv)
         return finish(reason, false);
     }
 
-    // 全部 128 MiB 都比较；相同字只计数，只有差异才构造字段名。
+    // 全部 128 MiB 都参与比较；块匹配后若有差异，再逐字收集完整诊断。
     diff_collector memory;
-    for (unsigned offset = 0; offset < minirv::CPUState::memory_size; offset += 4) {
-        const uint32_t addr = minirv::CPUState::memory_base + offset;
-        const uint32_t actual = static_cast<uint32_t>(pmem_read(static_cast<int>(addr)));
-        const uint32_t expected_word = emu.word(addr);
-        ++memory_checks;
-        if (actual != expected_word)
-            memory.compare("memory[" + std::to_string(addr) + "]", actual, expected_word);
+    // 计时只包住完整 128 MiB 比较；关闭计时时不读取时钟。
+    const auto memory_start = timing_enabled ? timing_clock::now() : timing_clock::time_point{};
+    const uint32_t endian_probe = 1;
+    const bool little_endian = *reinterpret_cast<const uint8_t*>(&endian_probe) == 1;
+    const uint8_t* expected_memory = emu.get_state().M.data();
+    if (little_endian
+        && std::memcmp(pmem_memory_bytes(), expected_memory, minirv::CPUState::memory_size) == 0) {
+        memory_checks = minirv::CPUState::memory_size / sizeof(uint32_t);
+    } else {
+        for (unsigned offset = 0; offset < minirv::CPUState::memory_size; offset += 4) {
+            const uint32_t addr = minirv::CPUState::memory_base + offset;
+            const uint32_t actual = static_cast<uint32_t>(pmem_read(static_cast<int>(addr)));
+            const uint32_t expected_word = emu.word(addr);
+            ++memory_checks;
+            if (actual != expected_word)
+                memory.compare("memory[" + std::to_string(addr) + "]", actual, expected_word);
+        }
     }
+    if (timing_enabled)
+        memory_seconds = std::chrono::duration<double>(timing_clock::now() - memory_start).count();
     memory_fail = memory.failures();
     if (!memory.ok()) {
         print_differences(sim.attempts(), last_pc, last_inst, no_core, memory,

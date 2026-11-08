@@ -39,7 +39,8 @@ int main(int argc, char** argv)
     checker checks;
     const bool passed = check_expectations(dut, expected, run, trace, argv[3], checks) == 0
                         && (reason == stop_reason::ebreak
-                            || (reason == stop_reason::rejected && expected.illegal));
+                            || (reason == stop_reason::rejected && expected.illegal))
+                        && sim_bus_ok();
     sim_print_result(argv[3], "npc", run, passed, checks.total(), checks.failures(), nullptr);
     return passed ? 0 : 1;
 }

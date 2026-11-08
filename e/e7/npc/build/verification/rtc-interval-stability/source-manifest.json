@@ -1,0 +1,7 @@
+{
+  "npc/tests/soc-timing/calibrate_wallclock.py": "035dda1a2a111de785f3ee3831e1c7b9435511c6c0b9f21719f626302a5d7b95",
+  "npc/tests/soc-timing/measure_host.py": "1a8a81fb265765e2d6544c3c02407024919e011324b9ab6f81f19df183bdb8d1",
+  "npc/tests/soc-timing/full-printf/rtc_entry.c": "59af337959afd6dac0d742d0fba4b0375fa7ef7d6c88610bbc8d781baa1f3d81",
+  "am-kernels/tests/am-tests/src/tests/rtc.c": "eca71b2c3966972ca5ebbf496202903d29a7c8f6e85132f3513ffb9c68128d52",
+  "npc/tools/verify_rtc_wallclock.py": "57126c67ee1974fa6d639b108761bdd22d18019857d33480222df16367ae21ab"
+}

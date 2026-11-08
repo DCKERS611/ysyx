@@ -1,13 +1,19 @@
 # E7：SimpleBus、SoC、GPIO与CSR计时
 
+2026-11-08 的最新进度见 [学习记录 §51–55](E7学习记录.md#五十一p1-工程缺口实施与验收2026-11-08)。P1 的 SoC DiffTest、完整 128 MiB 比较优化和总线监视均已通过集成验收。RTC 保留原均值判据并新增逐间隔统计，k=12 同镜像第三轮待补。
+
+个人复验已完成 NVBoard 串口的正常、故障和恢复，GPIO 三项演示和字节访问，以及 `marchid` 提交沿。CSR 波形和日志在 [原位置](npc/build/verification/csr-marchid-review/)。SoC 全量 test 为 20/20，用户启动的全量 train 截至本次核对已有 19 项通过，`202.llama2` 仍在运行。
+
+本轮发布的源码和证据按 WSL 原相对路径归档，见 [发布同步清单](verification/2026-11-08/release-sync/sync-manifest.json)。
+
 正式开发环境是 WSL Ubuntu-22.04，源码位于 `/home/ysyx/ysyx-workbench`。本目录是 Windows 副本。2026-11-05按原相对路径核对并同步源码、ECC工程/runs和测试证据；完整文件、链接及排除清单见 `verification/2026-11-05/sync-audit/`。以本次Git提交记录确认发布版本；同步期间未重新编译、仿真或运行DiffTest，也没有Windows功能复测。此前1184等数字只表示当时选取的子集。
 
 
-## 2026-11-07：已完成部分先同步
+## 2026-11-07：首轮已完成部分同步
 
 已按原相对路径从WSL正式工作台同步本次明确范围的921个文件，逐文件SHA-256一致。包括CSR/时钟比例源码、两份预编译klib、GPIO字节写与数码管读回、两拍行为重建及20项train结果、SoC全量test 20/20结果、回归和现有综合证据。范围与排除清单见[同步清单](verification/2026-11-07/completed-sync/sync-manifest.json)，这是指定范围同步，不代表整个工作台全量同步。
 
-RTC源码是当前工作版本；最新rtc-k12-final-20261107结果目录本次未复制，k=12仍待用户反馈后验收。未复制编译对象、可执行程序、缓存及锁文件；两拍波形保留原FST，105MiB派生VCD不重复复制。Windows独有学习资料、README和本地计划保留。此次没有重新运行测试，也没有提交或推送Git。
+RTC源码是当前工作版本；11-07 的 `rtc-k12-cache-phase-20261107` 已完成 k=12 完整 printf 墙钟验收（Q16=6929，两次独立运行 0.9676/0.9941 秒，最大迟到 137474µs），证据已按原路径同步。未复制编译对象、可执行程序、缓存及锁文件；两拍波形保留原 FST，105MiB 派生 VCD 不重复复制。Windows独有学习资料、README和本地计划保留。此次没有重新运行测试，也没有提交或推送Git。
 ## 2026-11-06 当前运行入口（§39–44）
 
 正式执行环境为WSL Ubuntu-22.04的`/home/ysyx/ysyx-workbench`。SoC驱动`npc/tests/soc_main.cpp`从`NPC_CPU_CLOCK_RATIO`读取k，默认12，基线显式设1；外设按25MHz，CPU分别25/300MHz。同一仿真器可以选择两档，但AM镜像必须分别以`NPC_CPU_FREQ_MHZ=25/300`构建，不能只切运行k而复用错误频率镜像。
@@ -58,6 +64,7 @@ RTC独立演示在工作台`npc/tests/soc-timing`运行`python3 calibrate_wallcl
 |---|---|
 | CPU 顶层与各模块 | `npc/vsrc/` |
 | 通用检查库，复用已有实现 | `npc/csrc/check.h` |
+| 总线协议监视器（SimpleBus握手判据） | `npc/csrc/bus_monitor.h`；单元测试 `npc/tests/bus_monitor_test.cpp` |
 | test_suite 兼容入口 | `npc/csrc/test_suite.h` |
 | 独立CPU内部状态观察接口 | `npc/csrc/cpu_view.h` |
 | 独立NPC时钟、总线模型与波形 | `npc/csrc/sim.cpp` |
@@ -81,6 +88,8 @@ RTC独立演示在工作台`npc/tests/soc-timing`运行`python3 calibrate_wallcl
 cd /home/ysyx/ysyx-workbench/npc
 make -f Makefile.cpptest regress
 ```
+
+`regress` 现在包含总线协议监视：单独入口是 `make -f Makefile.cpptest test-bus-monitor`（15项单元检查）。每次运行结束后打印 `Bus: PASS/FAIL ifu_req=... lsu_req=... violations=N`，RESULT 行追加 `bus=pass|fail`；出现违例时该次运行判失败。监视器只观察握手，不改变"等待期重复请求被忽略"的既有行为。
 
 默认 `NPC_MEM_DELAY=0` 使用原有LFSR、初值0xACE1，每笔请求随机回复1～20拍；设为1～20则使用对应固定延迟，无需改源码重编译。IFU与LSU的请求随机参数RANDOM_REQ默认均为0，开启请求侧压力测试时两处都要修改。
 
@@ -114,11 +123,40 @@ E5/E6/E7和WSL中的旧npc/e4已清理，独立E:/ysyx/e/e4备份保留。
 
 ## 验证边界
 
+### SoC 逐条 DiffTest（v1）
+
+在 WSL 的 `/home/ysyx/ysyx-workbench/npc` 构建 `make -f Makefile.soc build`。将与 Flash 镜像完全对应的应用 ELF 转成 raw，再用 `NPC_SOC_REF` 启用参考模型。当前 `gen.sh` 把应用 ELF 放在 Flash 文件的字节偏移 369152，`insert-arg` 会直接修改 Flash 内的 ELF 数据，因此从待测 Flash 提取可以保留实际的参数。
+
+```bash
+cd /home/ysyx/ysyx-workbench/npc
+mkdir -p build/verification/soc-difftest
+flash=../am-kernels/kernels/hello/build/hello-minirv-ysyxsoc.bin
+tail -c +369153 "$flash" > build/verification/soc-difftest/hello.elf
+riscv64-linux-gnu-objcopy -O binary build/verification/soc-difftest/hello.elf \
+  build/verification/soc-difftest/hello-ref.bin
+NPC_CPU_CLOCK_RATIO=1 NPC_SOC_REF=build/verification/soc-difftest/hello-ref.bin \
+  make -f Makefile.soc run PROGRAM="$flash"
+```
+
+`FIRST_PSRAM_COMMIT` 标出 first PSRAM 提交，即首条 PC 在 `[0x80000000, 0x80800000)` 的提交。此处用沿前 GPR 初始化 EMU，跳过 Flash loader 的参考执行。每个 CPU 上升沿前取 PC、指令和提交使能（Verilator 将其折叠为 IFU 的 PC 写使能），沿后比较 GPR、下一 PC 或停机状态。两边停机时比较 `halt_pc`，不再推进 EMU。
+
+参考模型判定的设备读只在本条指令执行后同步 DUT 的非 x0 目的寄存器。普通内存读仍逐条核对。设备地址沿用 EMU 现有 UART 和计时 MMIO 地址窗。SoC 和 EMU 的计数口径不同，v1 不比较 `mcycle`、`minstret` 的数值，对显式读取这两个计数器及其高半部的指令只同步该条读结果，仍核对指令、PC 和其余 GPR。v1 不校验设备返回值本身、不扫描 SoC PSRAM，也不覆盖 loader 的参考执行或异常路径的逐条比对。
+
+启用 DiffTest 后，每次结束输出一行 `RESULT ... backend=socdiff verdict=pass|fail`，并返回 0 或 1。`commits` 为已匹配的应用指令数，`device_reads` 和 `counter_reads` 记录同步次数。实际验证日志在 `npc/build/verification/soc-difftest/`。
+
+设置 `NPC_SOC_BUS=1` 启用 SoC SimpleBus 监视，可与 `NPC_SOC_REF` 同时使用。监视从复位结束开始，包含 loader，并在每个 CPU 上升沿前采样 core0 和 MemBridge 间的取指、数据请求和回复。先处理本沿回复，再判本沿提交。IFU 回复用来关联提交的 PC 和指令，load/store 必须在对应 LSU 请求已收到回复后提交。外设侧时钟经过 CDC，故不按 APB 或外设周期给 CPU 请求配对。违例会使最终 `RESULT` 的 `bus=fail`，即使程序仍到达 GOOD TRAP。日志在 `npc/build/verification/bus-monitor-extension/`。
+
+独立 NPC 的 DiffTest 仍核对完整 128 MiB。小端主机先做全范围字节比较，发现差异后逐字定位。`NPC_DIFF_MEM_TIMING=1` 在逐用例 RESULT 附带内存比较及总耗时，记录见 `npc/build/verification/diff-mem-timing/`。
+
+完整 printf RTC 通过原有 `tests/soc-timing/full-printf/calibrate.py` 入口运行。`NPC_RTC_RUNS` 选择同镜像、同 Q16 的连续通过轮数，默认 2，范围 2～5，`NPC_RTC_MAX_TRIALS` 至少为该值。每轮保存全部 10 个主机间隔、相对 1 秒的偏差、均值、极值及总体标准差。单间隔数据用于诊断，仍按均值 ±5% 和整轮客机迟到小于 1 秒验收。既有 k12 两次证据通过，第三次同镜像观测待补，见 `npc/build/verification/rtc-interval-stability/`。
+
+2026-11-08 的 P1 源码和验收证据共 100 个文件，已从 WSL 按原相对路径同步到此 Windows 副本，SHA-256 一致。清单在 [P1 同步记录](verification/2026-11-08/p1-sync/sync-manifest.json)。实际测试在 WSL 完成。
+
 2026-11-01在WSL实际验证：通用检查库最终10项检查通过；普通手写功能4项、边界14项在默认随机和固定一拍配置均通过；两种配置的手写DiffTest均23/23通过；三个程序的NPC/独立EMU/DiffTest三方验收通过；add/lw/sb提交沿自动波形检查通过。
 
 独立NPC的dummy与hello普通检查及DiffTest通过。hello为30467条指令、546583周期、IPC=0.055741；这不是SoC hello结果。测试架构重构的最终验收已重新跑完整AM cpu-tests（35项正常通过、wrong预期失败）与RV32I（38/38），主/辅助计数和内存范围与基线一致；2026-11-01该轮文档整理发布没有重新运行这些测试。archbench和综合未重跑，旧结果仍按学习记录中的版本和配置理解。自动波形检查不代表本人已亲自阅读。
 
-2026-11-01—02用户在WSL完成SoC程序及NVBoard正常/故障对照：完整SoC cpu-tests与RV32I属于TRM拆分前的验收；拆分后助手另运行SoC hello、独立NPC hello普通/DiffTest，用户继续完成UART和NVBoard故障恢复。正常与故障截图在verification/2026-11-02，恢复208按用户报告及源码/构建状态记录。上述2026-11-02发布整理未重跑lint、仿真、DiffTest或波形，不把历史成绩当作后续版本的新验收。SoC逐条DiffTest尚未接入。
+2026-11-01—02用户在WSL完成SoC程序及NVBoard正常/故障对照：完整SoC cpu-tests与RV32I属于TRM拆分前的验收；拆分后助手另运行SoC hello、独立NPC hello普通/DiffTest，用户继续完成UART和NVBoard故障恢复。正常与故障截图在verification/2026-11-02，恢复208按用户报告及源码/构建状态记录。上述2026-11-02发布整理未重跑lint、仿真、DiffTest或波形，不把历史成绩当作后续版本的新验收。
 
 本仓库保存CPU、参考模型、AM、测试程序及课程SoC源码，保留各依赖的许可证和原始资源路径。源码同步不按扩展名筛选；测试报告、日志、波形、输入镜像等保留WSL原位置，verification可另存副本。嵌套`.git`、编译中间件/可执行文件、缓存、工具安装包、PDK和本机学习计划不提交。具体排除项见同步清单；不再笼统排除整个build或ecc。同步不等于在Windows重新验证。
 

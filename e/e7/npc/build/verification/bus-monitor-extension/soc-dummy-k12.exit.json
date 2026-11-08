@@ -1,0 +1,19 @@
+{
+  "cmd": [
+    "build/p1-6/sim",
+    "../am-kernels/tests/cpu-tests/build/dummy-minirv-ysyxsoc.bin"
+  ],
+  "config": {
+    "NPC_CPU_CLOCK_RATIO": "12",
+    "NPC_MAX_CYCLES": "600000000",
+    "NPC_SOC_BUS": "1",
+    "NPC_SOC_REF": "build/verification/soc-difftest/dummy-ref.bin"
+  },
+  "exit_code": 0,
+  "expected_exit": 0,
+  "summary": [
+    "HIT GOOD TRAP: pc=0x80000040 a0=0x00000000 cycles=42777199",
+    "Bus: PASS ifu_req=17322 ifu_resp=17322 lsu_req=9611 lsu_resp=9611 violations=0",
+    "RESULT case=dummy-minirv-ysyxsoc.bin backend=socdiff verdict=pass commits=17 mismatches=0 halt_pc=0x80000040 device_reads=0 counter_reads=0 bus=pass"
+  ]
+}

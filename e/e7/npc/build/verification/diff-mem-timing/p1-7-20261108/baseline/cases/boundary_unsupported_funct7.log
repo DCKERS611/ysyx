@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/unsupported_funct7.bin: 20 bytes
+PASS: 8 checks
+[ DIFF PASS ] boundary/unsupported_funct7
+PASS: 68 (4 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 44
+halt_pc=0x00000000 NPC.pc=0x8000000c EMU.pc=0x8000000c
+Bus: PASS ifu_req=4 ifu_resp=4 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=boundary/unsupported_funct7 backend=diff verdict=pass stop=rejected pc=0x8000000c inst=0x40150533 cycles=37 retired=3 attempts=4 checks=8 failures=0 delay=random core=68 core_fail=0 extra=44 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.111775 total_seconds=0.214405 bus=pass

@@ -98,6 +98,16 @@ $(CHECKER_BIN): tests/checker_test.cpp csrc/check.h csrc/test_suite.h
 test-library: $(CHECKER_BIN)
 	$(CHECKER_BIN)
 
+# 总线协议监视器：不依赖 Verilator，直接喂合成的合法/违例时序。
+BUS_MONITOR_BIN := build/test-library/bus_monitor_test
+$(BUS_MONITOR_BIN): tests/bus_monitor_test.cpp csrc/bus_monitor.h csrc/check.h
+	@mkdir -p $(dir $@)
+	$(CXX) -std=c++17 -Wall -Wextra -Werror -Icsrc $< -o $@
+
+.PHONY: test-bus-monitor
+test-bus-monitor: $(BUS_MONITOR_BIN)
+	$(BUS_MONITOR_BIN)
+
 # 依次执行，避免并行调度让固定/随机配置同时写同一组验收文件。
 .PHONY: regress
 regress:
@@ -105,6 +115,7 @@ regress:
 	$(MAKE) -f Makefile.cpptest test-csr
 	$(MAKE) -f Makefile.cpptest test-gpio
 	$(MAKE) -f Makefile.cpptest test-library
+	$(MAKE) -f Makefile.cpptest test-bus-monitor
 	$(MAKE) -f Makefile.cpptest test-all
 	$(MAKE) -f Makefile.cpptest test-fixed
 	$(MAKE) -f Makefile.diff difftest

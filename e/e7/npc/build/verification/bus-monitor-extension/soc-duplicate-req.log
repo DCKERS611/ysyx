@@ -1,0 +1,30 @@
+Clock configuration: CPU/SoC=1:1
+Loaded Flash: ../am-kernels/tests/cpu-tests/build/dummy-minirv-ysyxsoc.bin, 374436 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+BUS VIOLATION cycle=5 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=6 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=7 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=8 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=9 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=10 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=11 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=12 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=13 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=14 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=15 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=16 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=17 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=18 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=19 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=20 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=21 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=22 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=23 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION cycle=24 kind=ifu_request_while_pending addr=0x30000000
+BUS VIOLATION ... 后续报告省略
+loading to memory region [0x80000000, 0x80000090)
+FIRST_PSRAM_COMMIT pc=0x80000000 inst=0x00000413 commits=17306
+HIT GOOD TRAP: pc=0x80000040 a0=0x00000000 cycles=3582082
+Statistics (including loader): instructions=17322 cycles=3582082 IPC=0.004836
+Bus: FAIL ifu_req=17322 ifu_resp=17322 lsu_req=9611 lsu_resp=9611 violations=2735466
+RESULT case=dummy-minirv-ysyxsoc.bin backend=soc verdict=fail bus=fail

@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/acceptance/byte_sum.bin: 76 bytes
+PASS: 12 checks
+[ DIFF PASS ] acceptance/byte_sum
+PASS: 306 (18 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 204
+halt_pc=0x80000048 NPC.pc=0x8000004c EMU.pc=0x80000048
+Bus: PASS ifu_req=18 ifu_resp=18 lsu_req=6 lsu_resp=6 violations=0
+RESULT case=acceptance/byte_sum backend=diff verdict=pass stop=ebreak pc=0x80000048 inst=0x00100073 cycles=214 retired=18 attempts=18 checks=12 failures=0 delay=random core=306 core_fail=0 extra=204 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.009582 total_seconds=0.109493 bus=pass

@@ -1,4 +1,5 @@
 #include "cpu_view.h"
+#include "bus_monitor.h"
 #include <cstdio>
 #include <cstdlib>
 #include <optional>
@@ -12,6 +13,8 @@ static uint32_t csr(unsigned address, unsigned funct3, unsigned rd, unsigned sou
 }
 class Test {
     npc::cpu dut;
+    bus_monitor bus;
+    bool bus_started = false;
     uint64_t cycles = 0, retired = 0;
     unsigned cases = 0;
     uint64_t cycle_value() { return dut.rootp->ysyx_00000000__DOT__u_csr__DOT__csr_mcycle; }
@@ -19,9 +22,30 @@ class Test {
     void require(bool ok, const char* message) {
         if (!ok) throw std::runtime_error(std::string(message) + " case=" + std::to_string(cases));
     }
+    void sample_bus() {
+        bus_cycle_sample sample;
+        sample.reset = dut.reset;
+        sample.ifu_req_valid = dut.io_ifu_reqValid;
+        sample.ifu_addr = dut.io_ifu_addr;
+        sample.ifu_resp_valid = dut.io_ifu_respValid;
+        sample.ifu_rdata = dut.io_ifu_rdata;
+        sample.lsu_req_valid = dut.io_lsu_reqValid;
+        sample.lsu_addr = dut.io_lsu_addr;
+        sample.lsu_size = dut.io_lsu_size;
+        sample.lsu_wen = dut.io_lsu_wen;
+        sample.lsu_wdata = dut.io_lsu_wdata;
+        sample.lsu_wmask = dut.io_lsu_wmask;
+        sample.lsu_resp_valid = dut.io_lsu_respValid;
+        sample.lsu_rdata = dut.io_lsu_rdata;
+        sample.commit = npc::commit(dut);
+        sample.pc = npc::pc(dut);
+        sample.inst = npc::inst(dut);
+        bus.sample_cycle(sample, cycles);
+    }
     void tick(bool retire = false, std::optional<uint64_t> cycle_write = {},
               std::optional<uint64_t> retired_write = {}) {
         dut.clock = 0; dut.eval();
+        sample_bus();
         dut.clock = 1; dut.eval();
         cycles = cycle_write.value_or(cycles + 1);
         retired = retired_write.value_or(retired + (retire ? 1 : 0));
@@ -30,6 +54,9 @@ class Test {
     }
 public:
     void reset() {
+        if (bus_started) require(bus.ok(), "bus monitor before CPU reset");
+        bus.reset();
+        bus_started = true;
         dut.clock = 0; dut.reset = 1;
         dut.io_ifu_respValid = 0; dut.io_ifu_rdata = 0;
         dut.io_lsu_respValid = 0; dut.io_lsu_rdata = 0;
@@ -178,6 +205,8 @@ public:
         memory(0x0030A023u,true);  // sw x3,0(x1)
         memory(0x00308023u,true,true); // sb x3,0(x1)
         for(unsigned i=0;i<7;++i) tick();
+        bus.report();
+        require(bus.ok(), "bus monitor");
         std::printf("CSR integration: %u cases PASS\n",cases);
     }
 };

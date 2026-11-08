@@ -1,0 +1,19 @@
+{
+  "cmd": [
+    "build/p1-6/sim",
+    "../am-kernels/kernels/hello/build/hello-minirv-ysyxsoc.bin"
+  ],
+  "config": {
+    "NPC_CPU_CLOCK_RATIO": "1",
+    "NPC_MAX_CYCLES": "600000000",
+    "NPC_SOC_BUS": "1",
+    "NPC_SOC_REF": ""
+  },
+  "exit_code": 0,
+  "expected_exit": 0,
+  "summary": [
+    "HIT GOOD TRAP: pc=0x80000654 a0=0x00000000 cycles=155640849",
+    "Bus: PASS ifu_req=747398 ifu_resp=747398 lsu_req=450050 lsu_resp=450050 violations=0",
+    "RESULT case=hello-minirv-ysyxsoc.bin backend=soc verdict=pass bus=pass"
+  ]
+}

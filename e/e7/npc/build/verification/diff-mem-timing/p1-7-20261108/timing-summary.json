@@ -1,0 +1,16 @@
+{
+  "cases": 23,
+  "all_verdicts_pass": true,
+  "full_words_per_case": 33554432,
+  "sum_memory_seconds_before": 2.5809279999999997,
+  "sum_total_seconds_before": 5.067182999999999,
+  "memory_share_before": 0.5093417782622022,
+  "sum_memory_seconds_after": 0.24162900000000004,
+  "sum_total_seconds_after": 2.741268,
+  "memory_share_after": 0.0881449752450326,
+  "memory_time_reduction_percent": 90.63790233590399,
+  "total_time_reduction_percent": 45.90153937602016,
+  "mean_memory_seconds_before": 0.11221426086956522,
+  "mean_memory_seconds_after": 0.010505608695652174,
+  "result_fields_other_than_time_identical": true
+}

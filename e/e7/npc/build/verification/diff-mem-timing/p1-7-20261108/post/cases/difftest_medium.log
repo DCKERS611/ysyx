@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/difftest/medium.bin: 156 bytes
+PASS: 15 checks
+[ DIFF PASS ] difftest/medium
+PASS: 1377 (81 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 916
+halt_pc=0x80000098 NPC.pc=0x8000009c EMU.pc=0x80000098
+Bus: PASS ifu_req=81 ifu_resp=81 lsu_req=32 lsu_resp=32 violations=0
+RESULT case=difftest/medium backend=diff verdict=pass stop=ebreak pc=0x80000098 inst=0x00100073 cycles=1241 retired=81 attempts=81 checks=15 failures=0 delay=random core=1377 core_fail=0 extra=916 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.010245 total_seconds=0.111830 bus=pass

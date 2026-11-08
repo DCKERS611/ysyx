@@ -51,6 +51,8 @@ void sim_set_verbose(bool enabled);
 unsigned sim_memory_delay();
 std::uint64_t sim_cycles();
 std::uint64_t sim_instructions();
+// 总线协议监视结果：任一违例即 false，入口据此把这次运行判为失败。
+bool sim_bus_ok();
 bool sim_halted();
 std::uint32_t sim_halt_pc();
 

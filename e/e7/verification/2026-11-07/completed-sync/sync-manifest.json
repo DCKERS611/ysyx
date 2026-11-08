@@ -490,8 +490,8 @@
     },
     {
       "path": "npc/tests/difftest.cpp",
-      "sha256": "37c1bc3f90a7830c76e1daff8fb465f8418bb75008b4c44358557c6c37760344",
-      "size": 10499
+      "sha256": "f0586b17a219fdcdfad0b8b075e292e9509d28859dc9b393d9d0e4ccb37e5dfc",
+      "size": 10642
     },
     {
       "path": "npc/tests/run_cpu_tests.py",
@@ -500,13 +500,13 @@
     },
     {
       "path": "npc/tests/Makefile.mk",
-      "sha256": "ce6a893efd1a37bd125b2cb2d9ed6c3e1339b5515b0f6eee68d06f3522ead02c",
-      "size": 6853
+      "sha256": "5e8d2feff232977daa75dfa08f11c8bee1f33975941c85a88274b4584f207575",
+      "size": 7284
     },
     {
       "path": "npc/csrc/sim.cpp",
-      "sha256": "31343ada0558b4b1d656f3799a4f6de1f95d9b5be5f4bbc61bccfedd30d227d2",
-      "size": 10433
+      "sha256": "0173c3902d1d5bb2292bbae6b9a552540cc4eb29cde04d23fbddc6d2b94c344a",
+      "size": 11810
     },
     {
       "path": "npc/csrc/cpu_view.h",
@@ -3330,7 +3330,7 @@
     },
     {
       "path": "npc/build/gpio-tests/gpio-apb.fst",
-      "sha256": "f8e980d8b96fa18d8138902000b22d1a4f7eb9a1bbd44c16e8083f33222141ec",
+      "sha256": "e1f0cb8fffff5173d5efa8a31b4ea23e61d62a1cee724b3df7b5b29fe59290be",
       "size": 16792
     },
     {

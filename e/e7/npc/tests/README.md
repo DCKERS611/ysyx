@@ -19,7 +19,7 @@ Windows `E:\ysyx\e\e7` 是独立副本。完整命令见[阶段测试索引](../
 | L3 | tests/am_main.cpp | bin、可选波形路径；检查 ebreak 和 a0==0 | 用于 AM 程序，不套用到任意手写结果 |
 | L3 | tests/cpu_test.cpp | bin、expect、案例名、可选波形；保存轨迹并执行 EXPECT | 不执行参考模型 |
 | L3 | tests/difftest.cpp | NPC 一拍、EMU 一条，逐提交比较并检查整块内存 | 提交前采样只读，不额外 eval |
-| L3 | tests/soc_main.cpp | VSimTop、Flash 镜像、可选 FST | 独立 SoC 驱动，本轮只搬移，不纳入 RESULT 和独立 NPC 延迟模型 |
+| L3 | tests/soc_main.cpp | VSimTop、Flash 镜像、可选 FST、SoC DiffTest 和总线监视 | 独立 SoC 驱动；`NPC_SOC_REF`、`NPC_SOC_BUS=1` 分别启用附加检查 |
 | 调度 | tests/expectations.h | 解析 EXPECT；把检查加入调用方的 checker 并 report | 保持既有检查数量、顺序与语义 |
 | 调度 | tests/run_cpu_tests.py | 汇编、INJECT、expect 文件、runner 子进程与组汇总 | 只用退出码和 RESULT 判定，不解析 PASS 文案 |
 | 调度 | tests/run_acceptance.py | 三个程序分别运行 NPC、EMU、DiffTest，保存日志和结果表 | 一后端启动失败或超时后继续后续后端 |
@@ -97,7 +97,13 @@ NPC_MEM_DELAY=0 为原 LFSR 随机 1～20 拍，种子为 0xACE1；1～20 为固
 
 DiffTest 先检查循环的尝试预算，再检查周期预算；等于上限便停止，已提交 ebreak 优先正常结束。
 两个 Python 调度器的子进程超时均为 60 秒，只用于防挂死，不替代仿真预算。
-SoC 仍沿用自己的 1e8 周期观察上限，本轮不改验收规则。
+SoC 默认预算为 1000 亿 CPU 周期，可用 `NPC_MAX_CYCLES` 调整。
+
+### SoC 与独立 NPC 的比较边界
+
+SoC DiffTest 在 first PSRAM 提交对齐参考镜像与 GPR。上升沿前采样 PC、指令和提交使能，沿后比较 GPR、下一 PC 或停机 PC。设备读与计数器读只同步本指令的非 x0 目的寄存器。SoC v1 不扫描 PSRAM，也不直接比较计数器值。独立 NPC 的末态仍检查完整 128 MiB，小端主机用全范围字节比较并在失配时逐字定位。`NPC_DIFF_MEM_TIMING=1` 在 RESULT 附加扫描和总耗时。
+
+SimpleBus 监视共用 CPU 上升沿前的样本，用 IFU 回复标识当前指令，允许 LSU 回复与提交同沿，报告无请求提交、未回复提交和重复请求等问题。独立 NPC、CSR 自驱与可选 SoC 入口复用判据。GPIO 自驱按 APB setup/access 和 PREADY 传输完成检查。
 
 ## 案例组与使用时机
 
@@ -112,11 +118,13 @@ SoC 仍沿用自己的 1e8 周期观察上限，本轮不改验收规则。
 | 完整手写 DiffTest | 4+14+2+3，共 23 项 | 改仿真或差分入口后 | difftest、difftest-fixed |
 | acceptance | 3 程序 × NPC/EMU/DiffTest | 改输出协议或调度后 | test-acceptance |
 | 通用库自测 | 含故意失败、零检查和多差异 | 改 check.h 时 | test-library |
+| CSR 定向与差分 | 78 项逐沿检查；两种延迟各 11 项差分 | 改 CSR 或提交控制后 | test-csr、difftest-csr、difftest-csr-fixed |
+| SimpleBus / GPIO APB 监视 | 提交归属、协议负例与 GPIO APB 自驱检查 | 改总线或外设接口后 | test-bus-monitor、test-gpio |
 | 波形 | add/lw/sb 的提交沿、写回与移位掩码 | 改推进顺序和完成事件后 | check-waves |
 | 汇编器 | 编码、范围、标签和输入错误 | 改 mkprog 时 | test_mkprog.py 的 unittest |
 | AM、RV32I | 完整 C 程序和整数指令回归 | 核心重构及最终构建验收 | 索引中 AM/ISA DiffTest 命令 |
 
-regress 依次调用 lint、test-library、test-all、test-fixed、difftest、difftest-fixed、
+regress 依次调用 lint、test-csr、test-gpio、test-library、test-bus-monitor、test-all、test-fixed、difftest、difftest-fixed、
 test-acceptance、check-waves；使用递归配方确保顺序。它不包含完整 AM、RV32I、SoC 或 archbench。
 test-library 中途的故意 FAILED 是自测输入，最终 report 和退出码决定该入口是否通过。
 AM cpu-tests 的汇总过滤存在旧问题，验收要核对各案例，不能只看 make 返回 0。
@@ -151,7 +159,7 @@ programs/functional、boundary、difftest、acceptance 分别保存相应组。
 | E4 npc 与旧源码 | E5/E6/E7 和 WSL 中的 npc/e4 已按用户要求删除；独立 E:\ysyx\e\e4 备份保留，npc/tb 旧源码另保留 |
 | E5/E6 手写案例 | 已作为当前 23 项维护，本轮不改汇编和期望 |
 | E6 npc_test.h、npc_diff.h | 不复活；观察与检查职责由 cpu_view.h/check.h 承担 |
-| SoC | 仍用 VSimTop 和 RTL 控制器，本轮只验证构建，不代表 hello 已验收 |
+| SoC | 用 VSimTop 和 RTL 控制器。P1 的 DiffTest、正常/故障总线监视已有实跑证据，见学习记录 §51 |
 
 ## 重构不变量与维护
 

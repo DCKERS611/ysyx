@@ -1,0 +1,11 @@
+--- vsrc/ysyx_00000000_ifu.v	2026-11-05 21:35:20.895855586 +0800
++++ build/bus-injection/vsrc/ysyx_00000000_ifu.v	2026-11-07 13:34:44.409087228 +0800
+@@ -39,7 +39,7 @@
+     assign inst = rst ? 32'b0 : (fetch_done ? ifu_rdata : inst_saved);
+     assign ifu_raddr = pc;
+     assign ifu_reqValid =
+-        !rst && (state == IDLE) && (!RANDOM_REQ || req_lfsr[0]);
++        !rst && (state == IDLE || state == WAIT) && (!RANDOM_REQ || req_lfsr[0]);
+ 
+     // 仅在拿到访存指令时交付一次任务，具体请求和回复由 LSU 管理
+     assign is_mem = is_load || is_store;

@@ -1,0 +1,26 @@
+python3 tests/run_cpu_tests.py --group csr --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] csr/ids: core=85 steps=5 checks=10 memory=33554432
+[ PASS ] csr/mcycle_carry_and_high_write: core=136 steps=8 checks=9 memory=33554432
+[ PASS ] csr/minstret_carry: core=85 steps=5 checks=8 memory=33554432
+[ PASS ] csr/readonly_write_only: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/readonly_zero_value: core=34 steps=2 checks=7 memory=33554432
+[ PASS ] csr/rv32e_destination: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/rv32e_source: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/six_operations: core=170 steps=10 checks=13 memory=33554432
+[ PASS ] csr/unknown_read: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/unknown_write_only: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/zero_destination_and_source: core=170 steps=10 checks=9 memory=33554432
+csr: 11/11 programs passed
+NPC_MEM_DELAY=1 python3 tests/run_cpu_tests.py --group csr --runner build/difftest/difftest --output-dir build/difftest/programs
+[ PASS ] csr/ids: core=85 steps=5 checks=10 memory=33554432
+[ PASS ] csr/mcycle_carry_and_high_write: core=136 steps=8 checks=9 memory=33554432
+[ PASS ] csr/minstret_carry: core=85 steps=5 checks=8 memory=33554432
+[ PASS ] csr/readonly_write_only: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/readonly_zero_value: core=34 steps=2 checks=7 memory=33554432
+[ PASS ] csr/rv32e_destination: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/rv32e_source: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/six_operations: core=170 steps=10 checks=13 memory=33554432
+[ PASS ] csr/unknown_read: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/unknown_write_only: core=17 steps=1 checks=7 memory=33554432
+[ PASS ] csr/zero_destination_and_source: core=170 steps=10 checks=9 memory=33554432
+csr: 11/11 programs passed

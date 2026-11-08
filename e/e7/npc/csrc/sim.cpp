@@ -1,3 +1,4 @@
+#include "bus_monitor.h"
 #include "cpu_view.h"
 #include "sim.h"
 #include "dpi.h"
@@ -13,6 +14,9 @@ static uint64_t g_cycles = 0;
 static uint64_t g_attempts = 0;
 static uint32_t last_pc = 0, last_inst = 0;
 static bool finish_reported = false;
+
+// 总线协议监视器：只观察 step() 里的握手信号，不参与仿真行为。
+static bus_monitor g_bus;
 static bool ifu_pending = false;       // 是否有尚未回复的请求
 static uint32_t ifu_saved_addr = 0;    // 已接收请求的地址
 static unsigned ifu_wait_left = 0;     // 距离回复还需等待的周期数
@@ -62,6 +66,11 @@ static uint64_t g_instructions = 0;
 uint64_t sim_instructions()
 {
     return g_instructions;
+}
+
+bool sim_bus_ok()
+{
+    return g_bus.ok();
 }
 
 // 波形相关对象只在带 FST 的构建中存在。
@@ -150,6 +159,7 @@ static void reset_sim(Vysyx_00000000& dut)
     lsu_saved_wmask = 0;
     lsu_wait_left = 0;
     mem_lfsr = 0xACE1u;
+    g_bus.reset();
 
     dut.clock = 0;
     eval_step(dut);
@@ -193,6 +203,26 @@ step_event sim_session::step()
     if (npc::illegal(dut)) {
         return step_event::rejected;
     }
+
+    // 与 CPU 上升沿前的总线输入/提交信号一起采样，回复可能与提交同沿。
+    bus_cycle_sample bus_sample;
+    bus_sample.reset = dut.reset;
+    bus_sample.ifu_req_valid = dut.io_ifu_reqValid;
+    bus_sample.ifu_addr = dut.io_ifu_addr;
+    bus_sample.ifu_resp_valid = dut.io_ifu_respValid;
+    bus_sample.ifu_rdata = dut.io_ifu_rdata;
+    bus_sample.lsu_req_valid = dut.io_lsu_reqValid;
+    bus_sample.lsu_addr = dut.io_lsu_addr;
+    bus_sample.lsu_size = dut.io_lsu_size;
+    bus_sample.lsu_wen = dut.io_lsu_wen;
+    bus_sample.lsu_wdata = dut.io_lsu_wdata;
+    bus_sample.lsu_wmask = dut.io_lsu_wmask;
+    bus_sample.lsu_resp_valid = dut.io_lsu_respValid;
+    bus_sample.lsu_rdata = dut.io_lsu_rdata;
+    bus_sample.commit = executing;
+    bus_sample.pc = old_pc;
+    bus_sample.inst = inst;
+    g_bus.sample_cycle(bus_sample, g_cycles);
 
     // 存储器采样本拍取指地址
     bool fetch_resp = false;
@@ -274,7 +304,10 @@ step_event sim_session::step()
                     old_pc, inst, static_cast<uint32_t>(npc::pc(dut)));
     }
 
-    if (sim_halted()) return step_event::halted;
+    if (sim_halted()) {
+        g_bus.on_halt(g_cycles);
+        return step_event::halted;
+    }
     return executing ? step_event::committed : step_event::waiting;
 }
 
@@ -359,13 +392,19 @@ void sim_print_result(const char* case_name, const char* backend,
     char delay[16] = "random";
     if (run.mem_delay != 0)
         std::snprintf(delay, sizeof(delay), "fixed:%u", run.mem_delay);
+
+    // 停机检查在 step() 检测到 halt 时已执行；此处调用保持入口兼容。
+    if (run.reason == stop_reason::ebreak) g_bus.on_halt(run.cycles);
+    g_bus.report();
+
     std::printf("RESULT case=%s backend=%s verdict=%s stop=%s pc=0x%08x inst=0x%08x "
-                "cycles=%llu retired=%llu attempts=%llu checks=%u failures=%u delay=%s%s%s\n",
-                case_name, backend, passed ? "pass" : "fail", stop_name(run.reason),
+                "cycles=%llu retired=%llu attempts=%llu checks=%u failures=%u delay=%s%s%s bus=%s\n",
+                case_name, backend, (passed && g_bus.ok()) ? "pass" : "fail", stop_name(run.reason),
                 run.stop_pc, run.stop_inst,
                 static_cast<unsigned long long>(run.cycles),
                 static_cast<unsigned long long>(run.retired),
                 static_cast<unsigned long long>(run.attempts), checks, failures, delay,
                 extra != nullptr && extra[0] != '\0' ? " " : "",
-                extra != nullptr ? extra : "");
+                extra != nullptr ? extra : "",
+                g_bus.ok() ? "pass" : "fail");
 }

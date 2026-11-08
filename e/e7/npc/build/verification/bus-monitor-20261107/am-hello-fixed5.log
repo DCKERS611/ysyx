@@ -1,0 +1,9 @@
+Hello, AbstractMachine!
+mainargs = ''.
+Loaded /home/ysyx/ysyx-workbench/am-kernels/kernels/hello/build/hello-minirv-npc.bin: 297472 bytes
+Result: halt_pc=0x80000504 a0=0x00000000 ra=0x80000500 cycles=276562
+instructions=30467 cycles=276562 IPC=0.110163
+HIT GOOD TRAP
+PASS: 2 checks
+Bus: PASS ifu_req=30467 ifu_resp=30467 lsu_req=18752 lsu_resp=18752 violations=0
+RESULT case=hello-minirv-npc.bin backend=am verdict=pass stop=ebreak pc=0x80000504 inst=0x00100073 cycles=276562 retired=30467 attempts=30467 checks=2 failures=0 delay=fixed:5 bus=pass

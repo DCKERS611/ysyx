@@ -1,0 +1,10 @@
+BUS VIOLATION cycle=2 kind=ifu_request_while_pending addr=0x80000004
+BUS VIOLATION cycle=5 kind=ifu_addr_unaligned addr=0x80000002
+BUS VIOLATION cycle=2 kind=lsu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=1 kind=lsu_size_illegal addr=0x80000000
+BUS VIOLATION cycle=1 kind=lsu_word_unaligned addr=0x80000002
+BUS VIOLATION cycle=1 kind=lsu_half_unaligned addr=0x80000003
+BUS VIOLATION cycle=7 kind=lsu_response_without_request addr=0x00000000
+BUS VIOLATION cycle=9 kind=halt_with_pending_ifu addr=0x00000000
+BUS VIOLATION cycle=9 kind=halt_with_pending_lsu addr=0x00000000
+PASS: 15 checks

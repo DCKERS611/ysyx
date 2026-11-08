@@ -10,4 +10,7 @@ bool pmem_load_file(const char* path);
 extern "C" int pmem_read(int raddr);
 extern "C" void pmem_write(int waddr, int wdata, char wmask);
 
+// 供测试库只读扫描完整物理内存；调用方不得通过该视图修改内存。
+const uint8_t* pmem_memory_bytes();
+
 #endif

@@ -1,0 +1,35 @@
+[ RUN ] functional/arithmetic
+Loaded build/regress/programs/functional/arithmetic.bin: 20 bytes
+BUS VIOLATION cycle=1 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=2 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=3 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=4 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=5 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=6 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=7 kind=ifu_request_while_pending addr=0x80000000
+BUS VIOLATION cycle=8 kind=ifu_request_while_pending addr=0x80000000
+pc=0x80000000 inst=0x00500093 --> next_pc=0x80000004
+BUS VIOLATION cycle=10 kind=ifu_request_while_pending addr=0x80000004
+BUS VIOLATION cycle=11 kind=ifu_request_while_pending addr=0x80000004
+BUS VIOLATION cycle=12 kind=ifu_request_while_pending addr=0x80000004
+BUS VIOLATION cycle=13 kind=ifu_request_while_pending addr=0x80000004
+pc=0x80000004 inst=0x00500093 --> next_pc=0x80000008
+BUS VIOLATION cycle=15 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=16 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=17 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=18 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=19 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=20 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=21 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION cycle=22 kind=ifu_request_while_pending addr=0x80000008
+BUS VIOLATION ... 后续同类报告省略
+pc=0x80000008 inst=0x00700113 --> next_pc=0x8000000c
+pc=0x8000000c inst=0x002081b3 --> next_pc=0x80000010
+pc=0x80000010 inst=0x12345537 --> next_pc=0x80000014
+ebreak @ pc=0x80000014
+pc=0x80000014 inst=0x00100073 --> next_pc=0x80000018
+FAIL functional/arithmetic.halt_pc: actual=0x80000014 expect=0x80000010
+FAIL functional/arithmetic.instructions: actual=0x00000006 expect=0x00000005
+FAILED: 2/11
+Bus: FAIL ifu_req=7 ifu_resp=6 lsu_req=0 lsu_resp=0 violations=37
+RESULT case=functional/arithmetic backend=npc verdict=fail stop=ebreak pc=0x80000014 inst=0x00100073 cycles=43 retired=6 attempts=6 checks=11 failures=2 delay=random bus=fail

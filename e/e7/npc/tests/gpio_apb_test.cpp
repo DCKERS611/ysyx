@@ -6,12 +6,117 @@
 #include <cstring>
 #include <random>
 
+class apb_monitor {
+public:
+    void reset() {
+        setup_seen_ = false;
+        waiting_ = false;
+    }
+    void sample(bool reset_active, bool psel, bool penable, bool pwrite,
+                uint32_t paddr, uint32_t pwdata, uint8_t pstrb,
+                bool pready, bool pslverr, uint64_t cycle) {
+        if (reset_active) {
+            reset();
+            return;
+        }
+        if (pready && (!psel || !penable))
+            violation("ready_outside_access", cycle);
+        if (pslverr)
+            violation("unexpected_slave_error", cycle);
+        if (!psel) {
+            // 这是其他 APB 从设备或未选中探针的总线周期，不属于本 GPIO。
+            if (waiting_) violation("access_abandoned_before_ready", cycle);
+            setup_seen_ = waiting_ = false;
+            return;
+        }
+        if (!penable) {
+            if (waiting_) {
+                violation("access_withdrawn_before_ready", cycle);
+            } else {
+                saved_addr_ = paddr;
+                saved_data_ = pwdata;
+                saved_strb_ = pstrb;
+                saved_write_ = pwrite;
+                setup_seen_ = true;
+            }
+            return;
+        }
+
+        if (!setup_seen_ && !waiting_)
+            violation("access_without_setup", cycle);
+        if (paddr != saved_addr_ || pwdata != saved_data_ ||
+            pstrb != saved_strb_ || pwrite != saved_write_)
+            violation("control_changed_during_access", cycle);
+        if (pready) {
+            ++transactions_;
+            setup_seen_ = waiting_ = false;
+        } else {
+            setup_seen_ = false;
+            waiting_ = true;
+        }
+    }
+    bool ok() const { return violations_ == 0; }
+    unsigned transactions() const { return transactions_; }
+    unsigned violations() const { return violations_; }
+    void report() const {
+        std::printf("APB monitor: %s transactions=%u violations=%u\n",
+                    ok() ? "PASS" : "FAIL", transactions_, violations_);
+    }
+private:
+    void violation(const char* kind, uint64_t cycle) {
+        ++violations_;
+        std::printf("APB VIOLATION cycle=%llu kind=%s\n",
+                    static_cast<unsigned long long>(cycle), kind);
+    }
+    bool setup_seen_ = false, waiting_ = false, saved_write_ = false;
+    uint32_t saved_addr_ = 0, saved_data_ = 0;
+    uint8_t saved_strb_ = 0;
+    unsigned transactions_ = 0, violations_ = 0;
+};
+
+static void apb_monitor_self_test(checker& checks) {
+    const unsigned failures_before = checks.failures();
+    apb_monitor missing_setup;
+    missing_setup.sample(false, true, true, false, 0, 0, 0,
+                         true, false, 1);
+    checks.is_true("APB监视器拒绝缺少setup的access", !missing_setup.ok());
+
+    apb_monitor changed_during_wait;
+    changed_during_wait.sample(false, true, false, true, 0x20001000, 0x12345678, 15,
+                               false, false, 1);
+    changed_during_wait.sample(false, true, true, true, 0x20001000, 0x12345678, 15,
+                               false, false, 2);
+    changed_during_wait.sample(false, true, true, true, 0x20001000, 0x87654321, 15,
+                               true, false, 3);
+    checks.is_true("APB等待期间控制变化触发违例", !changed_during_wait.ok());
+
+    apb_monitor unselected;
+    unselected.sample(false, false, false, true, 0x20001000, 0xffffffff, 15,
+                      false, false, 1);
+    unselected.sample(false, false, true, true, 0x20001000, 0xffffffff, 15,
+                      false, false, 2);
+    checks.is_true("未选中的从设备周期不算GPIO事务", unselected.ok());
+
+    apb_monitor reset_during_setup;
+    reset_during_setup.sample(false, true, false, true, 0x20001008, 0x12345678, 15,
+                              false, false, 1);
+    reset_during_setup.sample(true, true, true, true, 0x20001008, 0x12345678, 15,
+                              false, false, 2);
+    reset_during_setup.sample(false, false, false, false, 0, 0, 0,
+                              false, false, 3);
+    checks.is_true("reset清除APB阶段且不制造违例", reset_during_setup.ok());
+    std::printf("APB monitor negative probes: %s\n",
+                checks.failures() == failures_before ? "PASS" : "FAIL");
+}
+
 class gpio_test {
     Vmygpio_top_apb dut;
     VerilatedFstC trace;
     bool tracing = false;
     uint64_t trace_time = 0;
     checker checks;
+    apb_monitor bus;
+    uint64_t bus_cycles = 0;
     std::array<uint8_t, 2> led_bytes{};
     std::array<uint8_t, 4> seg_bytes{};
     unsigned transactions = 0;
@@ -22,6 +127,9 @@ class gpio_test {
     }
     void edge() {
         dut.clock = 0; evaluate();
+        bus.sample(dut.reset, dut.in_psel, dut.in_penable, dut.in_pwrite,
+                   dut.in_paddr, dut.in_pwdata, dut.in_pstrb,
+                   dut.in_pready, dut.in_pslverr, bus_cycles++);
         dut.clock = 1; evaluate();
         dut.clock = 0; evaluate();
     }
@@ -98,6 +206,7 @@ class gpio_test {
     }
 public:
     int run(const char* wave) {
+        apb_monitor_self_test(checks);
         if (wave) {
             Verilated::traceEverOn(true);
             dut.trace(&trace, 99); trace.open(wave); tracing = true;
@@ -141,8 +250,15 @@ public:
         reset();
         dut.final();
         if (tracing) trace.close();
-        std::printf("GPIO_APB transactions=%u\n", transactions);
-        return checks.report();
+        std::printf("GPIO_APB driver_transactions=%u\n", transactions);
+        const int check_result = checks.report();
+        bus.report();
+        const bool passed = check_result == 0 && bus.ok();
+        std::printf("RESULT case=gpio_apb backend=apb verdict=%s transactions=%u "
+                    "violations=%u checks=%u failures=%u\n",
+                    passed ? "pass" : "fail", bus.transactions(), bus.violations(),
+                    checks.total(), checks.failures());
+        return passed ? 0 : 1;
     }
 };
 

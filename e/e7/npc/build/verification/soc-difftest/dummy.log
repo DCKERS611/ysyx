@@ -1,0 +1,8 @@
+Clock configuration: CPU/SoC=1:1
+Loaded Flash: ../am-kernels/tests/cpu-tests/build/dummy-minirv-ysyxsoc.bin, 374436 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to memory region [0x80000000, 0x80000090)
+FIRST_PSRAM_COMMIT pc=0x80000000 inst=0x00000413 commits=17306
+HIT GOOD TRAP: pc=0x80000040 a0=0x00000000 cycles=3582082
+Statistics (including loader): instructions=17322 cycles=3582082 IPC=0.004836
+RESULT case=dummy-minirv-ysyxsoc.bin backend=socdiff verdict=pass commits=17 mismatches=0 halt_pc=0x80000040 device_reads=0 counter_reads=0

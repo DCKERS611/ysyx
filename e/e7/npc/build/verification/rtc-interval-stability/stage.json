@@ -1,0 +1,58 @@
+{
+  "stage": "complete",
+  "criterion": "two independent identical-image runs per ratio; mean 1s +/-5%; guest lateness <1s; full RTC text",
+  "results": [
+    {
+      "k": 1,
+      "q16": 20100,
+      "image_sha256": "5d1d361862c44b77800ac82654f859e244f19dfadd321a7bc4b29bc2e0b2ae6e",
+      "source_directory": "npc/build/verification/rtc-fullprintf-20261106-210102",
+      "runs": [
+        {
+          "trial": 1,
+          "mean_seconds": 0.9724513422,
+          "interval_range_seconds": [
+            0.896787685,
+            1.026463862
+          ],
+          "max_late_us": 44872
+        },
+        {
+          "trial": 2,
+          "mean_seconds": 0.9645711880000001,
+          "interval_range_seconds": [
+            0.884277717,
+            1.009658724
+          ],
+          "max_late_us": 44872
+        }
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 6929,
+      "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+      "source_directory": "npc/build/verification/rtc-k12-cache-phase-20261107",
+      "runs": [
+        {
+          "trial": 2,
+          "mean_seconds": 0.9676074982999999,
+          "interval_range_seconds": [
+            0.837327658,
+            1.032615182
+          ],
+          "max_late_us": 137474
+        },
+        {
+          "trial": 3,
+          "mean_seconds": 0.9940958558999998,
+          "interval_range_seconds": [
+            0.864182646,
+            1.028494842
+          ],
+          "max_late_us": 137474
+        }
+      ]
+    }
+  ]
+}

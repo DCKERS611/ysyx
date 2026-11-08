@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/functional/call_return.bin: 28 bytes
+PASS: 17 checks
+[ DIFF PASS ] functional/call_return
+PASS: 119 (7 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 78
+halt_pc=0x80000010 NPC.pc=0x80000014 EMU.pc=0x80000010
+Bus: PASS ifu_req=7 ifu_resp=7 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=functional/call_return backend=diff verdict=pass stop=ebreak pc=0x80000010 inst=0x00100073 cycles=59 retired=7 attempts=7 checks=17 failures=0 delay=random core=119 core_fail=0 extra=78 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.112529 total_seconds=0.235347 bus=pass

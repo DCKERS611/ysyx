@@ -17,6 +17,12 @@ static uint64_t get_time()
     return sim_cycles() * 1000000ull / NPC_FREQ_HZ ;
 }
 
+// 返回 PMEM 的只读字节视图，供全范围比较使用。
+const uint8_t* pmem_memory_bytes()
+{
+    return reinterpret_cast<const uint8_t*>(M);
+}
+
 void pmem_load(const uint32_t* program, size_t count)
 {
     constexpr size_t capacity = sizeof(M) / sizeof(M[0]);

@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/x0_readonly.bin: 56 bytes
+PASS: 23 checks
+[ DIFF PASS ] boundary/x0_readonly
+PASS: 204 (12 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 135
+halt_pc=0x80000034 NPC.pc=0x80000038 EMU.pc=0x80000034
+Bus: PASS ifu_req=12 ifu_resp=12 lsu_req=3 lsu_resp=3 violations=0
+RESULT case=boundary/x0_readonly backend=diff verdict=pass stop=ebreak pc=0x80000034 inst=0x00100073 cycles=129 retired=12 attempts=12 checks=23 failures=0 delay=random core=204 core_fail=0 extra=135 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.010084 total_seconds=0.157444 bus=pass

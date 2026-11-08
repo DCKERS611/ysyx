@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/functional/arithmetic.bin: 20 bytes
+PASS: 11 checks
+[ DIFF PASS ] functional/arithmetic
+PASS: 85 (5 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 57
+halt_pc=0x80000010 NPC.pc=0x80000014 EMU.pc=0x80000010
+Bus: PASS ifu_req=5 ifu_resp=5 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=functional/arithmetic backend=diff verdict=pass stop=ebreak pc=0x80000010 inst=0x00100073 cycles=43 retired=5 attempts=5 checks=11 failures=0 delay=random core=85 core_fail=0 extra=57 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.011489 total_seconds=0.168733 bus=pass

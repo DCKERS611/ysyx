@@ -1,0 +1,3 @@
+build/verification/p1-8/csr/csr_test
+Bus: PASS ifu_req=4 ifu_resp=3 lsu_req=3 lsu_resp=3 violations=0
+CSR integration: 78 cases PASS

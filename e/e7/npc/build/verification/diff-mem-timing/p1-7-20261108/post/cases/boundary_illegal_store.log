@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/illegal_store.bin: 24 bytes
+PASS: 8 checks
+[ DIFF PASS ] boundary/illegal_store
+PASS: 85 (5 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 56
+halt_pc=0x00000000 NPC.pc=0x80000010 EMU.pc=0x80000010
+Bus: PASS ifu_req=5 ifu_resp=4 lsu_req=1 lsu_resp=1 violations=0
+RESULT case=boundary/illegal_store backend=diff verdict=pass stop=rejected pc=0x80000010 inst=0x0100a023 cycles=46 retired=4 attempts=5 checks=8 failures=0 delay=random core=85 core_fail=0 extra=56 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.009188 total_seconds=0.110713 bus=pass

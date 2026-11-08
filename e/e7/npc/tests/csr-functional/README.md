@@ -13,3 +13,5 @@
 没有更改计数器复位值、CSR RTL、CPU倍率或timer换算系数。
 
 results保存原始构建/运行日志、实际退出码与耗时、反汇编和机器核验summary.json。Windows保留同相对路径；build为编译产物未同步。
+
+11-08 的人工波形复盘使用同一个 id 程序的独立 NPC 镜像，固定一拍回复。原波形和运行日志保存在 `npc/build/verification/csr-marchid-review/`。指令 `csrr s0, marchid` 位于 `0x800002a8`，在 `2251138 ps` 提交后 `rf[8]` 更新为 `0x05F63D25`。本次人工核对见 E7 学习记录 §54。

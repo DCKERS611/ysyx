@@ -1,0 +1,2322 @@
+{
+  "task": "E7 P1-9 full-printf RTC interval stability",
+  "evidence_scope": "Historical WSL Ubuntu-22.04 logs; no simulator launched for this analysis.",
+  "full_printf_identification": {
+    "run_target": "rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+    "guest_entry": "npc/tests/soc-timing/full-printf/rtc_entry.c includes the canonical am-tests rtc.c",
+    "stdout_requirements_observed": [
+      "RTC_FORMAT_PROBE -2147483648 4294967295 07 deadbeef ok Z %",
+      "11 full date/time printf lines for seconds 1 through 11",
+      "TIMER_CONFIG_OK with CPU frequency and Q16 coefficient",
+      "RTC_DIAG max_late_us"
+    ],
+    "cache_phase_trial2_build_log_sha256": "cf7b8efd1341161857b4980faf4dd62cb504f63b4ce3e1a2e71b662c13f967da"
+  },
+  "original_acceptance": {
+    "mean": "each run has 10 observed intervals and its mean is within 1s +/-5%",
+    "guest_lateness": "each run RTC_DIAG max_late_us < 1000000",
+    "per_interval_acceptance_threshold": null,
+    "project_verifier_report": "npc/build/verification/rtc-interval-stability/stage.json"
+  },
+  "p1_three_run_status": {
+    "status": "PARTIAL",
+    "required_same_q_identical_image_runs": 3,
+    "available_same_q_identical_image_runs": 2,
+    "passing_runs": 2,
+    "q16": 6929,
+    "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+    "reason": "Only two matching full-printf runs exist in WSL evidence; no third matching Q16/image run was found, and this analysis did not launch a simulator."
+  },
+  "cache_phase_environment": {
+    "launch": {
+      "pid": 163696,
+      "cpu": 2,
+      "max_trials": 3,
+      "initial_q16": 8000,
+      "max_cycles_per_run": 4000000000,
+      "simulator": "/home/ysyx/ysyx-workbench/npc/build/verification/rtc-k12-cache-phase-20261107/sim",
+      "simulator_sha256": "71aaf5e40551ffea0402ae48e4da35d516605a1980e11c39c8bc2428395b463f",
+      "sim_build_commands": [
+        "make -f Makefile.soc BUILD_DIR=build/soc-rtc-fast build",
+        "make -C build/soc-rtc-fast/obj_dir -B -j2 -f VSimTop.mk OPT_FAST=-O3"
+      ],
+      "phase_equivalence_ratios": [
+        1,
+        12,
+        1000
+      ]
+    },
+    "host_affinity": {
+      "cpu_affinity": [
+        2
+      ]
+    },
+    "launch_file_sha256": "a82e8de9fe8044350c235fd80eced5d29ecfae49ba15cd43bba261395994d4d2"
+  },
+  "same_q_same_image_groups": [
+    {
+      "k": 1,
+      "q16": 20100,
+      "image_sha256": "5d1d361862c44b77800ac82654f859e244f19dfadd321a7bc4b29bc2e0b2ae6e",
+      "run_count": 2,
+      "passing_run_count": 2,
+      "runs": [
+        "rtc-wall-q20100-trial1-k1",
+        "rtc-wall-q20100-trial2-k1"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 6000,
+      "image_sha256": "fcd233ded48497a309f80cc1013b07336014033a96d89429999ac37f6dd08254",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q6000-trial1-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 6929,
+      "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+      "run_count": 2,
+      "passing_run_count": 2,
+      "runs": [
+        "rtc-wall-q6929-trial2-k12",
+        "rtc-wall-q6929-trial3-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 7300,
+      "image_sha256": "7616ce771d9b749853bf167978114db59c7be187d0e31629359c2166a302ba50",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q7300-trial1-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 8000,
+      "image_sha256": "0398b83a3f72d3d14aa2b1b7d206f97036d1f99f77a38e0cfd892f41840386c8",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q8000-trial1-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "run_count": 6,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q8000-trial1-k12",
+        "rtc-wall-q8000-trial2-k12",
+        "rtc-wall-q8000-trial3-k12",
+        "rtc-wall-q8000-trial4-k12",
+        "rtc-wall-q8000-trial5-k12",
+        "rtc-wall-q8000-trial6-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 8000,
+      "image_sha256": "6d72477f81b28a6745f388300291d62ad533e3e90938fbff292825295daa7345",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q8000-trial1-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 8619,
+      "image_sha256": "da76e1400746fea13fa4db599125cc295d05d7d71a8de5c80520b750bb30a6c0",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q8619-trial2-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 8684,
+      "image_sha256": "627132dd4bb0bba7e655ae0c05da648f5582ec6ba80e7574fd327ab478b1d151",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q8684-trial2-k12"
+      ]
+    },
+    {
+      "k": 12,
+      "q16": 15000,
+      "image_sha256": "3b0ce33422921955c1e82776c7a04dc07ca72998b8769a5b6fdceb43a31c913c",
+      "run_count": 1,
+      "passing_run_count": 0,
+      "runs": [
+        "rtc-wall-q15000-trial1-k12"
+      ]
+    }
+  ],
+  "full_printf_runs": [
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-203655",
+      "run": "rtc-wall-q6000-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 6000,
+      "image_sha256": "fcd233ded48497a309f80cc1013b07336014033a96d89429999ac37f6dd08254",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.4364526682,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.362164526,
+        "max_seconds": 1.481783153,
+        "mean_seconds": 1.4364526682,
+        "population_stddev_seconds": 0.04358595974166426,
+        "range_seconds": 0.11961862700000014,
+        "mean_offset_from_1s_seconds": 0.43645266820000006
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.476447462,
+          "deviation_from_1s_seconds": 0.4764474620000001,
+          "deviation_from_run_mean_seconds": 0.03999479380000004
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.480199775,
+          "deviation_from_1s_seconds": 0.480199775,
+          "deviation_from_run_mean_seconds": 0.043747106799999935
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.470067842,
+          "deviation_from_1s_seconds": 0.47006784199999996,
+          "deviation_from_run_mean_seconds": 0.0336151737999999
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.395379941,
+          "deviation_from_1s_seconds": 0.39537994100000007,
+          "deviation_from_run_mean_seconds": -0.04107272719999999
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.362164526,
+          "deviation_from_1s_seconds": 0.36216452599999993,
+          "deviation_from_run_mean_seconds": -0.07428814220000013
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.453962783,
+          "deviation_from_1s_seconds": 0.4539627829999999,
+          "deviation_from_run_mean_seconds": 0.017510114799999865
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.432191583,
+          "deviation_from_1s_seconds": 0.43219158300000005,
+          "deviation_from_run_mean_seconds": -0.004261085200000014
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.367863592,
+          "deviation_from_1s_seconds": 0.36786359199999996,
+          "deviation_from_run_mean_seconds": -0.0685890762000001
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.444466025,
+          "deviation_from_1s_seconds": 0.4444660250000001,
+          "deviation_from_run_mean_seconds": 0.008013356800000038
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.481783153,
+          "deviation_from_1s_seconds": 0.4817831530000001,
+          "deviation_from_run_mean_seconds": 0.045330484800000015
+        }
+      ],
+      "intervals_seconds": [
+        1.476447462,
+        1.480199775,
+        1.470067842,
+        1.395379941,
+        1.362164526,
+        1.453962783,
+        1.432191583,
+        1.367863592,
+        1.444466025,
+        1.481783153
+      ],
+      "max_late_us": 118468,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "8dd4e0e41a7a43825582f2079601c26156ba9391a1c0d84840c84e7e04cf640e",
+      "timestamps_file_sha256": "49c1d2a53033f0f089fc813a354b23edf6edc84fa0fe89bb7de20b9060a7380b",
+      "stdout_file_sha256": "aedd80ec7bcbfec7a295f9eae4c40bc1aa086ab7f33415df4d2e122c187fd1b3",
+      "build_log_sha256": "3f87ca5c58e908040db4db62da1cbe70c8fe68b3e1d40a2c69431100ec215fcd"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-203655",
+      "run": "rtc-wall-q8619-trial2-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8619,
+      "image_sha256": "da76e1400746fea13fa4db599125cc295d05d7d71a8de5c80520b750bb30a6c0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.0123597127,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.97062088,
+        "max_seconds": 1.062875646,
+        "mean_seconds": 1.0123597127,
+        "population_stddev_seconds": 0.03686655464774934,
+        "range_seconds": 0.09225476599999993,
+        "mean_offset_from_1s_seconds": 0.012359712699999914
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.97062088,
+          "deviation_from_1s_seconds": -0.02937911999999998,
+          "deviation_from_run_mean_seconds": -0.041738832699999895
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.06236798,
+          "deviation_from_1s_seconds": 0.0623679800000001,
+          "deviation_from_run_mean_seconds": 0.050008267300000186
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 0.986504875,
+          "deviation_from_1s_seconds": -0.013495125000000052,
+          "deviation_from_run_mean_seconds": -0.025854837699999966
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 0.985279786,
+          "deviation_from_1s_seconds": -0.01472021400000001,
+          "deviation_from_run_mean_seconds": -0.027079926699999923
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 0.9860031,
+          "deviation_from_1s_seconds": -0.013996899999999979,
+          "deviation_from_run_mean_seconds": -0.026356612699999893
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 0.991218587,
+          "deviation_from_1s_seconds": -0.008781413000000016,
+          "deviation_from_run_mean_seconds": -0.02114112569999993
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 0.976759675,
+          "deviation_from_1s_seconds": -0.02324032499999995,
+          "deviation_from_run_mean_seconds": -0.035600037699999865
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.049917177,
+          "deviation_from_1s_seconds": 0.04991717699999998,
+          "deviation_from_run_mean_seconds": 0.037557464300000065
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.052049421,
+          "deviation_from_1s_seconds": 0.052049420999999985,
+          "deviation_from_run_mean_seconds": 0.03968970830000007
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.062875646,
+          "deviation_from_1s_seconds": 0.06287564599999995,
+          "deviation_from_run_mean_seconds": 0.05051593330000004
+        }
+      ],
+      "intervals_seconds": [
+        0.97062088,
+        1.06236798,
+        0.986504875,
+        0.985279786,
+        0.9860031,
+        0.991218587,
+        0.976759675,
+        1.049917177,
+        1.052049421,
+        1.062875646
+      ],
+      "max_late_us": 1682633,
+      "mean_acceptance_pass": true,
+      "late_acceptance_pass": false,
+      "baseline_run_pass": false,
+      "source_history_trial": 2,
+      "result_file_sha256": "f4ca82555503378c11d666eac522274c1907ae8ea9685b9d46118bf114e11912",
+      "timestamps_file_sha256": "1a7ac87c90e1f0f20219023a251c19569947a2c2122125c8b2febb9698e3d732",
+      "stdout_file_sha256": "1448d1e305aa7313b7c82e226dec403fca594766c82605cbd44c5f04d4f7c528",
+      "build_log_sha256": "5fccc3f0fc96800befbb92b09cab8ec911840639423ed826bcf6662098ea7e4f"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-210102",
+      "run": "rtc-wall-q7300-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 7300,
+      "image_sha256": "7616ce771d9b749853bf167978114db59c7be187d0e31629359c2166a302ba50",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.1122972807,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.996136048,
+        "max_seconds": 1.348617452,
+        "mean_seconds": 1.1122972807,
+        "population_stddev_seconds": 0.11524135393234532,
+        "range_seconds": 0.35248140400000005,
+        "mean_offset_from_1s_seconds": 0.1122972807
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.996136048,
+          "deviation_from_1s_seconds": -0.003863952000000004,
+          "deviation_from_run_mean_seconds": -0.1161612327
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.066056634,
+          "deviation_from_1s_seconds": 0.06605663399999995,
+          "deviation_from_run_mean_seconds": -0.046240646700000054
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.237425214,
+          "deviation_from_1s_seconds": 0.23742521399999994,
+          "deviation_from_run_mean_seconds": 0.12512793329999994
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.016557589,
+          "deviation_from_1s_seconds": 0.01655758900000004,
+          "deviation_from_run_mean_seconds": -0.09573969169999996
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.013123063,
+          "deviation_from_1s_seconds": 0.013123063000000101,
+          "deviation_from_run_mean_seconds": -0.0991742176999999
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.233254296,
+          "deviation_from_1s_seconds": 0.23325429599999992,
+          "deviation_from_run_mean_seconds": 0.12095701529999991
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.040863717,
+          "deviation_from_1s_seconds": 0.04086371699999991,
+          "deviation_from_run_mean_seconds": -0.07143356370000009
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.033050861,
+          "deviation_from_1s_seconds": 0.03305086099999999,
+          "deviation_from_run_mean_seconds": -0.07924641970000001
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.137887933,
+          "deviation_from_1s_seconds": 0.13788793300000002,
+          "deviation_from_run_mean_seconds": 0.025590652300000016
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.348617452,
+          "deviation_from_1s_seconds": 0.34861745200000005,
+          "deviation_from_run_mean_seconds": 0.23632017130000005
+        }
+      ],
+      "intervals_seconds": [
+        0.996136048,
+        1.066056634,
+        1.237425214,
+        1.016557589,
+        1.013123063,
+        1.233254296,
+        1.040863717,
+        1.033050861,
+        1.137887933,
+        1.348617452
+      ],
+      "max_late_us": 172108,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "91f064eac5da8323b28eb23af0dd6e58e9d2dec6889d7e447a7317ea27de6212",
+      "timestamps_file_sha256": "02bfc8384a522937a9cbd7ea5599d1c18fc641a0799b220d4e75199d717cc8e4",
+      "stdout_file_sha256": "004b9c53f7e4b299266dfbde6ea8165efb138dba84ec2e1d36d170bf93ec3f08",
+      "build_log_sha256": "1d23498a09c9c1604cbaff65655669ab9e7e754196def722988a9f1cff82684a"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.1184902971,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.069567859,
+        "max_seconds": 1.216790796,
+        "mean_seconds": 1.1184902971,
+        "population_stddev_seconds": 0.04676279661081253,
+        "range_seconds": 0.147222937,
+        "mean_offset_from_1s_seconds": 0.11849029709999992
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.070281747,
+          "deviation_from_1s_seconds": 0.0702817469999999,
+          "deviation_from_run_mean_seconds": -0.048208550100000025
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.090678335,
+          "deviation_from_1s_seconds": 0.090678335,
+          "deviation_from_run_mean_seconds": -0.02781196209999992
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.07666021,
+          "deviation_from_1s_seconds": 0.07666021,
+          "deviation_from_run_mean_seconds": -0.04183008709999991
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.098433211,
+          "deviation_from_1s_seconds": 0.09843321099999991,
+          "deviation_from_run_mean_seconds": -0.02005708610000001
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.100481032,
+          "deviation_from_1s_seconds": 0.10048103200000003,
+          "deviation_from_run_mean_seconds": -0.018009265099999894
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.163910112,
+          "deviation_from_1s_seconds": 0.16391011199999994,
+          "deviation_from_run_mean_seconds": 0.04541981490000002
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.216790796,
+          "deviation_from_1s_seconds": 0.21679079599999995,
+          "deviation_from_run_mean_seconds": 0.09830049890000003
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.136669969,
+          "deviation_from_1s_seconds": 0.13666996899999995,
+          "deviation_from_run_mean_seconds": 0.018179671900000027
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.069567859,
+          "deviation_from_1s_seconds": 0.06956785899999995,
+          "deviation_from_run_mean_seconds": -0.048922438099999965
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.1614297,
+          "deviation_from_1s_seconds": 0.1614297,
+          "deviation_from_run_mean_seconds": 0.04293940290000009
+        }
+      ],
+      "intervals_seconds": [
+        1.070281747,
+        1.090678335,
+        1.07666021,
+        1.098433211,
+        1.100481032,
+        1.163910112,
+        1.216790796,
+        1.136669969,
+        1.069567859,
+        1.1614297
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "51658652ee0d95a2e299de533a621aed53b563dc294760d7e9f980ca2570e20c",
+      "timestamps_file_sha256": "74a25ba6b6337f327d5696f199c7855ade611e658e49b787fbdda60abee14a97",
+      "stdout_file_sha256": "e5eed0655a59b544f231432d08c15c6a6a50568b63205375986a537a862143b6",
+      "build_log_sha256": "f728c54a3f50450c4acb2b0491f4db60d48c18a43b6bdc57cd20c5b88b75ab33"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial2-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.1163112766,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.065991428,
+        "max_seconds": 1.182108906,
+        "mean_seconds": 1.1163112766,
+        "population_stddev_seconds": 0.03237897782821151,
+        "range_seconds": 0.11611747800000005,
+        "mean_offset_from_1s_seconds": 0.11631127660000007
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.138786937,
+          "deviation_from_1s_seconds": 0.1387869370000001,
+          "deviation_from_run_mean_seconds": 0.02247566040000004
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.182108906,
+          "deviation_from_1s_seconds": 0.18210890600000007,
+          "deviation_from_run_mean_seconds": 0.0657976294
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.154785033,
+          "deviation_from_1s_seconds": 0.15478503300000002,
+          "deviation_from_run_mean_seconds": 0.03847375639999995
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.117119391,
+          "deviation_from_1s_seconds": 0.1171193909999999,
+          "deviation_from_run_mean_seconds": 0.0008081143999998375
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.096408403,
+          "deviation_from_1s_seconds": 0.09640840300000009,
+          "deviation_from_run_mean_seconds": -0.019902873599999982
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.085259502,
+          "deviation_from_1s_seconds": 0.08525950199999999,
+          "deviation_from_run_mean_seconds": -0.03105177460000008
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.102733164,
+          "deviation_from_1s_seconds": 0.10273316399999999,
+          "deviation_from_run_mean_seconds": -0.01357811260000008
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.065991428,
+          "deviation_from_1s_seconds": 0.06599142800000002,
+          "deviation_from_run_mean_seconds": -0.05031984860000005
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.112321032,
+          "deviation_from_1s_seconds": 0.1123210320000001,
+          "deviation_from_run_mean_seconds": -0.00399024459999997
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.10759897,
+          "deviation_from_1s_seconds": 0.10759896999999996,
+          "deviation_from_run_mean_seconds": -0.008712306600000108
+        }
+      ],
+      "intervals_seconds": [
+        1.138786937,
+        1.182108906,
+        1.154785033,
+        1.117119391,
+        1.096408403,
+        1.085259502,
+        1.102733164,
+        1.065991428,
+        1.112321032,
+        1.10759897
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 2,
+      "result_file_sha256": "77e696095434fe6f3e0c39fe0be7f5d3d29559b60e0d83ea004b58c06107aefe",
+      "timestamps_file_sha256": "3af9aadba061fe1fcb53ede6b5d084411c8b3279bbfaecf47132dbda8aab447f",
+      "stdout_file_sha256": "81a16637ff7940caec5b963298f47e5535ead4494f49dde2d7a9ad63a4be735e",
+      "build_log_sha256": "89a5f7e8706dffc15cb97281b77ccda9b09f70da878d458744a053e6dbb374c0"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial3-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.1080641621,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.024278977,
+        "max_seconds": 1.194364808,
+        "mean_seconds": 1.1080641621,
+        "population_stddev_seconds": 0.0500273440726087,
+        "range_seconds": 0.17008583099999997,
+        "mean_offset_from_1s_seconds": 0.10806416210000003
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.024278977,
+          "deviation_from_1s_seconds": 0.024278977000000035,
+          "deviation_from_run_mean_seconds": -0.08378518509999999
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.077511873,
+          "deviation_from_1s_seconds": 0.07751187299999995,
+          "deviation_from_run_mean_seconds": -0.030552289100000074
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.070732985,
+          "deviation_from_1s_seconds": 0.07073298500000003,
+          "deviation_from_run_mean_seconds": -0.0373311771
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.086125101,
+          "deviation_from_1s_seconds": 0.08612510099999993,
+          "deviation_from_run_mean_seconds": -0.0219390611000001
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.152688042,
+          "deviation_from_1s_seconds": 0.15268804200000008,
+          "deviation_from_run_mean_seconds": 0.04462387990000005
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.146186729,
+          "deviation_from_1s_seconds": 0.14618672900000007,
+          "deviation_from_run_mean_seconds": 0.03812256690000004
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.063091213,
+          "deviation_from_1s_seconds": 0.06309121300000009,
+          "deviation_from_run_mean_seconds": -0.04497294909999994
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.194364808,
+          "deviation_from_1s_seconds": 0.194364808,
+          "deviation_from_run_mean_seconds": 0.08630064589999997
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.155822653,
+          "deviation_from_1s_seconds": 0.15582265299999998,
+          "deviation_from_run_mean_seconds": 0.04775849089999995
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.10983924,
+          "deviation_from_1s_seconds": 0.1098392399999999,
+          "deviation_from_run_mean_seconds": 0.0017750778999998662
+        }
+      ],
+      "intervals_seconds": [
+        1.024278977,
+        1.077511873,
+        1.070732985,
+        1.086125101,
+        1.152688042,
+        1.146186729,
+        1.063091213,
+        1.194364808,
+        1.155822653,
+        1.10983924
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 3,
+      "result_file_sha256": "15ecf911cee6d2655fadaa25d99b61e2bd44314c0bc8f256c9a4857e7e263a77",
+      "timestamps_file_sha256": "e0f8c0c498a8bad4aa21587e14a79dc6d5874c0e357277a839c5b3ed7bbee5d3",
+      "stdout_file_sha256": "280621661228a01f711b3d4ee7017dbc40782fe4a1a8fd6014c0def22b88a48c",
+      "build_log_sha256": "509b6cf07143f296de8891e06c94622f4ef2bf8780c969d9ecc6dbe3eebcbbd6"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial4-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.1289280562,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.037067885,
+        "max_seconds": 1.183680457,
+        "mean_seconds": 1.1289280562,
+        "population_stddev_seconds": 0.051693862256507114,
+        "range_seconds": 0.146612572,
+        "mean_offset_from_1s_seconds": 0.12892805619999992
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.176107234,
+          "deviation_from_1s_seconds": 0.17610723400000006,
+          "deviation_from_run_mean_seconds": 0.04717917780000014
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.180375751,
+          "deviation_from_1s_seconds": 0.18037575099999992,
+          "deviation_from_run_mean_seconds": 0.0514476948
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.183680457,
+          "deviation_from_1s_seconds": 0.1836804569999999,
+          "deviation_from_run_mean_seconds": 0.05475240079999999
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.122134721,
+          "deviation_from_1s_seconds": 0.12213472099999989,
+          "deviation_from_run_mean_seconds": -0.006793335200000028
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.049456293,
+          "deviation_from_1s_seconds": 0.049456292999999985,
+          "deviation_from_run_mean_seconds": -0.07947176319999993
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.114587485,
+          "deviation_from_1s_seconds": 0.11458748499999993,
+          "deviation_from_run_mean_seconds": -0.014340571199999985
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.171026307,
+          "deviation_from_1s_seconds": 0.171026307,
+          "deviation_from_run_mean_seconds": 0.04209825080000007
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.159588478,
+          "deviation_from_1s_seconds": 0.1595884780000001,
+          "deviation_from_run_mean_seconds": 0.03066042180000017
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.095255951,
+          "deviation_from_1s_seconds": 0.09525595099999995,
+          "deviation_from_run_mean_seconds": -0.03367210519999997
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.037067885,
+          "deviation_from_1s_seconds": 0.03706788499999991,
+          "deviation_from_run_mean_seconds": -0.09186017120000001
+        }
+      ],
+      "intervals_seconds": [
+        1.176107234,
+        1.180375751,
+        1.183680457,
+        1.122134721,
+        1.049456293,
+        1.114587485,
+        1.171026307,
+        1.159588478,
+        1.095255951,
+        1.037067885
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 4,
+      "result_file_sha256": "20aafdd3fd093f29f8385a93eeb1eccb634a5f0eef3ed6d58bee757da767e8a0",
+      "timestamps_file_sha256": "958c5169ac6fd64791a65b0e68523700795f1d879ee08a1f89612f60b0d30aa0",
+      "stdout_file_sha256": "3a15b20e09554dda7e30320110cd416f1aed0cb1d0b32dcba1f42ea435d4ce5e",
+      "build_log_sha256": "c643044c0004da746c5f021a6023476026a2b2a42e476a87a4e28e0e8c64be27"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial5-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 2.4665617346,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 2.288121547,
+        "max_seconds": 2.601728927,
+        "mean_seconds": 2.4665617346,
+        "population_stddev_seconds": 0.11319447783671718,
+        "range_seconds": 0.3136073800000001,
+        "mean_offset_from_1s_seconds": 1.4665617346
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 2.577292846,
+          "deviation_from_1s_seconds": 1.5772928460000002,
+          "deviation_from_run_mean_seconds": 0.11073111140000025
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 2.583482587,
+          "deviation_from_1s_seconds": 1.5834825870000002,
+          "deviation_from_run_mean_seconds": 0.11692085240000027
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 2.288121547,
+          "deviation_from_1s_seconds": 1.2881215469999998,
+          "deviation_from_run_mean_seconds": -0.17844018760000013
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 2.41232483,
+          "deviation_from_1s_seconds": 1.4123248300000002,
+          "deviation_from_run_mean_seconds": -0.05423690459999975
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 2.461676968,
+          "deviation_from_1s_seconds": 1.461676968,
+          "deviation_from_run_mean_seconds": -0.0048847666000000345
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 2.601728927,
+          "deviation_from_1s_seconds": 1.601728927,
+          "deviation_from_run_mean_seconds": 0.13516719239999997
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 2.469369659,
+          "deviation_from_1s_seconds": 1.4693696589999998,
+          "deviation_from_run_mean_seconds": 0.0028079243999998837
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 2.38197539,
+          "deviation_from_1s_seconds": 1.38197539,
+          "deviation_from_run_mean_seconds": -0.08458634459999992
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 2.301620481,
+          "deviation_from_1s_seconds": 1.301620481,
+          "deviation_from_run_mean_seconds": -0.1649412535999999
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 2.588024111,
+          "deviation_from_1s_seconds": 1.5880241110000002,
+          "deviation_from_run_mean_seconds": 0.12146237640000024
+        }
+      ],
+      "intervals_seconds": [
+        2.577292846,
+        2.583482587,
+        2.288121547,
+        2.41232483,
+        2.461676968,
+        2.601728927,
+        2.469369659,
+        2.38197539,
+        2.301620481,
+        2.588024111
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 5,
+      "result_file_sha256": "389ff25704d59a0f6e1fd5d87ead03c54fbbbc91ab4418dbb2688f97d1e90962",
+      "timestamps_file_sha256": "5e9a24e0d62f8c14f68c42fe499c6ff7dbc44aaf209f9e27970964ecdfe89b00",
+      "stdout_file_sha256": "fd53467d433b448c16455f2ae6951938d87af967d14a3874f7ad94775537049a",
+      "build_log_sha256": "7396a674e5a4deabd03b25c3210dc6636c50853f1f76694030c96ee5a862f5bd"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-211026",
+      "run": "rtc-wall-q8000-trial6-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "55988f6b383150164610ec013aff61b0e052bdecfb35d5b8e3cc282d54424ac0",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 2.749636495,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 2.606139356,
+        "max_seconds": 2.939605276,
+        "mean_seconds": 2.749636495,
+        "population_stddev_seconds": 0.1193212200205591,
+        "range_seconds": 0.3334659200000001,
+        "mean_offset_from_1s_seconds": 1.7496364949999998
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 2.673532492,
+          "deviation_from_1s_seconds": 1.673532492,
+          "deviation_from_run_mean_seconds": -0.07610400299999975
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 2.880887933,
+          "deviation_from_1s_seconds": 1.880887933,
+          "deviation_from_run_mean_seconds": 0.13125143800000005
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 2.901456146,
+          "deviation_from_1s_seconds": 1.9014561460000001,
+          "deviation_from_run_mean_seconds": 0.15181965100000028
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 2.820898506,
+          "deviation_from_1s_seconds": 1.8208985059999998,
+          "deviation_from_run_mean_seconds": 0.07126201099999996
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 2.939605276,
+          "deviation_from_1s_seconds": 1.939605276,
+          "deviation_from_run_mean_seconds": 0.18996878100000014
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 2.606139356,
+          "deviation_from_1s_seconds": 1.606139356,
+          "deviation_from_run_mean_seconds": -0.14349713899999994
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 2.705479134,
+          "deviation_from_1s_seconds": 1.705479134,
+          "deviation_from_run_mean_seconds": -0.044157360999999895
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 2.616403343,
+          "deviation_from_1s_seconds": 1.616403343,
+          "deviation_from_run_mean_seconds": -0.13323315199999985
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 2.720695095,
+          "deviation_from_1s_seconds": 1.720695095,
+          "deviation_from_run_mean_seconds": -0.028941399999999895
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 2.631267669,
+          "deviation_from_1s_seconds": 1.631267669,
+          "deviation_from_run_mean_seconds": -0.11836882599999976
+        }
+      ],
+      "intervals_seconds": [
+        2.673532492,
+        2.880887933,
+        2.901456146,
+        2.820898506,
+        2.939605276,
+        2.606139356,
+        2.705479134,
+        2.616403343,
+        2.720695095,
+        2.631267669
+      ],
+      "max_late_us": 767836,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 6,
+      "result_file_sha256": "4a1d36a1c681477e688551ecac1f23dd9834a0d47d0d484cfe06e5ca3eff4949",
+      "timestamps_file_sha256": "140c92f09bf4668a9fbdc996bfa3589c5d00e04d52d75cfa646b3963227d22b4",
+      "stdout_file_sha256": "4e0ca08c60cc8eec149ff07ab75db3904eba384ce59bf42fff42b0501f60170a",
+      "build_log_sha256": "ef06be140585e9ff09fd71284bf6fe6708b32801cbd27be952411dd405266212"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-buffered-20261106-185104",
+      "run": "rtc-wall-q15000-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 15000,
+      "image_sha256": "3b0ce33422921955c1e82776c7a04dc07ca72998b8769a5b6fdceb43a31c913c",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 6.1397943151,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 5.930279146,
+        "max_seconds": 6.571795712,
+        "mean_seconds": 6.1397943151,
+        "population_stddev_seconds": 0.16918114404471907,
+        "range_seconds": 0.641516566,
+        "mean_offset_from_1s_seconds": 5.1397943151
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 6.05315199,
+          "deviation_from_1s_seconds": 5.05315199,
+          "deviation_from_run_mean_seconds": -0.0866423250999997
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 6.180400088,
+          "deviation_from_1s_seconds": 5.180400088,
+          "deviation_from_run_mean_seconds": 0.040605772900000225
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 6.114183929,
+          "deviation_from_1s_seconds": 5.114183929,
+          "deviation_from_run_mean_seconds": -0.025610386099999438
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 6.114139784,
+          "deviation_from_1s_seconds": 5.114139784,
+          "deviation_from_run_mean_seconds": -0.025654531099999822
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 6.205806138,
+          "deviation_from_1s_seconds": 5.205806138,
+          "deviation_from_run_mean_seconds": 0.06601182290000018
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 6.0362622,
+          "deviation_from_1s_seconds": 5.0362622,
+          "deviation_from_run_mean_seconds": -0.10353211509999927
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 5.98126242,
+          "deviation_from_1s_seconds": 4.98126242,
+          "deviation_from_run_mean_seconds": -0.15853189509999943
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 6.210661744,
+          "deviation_from_1s_seconds": 5.210661744,
+          "deviation_from_run_mean_seconds": 0.07086742890000064
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 5.930279146,
+          "deviation_from_1s_seconds": 4.930279146,
+          "deviation_from_run_mean_seconds": -0.20951516909999945
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 6.571795712,
+          "deviation_from_1s_seconds": 5.571795712,
+          "deviation_from_run_mean_seconds": 0.4320013969000005
+        }
+      ],
+      "intervals_seconds": [
+        6.05315199,
+        6.180400088,
+        6.114183929,
+        6.114139784,
+        6.205806138,
+        6.0362622,
+        5.98126242,
+        6.210661744,
+        5.930279146,
+        6.571795712
+      ],
+      "max_late_us": 59962006,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": false,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "5af5265ae227780c571f05d609946d8fae0c5c3743ea8fe9cd63e3a38905017a",
+      "timestamps_file_sha256": "c2c3c902cfef01b132f26c7aa13c73ede4a3cea41d5fe6d4eb1358828e95e735",
+      "stdout_file_sha256": "6a2abc4cf3d38de9f3fc55d0b9afc95c7ebff3bf031a2add802a177b96b50f99",
+      "build_log_sha256": "8b4706bddd9c057c4800689a921236a366bb6749cc261beba4f0358dd537cc8c"
+    },
+    {
+      "directory": "npc/build/verification/rtc-k12-cache-phase-20261107",
+      "run": "rtc-wall-q6929-trial2-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 6929,
+      "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 0.9676074983,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.837327658,
+        "max_seconds": 1.032615182,
+        "mean_seconds": 0.9676074983,
+        "population_stddev_seconds": 0.05025997106719224,
+        "range_seconds": 0.19528752400000005,
+        "mean_offset_from_1s_seconds": -0.032392501699999965
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.015245516,
+          "deviation_from_1s_seconds": 0.015245516000000015,
+          "deviation_from_run_mean_seconds": 0.04763801769999998
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 0.997903342,
+          "deviation_from_1s_seconds": -0.002096658000000029,
+          "deviation_from_run_mean_seconds": 0.030295843699999936
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 0.837327658,
+          "deviation_from_1s_seconds": -0.16267234200000003,
+          "deviation_from_run_mean_seconds": -0.13027984030000006
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 0.960822505,
+          "deviation_from_1s_seconds": -0.03917749500000001,
+          "deviation_from_run_mean_seconds": -0.006784993300000042
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 0.980666493,
+          "deviation_from_1s_seconds": -0.019333507000000028,
+          "deviation_from_run_mean_seconds": 0.013058994699999937
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 0.965050851,
+          "deviation_from_1s_seconds": -0.03494914900000001,
+          "deviation_from_run_mean_seconds": -0.002556647300000048
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.032615182,
+          "deviation_from_1s_seconds": 0.03261518200000002,
+          "deviation_from_run_mean_seconds": 0.06500768369999999
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 0.945747579,
+          "deviation_from_1s_seconds": -0.05425242100000005,
+          "deviation_from_run_mean_seconds": -0.021859919300000086
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 0.961442694,
+          "deviation_from_1s_seconds": -0.03855730599999996,
+          "deviation_from_run_mean_seconds": -0.006164804299999993
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 0.979253163,
+          "deviation_from_1s_seconds": -0.020746837000000018,
+          "deviation_from_run_mean_seconds": 0.011645664699999947
+        }
+      ],
+      "intervals_seconds": [
+        1.015245516,
+        0.997903342,
+        0.837327658,
+        0.960822505,
+        0.980666493,
+        0.965050851,
+        1.032615182,
+        0.945747579,
+        0.961442694,
+        0.979253163
+      ],
+      "max_late_us": 137474,
+      "mean_acceptance_pass": true,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": true,
+      "source_history_trial": 2,
+      "result_file_sha256": "6640bf8f329e577effded162dd3a61c183c25d1ec8cffbd4b857dca0fe55118e",
+      "timestamps_file_sha256": "8baf2bbadcf645d48b8bc70db10178b80d7440c785778e9ca57fcec1812bbf23",
+      "stdout_file_sha256": "d858501cdbc76c1eeaf4c8b1eaab14d658603a6721f4245ece7c0eaad03bcc5c",
+      "build_log_sha256": "cf7b8efd1341161857b4980faf4dd62cb504f63b4ce3e1a2e71b662c13f967da"
+    },
+    {
+      "directory": "npc/build/verification/rtc-k12-cache-phase-20261107",
+      "run": "rtc-wall-q6929-trial3-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 6929,
+      "image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 0.9940958559,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.864182646,
+        "max_seconds": 1.028494842,
+        "mean_seconds": 0.9940958559,
+        "population_stddev_seconds": 0.04490742359039397,
+        "range_seconds": 0.1643121959999999,
+        "mean_offset_from_1s_seconds": -0.005904144099999953
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.986936561,
+          "deviation_from_1s_seconds": -0.013063438999999955,
+          "deviation_from_run_mean_seconds": -0.007159294900000002
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.003882313,
+          "deviation_from_1s_seconds": 0.0038823130000000816,
+          "deviation_from_run_mean_seconds": 0.009786457100000034
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 0.864182646,
+          "deviation_from_1s_seconds": -0.13581735399999995,
+          "deviation_from_run_mean_seconds": -0.1299132099
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.014868217,
+          "deviation_from_1s_seconds": 0.014868217000000072,
+          "deviation_from_run_mean_seconds": 0.020772361100000025
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.028494842,
+          "deviation_from_1s_seconds": 0.028494841999999965,
+          "deviation_from_run_mean_seconds": 0.03439898609999992
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.021843685,
+          "deviation_from_1s_seconds": 0.02184368499999989,
+          "deviation_from_run_mean_seconds": 0.027747829099999843
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 0.991175507,
+          "deviation_from_1s_seconds": -0.008824492999999989,
+          "deviation_from_run_mean_seconds": -0.002920348900000036
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.009711478,
+          "deviation_from_1s_seconds": 0.009711478000000051,
+          "deviation_from_run_mean_seconds": 0.015615622100000004
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.011282613,
+          "deviation_from_1s_seconds": 0.011282613000000108,
+          "deviation_from_run_mean_seconds": 0.01718675710000006
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.008580697,
+          "deviation_from_1s_seconds": 0.00858069699999997,
+          "deviation_from_run_mean_seconds": 0.014484841099999923
+        }
+      ],
+      "intervals_seconds": [
+        0.986936561,
+        1.003882313,
+        0.864182646,
+        1.014868217,
+        1.028494842,
+        1.021843685,
+        0.991175507,
+        1.009711478,
+        1.011282613,
+        1.008580697
+      ],
+      "max_late_us": 137474,
+      "mean_acceptance_pass": true,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": true,
+      "source_history_trial": 3,
+      "result_file_sha256": "58ebd07fa3c49eed7615b37a64867149d854a432d25c906de00665512f62d764",
+      "timestamps_file_sha256": "988b73e42105f9f2027e1f11d10da748f7965b0dddd54229b19ddabaa8ff927d",
+      "stdout_file_sha256": "f1a49cde97313fa68a75222f486ffa39ce435fd0c888911736512e7989d6b4c9",
+      "build_log_sha256": "db9950669e5855e916ee5bfca15093ca83dcc77171997c8966c0ee0adff906c2"
+    },
+    {
+      "directory": "npc/build/verification/rtc-k12-cache-phase-20261107",
+      "run": "rtc-wall-q8000-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "0398b83a3f72d3d14aa2b1b7d206f97036d1f99f77a38e0cfd892f41840386c8",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 0.8661822527,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.843814702,
+        "max_seconds": 0.902830702,
+        "mean_seconds": 0.8661822527,
+        "population_stddev_seconds": 0.0177760989596283,
+        "range_seconds": 0.05901600000000007,
+        "mean_offset_from_1s_seconds": -0.13381774729999996
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.866917411,
+          "deviation_from_1s_seconds": -0.13308258900000003,
+          "deviation_from_run_mean_seconds": 0.0007351582999999273
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 0.843814702,
+          "deviation_from_1s_seconds": -0.15618529800000003,
+          "deviation_from_run_mean_seconds": -0.02236755070000007
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 0.855092212,
+          "deviation_from_1s_seconds": -0.14490778800000004,
+          "deviation_from_run_mean_seconds": -0.011090040700000081
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 0.845872131,
+          "deviation_from_1s_seconds": -0.15412786899999997,
+          "deviation_from_run_mean_seconds": -0.020310121700000017
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 0.863359097,
+          "deviation_from_1s_seconds": -0.13664090299999998,
+          "deviation_from_run_mean_seconds": -0.002823155700000024
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 0.888019731,
+          "deviation_from_1s_seconds": -0.11198026900000002,
+          "deviation_from_run_mean_seconds": 0.021837478299999935
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 0.873587198,
+          "deviation_from_1s_seconds": -0.12641280200000005,
+          "deviation_from_run_mean_seconds": 0.00740494529999991
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 0.851407132,
+          "deviation_from_1s_seconds": -0.14859286800000004,
+          "deviation_from_run_mean_seconds": -0.014775120700000088
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 0.870922211,
+          "deviation_from_1s_seconds": -0.129077789,
+          "deviation_from_run_mean_seconds": 0.004739958299999958
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 0.902830702,
+          "deviation_from_1s_seconds": -0.09716929799999996,
+          "deviation_from_run_mean_seconds": 0.0366484493
+        }
+      ],
+      "intervals_seconds": [
+        0.866917411,
+        0.843814702,
+        0.855092212,
+        0.845872131,
+        0.863359097,
+        0.888019731,
+        0.873587198,
+        0.851407132,
+        0.870922211,
+        0.902830702
+      ],
+      "max_late_us": 466612,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "738b340e1a3ee99f7a7421f7289ce77493b31c86369ab3dfdf136e423254a030",
+      "timestamps_file_sha256": "707395d4ed8ce5f9dba7b015c05dbcaeb73b916c1b201f6e3391d50041b5674f",
+      "stdout_file_sha256": "60895eadc1e7b2831998de9aadb2d452cfeef398057f11b2be866b425276ac60",
+      "build_log_sha256": "eef34bda9c6820ba1472dabc11c4dd69374e0fc7adaf862a55e63c64bfe07d3e"
+    },
+    {
+      "directory": "npc/build/verification/rtc-k12-final-20261107",
+      "run": "rtc-wall-q8000-trial1-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8000,
+      "image_sha256": "6d72477f81b28a6745f388300291d62ad533e3e90938fbff292825295daa7345",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.0854487321,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.06033434,
+        "max_seconds": 1.117747261,
+        "mean_seconds": 1.0854487321,
+        "population_stddev_seconds": 0.01622864759536997,
+        "range_seconds": 0.05741292100000006,
+        "mean_offset_from_1s_seconds": 0.08544873209999992
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.081664163,
+          "deviation_from_1s_seconds": 0.0816641629999999,
+          "deviation_from_run_mean_seconds": -0.0037845691000000237
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.078579936,
+          "deviation_from_1s_seconds": 0.0785799359999999,
+          "deviation_from_run_mean_seconds": -0.006868796100000019
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.088306823,
+          "deviation_from_1s_seconds": 0.08830682299999992,
+          "deviation_from_run_mean_seconds": 0.0028580908999999988
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.072986086,
+          "deviation_from_1s_seconds": 0.072986086,
+          "deviation_from_run_mean_seconds": -0.012462646099999919
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.117747261,
+          "deviation_from_1s_seconds": 0.1177472610000001,
+          "deviation_from_run_mean_seconds": 0.03229852890000018
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.06033434,
+          "deviation_from_1s_seconds": 0.06033434000000004,
+          "deviation_from_run_mean_seconds": -0.025114392099999883
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.086708945,
+          "deviation_from_1s_seconds": 0.08670894500000004,
+          "deviation_from_run_mean_seconds": 0.0012602129000001128
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.078902972,
+          "deviation_from_1s_seconds": 0.07890297200000007,
+          "deviation_from_run_mean_seconds": -0.006545760099999853
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.110780877,
+          "deviation_from_1s_seconds": 0.11078087700000006,
+          "deviation_from_run_mean_seconds": 0.02533214490000013
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.078475918,
+          "deviation_from_1s_seconds": 0.07847591800000009,
+          "deviation_from_run_mean_seconds": -0.006972814099999836
+        }
+      ],
+      "intervals_seconds": [
+        1.081664163,
+        1.078579936,
+        1.088306823,
+        1.072986086,
+        1.117747261,
+        1.06033434,
+        1.086708945,
+        1.078902972,
+        1.110780877,
+        1.078475918
+      ],
+      "max_late_us": 800311,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": false,
+      "source_history_trial": 1,
+      "result_file_sha256": "91268cd3855e4af1a714d1affd381481d32799089e8d835f19411c03acd2195d",
+      "timestamps_file_sha256": "97b88a0318f20c069d5717acd76efecf855149bd88d504eaed5ac0e9ba1f42b4",
+      "stdout_file_sha256": "f9cecaa5b64698dd470224140fb09c82f89c4901706083de9635a45be00ae84a",
+      "build_log_sha256": "02428df9f1d5c6234064b9ecb8177fd2e86df68b17f1f6bd235c60d70209f128"
+    },
+    {
+      "directory": "npc/build/verification/rtc-k12-final-20261107",
+      "run": "rtc-wall-q8684-trial2-k12",
+      "k": 12,
+      "frequency_mhz": 300,
+      "q16": 8684,
+      "image_sha256": "627132dd4bb0bba7e655ae0c05da648f5582ec6ba80e7574fd327ab478b1d151",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 1.0652731059,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 1.043178561,
+        "max_seconds": 1.13802186,
+        "mean_seconds": 1.0652731059,
+        "population_stddev_seconds": 0.026045377540303387,
+        "range_seconds": 0.0948432990000001,
+        "mean_offset_from_1s_seconds": 0.06527310590000002
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 1.068699443,
+          "deviation_from_1s_seconds": 0.06869944300000008,
+          "deviation_from_run_mean_seconds": 0.0034263371000000653
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.060056084,
+          "deviation_from_1s_seconds": 0.060056083999999954,
+          "deviation_from_run_mean_seconds": -0.005217021900000063
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.044440271,
+          "deviation_from_1s_seconds": 0.04444027100000003,
+          "deviation_from_run_mean_seconds": -0.020832834899999986
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 1.076769995,
+          "deviation_from_1s_seconds": 0.07676999500000004,
+          "deviation_from_run_mean_seconds": 0.011496889100000018
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.056177814,
+          "deviation_from_1s_seconds": 0.05617781399999999,
+          "deviation_from_run_mean_seconds": -0.009095291900000024
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 1.056843258,
+          "deviation_from_1s_seconds": 0.05684325800000001,
+          "deviation_from_run_mean_seconds": -0.00842984790000001
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 1.05529264,
+          "deviation_from_1s_seconds": 0.055292640000000004,
+          "deviation_from_run_mean_seconds": -0.009980465900000013
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 1.053251133,
+          "deviation_from_1s_seconds": 0.05325113300000006,
+          "deviation_from_run_mean_seconds": -0.012021972899999955
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 1.043178561,
+          "deviation_from_1s_seconds": 0.04317856099999995,
+          "deviation_from_run_mean_seconds": -0.022094544900000068
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.13802186,
+          "deviation_from_1s_seconds": 0.13802186000000005,
+          "deviation_from_run_mean_seconds": 0.07274875410000003
+        }
+      ],
+      "intervals_seconds": [
+        1.068699443,
+        1.060056084,
+        1.044440271,
+        1.076769995,
+        1.056177814,
+        1.056843258,
+        1.05529264,
+        1.053251133,
+        1.043178561,
+        1.13802186
+      ],
+      "max_late_us": 1860475,
+      "mean_acceptance_pass": false,
+      "late_acceptance_pass": false,
+      "baseline_run_pass": false,
+      "source_history_trial": 2,
+      "result_file_sha256": "d931132c4450f6dd01c5ea0f33d82c79584e1f8031977e43e997abf824b894a3",
+      "timestamps_file_sha256": "fcff44e4c989f7bde86c68f39199bb9a1621b962b564417a317621ed250158bd",
+      "stdout_file_sha256": "5b18f83e1af6e9f789efdfc17f3b25ece80f8a56cd7822cfb7777091e65b0b08",
+      "build_log_sha256": "4dc6c46114b3ae3bea91db3076b8f0d0f489bb8bdcafec72efbd0b79eb01e878"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-210102",
+      "run": "rtc-wall-q20100-trial1-k1",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 20100,
+      "image_sha256": "5d1d361862c44b77800ac82654f859e244f19dfadd321a7bc4b29bc2e0b2ae6e",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 0.9724513422,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.896787685,
+        "max_seconds": 1.026463862,
+        "mean_seconds": 0.9724513422,
+        "population_stddev_seconds": 0.04292406459759722,
+        "range_seconds": 0.129676177,
+        "mean_offset_from_1s_seconds": -0.027548657800000043
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.98212372,
+          "deviation_from_1s_seconds": -0.017876279999999967,
+          "deviation_from_run_mean_seconds": 0.009672377800000076
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 1.023653307,
+          "deviation_from_1s_seconds": 0.023653307000000012,
+          "deviation_from_run_mean_seconds": 0.051201964800000055
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.008660181,
+          "deviation_from_1s_seconds": 0.008660180999999989,
+          "deviation_from_run_mean_seconds": 0.03620883880000003
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 0.962702672,
+          "deviation_from_1s_seconds": -0.03729732799999996,
+          "deviation_from_run_mean_seconds": -0.00974867019999992
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 1.013908249,
+          "deviation_from_1s_seconds": 0.013908248999999984,
+          "deviation_from_run_mean_seconds": 0.041456906800000026
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 0.927985874,
+          "deviation_from_1s_seconds": -0.07201412600000001,
+          "deviation_from_run_mean_seconds": -0.04446546819999997
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 0.940345759,
+          "deviation_from_1s_seconds": -0.05965424100000005,
+          "deviation_from_run_mean_seconds": -0.03210558320000001
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 0.941882113,
+          "deviation_from_1s_seconds": -0.05811788699999998,
+          "deviation_from_run_mean_seconds": -0.030569229199999937
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 0.896787685,
+          "deviation_from_1s_seconds": -0.10321231500000005,
+          "deviation_from_run_mean_seconds": -0.07566365720000001
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 1.026463862,
+          "deviation_from_1s_seconds": 0.02646386199999995,
+          "deviation_from_run_mean_seconds": 0.05401251979999999
+        }
+      ],
+      "intervals_seconds": [
+        0.98212372,
+        1.023653307,
+        1.008660181,
+        0.962702672,
+        1.013908249,
+        0.927985874,
+        0.940345759,
+        0.941882113,
+        0.896787685,
+        1.026463862
+      ],
+      "max_late_us": 44872,
+      "mean_acceptance_pass": true,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": true,
+      "source_history_trial": 1,
+      "result_file_sha256": "db1f69919018668ead5682eabb6d4dabbdb7ec9c700856aafe353fdf3ec6766f",
+      "timestamps_file_sha256": "87249aa80bf725859dad9f32e90226262ebb884137578207ff7d6be2c582a07e",
+      "stdout_file_sha256": "f686857dd78f40480bdcd8e38b5bf20d76a325c3485e3b47a85c507492c5251c",
+      "build_log_sha256": "a1efe721ab996f82fbb3b4ae5c972916240d1b808fb6ca8a45852eb76e6a9995"
+    },
+    {
+      "directory": "npc/build/verification/rtc-fullprintf-20261106-210102",
+      "run": "rtc-wall-q20100-trial2-k1",
+      "k": 1,
+      "frequency_mhz": 25,
+      "q16": 20100,
+      "image_sha256": "5d1d361862c44b77800ac82654f859e244f19dfadd321a7bc4b29bc2e0b2ae6e",
+      "full_printf_output_confirmed": true,
+      "build_target_evidence": "# Building rtc-full-printf-insert-arg [minirv-ysyxsoc]",
+      "exit_code": 0,
+      "tick_count": 11,
+      "interval_count": 10,
+      "mean_interval_seconds": 0.964571188,
+      "per_interval_stats": {
+        "count": 10,
+        "min_seconds": 0.884277717,
+        "max_seconds": 1.009658724,
+        "mean_seconds": 0.964571188,
+        "population_stddev_seconds": 0.035055047140747336,
+        "range_seconds": 0.12538100699999988,
+        "mean_offset_from_1s_seconds": -0.03542881200000003
+      },
+      "interval_observations": [
+        {
+          "index": 1,
+          "from_sec": 1,
+          "to_sec": 2,
+          "seconds": 0.971219944,
+          "deviation_from_1s_seconds": -0.028780056,
+          "deviation_from_run_mean_seconds": 0.006648756000000033
+        },
+        {
+          "index": 2,
+          "from_sec": 2,
+          "to_sec": 3,
+          "seconds": 0.972435064,
+          "deviation_from_1s_seconds": -0.027564935999999984,
+          "deviation_from_run_mean_seconds": 0.007863876000000047
+        },
+        {
+          "index": 3,
+          "from_sec": 3,
+          "to_sec": 4,
+          "seconds": 1.009658724,
+          "deviation_from_1s_seconds": 0.009658723999999896,
+          "deviation_from_run_mean_seconds": 0.04508753599999993
+        },
+        {
+          "index": 4,
+          "from_sec": 4,
+          "to_sec": 5,
+          "seconds": 0.939421969,
+          "deviation_from_1s_seconds": -0.06057803100000003,
+          "deviation_from_run_mean_seconds": -0.025149219
+        },
+        {
+          "index": 5,
+          "from_sec": 5,
+          "to_sec": 6,
+          "seconds": 0.997807828,
+          "deviation_from_1s_seconds": -0.0021921719999999922,
+          "deviation_from_run_mean_seconds": 0.03323664000000004
+        },
+        {
+          "index": 6,
+          "from_sec": 6,
+          "to_sec": 7,
+          "seconds": 0.975536426,
+          "deviation_from_1s_seconds": -0.024463573999999988,
+          "deviation_from_run_mean_seconds": 0.010965238000000044
+        },
+        {
+          "index": 7,
+          "from_sec": 7,
+          "to_sec": 8,
+          "seconds": 0.985860232,
+          "deviation_from_1s_seconds": -0.014139768000000053,
+          "deviation_from_run_mean_seconds": 0.02128904399999998
+        },
+        {
+          "index": 8,
+          "from_sec": 8,
+          "to_sec": 9,
+          "seconds": 0.930262888,
+          "deviation_from_1s_seconds": -0.06973711199999999,
+          "deviation_from_run_mean_seconds": -0.03430829999999996
+        },
+        {
+          "index": 9,
+          "from_sec": 9,
+          "to_sec": 10,
+          "seconds": 0.884277717,
+          "deviation_from_1s_seconds": -0.11572228299999998,
+          "deviation_from_run_mean_seconds": -0.08029347099999995
+        },
+        {
+          "index": 10,
+          "from_sec": 10,
+          "to_sec": 11,
+          "seconds": 0.979231088,
+          "deviation_from_1s_seconds": -0.020768911999999973,
+          "deviation_from_run_mean_seconds": 0.014659900000000059
+        }
+      ],
+      "intervals_seconds": [
+        0.971219944,
+        0.972435064,
+        1.009658724,
+        0.939421969,
+        0.997807828,
+        0.975536426,
+        0.985860232,
+        0.930262888,
+        0.884277717,
+        0.979231088
+      ],
+      "max_late_us": 44872,
+      "mean_acceptance_pass": true,
+      "late_acceptance_pass": true,
+      "baseline_run_pass": true,
+      "source_history_trial": 2,
+      "result_file_sha256": "11404dd9c8d8cfc564414d40bfdc256738c4e72bcb8e14e546e3bf298f349b2f",
+      "timestamps_file_sha256": "a7373a57ba2cbf37cb3334d413bd78ced11299349b0c401a0e6ed9a952d09173",
+      "stdout_file_sha256": "064e17a1c442f653211a03d3fb8dbc4a4c4439571b3f88b32675ba1f4e4a7c4a",
+      "build_log_sha256": "bc8d8a7bbf15bf5ecd0aacb33de833e870c972b184ab8d81794cd64005f5a7ff"
+    }
+  ],
+  "causal_diagnosis": {
+    "q16_calibration": "In cache-phase, q16=8000 produced mean 0.866182s; the existing update rule round(8000 * 0.866182) yields q16=6929. The two q16=6929 runs then measured 0.967607s and 0.994096s. This supports the coefficient adjustment for that simulator image and host run context.",
+    "host_vs_guest_clock": "In the older same-image q16=8000 series, host means vary from 1.108064s to 2.749636s while all recorded guest max-lateness values are [767836]us. Host arrival intervals therefore include simulator/host throughput and scheduling effects that are not mirrored by the guest run-maximum lateness metric.",
+    "per_interval_variation": "The passing q16=6929 runs include individual intervals below 0.95s, but the specified acceptance is on the 10-interval mean and guest max lateness. Per-interval values are recorded descriptively; no new threshold was added.",
+    "attribution_limit": "RTC_DIAG reports one maximum over the whole guest run, without an interval index. It cannot identify which host interval contained the guest lateness. The observed host interval also combines printf, simulator output and host scheduling; per-tick guest lateness is not available in these logs."
+  },
+  "scripts": {
+    "npc/tests/soc-timing/calibrate_wallclock.py": "035dda1a2a111de785f3ee3831e1c7b9435511c6c0b9f21719f626302a5d7b95",
+    "npc/tests/soc-timing/measure_host.py": "1a8a81fb265765e2d6544c3c02407024919e011324b9ab6f81f19df183bdb8d1",
+    "npc/tests/soc-timing/full-printf/rtc_entry.c": "59af337959afd6dac0d742d0fba4b0375fa7ef7d6c88610bbc8d781baa1f3d81",
+    "am-kernels/tests/am-tests/src/tests/rtc.c": "eca71b2c3966972ca5ebbf496202903d29a7c8f6e85132f3513ffb9c68128d52",
+    "npc/tools/verify_rtc_wallclock.py": "57126c67ee1974fa6d639b108761bdd22d18019857d33480222df16367ae21ab"
+  }
+}

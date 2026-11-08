@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/jalr_negative.bin: 28 bytes
+PASS: 14 checks
+[ DIFF PASS ] boundary/jalr_negative
+PASS: 85 (5 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 56
+halt_pc=0x80000018 NPC.pc=0x8000001c EMU.pc=0x80000018
+Bus: PASS ifu_req=5 ifu_resp=5 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=boundary/jalr_negative backend=diff verdict=pass stop=ebreak pc=0x80000018 inst=0x00100073 cycles=43 retired=5 attempts=5 checks=14 failures=0 delay=random core=85 core_fail=0 extra=56 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.010540 total_seconds=0.105270 bus=pass

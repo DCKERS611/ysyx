@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/functional/word_memory.bin: 28 bytes
+PASS: 10 checks
+[ DIFF PASS ] functional/word_memory
+PASS: 119 (7 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 79
+halt_pc=0x80000018 NPC.pc=0x8000001c EMU.pc=0x80000018
+Bus: PASS ifu_req=7 ifu_resp=7 lsu_req=2 lsu_resp=2 violations=0
+RESULT case=functional/word_memory backend=diff verdict=pass stop=ebreak pc=0x80000018 inst=0x00100073 cycles=71 retired=7 attempts=7 checks=10 failures=0 delay=random core=119 core_fail=0 extra=79 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.110670 total_seconds=0.232698 bus=pass

@@ -1,0 +1,13 @@
+{
+  "status": "PARTIAL",
+  "original_two_run_criteria": "PASS",
+  "k12_same_q_same_image_runs": 2,
+  "k12_required_runs_for_p1": 3,
+  "k12_passing_runs": 2,
+  "k12_q16": 6929,
+  "k12_image_sha256": "5c8b1f4c0e4ca6200168defd941d11bc751cae17d87056f93ca3f75f80242eec",
+  "next_step": "When a quiet host window is available, run full-printf k=12 with NPC_RTC_RUNS=3 and one fixed simulator image; preserve every raw interval and failure.",
+  "simulator_retries_this_turn": 0,
+  "reason": "No third matching full-printf run exists in the available WSL evidence. A fresh run was not started because another long training workload is active.",
+  "measurement_script_checks": "PASS: syntax, NPC_RTC_RUNS default=2, explicit=3, rejects=1; historical intervals recomputed"
+}

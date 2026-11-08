@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/functional/arithmetic.bin: 20 bytes
+step=5 pre_pc=0x80000010 inst=0x00100073
+memory[2281701372]: actual=0x01000000 expect=0x00000000
+FAILED: 1/33554574
+Bus: PASS ifu_req=5 ifu_resp=5 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=functional/arithmetic backend=diff verdict=fail stop=comparison_mismatch pc=0x80000010 inst=0x00100073 cycles=43 retired=5 attempts=5 checks=0 failures=0 delay=random core=85 core_fail=0 extra=57 extra_fail=0 memory=33554432 memory_fail=1 memory_seconds=0.104220 total_seconds=0.233240 bus=pass
+
+INJECTED_EXIT_CODE=1

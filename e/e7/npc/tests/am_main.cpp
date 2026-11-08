@@ -68,6 +68,6 @@ int main(int argc, char** argv)
     if (sim.halted()) std::printf(a0 ? "HIT BAD TRAP\n" : "HIT GOOD TRAP\n");
     const auto reason = sim.halted() ? stop_reason::ebreak
                         : ctx.gotFinish() ? stop_reason::external_finish : stop_reason::cycle_limit;
-    const bool passed = tests.report() == 0 && reason == stop_reason::ebreak;
+    const bool passed = tests.report() == 0 && reason == stop_reason::ebreak && sim_bus_ok();
     return finish(reason, passed);
 }

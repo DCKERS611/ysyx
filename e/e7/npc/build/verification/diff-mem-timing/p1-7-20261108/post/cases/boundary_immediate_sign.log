@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/immediate_sign.bin: 40 bytes
+PASS: 13 checks
+[ DIFF PASS ] boundary/immediate_sign
+PASS: 170 (10 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 112
+halt_pc=0x80000024 NPC.pc=0x80000028 EMU.pc=0x80000024
+Bus: PASS ifu_req=10 ifu_resp=10 lsu_req=2 lsu_resp=2 violations=0
+RESULT case=boundary/immediate_sign backend=diff verdict=pass stop=ebreak pc=0x80000024 inst=0x00100073 cycles=82 retired=10 attempts=10 checks=13 failures=0 delay=random core=170 core_fail=0 extra=112 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.009310 total_seconds=0.104251 bus=pass

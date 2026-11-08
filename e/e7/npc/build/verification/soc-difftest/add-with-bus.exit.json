@@ -1,0 +1,19 @@
+{
+  "cmd": [
+    "build/p1-6/sim",
+    "../am-kernels/tests/cpu-tests/build/add-minirv-ysyxsoc.bin"
+  ],
+  "config": {
+    "NPC_CPU_CLOCK_RATIO": "1",
+    "NPC_MAX_CYCLES": "600000000",
+    "NPC_SOC_BUS": "1",
+    "NPC_SOC_REF": "build/verification/soc-difftest/add-ref.bin"
+  },
+  "exit_code": 0,
+  "expected_exit": 0,
+  "summary": [
+    "HIT GOOD TRAP: pc=0x80000454 a0=0x00000000 cycles=155708078",
+    "Bus: PASS ifu_req=749035 ifu_resp=749035 lsu_req=450409 lsu_resp=450409 violations=0",
+    "RESULT case=add-minirv-ysyxsoc.bin backend=socdiff verdict=pass commits=10776 mismatches=0 halt_pc=0x80000454 device_reads=0 counter_reads=0 bus=pass"
+  ]
+}

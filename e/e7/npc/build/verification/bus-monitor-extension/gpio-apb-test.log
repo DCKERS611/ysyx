@@ -1,0 +1,19 @@
+verilator --cc --exe --build --trace-fst -Wall -Wno-DECLFILENAME -Wno-UNUSEDSIGNAL \
+	--top-module mygpio_top_apb --Mdir /home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/obj_dir \
+	/home/ysyx/ysyx-workbench/ysyxSoC/perip/gpio/mygpio_top_apb.v /home/ysyx/ysyx-workbench/npc/tests/gpio_apb_test.cpp \
+	-CFLAGS "-std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc" -o /home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/gpio_apb_test
+make[1]: Entering directory '/home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -Wall -Wextra -I/home/ysyx/ysyx-workbench/npc/csrc   -Os  -c -o gpio_apb_test.o /home/ysyx/ysyx-workbench/npc/tests/gpio_apb_test.cpp
+g++    gpio_apb_test.o verilated.o verilated_fst_c.o verilated_threads.o Vmygpio_top_apb__ALL.a   -lz  -pthread -lpthread -latomic -llz4 -lz   -o /home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/gpio_apb_test
+make[1]: Leaving directory '/home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev v5.050-60-g3d2421f3b
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 1.005 s (elab=0.000, cvt=0.000, bld=1.004); cpu 0.001 s on 1 threads; allocated 20.273 MB
+build/verification/p1-8/gpio/gpio_apb_test /home/ysyx/ysyx-workbench/npc/build/verification/p1-8/gpio/gpio-apb.fst
+APB VIOLATION cycle=1 kind=access_without_setup
+APB VIOLATION cycle=3 kind=control_changed_during_access
+APB monitor negative probes: PASS
+GPIO_APB driver_transactions=568
+PASS: 26072 checks
+APB monitor: PASS transactions=411 violations=0
+RESULT case=gpio_apb backend=apb verdict=pass transactions=411 violations=0 checks=26072 failures=0

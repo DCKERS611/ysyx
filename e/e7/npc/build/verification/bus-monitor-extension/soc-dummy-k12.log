@@ -1,0 +1,13 @@
+Clock configuration: CPU/SoC=12:1
+Loaded Flash: ../am-kernels/tests/cpu-tests/build/dummy-minirv-ysyxsoc.bin, 374436 bytes
+PSRAM Model: Initialized memory with 0 for device 0.
+loading to meprogress cycles=10000000 commits=3902 pc=0x300015cc inst=0x00a78023 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x10000000 lsu_req=0 lsu_resp=0
+mory region [0xprogress cycles=20000000 commits=8026 pc=0x30009bec inst=0x00022203 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x00000000 lsu_req=0 lsu_resp=0
+80000000, 0xprogress cycles=30000000 commits=12122 pc=0x30009c74 inst=0x004181b3 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x60083800 lsu_req=0 lsu_resp=0
+80000090)
+progress cycles=40000000 commits=16199 pc=0x300030ac inst=0xfe912c23 ifu_state=1 ifu_req=0 ifu_resp=0 lsu_addr=0x806fffd8 lsu_req=0 lsu_resp=0
+FIRST_PSRAM_COMMIT pc=0x80000000 inst=0x00000413 commits=17306
+HIT GOOD TRAP: pc=0x80000040 a0=0x00000000 cycles=42777199
+Statistics (including loader): instructions=17322 cycles=42777199 IPC=0.000405
+Bus: PASS ifu_req=17322 ifu_resp=17322 lsu_req=9611 lsu_resp=9611 violations=0
+RESULT case=dummy-minirv-ysyxsoc.bin backend=socdiff verdict=pass commits=17 mismatches=0 halt_pc=0x80000040 device_reads=0 counter_reads=0 bus=pass

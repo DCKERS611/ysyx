@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/boundary/illegal_rs2.bin: 16 bytes
+PASS: 8 checks
+[ DIFF PASS ] boundary/illegal_rs2
+PASS: 51 (3 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 33
+halt_pc=0x00000000 NPC.pc=0x80000008 EMU.pc=0x80000008
+Bus: PASS ifu_req=3 ifu_resp=3 lsu_req=0 lsu_resp=0 violations=0
+RESULT case=boundary/illegal_rs2 backend=diff verdict=pass stop=rejected pc=0x80000008 inst=0x01000533 cycles=29 retired=2 attempts=3 checks=8 failures=0 delay=random core=51 core_fail=0 extra=33 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.103812 total_seconds=0.200159 bus=pass

@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/difftest/small.bin: 60 bytes
+PASS: 15 checks
+[ DIFF PASS ] difftest/small
+PASS: 238 (14 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 157
+halt_pc=0x80000038 NPC.pc=0x8000003c EMU.pc=0x80000038
+Bus: PASS ifu_req=14 ifu_resp=14 lsu_req=5 lsu_resp=5 violations=0
+RESULT case=difftest/small backend=diff verdict=pass stop=ebreak pc=0x80000038 inst=0x00100073 cycles=174 retired=14 attempts=14 checks=15 failures=0 delay=random core=238 core_fail=0 extra=157 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.110311 total_seconds=0.203732 bus=pass

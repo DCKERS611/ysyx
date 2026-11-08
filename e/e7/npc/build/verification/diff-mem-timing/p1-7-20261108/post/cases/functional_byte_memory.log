@@ -1,0 +1,8 @@
+Loaded /home/ysyx/ysyx-workbench/npc/build/p1-7/programs/functional/byte_memory.bin: 92 bytes
+PASS: 15 checks
+[ DIFF PASS ] functional/byte_memory
+PASS: 391 (23 steps x 17)
+Memory: PASS 33554432 words; protocol/read checks: 260
+halt_pc=0x80000058 NPC.pc=0x8000005c EMU.pc=0x80000058
+Bus: PASS ifu_req=23 ifu_resp=23 lsu_req=13 lsu_resp=13 violations=0
+RESULT case=functional/byte_memory backend=diff verdict=pass stop=ebreak pc=0x80000058 inst=0x00100073 cycles=330 retired=23 attempts=23 checks=15 failures=0 delay=random core=391 core_fail=0 extra=260 extra_fail=0 memory=33554432 memory_fail=0 memory_seconds=0.014526 total_seconds=0.182479 bus=pass

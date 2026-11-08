@@ -1,0 +1,640 @@
+{
+  "source": "/home/ysyx/ysyx-workbench",
+  "destination": "/mnt/e/ysyx/e/e7",
+  "scope": "bus-monitor step 6, P1 and personal marchid waveform; previous snapshots retained",
+  "updated_source_documents": [
+    "npc/README.md",
+    "npc/tests/README.md",
+    "npc/tests/csr-functional/README.md",
+    "npc/tests/soc-timing/full-printf/README.md"
+  ],
+  "excluded": [
+    "build objects and host executables",
+    "derived VCD",
+    "unfinished SoC train run"
+  ],
+  "files": [
+    {
+      "path": "npc/Makefile.soc",
+      "sha256": "414a44d4e89e49dee4af6e7eb9e86f31cf7e9bc8606c7be1d9a57af918a4b290",
+      "size": 2249
+    },
+    {
+      "path": "npc/README.md",
+      "sha256": "600bea0ac79dd84b22ab39a7c95f73e4f3f0fb3b7935d2f479592f8043981aea",
+      "size": 11245
+    },
+    {
+      "path": "npc/build/gpio-tests/gpio-apb.fst",
+      "sha256": "84ba942699af3f4228ab93e89b2e268232c616036616c1d6261f8ff26d014ed8",
+      "size": 16792
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/README.md",
+      "sha256": "ca7b03971d27fff8a253ea1bb9b08295a17a95ae46d96e1e691abd561536f3bc",
+      "size": 5011
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/am-hello-fixed5.log",
+      "sha256": "a1d709853b7a9d170d29b555969d5e8807fb55dcc24884ba2ba97f9f4018988b",
+      "size": 548
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/am-hello.log",
+      "sha256": "a9a0122b36469d99504cc333704e020a6fdccbd69e8d66eb114abff21b280b42",
+      "size": 4542
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/clean-cpu-test-build.log",
+      "sha256": "0b3230eaf43136f25a9334de6dc2dc12c90546b3c1e882026324800c6aa90f54",
+      "size": 3689
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/clean-run.log",
+      "sha256": "c4c88f788af2c6c6b7547efd9a649ccefd64e6b973d1d4663323eadfdfde41dc",
+      "size": 640
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/csr-difftest.log",
+      "sha256": "404904341bb7908070e56a866706c07a78908f1a9e83bb981f710d5350f95eed",
+      "size": 1906
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/ifu-injection.diff",
+      "sha256": "66948e9b9f2caa9affb85ca1e5cd9146aa1439ffc4f29eb536584ebb0f08819d",
+      "size": 580
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/injected-run.log",
+      "sha256": "94d35d77b621c65c353dbc4b8b69b24c2c6f9a63739a14bd6a76fc680fa7c199",
+      "size": 2275
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/injection-build.log",
+      "sha256": "a1a873a7ee06fdaf96bd1eb3c1d1391921043964fb2742c8de09c93fd2abff8a",
+      "size": 7721
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/injection-cpu-test-build.log",
+      "sha256": "a85307e28eafe75aeb2f75f8aa88ceee068c342bcab4cc4913ba12a3e2c27365",
+      "size": 3620
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/regress.log",
+      "sha256": "28011446a33ec2799113ebdc59fdf6a3404cc500abb9e8671fca9368b75729f9",
+      "size": 31994
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-20261107/unit-test.log",
+      "sha256": "6cef0113c39afd3b5f1ba9ee8c9d7c929b95b5992e26d6579990db55bffe515b",
+      "size": 602
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/csr-self-driven.log",
+      "sha256": "a18c93b057649825ccc017c3a9bcf4c80f116124aea0a8049e62002b17fc540f",
+      "size": 133
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/gpio-apb-test.log",
+      "sha256": "dc2f72065eb9043b3185420664ea9e9837295b72471d5f86eb6c089ec9f1e8df",
+      "size": 2287
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/gpio-apb.fst",
+      "sha256": "affddcf8fda008bb4c8e48695a86d01f863569fe74ee66ecf27c272294f4883e",
+      "size": 16792
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/npc-test-all.log",
+      "sha256": "dd15c55b258237b926f1be64e160a57f172aaa0c0a1ca8975a71d41ad716c64d",
+      "size": 10528
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-dummy-k12.exit.json",
+      "sha256": "7ca4882a52b752185e89937745a66e15e75a48c71e46604204003dd0a34780da",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-dummy-k12.log",
+      "sha256": "2f52821be9b949a36ad5d2e14758c7690112f71c5060504e42194beeee85b8c4",
+      "size": 1225
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-duplicate-req-monitor-off.exit.json",
+      "sha256": "38dedc45a361925a98d7cf3e35d31d96fcf588b9d3d807a49d97f8e9695eb076",
+      "size": 378
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-duplicate-req-monitor-off.log",
+      "sha256": "c5700d9d7c544dfef7fd1d96bfe4b200d2abf1e4d21fcab6b28219681af5020b",
+      "size": 424
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-duplicate-req.exit.json",
+      "sha256": "8496b8f00c8d13d03e892793d26eef43eae00089fe1de654488f25316faea520",
+      "size": 548
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-duplicate-req.log",
+      "sha256": "f83f768a399d110552a4c9d4dae1a79c08e6d60537ec9d90491f2f7805f0d906",
+      "size": 2012
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-hello.exit.json",
+      "sha256": "7947565a5c5945e72efa6f44e3aa74f59c06c5a404e829e1f825441d5ef9fb19",
+      "size": 534
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-hello.log",
+      "sha256": "ca799fc3c372894ca0b68ad30765048a00d27100c0b614aaee510404da5f7510",
+      "size": 2845
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/soc-injection-build.log",
+      "sha256": "da5256aea2faf0b97ab0e358bed89af17cbc412cb5977e442d2a6efa7af07b22",
+      "size": 190681
+    },
+    {
+      "path": "npc/build/verification/bus-monitor-extension/unit-test-bus-monitor.log",
+      "sha256": "ea961596b599d4e08143c0f90c9e956c7b5337a401dd828effe02e2f6a3e8c2b",
+      "size": 930
+    },
+    {
+      "path": "npc/build/verification/csr-marchid-review/marchid.fst",
+      "sha256": "aebca2280449f51bafa088d5d612f38133c1cdb0e0b127a301be1111cb0c4f8e",
+      "size": 14509828
+    },
+    {
+      "path": "npc/build/verification/csr-marchid-review/run.log",
+      "sha256": "e8a24c86fe4189e2f0fc0f3b9bd93297f879a21cf361cc98894f16860e2afa4b",
+      "size": 10780
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline-timed.log",
+      "sha256": "5790fe708fa3509b57e1c33ce1a9a0c094b56f5b4111c603b69523e22c64fdde",
+      "size": 12224
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/acceptance_array_sum.log",
+      "sha256": "1dcf81c8f35e4f4a4e23545fe46340899a7f61bb35f7028d0f2deecf94ee51b3",
+      "size": 645
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/acceptance_byte_sum.log",
+      "sha256": "42a6a6dfae587067e14b3e28cf1d45bc108f7f881a5ff644abf36ad8a34e4803",
+      "size": 642
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/acceptance_sum_1_to_10.log",
+      "sha256": "c40832c34e717cb946f7f21acd4fcbbf7c1bab1e0bf502863fa4c9ce0db921aa",
+      "size": 650
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_consecutive_jumps.log",
+      "sha256": "0cea3c2f0aa9656bf925926cb55b3e8382ec452b27861d162afe04dd0ce435b9",
+      "size": 655
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_illegal_rd.log",
+      "sha256": "c4c67043eaaf368c8b0b27945fe6ae13973a92d302e2b4782f81594dd831a351",
+      "size": 632
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_illegal_rs1.log",
+      "sha256": "1bbcae7a654390d22e6301071558df0fb751aceb23cb22db46b51bb8a21c1713",
+      "size": 635
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_illegal_rs2.log",
+      "sha256": "c488abef5e2f40858272504be55b48d11a30ec19ee3da903552b505acec41342",
+      "size": 635
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_illegal_store.log",
+      "sha256": "cd3e607e90202dd936ba7ab88efef4b0ffdb314bd65c9e1d5bf3b2e9c5a18414",
+      "size": 641
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_immediate_sign.log",
+      "sha256": "e02d847b79e5dd020aaf52715d84ca13546ea5201c0595a00d529ba7481321ae",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_jalr_negative.log",
+      "sha256": "c0ff5e0165d2f9e09d1989cd923c1a555b796c0d2224a177a32f33e47f7004c5",
+      "size": 641
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_jalr_same_register.log",
+      "sha256": "3feb2448089a22633204322ed4acf099e248e1f715e85584e0042abc021f67f6",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_u_immediate.log",
+      "sha256": "fc0652a58fd46088ca0229b980f3b0e1bb4299140ef9cd8c79165f54452f9bef",
+      "size": 637
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_unsupported_funct3.log",
+      "sha256": "c981d9f023a3eda0e88d04b669f393ad745977aab3becc539db613390aba029f",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_unsupported_funct7.log",
+      "sha256": "ff85bdd76552261f8e369726a2df086f4a1067ad0b2b28a663bded5f6f541a9f",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_unsupported_store.log",
+      "sha256": "f497acbe1464fa9eb376ba62536dbacfe07b6a66df3836f5aff50b2f61f2ba8b",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_unsupported_system.log",
+      "sha256": "cb270640f871676ff6dd702680acb013838f0e2a37ad5bb6790a06fef8077d7a",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/boundary_x0_readonly.log",
+      "sha256": "8484cded50a48323556bc8b68c1d6a6c8f0e7d61817cdca37df88e5b05749f92",
+      "size": 645
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/difftest_medium.log",
+      "sha256": "6afbee0a331053abb41add436fe98784fd5f7e7491e6b6a2d90a82530aca40cf",
+      "size": 636
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/difftest_small.log",
+      "sha256": "326ed2f01f20a3179d6d0c32d45f563d51aa5ef27b5ba27e6784c1d70bad0d1d",
+      "size": 627
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/functional_arithmetic.log",
+      "sha256": "a14395ade0fbb1032f409d3a614d79f951792cdef8e7a95002e2e8bb4be22c3b",
+      "size": 638
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/functional_byte_memory.log",
+      "sha256": "fd9dfe59d1842507c2dd7fd9ae7f9d9471a56bc32c249208964e360223d72c75",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/functional_call_return.log",
+      "sha256": "c717d9365575cefb03936a05aa6b9c4458e8c16627d0c82277a08adae2003e82",
+      "size": 643
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/baseline/cases/functional_word_memory.log",
+      "sha256": "9445b5b60f78dedd0190d7c6f30336dbb7117e40ac4700f9fdeee642362cf561",
+      "size": 643
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/negative-build.log",
+      "sha256": "66f572566b90e3a00089d6498525976ac017fd01c50a733c355927e00c4bffd2",
+      "size": 10029
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/negative-byte-injection.log",
+      "sha256": "e7e3181f3d43a1cb27716526abf5cb84d45325b18ffa987171f8b4b3fe1e4b78",
+      "size": 603
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/no-timing.log",
+      "sha256": "549ef2f1e66ec1d748f06c8d69dc0ddd31a1c47b580362873dd4adc61dbd2395",
+      "size": 561
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post-timed.log",
+      "sha256": "3088e3c63f415918ce3ad6d511a28172b2ed9539898e2a2d9d7962b6eb26dad2",
+      "size": 7501
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/acceptance_array_sum.log",
+      "sha256": "d18a9394a6c9bf66db01cd57096a5b4875b12290e6defae98ac6106951887fdf",
+      "size": 645
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/acceptance_byte_sum.log",
+      "sha256": "8ddc81392ab0e3b07a988c122ed1c8155d7e5012446a99985d5ec5ae7f392d2c",
+      "size": 642
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/acceptance_sum_1_to_10.log",
+      "sha256": "6cd3bea87b0f3cddfd121a4f3df15d6a77d5e735f246048230bdff615f1bdcea",
+      "size": 650
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_consecutive_jumps.log",
+      "sha256": "12a1960812e418f8124a4c6e71c1a9a71e67ed90ba2791ed9721fb7681653bff",
+      "size": 655
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_illegal_rd.log",
+      "sha256": "d7d5bda1c5363fb60b98067e7850fd89a2779a9851df9482ba63d1ae6cfc61af",
+      "size": 632
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_illegal_rs1.log",
+      "sha256": "8a4b4cfac3c91fcc75aa8dec7d7414cadddc9da11718e01a5ddbf27f5ba43303",
+      "size": 635
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_illegal_rs2.log",
+      "sha256": "93162b4765c71353ecb837a8b68181ac4a45e94ccba154797152938efaa6967c",
+      "size": 635
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_illegal_store.log",
+      "sha256": "ff21cb415ae188f4eb347ea288e1dad188e18cc62b18228392769606d4e3bbe9",
+      "size": 641
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_immediate_sign.log",
+      "sha256": "590f4b6c5416294b4a6027cea14c35e0b90fcf6480d84a89f484f679705fe13d",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_jalr_negative.log",
+      "sha256": "997ca16d606a5e806335291ad1901a6d1ba6bcca730b2baaf8a012724251faf7",
+      "size": 641
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_jalr_same_register.log",
+      "sha256": "52f7fec73884044de763159838da8fc5e7dc3bb72501c8abc253ebbf43f1656d",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_u_immediate.log",
+      "sha256": "800a583c35a72f1361674150ad7ecf36c7046a4c0852074a68b93de007c592fa",
+      "size": 637
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_unsupported_funct3.log",
+      "sha256": "f4c7202cdeb791f34b1bc255d41a495e77cee4349f8e9f73f440030dd6aa084b",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_unsupported_funct7.log",
+      "sha256": "346763a126a192770516353b5334c7e694b551a1ed896997b676c8b0bdebda7c",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_unsupported_store.log",
+      "sha256": "2ef25ef457fb25c0f51b0a1b460870e85c84fdb19e5db106638541b9cb664435",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_unsupported_system.log",
+      "sha256": "29413b1a65b2dc31d13ba971d4c4a58310ccb5a8be2841c35af06e39ff922146",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/boundary_x0_readonly.log",
+      "sha256": "cf930082d99f65eb5315738e928d18c159760f8924352004064d247f4c44f872",
+      "size": 645
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/difftest_medium.log",
+      "sha256": "340901c668478a6788ee7975cffe68bc5c4e2f5e802f951933d01d4611f595ea",
+      "size": 636
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/difftest_small.log",
+      "sha256": "4dd67ac14c3cc386cd0b0334514fdeb6f6770e7d7a672daf2c008dea3da3e734",
+      "size": 627
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/functional_arithmetic.log",
+      "sha256": "e5319ead666527b0ff7a6d1582e0c9451776f45b218829a65e4e31b2fb6f8e5f",
+      "size": 638
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/functional_byte_memory.log",
+      "sha256": "a0b5b0ac6725335feaad9833e8a7f94b97e64af3bfe315dc69c0a90bda2dcc07",
+      "size": 653
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/functional_call_return.log",
+      "sha256": "fe328a30d3baf793ad59784df03acee168b7c065670dbb23637ed03e1c977acb",
+      "size": 643
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/post/cases/functional_word_memory.log",
+      "sha256": "eed88c81b541df897f43ef89c28a34ba53e62000feb8f01b675ebd795b9ffdf3",
+      "size": 643
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/timing-by-case.csv",
+      "sha256": "0ab297f77e22a911bbc0645133558398a0f4945ed063f91db41211ccfc52be51",
+      "size": 1443
+    },
+    {
+      "path": "npc/build/verification/diff-mem-timing/p1-7-20261108/timing-summary.json",
+      "sha256": "44bf79297098f0f430d2529271ad3523a92c9b7d292c25b0cc51500b4279f2b3",
+      "size": 625
+    },
+    {
+      "path": "npc/build/verification/p1-integration/regress.log",
+      "sha256": "af6882a1c9445ba766521191421b788499c6feba3a7787425f663978c30863b8",
+      "size": 40405
+    },
+    {
+      "path": "npc/build/verification/rtc-interval-stability/analysis.json",
+      "sha256": "027f3f30f0fb02f628bf46706a6b2726297d8057ee02e159a0826b9c65b89778",
+      "size": 78400
+    },
+    {
+      "path": "npc/build/verification/rtc-interval-stability/analysis.md",
+      "sha256": "0942429ccbe93391f1fee8aaeee55ed4d5300c54c60d953c29131ebc5ba75985",
+      "size": 2822
+    },
+    {
+      "path": "npc/build/verification/rtc-interval-stability/p1-9-status.json",
+      "sha256": "0a7078b2edbb5aa3ca7921a8d42d0e391985f6b74ed7a75f56c49c231406a8dd",
+      "size": 765
+    },
+    {
+      "path": "npc/build/verification/rtc-interval-stability/source-manifest.json",
+      "sha256": "6098eb2f325b20f6875df2be7f64683c90bdd144385c8e7502873b0102568a05",
+      "size": 570
+    },
+    {
+      "path": "npc/build/verification/rtc-interval-stability/stage.json",
+      "sha256": "adae85af1fdb8a1bd7de6b29e0ba61cbe4c321ea2cba68d1c55bea15d31b615e",
+      "size": 1520
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/add-ref.bin",
+      "sha256": "5aea751890aae5b10fe620069dd56375e1fc46d9d367eb3f5ace99d5fb424064",
+      "size": 297504
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/add-with-bus.exit.json",
+      "sha256": "8d870b402246e19be6968e4a03575e05090d7adf218677b3a39817cb891e6a2c",
+      "size": 656
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/add-with-bus.log",
+      "sha256": "6e34ee6f2214d0fdc4b550f0cb00c898597fcf6095f08067fa1430ac80cd9495",
+      "size": 2877
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/add.log",
+      "sha256": "f397a35ebcd0fb08488a6571a61c42f530945968efffb30822d9fcfbf0aa3d88",
+      "size": 2783
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/build-integrated.log",
+      "sha256": "f4a060ae448f88f3777fdceba6986502141d74ae90d77a2b1337d07e1e428564",
+      "size": 190332
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/build-relative-failed.log",
+      "sha256": "dabb37fd37bbbe315621ce43e6b84e257ebf1345f5cdf4fd154c835c5a19340f",
+      "size": 193290
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/build.log",
+      "sha256": "7f21180abc23cfc479615e7effd601ba701612d9c9bd5ce00f46851cee949d3f",
+      "size": 190073
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/csr-id-ref.bin",
+      "sha256": "b55093084bae8a09c5cb9c73bebe7e24839f7127683f63a99fc46b80758afa9f",
+      "size": 352768
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/csr-id.log",
+      "sha256": "98017cc48b5e39d2a745e62a8f09755ab6994171f87069e7e2094c9dd01d5eab",
+      "size": 4248
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/dummy-ref.bin",
+      "sha256": "5ae54dfb192b2d4ef5a2537b9d3155329530eaa4b75e4665119218997395c555",
+      "size": 144
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/dummy.log",
+      "sha256": "dc363f4408c4b9f04780135ee776e82d863cd4fd4a9ce10b85b39ce30ea38fb6",
+      "size": 564
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/hello-elf-mismatch.log",
+      "sha256": "1fbd72bbf314dad0f0fbfb72fba93a0360988ac8ba5b1eb8b2fbfec22456a5a6",
+      "size": 2764
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/hello-ref.bin",
+      "sha256": "3eeda9f804fc3ea7a8f203497c3a19d1ebfb5793fb76ad824ee83a6c57113218",
+      "size": 297728
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/hello.log",
+      "sha256": "b9d9d5ee553d65c9ec0ac2d4997b0bb45955eeb36fe37882d50668bdb47036e1",
+      "size": 2832
+    },
+    {
+      "path": "npc/build/verification/soc-difftest/wrong-ref.log",
+      "sha256": "2e329ea281d0f09eec0f6b94b3ca7cedabdea381ea10cc4232afa4bc4001cc1e",
+      "size": 2720
+    },
+    {
+      "path": "npc/csrc/bus_monitor.h",
+      "sha256": "45dc0b1cb65f4c16832fc149922caaa841dfe0b88946ed5295a4acb6e67610d4",
+      "size": 9477
+    },
+    {
+      "path": "npc/csrc/pmem.cpp",
+      "sha256": "cfc780b4bb751dd88660841e3649757d5d1953af8aa4e398dfba1ff24e015570",
+      "size": 3818
+    },
+    {
+      "path": "npc/csrc/pmem.h",
+      "sha256": "576b0f1d89651bb6b09db4c52ed75a7e074583c25dac8d55a41ae75309c58dd3",
+      "size": 411
+    },
+    {
+      "path": "npc/csrc/sim.cpp",
+      "sha256": "3a5ee75cc5ddb66f6594d366a222b75ae9032b7a594df2a26ea2f27fef4390d4",
+      "size": 11812
+    },
+    {
+      "path": "npc/csrc/sim.h",
+      "sha256": "49eeab1179bf31e7ce4851ed27a1c72b3ef973a14d9c76da2c2c5d406ddc3c9a",
+      "size": 1774
+    },
+    {
+      "path": "npc/tests/Makefile.mk",
+      "sha256": "5e8d2feff232977daa75dfa08f11c8bee1f33975941c85a88274b4584f207575",
+      "size": 7284
+    },
+    {
+      "path": "npc/tests/README.md",
+      "sha256": "843843088081679bf205fe2fca9de047de458bf294f63edc8ff4b04806185764",
+      "size": 14022
+    },
+    {
+      "path": "npc/tests/am_main.cpp",
+      "sha256": "62130f0d0da2cdd167f9b7e8f4a4d4d32b93fae4e765e11837416bf15187ea09",
+      "size": 3144
+    },
+    {
+      "path": "npc/tests/bus_monitor_test.cpp",
+      "sha256": "e4d973985b6815e75df960ed7e403dce64ff843a1449f98ec295a3b20f39677b",
+      "size": 7033
+    },
+    {
+      "path": "npc/tests/cpu_test.cpp",
+      "sha256": "afa3c42167cd52a1a4fc5ab950e11a29d1850fd87f3c70010da4f3e5a364cde6",
+      "size": 1901
+    },
+    {
+      "path": "npc/tests/csr-functional/README.md",
+      "sha256": "ed5ef4ca3d501d0f191b723b0b43da9600f6dbfe1c27f7047c591695512871a0",
+      "size": 1446
+    },
+    {
+      "path": "npc/tests/csr_test.cpp",
+      "sha256": "dcc68dde1f09a65fbe306d68f40ee21a1c70e7c7f20d559504d3307024552a5f",
+      "size": 10387
+    },
+    {
+      "path": "npc/tests/difftest.cpp",
+      "sha256": "a1c0fe8b47561a8a49a7624355e1fc30f3c06829f7ce2b8fec01fea9ec236459",
+      "size": 12148
+    },
+    {
+      "path": "npc/tests/gpio_apb_test.cpp",
+      "sha256": "7a987fedaaf7f3ba01650e3fc205065a7840a8df2a120ca0c2cb50f2194b7a5a",
+      "size": 11531
+    },
+    {
+      "path": "npc/tests/soc-timing/calibrate_wallclock.py",
+      "sha256": "035dda1a2a111de785f3ee3831e1c7b9435511c6c0b9f21719f626302a5d7b95",
+      "size": 10479
+    },
+    {
+      "path": "npc/tests/soc-timing/full-printf/README.md",
+      "sha256": "e9cc12579aaa23b4f842b0eeb74e87b6ba51f3ef3fbed856edd153caf997c21d",
+      "size": 2205
+    },
+    {
+      "path": "npc/tests/soc-timing/measure_host.py",
+      "sha256": "1a8a81fb265765e2d6544c3c02407024919e011324b9ab6f81f19df183bdb8d1",
+      "size": 4762
+    },
+    {
+      "path": "npc/tests/soc_main.cpp",
+      "sha256": "89e121d557874feef78a9588927218dacc103c59892752625e93eecc0eefa3e8",
+      "size": 17261
+    }
+  ],
+  "copied_to_windows": [
+    "npc/build/gpio-tests/gpio-apb.fst",
+    "npc/build/verification/csr-marchid-review/marchid.fst",
+    "npc/build/verification/csr-marchid-review/run.log",
+    "npc/csrc/bus_monitor.h"
+  ],
+  "mismatches": 0
+}
